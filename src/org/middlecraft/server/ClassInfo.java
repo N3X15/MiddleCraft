@@ -27,65 +27,30 @@
  */
 package org.middlecraft.server;
 
+import java.util.HashMap;
+
 /**
- * Provides accessors for many global functions.
  * @author Rob
  *
  */
-public class World 
-{
-	protected Server server;
-	
+public class ClassInfo {
+	public String name;
+	public HashMap<String,String> MethodNames = new HashMap<String,String>();
+	public HashMap<String,String> FieldNames = new HashMap<String,String>();
+	public String realName;
+	public String description;
 	/**
-	 * Set up world class.
-	 * @param s Server.
-	 */
-	public World(Server s){
-		server=s;
-	}
-	
-	/**
-	 * Get a block from a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return block ID
-	 */
-	public int getBlockIdAt(int x, int y, int z) {
-		return 0;
-	}
-	
-	/**
-	 * Set a block at a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param id BlockID
-	 */
-	public void setBlockIdAt(int x, int y, int z, int id) {
-		// Use the equivalent of setBlockWithNotify.  We can create another function if lack of notification is required.
-		
-	}
-	/**
-	 * Get a block's physical properties.
-	 * @param x
-	 * @param y
-	 * @param z
+	 * @param name2
 	 * @return
 	 */
-	public Material getBlockMaterialAt(int x, int y, int z) {
-		return new Material();
+	public String getMethod(String name2) {
+		return MethodNames.get(name2);
 	}
-	
 	/**
-	 * Get a block's luminosity.
-	 * @param x 
-	 * @param y
-	 * @param z
-	 * @param blocklight Whether the value returned is blocklight (from torches, etc) or skylight (light from the "sun")
+	 * @param name2
 	 * @return
 	 */
-	public int getBlockLightAt(int x, int y, int z, boolean blocklight) {
-		return 15;
+	public String getField(String name2) {
+		return FieldNames.get(name2);
 	}
 }

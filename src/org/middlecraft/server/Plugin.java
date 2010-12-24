@@ -27,65 +27,22 @@
  */
 package org.middlecraft.server;
 
+// NOTE: Make this as compatible with hmod as possible without outright theft so that it's easier for plugins to port over to MiddleCraft.
 /**
- * Provides accessors for many global functions.
+ * Extend this class to create a plugin!
  * @author Rob
  *
  */
-public class World 
-{
-	protected Server server;
+public abstract class Plugin {
+	public String name;
+	public String version;
+	public String author="Anonymous"; // Differs from hmod, so make it optional.
 	
-	/**
-	 * Set up world class.
-	 * @param s Server.
-	 */
-	public World(Server s){
-		server=s;
-	}
+	public boolean enabled=false;
 	
-	/**
-	 * Get a block from a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return block ID
-	 */
-	public int getBlockIdAt(int x, int y, int z) {
-		return 0;
-	}
+	public abstract void enable();
+	public abstract void disable();
+	public abstract void initialize();
 	
-	/**
-	 * Set a block at a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param id BlockID
-	 */
-	public void setBlockIdAt(int x, int y, int z, int id) {
-		// Use the equivalent of setBlockWithNotify.  We can create another function if lack of notification is required.
-		
-	}
-	/**
-	 * Get a block's physical properties.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return
-	 */
-	public Material getBlockMaterialAt(int x, int y, int z) {
-		return new Material();
-	}
-	
-	/**
-	 * Get a block's luminosity.
-	 * @param x 
-	 * @param y
-	 * @param z
-	 * @param blocklight Whether the value returned is blocklight (from torches, etc) or skylight (light from the "sun")
-	 * @return
-	 */
-	public int getBlockLightAt(int x, int y, int z, boolean blocklight) {
-		return 15;
-	}
+	public boolean isEnabled() { return enabled; }
 }

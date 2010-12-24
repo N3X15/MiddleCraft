@@ -27,65 +27,53 @@
  */
 package org.middlecraft.server;
 
+// Make this as compatible with hmod as possible without outright theft so it's easier for plugin authors to add their plugins to MiddleCraft.
+// Which is going to be hard as we have to replicate functionality while adding our own.
 /**
- * Provides accessors for many global functions.
  * @author Rob
  *
  */
-public class World 
-{
-	protected Server server;
+public class PluginListener {
+	// hmod Functions
 	
+	// MiddleCraft functions
+	// Server THEN args
+	
+	// Yeah, I implemented something *I* wanted first.  Wanna fight about it? :V - N3X
 	/**
-	 * Set up world class.
-	 * @param s Server.
+	 * Handle block ticks.
 	 */
-	public World(Server s){
-		server=s;
-	}
+	public void onBlockTick(Server serv, int x, int y, int z) {}
 	
 	/**
-	 * Get a block from a global position.
+	 * Handle chunk load events.
+	 * @param serv
+	 * @param chunk
+	 */
+	public void onChunkLoaded(Server serv, Chunk chunk) {}
+	
+	/**
+	 * Handle chunks that have been freshly generated.
+	 * @param serv
+	 * @param chunk
+	 */
+	public void onChunkGenerated(Server serv, Chunk chunk) {}
+	
+	/**
+	 * Do stuff right before a chunk is released from memory.
+	 * @param serv
+	 * @param chunk
+	 */
+	public void onChunkUnLoading(Server serv, Chunk chunk) {}
+	
+	/**
+	 * Handle a block melting (snow/ice).
+	 * @param serv
+	 * @param blockID BlockID of the block melting
 	 * @param x
 	 * @param y
 	 * @param z
-	 * @return block ID
+	 * @return False to stop the block from melting.
 	 */
-	public int getBlockIdAt(int x, int y, int z) {
-		return 0;
-	}
-	
-	/**
-	 * Set a block at a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param id BlockID
-	 */
-	public void setBlockIdAt(int x, int y, int z, int id) {
-		// Use the equivalent of setBlockWithNotify.  We can create another function if lack of notification is required.
-		
-	}
-	/**
-	 * Get a block's physical properties.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return
-	 */
-	public Material getBlockMaterialAt(int x, int y, int z) {
-		return new Material();
-	}
-	
-	/**
-	 * Get a block's luminosity.
-	 * @param x 
-	 * @param y
-	 * @param z
-	 * @param blocklight Whether the value returned is blocklight (from torches, etc) or skylight (light from the "sun")
-	 * @return
-	 */
-	public int getBlockLightAt(int x, int y, int z, boolean blocklight) {
-		return 15;
-	}
+	public boolean onBlockMelt(Server serv, int blockID, int x, int y, int z) {return true;}
 }
