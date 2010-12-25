@@ -59,7 +59,7 @@
 		<jar basedir="bin/classes" destfile="bin/middlecraft.jar">
 			<manifest>
 				<attribute name="Main-Class"
-					value="org.middlecraft.host.Boot" />
+					value="org.middlecraft.server.Boot" />
 			</manifest>
 		</jar>
 	</target>
@@ -68,6 +68,13 @@
 	     directory that is safe for use as a Minecraft hosting
 	     environment. -->
 	<target name="stage" depends="jar" />
+	
+	<target name="doc" depends="build">
+		<javadoc
+			sourcepath="src"
+			destdir="docs"
+			classpath="lib/minecraft_server.jar" />
+	</target>
 	
 	<!-- Ensures everything is completely set up to be immediately usable. -->
 	<target name="full-setup" depends="stage" />
