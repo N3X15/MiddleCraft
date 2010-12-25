@@ -45,7 +45,6 @@ import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtField;
 import javassist.CtMethod;
-import javassist.NotFoundException;
 
 /**
  * @author Rob
@@ -97,8 +96,9 @@ public class SmartReflector {
 						}
 					}
 				}
-			} catch(NotFoundException e) {
-				
+				loadedClasses.put(ci.name, cc.toClass());
+			} catch(Exception e) {
+				l.warning("Failed to load class "+ci.name+": "+e.toString());
 			}
 		}
 	}
@@ -326,5 +326,18 @@ public class SmartReflector {
 			if(f!=null)
 				f.close();
 		}
+	}
+
+	/**
+	 * @param string
+	 * @return
+	 */
+	public static Class<?> GrabClass(String className) {
+		if(!loadedClasses.containsKey(className))
+		{
+			addClassDefinition(className);
+			return null;
+		}
+		return loadedClasses.get(className);
 	}
 }

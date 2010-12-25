@@ -1,11 +1,3 @@
-import java.io.File;
-import java.io.IOException;
-import java.net.URL;
-import java.net.URLClassLoader;
-
-import org.middlecraft.server.Plugin;
-import org.middlecraft.server.SmartReflector;
-
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -33,6 +25,12 @@ import org.middlecraft.server.SmartReflector;
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+
+import org.middlecraft.server.SmartReflector;
+
+
 
 public class Main {
 	public static void main(String[] arguments) {
@@ -46,6 +44,24 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		
+		Class<?> serv = SmartReflector.GrabClass("MinecraftServer");
+		try {
+			serv.getMethod("main",String[].class).invoke(null, arguments);
+		} catch (IllegalArgumentException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SecurityException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InvocationTargetException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (NoSuchMethodException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
