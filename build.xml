@@ -83,7 +83,7 @@
 		<jar basedir="bin/classes" destfile="bin/middlecraft.jar">
 			<manifest>
 				<attribute name="Main-Class"
-					value="Boot" />
+					value="Main" />
 			</manifest>
 		</jar>
 	</target>

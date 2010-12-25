@@ -157,36 +157,28 @@ public class DataJack implements IDataJack {
 	@Override public void setString(String _name, String _value) {
 		IDataJack dj_copypasta = getDataJackForPath(_name);
 		if (dj_copypasta != null) {
-			return dj_copypasta.setString(stripRootName(_name), _value);
-		} else {
-			return _default;
+			dj_copypasta.setString(stripRootName(_name), _value);
 		}
 	}
 	
 	@Override public void setInteger(String _name, int _value) {
 		IDataJack dj_copypasta = getDataJackForPath(_name);
 		if (dj_copypasta != null) {
-			return dj_copypasta.setInteger(stripRootName(_name), _value);
-		} else {
-			return _default;
+			dj_copypasta.setInteger(stripRootName(_name), _value);
 		}
 	}
 	
 	@Override public void setLong(String _name, long _value) {
 		IDataJack dj_copypasta = getDataJackForPath(_name);
 		if (dj_copypasta != null) {
-			return dj_copypasta.setLong(stripRootName(_name), _value);
-		} else {
-			return _default;
+			dj_copypasta.setLong(stripRootName(_name), _value);
 		}
 	}
 	
 	@Override public void setBoolean(String _name, boolean _value) {
 		IDataJack dj_copypasta = getDataJackForPath(_name);
 		if (dj_copypasta != null) {
-			return dj_copypasta.setBoolean(stripRootName(_name), _value);
-		} else {
-			return _default;
+			dj_copypasta.setBoolean(stripRootName(_name), _value);
 		}
 	}
 
