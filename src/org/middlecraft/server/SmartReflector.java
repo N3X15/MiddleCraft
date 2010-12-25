@@ -32,6 +32,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -70,7 +72,6 @@ public class SmartReflector {
 	
 	/**
 	 * God help us.
-	 * @throws CannotCompileException 
 	 */
 	private static void renameClasses(){
 		ClassPool cp = ClassPool.getDefault();
@@ -122,7 +123,7 @@ public class SmartReflector {
 	    		if(!classes.containsKey(className))
 	    			continue;
 	    		ClassInfo ci = classes.get(className);
-	    		ci.MethodNames.put(fieldName, oldFieldName);
+	    		ci.MethodNames.put(oldFieldName,fieldName);
 	    		classes.put(className, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
@@ -134,7 +135,7 @@ public class SmartReflector {
 	 */
 	private static void ReadMethods() throws IOException {
 		l.info("Loading method mappings...");
-		//CLASS,READABLE_FUNC_NAME,FUNC_NAME
+		//CLASS,FUNC_NAME,FUNC_SIG,READABLE_FUNC_NAME
 		Scanner scanner = new Scanner(new FileInputStream(String.format("data/server/%s/methods.csv", serverVersion)));
 	    try {
 	    	while (scanner.hasNextLine()) {
@@ -142,14 +143,14 @@ public class SmartReflector {
 	    		String[] chunks = line.split(",");
 	    		
 	    		String className = chunks[0];
-	    		String methodName = chunks[1];
-	    		String obfMethodName = chunks[2];
+	    		String obfMethodName = chunks[1]+" "+chunks[2];
+	    		String methodName = chunks[2];
 	    		
 	    		if(!classes.containsKey(className))
 	    			continue;
 	    		
 	    		ClassInfo ci = classes.get(className);
-	    		ci.MethodNames.put(methodName, obfMethodName);
+	    		ci.MethodNames.put(obfMethodName, methodName);
 	    		classes.put(className, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
@@ -182,27 +183,41 @@ public class SmartReflector {
 	 * Find the named class and load it. 
 	 * @param className
 	 * @return
+	 * @throws InvocationTargetException 
+	 * @throws IllegalAccessException 
+	 * @throws InstantiationException 
+	 * @throws IllegalArgumentException 
 	 */
-	public static GrabbedClassInstance GrabClassInstance(String className, Object... params) {
-		if(!classes.containsKey(className))
+	public static Object GrabClassInstance(String className, Object... params) throws IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException {
+		if(!loadedClasses.containsKey(className))
 		{
 			addClassDefinition(className);
 			return null;
 		}
-		ClassInfo classData = classes.get(className);
-		if(classData.realName=="")
-			return null;
-		Class<?> theClass;
-		try {
-			theClass = Class.forName(classData.realName);
-		} catch(ClassNotFoundException e) {
-			return null;
+		Class<?> theClass = loadedClasses.get(className);
+		// Find a suitable constructor, if possible.
+		for( Constructor<?> c : theClass.getConstructors()) {
+			Class<?>[] c_params = c.getParameterTypes();
+			if(c_params.length != params.length)
+				continue;
+			if(c_params.length==0)
+			{
+				// Constructor doesn't need arguments, just initialize it.
+				return c.newInstance();
+			}
+			// Check types
+			boolean types_ok = true;
+			for(int i = 0;i<c_params.length;i++) {
+				if(c_params[i].getName()!=params[i].getClass().getName())
+					types_ok=false;
+			}
+			if(!types_ok) continue;
+			
+			// LETS DO DIS
+			l.info("[SmartReflector] Initializing "+c.toString());
+			return c.newInstance(params);
 		}
-		try {
-			return new GrabbedClassInstance(theClass,className,params);
-		} catch (Exception e) {
-			return null;
-		}
+		return null;
 	}
 	
 	/**
@@ -217,15 +232,19 @@ public class SmartReflector {
 		classes.put(name, ci);
 	}
 	
+	static Integer unkFields=0; 
 	public static void addFieldDefinition(String className, String fieldName) {
+		unkFields++;
 		ClassInfo ci = classes.get(className);
-		ci.FieldNames.put(fieldName, "");
+		ci.FieldNames.put("UNKNOWN_"+unkFields.toString(),fieldName);
 		classes.put(className, ci);
 	}
 	
-	public static void addMethodDefinition(String className, String methodName) {
+	static Integer unkMethods=0;
+	public static void addMethodDefinition(String className, String methodName, String signature) {
+		unkMethods++;
 		ClassInfo ci = classes.get(className);
-		ci.MethodNames.put(methodName, "");
+		ci.MethodNames.put("UNKNOWN_"+unkMethods.toString(),methodName+" "+signature);
 		classes.put(className, ci);
 	}
 	
@@ -248,10 +267,11 @@ public class SmartReflector {
 		
 			for(ClassInfo ci : classes.values()) {
 				for(Entry<String,String> mi : ci.MethodNames.entrySet()) {
-					String methodName = mi.getKey();
-					String realMethodName = mi.getValue();
+					String realMethodName = mi.getKey().split(" ")[0];
+					String methodSignature = mi.getKey().split(" ")[1];
+					String methodName = mi.getValue();
 					String className = ci.name;
-					f.println(className+","+methodName+","+/*methodSignature+","+*/realMethodName);
+					f.println(className+","+realMethodName+","+methodSignature+","+methodName);
 				}
 			}
 		} catch (FileNotFoundException e) {
@@ -273,8 +293,8 @@ public class SmartReflector {
 		
 			for(ClassInfo ci : classes.values()) {
 				for(Entry<String,String> mi : ci.FieldNames.entrySet()) {
-					String fieldName = mi.getKey();
-					String realFieldName = mi.getValue();
+					String realFieldName = mi.getKey();
+					String fieldName = mi.getValue();
 					String className = ci.name;
 					f.println(className+","+fieldName+","+realFieldName);
 				}
@@ -297,7 +317,7 @@ public class SmartReflector {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/classes.csv", serverVersion)));
 		
 			for(ClassInfo ci : classes.values()) {
-				f.println(ci.name+","+ci.realName);
+				f.println(ci.realName+","+ci.name);
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
