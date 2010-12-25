@@ -1,4 +1,4 @@
-package org.middlecraft.server.Root;
+
 
 public class Boot {
 	public static void main(String[] arguments) {

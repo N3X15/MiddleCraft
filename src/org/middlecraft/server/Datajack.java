@@ -16,28 +16,10 @@ import java.util.*;
  *
  * @author Joshua 'Skrylar' Cearley
  */
-public class Datajack {
+public class DataJack implements IDataJack {
 	// NOTE: I'm not yet sure how this should handle array properties in a scalable way; the trivial way for things like iConomy is to return an array of values, but this doesn't neccesarily scale to databases with umpteen rows of data. -- Skrylar
 	
-	public interface Root {
-		// === GETTERS ===
-		String getString(String _name, String _default);
-		int getInteger(String _name, int _default);
-		long getLong(String _name, long _default);
-		boolean getBoolean(String _name, boolean _default);
-		
-		// === SETTERS ===
-		void setString(String _name, String _value);
-		void setInteger(String _name, int _value);
-		void setLong(String _name, long _value);
-		void setBoolean(String _name, boolean _value);
-		
-		// === NOTIFICATIONS ===
-		void dataJackedIn(Datajack _source, String _name);
-		void dataJackedOut(Datajack _source, String _name);
-	}
-	
-	protected Map<String, Root> roots;
+	protected Map<String, IDataJack> roots;
 	
 	/**
 	 * Adds a root to the list of global preference roots.
@@ -52,10 +34,10 @@ public class Datajack {
 	 *
 	 * @param _name The _name of the root to be added; this is used to locate
 	 * the root from a global preference identifier.
-	 * @param root A Datajack.Root that will provide requested information
+	 * @param root An IDataJack that will provide requested information
 	 * to clients requesting it through a global preference identifier.
 	 */
-	public void addRoot(String _name, Root root) {
+	public void addRoot(String _name, IDataJack root) {
 		// TODO: Implement root anchoring function.
 	}
 	
@@ -107,5 +89,23 @@ public class Datajack {
 	
 	public void setBoolean(String _name, boolean _value) {
 		// TODO: Implement boolean setting method.
+	}
+
+	/* (non-Javadoc)
+	 * @see org.middlecraft.server.IDataJack#dataJackedIn(org.middlecraft.server.Datajack, java.lang.String)
+	 */
+	@Override
+	public void dataJackedIn(DataJack _source, String _name) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/* (non-Javadoc)
+	 * @see org.middlecraft.server.IDataJack#dataJackedOut(org.middlecraft.server.Datajack, java.lang.String)
+	 */
+	@Override
+	public void dataJackedOut(DataJack _source, String _name) {
+		// TODO Auto-generated method stub
+		
 	}
 }
