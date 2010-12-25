@@ -50,21 +50,21 @@ public class PluginListener {
 	 * @param serv
 	 * @param chunk
 	 */
-	public void onChunkLoaded(Server serv, Chunk chunk) {}
+	public void onChunkLoaded(Server serv, Object chunk) {}
 	
 	/**
 	 * Handle chunks that have been freshly generated.
 	 * @param serv
 	 * @param chunk
 	 */
-	public void onChunkGenerated(Server serv, Chunk chunk) {}
+	public void onChunkGenerated(Server serv, Object chunk) {}
 	
 	/**
 	 * Do stuff right before a chunk is released from memory.
 	 * @param serv
 	 * @param chunk
 	 */
-	public void onChunkUnLoading(Server serv, Chunk chunk) {}
+	public void onChunkUnLoading(Server serv, Object chunk) {}
 	
 	/**
 	 * Handle a block melting (snow/ice).
