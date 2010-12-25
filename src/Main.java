@@ -1,3 +1,11 @@
+import java.io.File;
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLClassLoader;
+
+import org.middlecraft.server.Plugin;
+import org.middlecraft.server.SmartReflector;
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -25,67 +33,19 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.middlecraft.server;
 
-/**
- * Provides accessors for many global functions.
- * @author Rob
- *
- */
-public class World 
-{
-	protected Server server;
-	
-	/**
-	 * Set up world class.
-	 * @param s Server.
-	 */
-	public World(Server s){
-		server=s;
-	}
-	
-	/**
-	 * Get a block from a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return block ID
-	 */
-	public int getBlockIdAt(int x, int y, int z) {
-		return 0;
-	}
-	
-	/**
-	 * Set a block at a global position.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param id BlockID
-	 */
-	public void setBlockIdAt(int x, int y, int z, int id) {
-		// Use the equivalent of setBlockWithNotify.  We can create another function if lack of notification is required.
+public class Main {
+	public static void main(String[] arguments) {
+		// ADD UNIX-STYLE COMMANDLINE PARSING HERE
 		
-	}
-	/**
-	 * Get a block's physical properties.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return
-	 */
-	public Material getBlockMaterialAt(int x, int y, int z) {
-		return new Material();
-	}
-	
-	/**
-	 * Get a block's luminosity.
-	 * @param x 
-	 * @param y
-	 * @param z
-	 * @param blocklight Whether the value returned is blocklight (from torches, etc) or skylight (light from the "sun")
-	 * @return
-	 */
-	public int getBlockLightAt(int x, int y, int z, boolean blocklight) {
-		return 15;
+		// Load mappings.
+		try {
+			SmartReflector.initialize();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 	}
 }

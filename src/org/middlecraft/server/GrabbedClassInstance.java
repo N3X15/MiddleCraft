@@ -37,7 +37,7 @@ import java.util.logging.Logger;
  */
 public class GrabbedClassInstance {
 	Logger l = Logger.getLogger("Minecraft");
-	Class theClass;
+	Class<?> theClass;
 	Object instance;
 	public String name;
 	/**
@@ -90,7 +90,7 @@ public class GrabbedClassInstance {
 	 */
 	public Object callMethod(String name, Object... args) throws NoSuchMethodException
 	{
-		Class[] types = new Class[args.length];
+		Class<?>[] types = new Class[args.length];
 		for(int i = 0;i < args.length; i++)
 			types[i]=args[i].getClass();
 		Method meth = theClass.getMethod(SmartReflector.classes.get(this.name).getMethod(name), types);

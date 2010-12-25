@@ -27,10 +27,35 @@
  */
 package org.middlecraft.server;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  * @author Rob
  *
  */
-public class Material {
-	
+public class Utils {
+
+	/**
+	 * @param methodPatch
+	 * @return
+	 */
+	public static String getFileContents(File methodPatch) {
+		Scanner file;
+		try {
+			file = new Scanner(new FileInputStream(methodPatch));
+			StringBuilder out = new StringBuilder();
+			while(file.hasNext()) {
+				out.append(file.next());
+			}
+			return out.toString();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return "";
+		}
+	}
+
 }

@@ -26,12 +26,24 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.middlecraft.server;
-import java.lang.reflect.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.HashMap;
-import java.io.*;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+import javassist.CannotCompileException;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtField;
+import javassist.CtMethod;
+import javassist.NotFoundException;
 
 /**
  * @author Rob
@@ -44,6 +56,7 @@ public class SmartReflector {
 	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
 	
 	public static HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
+	public static Map<String,Class<?>> loadedClasses;
 	
 	public static void initialize() throws IOException {
 		// Read data from our simplified MCP deobfuscation mappings
@@ -51,8 +64,44 @@ public class SmartReflector {
 		ReadClasses();
 		ReadMethods();
 		ReadFields();
+		
+		renameClasses();
 	}
 	
+	/**
+	 * God help us.
+	 * @throws CannotCompileException 
+	 */
+	private static void renameClasses(){
+		ClassPool cp = ClassPool.getDefault();
+		for(ClassInfo ci : classes.values()) {
+			try {
+				CtClass cc = cp.getAndRename(ci.realName, ci.name);
+				for(CtField cf : cc.getDeclaredFields()) {
+					if(ci.FieldNames.containsKey(cf.getName())) {
+						cf.setName(ci.FieldNames.get(cf.getName()));
+					}
+				}
+				for(CtMethod cm : cc.getDeclaredMethods()) {
+					String methodID=cm.getName()+" "+cm.getSignature();
+					if(ci.MethodNames.containsKey(methodID))
+						cm.setName(ci.MethodNames.get(methodID));
+					File methodPatch = new File(String.format("data/server/%s/patches/%s/%s.%s.java",serverVersion,ci.name,cm.getName(),cm.getSignature()));
+					if(methodPatch.exists()) {
+						try {
+							cm.setBody(Utils.getFileContents(methodPatch));
+						} catch (CannotCompileException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+					}
+				}
+			} catch(NotFoundException e) {
+				
+			}
+		}
+	}
+
 	/**
 	 * 
 	 */
@@ -136,11 +185,16 @@ public class SmartReflector {
 	 */
 	public static GrabbedClassInstance GrabClassInstance(String className, Object... params) {
 		if(!classes.containsKey(className))
+		{
+			addClassDefinition(className);
 			return null;
+		}
 		ClassInfo classData = classes.get(className);
-		Class theClass;
+		if(classData.realName=="")
+			return null;
+		Class<?> theClass;
 		try {
-			theClass = Class.forName(classData.name);
+			theClass = Class.forName(classData.realName);
 		} catch(ClassNotFoundException e) {
 			return null;
 		}
@@ -150,5 +204,107 @@ public class SmartReflector {
 			return null;
 		}
 	}
+	
+	/**
+	 * Add a class to the list.
+	 * @param name
+	 */
+	public static void addClassDefinition(String name) {
+		ClassInfo ci = new ClassInfo();
+		ci.name=name;
+		ci.realName="";
+		ci.description="";
+		classes.put(name, ci);
+	}
+	
+	public static void addFieldDefinition(String className, String fieldName) {
+		ClassInfo ci = classes.get(className);
+		ci.FieldNames.put(fieldName, "");
+		classes.put(className, ci);
+	}
+	
+	public static void addMethodDefinition(String className, String methodName) {
+		ClassInfo ci = classes.get(className);
+		ci.MethodNames.put(methodName, "");
+		classes.put(className, ci);
+	}
+	
+	public static void save() {
+		File data = new File(String.format("data/server/%s/", serverVersion));
+		if(!data.exists())
+			data.mkdirs();
+		writeClasses();
+		writeFields();
+		writeMethods();
+	}
 
+	/**
+	 * 
+	 */
+	private static void writeMethods() {
+		PrintStream f=null;
+		try {
+			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/methods.csv", serverVersion)));
+		
+			for(ClassInfo ci : classes.values()) {
+				for(Entry<String,String> mi : ci.MethodNames.entrySet()) {
+					String methodName = mi.getKey();
+					String realMethodName = mi.getValue();
+					String className = ci.name;
+					f.println(className+","+methodName+","+/*methodSignature+","+*/realMethodName);
+				}
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(f!=null)
+				f.close();
+		}
+	}
+
+	/**
+	 * 
+	 */
+	private static void writeFields() {		
+		PrintStream f=null;
+		try {
+			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/fields.csv", serverVersion)));
+		
+			for(ClassInfo ci : classes.values()) {
+				for(Entry<String,String> mi : ci.FieldNames.entrySet()) {
+					String fieldName = mi.getKey();
+					String realFieldName = mi.getValue();
+					String className = ci.name;
+					f.println(className+","+fieldName+","+realFieldName);
+				}
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(f!=null)
+				f.close();
+		}
+	}
+
+	/**
+	 * 
+	 */
+	private static void writeClasses() {		
+		PrintStream f=null;
+		try {
+			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/classes.csv", serverVersion)));
+		
+			for(ClassInfo ci : classes.values()) {
+				f.println(ci.name+","+ci.realName);
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(f!=null)
+				f.close();
+		}
+	}
 }
