@@ -1,0 +1,87 @@
+<?xml version="1.0" standalone="yes"?>
+<project name="MiddleCraft" basedir=".">
+	<!-- This file contains properties as set or recommended by
+	     project maintainers. -->
+	<property file="build.properties" />
+	<!-- This file is for local users' use and is not checked
+	     in to the repository. -->
+	<property file="build-local.properties" />
+	
+	<!-- Create workspace directories. -->
+	<target name="-dirs">
+		<mkdir dir="bin" />
+		<mkdir dir="bin/classes" />
+		<mkdir dir="staged" />
+		<mkdir dir="staged/plugins" />
+		<mkdir dir="lib" />
+		<mkdir dir="docs" />
+	</target>
+	
+	<!-- Download the official server binaries. -->
+	<target name="-download-server" depends="-dirs">
+		<get src="${minecraft.server.url}"
+			dest="lib/minecraft_server.jar"
+			skipexisting="true" />
+		<checksum file="lib/minecraft_server.jar"
+			algorithm="md5"
+			property="${minecraft.server.md5}"
+			verifyProperty="minecraft.server.supported" />
+	</target>
+
+	<!-- Ensures we have a compatible server jar, otherwise throw an
+	     error and freak the hell out. -->
+	<target name="-server" depends="-download-server">
+		<fail unless="${minecraft.server.supported}">Unfortunately we could not get a compatible version of the server software.  If you have an older copy backed up you may try placing that in the ext folder, but the MiddleCraft team cannot legally provide you with a compatible server jar directly.</fail>
+	</target>
+	
+	<!-- Makes sure the proper scaffolding is in place. -->
+	<target name="first-init" depends="-dirs,-server" />
+	
+	<!-- Builds all of the class files so they are ready to be packaged
+	     up. -->
+	<target name="build" depends="first-init">
+		<!-- Note: Minecraft is built on Java 6, so to prevent potential
+		     problems I've set this task to only build to that; in theory
+		     if someone can't build to that or they have the 7.x JDK nothing
+		     horrible will happen. -->
+		<javac srcdir="src"
+			destdir="bin/classes"
+			classpath="lib/minecraft_server.jar"
+			target="6"
+			source="6"
+			includeAntRuntime="false"
+			compiler="javac1.6" />
+	</target>
+	
+	<!-- Packages all of the class files in to jars so they are ready to
+	     be ran. -->
+	<target name="jar" depends="build">
+		<jar basedir="bin/classes" destfile="bin/middlecraft.jar">
+			<manifest>
+				<attribute name="Main-Class"
+					value="org.middlecraft.host.Boot" />
+			</manifest>
+		</jar>
+	</target>
+	
+	<!-- Copies any built files and packaged plugins to a separate
+	     directory that is safe for use as a Minecraft hosting
+	     environment. -->
+	<target name="stage" depends="jar" />
+	
+	<!-- Ensures everything is completely set up to be immediately usable. -->
+	<target name="full-setup" depends="stage" />
+	
+	<!-- Removes compiled binaries to allow for a fresh re-build. -->
+	<target name="clean">
+		<delete dir="bin" />
+	</target>
+	
+	<!-- Removes ALL generated and obtained content, leaving a clean directory
+	     that may be slipped in to version control. -->
+	<target name="dist-clean" depends="clean">
+		<delete dir="lib" />
+		<delete dir="docs" />
+		<delete dir="staged" />
+	</target>
+</project>
