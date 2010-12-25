@@ -1,6 +1,8 @@
 package org.middlecraft.server;
 
 import java.util.*;
+import java.util.logging.*;
+import java.util.concurrent.locks.*;
 
 /**
  * Pluggable preferences class to allow unified access to plugin data.
@@ -19,7 +21,16 @@ import java.util.*;
 public class DataJack implements IDataJack {
 	// NOTE: I'm not yet sure how this should handle array properties in a scalable way; the trivial way for things like iConomy is to return an array of values, but this doesn't neccesarily scale to databases with umpteen rows of data. -- Skrylar
 	
+	protected Logger log;
 	protected Map<String, IDataJack> roots;
+	protected Lock rootsLock;
+	
+	public DataJack() {
+		roots = new HashMap<String, IDataJack>();
+		rootsLock = new ReentrantLock();
+		log = Logger.getLogger("DataJack");
+		log.setLevel(Level.FINEST);
+	}
 	
 	/**
 	 * Adds a root to the list of global preference roots.
@@ -38,7 +49,21 @@ public class DataJack implements IDataJack {
 	 * to clients requesting it through a global preference identifier.
 	 */
 	public void addRoot(String _name, IDataJack root) {
-		// TODO: Implement root anchoring function.
+		/* Prevent the stupids. */
+		if (root == null) {
+			throw new NullPointerException();
+		}
+		
+		/* ENGAGE! */
+		rootsLock.lock();
+		try {
+			roots.put(_name, root);
+			root.dataJackedIn(this, _name);
+		} finally {
+			rootsLock.unlock();
+		}
+		
+		log.log(Level.FINE, "Added new root >", _name);
 	}
 	
 	/**
@@ -50,45 +75,119 @@ public class DataJack implements IDataJack {
 	 * @param _name The name of a root to be removed.
 	 */
 	public void removeRoot(String _name) {
-		// TODO: Implement root removal (by name) function.
+		rootsLock.lock();
+		try {
+			IDataJack dj_badmusic = roots.get(_name);
+			roots.remove(dj_badmusic);
+			if (dj_badmusic != null) {
+				dj_badmusic.dataJackedOut(this, _name);
+			}
+		} finally {
+			rootsLock.unlock();
+		}
+		
+		log.log(Level.FINE, "Removed old root >", _name);
+	}
+	
+	protected String getRootName(String _globalPreferencePath) {
+		int sepIdx = _globalPreferencePath.indexOf(':');
+		String rootName = _globalPreferencePath.substring(0, sepIdx);
+		log.log(Level.FINEST, "Resolving \"{0}\" to root #{1}", new Object[] {_globalPreferencePath, rootName});
+		return rootName;
+	}
+	
+	protected String stripRootName(String _globalPreferencePath) {
+		int sepIdx = _globalPreferencePath.indexOf(':');
+		String pathName = _globalPreferencePath.substring(sepIdx+1);
+		log.log(Level.FINEST, "Stripped header from \"{0}\" to path \"{1}\"",
+		new Object[] {_globalPreferencePath, pathName});
+		return pathName;
+	}
+	
+	protected IDataJack getDataJackForPath(String _path) {
+		rootsLock.lock();
+		IDataJack dj_dork = null;
+		try {
+			String key = getRootName(_path);
+			dj_dork = roots.get(_path);
+		} finally {
+			rootsLock.unlock();
+		}
+		return dj_dork;
 	}
 	
 	// === GETTERS ===
-	public String getString(String _name, String _default) {
-		// TODO: Implement string getting method.
-		return _default;
+	@Override public String getString(String _name, String _default) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.getString(stripRootName(_name), _default);
+		} else {
+			return _default;
+		}
 	}
 	
-	public int getInteger(String _name, int _default) {
-		// TODO: Implement integer getting method.
-		return _default;
+	@Override public int getInteger(String _name, int _default) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.getInteger(stripRootName(_name), _default);
+		} else {
+			return _default;
+		}
 	}
 
-	public long getLong(String _name, long _default) {
-		// TODO: Implement long getting method.
-		return _default;
+	@Override public long getLong(String _name, long _default) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.getLong(stripRootName(_name), _default);
+		} else {
+			return _default;
+		}
 	}
 	
-	public boolean getBoolean(String _name, boolean _default) {
-		// TODO: Implement boolean getting method.
-		return _default;
+	@Override public boolean getBoolean(String _name, boolean _default) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.getBoolean(stripRootName(_name), _default);
+		} else {
+			return _default;
+		}
 	}
 	
 	// === SETTERS ===
-	public void setString(String _name, String _value) {
-		// TODO: Implement string setting method.
+	@Override public void setString(String _name, String _value) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.setString(stripRootName(_name), _value);
+		} else {
+			return _default;
+		}
 	}
 	
-	public void setInteger(String _name, int _value) {
-		// TODO: Implement integer setting method.
+	@Override public void setInteger(String _name, int _value) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.setInteger(stripRootName(_name), _value);
+		} else {
+			return _default;
+		}
 	}
 	
-	public void setLong(String _name, long _value) {
-		// TODO: Implement integer setting method.
+	@Override public void setLong(String _name, long _value) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.setLong(stripRootName(_name), _value);
+		} else {
+			return _default;
+		}
 	}
 	
-	public void setBoolean(String _name, boolean _value) {
-		// TODO: Implement boolean setting method.
+	@Override public void setBoolean(String _name, boolean _value) {
+		IDataJack dj_copypasta = getDataJackForPath(_name);
+		if (dj_copypasta != null) {
+			return dj_copypasta.setBoolean(stripRootName(_name), _value);
+		} else {
+			return _default;
+		}
 	}
 
 	/* (non-Javadoc)
@@ -96,8 +195,7 @@ public class DataJack implements IDataJack {
 	 */
 	@Override
 	public void dataJackedIn(DataJack _source, String _name) {
-		// TODO Auto-generated method stub
-		
+		// XXX: I can't think of anything we need to do here.
 	}
 
 	/* (non-Javadoc)
@@ -105,7 +203,6 @@ public class DataJack implements IDataJack {
 	 */
 	@Override
 	public void dataJackedOut(DataJack _source, String _name) {
-		// TODO Auto-generated method stub
-		
+		// XXX: I can't think of anything we need to do here.		
 	}
 }
