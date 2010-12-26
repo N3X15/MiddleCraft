@@ -41,19 +41,20 @@ import javassist.Translator;
  */
 public class Renamer implements Translator {
 	Logger l = Logger.getLogger("Minecraft");
-	/* (non-Javadoc)
+	/**
+	 * Deobfuscate classes
 	 * @see javassist.Translator#onLoad(javassist.ClassPool, java.lang.String)
 	 */
 	@Override
 	public void onLoad(ClassPool cp, String className) throws NotFoundException,
 			CannotCompileException {
 		String ncn = SmartReflector.getNewClassName(className);
-		l.log(Level.INFO,"Class "+className+"->"+ncn);
+		l.log(Level.FINE,"Renaming class "+className+" to "+ncn+".");
 		try {
 			if(className==ncn) throw new NotFoundException(className);
 			cp.getAndRename(className, ncn);
 		} catch(NotFoundException e) {
-			l.log(Level.INFO,"Failed to get new classname for "+className);
+			l.log(Level.WARNING,"Failed to get new classname for "+className);
 			SmartReflector.addObfuscatedClassDefinition(className);
 		}
 	}
