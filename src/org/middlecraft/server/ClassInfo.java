@@ -29,16 +29,20 @@ package org.middlecraft.server;
 
 import java.util.HashMap;
 
+import javassist.CtClass;
+
 /**
  * @author Rob
  *
  */
 public class ClassInfo {
+	public static final String header = "Real Name,MCP Name,Superclass,Description";
 	public String name;
 	public HashMap<String,String> MethodNames = new HashMap<String,String>();
 	public HashMap<String,String> FieldNames = new HashMap<String,String>();
 	public String realName;
-	public String description;
+	public String description="*";
+	public String superClass="java.lang.Object";
 	/**
 	 * @param name2
 	 * @return
@@ -52,5 +56,17 @@ public class ClassInfo {
 	 */
 	public String getField(String name2) {
 		return FieldNames.get(name2);
+	}
+	public ClassInfo() {}
+	public ClassInfo(String line) {
+		String[] chunks = line.split(",");
+		realName=chunks[0];
+		name=chunks[1];
+		superClass=chunks[2];
+		description=chunks[3];
+	}
+	
+	public String toString() {
+		return String.format("%s,%s,%s,%s",realName,name,superClass,description);
 	}
 }

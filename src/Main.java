@@ -26,10 +26,20 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
+import javassist.CannotCompileException;
+import javassist.ClassPool;
+import javassist.Loader;
+import javassist.NotFoundException;
+
+import org.middlecraft.server.Renamer;
 import org.middlecraft.server.SmartReflector;
 
 public class Main {
+	static Logger l = Logger.getLogger("Minecraft");
+	public static ClassPool classPool;
 	public static void main(String[] arguments) {
 		
 		// Load mappings.
@@ -44,11 +54,22 @@ public class Main {
 		Hooks.initialize();
 		
 		// Start up server. *drumroll*
-		Class<?> serv = SmartReflector.GrabClass("MinecraftServer");
+		Renamer r = new Renamer();
+		classPool = ClassPool.getDefault();
+		classPool.appendSystemPath();
 		try {
-			serv.getMethod("main",String[].class).invoke(null, arguments);
-		} catch (Exception e) {
-			// And crash *sad trombone*
+			classPool.appendClassPath("lib/*");
+		} catch (NotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		Loader load = new Loader();
+		try {
+			load.addTranslator(classPool, r);
+			load.run("net.minecraft.server.MinecraftServer", arguments);
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

@@ -47,6 +47,8 @@ public class Hooks {
 	public static void initialize()
 	{
 		File dir = new File("plugins/");
+		if(!dir.exists())
+			dir.mkdir();
 		for(File f : dir.listFiles()) {
 			if(f.isFile() && f.getName().endsWith(".jar")) {
 				try {
