@@ -60,7 +60,7 @@ public class SmartReflector {
 
 	static Logger l = Logger.getLogger("Minecraft");
 	
-	public static String serverVersion="1.0.2"; // Loads the appropriate object mappings 
+	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
 	
 	public static HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
 	public static Map<String,Class<?>> loadedClasses = new HashMap<String,Class<?>>();
@@ -213,8 +213,8 @@ public class SmartReflector {
     				l.log(Level.WARNING, "Skipping WIP mapping for "+ci.name+".");
     				continue;
     			}
-    			if(!classes.containsKey(ci.name))
-    				classes.put(ci.name, ci);
+    			if(!classes.containsKey(ci.realName))
+    				classes.put(ci.realName, ci);
 	    	}
 	    }
 	    finally{
