@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -25,55 +26,27 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.middlecraft.server;
 
-// Make this as compatible with hmod as possible without outright theft so it's easier for plugin authors to add their plugins to MiddleCraft.
-// Which is going to be hard as we have to replicate functionality while adding our own.
 /**
+ * HMod compatibility layer
  * @author Rob
  *
  */
-public class PluginListener {
-	// hmod Functions
-	
-	// MiddleCraft functions
-	// Server THEN args
-	
-	// Yeah, I implemented something *I* wanted first.  Wanna fight about it? :V - N3X
+public class PluginLoader {
+	// None of the values matter.
+	public enum Hook {
+		BLOCK_TICK
+	}
+
 	/**
-	 * Handle block ticks.
+	 * Compatibility stuff for HMod plugins.
+	 * @param hooktype Not used.
+	 * @param listener
+	 * @param plugin
+	 * @param priority Not used.
 	 */
-	public void onBlockTick(Server serv, int x, int y, int z) {}
-	
-	/**
-	 * Handle chunk load events.
-	 * @param serv
-	 * @param chunk
-	 */
-	public void onChunkLoaded(Server serv, Object chunk) {}
-	
-	/**
-	 * Handle chunks that have been freshly generated.
-	 * @param serv
-	 * @param chunk
-	 */
-	public void onChunkGenerated(Server serv, Object chunk) {}
-	
-	/**
-	 * Do stuff right before a chunk is released from memory.
-	 * @param serv
-	 * @param chunk
-	 */
-	public void onChunkUnLoading(Server serv, Object chunk) {}
-	
-	/**
-	 * Handle a block melting (snow/ice).
-	 * @param serv
-	 * @param blockID BlockID of the block melting
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return False to stop the block from melting.
-	 */
-	public boolean onBlockMelt(Server serv, int blockID, int x, int y, int z) {return true;}
+	public void addListener(Hook blockTick, PluginListener listener, Plugin plugin,
+			PluginListener.Priority priority) {
+		Hooks.RegisterListener(plugin.name, listener);
+	}
 }

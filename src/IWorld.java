@@ -26,66 +26,63 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import java.io.File;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.Map;
-
-
-
-
-
 /**
+ * Interface for accessing the server-side equivalent of Chunk.
  * @author Rob
  *
  */
-public class Hooks {
-	
-	protected static Map<String,PluginListener> enabledListeners;
-	protected static Map<String,Plugin> loadedPlugins;
-	
-	public static void initialize()
-	{
-		File dir = new File("plugins/");
-		for(File f : dir.listFiles()) {
-			if(f.isFile() && f.getName().endsWith(".jar")) {
-				try {
-					loadPlugin(f);
-				} catch (Exception e) {
-					
-				}
-			}
-		}
-	}
+public interface IWorld {
+	/**
+	 * Get a chunk from server memory (or generate it).
+	 * @param x
+	 * @param z
+	 * @return The chunk you wanted.
+	 */
+	public IChunk getChunk(int x, int z);
 
 	/**
-	 * @param f
+	 * Get the block ID at the provided global coordinates.
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return Block ID
 	 */
-	private static void loadPlugin(File f) {
-		try {
-			URLClassLoader cl = new URLClassLoader(new URL[]{f.toURI().toURL()});
-			String fname = f.getName();
-			String pluginName= fname.substring(0, fname.lastIndexOf("."));
-			Plugin p = (Plugin)cl.loadClass(pluginName).getConstructor().newInstance();
-			loadedPlugins.put(pluginName,p);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	public int getBlockIdAt(int x, int y, int z);
 	
-	public static void RegisterListener(String pluginName, PluginListener listener) {
-		enabledListeners.put(pluginName,listener);
-	}
-	
-	public static void DisablePlugin(String pluginName) {
-		enabledListeners.remove(pluginName);
-		loadedPlugins.get(pluginName).disable();
-	}
-	
-	public static void StartPlugin(String pluginName) {
-		loadedPlugins.get(pluginName).initialize();
-		loadedPlugins.get(pluginName).enable();
-	}
+	/**
+	 * Find the highest solid block at this "column".
+	 * @param x
+	 * @param z
+	 * @return y coordinate of block.
+	 */
+	public int findTopSolidBlock(int x, int z);
+
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param type
+	 */
+	public void setBlockAt(int x, int y, int z, int type);
+
+	/**
+	 * @param block BlockLight?
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return
+	 */
+	public int getSavedLightValue(boolean block, int x, int y, int z);
+
+	/**
+	 * @return
+	 */
+	public IMobSpawnerBase getBiomeGenerator();
+
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 */
+	public IMaterial getBlockMaterialAt(int x, int y, int z);
 }

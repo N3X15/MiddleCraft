@@ -25,24 +25,60 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.middlecraft.server;
 
-// NOTE: Make this as compatible with hmod as possible without outright theft so that it's easier for plugins to port over to MiddleCraft.
+
 /**
- * Extend this class to create a plugin!
  * @author Rob
  *
  */
-public abstract class Plugin {
-	public String name;
-	public String version;
-	public String author="Anonymous"; // Differs from hmod, so make it optional.
+public class Server {
 	
-	public boolean enabled=false;
+	public IWorld world;
+	private PluginLoader loader=new PluginLoader();
 	
-	public abstract void enable();
-	public abstract void disable();
-	public abstract void initialize();
+	/**
+	 * HMod compat
+	 * @return
+	 */
+	public PluginLoader getLoader() { return loader; }
 	
-	public boolean isEnabled() { return enabled; }
+	/**
+	 * Alias for IWorld.findTopSolidBlock
+	 * @param x
+	 * @param z
+	 * @return
+	 */
+	public int getHighestBlockY(int x, int z) {
+		return world.findTopSolidBlock(x, z);
+	}
+
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return
+	 */
+	public int getBlockIdAt(int x, int y, int z) {
+		return world.getBlockIdAt(x, y, z);
+	}
+
+	/**
+	 * @param x
+	 * @param height
+	 * @param z
+	 * @param type
+	 */
+	public void setBlockAt(int x, int y, int z, int type) {
+		world.setBlockAt(x,y,z,type);
+	}
+
+	/**
+	 * @param x
+	 * @param z
+	 * @return
+	 */
+	public double getTemperatureValue(int x, int z) {
+		world.getBiomeGenerator().genTemperatures(x,z,1,1);
+		return world.getBiomeGenerator().temperature[0];
+	}
 }

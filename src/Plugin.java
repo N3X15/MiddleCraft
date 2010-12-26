@@ -1,3 +1,4 @@
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -26,66 +27,25 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import java.io.File;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.Map;
 
-
-
-
-
+// NOTE: Make this as compatible with hmod as possible without outright theft so that it's easier for plugins to port over to MiddleCraft.
 /**
+ * Extend this class to create a plugin!
  * @author Rob
  *
  */
-public class Hooks {
+public abstract class Plugin {
+	public String name;
+	public String version;
+	public String author="Anonymous"; // Differs from hmod, so make it optional.
 	
-	protected static Map<String,PluginListener> enabledListeners;
-	protected static Map<String,Plugin> loadedPlugins;
+	public boolean enabled=false;
 	
-	public static void initialize()
-	{
-		File dir = new File("plugins/");
-		for(File f : dir.listFiles()) {
-			if(f.isFile() && f.getName().endsWith(".jar")) {
-				try {
-					loadPlugin(f);
-				} catch (Exception e) {
-					
-				}
-			}
-		}
-	}
-
-	/**
-	 * @param f
-	 */
-	private static void loadPlugin(File f) {
-		try {
-			URLClassLoader cl = new URLClassLoader(new URL[]{f.toURI().toURL()});
-			String fname = f.getName();
-			String pluginName= fname.substring(0, fname.lastIndexOf("."));
-			Plugin p = (Plugin)cl.loadClass(pluginName).getConstructor().newInstance();
-			loadedPlugins.put(pluginName,p);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+	public abstract void enable();
+	public abstract void disable();
+	public abstract void initialize();
 	
-	public static void RegisterListener(String pluginName, PluginListener listener) {
-		enabledListeners.put(pluginName,listener);
-	}
+	public boolean isEnabled() { return enabled; }
 	
-	public static void DisablePlugin(String pluginName) {
-		enabledListeners.remove(pluginName);
-		loadedPlugins.get(pluginName).disable();
-	}
-	
-	public static void StartPlugin(String pluginName) {
-		loadedPlugins.get(pluginName).initialize();
-		loadedPlugins.get(pluginName).enable();
-	}
+	public Server etc; // What is this I don't even
 }

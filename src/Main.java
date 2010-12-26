@@ -26,15 +26,11 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 import org.middlecraft.server.SmartReflector;
 
-
-
 public class Main {
 	public static void main(String[] arguments) {
-		// ADD UNIX-STYLE COMMANDLINE PARSING HERE
 		
 		// Load mappings.
 		try {
@@ -44,23 +40,15 @@ public class Main {
 			e.printStackTrace();
 		}
 		
+		// Load up plugins. *guitar riff*
+		Hooks.initialize();
+		
+		// Start up server. *drumroll*
 		Class<?> serv = SmartReflector.GrabClass("MinecraftServer");
 		try {
 			serv.getMethod("main",String[].class).invoke(null, arguments);
-		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (SecurityException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (NoSuchMethodException e) {
-			// TODO Auto-generated catch block
+		} catch (Exception e) {
+			// And crash *sad trombone*
 			e.printStackTrace();
 		}
 	}
