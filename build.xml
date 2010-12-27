@@ -18,6 +18,7 @@
 		<mkdir dir="bin/classes" />
 		<mkdir dir="staged" />
 		<mkdir dir="staged/plugins" />
+		<mkdir dir="staged/lib" />
 		<mkdir dir="lib" />
 		<mkdir dir="docs" />
 	</target>
@@ -84,6 +85,8 @@
 			<manifest>
 				<attribute name="Main-Class"
 					value="Main" />
+				<attribute name="Class-Path"
+					value="lib/javassist.jar lib/minecraft_server.jar" />
 			</manifest>
 		</jar>
 	</target>
@@ -91,7 +94,21 @@
 	<!-- Copies any built files and packaged plugins to a separate
 	     directory that is safe for use as a Minecraft hosting
 	     environment. -->
-	<target name="stage" depends="jar" />
+	<target name="stage" depends="jar">
+		<copy todir="staged/lib">
+			<fileset dir="lib">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<copy todir="staged">
+			<fileset dir="bin">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<copy todir="staged">
+			<fileset dir="data" />
+		</copy>
+	</target>
 	
 	<target name="doc" depends="build">
 		<javadoc
