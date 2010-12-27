@@ -145,7 +145,7 @@ public class SmartReflector {
 		// CLASS_NAME,OBF_CLASS_NAME,DESCRIPTION
 		File f  = new File(String.format("data/server/%s/classes.csv", serverVersion));
 		if(!f.exists()) {
-			l.log(Level.WARNING,"No class mapping table!");
+			l.severe("No class mapping table!");
 			return false;
 		}
 		Scanner scanner = new Scanner(new FileInputStream(f));
