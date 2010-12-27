@@ -44,6 +44,7 @@ public class MethodInfo {
 	public String name;
 	public String patch="";
 
+	public static String header="Real Name,Signature,Parent Class,Readable Name";
 	public MethodInfo() {}
 	public MethodInfo(String line) {
 		String[] chunks = line.split(",");

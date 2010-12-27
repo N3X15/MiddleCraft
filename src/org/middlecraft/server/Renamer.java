@@ -51,6 +51,12 @@ public class Renamer implements Translator {
 	public void onLoad(ClassPool cp, String className) throws NotFoundException,
 			CannotCompileException {
 		ClassInfo ci = SmartReflector.classes.get(className);
+		if(ci==null)
+		{
+			SmartReflector.addObfuscatedClassDefinition(className);
+			ci = SmartReflector.classes.get(className);
+		}
+			
 		String ncn = ci.name;
 		l.log(Level.FINE,"Renaming class "+className+" to "+ncn+".");
 		try {

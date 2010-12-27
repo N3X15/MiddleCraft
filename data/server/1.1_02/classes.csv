@@ -1,327 +1,249 @@
 Real Name,MCP Name,Superclass,Description
-a,Packet7,java.lang.Object,Use Entity
-aa,CraftingInventoryPlayerCB,java.lang.Object,Callbacks for the player inventory. (As a side note
-ab,BlockSnowBlock,java.lang.Object,*
-ac,ServerWindowAdapter,java.lang.Object,*
-ad,NBTTagCompound,java.lang.Object,*
-ae,ServerGuiCommandListener,java.lang.Object,*
-af,BlockStationary,java.lang.Object,Block used for stationary water and lava
-ag,ServerGuiFocusAdapter,java.lang.Object,*
-ah,BlockTNT,java.lang.Object,*
-ai,BlockSlowSand,java.lang.Object,*
-aj,Packet1Login,java.lang.Object,*
-ak,Packet11PlayerPosition,java.lang.Object,*
-al,IAnimals,java.lang.Object,Interface for animals (empty interface)
-am,StepSoundSand,java.lang.Object,client side refers to gravel
-an,StepSoundStone,java.lang.Object,client side refers to glass
-ao,BlockPortal,java.lang.Object,*
-ap,PlayerInstance,java.lang.Object,An instance of a connected player
-aq,RecipesFood,java.lang.Object,*
-ar,NoiseGeneratorPerlin,java.lang.Object,Perlin noise generator
-as,MaterialLogic,java.lang.Object,Material for objects with some kind of logik (growers
-at,ServerCommand,java.lang.Object,Holds the server command and a reference to the command handler
-au,CompressedStreamTools,java.lang.Object,Provides function to read and write gzipped streams
-av,InventoryLargeChest,java.lang.Object,*
-aw,BlockButton,java.lang.Object,*
-ax,ItemPickaxe,java.lang.Object,*
-ay,Packet106,java.lang.Object,Transaction
-az,BlockFlowing,java.lang.Object,Block used for flowing water and lava
-b,PathPoint,java.lang.Object,A point on a path used for pathfinding
-ba,BlockCactus,java.lang.Object,*
-bb,ItemBucket,java.lang.Object,*
-bc,BlockDirt,java.lang.Object,*
-bd,IChunkLoader,java.lang.Object,Interface for chunk loaders
-be,WorldGenFlowers,java.lang.Object,Generates flowers and mushrooms
-bf,EntityAnimals,java.lang.Object,Base class for animals
-bg,TileEntity,java.lang.Object,*
-bh,Packet9,java.lang.Object,Respawn
-bi,BlockLeaves,java.lang.Object,*
-bj,CraftingInventoryFurnaceCB,java.lang.Object,*
-bk,EntityGhast,java.lang.Object,EntityGhast
-bl,BlockMinecartTrack,java.lang.Object,*
-bm,BlockRedstoneOre,java.lang.Object,*
-bn,Vec3D,java.lang.Object,A Vector consisting of 3 doubles
-bo,BlockPressurePlate,java.lang.Object,*
-bp,EntityCow,java.lang.Object,Animal cow
-bq,EntitySnowball,java.lang.Object,Snowball
-br,Packet3Chat,java.lang.Object,*
-bs,NetworkManager,java.lang.Object,*
-bt,WorldGenerator,java.lang.Object,Base class for world generators
-bu,ItemSoup,java.lang.Object,*
-bv,MapGenCavesHell,java.lang.Object,*
-bw,IWorldAccess,java.lang.Object,*
-bx,CraftingInventoryChestCB,java.lang.Object,*
-by,NoiseGenerator2,java.lang.Object,Don't have proper name for it yet
-bz,NBTTagInt,java.lang.Object,*
-c,BlockChest,java.lang.Object,*
-ca,EntityFireball,java.lang.Object,Ghast fireball
-cb,SlotArmor,java.lang.Object,Inventory slot used for the 4 equip slots for armor.
-cc,Packet33RelEntityMoveLook,java.lang.Object,*
-cd,WorldGenHellLava,java.lang.Object,*
-ce,ItemSword,java.lang.Object,*
-cf,ItemBlock,java.lang.Object,*
-cg,IChunkProvider,java.lang.Object,Interface for chunk providers
-ch,EntitySpider,java.lang.Object,Mob spider
-ci,SpawnerAnimals,java.lang.Object,Used to spawn creatures near to players. There are two instances
-cj,ThreadServerApplication,java.lang.Object,Main thread of the server application
-ck,ChunkProviderHell,java.lang.Object,*
-cl,ThreadCommandReader,java.lang.Object,Get input from commandline
-cm,NBTTagByte,java.lang.Object,*
-cn,ThreadSleepForever,java.lang.Object,*
-co,ItemFishingRod,java.lang.Object,*
-cp,StepSound,java.lang.Object,Sound type when walking on a block type
-cq,TileEntityMobSpawner,java.lang.Object,*
-cr,HashEntry2,java.lang.Object,*
-cs,Packet102,java.lang.Object,Window click
-ct,EntityPainting,java.lang.Object,Entity Painting
-cu,BlockRedstoneTorch,java.lang.Object,*
-cv,NextTickListEntry,java.lang.Object,*
-cw,Explosion,java.lang.Object,*
-cx,EntityTNTPrimed,java.lang.Object,Entity Primed TNT
-cy,BlockMobSpawner,java.lang.Object,*
-cz,ItemBow,java.lang.Object,*
-d,Packet20NamedEntitySpawn,java.lang.Object,*
-da,Packet6SpawnPosition,java.lang.Object,*
-db,NoiseGenerator,java.lang.Object,Base class for noise generators
-dc,PathEntity,java.lang.Object,Result of the pathfinder processing; used to make an Entity follow a path
-dd,Packet34EntityTeleport,java.lang.Object,*
-de,Packet22Collect,java.lang.Object,*
-df,BlockReed,java.lang.Object,*
-dg,WorldGenLakes,java.lang.Object,*
-dh,EntitySheep,java.lang.Object,Animal sheep
-di,ItemSeeds,java.lang.Object,*
-dj,ItemSnowball,java.lang.Object,*
-dk,ItemMinecart,java.lang.Object,*
-dl,Packet60,java.lang.Object,Explosion
-dm,PlayerNBTManager,java.lang.Object,*
-dn,BlockFluids,java.lang.Object,Base class for fluids (not used directly)
-do,BlockLadder,java.lang.Object,*
-dp,GuiLogOutputHandler,java.lang.Object,*
-dq,ItemTool,java.lang.Object,*
-dr,CraftingRecipe,java.lang.Object,A parsed crafting recipe description
-ds,EnumMobType,java.lang.Object,enum with everything
-dt,PropertyManager,java.lang.Object,*
-du,BlockContainer,java.lang.Object,Base class for block that can have content (not used directly)
-dv,Packet29DestroyEntity,java.lang.Object,*
-dw,CraftingInventoryCB,java.lang.Object,General callbacks for overlay crafting. onGUI_Closed and on_CraftMatrixChanged.
-dx,NetworkAcceptThread,java.lang.Object,*
-dy,BlockClay,java.lang.Object,*
-dz,ItemSaddle,java.lang.Object,*
-e,NBTTagLong,java.lang.Object,*
-ea,Packet32EntityLook,java.lang.Object,*
-eb,EnumSkyBlock,java.lang.Object,enum with sky and block
-ec,ICrafting,java.lang.Object,*
-ed,Packet51MapChunk,java.lang.Object,*
-ee,MaterialLiquid,java.lang.Object,*
-ef,WorldGenLightStone2,java.lang.Object,*
-eg,Packet50PreChunk,java.lang.Object,*
-eh,NetworkListenThread,java.lang.Object,*
-ei,ThreadLoginVerifier,java.lang.Object,Verify username/password at the minecraft.net website
-ej,BlockStone,java.lang.Object,*
-ek,TileEntityFurnace,java.lang.Object,Implement gh (inventory classe). Class inheritance is stronger than interface implementations for the naming scheme.
-el,AxisAlignedBB,java.lang.Object,Axis aligned bounding box
-em,BlockRedstoneWire,java.lang.Object,*
-en,EntityArrow,java.lang.Object,Entity Arrow
-eo,WorldGenDungeons,java.lang.Object,Generates dungeons
-ep,Entity,java.lang.Object,Base class and manager for entities (everything that moves freely
-eq,MapGenCaves,java.lang.Object,*
-er,Packet23VehicleSpawn,java.lang.Object,*
-es,NBTTagList,java.lang.Object,*
-et,BlockStairs,java.lang.Object,*
-eu,Packet8,java.lang.Object,Update Health
-ev,MetadataChunkBlock,java.lang.Object,stores if blocks in a chunk are solid (ground) or air
-ew,Packet13PlayerLookMove,java.lang.Object,*
-ex,ChunkCache,java.lang.Object,Caches a bunch of chunks of the world
-ey,Packet31RelEntityMove,java.lang.Object,*
-ez,NBTTagDouble,java.lang.Object,*
-f,Packet101,java.lang.Object,Close window 
-fa,ItemAxe,java.lang.Object,*
-fb,BlockFurnace,java.lang.Object,*
-fc,IUpdatePlayerListBox,java.lang.Object,*
-fd,BlockPumpkin,java.lang.Object,*
-fe,BlockObsidian,java.lang.Object,*
-ff,World,java.lang.Object,Manager class for the world (only used directly on the client for singleplayer)
-fg,MobSpawnerSwamp,java.lang.Object,*
-fh,IMobs,java.lang.Object,Interface for mobs (empty interface)
-fi,EntityPlayerMP,java.lang.Object,Player entity for multiplayer mode (server class for all players)
-fj,WorldManager,java.lang.Object,*
-fk,BlockWorkbench,java.lang.Object,*
-fl,BlockGlass,java.lang.Object,*
-fm,WorldServer,java.lang.Object,Server world manager
-fn,ICommandListener,java.lang.Object,*
-fo,WorldGenMinable,java.lang.Object,Generates dirt
-fp,BlockJukeBox,java.lang.Object,*
-fq,FontAllowedCharacters,java.lang.Object,Reader for the font.txt file which defines legal characters for chat.
-fr,BlockMushroom,java.lang.Object,*
-fs,NetHandler,java.lang.Object,Base class for network communication handling
-ft,EntitySkeleton,java.lang.Object,Mob skeleton
-fu,MobSpawnerDesert,java.lang.Object,*
-fv,MCHashTable2,java.lang.Object,*
-fw,MapGenBase,java.lang.Object,*
-fx,Pathfinder,java.lang.Object,*
-fy,ChunkLoader,java.lang.Object,Implementation of chunk loader
-fz,WorldGenCactus,java.lang.Object,*
-g,ItemEgg,java.lang.Object,*
-ga,RecipesIngots,java.lang.Object,*
-gb,ItemRecord,java.lang.Object,*
-gc,EntityBoat,java.lang.Object,Boat
-gd,Packet53BlockChange,java.lang.Object,*
-ge,EntityCreeper,java.lang.Object,Mob creeper
-gf,WorldGenLightStone1,java.lang.Object,*
-gg,NoiseGeneratorOctaves2,java.lang.Object,Uses NoiseGenerator2 instead of old Perlin noise generator
-gh,NoiseGeneratorOctaves,java.lang.Object,Layers multiple perlin noise
-gi,NetLoginHandler,java.lang.Object,Server login handler (when clients connect)
-gj,Packet30Entity,java.lang.Object,*
-gk,Packet28,java.lang.Object,Entity Velocity
-gl,BlockSand,java.lang.Object,*
-gm,Item,java.lang.Object,Base class and manager for item types
-gn,Packet130,java.lang.Object,Update Sign
-go,BlockSign,java.lang.Object,Block used for standing signs and wall signs
-gp,Slot,java.lang.Object,Inventory slot base class
-gq,EntityPlayer,java.lang.Object,Base class for player entity types
-gr,NBTTagShort,java.lang.Object,*
-gs,MinecraftException,java.lang.Object,*
-gt,Packet15Place,java.lang.Object,*
-gu,EntityMobs,java.lang.Object,Base class for mobs
-gv,Block,java.lang.Object,Base class and manager for block types
-gw,RecipesTools,java.lang.Object,*
-gx,EntitySlime,java.lang.Object,Mob slime
-gy,BlockBookshelf,java.lang.Object,*
-gz,WorldChunkManagerHell,java.lang.Object,*
-h,Packet2Handshake,java.lang.Object,*
-ha,BlockSapling,java.lang.Object,*
-hb,ConsoleLogManager,java.lang.Object,*
-hc,Packet4UpdateTime,java.lang.Object,*
-hd,EntityZombie,java.lang.Object,Mob zombie
-he,CraftingManager,java.lang.Object,Allotment of recipes
-hf,EntityItem,java.lang.Object,Item (used for almost anything that can be dropped and collected)
-hg,ServerGUI,java.lang.Object,*
-hh,ItemSign,java.lang.Object,*
-hi,NBTTagByteArray,java.lang.Object,*
-hj,ItemBoat,java.lang.Object,*
-hk,MovingObjectPosition,java.lang.Object,Looks like its actually a RayTraceHit
-hl,ServerConfigurationManager,java.lang.Object,*
-hm,BlockLog,java.lang.Object,*
-hn,Packet16BlockItemSwitch,java.lang.Object,*
-ho,Packet12PlayerLook,java.lang.Object,*
-hp,EntityTracker,java.lang.Object,*
-hq,Packet103,java.lang.Object,Set slot
-hr,EntityTrackerEntry,java.lang.Object,*
-hs,BlockSoil,java.lang.Object,*
-ht,ItemDoor,java.lang.Object,*
-hu,GuiLogFormatter,java.lang.Object,*
-hv,BlockTorch,java.lang.Object,*
-hw,MinecartTrackLogic,java.lang.Object,Logic for minecart tracks (looks like it was inner class to minecarttrack)
-hx,ItemRedstone,java.lang.Object,*
-hy,Packet10Flying,java.lang.Object,*
-hz,EntityCreature,java.lang.Object,Base class for creatures (animals and mobs)
-i,InventoryCrafting,java.lang.Object,*
-ia,NBTBase,java.lang.Object,Base class of NBT tags
-ib,WorldGenBigTree,java.lang.Object,Grows big trees
-ic,MathHelper,java.lang.Object,*
-id,EntityEgg,java.lang.Object,*
-ie,EnumArt,java.lang.Object,enum of art types
-if,WorldGenReed,java.lang.Object,*
-ig,CraftingInventoryWorkbenchCB,java.lang.Object,Callbacks for the workbench. Drop items on the ground when closed
-ih,Packet100,java.lang.Object,Open window 
-ii,InventoryPlayer,java.lang.Object,*
-ij,ItemArmor,java.lang.Object,Item type used for all kinds of armor
-ik,BlockFlower,java.lang.Object,*
-il,ItemStack,java.lang.Object,Deals with inventory item stacks
-im,ItemSpade,java.lang.Object,*
-in,EntityList,java.lang.Object,*
-io,Packet38,java.lang.Object,Entity Status
-ip,WorldProviderHell,java.lang.Object,*
-iq,ChunkPosition,java.lang.Object,*
-ir,EntityPig,java.lang.Object,Animal pig
-is,NibbleArray,java.lang.Object,Used to store a nibble (4bit) array of data for things like light maps and chunk data.
-it,InventoryCraftResult,java.lang.Object,*
-iu,Packet24MobSpawn,java.lang.Object,*
-iv,HashEntry,java.lang.Object,A linked list element for the hash table
-iw,ConsoleLogFormatter,java.lang.Object,*
-ix,BlockBreakable,java.lang.Object,Base class for glass and ice (not used directly)
-iy,BlockGrass,java.lang.Object,*
-iz,EntityFlying,java.lang.Object,EntityFlying
-j,WorldGenClay,java.lang.Object,*
-ja,BlockSnow,java.lang.Object,*
-jb,TileEntityChest,java.lang.Object,Implement gh (inventory classe). Class inheritance is stronger than interface implementations for the naming scheme.
-jc,EntityFallingSand,java.lang.Object,Sand falling from gravity
-jd,Packet14BlockDig,java.lang.Object,*
-je,BlockFence,java.lang.Object,*
-jf,MCHashTable,java.lang.Object,*
-jg,RecipesCrafting,java.lang.Object,*
-jh,PlayerManager,java.lang.Object,Manages a list of all connected players
-ji,EntityChicken,java.lang.Object,Animal chicken
-jj,Packet52MultiBlockChange,java.lang.Object,*
-jk,WorldGenPumpkin,java.lang.Object,*
-jl,Packet104,java.lang.Object,Window items
-jm,WorldProvider,java.lang.Object,*
-jn,RecipesWeapons,java.lang.Object,*
-jo,NBTTagString,java.lang.Object,*
-jp,BlockSponge,java.lang.Object,*
-jq,MobSpawnerBase,java.lang.Object,These are biomes not mob spawners (has info on the type of mobs to see in the biome though)
-jr,NetworkMasterThread,java.lang.Object,*
-js,ThreadMonitorConnection,java.lang.Object,*
-jt,NetworkReaderThread,java.lang.Object,*
-ju,NetworkWriterThread,java.lang.Object,*
-jv,Packet,java.lang.Object,Base class and manager for network packets
-jw,WorldGenLiquids,java.lang.Object,Generate water and lava
-jx,IBlockAccess,java.lang.Object,Interface with methods to access (read) single blocks in the world or in caches
-jy,BlockLever,java.lang.Object,*
-jz,WorldGenFire,java.lang.Object,*
-k,BlockOre,java.lang.Object,Block used for gold
-ka,RedstoneUpdateInfo,java.lang.Object,*
-kb,WorldChunkManager,java.lang.Object,*
-kc,EntityPigZombie,java.lang.Object,EntityZombiePigman
-kd,RecipeSorter,java.lang.Object,*
-ke,ChunkProviderLoadOrGenerate,java.lang.Object,Chunk provider which either loads chunks or generates them with ChunkProviderGenerate
-kf,IProgressUpdate,java.lang.Object,*
-kg,GuiStatsComponent,java.lang.Object,*
-kh,ItemFlintAndSteel,java.lang.Object,*
-ki,ChunkProviderGenerate,java.lang.Object,Chunk provider which generates new chunks (used by other chunk providers)
-kj,ItemHoe,java.lang.Object,*
-kk,NetServerHandler,java.lang.Object,Server network handler (in the game)
-kl,WorldGenTrees,java.lang.Object,Grows normal trees
-km,BlockBloodStone,java.lang.Object,*
-kn,BlockDoor,java.lang.Object,Block used for wooden door and iron door
-ko,Path,java.lang.Object,Maintains a sorted set of path points
-kp,TileEntitySign,java.lang.Object,*
-kq,EntityMinecart,java.lang.Object,Entity minecart
-kr,NBTTagEnd,java.lang.Object,*
-ks,ChunkProviderServer,java.lang.Object,Chunk provider which manages chunks on the server for all clients
-kt,ItemPainting,java.lang.Object,*
-ku,EnumCreatureType,java.lang.Object,*
-kv,BlockFire,java.lang.Object,*
-kw,ItemInWorldManager,java.lang.Object,*
-kx,Chunk,java.lang.Object,Chunk of blocks in the world (16x16x128 blocks)
-ky,Packet255KickDisconnect,java.lang.Object,*
-kz,BlockStep,java.lang.Object,Block used for half step and double step
-l,PlayerListBox,java.lang.Object,*
-la,Material,java.lang.Object,Defines material properties for object
-lb,ChunkCoordinates,java.lang.Object,*
-lc,EntityLiving,java.lang.Object,Base class for living beings (animals
-ld,GuiStatsListener,java.lang.Object,*
-le,ItemReed,java.lang.Object,*
-lf,MaterialTransparent,java.lang.Object,*
-lg,IInventory,java.lang.Object,Interface for all kinds of inventories
-lh,ItemFood,java.lang.Object,Used for all food items and as a base for soup
-li,SlotCrafting,java.lang.Object,Inventory slot containing the crafting result.
-lj,EntityFish,java.lang.Object,*
-lk,ChunkCoordIntPair,java.lang.Object,Pair of integers used as index of chunk (x
-ll,BlockLightStone,java.lang.Object,*
-lm,Packet0KeepAlive,java.lang.Object,*
-m,Packet105,java.lang.Object,Update progress bar
-n,BlockOreBlock,java.lang.Object,Block used for gold
+a,*,java.lang.Object,*
+ab,*,java.lang.Object,*
+ac,*,java.lang.Object,*
+ad,*,java.lang.Object,*
+ae,*,java.lang.Object,*
+af,*,java.lang.Object,*
+ag,*,java.lang.Object,*
+ah,*,java.lang.Object,*
+ai,*,java.lang.Object,*
+aj,*,java.lang.Object,*
+ak,*,java.lang.Object,*
+al,*,java.lang.Object,*
+am,*,java.lang.Object,*
+an,*,java.lang.Object,*
+ao,*,java.lang.Object,*
+ap,*,java.lang.Object,*
+ar,*,java.lang.Object,*
+as,*,java.lang.Object,*
+au,*,java.lang.Object,*
+av,*,java.lang.Object,*
+aw,*,java.lang.Object,*
+ax,*,java.lang.Object,*
+ay,*,java.lang.Object,*
+az,*,java.lang.Object,*
+ba,*,java.lang.Object,*
+bb,*,java.lang.Object,*
+bc,*,java.lang.Object,*
+bd,*,java.lang.Object,*
+bf,*,java.lang.Object,*
+bg,*,java.lang.Object,*
+bh,*,java.lang.Object,*
+bi,*,java.lang.Object,*
+bl,*,java.lang.Object,*
+bm,*,java.lang.Object,*
+bn,*,java.lang.Object,*
+bo,*,java.lang.Object,*
+bq,*,java.lang.Object,*
+br,*,java.lang.Object,*
+bs,*,java.lang.Object,*
+bt,*,java.lang.Object,*
+bu,*,java.lang.Object,*
+bw,*,java.lang.Object,*
+by,*,java.lang.Object,*
+bz,*,java.lang.Object,*
+c,*,java.lang.Object,*
+cc,*,java.lang.Object,*
+ce,*,java.lang.Object,*
+cf,*,java.lang.Object,*
+cg,*,java.lang.Object,*
+ci,*,java.lang.Object,*
+cj,*,java.lang.Object,*
+cl,*,java.lang.Object,*
+cm,*,java.lang.Object,*
+cn,*,java.lang.Object,*
+co,*,java.lang.Object,*
+cp,*,java.lang.Object,*
+cq,*,java.lang.Object,*
+cr,*,java.lang.Object,*
+cs,*,java.lang.Object,*
+ct,*,java.lang.Object,*
+cu,*,java.lang.Object,*
+cx,*,java.lang.Object,*
+cy,*,java.lang.Object,*
+cz,*,java.lang.Object,*
+d,*,java.lang.Object,*
+da,*,java.lang.Object,*
+db,*,java.lang.Object,*
+dd,*,java.lang.Object,*
+de,*,java.lang.Object,*
+df,*,java.lang.Object,*
+di,*,java.lang.Object,*
+dj,*,java.lang.Object,*
+dk,*,java.lang.Object,*
+dl,*,java.lang.Object,*
+dm,*,java.lang.Object,*
+dn,*,java.lang.Object,*
+do,*,java.lang.Object,*
+dp,*,java.lang.Object,*
+dq,*,java.lang.Object,*
+ds,*,java.lang.Object,*
+dt,*,java.lang.Object,*
+du,*,java.lang.Object,*
+dv,*,java.lang.Object,*
+dx,*,java.lang.Object,*
+dy,*,java.lang.Object,*
+dz,*,java.lang.Object,*
+e,*,java.lang.Object,*
+ea,*,java.lang.Object,*
+eb,*,java.lang.Object,*
+ec,*,java.lang.Object,*
+ed,*,java.lang.Object,*
+ee,*,java.lang.Object,*
+eg,*,java.lang.Object,*
+eh,*,java.lang.Object,*
+ej,*,java.lang.Object,*
+ek,*,java.lang.Object,*
+el,*,java.lang.Object,*
+em,*,java.lang.Object,*
+en,*,java.lang.Object,*
+ep,*,java.lang.Object,*
+eq,*,java.lang.Object,*
+er,*,java.lang.Object,*
+es,*,java.lang.Object,*
+et,*,java.lang.Object,*
+eu,*,java.lang.Object,*
+ev,*,java.lang.Object,*
+ew,*,java.lang.Object,*
+ey,*,java.lang.Object,*
+ez,*,java.lang.Object,*
+f,*,java.lang.Object,*
+fa,*,java.lang.Object,*
+fb,*,java.lang.Object,*
+fc,*,java.lang.Object,*
+fd,*,java.lang.Object,*
+fe,*,java.lang.Object,*
+ff,*,java.lang.Object,*
+fh,*,java.lang.Object,*
+fi,*,java.lang.Object,*
+fj,*,java.lang.Object,*
+fk,*,java.lang.Object,*
+fl,*,java.lang.Object,*
+fm,*,java.lang.Object,*
+fn,*,java.lang.Object,*
+fp,*,java.lang.Object,*
+fr,*,java.lang.Object,*
+ft,*,java.lang.Object,*
+fv,*,java.lang.Object,*
+fw,*,java.lang.Object,*
+fy,*,java.lang.Object,*
+g,*,java.lang.Object,*
+gb,*,java.lang.Object,*
+gc,*,java.lang.Object,*
+gd,*,java.lang.Object,*
+gg,*,java.lang.Object,*
+gh,*,java.lang.Object,*
+gj,*,java.lang.Object,*
+gk,*,java.lang.Object,*
+gl,*,java.lang.Object,*
+gm,*,java.lang.Object,*
+gn,*,java.lang.Object,*
+go,*,java.lang.Object,*
+gq,*,java.lang.Object,*
+gr,*,java.lang.Object,*
+gs,*,java.lang.Object,*
+gt,*,java.lang.Object,*
+gu,*,java.lang.Object,*
+gv,*,java.lang.Object,*
+gy,*,java.lang.Object,*
+h,*,java.lang.Object,*
+ha,*,java.lang.Object,*
+hb,*,java.lang.Object,*
+hc,*,java.lang.Object,*
+hf,*,java.lang.Object,*
+hg,*,java.lang.Object,*
+hh,*,java.lang.Object,*
+hi,*,java.lang.Object,*
+hj,*,java.lang.Object,*
+hl,*,java.lang.Object,*
+hm,*,java.lang.Object,*
+hn,*,java.lang.Object,*
+ho,*,java.lang.Object,*
+hp,*,java.lang.Object,*
+hq,*,java.lang.Object,*
+hs,*,java.lang.Object,*
+ht,*,java.lang.Object,*
+hu,*,java.lang.Object,*
+hv,*,java.lang.Object,*
+hx,*,java.lang.Object,*
+hy,*,java.lang.Object,*
+hz,*,java.lang.Object,*
+ia,*,java.lang.Object,*
+ib,*,java.lang.Object,*
+ic,*,java.lang.Object,*
+id,*,java.lang.Object,*
+ih,*,java.lang.Object,*
+ij,*,java.lang.Object,*
+ik,*,java.lang.Object,*
+il,*,java.lang.Object,*
+im,*,java.lang.Object,*
+io,*,java.lang.Object,*
+ip,*,java.lang.Object,*
+iq,*,java.lang.Object,*
+is,*,java.lang.Object,*
+iu,*,java.lang.Object,*
+iv,*,java.lang.Object,*
+iw,*,java.lang.Object,*
+ix,*,java.lang.Object,*
+iy,*,java.lang.Object,*
+ja,*,java.lang.Object,*
+jb,*,java.lang.Object,*
+jc,*,java.lang.Object,*
+jd,*,java.lang.Object,*
+je,*,java.lang.Object,*
+jf,*,java.lang.Object,*
+jh,*,java.lang.Object,*
+jj,*,java.lang.Object,*
+jl,*,java.lang.Object,*
+jm,*,java.lang.Object,*
+jo,*,java.lang.Object,*
+jp,*,java.lang.Object,*
+jt,*,java.lang.Object,*
+ju,*,java.lang.Object,*
+jv,*,java.lang.Object,*
+jx,*,java.lang.Object,*
+jy,*,java.lang.Object,*
+k,*,java.lang.Object,*
+kb,*,java.lang.Object,*
+kg,*,java.lang.Object,*
+kh,*,java.lang.Object,*
+ki,*,java.lang.Object,*
+kj,*,java.lang.Object,*
+kl,*,java.lang.Object,*
+km,*,java.lang.Object,*
+kn,*,java.lang.Object,*
+kp,*,java.lang.Object,*
+kq,*,java.lang.Object,*
+kr,*,java.lang.Object,*
+ks,*,java.lang.Object,*
+kt,*,java.lang.Object,*
+ku,*,java.lang.Object,*
+kv,*,java.lang.Object,*
+kx,*,java.lang.Object,*
+ky,*,java.lang.Object,*
+kz,*,java.lang.Object,*
+l,*,java.lang.Object,*
+la,*,java.lang.Object,*
+lb,*,java.lang.Object,*
+lc,*,java.lang.Object,*
+ld,*,java.lang.Object,*
+le,*,java.lang.Object,*
+lf,*,java.lang.Object,*
+lg,*,java.lang.Object,*
+lh,*,java.lang.Object,*
+lj,*,java.lang.Object,*
+ll,*,java.lang.Object,*
+lm,*,java.lang.Object,*
+m,*,java.lang.Object,*
+n,*,java.lang.Object,*
 net.minecraft.server.MinecraftServer,*,java.lang.Object,*
-o,Packet21PickupSpawn,java.lang.Object,*
-p,BlockGravel,java.lang.Object,*
-q,NBTTagFloat,java.lang.Object,*
-r,Packet5PlayerInventory,java.lang.Object,*
-s,BlockCrops,java.lang.Object,*
-t,BlockIce,java.lang.Object,*
-u,MobSpawnerHell,java.lang.Object,*
-v,Packet18ArmAnimation,java.lang.Object,*
-w,BlockLeavesBase,java.lang.Object,Base class for leaves (not used directly). It seems to be separated out possibly as a base class for objects that change textures based on graphics settings (fancy/fast).
-x,Packet39,java.lang.Object,Attach Entity
-y,RecipesArmor,java.lang.Object,*
-z,EntityZombieSimple,java.lang.Object,Mob Zombie (Simple)
+o,*,java.lang.Object,*
+p,*,java.lang.Object,*
+q,*,java.lang.Object,*
+r,*,java.lang.Object,*
+s,*,java.lang.Object,*
+t,*,java.lang.Object,*
+v,*,java.lang.Object,*
+w,*,java.lang.Object,*
+x,*,java.lang.Object,*

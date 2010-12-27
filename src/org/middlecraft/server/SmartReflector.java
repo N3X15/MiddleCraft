@@ -42,6 +42,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -59,6 +61,8 @@ import javassist.NotFoundException;
  *
  */
 public class SmartReflector {
+	
+	static Timer saveTimer=new Timer();
 
 	static Logger l = Logger.getLogger("Minecraft");
 	
@@ -67,6 +71,7 @@ public class SmartReflector {
 	public static HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
 	public static Map<String,Class<?>> loadedClasses = new HashMap<String,Class<?>>();
 	
+	 
 	public static void initialize() throws IOException {
 		// Read data from our simplified MCP deobfuscation mappings
 		//  (I'll make a few python scripts to do this - N3X)
@@ -125,9 +130,14 @@ public class SmartReflector {
 			return;
 		}
 		Scanner scanner = new Scanner(new FileInputStream(f));
+		boolean hasReadHeader=false;
 	    try {
 	    	while (scanner.hasNextLine()) {
 	    		String line = scanner.nextLine();
+	    		if(!hasReadHeader) {
+	    			hasReadHeader=true;
+	    			continue;
+	    		}
 	    		MethodInfo mi = new MethodInfo(line);
 	    		
 	    		if(!classes.containsKey(mi.parentClass))
@@ -270,6 +280,8 @@ public class SmartReflector {
 	 */
 	private static void setDirty() {
 		dirty=true;
+		SaveTask st = new SaveTask();
+		saveTimer.schedule(st, 5000);
 	}
 
 	public static void save() {
@@ -290,6 +302,7 @@ public class SmartReflector {
 		try {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/methods.csv", serverVersion)));
 			int num=0;
+			f.println(MethodInfo.header);
 			for(ClassInfo ci : classes.values()) {
 				//l.log(Level.INFO,"Class "+ci.name+" contains "+Integer.toString(ci.MethodNames.size())+" known methods.");
 				for(MethodInfo mi : ci.MethodNames.values()) {
