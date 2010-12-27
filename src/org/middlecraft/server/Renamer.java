@@ -56,7 +56,7 @@ public class Renamer implements Translator {
 		ClassInfo ci = SmartReflector.classes.get(className);
 		if(ci==null)
 		{
-			SmartReflector.addObfuscatedClassDefinition(className);
+			SmartReflector.addObfuscatedClassDefinition(className,cp.get(className).getSuperclass().getName());
 			ci = SmartReflector.classes.get(className);
 		}
 			
@@ -75,7 +75,7 @@ public class Renamer implements Translator {
 			}
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
-			SmartReflector.addObfuscatedClassDefinition(className);
+			SmartReflector.addObfuscatedClassDefinition(className,"");
 		}
 	}
 	

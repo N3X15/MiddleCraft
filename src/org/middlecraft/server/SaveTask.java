@@ -27,57 +27,20 @@
  */
 package org.middlecraft.server;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @author Rob
  *
  */
-public class ClassInfo {
-	//realName,name,realSuperClass,superClass,description
-	public static final String[] header = new String[]{"Real Name","MCP Name","Real Superclass","MiddleCraft Superclass","Description"};
-	public String name;
-	public HashMap<String,MethodInfo> MethodNames = new HashMap<String,MethodInfo>();
-	public HashMap<String,FieldInfo> FieldNames = new HashMap<String,FieldInfo>();
-	public String realName;
-	public String description="*";
-	public String superClass="*";
-	public String realSuperClass;
-	/**
-	 * @param name2
-	 * @return
-	 */
-	public MethodInfo getMethod(String name2) {
-		return MethodNames.get(name2);
-	}
-	/**
-	 * @param name2
-	 * @return
-	 */
-	public FieldInfo getField(String name2) {
-		return FieldNames.get(name2);
-	}
-	public ClassInfo() {}
-	public ClassInfo(List<String> cells) {
-		realName=cells.get(0);
-		name=cells.get(1);
-		realSuperClass=cells.get(2);
-		superClass=cells.get(3);
-		description=cells.get(4);
-	}
-	
-	public String toString() {
-		return String.format("%s,%s,%s,%s,%s",realName,name,realSuperClass,superClass,description);
-	}
-	public List<String> toList() {
-		List<String> list = new ArrayList<String>();
-		list.add(realName);
-		list.add(name);
-		list.add(realSuperClass);
-		list.add(superClass);
-		list.add(description);
-		return list;
+
+public class SaveTask extends TimerTask {
+	Logger l = Logger.getLogger("Minecraft");
+	public void run() {
+		  l.log(Level.INFO,"Saving reflection mappings...");
+		  SmartReflector.save();
+		  SmartReflector.saveTimer.cancel();
 	}
 }

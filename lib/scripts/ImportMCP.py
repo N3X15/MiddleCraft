@@ -8,9 +8,11 @@ class MethodInfo:
     mytype=''
         
 class ClassInfo:
+    header = "Real Name,MCP Name,Real Superclass,MiddleCraft Superclass,Description"
     name=''
     realName=''
-    superClass='java.lang.Object'
+    realSuperClass='java.lang.Object'
+    superClass="*"
     description='*'
     def __init__(self):
         """Nothing, really."""
@@ -39,17 +41,15 @@ def importClasses(fileName,classNameColumn,obfuscatedColumn,descriptionColumn):
                     except:
                         ci.description="*"
                 print " + %s (%s) - %s" % (ci.name,ci.realName,ci.description)
-                classes.append(ci.toString())
+                classes.append(ci)
         except:
             print " ! ",', '.join(data)
     classes.sort()
     print "Saving..."
-    writeFile = open('classes.csv','wb')
-    writeFile.write("Real Name,MCP Name,Superclass,Description\n");
+    writeFile = csv.writer(open('classes.csv','wb'))
+    writeFile.writerow(['Real Name','MCP Name','Real Superclass','MiddleCraft Superclass','Description']);
     for c in classes:
-        writeFile.write(c)
-        writeFile.write("\n")
-    writeFile.close()
+        writeFile.writerow([c.realName,c.name,c.realSuperClass,c.superClass,c.description])
         
 op=sys.argv[1]
 if op=="classes":

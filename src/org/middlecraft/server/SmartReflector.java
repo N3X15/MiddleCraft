@@ -30,6 +30,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.lang.reflect.Constructor;
@@ -50,6 +52,10 @@ import javassist.CtClass;
 import javassist.CtField;
 import javassist.CtMethod;
 import javassist.NotFoundException;
+
+import org.supercsv.io.CsvListReader;
+import org.supercsv.io.CsvListWriter;
+import org.supercsv.prefs.CsvPreference;
 
 /**
  * @author Rob
@@ -155,16 +161,12 @@ public class SmartReflector {
 			l.severe("No class mapping table!");
 			return false;
 		}
-		Scanner scanner = new Scanner(new FileInputStream(f));
-		boolean hasReadHeader=false;
+		CsvListReader rdr = new CsvListReader(new FileReader(f),CsvPreference.STANDARD_PREFERENCE);
+		rdr.read();
 	    try {
-	    	while (scanner.hasNextLine()){
-	    		String line = scanner.nextLine();
-	    		if(!hasReadHeader) {
-	    			hasReadHeader=true;
-	    			continue;
-	    		}
-    		
+	    	while (true){
+	    		List<String> line = rdr.read();
+	    		if(line==null) break;
     			ClassInfo ci = new ClassInfo(line);
     			
     			if(ci.name.startsWith("UNKNOWN_")) {
@@ -176,7 +178,7 @@ public class SmartReflector {
 	    	}
 	    }
 	    finally{
-	    	scanner.close();
+	    	rdr.close();
 	    }
 	    return true;
 	}
@@ -222,13 +224,20 @@ public class SmartReflector {
 	/**
 	 * Add a class to the list.
 	 * @param name
+	 * @param superClass 
 	 */
-	public static void addObfuscatedClassDefinition(String name) {
+	public static void addObfuscatedClassDefinition(String name, String superClass) {
 		unkClasses++;
+		if(superClass=="") {
+			try {
+				superClass = ClassPool.getDefault().get(name).getSuperclass().getName();
+			} catch (NotFoundException e) {	} 
+		}
 		ClassInfo ci = new ClassInfo();
 		ci.name="*";
 		ci.realName=name;
 		ci.description="*";
+		ci.realSuperClass=superClass;
 		classes.put(ci.realName, ci);
 		setDirty();
 	}
@@ -290,7 +299,12 @@ public class SmartReflector {
 		File data = new File(String.format("data/server/%s/", serverVersion));
 		if(!data.exists())
 			data.mkdirs();
-		writeClasses();
+		try {
+			writeClasses();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		writeFields();
 		writeMethods();
 	}
@@ -347,27 +361,31 @@ public class SmartReflector {
 	}
 
 	/**
+	 * @throws IOException 
 	 * 
 	 */
-	private static void writeClasses() {		
-		PrintStream f=null;
+	private static void writeClasses() throws IOException {
+		CsvListWriter w = null;
 		try {
 			int num = 0;
-			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/classes.csv", serverVersion)));
+			w = new CsvListWriter(new FileWriter(new File(String.format("data/server/%s/classes.csv", serverVersion))),CsvPreference.STANDARD_PREFERENCE); 			
 			List<String> keys = new ArrayList<String>(classes.keySet());
 			Collections.sort(keys);
-			f.println(ClassInfo.header);
+			w.write(ClassInfo.header);
 			for(String key : keys) {
-				f.println(classes.get(key).toString());
+				w.write(classes.get(key).toList());
 				num++;
 			}
 			l.info(String.format("Wrote %d classes to disk.", num));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		} finally {
-			if(f!=null)
-				f.close();
+			if(w!=null)
+				w.close();
 		}
 	}
 
