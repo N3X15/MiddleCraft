@@ -108,7 +108,7 @@ public class DataJack implements IDataJack {
 		rootsLock.lock();
 		IDataJack dj_dork = null;
 		try {
-			String key = getRootName(_path);
+			//String key = getRootName(_path);
 			dj_dork = roots.get(_path);
 		} finally {
 			rootsLock.unlock();

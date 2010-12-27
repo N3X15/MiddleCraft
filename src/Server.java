@@ -77,6 +77,7 @@ public class Server {
 	 * @param z
 	 * @return
 	 */
+	@SuppressWarnings("static-access")
 	public double getTemperatureValue(int x, int z) {
 		world.getBiomeGenerator().genTemperatures(x,z,1,1);
 		return world.getBiomeGenerator().temperature[0];

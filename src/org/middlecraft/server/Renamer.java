@@ -27,12 +27,15 @@
  */
 package org.middlecraft.server;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
+import javassist.CtField;
 import javassist.CtMethod;
 import javassist.NotFoundException;
 import javassist.Translator;
@@ -63,14 +66,20 @@ public class Renamer implements Translator {
 			if(className!="net.minecraft.server.MinecraftServer") {
 				if(className==ncn) throw new NotFoundException(className);
 				CtClass cc = cp.getAndRename(className, ncn);
-				cc=remapFields(cc, className);
-				cc=remapMethods(cc, className);
+				String pkg = cc.getPackageName();
+				if(pkg==null || pkg == "net.minecraft.server")
+				{
+					cc=remapFields(cc, className);
+					cc=remapMethods(cc, className);
+				}
 			}
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
 			SmartReflector.addObfuscatedClassDefinition(className);
 		}
 	}
+	
+	List<String> skippedPackages = new ArrayList<String>();
 
 	/**
 	 * @param cc
@@ -86,8 +95,14 @@ public class Renamer implements Translator {
 			cc.defrost();
 		for(CtMethod method : cc.getMethods()) {
 			String pkg=method.getDeclaringClass().getPackageName();
-			if(pkg == null || pkg == "" || pkg.startsWith("net.minecraft"))
+			if(!Utils.isMinecraftPackage(pkg))
+			{
+				if(!skippedPackages.contains(pkg)) {
+					l.log(Level.FINE,"Skipping package "+pkg);
+					skippedPackages.add(pkg);
+				}
 				continue;
+			}
 			MethodInfo mi = SmartReflector.getMethod(className,method.getName(),method.getSignature());
 			
 			
@@ -109,9 +124,33 @@ public class Renamer implements Translator {
 	 * @return
 	 */
 	private CtClass remapFields(CtClass cc, String className) {
-		// TODO Auto-generated method stub
+		if(cc == null) {
+			l.log(Level.WARNING,"cc=null");
+		}
 		if(cc.isFrozen())
 			cc.defrost();
+		for(CtField field : cc.getFields()) {
+			String pkg=field.getDeclaringClass().getPackageName();
+			if(!Utils.isMinecraftPackage(pkg))
+			{
+				if(!skippedPackages.contains(pkg)) {
+					l.log(Level.FINE,"Skipping package "+pkg);
+					skippedPackages.add(pkg);
+				}
+				continue;
+			}
+			try
+			{
+				FieldInfo fi = SmartReflector.getField(className,field.getName(),field.getType().getName());
+				
+				if(fi!=null) {
+					if(fi.name!="*" || fi.name!="") continue;
+					if(cc.isFrozen())
+						cc.defrost();
+					field.setName(fi.name);
+				}
+			} catch(Exception e){}
+		}
 		return cc;
 	}
 

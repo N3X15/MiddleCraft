@@ -35,19 +35,14 @@ import java.io.PrintStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Timer;
-import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import javassist.CannotCompileException;
 import javassist.ClassPool;
@@ -98,21 +93,23 @@ public class SmartReflector {
 			l.log(Level.WARNING,"No field mapping table!");
 			return;
 		}
+		boolean hasReadHeader=false;
 		Scanner scanner = new Scanner(new FileInputStream(f));
 	    try {
 	    	while (scanner.hasNextLine()) {
 	    		String line = scanner.nextLine();
-	    		String[] chunks = line.split(",");
-	    		
-	    		String className = chunks[0];
-	    		String oldFieldName = chunks[1];
-	    		String fieldName = chunks[2];
-	    		
-	    		if(!classes.containsKey(className))
+	    		if(!hasReadHeader) {
+	    			hasReadHeader=true;
 	    			continue;
-	    		ClassInfo ci = classes.get(className);
-	    		ci.FieldNames.put(oldFieldName,fieldName);
-	    		classes.put(className, ci);
+	    		}
+
+	    		FieldInfo field = new FieldInfo(line);
+	    		
+	    		if(!classes.containsKey(field.className))
+	    			continue;
+	    		ClassInfo ci = classes.get(field.className);
+	    		ci.FieldNames.put(field.realName,field);
+	    		classes.put(field.className, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
 		
@@ -167,7 +164,6 @@ public class SmartReflector {
 	    			hasReadHeader=true;
 	    			continue;
 	    		}
-	    		String[] chunks = line.split(",");
     		
     			ClassInfo ci = new ClassInfo(line);
     			
@@ -248,10 +244,14 @@ public class SmartReflector {
 	}
 	
 	static int unkFields=0; 
-	public static void addFieldDefinition(String className, String fieldName) {
+	public static void addObfuscatedFieldDefinition(String className, String fieldName, String type) {
 		unkFields++;
 		ClassInfo ci = classes.get(className);
-		ci.FieldNames.put("UNKNOWN_"+Integer.toString(unkFields),fieldName);
+		FieldInfo field = new FieldInfo();
+		field.className=className;
+		field.realName=fieldName;
+		field.type=type;
+		ci.FieldNames.put(fieldName,field);
 		classes.put(className, ci);
 		setDirty();
 	}
@@ -259,7 +259,7 @@ public class SmartReflector {
 	static int unkMethods=0;
 
 	private static boolean dirty;
-	public static void addObfuscatedMethodDefinition(String className, String methodName, String signature) {
+	public static void addObfuscatedMethodDefinition(String className, String methodName, String signature, String extraData) {
 		//unkMethods++;
 		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
 		ClassInfo ci = classes.get(className);
@@ -269,6 +269,7 @@ public class SmartReflector {
 		mi.parentClass=className;
 		mi.realName=methodName;
 		mi.signature=signature;
+		mi.description = extraData;
 		ci.MethodNames.put(mi.toIndex(), mi);
 		//ci.MethodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
 		classes.put(className, ci);
@@ -325,17 +326,17 @@ public class SmartReflector {
 	 */
 	private static void writeFields() {		
 		PrintStream f=null;
+		int num = 0;
 		try {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/fields.csv", serverVersion)));
-		
+			f.println(FieldInfo.header);
 			for(ClassInfo ci : classes.values()) {
-				for(Entry<String,String> mi : ci.FieldNames.entrySet()) {
-					String realFieldName = mi.getKey();
-					String fieldName = mi.getValue();
-					String className = ci.name;
-					f.println(className+","+fieldName+","+realFieldName);
+				for(FieldInfo fi : ci.FieldNames.values()) {
+					f.println(fi.toString());
+					num++;
 				}
 			}
+			l.info(String.format("Wrote %d fields to disk.", num));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -351,13 +352,16 @@ public class SmartReflector {
 	private static void writeClasses() {		
 		PrintStream f=null;
 		try {
+			int num = 0;
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/classes.csv", serverVersion)));
 			List<String> keys = new ArrayList<String>(classes.keySet());
 			Collections.sort(keys);
 			f.println(ClassInfo.header);
 			for(String key : keys) {
 				f.println(classes.get(key).toString());
+				num++;
 			}
+			l.info(String.format("Wrote %d classes to disk.", num));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -394,9 +398,9 @@ public class SmartReflector {
 			// Fix field names...
 			for(CtField cf : cl.getDeclaredFields()) {
 				if(ci.FieldNames.containsKey(cf.getName())) {
-					String newName = ci.FieldNames.get(cf.getName());
-					l.log(Level.INFO,"Fixing field "+cf.getName()+" to "+newName);
-					cf.setName(newName);
+					FieldInfo field = ci.FieldNames.get(cf.getName());
+					l.log(Level.INFO,"Fixing field "+cf.getName()+" to "+field.name);
+					cf.setName(field.name);
 				}
 			}
 			// Fix methods
@@ -475,9 +479,29 @@ public class SmartReflector {
 		mi.signature=signature;
 		String index = mi.toIndex();
 		if(!ci.MethodNames.containsKey(index)) {
-			addObfuscatedMethodDefinition(className,name,signature);
+			addObfuscatedMethodDefinition(className,name,signature, "");
 			return null;
 		}
 		return ci.MethodNames.get(index);
+	}
+
+	/**
+	 * 
+	 * @param className OBFUSCATED class name.
+	 * @param name
+	 * @param signature
+	 * @return
+	 */
+	public static FieldInfo getField(String className, String name, String type) {
+		ClassInfo ci = classes.get(className);
+		if(ci==null) {
+			l.log(Level.WARNING, "Can't find parent class "+className+" for field "+name);
+			return null;
+		}
+		if(!ci.FieldNames.containsKey(name)) {
+			addObfuscatedFieldDefinition(className,name,type);
+			return null;
+		}
+		return ci.FieldNames.get(name);
 	}
 }

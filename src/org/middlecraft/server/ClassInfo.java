@@ -29,8 +29,6 @@ package org.middlecraft.server;
 
 import java.util.HashMap;
 
-import javassist.CtClass;
-
 /**
  * @author Rob
  *
@@ -39,7 +37,7 @@ public class ClassInfo {
 	public static final String header = "Real Name,MCP Name,Superclass,Description";
 	public String name;
 	public HashMap<String,MethodInfo> MethodNames = new HashMap<String,MethodInfo>();
-	public HashMap<String,String> FieldNames = new HashMap<String,String>();
+	public HashMap<String,FieldInfo> FieldNames = new HashMap<String,FieldInfo>();
 	public String realName;
 	public String description="*";
 	public String superClass="java.lang.Object";
@@ -54,7 +52,7 @@ public class ClassInfo {
 	 * @param name2
 	 * @return
 	 */
-	public String getField(String name2) {
+	public FieldInfo getField(String name2) {
 		return FieldNames.get(name2);
 	}
 	public ClassInfo() {}

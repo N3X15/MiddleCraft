@@ -1,4 +1,3 @@
-import org.middlecraft.server.SmartReflector;
 
 /**
  * Copyright (c) 2010, MiddleCraft Contributors

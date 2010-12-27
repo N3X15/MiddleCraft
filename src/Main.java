@@ -26,10 +26,8 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import java.io.IOException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.Loader;
 import javassist.NotFoundException;

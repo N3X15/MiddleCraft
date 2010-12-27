@@ -58,4 +58,12 @@ public class Utils {
 		}
 	}
 
+	/**
+	 * @param pkg
+	 * @return
+	 */
+	public static boolean isMinecraftPackage(String pkg) {
+		return pkg == null || pkg == "" || pkg.startsWith("net.minecraft");
+	}
+
 }

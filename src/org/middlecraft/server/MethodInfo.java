@@ -43,6 +43,7 @@ public class MethodInfo {
 	public String parentClass;
 	public String name;
 	public String patch="";
+	public String description="";
 
 	public static String header="Real Name,Signature,Parent Class,Readable Name";
 	public MethodInfo() {}
@@ -62,7 +63,7 @@ public class MethodInfo {
 	}
 	
 	public String toString() {
-		return String.format("%s,%s,%s,%s",realName,signature,parentClass,name);
+		return String.format("%s,%s,%s,%s,%s",realName,signature,parentClass,name,description);
 	}
 	/**
 	 * @return
