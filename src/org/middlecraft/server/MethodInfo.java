@@ -27,46 +27,67 @@
  */
 package org.middlecraft.server;
 
-import java.util.HashMap;
+import java.io.File;
+import java.util.Scanner;
 
-import javassist.CtClass;
+import javassist.CannotCompileException;
+import javassist.CtMethod;
 
 /**
  * @author Rob
  *
  */
-public class ClassInfo {
-	public static final String header = "Real Name,MCP Name,Superclass,Description";
-	public String name;
-	public HashMap<String,MethodInfo> MethodNames = new HashMap<String,MethodInfo>();
-	public HashMap<String,String> FieldNames = new HashMap<String,String>();
+public class MethodInfo {
 	public String realName;
-	public String description="*";
-	public String superClass="java.lang.Object";
-	/**
-	 * @param name2
-	 * @return
-	 */
-	public MethodInfo getMethod(String name2) {
-		return MethodNames.get(name2);
-	}
-	/**
-	 * @param name2
-	 * @return
-	 */
-	public String getField(String name2) {
-		return FieldNames.get(name2);
-	}
-	public ClassInfo() {}
-	public ClassInfo(String line) {
+	public String signature;
+	public String parentClass;
+	public String name;
+	public String patch="";
+
+	public MethodInfo() {}
+	public MethodInfo(String line) {
 		String[] chunks = line.split(",");
+		
 		realName=chunks[0];
-		name=chunks[1];
-		superClass=chunks[2];
-		description=chunks[3];
+		signature=chunks[1];
+		parentClass=chunks[2];
+		name=chunks[3];
+		
+		// Also patch, if required.
+		File methodPatch = new File(String.format("data/server/%s/patches/%s/%s.%s.mcp",SmartReflector.serverVersion,parentClass,name,signature));
+		if(methodPatch.exists()) {
+			patch=Utils.getFileContents(methodPatch);
+		}
 	}
 	
 	public String toString() {
-		return String.format("%s,%s,%s,%s",realName,name,superClass,description);
+		return String.format("%s,%s,%s,%s",realName,signature,parentClass,name);
+	}
+	/**
+	 * @return
+	 */
+	public String toIndex() {
+		return String.format("%s %s",realName, signature);
+	}
+	
+	public CtMethod DoPatch(CtMethod method) throws CannotCompileException {
+		if(patch!="") {
+			Scanner scanner = new Scanner(patch);
+			while(scanner.hasNext()) {
+				String line = scanner.nextLine();
+				if(line.startsWith("#")) continue;
+				String[] chunks = line.split("\t");
+				
+				if(chunks[0].equalsIgnoreCase("setBody"))
+					method.setBody(chunks[1]);
+				if(chunks[0].equalsIgnoreCase("prependBody"))
+					method.insertBefore(chunks[1]);
+				if(chunks[0].equalsIgnoreCase("appendBody"))
+					method.insertAfter(chunks[1]);
+				if(chunks[0].equalsIgnoreCase("insertAt"))
+					method.insertAt(Integer.parseInt(chunks[1]),chunks[2]);
+			}
+		}
+		return method;
 	}
 }

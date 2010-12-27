@@ -45,6 +45,8 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
+
 import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
@@ -78,54 +80,8 @@ public class SmartReflector {
 			ReadMethods();
 			ReadFields();
 		}
-		
-		//renameClasses();
 	}
 	
-	/**
-	 * God help us.
-	 */
-	private static void renameClasses(){
-		// Load up default class pool
-		ClassPool cp = ClassPool.getDefault();
-		
-		// For each class in our class cache...
-		for(ClassInfo ci : classes.values()) {
-			try {
-				// Load from our classpool and rename...
-				CtClass cc = cp.getAndRename(ci.realName, ci.name);
-				
-				// Fix field names...
-				for(CtField cf : cc.getDeclaredFields()) {
-					if(ci.FieldNames.containsKey(cf.getName())) {
-						cf.setName(ci.FieldNames.get(cf.getName()));
-					}
-				}
-				
-				// Fix method names...
-				for(CtMethod cm : cc.getDeclaredMethods()) {
-					String methodID=cm.getName()+" "+cm.getSignature();
-					if(ci.MethodNames.containsKey(methodID))
-						cm.setName(ci.MethodNames.get(methodID));
-					
-					// Also patch, if required.
-					File methodPatch = new File(String.format("data/server/%s/patches/%s/%s.%s.java",serverVersion,ci.name,cm.getName(),cm.getSignature()));
-					if(methodPatch.exists()) {
-						try {
-							cm.setBody(Utils.getFileContents(methodPatch));
-						} catch (CannotCompileException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-				}
-				loadedClasses.put(ci.name, cc.toClass());
-			} catch(Exception e) {
-				l.log(Level.ALL,"Failed to load class "+ci.name+": "+e.toString());
-			}
-		}
-	}
-
 	/**
 	 * 
 	 */
@@ -150,7 +106,7 @@ public class SmartReflector {
 	    		if(!classes.containsKey(className))
 	    			continue;
 	    		ClassInfo ci = classes.get(className);
-	    		ci.MethodNames.put(oldFieldName,fieldName);
+	    		ci.FieldNames.put(oldFieldName,fieldName);
 	    		classes.put(className, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
@@ -172,18 +128,14 @@ public class SmartReflector {
 	    try {
 	    	while (scanner.hasNextLine()) {
 	    		String line = scanner.nextLine();
-	    		String[] chunks = line.split(",");
+	    		MethodInfo mi = new MethodInfo(line);
 	    		
-	    		String className = chunks[0];
-	    		String obfMethodName = chunks[1]+" "+chunks[2];
-	    		String methodName = chunks[2];
-	    		
-	    		if(!classes.containsKey(className))
+	    		if(!classes.containsKey(mi.parentClass))
 	    			continue;
 	    		
-	    		ClassInfo ci = classes.get(className);
-	    		ci.MethodNames.put(obfMethodName, methodName);
-	    		classes.put(className, ci);
+	    		ClassInfo ci = classes.get(mi.parentClass);
+	    		ci.MethodNames.put(mi.toIndex(), mi);
+	    		classes.put(mi.parentClass, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
 	}
@@ -272,7 +224,7 @@ public class SmartReflector {
 		ci.realName=name;
 		ci.description="*";
 		classes.put(ci.realName, ci);
-		save();
+		setDirty();
 	}
 	static int unkClasses=0;
 	public static void addReadableClassDefinition(String name) {
@@ -282,7 +234,7 @@ public class SmartReflector {
 		ci.realName="UNKNOWN_"+Integer.toString(unkClasses);
 		ci.description="*";
 		classes.put(ci.realName, ci);
-		save();
+		setDirty();
 	}
 	
 	static int unkFields=0; 
@@ -291,19 +243,37 @@ public class SmartReflector {
 		ClassInfo ci = classes.get(className);
 		ci.FieldNames.put("UNKNOWN_"+Integer.toString(unkFields),fieldName);
 		classes.put(className, ci);
-		save();
+		setDirty();
 	}
 	
 	static int unkMethods=0;
-	public static void addMethodDefinition(String className, String methodName, String signature) {
-		unkMethods++;
+
+	private static boolean dirty;
+	public static void addObfuscatedMethodDefinition(String className, String methodName, String signature) {
+		//unkMethods++;
+		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
 		ClassInfo ci = classes.get(className);
-		ci.MethodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
+		
+		MethodInfo mi = new MethodInfo();
+		mi.name="*";
+		mi.parentClass=className;
+		mi.realName=methodName;
+		mi.signature=signature;
+		ci.MethodNames.put(mi.toIndex(), mi);
+		//ci.MethodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
 		classes.put(className, ci);
-		save();
+		setDirty();
 	}
 	
+	/**
+	 * 
+	 */
+	private static void setDirty() {
+		dirty=true;
+	}
+
 	public static void save() {
+		if(!dirty) return;
 		File data = new File(String.format("data/server/%s/", serverVersion));
 		if(!data.exists())
 			data.mkdirs();
@@ -319,16 +289,15 @@ public class SmartReflector {
 		PrintStream f=null;
 		try {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/methods.csv", serverVersion)));
-		
+			int num=0;
 			for(ClassInfo ci : classes.values()) {
-				for(Entry<String,String> mi : ci.MethodNames.entrySet()) {
-					String realMethodName = mi.getKey().split(" ")[0];
-					String methodSignature = mi.getKey().split(" ")[1];
-					String methodName = mi.getValue();
-					String className = ci.name;
-					f.println(className+","+realMethodName+","+methodSignature+","+methodName);
+				//l.log(Level.INFO,"Class "+ci.name+" contains "+Integer.toString(ci.MethodNames.size())+" known methods.");
+				for(MethodInfo mi : ci.MethodNames.values()) {
+					f.println(mi.toString());
+					num++;
 				}
 			}
+			l.log(Level.INFO,"Wrote "+Integer.toString(num)+" methods to disk.");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -422,7 +391,7 @@ public class SmartReflector {
 				String methodID=cm.getName()+" "+cm.getSignature();
 				l.log(Level.INFO,"Fixing method "+className+"."+methodID);
 				if(ci.MethodNames.containsKey(methodID))
-					cm.setName(ci.MethodNames.get(methodID));
+					cm.setName(ci.MethodNames.get(methodID).name);
 				
 				// Also patch, if required.
 				File methodPatch = new File(String.format("data/server/%s/patches/%s/%s.%s.java",serverVersion,ci.name,cm.getName(),cm.getSignature()));
@@ -473,5 +442,29 @@ public class SmartReflector {
 		ClassInfo ci = classes.get(className);
 		if(ci==null) return className;
 		return ci.name;
+	}
+
+	/**
+	 * 
+	 * @param className OBFUSCATED class name.
+	 * @param name
+	 * @param signature
+	 * @return
+	 */
+	public static MethodInfo getMethod(String className, String name, String signature) {
+		ClassInfo ci = classes.get(className);
+		if(ci==null) {
+			l.log(Level.WARNING, "Can't find parent class "+className+" for method "+name);
+			return null;
+		}
+		MethodInfo mi = new MethodInfo();
+		mi.realName=name;
+		mi.signature=signature;
+		String index = mi.toIndex();
+		if(!ci.MethodNames.containsKey(index)) {
+			addObfuscatedMethodDefinition(className,name,signature);
+			return null;
+		}
+		return ci.MethodNames.get(index);
 	}
 }

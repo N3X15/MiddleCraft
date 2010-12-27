@@ -32,6 +32,8 @@ import java.util.logging.Logger;
 
 import javassist.CannotCompileException;
 import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtMethod;
 import javassist.NotFoundException;
 import javassist.Translator;
 
@@ -48,15 +50,63 @@ public class Renamer implements Translator {
 	@Override
 	public void onLoad(ClassPool cp, String className) throws NotFoundException,
 			CannotCompileException {
-		String ncn = SmartReflector.getNewClassName(className);
+		ClassInfo ci = SmartReflector.classes.get(className);
+		String ncn = ci.name;
 		l.log(Level.FINE,"Renaming class "+className+" to "+ncn+".");
 		try {
-			if(className==ncn) throw new NotFoundException(className);
-			cp.getAndRename(className, ncn);
+			if(className!="net.minecraft.server.MinecraftServer") {
+				if(className==ncn) throw new NotFoundException(className);
+				CtClass cc = cp.getAndRename(className, ncn);
+				cc=remapFields(cc, className);
+				cc=remapMethods(cc, className);
+			}
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
 			SmartReflector.addObfuscatedClassDefinition(className);
 		}
+	}
+
+	/**
+	 * @param cc
+	 * @param className 
+	 * @return
+	 * @throws CannotCompileException 
+	 */
+	private CtClass remapMethods(CtClass cc, String className) throws CannotCompileException {
+		if(cc == null) {
+			l.log(Level.WARNING,"cc=null");
+		}
+		if(cc.isFrozen())
+			cc.defrost();
+		for(CtMethod method : cc.getMethods()) {
+			String pkg=method.getDeclaringClass().getPackageName();
+			if(pkg == null || pkg == "" || pkg.startsWith("net.minecraft"))
+				continue;
+			MethodInfo mi = SmartReflector.getMethod(className,method.getName(),method.getSignature());
+			
+			
+			if(mi!=null) {
+				if(mi.name!="*" || mi.name!="") continue;
+				if(cc.isFrozen())
+					cc.defrost();
+				l.log(Level.INFO,String.format(" [M] [%s]%s%s to \"%s\"...",method.getDeclaringClass().getPackageName(),method.getLongName(),mi.signature,mi.name));
+				method.setName(mi.name);
+				method=mi.DoPatch(method);
+			}
+		}
+		return cc;
+	}
+
+	/**
+	 * @param cc
+	 * @param className 
+	 * @return
+	 */
+	private CtClass remapFields(CtClass cc, String className) {
+		// TODO Auto-generated method stub
+		if(cc.isFrozen())
+			cc.defrost();
+		return cc;
 	}
 
 	/* (non-Javadoc)
