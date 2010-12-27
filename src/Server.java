@@ -1,3 +1,5 @@
+import org.middlecraft.server.World;
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -33,7 +35,7 @@
  */
 public class Server {
 	
-	public IWorld world;
+	public World world;
 	private PluginLoader loader=new PluginLoader();
 	
 	/**

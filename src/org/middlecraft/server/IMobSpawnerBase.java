@@ -1,3 +1,4 @@
+package org.middlecraft.server;
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -25,44 +26,23 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.middlecraft.server;
-
-import java.io.File;
-import java.util.Scanner;
-
-import javassist.CannotCompileException;
-import javassist.CtMethod;
 
 /**
  * @author Rob
  *
  */
-public class MethodInfo {
-	public String realName;
-	public String signature;
-	public String parentClass;
-	public String name;
-	public String patch="";
-	public String description="";
+public interface IMobSpawnerBase {
 
-	public static String header="Real Name,Signature,Parent Class,Readable Name";
-	public MethodInfo() {}
-	public MethodInfo(String line) {
-		String[] chunks = line.split(",");
-		
-		realName=chunks[0];
-		signature=chunks[1];
-		parentClass=chunks[2];
-		name=chunks[3];
-	}
+	public double[] temperature = new double[0];
 	
-	public String toString() {
-		return String.format("%s,%s,%s,%s,%s",realName,signature,parentClass,name,description);
-	}
 	/**
-	 * @return
+	 * @param x X coordinate of origin
+	 * @param z Z coordinate of origin
+	 * @param l_x length of X dimension
+	 * @param l_z length of Z dimension
 	 */
-	public String toIndex() {
-		return String.format("%s %s",realName, signature);
-	}
+	public double[] genTemperatures(int x, int z, int l_x, int l_z);
+	
+	
+
 }

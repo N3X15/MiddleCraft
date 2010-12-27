@@ -27,6 +27,7 @@
  */
 package org.middlecraft.server;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -39,6 +40,9 @@ import javassist.CtField;
 import javassist.CtMethod;
 import javassist.NotFoundException;
 import javassist.Translator;
+import javassist.expr.ExprEditor;
+import javassist.expr.FieldAccess;
+import javassist.expr.MethodCall;
 
 /**
  * @author Rob
@@ -52,33 +56,40 @@ public class Renamer implements Translator {
 	 */
 	@Override
 	public void onLoad(ClassPool cp, String className) throws NotFoundException,
-			CannotCompileException {
+	CannotCompileException {
 		ClassInfo ci = SmartReflector.classes.get(className);
 		if(ci==null)
 		{
 			SmartReflector.addObfuscatedClassDefinition(className,cp.get(className).getSuperclass().getName());
 			ci = SmartReflector.classes.get(className);
 		}
-			
+
 		String ncn = ci.name;
 		l.log(Level.FINE,"Renaming class "+className+" to "+ncn+".");
 		try {
 			if(className!="net.minecraft.server.MinecraftServer") {
 				if(className==ncn) throw new NotFoundException(className);
 				CtClass cc = cp.getAndRename(className, ncn);
+				if(ci.realSuperClass!=cc.getSuperclass().getName()) {
+					ci.realSuperClass=cc.getSuperclass().getName(); 
+					SmartReflector.classes.put(className,ci);
+				}
 				String pkg = cc.getPackageName();
 				if(pkg==null || pkg == "net.minecraft.server")
 				{
 					cc=remapFields(cc, className);
 					cc=remapMethods(cc, className);
 				}
+				try {
+					cc=ci.DoPatch(cp, cc);
+				} catch(FileNotFoundException e) {}
 			}
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
 			SmartReflector.addObfuscatedClassDefinition(className,"");
 		}
 	}
-	
+
 	List<String> skippedPackages = new ArrayList<String>();
 
 	/**
@@ -93,7 +104,7 @@ public class Renamer implements Translator {
 		}
 		if(cc.isFrozen())
 			cc.defrost();
-		for(CtMethod method : cc.getMethods()) {
+		for(final CtMethod method : cc.getMethods()) {
 			String pkg=method.getDeclaringClass().getPackageName();
 			if(!Utils.isMinecraftPackage(pkg))
 			{
@@ -104,17 +115,17 @@ public class Renamer implements Translator {
 				continue;
 			}
 			MethodInfo mi = SmartReflector.getMethod(className,method.getName(),method.getSignature());
-			
-			
+
 			if(mi!=null) {
 				if(mi.name!="*" || mi.name!="") continue;
 				if(cc.isFrozen())
 					cc.defrost();
 				l.log(Level.INFO,String.format(" [M] [%s]%s%s to \"%s\"...",method.getDeclaringClass().getPackageName(),method.getLongName(),mi.signature,mi.name));
 				method.setName(mi.name);
-				method=mi.DoPatch(method);
 			}
 		}
+
+
 		return cc;
 	}
 
@@ -142,7 +153,7 @@ public class Renamer implements Translator {
 			try
 			{
 				FieldInfo fi = SmartReflector.getField(className,field.getName(),field.getType().getName());
-				
+
 				if(fi!=null) {
 					if(fi.name!="*" || fi.name!="") continue;
 					if(cc.isFrozen())
@@ -159,8 +170,8 @@ public class Renamer implements Translator {
 	 */
 	@Override
 	public void start(ClassPool cp) throws NotFoundException,
-			CannotCompileException {
-		
+	CannotCompileException {
+
 	}
 
 }

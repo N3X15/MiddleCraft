@@ -114,7 +114,7 @@ public class SmartReflector {
 	    		if(!classes.containsKey(field.className))
 	    			continue;
 	    		ClassInfo ci = classes.get(field.className);
-	    		ci.FieldNames.put(field.realName,field);
+	    		ci.fieldNames.put(field.realName,field);
 	    		classes.put(field.className, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
@@ -147,7 +147,7 @@ public class SmartReflector {
 	    			continue;
 	    		
 	    		ClassInfo ci = classes.get(mi.parentClass);
-	    		ci.MethodNames.put(mi.toIndex(), mi);
+	    		ci.methodNames.put(mi.toIndex(), mi);
 	    		classes.put(mi.parentClass, ci);
 	    	}
 	    } catch(Exception e) { e.printStackTrace(); }
@@ -260,7 +260,7 @@ public class SmartReflector {
 		field.className=className;
 		field.realName=fieldName;
 		field.type=type;
-		ci.FieldNames.put(fieldName,field);
+		ci.fieldNames.put(fieldName,field);
 		classes.put(className, ci);
 		setDirty();
 	}
@@ -279,8 +279,8 @@ public class SmartReflector {
 		mi.realName=methodName;
 		mi.signature=signature;
 		mi.description = extraData;
-		ci.MethodNames.put(mi.toIndex(), mi);
-		//ci.MethodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
+		ci.methodNames.put(mi.toIndex(), mi);
+		//ci.methodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
 		classes.put(className, ci);
 		setDirty();
 	}
@@ -319,8 +319,8 @@ public class SmartReflector {
 			int num=0;
 			f.println(MethodInfo.header);
 			for(ClassInfo ci : classes.values()) {
-				//l.log(Level.INFO,"Class "+ci.name+" contains "+Integer.toString(ci.MethodNames.size())+" known methods.");
-				for(MethodInfo mi : ci.MethodNames.values()) {
+				//l.log(Level.INFO,"Class "+ci.name+" contains "+Integer.toString(ci.methodNames.size())+" known methods.");
+				for(MethodInfo mi : ci.methodNames.values()) {
 					f.println(mi.toString());
 					num++;
 				}
@@ -345,7 +345,7 @@ public class SmartReflector {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/fields.csv", serverVersion)));
 			f.println(FieldInfo.header);
 			for(ClassInfo ci : classes.values()) {
-				for(FieldInfo fi : ci.FieldNames.values()) {
+				for(FieldInfo fi : ci.fieldNames.values()) {
 					f.println(fi.toString());
 					num++;
 				}
@@ -415,8 +415,8 @@ public class SmartReflector {
 			}
 			// Fix field names...
 			for(CtField cf : cl.getDeclaredFields()) {
-				if(ci.FieldNames.containsKey(cf.getName())) {
-					FieldInfo field = ci.FieldNames.get(cf.getName());
+				if(ci.fieldNames.containsKey(cf.getName())) {
+					FieldInfo field = ci.fieldNames.get(cf.getName());
 					l.log(Level.INFO,"Fixing field "+cf.getName()+" to "+field.name);
 					cf.setName(field.name);
 				}
@@ -425,8 +425,8 @@ public class SmartReflector {
 			for(CtMethod cm : cl.getDeclaredMethods()) {
 				String methodID=cm.getName()+" "+cm.getSignature();
 				l.log(Level.INFO,"Fixing method "+className+"."+methodID);
-				if(ci.MethodNames.containsKey(methodID))
-					cm.setName(ci.MethodNames.get(methodID).name);
+				if(ci.methodNames.containsKey(methodID))
+					cm.setName(ci.methodNames.get(methodID).name);
 				
 				// Also patch, if required.
 				File methodPatch = new File(String.format("data/server/%s/patches/%s/%s.%s.java",serverVersion,ci.name,cm.getName(),cm.getSignature()));
@@ -496,11 +496,11 @@ public class SmartReflector {
 		mi.realName=name;
 		mi.signature=signature;
 		String index = mi.toIndex();
-		if(!ci.MethodNames.containsKey(index)) {
+		if(!ci.methodNames.containsKey(index)) {
 			addObfuscatedMethodDefinition(className,name,signature, "");
 			return null;
 		}
-		return ci.MethodNames.get(index);
+		return ci.methodNames.get(index);
 	}
 
 	/**
@@ -516,10 +516,10 @@ public class SmartReflector {
 			l.log(Level.WARNING, "Can't find parent class "+className+" for field "+name);
 			return null;
 		}
-		if(!ci.FieldNames.containsKey(name)) {
+		if(!ci.fieldNames.containsKey(name)) {
 			addObfuscatedFieldDefinition(className,name,type);
 			return null;
 		}
-		return ci.FieldNames.get(name);
+		return ci.fieldNames.get(name);
 	}
 }

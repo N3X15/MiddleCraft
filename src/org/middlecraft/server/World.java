@@ -1,3 +1,5 @@
+package org.middlecraft.server;
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -27,11 +29,62 @@
  */
 
 /**
- * Interface for accessing the server-side equivalent.
+ * Interface for accessing the server-side equivalent of Chunk.
  * @author Rob
  *
  */
-public interface IChunk {
-	public int xPosition=0;
-	public int zPosition=0;
+public abstract class World {
+	/**
+	 * Get a chunk from server memory (or generate it).
+	 * @param x
+	 * @param z
+	 * @return The chunk you wanted.
+	 */
+	public abstract org.middlecraft.server.Chunk getChunk(int x, int z);
+
+	/**
+	 * Get the block ID at the provided global coordinates.
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return Block ID
+	 */
+	public abstract int getBlockIdAt(int x, int y, int z);
+	
+	/**
+	 * Find the highest solid block at this "column".
+	 * @param x
+	 * @param z
+	 * @return y coordinate of block.
+	 */
+	public abstract int findTopSolidBlock(int x, int z);
+
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @param type
+	 */
+	public abstract void setBlockAt(int x, int y, int z, int type);
+
+	/**
+	 * @param block BlockLight?
+	 * @param x
+	 * @param y
+	 * @param z
+	 * @return
+	 */
+	public abstract int getSavedLightValue(boolean block, int x, int y, int z);
+
+	/**
+	 * @return
+	 */
+	public abstract IMobSpawnerBase getBiomeGenerator();
+
+	/**
+	 * @param x
+	 * @param y
+	 * @param z
+	 */
+	public abstract IMaterial getBlockMaterialAt(int x, int y, int z);
 }

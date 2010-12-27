@@ -1,3 +1,4 @@
+package org.middlecraft.server;
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -30,18 +31,11 @@
  * @author Rob
  *
  */
-public interface IMobSpawnerBase {
+public interface IMaterial {
 
-	public double[] temperature = new double[0];
-	
 	/**
-	 * @param x X coordinate of origin
-	 * @param z Z coordinate of origin
-	 * @param l_x length of X dimension
-	 * @param l_z length of Z dimension
+	 * @return
 	 */
-	public double[] genTemperatures(int x, int z, int l_x, int l_z);
-	
-	
+	boolean getIsSolid();
 
 }

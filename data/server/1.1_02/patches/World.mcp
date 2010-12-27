@@ -1,0 +1,23 @@
+# NOTE: Each field is separated by TABS (\t)!
+# Patch World class to accept hooks.
+
+###################################################################
+# Set up caller.
+###################################################################
+# Create the method.
+newmethod	boolean MIDDLECRAFT_onBlockTick(int x,int y,int z) {Hooks.Call("OnBlockTick",new Object[]{x,y,z}); return true;}
+
+###################################################################
+# Patch the file.
+###################################################################
+# Patch World.g() (line 1644) to add hook processor.
+#  It appears javassist names unnamed fields with [a-z], a being 0, z being 26 (?).
+#    564  iload 8 = h \
+#    566  iload_3 = c | = h+c
+#    567  iadd        /
+#    568  iload 10 = j
+#    570  iload 9 = i \
+#    572  iload 4 = d | = i+d
+#    574  iadd        /
+#method	g()	insertat	1644	{MIDDLECRAFT_onBlockTick(i4 + k1, i5, k4 + i2);}
+method	g()	insertat	1644	{MIDDLECRAFT_onBlockTick(h + c, j, i + d);}

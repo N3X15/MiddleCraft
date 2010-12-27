@@ -25,64 +25,30 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+package org.middlecraft.server;
 
+import java.util.*;
 /**
- * Interface for accessing the server-side equivalent of Chunk.
  * @author Rob
  *
  */
-public interface IWorld {
-	/**
-	 * Get a chunk from server memory (or generate it).
-	 * @param x
-	 * @param z
-	 * @return The chunk you wanted.
-	 */
-	public IChunk getChunk(int x, int z);
+public class HookInfo {
 
+	public int opindex;
+	HashMap<Integer,String> stackTypes = new HashMap<Integer,String>();
+	private String name;
 	/**
-	 * Get the block ID at the provided global coordinates.
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return Block ID
+	 * @param string
 	 */
-	public int getBlockIdAt(int x, int y, int z);
-	
-	/**
-	 * Find the highest solid block at this "column".
-	 * @param x
-	 * @param z
-	 * @return y coordinate of block.
-	 */
-	public int findTopSolidBlock(int x, int z);
+	public HookInfo(String formatString) {
+		name = formatString.substring(0,formatString.indexOf('('));
+		String sargs = formatString.substring(formatString.indexOf('(')+1,formatString.indexOf(')'));
+		String[] args=sargs.split(",");
+		for(String arg:args) {
+			String type = arg.split(" ")[0];
+			int stackID = Integer.parseInt(arg.split(" ")[0]);
+			stackTypes.put(stackID, type);
+		}
+	}
 
-	/**
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param type
-	 */
-	public void setBlockAt(int x, int y, int z, int type);
-
-	/**
-	 * @param block BlockLight?
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @return
-	 */
-	public int getSavedLightValue(boolean block, int x, int y, int z);
-
-	/**
-	 * @return
-	 */
-	public IMobSpawnerBase getBiomeGenerator();
-
-	/**
-	 * @param x
-	 * @param y
-	 * @param z
-	 */
-	public IMaterial getBlockMaterialAt(int x, int y, int z);
 }

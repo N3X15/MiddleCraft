@@ -30,6 +30,7 @@ import java.io.File;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Map;
+import java.util.logging.Logger;
 
 
 
@@ -40,7 +41,7 @@ import java.util.Map;
  *
  */
 public class Hooks {
-	
+	static Logger l = Logger.getLogger("Minecraft");
 	protected static Map<String,PluginListener> enabledListeners;
 	protected static Map<String,Plugin> loadedPlugins;
 	
@@ -58,6 +59,10 @@ public class Hooks {
 				}
 			}
 		}
+	}
+	
+	public static void Call(String name, Object... args) {
+		l.info(String.format("Hook %s called.",name));
 	}
 
 	/**

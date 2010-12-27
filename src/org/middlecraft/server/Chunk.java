@@ -1,3 +1,4 @@
+package org.middlecraft.server;
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -27,14 +28,12 @@
  */
 
 /**
+ * Interface for accessing the server-side equivalent.
  * @author Rob
  *
  */
-public interface IMaterial {
-
-	/**
-	 * @return
-	 */
-	boolean getIsSolid();
-
+public class Chunk {
+	public int xPosition=0;
+	public int zPosition=0;
+	
 }

@@ -51,6 +51,8 @@ public class PluginListener {
 	// Yeah, I implemented something *I* wanted first.  Wanna fight about it? :V - N3X
 	/**
 	 * Handle block ticks.
+	 * @patch World.scheduleBlockUpdate()
+	 * @patch World.j() line 
 	 */
 	public void onBlockTick(Server serv, int x, int y, int z) {}
 	
