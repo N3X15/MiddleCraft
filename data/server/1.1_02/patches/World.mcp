@@ -19,5 +19,19 @@ newmethod	boolean MIDDLECRAFT_onBlockTick(int x,int y,int z) {Hooks.Call("OnBloc
 #    570  iload 9 = i \
 #    572  iload 4 = d | = i+d
 #    574  iadd        /
-#method	g()	insertat	1644	{MIDDLECRAFT_onBlockTick(i4 + k1, i5, k4 + i2);}
-method	g()	insertat	1644	{MIDDLECRAFT_onBlockTick(h + c, j, i + d);}
+#method	g()	insertat	1644	{MIDDLECRAFT_onBlockTick(h + c, j, i + d);}
+method	g()	insertat	1644	{System.out.println("onBlockTick");}
+
+#boolean      Z 
+#byte         B 
+#char         C 
+#double       D 
+#float        F 
+#int          I 
+#long         J 
+#object       L 
+#short        S 
+#void         V 
+#array        [ 
+
+constructor	(Ljava/io/File;Ljava/lang/String;JLjm;)V	prependbody	{System.out.println("Testing method prepend. - World.mcp:25");}

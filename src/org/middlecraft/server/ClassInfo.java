@@ -30,6 +30,7 @@ package org.middlecraft.server;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -39,6 +40,7 @@ import java.util.logging.Logger;
 import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
+import javassist.CtConstructor;
 import javassist.CtField;
 import javassist.CtMethod;
 import javassist.CtNewMethod;
@@ -80,14 +82,14 @@ public class ClassInfo {
 		realSuperClass=cells.get(2);
 		superClass=cells.get(3);
 		description=cells.get(4);
-		
+
 		// Also patch, if required.
 		File methodPatch = new File(String.format("data/server/%s/patches/%s.mcp",SmartReflector.serverVersion,name));
 		if(methodPatch.exists()) {
 			Utils.getFileContents(methodPatch);
 		}
 	}
-	
+
 	public String toString() {
 		return String.format("%s,%s,%s,%s,%s",realName,name,realSuperClass,superClass,description);
 	}
@@ -100,7 +102,7 @@ public class ClassInfo {
 		list.add(description);
 		return list;
 	}
-	
+
 	public CtClass DoPatch(ClassPool cp, CtClass cc) throws CannotCompileException, FileNotFoundException {
 		int line_num= 0;
 		File f = new File(String.format("data/server/%s/patches/%s.mcp",SmartReflector.serverVersion,name));
@@ -127,9 +129,36 @@ public class ClassInfo {
 						String methodName = chunks[1].substring(0,chunks[1].indexOf('('));
 						CtClass[] args = parseParams(cp, chunks[1].substring(chunks[1].indexOf('(')+1,chunks[1].lastIndexOf(')')));
 						CtMethod cm = cc.getDeclaredMethod(
-							methodName,
-							args
+								methodName,
+								args
 						);
+						String operation = chunks[2].toLowerCase().trim();
+						if(operation.equals("setbody")) {
+							l.info(String.format(" * Setting body of %s to contents of %s",chunks[1],chunks[3]));
+							cm.setBody(Utils.getFileContents(new File(String.format("data/server/%s/patches/%s",SmartReflector.serverVersion,chunks[3]))));
+						} else if(operation.equals("prependbody")) {
+							l.info(String.format(" + Prepending body of %s with: %s",chunks[1],chunks[3]));
+							cm.insertBefore(chunks[3]);
+						} else if(operation.equals("appendbody")) {
+							l.info(String.format(" * Appending body of %s with: %s",chunks[1],chunks[3]));
+							cm.insertAfter(chunks[3]);
+						} else if(operation.equals("insertat")) {
+							int lineNum=Integer.parseInt(chunks[3]);
+							l.info(String.format(" * Inserting code into %s:%d: %s",chunks[1],lineNum,chunks[4]));
+							cm.insertAt(lineNum,chunks[4]);
+						}
+					} else if(context.equals("constructor")) {
+						String sig = chunks[1];
+						CtConstructor cm=null;
+						try {
+							cm = cc.getConstructor(sig);
+						} catch(NotFoundException e) {
+							l.severe("Can't find constructor with signature "+sig+".  Here are some alternatives:");
+							for(CtConstructor ctor : cc.getConstructors()) {
+								l.info(ctor.getSignature());
+							}
+							System.exit(1);
+						}
 						String operation = chunks[2].toLowerCase().trim();
 						if(operation.equals("setbody")) {
 							l.info(String.format(" * Setting body of %s to contents of %s",chunks[1],chunks[3]));
@@ -152,6 +181,7 @@ public class ClassInfo {
 					l.severe(String.format("data/server/%s/patches/%s.mcp:%d",SmartReflector.serverVersion,name,line_num));
 				}
 			}
+			
 			l.info("Success!");
 		}
 		return cc;
@@ -172,7 +202,7 @@ public class ClassInfo {
 		int i = 0;
 		l.info(String.format("CtClass count = "+Integer.toString(chunks.length)));
 		for(String type : chunks) {
-			argTypes[i++]=cp.get(type);
+			argTypes[i++]=cp.get(type.trim());
 		}
 		return argTypes;
 	}

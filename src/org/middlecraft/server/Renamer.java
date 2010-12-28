@@ -28,6 +28,7 @@
 package org.middlecraft.server;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -40,9 +41,6 @@ import javassist.CtField;
 import javassist.CtMethod;
 import javassist.NotFoundException;
 import javassist.Translator;
-import javassist.expr.ExprEditor;
-import javassist.expr.FieldAccess;
-import javassist.expr.MethodCall;
 
 /**
  * @author Rob
@@ -83,11 +81,16 @@ public class Renamer implements Translator {
 				try {
 					cc=ci.DoPatch(cp, cc);
 				} catch(FileNotFoundException e) {}
+
+				//cc.writeFile("data/server/"+SmartReflector.serverVersion+"/patched/");
+				
 			}
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
 			SmartReflector.addObfuscatedClassDefinition(className,"");
-		}
+		} //catch (IOException e) {
+		//	l.log(Level.SEVERE,"Failed to write patch to disk for "+className);
+		//}
 	}
 
 	List<String> skippedPackages = new ArrayList<String>();

@@ -27,11 +27,6 @@
  */
 package org.middlecraft.server;
 
-import java.io.File;
-import java.util.Scanner;
-
-import javassist.CannotCompileException;
-import javassist.CtMethod;
 
 /**
  * @author Rob

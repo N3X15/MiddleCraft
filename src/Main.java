@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 import javassist.ClassPool;
 import javassist.Loader;
 import javassist.NotFoundException;
+import javassist.util.HotSwapper;
 
 import org.middlecraft.server.Renamer;
 import org.middlecraft.server.SmartReflector;
@@ -38,6 +39,7 @@ import org.middlecraft.server.SmartReflector;
 public class Main {
 	static Logger l = Logger.getLogger("Minecraft");
 	public static ClassPool classPool;
+	//public static HotSwapper hotswap = new HotSwapper(8000);
 	public static void main(String[] arguments) {
 		
 		// Load mappings.
