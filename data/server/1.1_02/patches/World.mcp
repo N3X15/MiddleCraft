@@ -20,7 +20,7 @@ newmethod	boolean MIDDLECRAFT_onBlockTick(int x,int y,int z) {Hooks.Call("OnBloc
 #    572  iload 4 = d | = i+d
 #    574  iadd        /
 #method	g()	insertat	1644	{MIDDLECRAFT_onBlockTick(h + c, j, i + d);}
-method	g()	insertat	1644	{System.out.println("onBlockTick");}
+method	g	()V	setbodytofile	g.java
 
 #boolean      Z 
 #byte         B 

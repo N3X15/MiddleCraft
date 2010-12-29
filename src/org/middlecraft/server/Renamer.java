@@ -45,6 +45,8 @@ import javassist.Translator;
  * @author Rob
  *
  */
+// TODO: Patching must be done in a way so that CtClass can pass stuff 
+//  back up the foodchain.  Possible Patch class with CtClass field..?
 public class Renamer implements Translator {
 	Logger l = Logger.getLogger("Minecraft");
 	List<String> skippedPackages = new ArrayList<String>();
@@ -72,32 +74,51 @@ public class Renamer implements Translator {
 			if(className!="net.minecraft.server.MinecraftServer") {
 				if(className==ncn) throw new NotFoundException(className);
 
-				l.fine("Renaming class "+className+" to "+ncn+".");
 				CtClass cc = cp.get(className);
+				
+				if(ncn.equals("*")) {
+					l.warning(String.format("%s does not have an assigned name yet.",className));
+				} else {
+					l.fine("Renaming class "+className+" to \""+ncn+"\".");
+					cc.setName(ncn);
+				}
 
-				cc.setName(ncn);
-
-				if(ci.realSuperClass!=cc.getSuperclass().getName()) {
+				if(!ci.realSuperClass.equals(cc.getSuperclass().getName())) {
 					ci.realSuperClass=cc.getSuperclass().getName(); 
 					SmartReflector.classes.put(className,ci);
 				}
 
 				String pkg = cc.getPackageName();
-				if(pkg==null || pkg == "net.minecraft.server")
+				if(pkg==null || !pkg.equals("net.minecraft.server"))
 				{
 					remapFields(cp,cc,className);
 					remapMethods(cp,cc,className);
 				}
+				Patch p = new Patch(cc);
 				try {
-					cc=ci.DoPatch(cp, cc);
-				} catch(FileNotFoundException e) {}
+					p.Parse();
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 
 				l.fine("Renaming class references");
 				cc.replaceClassName(SmartReflector.deobfuscationMap);
 
 				//cc.writeFile("data/server/"+SmartReflector.serverVersion+"/patched/");
 
-			}
+			} /*else {
+				CtClass cc = cp.get(className);
+				
+				try { 
+					CtMethod meth= cc.getMethod("main", "([Ljava/lang/String;)V");
+					meth.setBody("{System.out.println(\"Overriding MinecraftServer main(string[]) with whatever prints this.  If you're seeing this, it works.\");return 1;}");
+				} catch(NotFoundException e) {
+					for(CtMethod m : cc.getMethods()) {
+						l.info(m.toString());
+					}
+				}
+			}*/
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
 			e.printStackTrace();
@@ -139,11 +160,13 @@ public class Renamer implements Translator {
 	/**
 	 * @param cp
 	 * @param cc
+	 * @throws CannotCompileException 
 	 */
-	private void remapMethods(ClassPool cp, CtClass cc, String className) {
+	private void remapMethods(ClassPool cp, CtClass cc, String className) throws CannotCompileException {
 		if(cc.isFrozen())
 			cc.defrost();
 		for(final CtMethod method : cc.getMethods()) {
+			///
 			String m_pkg=method.getDeclaringClass().getPackageName();
 			if(!Utils.isMinecraftPackage(m_pkg))
 			{
