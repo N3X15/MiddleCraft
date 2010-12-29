@@ -36,6 +36,8 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+import sun.applet.Main;
+
 import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;
@@ -44,6 +46,7 @@ import javassist.CtField;
 import javassist.CtMethod;
 import javassist.CtNewMethod;
 import javassist.NotFoundException;
+import javassist.bytecode.Descriptor;
 
 /**
  * @author Rob
@@ -138,6 +141,10 @@ public class ClassInfo {
 						}
 					} else if(context.equals("constructor")) {
 						String sig = chunks[1];
+
+						sig=Descriptor.rename(sig,SmartReflector.obfuscationMap);
+						//CtClass[] types = Descriptor.getParameterTypes(sig, cp);
+						
 						CtConstructor cm=null;
 						try {
 							cm = cc.getConstructor(sig);

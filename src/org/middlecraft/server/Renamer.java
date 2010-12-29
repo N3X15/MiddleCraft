@@ -76,9 +76,6 @@ public class Renamer implements Translator {
 				l.fine("Renaming class "+className+" to "+ncn+".");
 				CtClass cc = cp.get(className);
 
-				l.fine("Renaming class references");
-				cc.replaceClassName(SmartReflector.deobfuscationMap);
-
 				cc.setName(ncn);
 
 				if(ci.realSuperClass!=cc.getSuperclass().getName()) {
@@ -95,6 +92,9 @@ public class Renamer implements Translator {
 				try {
 					cc=ci.DoPatch(cp, cc);
 				} catch(FileNotFoundException e) {}
+
+				l.fine("Renaming class references");
+				cc.replaceClassName(SmartReflector.deobfuscationMap);
 
 				//cc.writeFile("data/server/"+SmartReflector.serverVersion+"/patched/");
 

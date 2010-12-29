@@ -178,6 +178,7 @@ public class SmartReflector {
     			}
     			if(!classes.containsKey(ci.realName)) {
     				deobfuscationMap.put(ci.realName, ci.name);
+    				obfuscationMap.put(ci.name,ci.realName);
     				classes.put(ci.realName, ci);
     			}
 	    	}
@@ -273,6 +274,8 @@ public class SmartReflector {
 	static int unkMethods=0;
 
 	private static boolean dirty;
+
+	public static Map<String, String> obfuscationMap = new HashMap<String,String>();
 	public static void addObfuscatedMethodDefinition(String className, String methodName, String signature, String extraData) {
 		//unkMethods++;
 		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));

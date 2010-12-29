@@ -39,6 +39,7 @@ import org.middlecraft.server.SmartReflector;
 public class Main {
 	static Logger l = Logger.getLogger("Minecraft");
 	public static ClassPool classPool;
+	public static Loader loader;
 	//public static HotSwapper hotswap = new HotSwapper(8000);
 	public static void main(String[] arguments) {
 		
@@ -64,10 +65,10 @@ public class Main {
 			e1.printStackTrace();
 		}
 		
-		Loader load = new Loader();
+		loader = new Loader();
 		try {
-			load.addTranslator(classPool, r);
-			load.run("net.minecraft.server.MinecraftServer", arguments);
+			loader.addTranslator(classPool, r);
+			loader.run("net.minecraft.server.MinecraftServer", arguments);
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
