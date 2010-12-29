@@ -31,7 +31,6 @@ import java.util.logging.Logger;
 import javassist.ClassPool;
 import javassist.Loader;
 import javassist.NotFoundException;
-import javassist.util.HotSwapper;
 
 import org.middlecraft.server.Renamer;
 import org.middlecraft.server.SmartReflector;

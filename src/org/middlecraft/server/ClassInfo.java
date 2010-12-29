@@ -36,8 +36,6 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-import sun.applet.Main;
-
 import javassist.CannotCompileException;
 import javassist.ClassPool;
 import javassist.CtClass;

@@ -27,7 +27,7 @@
  */
 package org.middlecraft.server;
 
-import java.util.*;
+import java.util.HashMap;
 /**
  * @author Rob
  *
