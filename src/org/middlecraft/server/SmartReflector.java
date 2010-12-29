@@ -41,12 +41,14 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Timer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javassist.CannotCompileException;
+import javassist.ClassMap;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtField;
@@ -70,6 +72,7 @@ public class SmartReflector {
 	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
 	
 	public static HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
+	public static ClassMap deobfuscationMap = new ClassMap();
 	public static Map<String,Class<?>> loadedClasses = new HashMap<String,Class<?>>();
 	
 	 
@@ -173,8 +176,10 @@ public class SmartReflector {
     				l.log(Level.WARNING, "Skipping WIP mapping for "+ci.name+".");
     				continue;
     			}
-    			if(!classes.containsKey(ci.realName))
+    			if(!classes.containsKey(ci.realName)) {
+    				deobfuscationMap.put(ci.realName, ci.name);
     				classes.put(ci.realName, ci);
+    			}
 	    	}
 	    }
 	    finally{
@@ -521,5 +526,19 @@ public class SmartReflector {
 			return null;
 		}
 		return ci.fieldNames.get(name);
+	}
+
+	/**
+	 * @param className
+	 * @return
+	 */
+	public static String getOldClassName(String className) {
+		for(ClassInfo ci : classes.values()) {
+			if(ci.name==className) {
+				l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
+				return ci.realName;
+			}
+		}
+		return className;
 	}
 }

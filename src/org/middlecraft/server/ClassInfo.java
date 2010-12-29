@@ -30,7 +30,6 @@ package org.middlecraft.server;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -51,30 +50,16 @@ import javassist.NotFoundException;
  *
  */
 public class ClassInfo {
-	Logger l = Logger.getLogger("Minecraft");
 	//realName,name,realSuperClass,superClass,description
 	public static final String[] header = new String[]{"Real Name","MCP Name","Real Superclass","MiddleCraft Superclass","Description"};
-	public String name;
-	public HashMap<String,MethodInfo> methodNames = new HashMap<String,MethodInfo>();
-	public HashMap<String,FieldInfo> fieldNames = new HashMap<String,FieldInfo>();
-	public String realName;
 	public String description="*";
-	public String superClass="*";
+	public HashMap<String,FieldInfo> fieldNames = new HashMap<String,FieldInfo>();
+	Logger l = Logger.getLogger("Minecraft");
+	public HashMap<String,MethodInfo> methodNames = new HashMap<String,MethodInfo>();
+	public String name;
+	public String realName;
 	public String realSuperClass;
-	/**
-	 * @param name2
-	 * @return
-	 */
-	public MethodInfo getMethod(String name2) {
-		return methodNames.get(name2);
-	}
-	/**
-	 * @param name2
-	 * @return
-	 */
-	public FieldInfo getField(String name2) {
-		return fieldNames.get(name2);
-	}
+	public String superClass="*";
 	public ClassInfo() {}
 	public ClassInfo(List<String> cells) {
 		realName=cells.get(0);
@@ -89,20 +74,24 @@ public class ClassInfo {
 			Utils.getFileContents(methodPatch);
 		}
 	}
-
-	public String toString() {
-		return String.format("%s,%s,%s,%s,%s",realName,name,realSuperClass,superClass,description);
+	/**
+	 * @param cc
+	 * @param string
+	 * @param string2
+	 * @return
+	 */
+	private CtClass createField(ClassPool cp, CtClass cc, String type, String name) {
+		CtClass ctType;
+		try {
+			ctType = cp.get(type);
+			CtField newfield = new CtField(ctType, name, cc);
+			cc.addField(newfield);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return cc;
 	}
-	public List<String> toList() {
-		List<String> list = new ArrayList<String>();
-		list.add(realName);
-		list.add(name);
-		list.add(realSuperClass);
-		list.add(superClass);
-		list.add(description);
-		return list;
-	}
-
 	public CtClass DoPatch(ClassPool cp, CtClass cc) throws CannotCompileException, FileNotFoundException {
 		int line_num= 0;
 		File f = new File(String.format("data/server/%s/patches/%s.mcp",SmartReflector.serverVersion,name));
@@ -175,7 +164,7 @@ public class ClassInfo {
 							cm.insertAt(lineNum,chunks[4]);
 						}
 					}
-				} catch(Exception e) {
+				} catch(Throwable e) {
 					e.printStackTrace();
 					l.severe(e.getMessage());
 					l.severe(String.format("data/server/%s/patches/%s.mcp:%d",SmartReflector.serverVersion,name,line_num));
@@ -186,6 +175,22 @@ public class ClassInfo {
 		}
 		return cc;
 	}
+
+	/**
+	 * @param name2
+	 * @return
+	 */
+	public FieldInfo getField(String name2) {
+		return fieldNames.get(name2);
+	}
+	/**
+	 * @param name2
+	 * @return
+	 */
+	public MethodInfo getMethod(String name2) {
+		return methodNames.get(name2);
+	}
+
 	/**
 	 * @param substring
 	 * @return
@@ -206,22 +211,16 @@ public class ClassInfo {
 		}
 		return argTypes;
 	}
-	/**
-	 * @param cc
-	 * @param string
-	 * @param string2
-	 * @return
-	 */
-	private CtClass createField(ClassPool cp, CtClass cc, String type, String name) {
-		CtClass ctType;
-		try {
-			ctType = cp.get(type);
-			CtField newfield = new CtField(ctType, name, cc);
-			cc.addField(newfield);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return cc;
+	public List<String> toList() {
+		List<String> list = new ArrayList<String>();
+		list.add(realName);
+		list.add(name);
+		list.add(realSuperClass);
+		list.add(superClass);
+		list.add(description);
+		return list;
+	}
+	public String toString() {
+		return String.format("%s,%s,%s,%s,%s",realName,name,realSuperClass,superClass,description);
 	}
 }

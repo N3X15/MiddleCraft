@@ -48,6 +48,8 @@ import javassist.Translator;
  */
 public class Renamer implements Translator {
 	Logger l = Logger.getLogger("Minecraft");
+	List<String> skippedPackages = new ArrayList<String>();
+
 	/**
 	 * Deobfuscate classes
 	 * @see javassist.Translator#onLoad(javassist.ClassPool, java.lang.String)
@@ -55,6 +57,9 @@ public class Renamer implements Translator {
 	@Override
 	public void onLoad(ClassPool cp, String className) throws NotFoundException,
 	CannotCompileException {
+		className=SmartReflector.getOldClassName(className);
+		
+		// Get class we'll be fucking with
 		ClassInfo ci = SmartReflector.classes.get(className);
 		if(ci==null)
 		{
@@ -62,94 +67,59 @@ public class Renamer implements Translator {
 			ci = SmartReflector.classes.get(className);
 		}
 
+		// New class name...
 		String ncn = ci.name;
-		l.log(Level.FINE,"Renaming class "+className+" to "+ncn+".");
 		try {
 			if(className!="net.minecraft.server.MinecraftServer") {
 				if(className==ncn) throw new NotFoundException(className);
-				CtClass cc = cp.getAndRename(className, ncn);
+
+				l.fine("Renaming class "+className+" to "+ncn+".");
+				CtClass cc = cp.get(className);
+
+				l.fine("Renaming class references");
+				cc.replaceClassName(SmartReflector.deobfuscationMap);
+
+				cc.setName(ncn);
+
 				if(ci.realSuperClass!=cc.getSuperclass().getName()) {
 					ci.realSuperClass=cc.getSuperclass().getName(); 
 					SmartReflector.classes.put(className,ci);
 				}
+
 				String pkg = cc.getPackageName();
 				if(pkg==null || pkg == "net.minecraft.server")
 				{
-					cc=remapFields(cc, className);
-					cc=remapMethods(cc, className);
+					remapFields(cp,cc,className);
+					remapMethods(cp,cc,className);
 				}
 				try {
 					cc=ci.DoPatch(cp, cc);
 				} catch(FileNotFoundException e) {}
 
 				//cc.writeFile("data/server/"+SmartReflector.serverVersion+"/patched/");
-				
+
 			}
 		} catch(NotFoundException e) {
 			l.log(Level.WARNING,"Failed to get new classname for "+className);
-			SmartReflector.addObfuscatedClassDefinition(className,"");
-		} //catch (IOException e) {
-		//	l.log(Level.SEVERE,"Failed to write patch to disk for "+className);
-		//}
-	}
-
-	List<String> skippedPackages = new ArrayList<String>();
-
-	/**
-	 * @param cc
-	 * @param className 
-	 * @return
-	 * @throws CannotCompileException 
-	 */
-	private CtClass remapMethods(CtClass cc, String className) throws CannotCompileException {
-		if(cc == null) {
-			l.log(Level.WARNING,"cc=null");
+			e.printStackTrace();
+			System.exit(1);
 		}
-		if(cc.isFrozen())
-			cc.defrost();
-		for(final CtMethod method : cc.getMethods()) {
-			String pkg=method.getDeclaringClass().getPackageName();
-			if(!Utils.isMinecraftPackage(pkg))
-			{
-				if(!skippedPackages.contains(pkg)) {
-					l.log(Level.FINE,"Skipping package "+pkg);
-					skippedPackages.add(pkg);
-				}
-				continue;
-			}
-			MethodInfo mi = SmartReflector.getMethod(className,method.getName(),method.getSignature());
-
-			if(mi!=null) {
-				if(mi.name!="*" || mi.name!="") continue;
-				if(cc.isFrozen())
-					cc.defrost();
-				l.log(Level.INFO,String.format(" [M] [%s]%s%s to \"%s\"...",method.getDeclaringClass().getPackageName(),method.getLongName(),mi.signature,mi.name));
-				method.setName(mi.name);
-			}
-		}
-
-
-		return cc;
 	}
 
 	/**
+	 * @param cp
 	 * @param cc
-	 * @param className 
-	 * @return
 	 */
-	private CtClass remapFields(CtClass cc, String className) {
-		if(cc == null) {
-			l.log(Level.WARNING,"cc=null");
-		}
+	private void remapFields(ClassPool cp, CtClass cc, String className) {
 		if(cc.isFrozen())
 			cc.defrost();
 		for(CtField field : cc.getFields()) {
-			String pkg=field.getDeclaringClass().getPackageName();
-			if(!Utils.isMinecraftPackage(pkg))
+			String f_pkg=field.getDeclaringClass().getPackageName();
+			if(!Utils.isMinecraftPackage(f_pkg))
 			{
-				if(!skippedPackages.contains(pkg)) {
-					l.log(Level.FINE,"Skipping package "+pkg);
-					skippedPackages.add(pkg);
+				if(!skippedPackages.contains(f_pkg)) {
+					l.log(Level.INFO,"Skipping package "+f_pkg);
+					skippedPackages.add(f_pkg);
 				}
 				continue;
 			}
@@ -165,7 +135,35 @@ public class Renamer implements Translator {
 				}
 			} catch(Exception e){}
 		}
-		return cc;
+	}
+
+	/**
+	 * @param cp
+	 * @param cc
+	 */
+	private void remapMethods(ClassPool cp, CtClass cc, String className) {
+		if(cc.isFrozen())
+			cc.defrost();
+		for(final CtMethod method : cc.getMethods()) {
+			String m_pkg=method.getDeclaringClass().getPackageName();
+			if(!Utils.isMinecraftPackage(m_pkg))
+			{
+				if(!skippedPackages.contains(m_pkg)) {
+					l.log(Level.INFO,"Skipping package "+m_pkg);
+					skippedPackages.add(m_pkg);
+				}
+				continue;
+			}
+			MethodInfo mi = SmartReflector.getMethod(className,method.getName(),method.getSignature());
+
+			if(mi!=null) {
+				if(mi.name!="*" || mi.name!="") continue;
+				if(cc.isFrozen())
+					cc.defrost();
+				l.log(Level.INFO,String.format(" [M] [%s]%s%s to \"%s\"...",method.getDeclaringClass().getPackageName(),method.getLongName(),mi.signature,mi.name));
+				method.setName(mi.name);
+			}
+		}
 	}
 
 	/* (non-Javadoc)
@@ -174,7 +172,6 @@ public class Renamer implements Translator {
 	@Override
 	public void start(ClassPool cp) throws NotFoundException,
 	CannotCompileException {
-
 	}
 
 }
