@@ -123,9 +123,12 @@ public class ClassInfo {
 								args
 						);
 						String operation = chunks[2].toLowerCase().trim();
-						if(operation.equals("setbody")) {
+						if(operation.equals("setbodytofilecontents")) {
 							l.info(String.format(" * Setting body of %s to contents of %s",chunks[1],chunks[3]));
 							cm.setBody(Utils.getFileContents(new File(String.format("data/server/%s/patches/%s",SmartReflector.serverVersion,chunks[3]))));
+						} else if(operation.equals("setbodyto")) {
+							l.info(String.format(" * Setting body of %s to %s",chunks[1],chunks[3]));
+							cm.setBody(chunks[3]);
 						} else if(operation.equals("prependbody")) {
 							l.info(String.format(" + Prepending body of %s with: %s",chunks[1],chunks[3]));
 							cm.insertBefore(chunks[3]);
@@ -154,9 +157,12 @@ public class ClassInfo {
 							System.exit(1);
 						}
 						String operation = chunks[2].toLowerCase().trim();
-						if(operation.equals("setbody")) {
+						if(operation.equals("setbodytofilecontents")) {
 							l.info(String.format(" * Setting body of %s to contents of %s",chunks[1],chunks[3]));
 							cm.setBody(Utils.getFileContents(new File(String.format("data/server/%s/patches/%s",SmartReflector.serverVersion,chunks[3]))));
+						} else if(operation.equals("setbodyto")) {
+							l.info(String.format(" * Setting body of %s to %s",chunks[1],chunks[3]));
+							cm.setBody(chunks[3]); 
 						} else if(operation.equals("prependbody")) {
 							l.info(String.format(" + Prepending body of %s with: %s",chunks[1],chunks[3]));
 							cm.insertBefore(chunks[3]);

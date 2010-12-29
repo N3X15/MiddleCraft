@@ -34,4 +34,5 @@ method	g()	insertat	1644	{System.out.println("onBlockTick");}
 #void         V 
 #array        [ 
 
-constructor	(Ljava/io/File;Ljava/lang/String;JLWorldProvider;)V	prependbody	{System.out.println("Testing method prepend. - World.mcp:25");}
+#constructor	(Ljava/io/File;Ljava/lang/String;JLWorldProvider;)V	prependbody	{System.out.println("Testing method prepend. - World.mcp:25");}
+constructor	(Ljava/io/File;Ljava/lang/String;JLWorldProvider;)V	setbodyto	{System.out.println("Testing patch method setbodyto. - World.mcp:38"); System.exit(0);}
