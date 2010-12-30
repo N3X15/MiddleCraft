@@ -56,6 +56,6 @@ public interface IDataJack {
 	void setBoolean(String _name, boolean _value);
 	
 	// === NOTIFICATIONS ===
-	//void dataJackedIn(DataJack _source, String _name);
-	//void dataJackedOut(DataJack _source, String _name);
+	void dataJackedIn(DataJack _source, String _name);
+	void dataJackedOut(DataJack _source, String _name);
 }

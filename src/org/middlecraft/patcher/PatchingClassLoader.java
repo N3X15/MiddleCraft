@@ -41,11 +41,30 @@ public class PatchingClassLoader extends URLClassLoader {
 	
 	public PatchingClassLoader(URL[] urls, ClassLoader parent) {
 		super(urls, parent);
+		classCache = new HashMap<String, Class<?>>();
+	}
+	
+	protected boolean isSystemClassName(String name) {
+		return name.startsWith("java.") || name.startsWith("javax.");
 	}
 	
 	protected synchronized Class<?> loadClass(String name, boolean resolve)
 	throws ClassNotFoundException {
-		l.info("Looking up class: " + name);
-		return super.loadClass(name, resolve);
+		/* Don't mess around with system classes. */
+		if (isSystemClassName(name)) {
+			return super.loadClass(name, resolve);
+		}
+		
+		/* Check our class cache first, if we find something there then
+		 * return it otherwise we need to generate or look up the class
+		 * in question. */
+		Class<?> cls = classCache.get(name);
+		if (cls != null) {
+			return cls;
+		} else {
+			cls = super.loadClass(name, resolve);
+			classCache.put(name, cls);
+			return cls;
+		}
 	}
 }

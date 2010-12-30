@@ -13,10 +13,16 @@
 		<pathelement path="lib/SuperCSV-1.52.jar" />
 	</path>
 	
+	<path id="middlecraft.build-patch.classpath">
+		<pathelement path="lib/minecraft_server.jar" />
+		<pathelement path="bin/classes" />
+	</path>
+	
 	<!-- Create workspace directories. -->
 	<target name="-dirs">
 		<mkdir dir="bin" />
 		<mkdir dir="bin/classes" />
+		<mkdir dir="bin/classes-patches" />
 		<mkdir dir="staged" />
 		<mkdir dir="staged/plugins" />
 		<mkdir dir="staged/lib" />
@@ -60,6 +66,13 @@
 			source="6"
 			includeAntRuntime="false"
 			compiler="javac1.6" />
+		<javac srcdir="src-patches"
+			destdir="bin/classes-patches"
+			classpathref="middlecraft.build-patch.classpath"
+			target="6"
+			source="6"
+			includeAntRuntime="false"
+			compiler="javac1.6" />
 	</target>
 	
 	<!-- Packages all of the class files in to jars so they are ready to
@@ -71,6 +84,12 @@
 					value="Main" />
 				<attribute name="Class-Path"
 					value="lib/javassist.jar lib/SuperCSV-1.52.jar" />
+			</manifest>
+		</jar>
+		<jar basedir="bin/classes-patches" destfile="bin/patches.jar">
+			<manifest>
+				<attribute name="For-Minecraft-Server"
+					value="${minecraft.server.md5}" />
 			</manifest>
 		</jar>
 	</target>
@@ -112,7 +131,9 @@
 	<!-- Removes ALL generated and obtained content, leaving a clean directory
 	     that may be slipped in to version control. -->
 	<target name="dist-clean" depends="clean">
-		<delete file="lib/minecraft_server.jar" /> <!-- We need the libs EXCEPT for minecraft_server.jar, until the rest of the dep downloading stuff is installed. -->
+		<delete file="lib/minecraft_server.jar" />
+		<!-- We need the libs EXCEPT for minecraft_server.jar, until the rest of the dep downloading stuff is installed. -->
+		<!-- Dep downloading stuff was removed since you already stuffed a jar in permanent git history; I didn't see the point in re-downloading files people will already have. -->
 		<delete dir="docs" />
 		<delete dir="staged" />
 	</target>
