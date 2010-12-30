@@ -69,7 +69,7 @@
 				<attribute name="Main-Class"
 					value="Main" />
 				<attribute name="Class-Path"
-					value="lib/javassist.jar lib/minecraft_server.jar lib/SuperCSV-1.52.jar" />
+					value="lib/javassist.jar lib/SuperCSV-1.52.jar" />
 			</manifest>
 		</jar>
 	</target>

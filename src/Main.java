@@ -44,10 +44,14 @@ public class Main {
 	public static void main(String[] arguments) {
 		l.info("Stage-1 Boot Sequence Start");
 		try {
-			mcClassLoader = new PatchingClassLoader(new URLClassLoader(
+			File mcServerJar = new File("lib/minecraft_server.jar");
+			URL mcServerJarURL = mcServerJar.toURI().toURL();
+			l.log(Level.INFO, "MC Server: ", mcServerJarURL.toString());
+			
+			mcClassLoader = new PatchingClassLoader(
 				new URL[] {
-					new URL("file://./lib/minecraft_server.jar")
-				}, ClassLoader.getSystemClassLoader()));
+					mcServerJarURL
+				}, ClassLoader.getSystemClassLoader());
 		} catch (Exception e) {
 			l.log(Level.SEVERE, "Problem setting up bootloader.", e);
 			System.exit(1);
@@ -59,7 +63,7 @@ public class Main {
 		l.info("Stage-3 Boot Sequence Start");
 		try {
 			Class<?> mcBootClass =
-			  mcClassLoader.loadClass("net.minecraft.server.MinecraftServer");
+				Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Exception e) {

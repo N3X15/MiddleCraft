@@ -30,40 +30,22 @@ package org.middlecraft.patcher;
 import java.util.*;
 import java.lang.*;
 import java.util.logging.*;
+import java.net.*;
 
 /**
- * Assures tampered-with classes are used instead of originals.
- * 
- * The PatchingClassLoader ensures that a set of patches are applied to
- * classes being loaded so that any desirable changes in behavior will be
- * made, falling back to the parent class loader if there is no patching
- * solution for the class being requested.  Patched classes are cached after
- * generation for faster retrieval.
- * 
  * @author Joshua 'Skrylar' Cearley
  */
-public class PatchingClassLoader extends ClassLoader {
+public class PatchingClassLoader extends URLClassLoader {
 	protected static final Logger l = Logger.getLogger("PatchingClassLoader");
 	protected Map<String, Class<?>> classCache;
 	
-	public PatchingClassLoader(ClassLoader parent) {
-		super(parent);
-		if (parent == null) {
-			throw new NullPointerException();
-		}
+	public PatchingClassLoader(URL[] urls, ClassLoader parent) {
+		super(urls, parent);
 	}
 	
-	@Override
-	public Class<?> loadClass(String name)
-	throws ClassNotFoundException {
-		return this.synchLoadClass(name);
-	}
-	
-	protected synchronized Class<?> synchLoadClass(String name)
+	protected synchronized Class<?> loadClass(String name, boolean resolve)
 	throws ClassNotFoundException {
 		l.info("Looking up class: " + name);
-		
-		/* Pass-through to the parent. */
-		return this.getParent().loadClass(name);
+		return super.loadClass(name, resolve);
 	}
 }
