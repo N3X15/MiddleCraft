@@ -1,0 +1,13 @@
+lib/minecraft_server.jar
+bin/
+server.log*
+staged/
+*.class
+.classpath
+.metadata/
+.project
+.settings
+banned-ips.txt
+banned-players.txt
+ops.txt.txt
+ops.txt

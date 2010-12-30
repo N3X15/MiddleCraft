@@ -20,6 +20,7 @@
 		<mkdir dir="staged" />
 		<mkdir dir="staged/plugins" />
 		<mkdir dir="staged/lib" />
+		<mkdir dir="staged/data" />
 		<mkdir dir="lib" />
 		<mkdir dir="docs" />
 	</target>
@@ -88,7 +89,7 @@
 				<include name="*.jar" />
 			</fileset>
 		</copy>
-		<copy todir="staged">
+		<copy todir="staged/data">
 			<fileset dir="data" />
 		</copy>
 	</target>
@@ -111,7 +112,7 @@
 	<!-- Removes ALL generated and obtained content, leaving a clean directory
 	     that may be slipped in to version control. -->
 	<target name="dist-clean" depends="clean">
-		<delete dir="lib" />
+		<delete file="lib/minecraft_server.jar" /> <!-- We need the libs EXCEPT for minecraft_server.jar, until the rest of the dep downloading stuff is installed. -->
 		<delete dir="docs" />
 		<delete dir="staged" />
 	</target>
