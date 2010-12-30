@@ -25,45 +25,45 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-import java.io.*;
+package org.middlecraft.patcher;
+
+import java.util.*;
+import java.lang.*;
 import java.util.logging.*;
-import java.net.*;
-import java.lang.reflect.*;
 
-import javassist.*;
-
-import org.middlecraft.server.*;
-import org.middlecraft.patcher.*;
-
-public class Main {
-	static Logger l = Logger.getLogger("Minecraft");
-
-	protected static ClassPool mcClassPool;
-	protected static ClassLoader mcClassLoader;
+/**
+ * Assures tampered-with classes are used instead of originals.
+ * 
+ * The PatchingClassLoader ensures that a set of patches are applied to
+ * classes being loaded so that any desirable changes in behavior will be
+ * made, falling back to the parent class loader if there is no patching
+ * solution for the class being requested.  Patched classes are cached after
+ * generation for faster retrieval.
+ * 
+ * @author Joshua 'Skrylar' Cearley
+ */
+public class PatchingClassLoader extends ClassLoader {
+	protected static final Logger l = Logger.getLogger("PatchingClassLoader");
+	protected Map<String, Class<?>> classCache;
 	
-	public static void main(String[] arguments) {
-		l.info("Stage-1 Boot Sequence Start");
-		try {
-			mcClassLoader = new PatchingClassLoader(new URLClassLoader(
-				new URL[] {
-					new URL("file://./lib/minecraft_server.jar")
-				}, ClassLoader.getSystemClassLoader()));
-		} catch (Exception e) {
-			l.log(Level.SEVERE, "Problem setting up bootloader.", e);
-			System.exit(1);
+	public PatchingClassLoader(ClassLoader parent) {
+		super(parent);
+		if (parent == null) {
+			throw new NullPointerException();
 		}
+	}
+	
+	@Override
+	public Class<?> loadClass(String name)
+	throws ClassNotFoundException {
+		return this.synchLoadClass(name);
+	}
+	
+	protected synchronized Class<?> synchLoadClass(String name)
+	throws ClassNotFoundException {
+		l.info("Looking up class: " + name);
 		
-		l.info("Stage-2 Boot Sequence Start");
-		l.warning("Stage-2 class patching setup not currently implemented.");
-		
-		l.info("Stage-3 Boot Sequence Start");
-		try {
-			Class<?> mcBootClass =
-			  mcClassLoader.loadClass("net.minecraft.server.MinecraftServer");
-			Method mainMethod = mcBootClass.getMethod("main", String[].class);
-			mainMethod.invoke(null, new Object[] {arguments});
-		} catch (Exception e) {
-			l.log(Level.SEVERE, "Unexpected error on Stage-3 boot.", e);
-		}
+		/* Pass-through to the parent. */
+		return this.getParent().loadClass(name);
 	}
 }
