@@ -44,31 +44,42 @@ public class Patches {
 	private static Logger l = Logger.getLogger("Minecraft");
 	
 	/**
-	 * Patches the named class.  Temporary measure.
-	 * @param className
+	 * Patches the named class.  Temporary measure until patching setup is complete.
+	 * @param className Name of the victim class (obfuscated)
 	 * @throws CannotCompileException 
 	 * @throws IOException 
 	 * @throws NotFoundException 
 	 */
 	public static void Patch(String className) throws NotFoundException, IOException, CannotCompileException {
+		
+		/* Set up classpool, if needed. */
 		if(pool==null) {
 			pool=ClassPool.getDefault();
 		}
+		
+		/* Load our victim class.  If possible. */
 		CtClass cc=null;
 		try {
 			cc = pool.get(className);
 		} catch(NotFoundException e) {
+			e.printStackTrace();
 			return;
 		}
+		/* MC package? BAIL OUT. */
 		if(!isMinecraftPackage(cc.getPackageName())) return;
+		
+
 		l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
-		// Deobfuscate class name
+		
+		/* Deobfuscate class name, assuming MCP mappings are installed... :/ */
 		String newClassName=SmartReflector.getNewClassName(className);
 		if(!newClassName.equals(className))
 		{
 			cc.setName(newClassName);
 			l.info(String.format("Renaming class %s to %s.",className,newClassName));
 		}
+		
+		/* Grab our patch, if possible, and load it. */
 		CtClass patch=null;
 		try {
 			File pf = new File(getPatchFilename(className));
@@ -80,25 +91,30 @@ public class Patches {
 			e.printStackTrace();
 			return;
 		}
-		l.info("Patching "+className+"...");
 		
+		l.info("Patching "+className+"...");
 		try {
+			/* For each method in the patch, add or replace as needed. */
 			for(CtMethod method : patch.getMethods()) {
+				// Replace
 				if(method.hasAnnotation(Replace.class)) {
 					String name = method.getName();
 					String sig = method.getSignature();
 					cc.getMethod(name, sig).setBody(method, null);
 				}
+				// Add
 				if(method.hasAnnotation(Add.class)) {
 					CtMethod m = new CtMethod(method, cc, null);
 					cc.addMethod(m);
 				}
 			}
+			/* Same deal with fields. */
 			for(CtField field : patch.getFields()) {
+				// Add
 				if(field.hasAnnotation(Add.class)) {
 					cc.addField(field);
 				}
-				// Only works on values.
+				// Replace
 				if(field.hasAnnotation(Replace.class)) { 
 					cc.removeField(cc.getField(field.getName()));
 					cc.addField(field);
@@ -113,11 +129,12 @@ public class Patches {
 			e.printStackTrace();
 			return;
 		}
+		// Save.
 		cc.writeFile();
 	}
 	/**
 	 * Determine if the named package is one of the Minecraft packages.
-	 * @param packageName
+	 * @param packageName Name of the package.
 	 * @return
 	 */
 	private static boolean isMinecraftPackage(String packageName) {

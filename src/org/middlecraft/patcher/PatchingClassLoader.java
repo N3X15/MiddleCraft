@@ -27,12 +27,9 @@
  */
 package org.middlecraft.patcher;
 
-import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.logging.*;
-
-import javassist.*;
 
 /**
  * A custom ClassLoader that patches certain classes as they are loaded.
@@ -117,13 +114,7 @@ public class PatchingClassLoader extends URLClassLoader {
 			l.info(String.format("[%s] Loaded via Patcher", className));
 			try {
 				Patches.Patch(className);
-			} catch (NotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (CannotCompileException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} // Determine if patching is required, and patch if needed.
