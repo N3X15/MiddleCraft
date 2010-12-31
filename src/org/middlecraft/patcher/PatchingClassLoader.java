@@ -34,8 +34,6 @@ import java.util.logging.*;
 
 import javassist.*;
 
-import org.middlecraft.server.*;
-
 /**
  * A custom ClassLoader that patches certain classes as they are loaded.
  *

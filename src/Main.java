@@ -41,8 +41,12 @@ public class Main {
 	protected static ClassPool mcClassPool;
 	protected static ClassLoader mcClassLoader;
 	
-	public static void main(String[] arguments) {
+	public static void main(String[] arguments) throws IOException {
 		l.info("Stage-1 Boot Sequence Start");
+		l.info(" + Setting up SmartReflector classmappings...");
+		SmartReflector.initialize();
+
+		l.info(" + Setting up bootloader...");
 		try {
 			File mcServerJar = new File("lib/minecraft_server.jar");
 			URL mcServerJarURL = mcServerJar.toURI().toURL();
@@ -60,7 +64,7 @@ public class Main {
 		
 		
 		l.info("Stage-2 Boot Sequence Start");
-		l.warning("Stage-2 class patching setup not currently implemented.");
+		l.warning(" ! Stage-2 class patching setup not currently implemented.");
 		
 		l.info("Stage-3 Boot Sequence Start");
 		try {
@@ -69,7 +73,7 @@ public class Main {
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Exception e) {
-			l.log(Level.SEVERE, "Unexpected error on Stage-3 boot.", e);
+			l.log(Level.SEVERE, " ! Unexpected error on Stage-3 boot.", e);
 		}
 	}
 }

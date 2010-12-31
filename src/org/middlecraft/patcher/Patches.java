@@ -26,30 +26,25 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.middlecraft.patcher;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.lang.annotation.Annotation;
+import java.io.*;
 import java.util.logging.Logger;
 
-import javassist.CannotCompileException;
-import javassist.ClassMap;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtField;
-import javassist.CtMethod;
-import javassist.NotFoundException;
+import javassist.*;
 
+import org.middlecraft.patcher.reflect.*;
 import org.middlecraft.server.*;
+
 /**
+ * Terribad class patcher.
  * @author Rob
  *
  */
 public class Patches {
 	private static ClassPool pool=null;
 	private static Logger l = Logger.getLogger("Minecraft");
+	
 	/**
+	 * Patches the named class.  Temporary measure.
 	 * @param className
 	 * @throws CannotCompileException 
 	 * @throws IOException 
@@ -110,30 +105,31 @@ public class Patches {
 				}
 			}
 		} catch (CannotCompileException e) {
-			// TODO Auto-generated catch block
+			l.severe(String.format("ERROR in %s:", patch.getName()));
 			e.printStackTrace();
 			return;
 		} catch (NotFoundException e) {
-			// TODO Auto-generated catch block
+			l.severe(String.format("ERROR in %s:", patch.getName()));
 			e.printStackTrace();
 			return;
 		}
 		cc.writeFile();
 	}
 	/**
+	 * Determine if the named package is one of the Minecraft packages.
 	 * @param packageName
 	 * @return
 	 */
 	private static boolean isMinecraftPackage(String packageName) {
-		// TODO Auto-generated method stub
 		return packageName.equals("") || packageName.equals("net.minecraft.server");
 	}
 	/**
+	 * Get a patch's filename.
 	 * @param className
 	 * @return
 	 */
 	private static String getPatchFilename(String className) {
-		// TODO Auto-generated method stub
+		// TODO Use patches-src or whatever.
 		return String.format("/data/server/%s/patches/Patched%s.java", SmartReflector.serverVersion, className);
 	}
 	

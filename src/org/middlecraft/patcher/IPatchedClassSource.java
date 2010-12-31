@@ -22,5 +22,5 @@ public interface IPatchedClassSource {
 	 * @return A valid class object; ostensibly one compiled by Javassist
 	 * and then detached from its original ClassPool.
 	 */
-	public Class providePatchedClassForName(String name);
+	public Class<?> providePatchedClassForName(String name);
 }
