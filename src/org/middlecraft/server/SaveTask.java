@@ -39,8 +39,10 @@ import java.util.logging.Logger;
 public class SaveTask extends TimerTask {
 	Logger l = Logger.getLogger("Minecraft");
 	public void run() {
-		  l.log(Level.INFO,"Saving reflection mappings...");
-		  SmartReflector.save();
-		  SmartReflector.saveTimer.cancel();
+		l.log(Level.INFO,"Saving reflection mappings...");
+		SmartReflector.save();
+		try {
+			SmartReflector.saveTimer.cancel();
+		} catch(IllegalStateException e) {}
 	}
 }

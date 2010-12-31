@@ -221,7 +221,7 @@ public class SmartReflector {
 			if(!types_ok) continue;
 
 			// LETS DO DIS
-			l.info("[SmartReflector] Initializing "+c.toString());
+			l.info("Initializing "+c.toString());
 			return c.newInstance(params);
 		}
 		return null;
@@ -546,6 +546,7 @@ public class SmartReflector {
 	}
 
 	/**
+	 * Update classdef superclass information. For reference, mostly.
 	 * @param cc
 	 */
 	public static void updateSuperclassInfo(CtClass cc) {
