@@ -27,37 +27,79 @@
  */
 package org.middlecraft.patcher;
 
+import java.io.*;
+import java.net.*;
+import java.util.*;
+import java.util.logging.*;
 
-import java.io.IOException;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.logging.Logger;
+import javassist.*;
 
-import javassist.CannotCompileException;
-import javassist.NotFoundException;
-
-import org.middlecraft.server.Utils;
-
-
+import org.middlecraft.server.*;
 
 /**
+ * A custom ClassLoader that patches certain classes as they are loaded.
+ *
+ * PatchingClassLoaders allows for certain classes to be loaded with hooks
+ * for performing custom modifications before said classes are linked in to
+ * the virtual machine.  If a class is not being patched, it is loaded as
+ * normal thanks to the URLClassLoader that PatchingClassLoaders inherits
+ * from.
+ * <br><br>
+ * Note that this inheritence is neccesary as classes inherit their
+ * classloader and refer to that one for future class loading by default,
+ * meaning if we did not load them through this class then we could lose
+ * oversight of class loading on accident.
+ *
  * @author Joshua 'Skrylar' Cearley
  */
 public class PatchingClassLoader extends URLClassLoader {
 	protected static final Logger l = Logger.getLogger("Minecraft");
+	
+	/**
+	 * Stores loaded and generated classes for faster lookup.
+	 */
 	protected Map<String, Class<?>> classCache;
 	
+	/**
+	 * Creates a new PatchingClassLoader that will consult the given array
+	 * of URLs as well as a given parent classloader.
+	 *
+	 * @param urls An array of URLs that make up a class path of jars and
+	 * class files to be used if a given class is not being patched.
+	 * @param parent A parent class loader used to load system classes.
+	 *
+	 * @see java.net.URL
+	 * @see java.lang.ClassLoader
+	 */
 	public PatchingClassLoader(URL[] urls, ClassLoader parent) {
 		super(urls, parent);
 		classCache = new HashMap<String, Class<?>>();
 	}
 	
+	/**
+	 * Determines whether a given class name belongs to the system, which
+	 * means that it must be loaded through the primordial class loader.
+	 * We can't hook these functions directly, they would need to be renamed
+	 * through Javasist's ClassMap.
+	 *
+	 * @param name Fully quantified name of the class in question.
+	 * @return True if a class name belongs to the system, false if we may
+	 * load it as we wish.
+	 */
 	protected boolean isSystemClassName(String name) {
 		return name.startsWith("java.") || name.startsWith("javax.");
 	}
 	
+	/**
+	 * Performs class loading as needed.
+	 *
+	 * @name className Fully quantified name of the class to be loaded.
+	 * @name resolve Whether or not to resolve (link with the JVM) the class
+	 * upon loading.
+	 * @return A loaded and (optionally) linked class.
+	 * @throws ClassNotFoundException If a class can not be found, a
+	 * ClassNotFoundException will be thrown to indicate such.
+	 */
 	protected synchronized Class<?> loadClass(String className, boolean resolve)
 	throws ClassNotFoundException {
 		/* Don't mess around with system classes. */
