@@ -28,6 +28,7 @@
 package org.middlecraft.patcher.reflect;
 
 /**
+ * Marks this class as a patch.  
  * @author Rob
  *
  */

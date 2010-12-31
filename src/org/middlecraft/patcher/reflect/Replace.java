@@ -28,6 +28,7 @@
 package org.middlecraft.patcher.reflect;
 
 /**
+ * <p>Tells the patching system to replace the member with the same signature and name with this member.</p>
  * @author Rob
  *
  */

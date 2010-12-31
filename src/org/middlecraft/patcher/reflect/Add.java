@@ -28,9 +28,8 @@
 package org.middlecraft.patcher.reflect;
 
 /**
+ * Specify that this field or function is being added to the target class as a completely new member.
  * @author Rob
  *
  */
-public @interface Add {
-
-}
+public @interface Add {}
