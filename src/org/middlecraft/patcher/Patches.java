@@ -69,7 +69,7 @@ public class Patches {
 		/* NOT MC package? BAIL OUT. */
 		if(!isMinecraftPackage(cc.getPackageName())) return;
 		
-		l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
+		//l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
 		
 		/* Check if superclass mappings are correct. */
 		SmartReflector.updateSuperclassInfo(cc);
@@ -79,7 +79,8 @@ public class Patches {
 		if(!newClassName.equals(className))
 		{
 			cc.setName(newClassName);
-			l.info(String.format("Renaming class %s to %s.",className,newClassName));
+			l.fine(String.format("Renaming class %s to %s.",className,newClassName));
+			className=newClassName;
 		}
 		
 		/* Grab our patch, if possible, and load it. */
@@ -88,6 +89,8 @@ public class Patches {
 			File pf = new File(getPatchFilename(className));
 			patch=pool.makeClass(new FileInputStream(pf));
 		} catch(FileNotFoundException e) {
+			//if(className=="World")
+			//	e.printStackTrace();
 			return;
 		} catch (Throwable e) {
 			l.severe("Cannot compile patch "+getPatchFilename(className)+":");
@@ -103,11 +106,13 @@ public class Patches {
 				if(method.hasAnnotation(Replace.class)) {
 					String name = method.getName();
 					String sig = method.getSignature();
+					l.info(String.format(" + Replacing %s...",method.getLongName()));
 					cc.getMethod(name, sig).setBody(method, null);
 				}
 				// Add
 				if(method.hasAnnotation(Add.class)) {
 					CtMethod m = new CtMethod(method, cc, null);
+					l.info(String.format(" + Adding %s...",method.getLongName()));
 					cc.addMethod(m);
 				}
 			}
@@ -150,7 +155,7 @@ public class Patches {
 	 */
 	private static String getPatchFilename(String className) {
 		// TODO Use patches-src or whatever.
-		return String.format("/data/server/%s/patches/Patched%s.java", SmartReflector.serverVersion, className);
+		return String.format("data/server/%s/patches/Patched%s.java", SmartReflector.serverVersion, className);
 	}
 	
 }
