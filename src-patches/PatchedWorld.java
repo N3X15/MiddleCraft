@@ -1,3 +1,6 @@
+import java.io.File;
+import org.middlecraft.patcher.reflect.*;
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -25,32 +28,32 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.middlecraft.server;
 
-
-/**
- * @author Rob
- *
+/** 
+ * Patch World class to accept hooks.
  */
-public class FieldInfo {
-	public String type;
-	public String realName;
-	public String className;
-	public String name="*";
-	
-
-	public static String header="Class,Real Name,Readable Name,Type";
-	public FieldInfo() {}
-	public FieldInfo(String line) {
-		String[] chunks = line.split(",");
-
-		className=chunks[0];
-		realName=chunks[1];
-		name=chunks[2];
-		type=chunks[3];
+@Patch
+public class PatchedWorld
+{
+	@Replace
+	public PatchedWorld(File f, String folder, Object wp)
+	{
+		System.out.println("Testing patch method setbodyto. - World.mcp:38"); 
+		System.exit(0);
 	}
-	
-	public String toString() {
-		return String.format("%s,%s,%s,%s",className,realName,name,type);
+
+	@Add
+	private void MIDDLECRAFT_onBlockTick(int x,int y,int z) {
+		//Hooks.Call("OnBlockTick",new Object[]{x,y,z}); return true;
+	}
+
+	/**
+	 * Patch World.g() (line 1644) to add hook processor.
+	 */
+	@Replace
+	public void scheduleBlockUpdate()
+	{
+		//MIDDLECRAFT_onBlockTick(h + c, j, i + d);
+		System.out.println("scheduleBlockUpdate");
 	}
 }
