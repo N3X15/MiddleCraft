@@ -26,7 +26,10 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.middlecraft.patcher;
+import java.awt.List;
 import java.io.*;
+import java.util.*;
+import java.util.jar.*;
 import java.util.logging.Logger;
 
 import javassist.*;
@@ -43,6 +46,24 @@ public class Patches {
 	private static ClassPool pool=null;
 	private static Logger l = Logger.getLogger("Minecraft");
 	
+	static Map<String,CtClass> patches = new HashMap<String,CtClass>();
+	
+	public static void initialize() throws NotFoundException {
+		try {
+			pool=ClassPool.getDefault();
+			pool.appendClassPath("lib/*");
+			JarFile jar = new JarFile("bin/patches.jar");
+			for(JarEntry e : Collections.list(jar.entries())) {
+				if(e.getName().endsWith(".class")) {
+					patches.put(e.getName().replace(".class", ""),pool.makeClass(jar.getInputStream(e)));
+				}
+			}
+			l.info(String.format("Loaded %d patches...",patches.size()));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	/**
 	 * Patches the named class.  Temporary measure until patching setup is complete.
 	 * @param className Name of the victim class (obfuscated)
@@ -51,13 +72,7 @@ public class Patches {
 	 * @throws NotFoundException 
 	 */
 	public static void Patch(String className) throws NotFoundException, IOException, CannotCompileException {
-		
-		/* Set up classpool, if needed. */
-		if(pool==null) {
-			pool=ClassPool.getDefault();
-			pool.appendClassPath("lib/*");
-		}
-		
+			
 		/* Load our victim class.  If possible. */
 		CtClass cc=null;
 		try {
@@ -84,22 +99,26 @@ public class Patches {
 		}
 		
 		/* Grab our patch, if possible, and load it. */
-		CtClass patch=null;
-		try {
-			File pf = new File(getPatchFilename(className));
-			patch=pool.makeClass(new FileInputStream(pf));
-		} catch(FileNotFoundException e) {
-			//if(className=="World")
-			//	e.printStackTrace();
-			return;
-		} catch (Throwable e) {
-			l.severe("Cannot compile patch "+getPatchFilename(className)+":");
-			e.printStackTrace();
-			return;
-		}
+		CtClass patch=patches.get("Patched"+className);
+		if(patch==null) return;
 		
 		l.info("Patching "+className+"...");
 		try {
+			/* For each method in the patch, add or replace as needed. */
+			for(CtConstructor ctor : patch.getConstructors()) {
+				// Replace
+				if(ctor.hasAnnotation(Replace.class)) {
+					String sig = ctor.getSignature();
+					l.info(String.format(" + Replacing constructor %s...",ctor.getLongName()));
+					cc.getConstructor(sig).setBody(ctor, null);
+				}
+				// Add
+				if(ctor.hasAnnotation(Add.class)) {
+					CtConstructor m = new CtConstructor(ctor, cc, null);
+					l.info(String.format(" + Adding constructor %s...",ctor.getLongName()));
+					cc.addConstructor(m);
+				}
+			}
 			/* For each method in the patch, add or replace as needed. */
 			for(CtMethod method : patch.getMethods()) {
 				// Replace

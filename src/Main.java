@@ -41,7 +41,9 @@ public class Main {
 	protected static ClassPool mcClassPool;
 	protected static ClassLoader mcClassLoader;
 	
-	public static void main(String[] arguments) throws IOException {
+	public static void main(String[] arguments) throws Throwable {
+		Patches.initialize();
+		
 		l.info("Stage-1 Boot Sequence Start");
 		l.info(" + Setting up SmartReflector classmappings...");
 		SmartReflector.initialize();
