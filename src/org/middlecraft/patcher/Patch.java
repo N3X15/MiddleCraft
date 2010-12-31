@@ -25,51 +25,11 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-import java.io.*;
-import java.util.logging.*;
-import java.net.*;
-import java.lang.reflect.*;
+package org.middlecraft.patcher;
 
-import javassist.*;
+/**
+ * @author Rob
+ *
+ */
 
-import org.middlecraft.server.*;
-import org.middlecraft.patcher.*;
-
-public class Main {
-	static Logger l = Logger.getLogger("Minecraft");
-
-	protected static ClassPool mcClassPool;
-	protected static ClassLoader mcClassLoader;
-	
-	public static void main(String[] arguments) {
-		l.info("Stage-1 Boot Sequence Start");
-		try {
-			File mcServerJar = new File("lib/minecraft_server.jar");
-			URL mcServerJarURL = mcServerJar.toURI().toURL();
-			l.log(Level.INFO, "MC Server: ", mcServerJarURL.toString());
-			
-			mcClassLoader = new PatchingClassLoader(
-				new URL[] {
-					mcServerJarURL
-				}, ClassLoader.getSystemClassLoader());
-			Thread.currentThread().setContextClassLoader(mcClassLoader);
-		} catch (Exception e) {
-			l.log(Level.SEVERE, "Problem setting up bootloader.", e);
-			System.exit(1);
-		}
-		
-		
-		l.info("Stage-2 Boot Sequence Start");
-		l.warning("Stage-2 class patching setup not currently implemented.");
-		
-		l.info("Stage-3 Boot Sequence Start");
-		try {
-			Class<?> mcBootClass =
-				Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
-			Method mainMethod = mcBootClass.getMethod("main", String[].class);
-			mainMethod.invoke(null, new Object[] {arguments});
-		} catch (Exception e) {
-			l.log(Level.SEVERE, "Unexpected error on Stage-3 boot.", e);
-		}
-	}
-}
+public @interface Patch{}

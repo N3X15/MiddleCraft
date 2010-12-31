@@ -27,16 +27,26 @@
  */
 package org.middlecraft.patcher;
 
-import java.util.*;
-import java.lang.*;
-import java.util.logging.*;
-import java.net.*;
+
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Logger;
+
+import javassist.CannotCompileException;
+import javassist.NotFoundException;
+
+import org.middlecraft.server.Utils;
+
+
 
 /**
  * @author Joshua 'Skrylar' Cearley
  */
 public class PatchingClassLoader extends URLClassLoader {
-	protected static final Logger l = Logger.getLogger("PatchingClassLoader");
+	protected static final Logger l = Logger.getLogger("Minecraft");
 	protected Map<String, Class<?>> classCache;
 	
 	public PatchingClassLoader(URL[] urls, ClassLoader parent) {
@@ -48,22 +58,37 @@ public class PatchingClassLoader extends URLClassLoader {
 		return name.startsWith("java.") || name.startsWith("javax.");
 	}
 	
-	protected synchronized Class<?> loadClass(String name, boolean resolve)
+	protected synchronized Class<?> loadClass(String className, boolean resolve)
 	throws ClassNotFoundException {
 		/* Don't mess around with system classes. */
-		if (isSystemClassName(name)) {
-			return super.loadClass(name, resolve);
+		if (isSystemClassName(className)) {
+			l.info(String.format("[%s] Loaded via isSystemClassName", className));
+			return super.loadClass(className, resolve);
 		}
 		
 		/* Check our class cache first, if we find something there then
 		 * return it otherwise we need to generate or look up the class
 		 * in question. */
-		Class<?> cls = classCache.get(name);
+		Class<?> cls = classCache.get(className);
 		if (cls != null) {
+			l.info(String.format("[%s] Cached", className));
 			return cls;
 		} else {
-			cls = super.loadClass(name, resolve);
-			classCache.put(name, cls);
+			l.info(String.format("[%s] Loaded via Patcher", className));
+			try {
+				Patches.Patch(className);
+			} catch (NotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (CannotCompileException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} // Determine if patching is required, and patch if needed.
+			cls = super.loadClass(className, resolve);
+			classCache.put(className, cls);
 			return cls;
 		}
 	}

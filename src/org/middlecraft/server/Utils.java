@@ -1,3 +1,4 @@
+package org.middlecraft.server;
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -25,7 +26,7 @@
  * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package org.middlecraft.server;
+
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -58,12 +59,5 @@ public class Utils {
 		}
 	}
 
-	/**
-	 * @param pkg
-	 * @return
-	 */
-	public static boolean isMinecraftPackage(String pkg) {
-		return pkg == null || pkg == "" || pkg.startsWith("net.minecraft");
-	}
 
 }

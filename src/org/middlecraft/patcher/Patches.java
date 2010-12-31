@@ -1,0 +1,140 @@
+/**
+ * Copyright (c) 2010, MiddleCraft Contributors
+ * All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ * 
+ *  * Redistributions of source code must retain the above copyright notice, this list of 
+ *    conditions and the following disclaimer.
+ * 
+ *  * Redistributions in binary form must reproduce the above copyright notice, this list 
+ *    of conditions and the following disclaimer in the documentation and/or other materials 
+ *    provided with the distribution.
+ * 
+ *  * Neither the name of MiddleCraft nor the names of its contributors may be 
+ *    used to endorse or promote products derived from this software without specific prior 
+ *    written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES 
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT 
+ * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, 
+ * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE 
+ * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+package org.middlecraft.patcher;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.lang.annotation.Annotation;
+import java.util.logging.Logger;
+
+import javassist.CannotCompileException;
+import javassist.ClassMap;
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.CtField;
+import javassist.CtMethod;
+import javassist.NotFoundException;
+
+import org.middlecraft.server.*;
+/**
+ * @author Rob
+ *
+ */
+public class Patches {
+	private static ClassPool pool=null;
+	private static Logger l = Logger.getLogger("Minecraft");
+	/**
+	 * @param className
+	 * @throws CannotCompileException 
+	 * @throws IOException 
+	 * @throws NotFoundException 
+	 */
+	public static void Patch(String className) throws NotFoundException, IOException, CannotCompileException {
+		if(pool==null) {
+			pool=ClassPool.getDefault();
+		}
+		CtClass cc=null;
+		try {
+			cc = pool.get(className);
+		} catch(NotFoundException e) {
+			return;
+		}
+		if(!isMinecraftPackage(cc.getPackageName())) return;
+		l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
+		// Deobfuscate class name
+		String newClassName=SmartReflector.getNewClassName(className);
+		if(!newClassName.equals(className))
+		{
+			cc.setName(newClassName);
+			l.info(String.format("Renaming class %s to %s.",className,newClassName));
+		}
+		CtClass patch=null;
+		try {
+			File pf = new File(getPatchFilename(className));
+			patch=pool.makeClass(new FileInputStream(pf));
+		} catch(FileNotFoundException e) {
+			return;
+		} catch (Throwable e) {
+			l.severe("Cannot compile patch "+getPatchFilename(className)+":");
+			e.printStackTrace();
+			return;
+		}
+		l.info("Patching "+className+"...");
+		
+		try {
+			for(CtMethod method : patch.getMethods()) {
+				if(method.hasAnnotation(Replace.class)) {
+					String name = method.getName();
+					String sig = method.getSignature();
+					cc.getMethod(name, sig).setBody(method, null);
+				}
+				if(method.hasAnnotation(Add.class)) {
+					CtMethod m = new CtMethod(method, cc, null);
+					cc.addMethod(m);
+				}
+			}
+			for(CtField field : patch.getFields()) {
+				if(field.hasAnnotation(Add.class)) {
+					cc.addField(field);
+				}
+				// Only works on values.
+				if(field.hasAnnotation(Replace.class)) { 
+					cc.removeField(cc.getField(field.getName()));
+					cc.addField(field);
+				}
+			}
+		} catch (CannotCompileException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return;
+		} catch (NotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return;
+		}
+		cc.writeFile();
+	}
+	/**
+	 * @param packageName
+	 * @return
+	 */
+	private static boolean isMinecraftPackage(String packageName) {
+		// TODO Auto-generated method stub
+		return packageName.equals("") || packageName.equals("net.minecraft.server");
+	}
+	/**
+	 * @param className
+	 * @return
+	 */
+	private static String getPatchFilename(String className) {
+		// TODO Auto-generated method stub
+		return String.format("/data/server/%s/patches/Patched%s.java", SmartReflector.serverVersion, className);
+	}
+	
+}

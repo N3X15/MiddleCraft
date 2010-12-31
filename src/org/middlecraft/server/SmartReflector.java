@@ -26,6 +26,7 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.middlecraft.server;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
