@@ -64,18 +64,18 @@ import org.supercsv.prefs.CsvPreference;
  *
  */
 public class SmartReflector {
-	
+
 	static Timer saveTimer=new Timer();
 
 	static Logger l = Logger.getLogger("Minecraft");
-	
+
 	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
-	
+
 	public static HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
 	public static ClassMap deobfuscationMap = new ClassMap();
 	public static Map<String,Class<?>> loadedClasses = new HashMap<String,Class<?>>();
-	
-	 
+
+
 	public static void initialize() throws IOException {
 		// Read data from our simplified MCP deobfuscation mappings
 		//  (I'll make a few python scripts to do this - N3X)
@@ -90,7 +90,7 @@ public class SmartReflector {
 			ReadFields();
 		}
 	}
-	
+
 	/**
 	 * 
 	 */
@@ -104,24 +104,24 @@ public class SmartReflector {
 		}
 		boolean hasReadHeader=false;
 		Scanner scanner = new Scanner(new FileInputStream(f));
-	    try {
-	    	while (scanner.hasNextLine()) {
-	    		String line = scanner.nextLine();
-	    		if(!hasReadHeader) {
-	    			hasReadHeader=true;
-	    			continue;
-	    		}
+		try {
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				if(!hasReadHeader) {
+					hasReadHeader=true;
+					continue;
+				}
 
-	    		FieldInfo field = new FieldInfo(line);
-	    		
-	    		if(!classes.containsKey(field.className))
-	    			continue;
-	    		ClassInfo ci = classes.get(field.className);
-	    		ci.fieldNames.put(field.realName,field);
-	    		classes.put(field.className, ci);
-	    	}
-	    } catch(Exception e) { e.printStackTrace(); }
-		
+				FieldInfo field = new FieldInfo(line);
+
+				if(!classes.containsKey(field.className))
+					continue;
+				ClassInfo ci = classes.get(field.className);
+				ci.fieldNames.put(field.realName,field);
+				classes.put(field.className, ci);
+			}
+		} catch(Exception e) { e.printStackTrace(); }
+
 	}
 
 	/**
@@ -137,23 +137,23 @@ public class SmartReflector {
 		}
 		Scanner scanner = new Scanner(new FileInputStream(f));
 		boolean hasReadHeader=false;
-	    try {
-	    	while (scanner.hasNextLine()) {
-	    		String line = scanner.nextLine();
-	    		if(!hasReadHeader) {
-	    			hasReadHeader=true;
-	    			continue;
-	    		}
-	    		MethodInfo mi = new MethodInfo(line);
-	    		
-	    		if(!classes.containsKey(mi.parentClass))
-	    			continue;
-	    		
-	    		ClassInfo ci = classes.get(mi.parentClass);
-	    		ci.methodNames.put(mi.toIndex(), mi);
-	    		classes.put(mi.parentClass, ci);
-	    	}
-	    } catch(Exception e) { e.printStackTrace(); }
+		try {
+			while (scanner.hasNextLine()) {
+				String line = scanner.nextLine();
+				if(!hasReadHeader) {
+					hasReadHeader=true;
+					continue;
+				}
+				MethodInfo mi = new MethodInfo(line);
+
+				if(!classes.containsKey(mi.parentClass))
+					continue;
+
+				ClassInfo ci = classes.get(mi.parentClass);
+				ci.methodNames.put(mi.toIndex(), mi);
+				classes.put(mi.parentClass, ci);
+			}
+		} catch(Exception e) { e.printStackTrace(); }
 	}
 
 	private static boolean ReadClasses() throws IOException {
@@ -166,27 +166,27 @@ public class SmartReflector {
 		}
 		CsvListReader rdr = new CsvListReader(new FileReader(f),CsvPreference.STANDARD_PREFERENCE);
 		rdr.read();
-	    try {
-	    	while (true){
-	    		List<String> line = rdr.read();
-	    		if(line==null) break;
-    			ClassInfo ci = new ClassInfo(line);
-    			
-    			if(ci.name.startsWith("UNKNOWN_")) {
-    				l.log(Level.WARNING, "Skipping WIP mapping for "+ci.name+".");
-    				continue;
-    			}
-    			if(!classes.containsKey(ci.realName)) {
-    				deobfuscationMap.put(ci.realName, ci.name);
-    				obfuscationMap.put(ci.name,ci.realName);
-    				classes.put(ci.realName, ci);
-    			}
-	    	}
-	    }
-	    finally{
-	    	rdr.close();
-	    }
-	    return true;
+		try {
+			while (true){
+				List<String> line = rdr.read();
+				if(line==null) break;
+				ClassInfo ci = new ClassInfo(line);
+
+				if(ci.name.startsWith("UNKNOWN_")) {
+					l.log(Level.WARNING, "Skipping WIP mapping for "+ci.name+".");
+					continue;
+				}
+				if(!classes.containsKey(ci.realName)) {
+					deobfuscationMap.put(ci.realName, ci.name);
+					obfuscationMap.put(ci.name,ci.realName);
+					classes.put(ci.realName, ci);
+				}
+			}
+		}
+		finally{
+			rdr.close();
+		}
+		return true;
 	}
 
 	/**
@@ -219,14 +219,14 @@ public class SmartReflector {
 					types_ok=false;
 			}
 			if(!types_ok) continue;
-			
+
 			// LETS DO DIS
 			l.info("[SmartReflector] Initializing "+c.toString());
 			return c.newInstance(params);
 		}
 		return null;
 	}
-	
+
 	/**
 	 * Add a class to the list.
 	 * @param name
@@ -257,7 +257,7 @@ public class SmartReflector {
 		classes.put(ci.realName, ci);
 		setDirty();
 	}
-	
+
 	static int unkFields=0; 
 	public static void addObfuscatedFieldDefinition(String className, String fieldName, String type) {
 		unkFields++;
@@ -270,7 +270,7 @@ public class SmartReflector {
 		classes.put(className, ci);
 		setDirty();
 	}
-	
+
 	static int unkMethods=0;
 
 	private static boolean dirty;
@@ -280,7 +280,7 @@ public class SmartReflector {
 		//unkMethods++;
 		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
 		ClassInfo ci = classes.get(className);
-		
+
 		MethodInfo mi = new MethodInfo();
 		mi.name="*";
 		mi.parentClass=className;
@@ -292,7 +292,7 @@ public class SmartReflector {
 		classes.put(className, ci);
 		setDirty();
 	}
-	
+
 	/**
 	 * 
 	 */
@@ -435,7 +435,7 @@ public class SmartReflector {
 				l.log(Level.INFO,"Fixing method "+className+"."+methodID);
 				if(ci.methodNames.containsKey(methodID))
 					cm.setName(ci.methodNames.get(methodID).name);
-				
+
 				// Also patch, if required.
 				File methodPatch = new File(String.format("data/server/%s/patches/%s/%s.%s.java",serverVersion,ci.name,cm.getName(),cm.getSignature()));
 				if(methodPatch.exists()) {
@@ -543,5 +543,25 @@ public class SmartReflector {
 			}
 		}
 		return className;
+	}
+
+	/**
+	 * @param cc
+	 */
+	public static void updateSuperclassInfo(CtClass cc) {
+
+		try {
+			ClassInfo ci = classes.get(cc.getName());
+			if(ci==null) return;
+			CtClass sc = cc.getSuperclass();
+			if(sc==null) return;
+			if(!ci.realSuperClass.equals(sc.getName())) {
+				ci.realSuperClass=sc.getName();
+				classes.put(cc.getName(), ci);
+				setDirty();
+			}
+		} catch (NotFoundException e) {
+			return;
+		}
 	}
 }

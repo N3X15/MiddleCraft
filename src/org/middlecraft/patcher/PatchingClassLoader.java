@@ -99,7 +99,7 @@ public class PatchingClassLoader extends URLClassLoader {
 	throws ClassNotFoundException {
 		/* Don't mess around with system classes. */
 		if (isSystemClassName(className)) {
-			l.info(String.format("[%s] Loaded via isSystemClassName", className));
+			//l.info(String.format("[%s] Loaded via isSystemClassName", className));
 			return super.loadClass(className, resolve);
 		}
 		
@@ -108,10 +108,10 @@ public class PatchingClassLoader extends URLClassLoader {
 		 * in question. */
 		Class<?> cls = classCache.get(className);
 		if (cls != null) {
-			l.info(String.format("[%s] Cached", className));
+			//l.info(String.format("[%s] Cached", className));
 			return cls;
 		} else {
-			l.info(String.format("[%s] Loaded via Patcher", className));
+			//l.info(String.format("[%s] Loaded via Patcher", className));
 			try {
 				Patches.Patch(className);
 			} catch (Exception e) {

@@ -55,6 +55,7 @@ public class Patches {
 		/* Set up classpool, if needed. */
 		if(pool==null) {
 			pool=ClassPool.getDefault();
+			pool.appendClassPath("lib/*");
 		}
 		
 		/* Load our victim class.  If possible. */
@@ -65,11 +66,13 @@ public class Patches {
 			e.printStackTrace();
 			return;
 		}
-		/* MC package? BAIL OUT. */
+		/* NOT MC package? BAIL OUT. */
 		if(!isMinecraftPackage(cc.getPackageName())) return;
 		
-
 		l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
+		
+		/* Check if superclass mappings are correct. */
+		SmartReflector.updateSuperclassInfo(cc);
 		
 		/* Deobfuscate class name, assuming MCP mappings are installed... :/ */
 		String newClassName=SmartReflector.getNewClassName(className);
@@ -138,7 +141,7 @@ public class Patches {
 	 * @return
 	 */
 	private static boolean isMinecraftPackage(String packageName) {
-		return packageName.equals("") || packageName.equals("net.minecraft.server");
+		return packageName==null || packageName.equals("") || packageName.equals("net.minecraft.server");
 	}
 	/**
 	 * Get a patch's filename.
