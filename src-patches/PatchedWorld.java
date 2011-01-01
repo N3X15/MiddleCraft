@@ -36,7 +36,7 @@ import org.middlecraft.patcher.reflect.*;
 public class PatchedWorld
 {
 	@Replace
-	public PatchedWorld(File f, String folder, Object wp)
+	public PatchedWorld(File f, String folder, long seed, @SetParamType("WorldProvider") Object jm)
 	{
 		System.out.println("Testing patch method setbodyto. - World.mcp:38"); 
 		System.exit(0);

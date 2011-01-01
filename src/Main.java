@@ -26,11 +26,13 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import java.io.*;
+import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 import java.util.logging.*;
+import java.util.zip.ZipEntry;
 import java.net.*;
 import java.lang.reflect.*;
 
@@ -44,57 +46,75 @@ public class Main {
 
 	protected static ClassPool mcClassPool;
 	protected static PatchingClassLoader mcClassLoader;
-	
+
 	public static void main(String[] arguments) throws Throwable {
+
+		/* Set up logging. */
+		l.setUseParentHandlers(false);
+		ConsoleHandler handle_c = new ConsoleHandler();
+		handle_c.setFormatter(new MiddlecraftFormatter());
+		l.addHandler(handle_c);
 		
 		l.info("Stage-1 Boot Sequence Start");
 		l.info(" + Setting up SmartReflector classmappings...");
 		SmartReflector.initialize();
-
 		l.info(" + Setting up bootloader...");
 		try {
 			File mcServerJar = new File("lib/minecraft_server.jar");
 			URL mcServerJarURL = mcServerJar.toURI().toURL();
 			l.log(Level.INFO, "MC Server: ", mcServerJarURL.toString());
-			
+
 			mcClassLoader = new PatchingClassLoader(
-				new URL[] {
-					mcServerJarURL//, mcServerJarURLNew
-				}, ClassLoader.getSystemClassLoader());
+					new URL[] {
+							mcServerJarURL//, mcServerJarURLNew
+					}, ClassLoader.getSystemClassLoader());
 			Thread.currentThread().setContextClassLoader(mcClassLoader);
 		} catch (Exception e) {
 			l.log(Level.SEVERE, "Problem setting up bootloader.", e);
 			System.exit(1);
 		}
-		
-		
+
+
 		l.info("Stage 2: Patching server jar...");
 		l.info(" + Loading patches...");
 		Patches.initialize();
 		l.info(" + Creating minecraft_server.jar.new...");
 		File newMCServerJar = new File(String.format("lib/minecraft_server.jar.new"));
-		if(!newMCServerJar.exists())
-		{
-			newMCServerJar.mkdirs();
+		JarOutputStream outJar = null;
+		try {
 			JarFile inJar = new JarFile("lib/minecraft_server.jar");
-			JarOutputStream outJar = new JarOutputStream(new FileOutputStream(newMCServerJar));
+			outJar = new JarOutputStream(new FileOutputStream(newMCServerJar));
 			for(JarEntry e : Collections.list(inJar.entries())) {
+				if(e.isDirectory() && !e.getName().equals("META_INF")) {
+					outJar.putNextEntry(new ZipEntry(e.getName()));
+					outJar.closeEntry();
+					l.info(" + Added dir "+e.getName()+" to jar.");
+					continue;
+				}
 				if(e.getName().endsWith(".class")) {
 					// Strip off the .class
-					String className = e.getName().substring(0, e.getName().indexOf('.')); 
+					String className = e.getName().substring(0, e.getName().indexOf('.'));
+					
+					// Get new classname
+					String newClassName=SmartReflector.getNewClassName(className);
+					
+					// Place the new class into the JAR.
+					outJar.putNextEntry(new ZipEntry(newClassName+".class"));
 					Patches.Patch(className, outJar);
+					outJar.closeEntry();
 				}
 			}
+		} finally {
 			outJar.close();
 		}
 		l.info(" + Updating Classpath...");
 		mcClassLoader.addURI(newMCServerJar.toURI());
-		
+
 		l.info("Stage 3: Booting server!");
 		try {
 			// Bootstrap...
 			Class<?> mcBootClass =
-					Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
+				Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Exception e) {

@@ -29,10 +29,12 @@ package org.middlecraft.patcher;
 import java.io.*;
 import java.util.*;
 import java.util.jar.*;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javassist.*;
 import javassist.bytecode.ClassFile;
+import javassist.bytecode.Descriptor;
 
 import org.middlecraft.patcher.reflect.*;
 import org.middlecraft.server.SmartReflector;
@@ -100,7 +102,7 @@ public class Patches {
 			newClassName=className+"2"; // To ensure we get fresh classes.
 		}
 		cc.setName(newClassName);
-		l.info(String.format("Renaming class %s to %s.",className,newClassName));
+		l.fine(String.format("Renaming class %s to %s.",className,newClassName));
 		className=newClassName;
 
 		/* Grab our patch, if possible, and load it. */
@@ -113,9 +115,15 @@ public class Patches {
 			for(CtConstructor ctor : patch.getConstructors()) {
 				// Replace
 				if(ctor.hasAnnotation(Replace.class)) {
-					String sig = ctor.getSignature();
-					l.info(String.format(" + Replacing constructor %s...",ctor.getLongName()));
-					cc.getConstructor(sig).setBody(ctor, null);
+					try {
+						String sig = fixSig(ctor);
+						l.info(String.format(" + Replacing constructor %s...",ctor.getLongName()));
+						cc.getConstructor(sig).setBody(ctor, null);
+					} catch(NotFoundException e) {
+						l.log(Level.SEVERE,"Could not find constructor, following is a list of constructors for this class:",e);
+						printConstructorList(cc);
+						System.exit(1);
+					}
 				}
 				// Add
 				if(ctor.hasAnnotation(Add.class)) {
@@ -129,9 +137,15 @@ public class Patches {
 				// Replace
 				if(method.hasAnnotation(Replace.class)) {
 					String name = method.getName();
-					String sig = method.getSignature();
+					String sig = fixSig(method);
 					l.info(String.format(" + Replacing %s...",method.getLongName()));
-					cc.getMethod(name, sig).setBody(method, null);
+					try{
+						cc.getMethod(name, sig).setBody(method, null);
+					} catch(NotFoundException e) {
+						l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
+						printMethodList(method, cc);
+						System.exit(1);
+					}
 				}
 				// Add
 				if(method.hasAnnotation(Add.class)) {
@@ -160,6 +174,10 @@ public class Patches {
 			l.severe(String.format("ERROR in %s:", patch.getName()));
 			e.printStackTrace();
 			return;
+		} catch (ClassNotFoundException e) {
+			l.severe(String.format("ERROR in %s:", patch.getName()));
+			e.printStackTrace();
+			return;
 		}
 		// Save.
 		if(outJar==null)
@@ -169,6 +187,68 @@ public class Patches {
 			cf.write(new DataOutputStream(outJar));
 		}
 	}
+
+	/**
+	 * Returns the signature after having applied SetParamType operations.
+	 * @param method
+	 * @return
+	 * @throws NotFoundException 
+	 * @throws ClassNotFoundException 
+	 */
+	private static String fixSig(CtConstructor ctor) throws NotFoundException, ClassNotFoundException {
+		CtClass[] params = Descriptor.getParameterTypes(ctor.getSignature(), pool);
+		
+		for(int i = 0;i<params.length;i++) {
+			Object[] pas = ctor.getParameterAnnotations()[i];
+			for(Object pa : pas) {
+				if(pa.getClass()==SetParamType.class) {
+					SetParamType spt = (SetParamType)pa;
+					params[i]=pool.get(spt.value());
+				}
+			}
+		}
+		
+		return Descriptor.ofConstructor(params);
+	}
+
+	/**
+	 * Returns the signature after having applied SetParamType operations.
+	 * @param method
+	 * @return
+	 * @throws NotFoundException 
+	 * @throws ClassNotFoundException 
+	 */
+	private static String fixSig(CtMethod method) throws NotFoundException, ClassNotFoundException {
+		CtClass[] params = Descriptor.getParameterTypes(method.getSignature(), pool);
+		CtClass returnType = Descriptor.getReturnType(method.getSignature(), pool);
+		
+		for(int i = 0;i<params.length;i++) {
+			Object[] pas = method.getParameterAnnotations()[i];
+			for(Object pa : pas) {
+				if(pa.getClass()==SetParamType.class) {
+					SetParamType spt = (SetParamType)pa;
+					params[i]=pool.get(spt.value());
+				}
+			}
+		}
+		
+		return Descriptor.ofMethod(returnType, params);
+	}
+
+	private static void printMethodList(CtMethod method, CtClass cc) {
+		for(CtMethod m : cc.getMethods()) {
+			if(m.getName().equals(method.getName())) {
+				l.severe(" * "+m.getLongName());
+			}
+		}
+	}
+
+	private static void printConstructorList(CtClass cc) {
+		for(CtConstructor c : cc.getConstructors()) {
+			l.severe(" * "+c.getLongName());
+		}
+	}
+
 	/**
 	 * Determine if the named package is one of the Minecraft packages.
 	 * @param packageName Name of the package.

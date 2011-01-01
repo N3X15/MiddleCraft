@@ -31,6 +31,9 @@ package org.middlecraft.server;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Scanner;
 
 /**
@@ -59,5 +62,14 @@ public class Utils {
 		}
 	}
 
+	public static void copyStream(InputStream input, OutputStream output) throws IOException {
+		byte[] buffer = new byte[1024];
+		while(true) {
+			int count = input.read(buffer);
+			if(count == -1)
+				break;
+			output.write(buffer, 0, count);
+		}
+	}
 
 }
