@@ -26,6 +26,10 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import java.io.*;
+import java.util.Collections;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
+import java.util.jar.JarOutputStream;
 import java.util.logging.*;
 import java.net.*;
 import java.lang.reflect.*;
@@ -39,10 +43,9 @@ public class Main {
 	static Logger l = Logger.getLogger("Minecraft");
 
 	protected static ClassPool mcClassPool;
-	protected static ClassLoader mcClassLoader;
+	protected static PatchingClassLoader mcClassLoader;
 	
 	public static void main(String[] arguments) throws Throwable {
-		Patches.initialize();
 		
 		l.info("Stage-1 Boot Sequence Start");
 		l.info(" + Setting up SmartReflector classmappings...");
@@ -56,7 +59,7 @@ public class Main {
 			
 			mcClassLoader = new PatchingClassLoader(
 				new URL[] {
-					mcServerJarURL
+					mcServerJarURL//, mcServerJarURLNew
 				}, ClassLoader.getSystemClassLoader());
 			Thread.currentThread().setContextClassLoader(mcClassLoader);
 		} catch (Exception e) {
@@ -65,13 +68,33 @@ public class Main {
 		}
 		
 		
-		l.info("Stage-2 Boot Sequence Start");
-		l.warning(" ! Stage-2 class patching setup not currently implemented.");
+		l.info("Stage 2: Patching server jar...");
+		l.info(" + Loading patches...");
+		Patches.initialize();
+		l.info(" + Creating minecraft_server.jar.new...");
+		File newMCServerJar = new File(String.format("lib/minecraft_server.jar.new"));
+		if(!newMCServerJar.exists())
+		{
+			newMCServerJar.mkdirs();
+			JarFile inJar = new JarFile("lib/minecraft_server.jar");
+			JarOutputStream outJar = new JarOutputStream(new FileOutputStream(newMCServerJar));
+			for(JarEntry e : Collections.list(inJar.entries())) {
+				if(e.getName().endsWith(".class")) {
+					// Strip off the .class
+					String className = e.getName().substring(0, e.getName().indexOf('.')); 
+					Patches.Patch(className, outJar);
+				}
+			}
+			outJar.close();
+		}
+		l.info(" + Updating Classpath...");
+		mcClassLoader.addURI(newMCServerJar.toURI());
 		
-		l.info("Stage-3 Boot Sequence Start");
+		l.info("Stage 3: Booting server!");
 		try {
+			// Bootstrap...
 			Class<?> mcBootClass =
-				Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
+					Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Exception e) {

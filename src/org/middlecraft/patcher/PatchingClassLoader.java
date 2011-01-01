@@ -31,6 +31,8 @@ import java.net.*;
 import java.util.*;
 import java.util.logging.*;
 
+import org.middlecraft.server.SmartReflector;
+
 /**
  * A custom ClassLoader that patches certain classes as they are loaded.
  *
@@ -50,6 +52,14 @@ import java.util.logging.*;
 public class PatchingClassLoader extends URLClassLoader {
 	protected static final Logger l = Logger.getLogger("Minecraft");
 	
+	public void addURI(URI uri) {
+		try {
+			this.addURL(uri.toURL());
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	/**
 	 * Stores loaded and generated classes for faster lookup.
 	 */
@@ -113,7 +123,8 @@ public class PatchingClassLoader extends URLClassLoader {
 		} else {
 			//l.info(String.format("[%s] Loaded via Patcher", className));
 			try {
-				Patches.Patch(className);
+				Patches.Patch(className, null);
+				className=SmartReflector.getNewClassName(className);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

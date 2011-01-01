@@ -26,16 +26,16 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 package org.middlecraft.patcher;
-import java.awt.List;
 import java.io.*;
 import java.util.*;
 import java.util.jar.*;
 import java.util.logging.Logger;
 
 import javassist.*;
+import javassist.bytecode.ClassFile;
 
 import org.middlecraft.patcher.reflect.*;
-import org.middlecraft.server.*;
+import org.middlecraft.server.SmartReflector;
 
 /**
  * Terribad class patcher.
@@ -45,14 +45,14 @@ import org.middlecraft.server.*;
 public class Patches {
 	private static ClassPool pool=null;
 	private static Logger l = Logger.getLogger("Minecraft");
-	
+
 	static Map<String,CtClass> patches = new HashMap<String,CtClass>();
-	
+
 	public static void initialize() throws NotFoundException {
 		try {
 			pool=ClassPool.getDefault();
 			pool.appendClassPath("lib/*");
-			JarFile jar = new JarFile("bin/patches.jar");
+			JarFile jar = new JarFile("patches.jar");
 			for(JarEntry e : Collections.list(jar.entries())) {
 				if(e.getName().endsWith(".class")) {
 					patches.put(e.getName().replace(".class", ""),pool.makeClass(jar.getInputStream(e)));
@@ -63,7 +63,7 @@ public class Patches {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * Patches the named class.  Temporary measure until patching setup is complete.
 	 * @param className Name of the victim class (obfuscated)
@@ -71,37 +71,42 @@ public class Patches {
 	 * @throws IOException 
 	 * @throws NotFoundException 
 	 */
-	public static void Patch(String className) throws NotFoundException, IOException, CannotCompileException {
-			
+	public static void Patch(String className, JarOutputStream outJar) throws NotFoundException, IOException, CannotCompileException {
+
 		/* Load our victim class.  If possible. */
 		CtClass cc=null;
 		try {
 			cc = pool.get(className);
 		} catch(NotFoundException e) {
 			e.printStackTrace();
+			System.exit(1);
 			return;
 		}
 		/* NOT MC package? BAIL OUT. */
-		if(!isMinecraftPackage(cc.getPackageName())) return;
-		
+		if(!isMinecraftPackage(cc.getPackageName())) {
+			//l.info(cc.getPackageName()+" is not the MC package.");
+			return;
+		}
+
 		//l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
-		
+
 		/* Check if superclass mappings are correct. */
 		SmartReflector.updateSuperclassInfo(cc);
-		
+
 		/* Deobfuscate class name, assuming MCP mappings are installed... :/ */
 		String newClassName=SmartReflector.getNewClassName(className);
-		if(!newClassName.equals(className))
+		if(newClassName.equals(className))
 		{
-			cc.setName(newClassName);
-			l.fine(String.format("Renaming class %s to %s.",className,newClassName));
-			className=newClassName;
+			newClassName=className+"2"; // To ensure we get fresh classes.
 		}
-		
+		cc.setName(newClassName);
+		l.info(String.format("Renaming class %s to %s.",className,newClassName));
+		className=newClassName;
+
 		/* Grab our patch, if possible, and load it. */
 		CtClass patch=patches.get("Patched"+className);
 		if(patch==null) return;
-		
+
 		l.info("Patching "+className+"...");
 		try {
 			/* For each method in the patch, add or replace as needed. */
@@ -157,7 +162,12 @@ public class Patches {
 			return;
 		}
 		// Save.
-		cc.writeFile();
+		if(outJar==null)
+			cc.writeFile("classes/");
+		else {
+			ClassFile cf = cc.getClassFile();
+			cf.write(new DataOutputStream(outJar));
+		}
 	}
 	/**
 	 * Determine if the named package is one of the Minecraft packages.
@@ -167,14 +177,5 @@ public class Patches {
 	private static boolean isMinecraftPackage(String packageName) {
 		return packageName==null || packageName.equals("") || packageName.equals("net.minecraft.server");
 	}
-	/**
-	 * Get a patch's filename.
-	 * @param className
-	 * @return
-	 */
-	private static String getPatchFilename(String className) {
-		// TODO Use patches-src or whatever.
-		return String.format("data/server/%s/patches/Patched%s.java", SmartReflector.serverVersion, className);
-	}
-	
+
 }
