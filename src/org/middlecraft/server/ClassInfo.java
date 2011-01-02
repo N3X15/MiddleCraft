@@ -42,9 +42,9 @@ public class ClassInfo {
 	//realName,name,realSuperClass,superClass,description
 	public static final String[] header = new String[]{"Real Name","MCP Name","Real Superclass","MiddleCraft Superclass","Description"};
 	public String description="*";
-	public HashMap<String,FieldInfo> fieldNames = new HashMap<String,FieldInfo>();
+	public HashMap<String,MCFieldInfo> fieldNames = new HashMap<String,MCFieldInfo>();
 	Logger l = Logger.getLogger("Minecraft");
-	public HashMap<String,MethodInfo> methodNames = new HashMap<String,MethodInfo>();
+	public HashMap<String,MCMethodInfo> methodNames = new HashMap<String,MCMethodInfo>();
 	public String name;
 	public String realName;
 	public String realSuperClass;
@@ -64,18 +64,18 @@ public class ClassInfo {
 		}
 	}
 	/**
-	 * @param name2
+	 * @param fldName
 	 * @return
 	 */
-	public FieldInfo getField(String name2) {
-		return fieldNames.get(name2);
+	public MCFieldInfo getField(String fldName) {
+		return fieldNames.get(fldName);
 	}
 	/**
-	 * @param name2
+	 * @param methName
 	 * @return
 	 */
-	public MethodInfo getMethod(String name2) {
-		return methodNames.get(name2);
+	public MCMethodInfo getMethod(String methName) {
+		return methodNames.get(methName);
 	}
 
 	public List<String> toList() {

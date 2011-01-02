@@ -78,7 +78,6 @@ public class SmartReflector {
 
 	public static void initialize() throws IOException {
 		// Read data from our simplified MCP deobfuscation mappings
-		//  (I'll make a few python scripts to do this - N3X)
 		File data = new File(String.format("data/server/%s/", serverVersion));
 		if(!data.exists()) {
 			l.log(Level.WARNING,"No mappings folder exists, creating...");
@@ -112,7 +111,7 @@ public class SmartReflector {
 					continue;
 				}
 
-				FieldInfo field = new FieldInfo(line);
+				MCFieldInfo field = new MCFieldInfo(line);
 
 				if(!classes.containsKey(field.className))
 					continue;
@@ -144,7 +143,7 @@ public class SmartReflector {
 					hasReadHeader=true;
 					continue;
 				}
-				MethodInfo mi = new MethodInfo(line);
+				MCMethodInfo mi = new MCMethodInfo(line);
 
 				if(!classes.containsKey(mi.parentClass))
 					continue;
@@ -190,44 +189,6 @@ public class SmartReflector {
 	}
 
 	/**
-	 * Find the named class and load it.
-	 * @param className
-	 * @param defaultSuperClass
-	 * @param params
-	 * @return
-	 * @throws IllegalArgumentException
-	 * @throws InstantiationException
-	 * @throws IllegalAccessException
-	 * @throws InvocationTargetException
-	 */
-	public static Object GrabClassInstance(String className, String defaultSuperClass, Object... params) throws IllegalArgumentException, InstantiationException, IllegalAccessException, InvocationTargetException {
-		Class<?> theClass = GrabClass(className,defaultSuperClass);
-		// Find a suitable constructor, if possible.
-		for( Constructor<?> c : theClass.getConstructors()) {
-			Class<?>[] c_params = c.getParameterTypes();
-			if(c_params.length != params.length)
-				continue;
-			if(c_params.length==0)
-			{
-				// Constructor doesn't need arguments, just initialize it.
-				return c.newInstance();
-			}
-			// Check types
-			boolean types_ok = true;
-			for(int i = 0;i<c_params.length;i++) {
-				if(c_params[i].getName()!=params[i].getClass().getName())
-					types_ok=false;
-			}
-			if(!types_ok) continue;
-
-			// LETS DO DIS
-			l.info("Initializing "+c.toString());
-			return c.newInstance(params);
-		}
-		return null;
-	}
-
-	/**
 	 * Add a class to the list.
 	 * @param name
 	 * @param superClass 
@@ -253,7 +214,7 @@ public class SmartReflector {
 		ClassInfo ci = new ClassInfo();
 		ci.name=name;
 		ci.realName="UNKNOWN_"+Integer.toString(unkClasses);
-		ci.description="*";
+		ci.description="";
 		classes.put(ci.realName, ci);
 		setDirty();
 	}
@@ -262,7 +223,7 @@ public class SmartReflector {
 	public static void addObfuscatedFieldDefinition(String className, String fieldName, String type) {
 		unkFields++;
 		ClassInfo ci = classes.get(className);
-		FieldInfo field = new FieldInfo();
+		MCFieldInfo field = new MCFieldInfo();
 		field.className=className;
 		field.realName=fieldName;
 		field.type=type;
@@ -281,8 +242,8 @@ public class SmartReflector {
 		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
 		ClassInfo ci = classes.get(className);
 
-		MethodInfo mi = new MethodInfo();
-		mi.name="*";
+		MCMethodInfo mi = new MCMethodInfo();
+		mi.name="";
 		mi.parentClass=className;
 		mi.realName=methodName;
 		mi.signature=signature;
@@ -325,10 +286,10 @@ public class SmartReflector {
 		try {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/methods.csv", serverVersion)));
 			int num=0;
-			f.println(MethodInfo.header);
+			f.println(MCMethodInfo.header);
 			for(ClassInfo ci : classes.values()) {
 				//l.log(Level.INFO,"Class "+ci.name+" contains "+Integer.toString(ci.methodNames.size())+" known methods.");
-				for(MethodInfo mi : ci.methodNames.values()) {
+				for(MCMethodInfo mi : ci.methodNames.values()) {
 					f.println(mi.toString());
 					num++;
 				}
@@ -351,9 +312,9 @@ public class SmartReflector {
 		int num = 0;
 		try {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/fields.csv", serverVersion)));
-			f.println(FieldInfo.header);
+			f.println(MCFieldInfo.header);
 			for(ClassInfo ci : classes.values()) {
-				for(FieldInfo fi : ci.fieldNames.values()) {
+				for(MCFieldInfo fi : ci.fieldNames.values()) {
 					f.println(fi.toString());
 					num++;
 				}
@@ -424,7 +385,7 @@ public class SmartReflector {
 			// Fix field names...
 			for(CtField cf : cl.getDeclaredFields()) {
 				if(ci.fieldNames.containsKey(cf.getName())) {
-					FieldInfo field = ci.fieldNames.get(cf.getName());
+					MCFieldInfo field = ci.fieldNames.get(cf.getName());
 					l.log(Level.INFO,"Fixing field "+cf.getName()+" to "+field.name);
 					cf.setName(field.name);
 				}
@@ -494,13 +455,13 @@ public class SmartReflector {
 	 * @param signature
 	 * @return
 	 */
-	public static MethodInfo getMethod(String className, String name, String signature) {
+	public static MCMethodInfo getMethod(String className, String name, String signature) {
 		ClassInfo ci = classes.get(className);
 		if(ci==null) {
 			l.log(Level.WARNING, "Can't find parent class "+className+" for method "+name);
 			return null;
 		}
-		MethodInfo mi = new MethodInfo();
+		MCMethodInfo mi = new MCMethodInfo();
 		mi.realName=name;
 		mi.signature=signature;
 		String index = mi.toIndex();
@@ -518,7 +479,7 @@ public class SmartReflector {
 	 * @param signature
 	 * @return
 	 */
-	public static FieldInfo getField(String className, String name, String type) {
+	public static MCFieldInfo getField(String className, String name, String type) {
 		ClassInfo ci = classes.get(className);
 		if(ci==null) {
 			l.log(Level.WARNING, "Can't find parent class "+className+" for field "+name);
@@ -537,7 +498,7 @@ public class SmartReflector {
 	 */
 	public static String getOldClassName(String className) {
 		for(ClassInfo ci : classes.values()) {
-			if(ci.name==className) {
+			if(ci.name.equals(className)) {
 				l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
 				return ci.realName;
 			}

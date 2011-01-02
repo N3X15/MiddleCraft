@@ -27,30 +27,41 @@
  */
 package org.middlecraft.server;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  * @author Rob
  *
  */
-public class FieldInfo {
+public class MCFieldInfo {
+	static Logger l = Logger.getLogger("Minecraft");
 	public String type;
 	public String realName;
 	public String className;
-	public String name="*";
-	
+	public String name="";
+
 
 	public static String header="Class,Real Name,Readable Name,Type";
-	public FieldInfo() {}
-	public FieldInfo(String line) {
+	public MCFieldInfo() {}
+	public MCFieldInfo(String line) {
 		String[] chunks = line.split(",");
 
-		className=chunks[0];
-		realName=chunks[1];
-		name=chunks[2];
-		type=chunks[3];
+		try {
+			className=chunks[0];
+			realName=chunks[1];
+			name=chunks[2];
+			if(name.equals("*"))
+				name="";
+			type=chunks[3];
+		} catch(Throwable e) {
+			l.log(Level.SEVERE,String.format("Error parsing field %s:",line),e);
+		}
 	}
-	
+
 	public String toString() {
+		String oName = (name.isEmpty()) ? "*" : name;
 		return String.format("%s,%s,%s,%s",className,realName,name,type);
 	}
 }

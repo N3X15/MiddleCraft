@@ -26,7 +26,6 @@
  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.Collections;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -100,7 +99,7 @@ public class Main {
 					
 					// Place the new class into the JAR.
 					outJar.putNextEntry(new ZipEntry(newClassName+".class"));
-					Patches.Patch(className, outJar);
+					Patches.Patch(className.replace('/', '.'), outJar);
 					outJar.closeEntry();
 				}
 			}
@@ -109,6 +108,8 @@ public class Main {
 		}
 		l.info(" + Updating Classpath...");
 		mcClassLoader.addURI(newMCServerJar.toURI());
+		
+		SmartReflector.save(); // Force save.
 
 		l.info("Stage 3: Booting server!");
 		try {
@@ -117,7 +118,7 @@ public class Main {
 				Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
-		} catch (Exception e) {
+		} catch (Throwable e) {
 			l.log(Level.SEVERE, " ! Unexpected error on Stage-3 boot.", e);
 		}
 	}

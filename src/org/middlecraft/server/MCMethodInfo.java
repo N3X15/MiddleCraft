@@ -27,32 +27,43 @@
  */
 package org.middlecraft.server;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  * @author Rob
  *
  */
-public class MethodInfo {
+public class MCMethodInfo {
+	static Logger l = Logger.getLogger("Minecraft");
 	public String realName;
 	public String signature;
 	public String parentClass;
-	public String name;
-	public String patch="";
+	public String name="";
 	public String description="";
 
 	public static String header="Real Name,Signature,Parent Class,Readable Name";
-	public MethodInfo() {}
-	public MethodInfo(String line) {
+	public MCMethodInfo() {}
+	public MCMethodInfo(String line) {
 		String[] chunks = line.split(",");
-		
-		realName=chunks[0];
-		signature=chunks[1];
-		parentClass=chunks[2];
-		name=chunks[3];
+		try {
+			realName=chunks[0];
+			signature=chunks[1];
+			parentClass=chunks[2];
+			name=chunks[3];
+			if(name.equals("*"))
+				name="";
+		} catch(ArrayIndexOutOfBoundsException e) {
+			l.log(Level.SEVERE,String.format("Error parsing %s:",line),e);
+		}
 	}
-	
+
 	public String toString() {
-		return String.format("%s,%s,%s,%s,%s",realName,signature,parentClass,name,description);
+		String oName = name;
+		if(name.isEmpty())
+			oName="*";
+		return String.format("%s,%s,%s,%s,%s",realName,signature,parentClass,oName,description);
 	}
 	/**
 	 * @return

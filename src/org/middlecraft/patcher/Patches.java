@@ -37,6 +37,8 @@ import javassist.bytecode.ClassFile;
 import javassist.bytecode.Descriptor;
 
 import org.middlecraft.patcher.reflect.*;
+import org.middlecraft.server.MCFieldInfo;
+import org.middlecraft.server.MCMethodInfo;
 import org.middlecraft.server.SmartReflector;
 
 /**
@@ -80,9 +82,21 @@ public class Patches {
 		try {
 			cc = pool.get(className);
 		} catch(NotFoundException e) {
-			e.printStackTrace();
-			System.exit(1);
-			return;
+			l.warning(String.format("Can't find %s, trying again with %s.",className,SmartReflector.getOldClassName(className)));
+			//System.exit(1);
+			//return;
+		}
+		/* Assume trying to load new class name that hasn't been deobf'd yet. */ 
+		if(cc==null) {
+			className=SmartReflector.getOldClassName(className);
+			try {
+				cc = pool.get(className);
+				l.info("Got it.");
+			} catch(NotFoundException e) {
+				e.printStackTrace();
+				System.exit(1);
+				return;
+			}
 		}
 		/* NOT MC package? BAIL OUT. */
 		if(!isMinecraftPackage(cc.getPackageName())) {
@@ -102,8 +116,12 @@ public class Patches {
 			newClassName=className+"2"; // To ensure we get fresh classes.
 		}
 		cc.setName(newClassName);
-		l.fine(String.format("Renaming class %s to %s.",className,newClassName));
+		l.fine(String.format("Renamed class %s to %s.",className,newClassName));
+		
 		className=newClassName;
+		
+		renameMethods(cc);
+		renameFields(cc);
 
 		/* Grab our patch, if possible, and load it. */
 		CtClass patch=patches.get("Patched"+className);
@@ -115,12 +133,12 @@ public class Patches {
 			for(CtConstructor ctor : patch.getConstructors()) {
 				// Replace
 				if(ctor.hasAnnotation(Replace.class)) {
+					String sig = fixSig(ctor);
 					try {
-						String sig = fixSig(ctor);
-						l.info(String.format(" + Replacing constructor %s...",ctor.getLongName()));
+						l.info(String.format(" + Replacing constructor %s...",sig));
 						cc.getConstructor(sig).setBody(ctor, null);
 					} catch(NotFoundException e) {
-						l.log(Level.SEVERE,"Could not find constructor, following is a list of constructors for this class:",e);
+						l.log(Level.SEVERE,String.format("Could not find constructor %s, following is a list of constructors for this class:",sig),e);
 						printConstructorList(cc);
 						System.exit(1);
 					}
@@ -179,12 +197,33 @@ public class Patches {
 			e.printStackTrace();
 			return;
 		}
+		// Fix refs.
+		cc.replaceClassName(SmartReflector.deobfuscationMap);
+		
 		// Save.
 		if(outJar==null)
 			cc.writeFile("classes/");
 		else {
 			ClassFile cf = cc.getClassFile();
 			cf.write(new DataOutputStream(outJar));
+		}
+	}
+
+	private static void renameFields(CtClass cc) throws NotFoundException {
+		for(CtField field : cc.getFields()) {
+			MCFieldInfo fi = SmartReflector.getField(SmartReflector.getOldClassName(cc.getName()), field.getName(), field.getType().getName());
+			if(fi!=null && fi.name.isEmpty()) {
+				field.setName(fi.name);
+			}
+		}
+	}
+
+	private static void renameMethods(CtClass cc) {
+		for(CtMethod method : cc.getMethods()) {
+			MCMethodInfo mi = SmartReflector.getMethod(SmartReflector.getOldClassName(cc.getName()), method.getName(), method.getSignature());
+			if(mi!=null && mi.name.isEmpty()) {
+				method.setName(mi.name);
+			}
 		}
 	}
 
@@ -200,10 +239,25 @@ public class Patches {
 		
 		for(int i = 0;i<params.length;i++) {
 			Object[] pas = ctor.getParameterAnnotations()[i];
+			l.info(params[i].getName()+"\t"+Integer.toString(pas.length));
 			for(Object pa : pas) {
-				if(pa.getClass()==SetParamType.class) {
+				if(pa instanceof SetParamType) {
 					SetParamType spt = (SetParamType)pa;
-					params[i]=pool.get(spt.value());
+					CtClass newType = null;
+					try {
+						newType=pool.get(spt.value());
+					} catch(NotFoundException e) {}
+					if(newType==null)
+					{
+						try {
+							newType=pool.get(SmartReflector.getOldClassName(spt.value()));
+						} catch(NotFoundException e) {
+							e.printStackTrace();
+							System.exit(1);
+						}
+					}
+					l.info(String.format(" * params[%d]: %s -> %s",i,params[i].getName(),newType.getName()));
+					params[i]=newType;
 				}
 			}
 		}
@@ -223,11 +277,26 @@ public class Patches {
 		CtClass returnType = Descriptor.getReturnType(method.getSignature(), pool);
 		
 		for(int i = 0;i<params.length;i++) {
+			l.info(params[i].getName());
 			Object[] pas = method.getParameterAnnotations()[i];
 			for(Object pa : pas) {
-				if(pa.getClass()==SetParamType.class) {
+				if(pa instanceof SetParamType) {
 					SetParamType spt = (SetParamType)pa;
-					params[i]=pool.get(spt.value());
+					CtClass newType = null;
+					try {
+						newType=pool.get(spt.value());
+					} catch(NotFoundException e) {}
+					if(newType==null)
+					{
+						try {
+							newType=pool.get(SmartReflector.getOldClassName(spt.value()));
+						} catch(NotFoundException e) {
+							e.printStackTrace();
+							System.exit(1);
+						}
+					}
+					l.info(String.format(" * params[%d]: %s -> %s",i,params[i].getName(),newType.getName()));
+					params[i]=newType;
 				}
 			}
 		}
@@ -237,9 +306,9 @@ public class Patches {
 
 	private static void printMethodList(CtMethod method, CtClass cc) {
 		for(CtMethod m : cc.getMethods()) {
-			if(m.getName().equals(method.getName())) {
+			//if(m.getName().contains(method.getName())) {
 				l.severe(" * "+m.getLongName());
-			}
+			//}
 		}
 	}
 
