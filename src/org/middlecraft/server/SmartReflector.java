@@ -71,7 +71,7 @@ public class SmartReflector {
 
 	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
 
-	public static HashMap<String,ClassInfo> classes = new HashMap<String,ClassInfo>();
+	public static HashMap<String,MCClassInfo> classes = new HashMap<String,MCClassInfo>();
 	public static ClassMap deobfuscationMap = new ClassMap();
 	public static Map<String,Class<?>> loadedClasses = new HashMap<String,Class<?>>();
 
@@ -115,7 +115,7 @@ public class SmartReflector {
 
 				if(!classes.containsKey(field.className))
 					continue;
-				ClassInfo ci = classes.get(field.className);
+				MCClassInfo ci = classes.get(field.className);
 				ci.fieldNames.put(field.realName,field);
 				classes.put(field.className, ci);
 			}
@@ -134,25 +134,26 @@ public class SmartReflector {
 			l.log(Level.WARNING,"No method mapping table!");
 			return;
 		}
-		Scanner scanner = new Scanner(new FileInputStream(f));
-		boolean hasReadHeader=false;
+
+		CsvListReader rdr = new CsvListReader(new FileReader(f),CsvPreference.STANDARD_PREFERENCE);
+		rdr.read();
 		try {
-			while (scanner.hasNextLine()) {
-				String line = scanner.nextLine();
-				if(!hasReadHeader) {
-					hasReadHeader=true;
-					continue;
-				}
+			while (true){
+				List<String> line = rdr.read();
+				if(line==null) break;
 				MCMethodInfo mi = new MCMethodInfo(line);
 
 				if(!classes.containsKey(mi.parentClass))
 					continue;
 
-				ClassInfo ci = classes.get(mi.parentClass);
+				MCClassInfo ci = classes.get(mi.parentClass);
 				ci.methodNames.put(mi.toIndex(), mi);
 				classes.put(mi.parentClass, ci);
 			}
-		} catch(Exception e) { e.printStackTrace(); }
+		}
+		finally{
+			rdr.close();
+		}
 	}
 
 	private static boolean ReadClasses() throws IOException {
@@ -169,12 +170,8 @@ public class SmartReflector {
 			while (true){
 				List<String> line = rdr.read();
 				if(line==null) break;
-				ClassInfo ci = new ClassInfo(line);
+				MCClassInfo ci = new MCClassInfo(line);
 
-				if(ci.name.startsWith("UNKNOWN_")) {
-					l.log(Level.WARNING, "Skipping WIP mapping for "+ci.name+".");
-					continue;
-				}
 				if(!classes.containsKey(ci.realName)) {
 					deobfuscationMap.put(ci.realName, ci.name);
 					obfuscationMap.put(ci.name,ci.realName);
@@ -200,7 +197,7 @@ public class SmartReflector {
 				superClass = ClassPool.getDefault().get(name).getSuperclass().getName();
 			} catch (NotFoundException e) {	} 
 		}
-		ClassInfo ci = new ClassInfo();
+		MCClassInfo ci = new MCClassInfo();
 		ci.name="*";
 		ci.realName=name;
 		ci.description="*";
@@ -211,7 +208,7 @@ public class SmartReflector {
 	static int unkClasses=0;
 	public static void addReadableClassDefinition(String name) {
 		unkClasses++;
-		ClassInfo ci = new ClassInfo();
+		MCClassInfo ci = new MCClassInfo();
 		ci.name=name;
 		ci.realName="UNKNOWN_"+Integer.toString(unkClasses);
 		ci.description="";
@@ -222,7 +219,7 @@ public class SmartReflector {
 	static int unkFields=0; 
 	public static void addObfuscatedFieldDefinition(String className, String fieldName, String type) {
 		unkFields++;
-		ClassInfo ci = classes.get(className);
+		MCClassInfo ci = classes.get(className);
 		MCFieldInfo field = new MCFieldInfo();
 		field.className=className;
 		field.realName=fieldName;
@@ -240,7 +237,7 @@ public class SmartReflector {
 	public static void addObfuscatedMethodDefinition(String className, String methodName, String signature, String extraData) {
 		//unkMethods++;
 		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
-		ClassInfo ci = classes.get(className);
+		MCClassInfo ci = classes.get(className);
 
 		MCMethodInfo mi = new MCMethodInfo();
 		mi.name="";
@@ -270,27 +267,28 @@ public class SmartReflector {
 			data.mkdirs();
 		try {
 			writeClasses();
+			writeMethods();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		writeFields();
-		writeMethods();
 	}
 
 	/**
+	 * @throws IOException 
 	 * 
 	 */
-	private static void writeMethods() {
-		PrintStream f=null;
+	private static void writeMethods() throws IOException {
+		CsvListWriter w=null;
 		try {
-			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/methods.csv", serverVersion)));
+			w = new CsvListWriter(new FileWriter(new File(String.format("data/server/%s/methods.csv", serverVersion))),CsvPreference.STANDARD_PREFERENCE);
 			int num=0;
-			f.println(MCMethodInfo.header);
-			for(ClassInfo ci : classes.values()) {
+			w.write(MCMethodInfo.header);
+			for(MCClassInfo ci : classes.values()) {
 				//l.log(Level.INFO,"Class "+ci.name+" contains "+Integer.toString(ci.methodNames.size())+" known methods.");
 				for(MCMethodInfo mi : ci.methodNames.values()) {
-					f.println(mi.toString());
+					w.write(mi.toList());
 					num++;
 				}
 			}
@@ -299,8 +297,6 @@ public class SmartReflector {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
-			if(f!=null)
-				f.close();
 		}
 	}
 
@@ -313,7 +309,7 @@ public class SmartReflector {
 		try {
 			f = new PrintStream(new FileOutputStream(String.format("data/server/%s/fields.csv", serverVersion)));
 			f.println(MCFieldInfo.header);
-			for(ClassInfo ci : classes.values()) {
+			for(MCClassInfo ci : classes.values()) {
 				for(MCFieldInfo fi : ci.fieldNames.values()) {
 					f.println(fi.toString());
 					num++;
@@ -340,7 +336,7 @@ public class SmartReflector {
 			w = new CsvListWriter(new FileWriter(new File(String.format("data/server/%s/classes.csv", serverVersion))),CsvPreference.STANDARD_PREFERENCE); 			
 			List<String> keys = new ArrayList<String>(classes.keySet());
 			Collections.sort(keys);
-			w.write(ClassInfo.header);
+			w.write(MCClassInfo.header);
 			for(String key : keys) {
 				w.write(classes.get(key).toList());
 				num++;
@@ -370,7 +366,7 @@ public class SmartReflector {
 		{
 			ClassPool cp = ClassPool.getDefault();
 			CtClass cl = cp.getOrNull(className);
-			ClassInfo ci = classes.get(className);
+			MCClassInfo ci = classes.get(className);
 			if(ci.superClass=="") {
 				ci.superClass=defaultSuperClass;
 				classes.put(className, ci);
@@ -443,7 +439,7 @@ public class SmartReflector {
 	 * @return
 	 */
 	public static String getNewClassName(String className) {
-		ClassInfo ci = classes.get(className);
+		MCClassInfo ci = classes.get(className);
 		if(ci==null) return className;
 		return ci.name;
 	}
@@ -457,7 +453,7 @@ public class SmartReflector {
 	 */
 	public static MCMethodInfo getMethod(String className, String name, String signature) {
 		String ocn = getOldClassName(className);
-		ClassInfo ci = classes.get(className);
+		MCClassInfo ci = classes.get(className);
 		//l.info(String.format("getMethod(%s,%s,%s)",className,name,signature));
 		if(ci==null) {
 			ci = classes.get(ocn);
@@ -487,7 +483,7 @@ public class SmartReflector {
 	 * @return
 	 */
 	public static MCFieldInfo getField(String className, String name, String type) {
-		ClassInfo ci = classes.get(className);
+		MCClassInfo ci = classes.get(className);
 		if(ci==null) {
 			l.log(Level.WARNING, "Can't find parent class "+className+" for field "+name);
 			return null;
@@ -504,7 +500,7 @@ public class SmartReflector {
 	 * @return
 	 */
 	public static String getOldClassName(String className) {
-		for(ClassInfo ci : classes.values()) {
+		for(MCClassInfo ci : classes.values()) {
 			if(ci.name.equals(className)) {
 				//l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
 				return ci.realName;
@@ -520,7 +516,7 @@ public class SmartReflector {
 	public static void updateSuperclassInfo(CtClass cc) {
 
 		try {
-			ClassInfo ci = classes.get(cc.getName());
+			MCClassInfo ci = classes.get(cc.getName());
 			if(ci==null) return;
 			CtClass sc = cc.getSuperclass();
 			if(sc==null) return;

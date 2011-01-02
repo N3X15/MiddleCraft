@@ -27,7 +27,8 @@
  */
 package org.middlecraft.server;
 
-import java.util.logging.Level;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 
@@ -43,20 +44,32 @@ public class MCMethodInfo {
 	public String name="";
 	public String description="";
 
-	public static String header="Real Name,Signature,Parent Class,Readable Name";
+	public static String header="Real Name,Signature,Parent Class,Readable Name,Description";
 	public MCMethodInfo() {}
-	public MCMethodInfo(String line) {
-		String[] chunks = line.split(",");
+	public MCMethodInfo(List<String> line) {
+		realName=line.get(0);
+		signature=line.get(1);
+		parentClass=line.get(2);
+		name=line.get(3);
+		if(name.equals("*"))
+			name="";
+		else
+			l.info(String.format("Loaded method %s.%s%s.",parentClass,name,signature));
+
 		try {
-			realName=chunks[0];
-			signature=chunks[1];
-			parentClass=chunks[2];
-			name=chunks[3];
-			if(name.equals("*"))
-				name="";
-		} catch(ArrayIndexOutOfBoundsException e) {
-			l.log(Level.SEVERE,String.format("Error parsing %s:",line),e);
+			description=line.get(4);
+		} catch(IndexOutOfBoundsException e) {
+			l.warning(String.format("Could not retrieve description for %s.%s%s.",parentClass,name,signature));
 		}
+	}
+	public List<String> toList() {
+		List<String> list = new ArrayList<String>();
+		list.add(realName);
+		list.add(signature);
+		list.add(parentClass);
+		list.add(name);
+		list.add(description);
+		return list;
 	}
 
 	public String toString() {
