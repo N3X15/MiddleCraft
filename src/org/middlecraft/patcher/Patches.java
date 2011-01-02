@@ -117,9 +117,9 @@ public class Patches {
 		}
 		cc.setName(newClassName);
 		l.fine(String.format("Renamed class %s to %s.",className,newClassName));
-		
+
 		className=newClassName;
-		
+
 		renameMethods(cc);
 		renameFields(cc);
 
@@ -156,10 +156,15 @@ public class Patches {
 				if(method.hasAnnotation(Replace.class)) {
 					String name = method.getName();
 					String sig = fixSig(method);
+					MCMethodInfo mi = SmartReflector.getMethod(className, name, sig);
 					l.info(String.format(" + Replacing %s...",method.getLongName()));
 					try{
-						cc.getMethod(name, sig).setBody(method, null);
+						cc.getMethod(mi.realName, sig).setBody(method, null);
 					} catch(NotFoundException e) {
+						l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
+						printMethodList(method, cc);
+						System.exit(1);
+					} catch(NullPointerException e) {
 						l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
 						printMethodList(method, cc);
 						System.exit(1);
@@ -199,7 +204,7 @@ public class Patches {
 		}
 		// Fix refs.
 		cc.replaceClassName(SmartReflector.deobfuscationMap);
-		
+
 		// Save.
 		if(outJar==null)
 			cc.writeFile("classes/");
@@ -220,7 +225,10 @@ public class Patches {
 
 	private static void renameMethods(CtClass cc) {
 		for(CtMethod method : cc.getMethods()) {
-			MCMethodInfo mi = SmartReflector.getMethod(SmartReflector.getOldClassName(cc.getName()), method.getName(), method.getSignature());
+			String oldClass=SmartReflector.getOldClassName(cc.getName());
+			MCMethodInfo mi = SmartReflector.getMethod(oldClass, method.getName(), method.getSignature());
+			if(method.getName().equals("g") && cc.getName().equals("World"))
+				l.info(String.format("%s.g() = %s",oldClass,(mi==null) ? "null":mi.toString()));
 			if(mi!=null && mi.name.isEmpty()) {
 				method.setName(mi.name);
 			}
@@ -236,7 +244,7 @@ public class Patches {
 	 */
 	private static String fixSig(CtConstructor ctor) throws NotFoundException, ClassNotFoundException {
 		CtClass[] params = Descriptor.getParameterTypes(ctor.getSignature(), pool);
-		
+
 		for(int i = 0;i<params.length;i++) {
 			Object[] pas = ctor.getParameterAnnotations()[i];
 			l.info(params[i].getName()+"\t"+Integer.toString(pas.length));
@@ -256,12 +264,12 @@ public class Patches {
 							System.exit(1);
 						}
 					}
-					l.info(String.format(" * params[%d]: %s -> %s",i,params[i].getName(),newType.getName()));
+					//l.info(String.format(" * params[%d]: %s -> %s",i,params[i].getName(),newType.getName()));
 					params[i]=newType;
 				}
 			}
 		}
-		
+
 		return Descriptor.ofConstructor(params);
 	}
 
@@ -275,7 +283,7 @@ public class Patches {
 	private static String fixSig(CtMethod method) throws NotFoundException, ClassNotFoundException {
 		CtClass[] params = Descriptor.getParameterTypes(method.getSignature(), pool);
 		CtClass returnType = Descriptor.getReturnType(method.getSignature(), pool);
-		
+
 		for(int i = 0;i<params.length;i++) {
 			l.info(params[i].getName());
 			Object[] pas = method.getParameterAnnotations()[i];
@@ -300,15 +308,13 @@ public class Patches {
 				}
 			}
 		}
-		
+
 		return Descriptor.ofMethod(returnType, params);
 	}
 
 	private static void printMethodList(CtMethod method, CtClass cc) {
-		for(CtMethod m : cc.getMethods()) {
-			//if(m.getName().contains(method.getName())) {
-				l.severe(" * "+m.getLongName());
-			//}
+		for(CtMethod m : cc.getDeclaredMethods()) {
+			l.severe(" * "+m.getLongName());
 		}
 	}
 

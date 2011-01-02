@@ -456,20 +456,27 @@ public class SmartReflector {
 	 * @return
 	 */
 	public static MCMethodInfo getMethod(String className, String name, String signature) {
+		String ocn = getOldClassName(className);
 		ClassInfo ci = classes.get(className);
+		//l.info(String.format("getMethod(%s,%s,%s)",className,name,signature));
 		if(ci==null) {
-			l.log(Level.WARNING, "Can't find parent class "+className+" for method "+name);
+			ci = classes.get(ocn);
+			//l.info("Found old name "+ocn);
+		}
+		if(ci==null) {
+			l.log(Level.WARNING, "Can't find parent class "+className+" ("+ocn+") for method "+name);
 			return null;
+		}
+		for(MCMethodInfo mi : ci.methodNames.values()) {
+			if((mi.name.equals(name) || mi.realName.equals(name)) && mi.signature.equals(signature)) {
+				return mi;
+			}
 		}
 		MCMethodInfo mi = new MCMethodInfo();
 		mi.realName=name;
 		mi.signature=signature;
-		String index = mi.toIndex();
-		if(!ci.methodNames.containsKey(index)) {
-			addObfuscatedMethodDefinition(className,name,signature, "");
-			return null;
-		}
-		return ci.methodNames.get(index);
+		addObfuscatedMethodDefinition(className,name,signature, "");
+		return null;
 	}
 
 	/**
@@ -499,7 +506,7 @@ public class SmartReflector {
 	public static String getOldClassName(String className) {
 		for(ClassInfo ci : classes.values()) {
 			if(ci.name.equals(className)) {
-				l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
+				//l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
 				return ci.realName;
 			}
 		}
