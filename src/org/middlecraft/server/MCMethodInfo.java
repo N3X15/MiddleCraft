@@ -43,18 +43,16 @@ public class MCMethodInfo {
 	public String parentClass;
 	public String name="";
 	public String description="";
-
-	public static String header="Real Name,Signature,Parent Class,Readable Name,Description";
+	public static final String[] header = new String[]{"Real Name","Signature","Parent Class","Readable Name","Description"};
 	public MCMethodInfo() {}
 	public MCMethodInfo(List<String> line) {
 		realName=line.get(0);
 		signature=line.get(1);
 		parentClass=line.get(2);
 		name=line.get(3);
+		
 		if(name.equals("*"))
 			name="";
-		else
-			l.info(String.format("Loaded method %s.%s%s.",parentClass,name,signature));
 
 		try {
 			description=line.get(4);

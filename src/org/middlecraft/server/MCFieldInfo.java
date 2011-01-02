@@ -62,6 +62,6 @@ public class MCFieldInfo {
 
 	public String toString() {
 		String oName = (name.isEmpty()) ? "*" : name;
-		return String.format("%s,%s,%s,%s",className,realName,name,type);
+		return String.format("%s,%s,%s,%s",className,realName,oName,type);
 	}
 }

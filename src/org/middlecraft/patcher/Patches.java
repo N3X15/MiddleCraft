@@ -215,7 +215,7 @@ public class Patches {
 	}
 
 	private static void renameFields(CtClass cc) throws NotFoundException {
-		for(CtField field : cc.getFields()) {
+		for(CtField field : cc.getDeclaredFields()) {
 			MCFieldInfo fi = SmartReflector.getField(SmartReflector.getOldClassName(cc.getName()), field.getName(), field.getType().getName());
 			if(fi!=null && fi.name.isEmpty()) {
 				field.setName(fi.name);
@@ -224,11 +224,9 @@ public class Patches {
 	}
 
 	private static void renameMethods(CtClass cc) {
-		for(CtMethod method : cc.getMethods()) {
+		for(CtMethod method : cc.getDeclaredMethods()) {
 			String oldClass=SmartReflector.getOldClassName(cc.getName());
 			MCMethodInfo mi = SmartReflector.getMethod(oldClass, method.getName(), method.getSignature());
-			if(method.getName().equals("g") && cc.getName().equals("World"))
-				l.info(String.format("%s.g() = %s",oldClass,(mi==null) ? "null":mi.toString()));
 			if(mi!=null && mi.name.isEmpty()) {
 				method.setName(mi.name);
 			}

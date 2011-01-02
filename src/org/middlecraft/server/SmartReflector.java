@@ -35,8 +35,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintStream;
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -141,6 +139,7 @@ public class SmartReflector {
 			while (true){
 				List<String> line = rdr.read();
 				if(line==null) break;
+				try {
 				MCMethodInfo mi = new MCMethodInfo(line);
 
 				if(!classes.containsKey(mi.parentClass))
@@ -149,6 +148,10 @@ public class SmartReflector {
 				MCClassInfo ci = classes.get(mi.parentClass);
 				ci.methodNames.put(mi.toIndex(), mi);
 				classes.put(mi.parentClass, ci);
+				} catch(Throwable e) {
+					l.warning(String.format("Skipping line %s.",line.toString()));
+					continue;
+				}
 			}
 		}
 		finally{
