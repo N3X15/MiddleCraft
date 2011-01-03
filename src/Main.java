@@ -41,7 +41,7 @@ import org.middlecraft.server.*;
 import org.middlecraft.patcher.*;
 
 public class Main {
-	static Logger l = Logger.getLogger("Minecraft");
+	static Logger l = Logger.getLogger("Middlecraft");
 
 	protected static ClassPool mcClassPool;
 	protected static PatchingClassLoader mcClassLoader;

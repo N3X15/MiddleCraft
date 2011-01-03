@@ -42,7 +42,7 @@ public class MCClassInfo {
 	public static final String[] header = new String[]{"Real Name","MCP Name","Real Superclass","MiddleCraft Superclass","Description"};
 	public String description="*";
 	public HashMap<String,MCFieldInfo> fieldNames = new HashMap<String,MCFieldInfo>();
-	static Logger l = Logger.getLogger("Minecraft");
+	static Logger l = Logger.getLogger("Middlecraft");
 	public HashMap<String,MCMethodInfo> methodNames = new HashMap<String,MCMethodInfo>();
 	public String name;
 	public String realName;

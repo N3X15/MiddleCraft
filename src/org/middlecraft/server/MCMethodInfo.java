@@ -37,7 +37,7 @@ import java.util.logging.Logger;
  *
  */
 public class MCMethodInfo {
-	static Logger l = Logger.getLogger("Minecraft");
+	static Logger l = Logger.getLogger("Middlecraft");
 	public String realName;
 	public String signature;
 	public String parentClass;

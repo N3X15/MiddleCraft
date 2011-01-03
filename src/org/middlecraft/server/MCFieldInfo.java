@@ -36,7 +36,7 @@ import java.util.logging.Logger;
  *
  */
 public class MCFieldInfo {
-	static Logger l = Logger.getLogger("Minecraft");
+	static Logger l = Logger.getLogger("Middlecraft");
 	public String type;
 	public String realName;
 	public String className;

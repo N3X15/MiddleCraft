@@ -50,7 +50,7 @@ import org.middlecraft.server.SmartReflector;
  * @author Joshua 'Skrylar' Cearley
  */
 public class PatchingClassLoader extends URLClassLoader {
-	protected static final Logger l = Logger.getLogger("Minecraft");
+	protected static final Logger l = Logger.getLogger("Middlecraft");
 
 	public void addURI(URI uri) {
 		try {

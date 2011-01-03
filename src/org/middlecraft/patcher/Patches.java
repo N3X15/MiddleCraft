@@ -48,7 +48,7 @@ import org.middlecraft.server.SmartReflector;
  */
 public class Patches {
 	private static ClassPool pool=null;
-	private static Logger l = Logger.getLogger("Minecraft");
+	private static Logger l = Logger.getLogger("Middlecraft");
 
 	static Map<String,CtClass> patches = new HashMap<String,CtClass>();
 

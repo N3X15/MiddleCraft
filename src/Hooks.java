@@ -41,7 +41,7 @@ import java.util.logging.Logger;
  *
  */
 public class Hooks {
-	static Logger l = Logger.getLogger("Minecraft");
+	static Logger l = Logger.getLogger("Middlecraft");
 	protected static Map<String,PluginListener> enabledListeners;
 	protected static Map<String,Plugin> loadedPlugins;
 	

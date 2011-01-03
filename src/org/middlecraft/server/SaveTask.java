@@ -37,7 +37,7 @@ import java.util.logging.Logger;
  */
 
 public class SaveTask extends TimerTask {
-	Logger l = Logger.getLogger("Minecraft");
+	Logger l = Logger.getLogger("Middlecraft");
 	public void run() {
 		l.log(Level.INFO,"Saving reflection mappings...");
 		SmartReflector.save();

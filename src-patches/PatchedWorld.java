@@ -38,7 +38,7 @@ public class PatchedWorld
 	@Replace
 	public PatchedWorld(File f, String folder, long seed, @SetParamType("WorldProvider") Object jm)
 	{
-		System.out.println("Testing patch method setbodyto. - World.mcp:38"); 
+		System.out.println(String.format("PatchedWorld(%s,%s,%d,%s)",f.toString(),folder,seed,jm.toString())); 
 		System.exit(0);
 	}
 

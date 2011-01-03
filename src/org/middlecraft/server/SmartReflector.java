@@ -65,7 +65,7 @@ public class SmartReflector {
 
 	static Timer saveTimer=new Timer();
 
-	static Logger l = Logger.getLogger("Minecraft");
+	static Logger l = Logger.getLogger("Middlecraft");
 
 	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
 
