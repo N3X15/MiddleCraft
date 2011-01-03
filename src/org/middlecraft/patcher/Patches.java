@@ -158,7 +158,7 @@ public class Patches {
 						MCMethodInfo mi = SmartReflector.getMethod(className, name, sig);
 						l.info(String.format(" + Replacing %s...",method.getLongName()));
 						try{
-							cc.getMethod(mi.realName, sig).setBody(method, null);
+							cc.getMethod(mi.name, sig).setBody(method, null);
 						} catch(NotFoundException e) {
 							l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
 							printMethodList(method, cc);
@@ -217,7 +217,7 @@ public class Patches {
 	private static void renameFields(CtClass cc) throws NotFoundException {
 		for(CtField field : cc.getDeclaredFields()) {
 			MCFieldInfo fi = SmartReflector.getField(SmartReflector.getOldClassName(cc.getName()), field.getName(), field.getType().getName());
-			if(fi!=null && fi.name.isEmpty()) {
+			if(fi!=null && !fi.name.isEmpty()) {
 				field.setName(fi.name);
 			}
 		}
@@ -227,7 +227,7 @@ public class Patches {
 		for(CtMethod method : cc.getDeclaredMethods()) {
 			String oldClass=SmartReflector.getOldClassName(cc.getName());
 			MCMethodInfo mi = SmartReflector.getMethod(oldClass, method.getName(), method.getSignature());
-			if(mi!=null && mi.name.isEmpty()) {
+			if(mi!=null && !mi.name.isEmpty()) {
 				method.setName(mi.name);
 			}
 		}
