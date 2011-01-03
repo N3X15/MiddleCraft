@@ -111,10 +111,10 @@ public class Patches {
 
 		/* Deobfuscate class name, assuming MCP mappings are installed... :/ */
 		String newClassName=SmartReflector.getNewClassName(className);
-		if(newClassName.equals(className))
-		{
-			newClassName=className+"2"; // To ensure we get fresh classes.
-		}
+//		if(newClassName.equals(className))
+//		{
+//			newClassName=className+"2"; // To ensure we get fresh classes.
+//		}
 		cc.setName(newClassName);
 		l.fine(String.format("Renamed class %s to %s.",className,newClassName));
 
