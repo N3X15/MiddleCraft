@@ -125,82 +125,82 @@ public class Patches {
 
 		/* Grab our patch, if possible, and load it. */
 		CtClass patch=patches.get("Patched"+className);
-		if(patch==null) return;
-
-		l.info("Patching "+className+"...");
-		try {
-			/* For each method in the patch, add or replace as needed. */
-			for(CtConstructor ctor : patch.getConstructors()) {
-				// Replace
-				if(ctor.hasAnnotation(Replace.class)) {
-					String sig = fixSig(ctor);
-					try {
-						l.info(String.format(" + Replacing constructor %s...",sig));
-						cc.getConstructor(sig).setBody(ctor, null);
-					} catch(NotFoundException e) {
-						l.log(Level.SEVERE,String.format("Could not find constructor %s, following is a list of constructors for this class:",sig),e);
-						printConstructorList(cc);
-						System.exit(1);
+		if(patch!=null) {
+			l.info("Patching "+className+"...");
+			try {
+				/* For each method in the patch, add or replace as needed. */
+				for(CtConstructor ctor : patch.getConstructors()) {
+					// Replace
+					if(ctor.hasAnnotation(Replace.class)) {
+						String sig = fixSig(ctor);
+						try {
+							l.info(String.format(" + Replacing constructor %s...",sig));
+							cc.getConstructor(sig).setBody(ctor, null);
+						} catch(NotFoundException e) {
+							l.log(Level.SEVERE,String.format("Could not find constructor %s, following is a list of constructors for this class:",sig),e);
+							printConstructorList(cc);
+							System.exit(1);
+						}
+					}
+					// Add
+					if(ctor.hasAnnotation(Add.class)) {
+						CtConstructor m = new CtConstructor(ctor, cc, null);
+						l.info(String.format(" + Adding constructor %s...",ctor.getLongName()));
+						cc.addConstructor(m);
 					}
 				}
-				// Add
-				if(ctor.hasAnnotation(Add.class)) {
-					CtConstructor m = new CtConstructor(ctor, cc, null);
-					l.info(String.format(" + Adding constructor %s...",ctor.getLongName()));
-					cc.addConstructor(m);
-				}
-			}
-			/* For each method in the patch, add or replace as needed. */
-			for(CtMethod method : patch.getMethods()) {
-				// Replace
-				if(method.hasAnnotation(Replace.class)) {
-					String name = method.getName();
-					String sig = fixSig(method);
-					MCMethodInfo mi = SmartReflector.getMethod(className, name, sig);
-					l.info(String.format(" + Replacing %s...",method.getLongName()));
-					try{
-						cc.getMethod(mi.realName, sig).setBody(method, null);
-					} catch(NotFoundException e) {
-						l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
-						printMethodList(method, cc);
-						System.exit(1);
-					} catch(NullPointerException e) {
-						l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
-						printMethodList(method, cc);
-						System.exit(1);
+				/* For each method in the patch, add or replace as needed. */
+				for(CtMethod method : patch.getMethods()) {
+					// Replace
+					if(method.hasAnnotation(Replace.class)) {
+						String name = method.getName();
+						String sig = fixSig(method);
+						MCMethodInfo mi = SmartReflector.getMethod(className, name, sig);
+						l.info(String.format(" + Replacing %s...",method.getLongName()));
+						try{
+							cc.getMethod(mi.realName, sig).setBody(method, null);
+						} catch(NotFoundException e) {
+							l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
+							printMethodList(method, cc);
+							System.exit(1);
+						} catch(NullPointerException e) {
+							l.log(Level.SEVERE,"Could not find method, following is a list of methods for this class:",e);
+							printMethodList(method, cc);
+							System.exit(1);
+						}
+					}
+					// Add
+					if(method.hasAnnotation(Add.class)) {
+						CtMethod m = new CtMethod(method, cc, null);
+						l.info(String.format(" + Adding %s...",method.getLongName()));
+						cc.addMethod(m);
 					}
 				}
-				// Add
-				if(method.hasAnnotation(Add.class)) {
-					CtMethod m = new CtMethod(method, cc, null);
-					l.info(String.format(" + Adding %s...",method.getLongName()));
-					cc.addMethod(m);
+				/* Same deal with fields. */
+				for(CtField field : patch.getFields()) {
+					// Add
+					if(field.hasAnnotation(Add.class)) {
+						cc.addField(field);
+					}
+					// Replace
+					if(field.hasAnnotation(Replace.class)) { 
+						cc.removeField(cc.getField(field.getName()));
+						cc.addField(field);
+					}
 				}
+			} catch (CannotCompileException e) {
+				l.severe(String.format("ERROR in %s:", patch.getName()));
+				e.printStackTrace();
+				return;
+			} catch (NotFoundException e) {
+				l.severe(String.format("ERROR in %s:", patch.getName()));
+				e.printStackTrace();
+				return;
+			} catch (ClassNotFoundException e) {
+				l.severe(String.format("ERROR in %s:", patch.getName()));
+				e.printStackTrace();
+				return;
 			}
-			/* Same deal with fields. */
-			for(CtField field : patch.getFields()) {
-				// Add
-				if(field.hasAnnotation(Add.class)) {
-					cc.addField(field);
-				}
-				// Replace
-				if(field.hasAnnotation(Replace.class)) { 
-					cc.removeField(cc.getField(field.getName()));
-					cc.addField(field);
-				}
-			}
-		} catch (CannotCompileException e) {
-			l.severe(String.format("ERROR in %s:", patch.getName()));
-			e.printStackTrace();
-			return;
-		} catch (NotFoundException e) {
-			l.severe(String.format("ERROR in %s:", patch.getName()));
-			e.printStackTrace();
-			return;
-		} catch (ClassNotFoundException e) {
-			l.severe(String.format("ERROR in %s:", patch.getName()));
-			e.printStackTrace();
-			return;
 		}
 		// Fix refs.
 		cc.replaceClassName(SmartReflector.deobfuscationMap);
@@ -245,7 +245,7 @@ public class Patches {
 
 		for(int i = 0;i<params.length;i++) {
 			Object[] pas = ctor.getParameterAnnotations()[i];
-			l.info(params[i].getName()+"\t"+Integer.toString(pas.length));
+			//l.info(params[i].getName()+"\t"+Integer.toString(pas.length));
 			for(Object pa : pas) {
 				if(pa instanceof SetParamType) {
 					SetParamType spt = (SetParamType)pa;
@@ -283,7 +283,7 @@ public class Patches {
 		CtClass returnType = Descriptor.getReturnType(method.getSignature(), pool);
 
 		for(int i = 0;i<params.length;i++) {
-			l.info(params[i].getName());
+			//l.info(params[i].getName());
 			Object[] pas = method.getParameterAnnotations()[i];
 			for(Object pa : pas) {
 				if(pa instanceof SetParamType) {
@@ -301,7 +301,7 @@ public class Patches {
 							System.exit(1);
 						}
 					}
-					l.info(String.format(" * params[%d]: %s -> %s",i,params[i].getName(),newType.getName()));
+					//l.info(String.format(" * params[%d]: %s -> %s",i,params[i].getName(),newType.getName()));
 					params[i]=newType;
 				}
 			}

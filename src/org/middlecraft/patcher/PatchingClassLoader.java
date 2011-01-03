@@ -51,7 +51,7 @@ import org.middlecraft.server.SmartReflector;
  */
 public class PatchingClassLoader extends URLClassLoader {
 	protected static final Logger l = Logger.getLogger("Minecraft");
-	
+
 	public void addURI(URI uri) {
 		try {
 			this.addURL(uri.toURL());
@@ -64,7 +64,7 @@ public class PatchingClassLoader extends URLClassLoader {
 	 * Stores loaded and generated classes for faster lookup.
 	 */
 	protected Map<String, Class<?>> classCache;
-	
+
 	/**
 	 * Creates a new PatchingClassLoader that will consult the given array
 	 * of URLs as well as a given parent classloader.
@@ -80,7 +80,7 @@ public class PatchingClassLoader extends URLClassLoader {
 		super(urls, parent);
 		classCache = new HashMap<String, Class<?>>();
 	}
-	
+
 	/**
 	 * Determines whether a given class name belongs to the system, which
 	 * means that it must be loaded through the primordial class loader.
@@ -94,7 +94,7 @@ public class PatchingClassLoader extends URLClassLoader {
 	protected boolean isSystemClassName(String name) {
 		return name.startsWith("java.") || name.startsWith("javax.");
 	}
-	
+
 	/**
 	 * Performs class loading as needed.
 	 *
@@ -112,7 +112,7 @@ public class PatchingClassLoader extends URLClassLoader {
 			//l.info(String.format("[%s] Loaded via isSystemClassName", className));
 			return super.loadClass(className, resolve);
 		}
-		
+
 		/* Check our class cache first, if we find something there then
 		 * return it otherwise we need to generate or look up the class
 		 * in question. */
@@ -122,16 +122,24 @@ public class PatchingClassLoader extends URLClassLoader {
 			return cls;
 		} else {
 			//l.info(String.format("[%s] Loaded via Patcher", className));
+			// Determine if patching is required, and patch if needed.
 			try {
 				Patches.Patch(className, null);
 				className=SmartReflector.getNewClassName(className);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			} // Determine if patching is required, and patch if needed.
-			cls = super.loadClass(className, resolve);
-			classCache.put(className, cls);
-			return cls;
+
+			}
+			try {
+				cls = super.loadClass(className, resolve);
+				classCache.put(className, cls);
+				return cls;
+			} catch(ClassFormatError e) {
+				l.log(Level.SEVERE,String.format("loadClass %s failed:",className),e);
+				System.exit(1);
+				return null;
+			}
 		}
 	}
 }

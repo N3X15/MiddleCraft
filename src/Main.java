@@ -53,7 +53,7 @@ public class Main {
 		ConsoleHandler handle_c = new ConsoleHandler();
 		handle_c.setFormatter(new MiddlecraftFormatter());
 		l.addHandler(handle_c);
-		
+
 		l.info("Stage-1 Boot Sequence Start");
 		l.info(" + Setting up SmartReflector classmappings...");
 		SmartReflector.initialize();
@@ -93,12 +93,12 @@ public class Main {
 				if(e.getName().endsWith(".class")) {
 					// Strip off the .class
 					String className = e.getName().substring(0, e.getName().indexOf('.'));
-					
+
 					// Get new classname
-					String newClassName=SmartReflector.getNewClassName(className);
-					
+					String newClassName=SmartReflector.getNewClassName(className.replace('/','.'));
+
 					// Place the new class into the JAR.
-					outJar.putNextEntry(new ZipEntry(newClassName+".class"));
+					outJar.putNextEntry(new ZipEntry(newClassName.replace('.','/')+".class"));
 					Patches.Patch(className.replace('/', '.'), outJar);
 					outJar.closeEntry();
 				}
@@ -108,14 +108,14 @@ public class Main {
 		}
 		l.info(" + Updating Classpath...");
 		mcClassLoader.addURI(newMCServerJar.toURI());
-		
+
 		SmartReflector.save(); // Force save.
 
 		l.info("Stage 3: Booting server!");
 		try {
 			// Bootstrap...
 			Class<?> mcBootClass =
-				Class.forName("net.minecraft.server.MinecraftServer", true, mcClassLoader);
+				Class.forName(SmartReflector.getNewClassName("net.minecraft.server.MinecraftServer"), true, mcClassLoader);
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Throwable e) {
