@@ -41,6 +41,7 @@ public class MCFieldInfo {
 	public String realName;
 	public String className;
 	public String name="";
+	public int modifiers;
 
 
 	public static String header="Class,Real Name,Readable Name,Type";
@@ -63,5 +64,8 @@ public class MCFieldInfo {
 	public String toString() {
 		String oName = (name.isEmpty()) ? "*" : name;
 		return String.format("%s,%s,%s,%s",className,realName,oName,type);
+	}
+	public void setModifiers(int m) {
+		modifiers=m;
 	}
 }

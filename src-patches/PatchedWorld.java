@@ -1,7 +1,7 @@
 import java.io.File;
 import org.middlecraft.patcher.reflect.*;
 
-import com.minecraft.server.Block;
+import net.minecraft.server.Block;
 
 /**
  * Copyright (c) 2010, MiddleCraft Contributors

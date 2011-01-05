@@ -47,16 +47,16 @@ import org.middlecraft.server.SmartReflector;
  *
  */
 public class Patches {
-	private static ClassPool pool=null;
+	public static ClassPool pool=null;
 	private static Logger l = Logger.getLogger("Middlecraft");
 
 	static Map<String,CtClass> patches = new HashMap<String,CtClass>();
 
-	public static void initialize() throws NotFoundException {
+	public static void initialize(String jarloc) throws NotFoundException {
 		try {
 			pool=ClassPool.getDefault();
 			pool.appendClassPath("lib/*");
-			JarFile jar = new JarFile("patches.jar");
+			JarFile jar = new JarFile(jarloc);
 			for(JarEntry e : Collections.list(jar.entries())) {
 				if(e.getName().endsWith(".class")) {
 					patches.put(e.getName().replace(".class", ""),pool.makeClass(jar.getInputStream(e)));

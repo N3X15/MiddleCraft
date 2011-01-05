@@ -31,6 +31,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import javassist.ClassPool;
+import javassist.CtClass;
+import javassist.Modifier;
+import javassist.NotFoundException;
+import javassist.bytecode.Descriptor;
+
 
 /**
  * @author Rob
@@ -43,6 +49,7 @@ public class MCMethodInfo {
 	public String parentClass;
 	public String name="";
 	public String description="";
+	public int modifiers=0;
 	public static final String[] header = new String[]{"Real Name","Signature","Parent Class","Readable Name","Description"};
 	public MCMethodInfo() {}
 	public MCMethodInfo(List<String> line) {
@@ -50,7 +57,7 @@ public class MCMethodInfo {
 		signature=line.get(1);
 		parentClass=line.get(2);
 		name=line.get(3);
-		
+
 		if(name.equals("*"))
 			name="";
 
@@ -69,6 +76,9 @@ public class MCMethodInfo {
 		list.add(description);
 		return list;
 	}
+	public void setModifiers(int m) {
+		this.modifiers=m;
+	}
 
 	public String toString() {
 		String oName = name;
@@ -81,5 +91,21 @@ public class MCMethodInfo {
 	 */
 	public String toIndex() {
 		return String.format("%s %s",realName, signature);
+	}
+
+	public String toAbstractJava(ClassPool cp) {
+		try {
+			String returnName = Descriptor.getReturnType(signature, cp).getName();
+			int i = 0;
+			List<String> paramDefs = new ArrayList<String>();
+			for(CtClass c : Descriptor.getParameterTypes(signature, cp)) {
+				String type = SmartReflector.getNewClassName(c.getName());
+				paramDefs.add(String.format("%s %s",type,(char)(i+97)));
+				i++;
+			}
+			return String.format("\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s)",description, Modifier.toString(modifiers),SmartReflector.getNewClassName(returnName), (name.isEmpty()) ? realName:name, Utils.join(paramDefs,", "));
+		} catch (NotFoundException e) {
+			return "";
+		}
 	}
 }

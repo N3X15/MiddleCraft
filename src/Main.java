@@ -46,7 +46,14 @@ public class Main {
 	protected static ClassPool mcClassPool;
 	protected static PatchingClassLoader mcClassLoader;
 
+	private static boolean getServerInterfaces=false;
+
 	public static void main(String[] arguments) throws Throwable {
+
+
+		// Get net.minecraft.server interfaces.
+		if(arguments.length==1 && arguments[0].equals("GetServerInterfaces"))
+			getServerInterfaces=true;
 
 		/* Set up logging. */
 		l.setUseParentHandlers(false);
@@ -61,7 +68,7 @@ public class Main {
 		try {
 			File mcServerJar = new File("lib/minecraft_server.jar");
 			URL mcServerJarURL = mcServerJar.toURI().toURL();
-			l.log(Level.INFO, "MC Server: ", mcServerJarURL.toString());
+			l.log(Level.INFO, "MC Server: ", mcServerJarURL.toURI().toString());
 
 			mcClassLoader = new PatchingClassLoader(
 					new URL[] {
@@ -72,11 +79,14 @@ public class Main {
 			l.log(Level.SEVERE, "Problem setting up bootloader.", e);
 			System.exit(1);
 		}
-
+		if(getServerInterfaces) {
+			GenServerClasses();
+			return;
+		}
 
 		l.info("Stage 2: Patching server jar...");
 		l.info(" + Loading patches...");
-		Patches.initialize();
+		Patches.initialize("patches.jar");
 		l.info(" + Creating minecraft_server.jar.new...");
 		File newMCServerJar = new File(String.format("lib/minecraft_server.jar.new"));
 		JarOutputStream outJar = null;
@@ -120,6 +130,58 @@ public class Main {
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Throwable e) {
 			l.log(Level.SEVERE, " ! Unexpected error on Stage-3 boot.", e);
+		}
+	}
+
+	private static void GenServerClasses() throws IOException, ClassNotFoundException, NotFoundException {
+
+		Patches.initialize("staged/patches.jar");
+
+		mcClassPool=ClassPool.getDefault();
+		try {
+			mcClassPool.appendClassPath("lib/*");
+		} catch (NotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return;
+		}
+		JarFile inJar = new JarFile("lib/minecraft_server.jar");
+		for(JarEntry e : Collections.list(inJar.entries())) {
+			if(e.getName().endsWith(".class")) {
+				// Strip off the .class
+				String className = e.getName().substring(0, e.getName().indexOf('.'));
+				l.info(className);
+				// Get new classname
+				String newClassName=SmartReflector.getNewClassName(className.replace('/','.'));
+
+				MCClassInfo ci = SmartReflector.classes.get(className);
+				CtClass mcClass = mcClassPool.get(className);
+				ci.setClassModifiers(mcClass.getModifiers());
+				for(CtField fld : mcClass.getDeclaredFields()) {
+					MCFieldInfo f = ci.getField(fld.getName());
+					if(f==null)
+					{
+						SmartReflector.addObfuscatedFieldDefinition(className, fld.getName(), fld.getType().getName());
+						f = ci.getField(fld.getName());
+					}
+					f.setModifiers(fld.getModifiers());
+					ci.setField(f);
+				}
+				for(CtMethod method : mcClass.getDeclaredMethods()) {
+					MCMethodInfo m = ci.getMethod(method.getName(),method.getSignature());
+					if(m==null) {
+						SmartReflector.addObfuscatedMethodDefinition(className, method.getName(), method.getSignature(), "");
+						m=ci.getMethod(method.getName(),method.getSignature());
+					}
+					m.setModifiers(method.getModifiers());
+					ci.setMethod(m);
+				}
+				ci.superClass=mcClass.getSuperclass().getName();
+				File dir = new File("src-interface/net/minecraft/server/");
+				dir.mkdirs();
+				File f = new File(dir, newClassName+".java");
+				Utils.putFileContents(f, ci.toJava(mcClassPool,"net.minecraft.server"));
+			}
 		}
 	}
 }

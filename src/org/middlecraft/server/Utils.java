@@ -28,12 +28,17 @@ package org.middlecraft.server;
  */
 
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -61,6 +66,22 @@ public class Utils {
 			return "";
 		}
 	}
+	public static void putFileContents(File f, String data) throws IOException {
+		FileWriter fw=null;
+		try {
+			fw = new FileWriter(f);
+			fw.write(data);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			if(fw!=null)
+				fw.close();
+		}
+	}
 
 	public static void copyStream(InputStream input, OutputStream output) throws IOException {
 		byte[] buffer = new byte[1024];
@@ -71,5 +92,26 @@ public class Utils {
 			output.write(buffer, 0, count);
 		}
 	}
+
+	public static String join(List<? extends CharSequence> s, String delimiter) {
+		int capacity = 0;
+		int delimLength = delimiter.length();
+		Iterator<? extends CharSequence> iter = s.iterator();
+		if (iter.hasNext()) {
+			capacity += iter.next().length() + delimLength;
+		}
+
+		StringBuilder buffer = new StringBuilder(capacity);
+		iter = s.iterator();
+		if (iter.hasNext()) {
+			buffer.append(iter.next());
+			while (iter.hasNext()) {
+				buffer.append(delimiter);
+				buffer.append(iter.next());
+			}
+		}
+		return buffer.toString();
+	}
+
 
 }
