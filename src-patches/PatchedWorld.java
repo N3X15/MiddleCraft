@@ -1,6 +1,8 @@
 import java.io.File;
 import org.middlecraft.patcher.reflect.*;
 
+import com.minecraft.server.Block;
+
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -38,22 +40,13 @@ public class PatchedWorld
 	@Replace
 	public PatchedWorld(File f, String folder, long seed, @SetParamType("WorldProvider") Object jm)
 	{
-		System.out.println(String.format("PatchedWorld(%s,%s,%d,%s)",f.toString(),folder,seed,jm.toString())); 
-		System.exit(0);
+		System.out.println("If you see this, Middlecraft has successfully patched the World class.");
 	}
 
-	@Add
-	private void MIDDLECRAFT_onBlockTick(int x,int y,int z) {
-		//Hooks.Call("OnBlockTick",new Object[]{x,y,z}); return true;
-	}
-
-	/**
-	 * Patch World.g() (line 1644) to add hook processor.
-	 */
-	@Replace
-	public void scheduleBlockUpdate()
-	{
-		//MIDDLECRAFT_onBlockTick(h + c, j, i + d);
-		System.out.println("scheduleBlockUpdate");
+	/* See CodeConverter.insertBeforeMethod */
+	@SuppressWarnings("unused")
+	@InsertBeforeMethod(target="scheduleBlockUpdate",beforeclass="Block",beforemethod="onUpdate")
+	private void MIDDLECRAFT_onBlockTick(Block target, int x, int y, int z, int blockID) {
+		Hooks.Call("BlockDidUpdate",new Object[]{x,y,z,blockID});
 	}
 }
