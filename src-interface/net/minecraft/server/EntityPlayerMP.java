@@ -44,12 +44,12 @@ public abstract class EntityPlayerMP extends EntityPlayer{
 	/**
 	 * 
 	 */
-	public void a(CraftingInventoryCB a, int b, int c)
+	public void F()
 	
 	/**
 	 * 
 	 */
-	public void F()
+	public void a(CraftingInventoryCB a, int b, int c)
 	
 	/**
 	 * 
@@ -99,12 +99,12 @@ public abstract class EntityPlayerMP extends EntityPlayer{
 	/**
 	 * 
 	 */
-	public boolean p()
+	public boolean a(Entity a, int b)
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b)
+	public boolean p()
 	
 	/**
 	 * 
@@ -114,12 +114,12 @@ public abstract class EntityPlayerMP extends EntityPlayer{
 	/**
 	 * 
 	 */
-	public void b(double a, boolean b)
+	public void k()
 	
 	/**
 	 * 
 	 */
-	public void k()
+	public void b(double a, boolean b)
 	
 	/**
 	 * 

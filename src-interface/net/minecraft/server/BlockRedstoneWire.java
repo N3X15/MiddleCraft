@@ -21,7 +21,7 @@ public abstract class BlockRedstoneWire extends Block{
 	/**
 	 * 
 	 */
-	private int f(World a, int b, int c, int d, int e)
+	public boolean a(World a, int b, int c, int d)
 	
 	/**
 	 * 
@@ -31,7 +31,7 @@ public abstract class BlockRedstoneWire extends Block{
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d)
+	private int f(World a, int b, int c, int d, int e)
 	
 	/**
 	 * 

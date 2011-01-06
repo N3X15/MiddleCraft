@@ -116,12 +116,12 @@ public abstract class InventoryPlayer{
 	/**
 	 * 
 	 */
-	public void b(NBTTagList a)
+	public ItemStack a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b)
+	public void b(NBTTagList a)
 	
 	/**
 	 * 

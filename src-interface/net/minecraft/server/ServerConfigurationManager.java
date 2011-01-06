@@ -112,12 +112,12 @@ public abstract class ServerConfigurationManager{
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a)
+	private void e()
 	
 	/**
 	 * 
 	 */
-	private void e()
+	public void a(java.lang.String a)
 	
 	/**
 	 * 

@@ -79,22 +79,17 @@ public abstract final class ItemStack{
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a, World b, int c, int d, int e, int f)
-	
-	/**
-	 * 
-	 */
 	public NBTTagCompound a(NBTTagCompound a)
 	
 	/**
 	 * 
 	 */
-	public float a(Block a)
+	public boolean a(EntityPlayer a, World b, int c, int d, int e, int f)
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(World a, EntityPlayer b)
+	public int a(Entity a)
 	
 	/**
 	 * 
@@ -104,7 +99,12 @@ public abstract final class ItemStack{
 	/**
 	 * 
 	 */
-	public int a(Entity a)
+	public ItemStack a(World a, EntityPlayer b)
+	
+	/**
+	 * 
+	 */
+	public float a(Block a)
 	
 	/**
 	 * 

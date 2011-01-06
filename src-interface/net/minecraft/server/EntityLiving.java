@@ -84,12 +84,12 @@ public abstract class EntityLiving extends Entity{
 	/**
 	 * 
 	 */
-	public void z()
+	public int b()
 	
 	/**
 	 * 
 	 */
-	public int b()
+	public void z()
 	
 	/**
 	 * 
@@ -124,12 +124,12 @@ public abstract class EntityLiving extends Entity{
 	/**
 	 * 
 	 */
-	public void c(int a)
+	public boolean i(Entity a)
 	
 	/**
 	 * 
 	 */
-	public boolean i(Entity a)
+	public void c(int a)
 	
 	/**
 	 * 
@@ -139,12 +139,12 @@ public abstract class EntityLiving extends Entity{
 	/**
 	 * 
 	 */
-	public void O()
+	public boolean v()
 	
 	/**
 	 * 
 	 */
-	public boolean v()
+	public void O()
 	
 	/**
 	 * 

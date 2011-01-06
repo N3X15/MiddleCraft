@@ -12,12 +12,12 @@ public abstract class BlockFire extends Block{
 	/**
 	 * 
 	 */
-	private void a(int a, int b, int c)
+	private void a(World a, int b, int c, int d, int e, java.util.Random f)
 	
 	/**
 	 * 
 	 */
-	private void a(World a, int b, int c, int d, int e, java.util.Random f)
+	private void a(int a, int b, int c)
 	
 	/**
 	 * 
@@ -32,12 +32,12 @@ public abstract class BlockFire extends Block{
 	/**
 	 * 
 	 */
-	public int f(World a, int b, int c, int d, int e)
+	public boolean a(World a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d)
+	public int f(World a, int b, int c, int d, int e)
 	
 	/**
 	 * 
@@ -57,22 +57,22 @@ public abstract class BlockFire extends Block{
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
 	private int h(World a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	private boolean g(World a, int b, int c, int d)
+	public AxisAlignedBB d(World a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
 	public boolean d()
+	
+	/**
+	 * 
+	 */
+	private boolean g(World a, int b, int c, int d)
 	
 	/**
 	 * 

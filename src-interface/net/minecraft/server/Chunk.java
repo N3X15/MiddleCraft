@@ -59,12 +59,12 @@ public abstract class Chunk{
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, int d)
+	private void g(int a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	private void g(int a, int b, int c)
+	public void b(int a, int b, int c, int d)
 	
 	/**
 	 * 

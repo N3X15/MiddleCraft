@@ -155,12 +155,12 @@ public abstract class Item{
 	/**
 	 * 
 	 */
-	public Item d()
+	public int a(Entity a)
 	
 	/**
 	 * 
 	 */
-	public int a(Entity a)
+	public Item d()
 	
 	/**
 	 * 
@@ -170,21 +170,21 @@ public abstract class Item{
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
 	public float a(ItemStack a, Block b)
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a, EntityLiving b)
+	public void a(ItemStack a, int b, int c, int d, int e)
 	
 	/**
 	 * 
 	 */
 	public Item a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public void b(ItemStack a, EntityLiving b)
 
 }

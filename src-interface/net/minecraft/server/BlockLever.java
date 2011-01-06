@@ -20,12 +20,7 @@ public abstract class BlockLever extends Block{
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(IBlockAccess a, int b, int c, int d)
+	public void b(World a, int b, int c, int d)
 	
 	/**
 	 * 
@@ -35,7 +30,12 @@ public abstract class BlockLever extends Block{
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d)
+	public void a(IBlockAccess a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d)
 	
 	/**
 	 * 

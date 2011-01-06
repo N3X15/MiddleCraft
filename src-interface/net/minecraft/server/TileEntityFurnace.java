@@ -19,12 +19,12 @@ public abstract class TileEntityFurnace extends TileEntity{
 	/**
 	 * 
 	 */
-	private int b(int a)
+	public void e()
 	
 	/**
 	 * 
 	 */
-	public void e()
+	private int b(int a)
 	
 	/**
 	 * 
@@ -59,22 +59,22 @@ public abstract class TileEntityFurnace extends TileEntity{
 	/**
 	 * 
 	 */
-	private boolean i()
-	
-	/**
-	 * 
-	 */
 	public java.lang.String b()
 	
 	/**
 	 * 
 	 */
-	public int c()
+	private boolean i()
 	
 	/**
 	 * 
 	 */
 	public ItemStack a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public int c()
 	
 	/**
 	 * 

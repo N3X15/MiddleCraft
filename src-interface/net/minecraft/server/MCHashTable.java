@@ -65,12 +65,12 @@ public abstract class MCHashTable{
 	/**
 	 * 
 	 */
-	public java.lang.Object a(int a)
+	final HashEntry e(int a)
 	
 	/**
 	 * 
 	 */
-	final HashEntry e(int a)
+	public java.lang.Object a(int a)
 	
 	/**
 	 * 

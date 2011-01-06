@@ -39,12 +39,12 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	public boolean b(Block a)
+	public void z()
 	
 	/**
 	 * 
 	 */
-	public void z()
+	public boolean b(Block a)
 	
 	/**
 	 * 
@@ -54,12 +54,12 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	public void c(Entity a, int b)
+	public void b(Entity a, int b)
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a, int b)
+	public void c(Entity a, int b)
 	
 	/**
 	 * 
@@ -84,12 +84,12 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a)
+	public float a(Block a)
 	
 	/**
 	 * 
 	 */
-	public float a(Block a)
+	public void b(NBTTagCompound a)
 	
 	/**
 	 * 

@@ -95,12 +95,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public void b(Entity a, int b)
+	public void c(double a, double b, double c, float d, float e)
 	
 	/**
 	 * 
 	 */
-	public void c(double a, double b, double c, float d, float e)
+	public void b(Entity a, int b)
 	
 	/**
 	 * 
@@ -130,12 +130,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public boolean c_()
+	public boolean a(Material a)
 	
 	/**
 	 * 
 	 */
-	public boolean a(Material a)
+	public boolean c_()
 	
 	/**
 	 * 
@@ -225,7 +225,7 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public double d(double a, double b, double c)
+	public void l()
 	
 	/**
 	 * 
@@ -235,7 +235,7 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public void l()
+	public double d(double a, double b, double c)
 	
 	/**
 	 * 
@@ -265,12 +265,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public void d(NBTTagCompound a)
+	public void a(float a, float b, float c)
 	
 	/**
 	 * 
 	 */
-	public void a(float a, float b, float c)
+	public void d(NBTTagCompound a)
 	
 	/**
 	 * 
@@ -305,12 +305,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public boolean y()
+	public boolean p()
 	
 	/**
 	 * 
 	 */
-	public boolean p()
+	public boolean y()
 	
 	/**
 	 * 
@@ -325,12 +325,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public void c(Entity a)
+	public boolean equals(java.lang.Object a)
 	
 	/**
 	 * 
 	 */
-	public boolean equals(java.lang.Object a)
+	public void c(Entity a)
 	
 	/**
 	 * 
