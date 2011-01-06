@@ -8,8 +8,6 @@ public abstract class Packet100 extends Packet{
 	public int b;
 	public java.lang.String c;
 	public int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	

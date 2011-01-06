@@ -4,28 +4,10 @@ package net.minecraft.server;
 
 abstract class SlotArmor extends Slot{
 	// FIELDS
-	 int d;
-	 int e;
 	final CraftingInventoryPlayerCB b;
-	 int c;
 	final int a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	 void d()
-	
-	/**
-	 * 
-	 */
-	 void b(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	 ItemStack c()
 	
 	/**
 	 * 
@@ -35,21 +17,6 @@ abstract class SlotArmor extends Slot{
 	/**
 	 * 
 	 */
-	 void b()
-	
-	/**
-	 * 
-	 */
 	public int a()
-	
-	/**
-	 * 
-	 */
-	 ItemStack a(int a)
-	
-	/**
-	 * 
-	 */
-	 boolean a(IInventory a, int b)
 
 }

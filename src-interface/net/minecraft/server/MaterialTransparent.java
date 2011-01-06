@@ -4,30 +4,6 @@ package net.minecraft.server;
 
 public abstract class MaterialTransparent extends Material{
 	// FIELDS
-	 Material f;
-	 Material g;
-	 Material d;
-	 Material e;
-	 Material b;
-	 Material c;
-	 Material a;
-	 Material n;
-	 Material o;
-	 Material l;
-	 Material m;
-	 Material j;
-	 Material k;
-	 Material h;
-	 Material i;
-	 Material w;
-	 Material v;
-	 Material u;
-	 Material t;
-	 Material s;
-	 Material r;
-	 Material q;
-	 Material p;
-	 Material x;
 	
 	// METHODS
 	

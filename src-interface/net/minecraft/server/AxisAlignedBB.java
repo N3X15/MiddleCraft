@@ -18,6 +18,21 @@ public abstract class AxisAlignedBB{
 	/**
 	 * 
 	 */
+	public static void a()
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB c(double a, double b, double c)
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(Vec3D a, Vec3D b)
+	
+	/**
+	 * 
+	 */
 	public boolean a(AxisAlignedBB a)
 	
 	/**
@@ -33,7 +48,17 @@ public abstract class AxisAlignedBB{
 	/**
 	 * 
 	 */
+	public AxisAlignedBB c(double a, double b, double c, double d, double e, double f)
+	
+	/**
+	 * 
+	 */
 	private boolean c(Vec3D a)
+	
+	/**
+	 * 
+	 */
+	public static AxisAlignedBB a(double a, double b, double c, double d, double e, double f)
 	
 	/**
 	 * 
@@ -53,6 +78,11 @@ public abstract class AxisAlignedBB{
 	/**
 	 * 
 	 */
+	public double a(AxisAlignedBB a, double b)
+	
+	/**
+	 * 
+	 */
 	public void b(AxisAlignedBB a)
 	
 	/**
@@ -63,51 +93,21 @@ public abstract class AxisAlignedBB{
 	/**
 	 * 
 	 */
-	private boolean b(Vec3D a)
-	
-	/**
-	 * 
-	 */
-	public double b(AxisAlignedBB a, double b)
-	
-	/**
-	 * 
-	 */
-	public static void a()
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB c(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB c(double a, double b, double c, double d, double e, double f)
-	
-	/**
-	 * 
-	 */
-	public static AxisAlignedBB a(double a, double b, double c, double d, double e, double f)
-	
-	/**
-	 * 
-	 */
-	public double a(AxisAlignedBB a, double b)
-	
-	/**
-	 * 
-	 */
 	public static AxisAlignedBB b(double a, double b, double c, double d, double e, double f)
 	
 	/**
 	 * 
 	 */
+	private boolean b(Vec3D a)
+	
+	/**
+	 * 
+	 */
 	public AxisAlignedBB b()
+	
+	/**
+	 * 
+	 */
+	public double b(AxisAlignedBB a, double b)
 
 }

@@ -4,63 +4,8 @@ package net.minecraft.server;
 
 public abstract class EntityFallingSand extends Entity{
 	// FIELDS
-	 boolean D;
-	 boolean E;
-	 boolean F;
-	 boolean G;
-	 boolean A;
-	 boolean B;
-	 boolean C;
-	 float L;
-	 boolean M;
-	 float N;
-	 double O;
-	 float H;
-	 float I;
-	 float J;
-	 float K;
-	 float U;
-	 boolean T;
-	 java.util.Random W;
-	 boolean V;
-	 double Q;
-	 double P;
-	 float S;
-	 float R;
-	 int Y;
-	 int X;
-	 int Z;
-	 int g;
 	public int b;
 	public int a;
-	 double n;
-	 double o;
-	 World l;
-	 double m;
-	 Entity j;
-	 Entity k;
-	 double h;
-	 boolean i;
-	 float w;
-	 float v;
-	 int ai;
-	 double u;
-	 double t;
-	 double s;
-	 double r;
-	 double q;
-	 double p;
-	 int ac;
-	 int ad;
-	 int aa;
-	 boolean ab;
-	 int ag;
-	 AxisAlignedBB z;
-	 int ah;
-	 float y;
-	 boolean ae;
-	 float x;
-	 boolean af;
 	
 	// METHODS
 	

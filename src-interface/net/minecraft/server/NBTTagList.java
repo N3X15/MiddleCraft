@@ -12,6 +12,11 @@ public abstract class NBTTagList extends NBTBase{
 	/**
 	 * 
 	 */
+	public NBTBase a(int a)
+	
+	/**
+	 * 
+	 */
 	 void a(java.io.DataOutput a)
 	
 	/**
@@ -22,12 +27,12 @@ public abstract class NBTTagList extends NBTBase{
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public void a(NBTBase a)
 	
 	/**
 	 * 
 	 */
-	public void a(NBTBase a)
+	public java.lang.String toString()
 	
 	/**
 	 * 
@@ -37,41 +42,6 @@ public abstract class NBTTagList extends NBTBase{
 	/**
 	 * 
 	 */
-	 NBTBase m(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	 NBTBase a(byte a)
-	
-	/**
-	 * 
-	 */
-	public NBTBase a(int a)
-	
-	/**
-	 * 
-	 */
-	 void a(NBTBase a, java.io.DataOutput b)
-	
-	/**
-	 * 
-	 */
 	public byte a()
-	
-	/**
-	 * 
-	 */
-	 java.lang.String b(byte a)
-	
-	/**
-	 * 
-	 */
-	 java.lang.String c()
-	
-	/**
-	 * 
-	 */
-	 NBTBase b(java.io.DataInput a)
 
 }

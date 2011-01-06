@@ -12,10 +12,5 @@ public abstract class WorldGenLakes extends WorldGenerator{
 	 * 
 	 */
 	public boolean a(World a, java.util.Random b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	 void a(double a, double b, double c)
 
 }

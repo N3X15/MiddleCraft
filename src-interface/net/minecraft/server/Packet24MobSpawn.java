@@ -11,8 +11,6 @@ public abstract class Packet24MobSpawn extends Packet{
 	public byte b;
 	public int c;
 	public int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	

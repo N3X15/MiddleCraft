@@ -17,16 +17,16 @@ public abstract class NoiseGenerator2{
 	/**
 	 * 
 	 */
+	public void a(double[] a, double b, double c, int d, int e, double f, double g, double h)
+	
+	/**
+	 * 
+	 */
 	private static double a(int[] a, double b, double c)
 	
 	/**
 	 * 
 	 */
 	private static int a(double a)
-	
-	/**
-	 * 
-	 */
-	public void a(double[] a, double b, double c, int d, int e, double f, double g, double h)
 
 }

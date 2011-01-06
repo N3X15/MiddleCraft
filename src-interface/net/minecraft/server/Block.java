@@ -38,7 +38,7 @@ public abstract class Block{
 	public static final boolean[] n;
 	public static final boolean[] o;
 	public static final StepSound l;
-	public static final Block[] m;
+	public static final gv[] m;
 	public static final StepSound j;
 	public static final StepSound k;
 	public static final StepSound h;
@@ -137,107 +137,17 @@ public abstract class Block{
 	/**
 	 * 
 	 */
-	public int a(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, int e, float f)
-	
-	/**
-	 * 
-	 */
-	protected Block c(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	protected Block a(float a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, Entity e, Vec3D f)
-	
-	/**
-	 * 
-	 */
-	public void a_(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public void a(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	protected Block b(float a)
-	
-	/**
-	 * 
-	 */
-	public boolean d(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public void c(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean d()
-	
-	/**
-	 * 
-	 */
-	public float a(Entity a)
-	
-	/**
-	 * 
-	 */
-	public float a(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
 	public void g(World a, int b, int c, int d, int e)
 	
 	/**
 	 * 
 	 */
-	protected Block c(float a)
+	public void a(World a, int b, int c, int d, Entity e)
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, Entity e)
+	protected Block c(float a)
 	
 	/**
 	 * 
@@ -253,6 +163,11 @@ public abstract class Block{
 	 * 
 	 */
 	public java.lang.String e()
+	
+	/**
+	 * 
+	 */
+	public int a(int a)
 	
 	/**
 	 * 
@@ -277,7 +192,22 @@ public abstract class Block{
 	/**
 	 * 
 	 */
+	public void a(World a, int b, int c, int d, int e, float f)
+	
+	/**
+	 * 
+	 */
 	public void e(World a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	protected Block c(int a)
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e)
 	
 	/**
 	 * 
@@ -312,7 +242,22 @@ public abstract class Block{
 	/**
 	 * 
 	 */
+	public int a(int a, java.util.Random b)
+	
+	/**
+	 * 
+	 */
+	public boolean b(IBlockAccess a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
 	public boolean a(IBlockAccess a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	protected Block a(float a)
 	
 	/**
 	 * 
@@ -322,7 +267,27 @@ public abstract class Block{
 	/**
 	 * 
 	 */
+	public boolean a(World a, int b, int c, int d, EntityPlayer e)
+	
+	/**
+	 * 
+	 */
 	public void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f)
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, Entity e, Vec3D f)
+	
+	/**
+	 * 
+	 */
+	public void a_(World a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	public void a(IBlockAccess a, int b, int c, int d)
 	
 	/**
 	 * 
@@ -337,6 +302,21 @@ public abstract class Block{
 	/**
 	 * 
 	 */
+	protected Block b(float a)
+	
+	/**
+	 * 
+	 */
+	public boolean d(World a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	public boolean a()
+	
+	/**
+	 * 
+	 */
 	public boolean c()
 	
 	/**
@@ -347,12 +327,17 @@ public abstract class Block{
 	/**
 	 * 
 	 */
+	public void c(World a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
 	private boolean f()
 	
 	/**
 	 * 
 	 */
-	protected Block a(StepSound a)
+	public boolean d()
 	
 	/**
 	 * 
@@ -362,11 +347,26 @@ public abstract class Block{
 	/**
 	 * 
 	 */
+	protected Block a(StepSound a)
+	
+	/**
+	 * 
+	 */
 	public Block a(java.lang.String a)
 	
 	/**
 	 * 
 	 */
+	public float a(Entity a)
+	
+	/**
+	 * 
+	 */
 	public int a(java.util.Random a)
+	
+	/**
+	 * 
+	 */
+	public float a(EntityPlayer a)
 
 }

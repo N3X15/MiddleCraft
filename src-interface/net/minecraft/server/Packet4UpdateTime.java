@@ -5,8 +5,6 @@ package net.minecraft.server;
 public abstract class Packet4UpdateTime extends Packet{
 	// FIELDS
 	public long a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	
@@ -14,21 +12,6 @@ public abstract class Packet4UpdateTime extends Packet{
 	 * 
 	 */
 	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 Packet b(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 int b()
-	
-	/**
-	 * 
-	 */
-	 Packet a(int a)
 	
 	/**
 	 * 
@@ -43,16 +26,6 @@ public abstract class Packet4UpdateTime extends Packet{
 	/**
 	 * 
 	 */
-	 void a(Packet a, java.io.DataOutputStream b)
-	
-	/**
-	 * 
-	 */
 	public void a(java.io.DataOutputStream a)
-	
-	/**
-	 * 
-	 */
-	 void a(int a, java.lang.Class b)
 
 }

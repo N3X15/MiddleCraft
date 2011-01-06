@@ -58,12 +58,12 @@ public abstract class Entity{
 	protected int aa;
 	protected boolean ab;
 	public int ag;
-	public final AxisAlignedBB z;
 	public int ah;
-	public float y;
+	public final AxisAlignedBB z;
 	protected boolean ae;
-	public float x;
+	public float y;
 	public boolean af;
+	public float x;
 	
 	// METHODS
 	
@@ -195,12 +195,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public float a(Entity a)
+	public Vec3D C()
 	
 	/**
 	 * 
 	 */
-	public Vec3D C()
+	public float a(Entity a)
 	
 	/**
 	 * 
@@ -305,12 +305,12 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public boolean p()
+	public boolean y()
 	
 	/**
 	 * 
 	 */
-	public boolean y()
+	public boolean p()
 	
 	/**
 	 * 

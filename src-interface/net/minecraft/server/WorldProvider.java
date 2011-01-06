@@ -23,12 +23,12 @@ public abstract class WorldProvider{
 	/**
 	 * 
 	 */
-	public IChunkProvider c()
+	public IChunkLoader a(java.io.File a)
 	
 	/**
 	 * 
 	 */
-	public IChunkLoader a(java.io.File a)
+	public IChunkProvider c()
 	
 	/**
 	 * 
@@ -48,11 +48,11 @@ public abstract class WorldProvider{
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b)
+	public float a(long a, float b)
 	
 	/**
 	 * 
 	 */
-	public float a(long a, float b)
+	public boolean a(int a, int b)
 
 }

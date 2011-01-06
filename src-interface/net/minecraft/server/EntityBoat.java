@@ -4,77 +4,22 @@ package net.minecraft.server;
 
 public abstract class EntityBoat extends Entity{
 	// FIELDS
-	 boolean D;
-	 boolean E;
-	 boolean F;
-	 boolean G;
-	 boolean A;
-	 boolean B;
-	 boolean C;
-	 float L;
-	 boolean M;
-	 float N;
-	 double O;
-	 float H;
-	 float I;
-	 float J;
-	 float K;
-	 float U;
-	 boolean T;
-	 java.util.Random W;
-	 boolean V;
-	 double Q;
-	 double P;
-	 float S;
-	 float R;
-	 int Y;
-	 int X;
-	 int Z;
+	private double ak;
 	private double f;
-	 int g;
+	private double al;
 	private int d;
+	private double aj;
 	private double e;
 	public int b;
 	public int c;
 	public int a;
-	 double n;
-	 double o;
-	 World l;
-	 double m;
-	 Entity j;
-	 Entity k;
-	 double h;
-	 boolean i;
-	private double ak;
-	 float w;
-	private double al;
-	 float v;
-	 int ai;
-	 double u;
-	private double aj;
-	 double t;
-	 double s;
-	 double r;
-	 double q;
-	 double p;
-	 int ac;
-	 int ad;
-	 int aa;
-	 boolean ab;
-	 int ag;
-	 AxisAlignedBB z;
-	 int ah;
-	 float y;
-	 boolean ae;
-	 float x;
-	 boolean af;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	 double e(double a, double b, double c)
+	public void b_()
 	
 	/**
 	 * 
@@ -84,87 +29,7 @@ public abstract class EntityBoat extends Entity{
 	/**
 	 * 
 	 */
-	 void b(double a, double b, double c, float d, float e)
-	
-	/**
-	 * 
-	 */
-	 float b(float a)
-	
-	/**
-	 * 
-	 */
 	public void A()
-	
-	/**
-	 * 
-	 */
-	 void c(double a, double b, double c, float d, float e)
-	
-	/**
-	 * 
-	 */
-	 void b(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	 boolean x()
-	
-	/**
-	 * 
-	 */
-	public double j()
-	
-	/**
-	 * 
-	 */
-	 int[] E()
-	
-	/**
-	 * 
-	 */
-	 void f(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public boolean v()
-	
-	/**
-	 * 
-	 */
-	 boolean a(Material a)
-	
-	/**
-	 * 
-	 */
-	public boolean c_()
-	
-	/**
-	 * 
-	 */
-	 void b(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	 void e(Entity a)
-	
-	/**
-	 * 
-	 */
-	 void n()
-	
-	/**
-	 * 
-	 */
-	 EntityItem a(int a, int b, float c)
-	
-	/**
-	 * 
-	 */
-	 int hashCode()
 	
 	/**
 	 * 
@@ -174,12 +39,22 @@ public abstract class EntityBoat extends Entity{
 	/**
 	 * 
 	 */
-	 java.lang.String w()
+	public boolean v()
+	
+	/**
+	 * 
+	 */
+	public boolean c_()
 	
 	/**
 	 * 
 	 */
 	public boolean a(EntityPlayer a)
+	
+	/**
+	 * 
+	 */
+	protected void b(NBTTagCompound a)
 	
 	/**
 	 * 
@@ -194,176 +69,6 @@ public abstract class EntityBoat extends Entity{
 	/**
 	 * 
 	 */
-	 void a(double a, boolean b)
-	
-	/**
-	 * 
-	 */
-	 float a(Entity a)
-	
-	/**
-	 * 
-	 */
-	 Vec3D C()
-	
-	/**
-	 * 
-	 */
-	 boolean r()
-	
-	/**
-	 * 
-	 */
-	 float s()
-	
-	/**
-	 * 
-	 */
-	 boolean b(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 void z()
-	
-	/**
-	 * 
-	 */
-	 double d(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 boolean t()
-	
-	/**
-	 * 
-	 */
-	 void l()
-	
-	/**
-	 * 
-	 */
-	 NBTTagList a(double[] a)
-	
-	/**
-	 * 
-	 */
-	 void o()
-	
-	/**
-	 * 
-	 */
-	 void b(float a, float b)
-	
-	/**
-	 * 
-	 */
-	 void b(int a)
-	
-	/**
-	 * 
-	 */
-	 void D()
-	
-	/**
-	 * 
-	 */
-	 void a(float a, float b, float c)
-	
-	/**
-	 * 
-	 */
-	 void d(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 void a(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	protected void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 double b(Entity a)
-	
-	/**
-	 * 
-	 */
-	 void m()
-	
-	/**
-	 * 
-	 */
-	 NBTTagList a(float[] a)
-	
-	/**
-	 * 
-	 */
-	 void e(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 boolean p()
-	
-	/**
-	 * 
-	 */
-	 boolean y()
-	
-	/**
-	 * 
-	 */
-	 void a(float a, float b)
-	
-	/**
-	 * 
-	 */
-	 double B()
-	
-	/**
-	 * 
-	 */
-	 void c(Entity a)
-	
-	/**
-	 * 
-	 */
-	 boolean equals(java.lang.Object a)
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	 void a(float a)
-	
-	/**
-	 * 
-	 */
-	 EntityItem b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	 void c(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 void u()
-	
-	/**
-	 * 
-	 */
-	 boolean c(NBTTagCompound a)
+	public double j()
 
 }

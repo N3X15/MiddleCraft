@@ -15,12 +15,12 @@ public abstract interface interface IBlockAccess{
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b, int c)
+	public abstract Material c(int a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	public abstract Material c(int a, int b, int c)
+	public abstract int b(int a, int b, int c)
 	
 	/**
 	 * 

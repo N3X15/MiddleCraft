@@ -23,12 +23,12 @@ public abstract class PropertyManager{
 	/**
 	 * 
 	 */
-	public int a(java.lang.String a, int b)
+	public boolean a(java.lang.String a, boolean b)
 	
 	/**
 	 * 
 	 */
-	public boolean a(java.lang.String a, boolean b)
+	public int a(java.lang.String a, int b)
 	
 	/**
 	 * 

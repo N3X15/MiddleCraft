@@ -4,17 +4,6 @@ package net.minecraft.server;
 
 public abstract class Packet13PlayerLookMove extends Packet10Flying{
 	// FIELDS
-	 float f;
-	 boolean g;
-	 double d;
-	 float e;
-	 double b;
-	 double c;
-	 double a;
-	 long j;
-	 boolean k;
-	 boolean h;
-	 boolean i;
 	
 	// METHODS
 	
@@ -26,41 +15,11 @@ public abstract class Packet13PlayerLookMove extends Packet10Flying{
 	/**
 	 * 
 	 */
-	 Packet b(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 int b()
-	
-	/**
-	 * 
-	 */
-	 Packet a(int a)
-	
-	/**
-	 * 
-	 */
-	 void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
 	public int a()
 	
 	/**
 	 * 
 	 */
-	 void a(int a, java.lang.Class b)
-	
-	/**
-	 * 
-	 */
 	public void a(java.io.DataOutputStream a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet a, java.io.DataOutputStream b)
 
 }

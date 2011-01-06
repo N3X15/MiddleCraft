@@ -41,16 +41,16 @@ public abstract class WorldManager{
 	/**
 	 * 
 	 */
-	public void b(Entity a)
-	
-	/**
-	 * 
-	 */
 	public void a(int a, int b, int c, TileEntity d)
 	
 	/**
 	 * 
 	 */
 	public void a(int a, int b, int c, int d, int e, int f)
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a)
 
 }

@@ -20,11 +20,6 @@ public abstract class WorldGenDungeons extends WorldGenerator{
 	/**
 	 * 
 	 */
-	 void a(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
 	private ItemStack a(java.util.Random a)
 
 }

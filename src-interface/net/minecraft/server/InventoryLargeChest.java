@@ -18,22 +18,22 @@ public abstract class InventoryLargeChest{
 	/**
 	 * 
 	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
 	public void a(int a, ItemStack b)
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b)
+	public java.lang.String b()
 	
 	/**
 	 * 
 	 */
 	public int c()
+	
+	/**
+	 * 
+	 */
+	public ItemStack a(int a, int b)
 	
 	/**
 	 * 

@@ -9,8 +9,6 @@ public abstract class Packet60 extends Packet{
 	public double b;
 	public double c;
 	public double a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	
@@ -18,21 +16,6 @@ public abstract class Packet60 extends Packet{
 	 * 
 	 */
 	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 Packet b(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 int b()
-	
-	/**
-	 * 
-	 */
-	 Packet a(int a)
 	
 	/**
 	 * 
@@ -47,16 +30,6 @@ public abstract class Packet60 extends Packet{
 	/**
 	 * 
 	 */
-	 void a(int a, java.lang.Class b)
-	
-	/**
-	 * 
-	 */
 	public void a(java.io.DataOutputStream a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet a, java.io.DataOutputStream b)
 
 }

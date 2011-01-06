@@ -7,8 +7,6 @@ public abstract class Packet103 extends Packet{
 	public int b;
 	public ItemStack c;
 	public int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	

@@ -6,19 +6,10 @@ public abstract class TileEntityMobSpawner extends TileEntity{
 	// FIELDS
 	public java.lang.String f;
 	public double g;
-	 int d;
 	public int e;
-	 int b;
-	 int c;
-	 World a;
 	public double h;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	 void d()
 	
 	/**
 	 * 
@@ -28,22 +19,12 @@ public abstract class TileEntityMobSpawner extends TileEntity{
 	/**
 	 * 
 	 */
-	private void b()
-	
-	/**
-	 * 
-	 */
 	public void b(NBTTagCompound a)
 	
 	/**
 	 * 
 	 */
-	 Packet f()
-	
-	/**
-	 * 
-	 */
-	 TileEntity c(NBTTagCompound a)
+	private void b()
 	
 	/**
 	 * 

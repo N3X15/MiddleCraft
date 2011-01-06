@@ -11,8 +11,6 @@ public abstract class Packet10Flying extends Packet{
 	public double b;
 	public double c;
 	public double a;
-	 long j;
-	 boolean k;
 	public boolean h;
 	public boolean i;
 	

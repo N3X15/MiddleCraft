@@ -4,17 +4,6 @@ package net.minecraft.server;
 
 public abstract class Packet12PlayerLook extends Packet10Flying{
 	// FIELDS
-	 float f;
-	 boolean g;
-	 double d;
-	 float e;
-	 double b;
-	 double c;
-	 double a;
-	 long j;
-	 boolean k;
-	 boolean h;
-	 boolean i;
 	
 	// METHODS
 	

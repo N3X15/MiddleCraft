@@ -11,8 +11,6 @@ public abstract class Packet21PickupSpawn extends Packet{
 	public int b;
 	public int c;
 	public int a;
-	 long j;
-	 boolean k;
 	public int h;
 	public int i;
 	
@@ -22,21 +20,6 @@ public abstract class Packet21PickupSpawn extends Packet{
 	 * 
 	 */
 	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 Packet b(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 int b()
-	
-	/**
-	 * 
-	 */
-	 Packet a(int a)
 	
 	/**
 	 * 
@@ -51,16 +34,6 @@ public abstract class Packet21PickupSpawn extends Packet{
 	/**
 	 * 
 	 */
-	 void a(int a, java.lang.Class b)
-	
-	/**
-	 * 
-	 */
 	public void a(java.io.DataOutputStream a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet a, java.io.DataOutputStream b)
 
 }

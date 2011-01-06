@@ -135,4 +135,8 @@ public class MCClassInfo {
 		
 		return p.replace('.','/')+"/"+name;
 	}
+	public void clearAllDefs() {
+		fieldNames.clear();
+		methodNames.clear();
+	}
 }

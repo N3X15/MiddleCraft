@@ -4,25 +4,7 @@ package net.minecraft.server;
 
 abstract final class StepSoundSand extends StepSound{
 	// FIELDS
-	 float b;
-	 float c;
-	 java.lang.String a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	 float a()
-	
-	/**
-	 * 
-	 */
-	 float b()
-	
-	/**
-	 * 
-	 */
-	 java.lang.String c()
 
 }

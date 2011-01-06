@@ -4,15 +4,6 @@ package net.minecraft.server;
 
 public abstract class Packet33RelEntityMoveLook extends Packet30Entity{
 	// FIELDS
-	 byte f;
-	 boolean g;
-	 byte d;
-	 byte e;
-	 byte b;
-	 byte c;
-	 int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	
@@ -24,41 +15,11 @@ public abstract class Packet33RelEntityMoveLook extends Packet30Entity{
 	/**
 	 * 
 	 */
-	 Packet b(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	 int b()
-	
-	/**
-	 * 
-	 */
-	 void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
 	public int a()
 	
 	/**
 	 * 
 	 */
-	 void a(int a, java.lang.Class b)
-	
-	/**
-	 * 
-	 */
 	public void a(java.io.DataOutputStream a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet a, java.io.DataOutputStream b)
-	
-	/**
-	 * 
-	 */
-	 Packet a(int a)
 
 }

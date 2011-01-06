@@ -29,11 +29,6 @@ public abstract class Packet{
 	/**
 	 * 
 	 */
-	public static Packet a(int a)
-	
-	/**
-	 * 
-	 */
 	public abstract void a(NetHandler a)
 	
 	/**
@@ -49,11 +44,16 @@ public abstract class Packet{
 	/**
 	 * 
 	 */
+	public static void a(Packet a, java.io.DataOutputStream b)
+	
+	/**
+	 * 
+	 */
 	static void a(int a, java.lang.Class b)
 	
 	/**
 	 * 
 	 */
-	public static void a(Packet a, java.io.DataOutputStream b)
+	public static Packet a(int a)
 
 }

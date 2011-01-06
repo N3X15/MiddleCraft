@@ -40,12 +40,12 @@ public abstract class MCHashTable2{
 	/**
 	 * 
 	 */
-	final HashEntry2 c(long a)
+	static int d(long a)
 	
 	/**
 	 * 
 	 */
-	static int d(long a)
+	final HashEntry2 c(long a)
 	
 	/**
 	 * 

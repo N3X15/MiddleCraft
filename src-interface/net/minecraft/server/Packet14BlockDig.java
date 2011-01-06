@@ -9,8 +9,6 @@ public abstract class Packet14BlockDig extends Packet{
 	public int b;
 	public int c;
 	public int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	

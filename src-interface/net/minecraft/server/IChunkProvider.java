@@ -25,12 +25,12 @@ public abstract interface interface IChunkProvider{
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b)
+	public abstract boolean a()
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a()
+	public abstract boolean a(int a, int b)
 	
 	/**
 	 * 

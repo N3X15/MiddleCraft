@@ -27,11 +27,6 @@ public abstract class ChunkLoader{
 	/**
 	 * 
 	 */
-	public static Chunk a(World a, NBTTagCompound b)
-	
-	/**
-	 * 
-	 */
 	public void b(World a, Chunk b)
 	
 	/**
@@ -48,5 +43,10 @@ public abstract class ChunkLoader{
 	 * 
 	 */
 	public void b()
+	
+	/**
+	 * 
+	 */
+	public static Chunk a(World a, NBTTagCompound b)
 
 }

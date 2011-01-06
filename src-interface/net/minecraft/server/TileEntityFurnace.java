@@ -6,11 +6,7 @@ public abstract class TileEntityFurnace extends TileEntity{
 	// FIELDS
 	public int f;
 	public int g;
-	 int d;
 	public int e;
-	 int b;
-	 int c;
-	 World a;
 	private il[] h;
 	
 	// METHODS
@@ -23,7 +19,22 @@ public abstract class TileEntityFurnace extends TileEntity{
 	/**
 	 * 
 	 */
+	private int b(int a)
+	
+	/**
+	 * 
+	 */
+	public void e()
+	
+	/**
+	 * 
+	 */
 	public boolean g()
+	
+	/**
+	 * 
+	 */
+	public void a(int a, ItemStack b)
 	
 	/**
 	 * 
@@ -38,57 +49,22 @@ public abstract class TileEntityFurnace extends TileEntity{
 	/**
 	 * 
 	 */
-	public boolean a_(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 TileEntity c(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public void e()
-	
-	/**
-	 * 
-	 */
-	private int b(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, ItemStack b)
-	
-	/**
-	 * 
-	 */
-	 Packet f()
-	
-	/**
-	 * 
-	 */
 	public void a(NBTTagCompound a)
 	
 	/**
 	 * 
 	 */
-	 void d()
+	public boolean a_(EntityPlayer a)
 	
 	/**
 	 * 
 	 */
 	private boolean i()
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b()
 	
 	/**
 	 * 
@@ -99,6 +75,11 @@ public abstract class TileEntityFurnace extends TileEntity{
 	 * 
 	 */
 	public ItemStack a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a)
 	
 	/**
 	 * 

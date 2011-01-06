@@ -21,12 +21,12 @@ public abstract class CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	public void a()
+	public void a(EntityPlayer a, boolean b)
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a, boolean b)
+	public void a()
 	
 	/**
 	 * 

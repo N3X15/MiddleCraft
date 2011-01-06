@@ -4,66 +4,7 @@ package net.minecraft.server;
 
 public abstract class MobSpawnerDesert extends MobSpawnerBase{
 	// FIELDS
-	 MobSpawnerBase f;
-	 MobSpawnerBase g;
-	 MobSpawnerBase d;
-	 MobSpawnerBase e;
-	 MobSpawnerBase b;
-	 MobSpawnerBase c;
-	 MobSpawnerBase a;
-	 int n;
-	 byte o;
-	 MobSpawnerBase l;
-	 java.lang.String m;
-	 MobSpawnerBase j;
-	 MobSpawnerBase k;
-	 MobSpawnerBase h;
-	 MobSpawnerBase i;
-	 java.lang.Class[] s;
-	 java.lang.Class[] r;
-	 int q;
-	 byte p;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	 MobSpawnerBase a(double a, double b)
-	
-	/**
-	 * 
-	 */
-	 void a()
-	
-	/**
-	 * 
-	 */
-	 java.lang.Class[] a(EnumCreatureType a)
-	
-	/**
-	 * 
-	 */
-	 MobSpawnerBase a(int a)
-	
-	/**
-	 * 
-	 */
-	 MobSpawnerBase b()
-	
-	/**
-	 * 
-	 */
-	 MobSpawnerBase b(int a)
-	
-	/**
-	 * 
-	 */
-	 MobSpawnerBase a(float a, float b)
-	
-	/**
-	 * 
-	 */
-	 MobSpawnerBase a(java.lang.String a)
 
 }

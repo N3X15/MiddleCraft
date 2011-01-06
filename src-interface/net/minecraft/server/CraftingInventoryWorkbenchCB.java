@@ -4,10 +4,6 @@ package net.minecraft.server;
 
 public abstract class CraftingInventoryWorkbenchCB extends CraftingInventoryCB{
 	// FIELDS
-	 int f;
-	 java.util.List g;
-	 java.util.List d;
-	 java.util.List e;
 	public IInventory b;
 	private World c;
 	public InventoryCrafting a;

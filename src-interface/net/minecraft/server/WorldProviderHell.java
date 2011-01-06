@@ -4,13 +4,6 @@ package net.minecraft.server;
 
 public abstract class WorldProviderHell extends WorldProvider{
 	// FIELDS
-	 float[] f;
-	 int g;
-	 boolean d;
-	 boolean e;
-	 WorldChunkManager b;
-	 boolean c;
-	 World a;
 	
 	// METHODS
 	

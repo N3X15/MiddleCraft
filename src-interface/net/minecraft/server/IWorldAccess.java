@@ -40,12 +40,12 @@ public abstract interface interface IWorldAccess{
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a)
+	public abstract void a(int a, int b, int c, TileEntity d)
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, TileEntity d)
+	public abstract void b(Entity a)
 	
 	/**
 	 * 

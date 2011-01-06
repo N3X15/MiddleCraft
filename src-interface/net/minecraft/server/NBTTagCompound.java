@@ -11,12 +11,12 @@ public abstract class NBTTagCompound extends NBTBase{
 	/**
 	 * 
 	 */
-	public java.lang.String h(java.lang.String a)
+	public void a(java.lang.String a, long b)
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, long b)
+	public java.lang.String h(java.lang.String a)
 	
 	/**
 	 * 
@@ -41,11 +41,6 @@ public abstract class NBTTagCompound extends NBTBase{
 	/**
 	 * 
 	 */
-	 NBTBase m(java.lang.String a)
-	
-	/**
-	 * 
-	 */
 	public void a(java.lang.String a, byte[] b)
 	
 	/**
@@ -56,17 +51,12 @@ public abstract class NBTTagCompound extends NBTBase{
 	/**
 	 * 
 	 */
-	 NBTBase a(byte a)
+	public void a(java.lang.String a, short b)
 	
 	/**
 	 * 
 	 */
 	public NBTTagCompound j(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.lang.String a, short b)
 	
 	/**
 	 * 
@@ -81,32 +71,17 @@ public abstract class NBTTagCompound extends NBTBase{
 	/**
 	 * 
 	 */
-	 java.lang.String b(byte a)
-	
-	/**
-	 * 
-	 */
-	 NBTBase b(java.io.DataInput a)
-	
-	/**
-	 * 
-	 */
-	 java.lang.String c()
-	
-	/**
-	 * 
-	 */
 	public boolean a(java.lang.String a)
 	
 	/**
 	 * 
 	 */
-	public double g(java.lang.String a)
+	public void a(java.lang.String a, byte b)
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, byte b)
+	public double g(java.lang.String a)
 	
 	/**
 	 * 
@@ -142,11 +117,6 @@ public abstract class NBTTagCompound extends NBTBase{
 	 * 
 	 */
 	public void a(java.lang.String a, java.lang.String b)
-	
-	/**
-	 * 
-	 */
-	 void a(NBTBase a, java.io.DataOutput b)
 	
 	/**
 	 * 

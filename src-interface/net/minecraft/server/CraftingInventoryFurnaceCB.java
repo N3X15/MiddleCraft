@@ -4,10 +4,6 @@ package net.minecraft.server;
 
 public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB{
 	// FIELDS
-	 int f;
-	 java.util.List g;
-	 java.util.List d;
-	 java.util.List e;
 	private int b;
 	private int c;
 	private TileEntityFurnace a;
@@ -18,22 +14,7 @@ public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	 void a(Slot a)
-	
-	/**
-	 * 
-	 */
 	public void a()
-	
-	/**
-	 * 
-	 */
-	 void a(EntityPlayer a, boolean b)
-	
-	/**
-	 * 
-	 */
-	 Slot a(int a)
 	
 	/**
 	 * 
@@ -43,31 +24,6 @@ public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	 boolean c(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	 Slot a(IInventory a, int b)
-	
-	/**
-	 * 
-	 */
-	 ItemStack a(int a, int b, EntityPlayer c)
-	
-	/**
-	 * 
-	 */
 	public boolean b(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	 void a(IInventory a)
-	
-	/**
-	 * 
-	 */
-	 void a(EntityPlayer a)
 
 }

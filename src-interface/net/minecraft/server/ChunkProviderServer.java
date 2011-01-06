@@ -17,32 +17,17 @@ public abstract class ChunkProviderServer{
 	/**
 	 * 
 	 */
+	public boolean a(boolean a, IProgressUpdate b)
+	
+	/**
+	 * 
+	 */
 	private Chunk e(int a, int b)
 	
 	/**
 	 * 
 	 */
 	public Chunk b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void c(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public void a(IChunkProvider a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean a(boolean a, IProgressUpdate b)
 	
 	/**
 	 * 
@@ -67,6 +52,21 @@ public abstract class ChunkProviderServer{
 	/**
 	 * 
 	 */
+	public boolean a()
+	
+	/**
+	 * 
+	 */
+	public void c(int a, int b)
+	
+	/**
+	 * 
+	 */
 	public boolean a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public void a(IChunkProvider a, int b, int c)
 
 }

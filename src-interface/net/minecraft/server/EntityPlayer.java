@@ -4,108 +4,9 @@ package net.minecraft.server;
 
 public abstract class EntityPlayer extends EntityLiving{
 	// FIELDS
-	 boolean D;
-	 boolean E;
-	 boolean F;
-	 boolean G;
-	 boolean A;
-	 boolean B;
-	 boolean C;
-	 float L;
-	 boolean M;
-	 float N;
-	 double O;
-	 float H;
-	 float I;
-	 float J;
-	 float K;
-	 float U;
-	 boolean T;
-	 java.util.Random W;
-	 boolean V;
-	 double Q;
-	 double P;
-	 float S;
-	 float R;
-	 int Y;
-	 int X;
-	 int Z;
-	 int g;
-	private int a;
-	 double n;
-	 double o;
-	 World l;
-	 double m;
-	 Entity j;
-	 Entity k;
-	 double h;
-	 boolean i;
-	 float w;
-	 float v;
-	 double u;
-	 double t;
-	 double s;
-	 double r;
-	 double q;
-	 double p;
-	 AxisAlignedBB z;
-	 float y;
-	 float x;
-	 float bz;
-	 int bw;
-	 float bv;
-	 float by;
-	 int bx;
-	 double bs;
-	 double br;
-	 double bu;
-	 double bt;
-	 float bn;
-	 float bo;
-	 int bp;
-	 double bq;
-	 boolean bj;
-	 int bk;
-	 float bl;
-	 float bm;
-	 int bf;
-	 int bg;
-	 float bh;
-	 float bi;
-	 int bb;
-	 int bc;
-	 int bd;
-	 float be;
-	 float aZ;
-	 float aY;
-	 float bA;
-	 boolean aR;
-	 java.lang.String aQ;
-	 java.lang.String aT;
-	 float aS;
-	 int aV;
-	 float aU;
-	 boolean aX;
-	 float aW;
-	 float aI;
-	 float aJ;
-	 float aK;
-	 float aL;
-	 float aM;
-	 float aN;
-	 float aO;
-	 boolean aP;
-	public double aA;
-	public double aB;
-	public double aC;
-	public double aD;
-	public EntityFish aE;
-	 int aF;
-	 float aG;
-	 float aH;
 	public double az;
 	public double ay;
-	 int ba;
+	private int a;
 	public float at;
 	public float as;
 	public int ar;
@@ -114,193 +15,36 @@ public abstract class EntityPlayer extends EntityLiving{
 	public java.lang.String aw;
 	public int av;
 	public boolean au;
-	 int ai;
 	public CraftingInventoryCB ao;
 	public CraftingInventoryCB ap;
 	public InventoryPlayer an;
-	 int ac;
-	 float bD;
-	 int ad;
-	 int aa;
-	 boolean bB;
-	 boolean ab;
-	 float bC;
-	 int ag;
-	 int ah;
-	 boolean ae;
-	 boolean af;
+	public double aA;
+	public double aB;
+	public double aC;
+	public double aD;
+	public EntityFish aE;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	 double e(double a, double b, double c)
+	public float s()
 	
 	/**
 	 * 
 	 */
-	 AxisAlignedBB d(Entity a)
+	public void h(Entity a)
 	
 	/**
 	 * 
 	 */
-	 void b(double a, double b, double c, float d, float e)
+	public boolean b(Block a)
 	
 	/**
 	 * 
 	 */
-	 void c(float a, float b)
-	
-	/**
-	 * 
-	 */
-	 void A()
-	
-	/**
-	 * 
-	 */
-	 void c(double a, double b, double c, float d, float e)
-	
-	/**
-	 * 
-	 */
-	public void b(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	 double j()
-	
-	/**
-	 * 
-	 */
-	 int[] E()
-	
-	/**
-	 * 
-	 */
-	 void f(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 boolean v()
-	
-	/**
-	 * 
-	 */
-	 void b(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	 void e(Entity a)
-	
-	/**
-	 * 
-	 */
-	 void a(Entity a, int b, double c, double d)
-	
-	/**
-	 * 
-	 */
-	 void n()
-	
-	/**
-	 * 
-	 */
-	 EntityItem a(int a, int b, float c)
-	
-	/**
-	 * 
-	 */
-	 int hashCode()
-	
-	/**
-	 * 
-	 */
-	public void b(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	 java.lang.String w()
-	
-	/**
-	 * 
-	 */
-	 AxisAlignedBB q()
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 boolean a()
-	
-	/**
-	 * 
-	 */
-	 int g()
-	
-	/**
-	 * 
-	 */
-	public void f(Entity a)
-	
-	/**
-	 * 
-	 */
-	 Vec3D C()
-	
-	/**
-	 * 
-	 */
-	 float a(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void N()
-	
-	/**
-	 * 
-	 */
-	 Vec3D c(float a)
-	
-	/**
-	 * 
-	 */
-	 boolean b(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 int b()
-	
-	/**
-	 * 
-	 */
-	 java.lang.String e()
-	
-	/**
-	 * 
-	 */
-	 double d(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 boolean t()
+	public void z()
 	
 	/**
 	 * 
@@ -315,6 +59,11 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
+	public void b(Entity a, int b)
+	
+	/**
+	 * 
+	 */
 	public void G()
 	
 	/**
@@ -325,17 +74,7 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	 int i()
-	
-	/**
-	 * 
-	 */
-	 java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	 void o()
+	public void a(ItemStack a, boolean b)
 	
 	/**
 	 * 
@@ -345,137 +84,7 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	 void c(int a)
-	
-	/**
-	 * 
-	 */
-	 void b(float a, float b)
-	
-	/**
-	 * 
-	 */
-	 float h()
-	
-	/**
-	 * 
-	 */
-	 void b(int a)
-	
-	/**
-	 * 
-	 */
-	 void D()
-	
-	/**
-	 * 
-	 */
-	 void d(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 void O()
-	
-	/**
-	 * 
-	 */
-	 void a(float a, float b, float c)
-	
-	/**
-	 * 
-	 */
-	 void a(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 void e(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 boolean y()
-	
-	/**
-	 * 
-	 */
-	 void Q()
-	
-	/**
-	 * 
-	 */
-	public double B()
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	 void a(float a)
-	
-	/**
-	 * 
-	 */
-	 EntityItem b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void g(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void a(TileEntitySign a)
-	
-	/**
-	 * 
-	 */
-	 void P()
-	
-	/**
-	 * 
-	 */
-	 boolean c(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 java.lang.String d()
-	
-	/**
-	 * 
-	 */
-	 float b(float a)
-	
-	/**
-	 * 
-	 */
-	 boolean x()
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a, boolean b)
-	
-	/**
-	 * 
-	 */
-	 boolean i(Entity a)
-	
-	/**
-	 * 
-	 */
-	 boolean c_()
-	
-	/**
-	 * 
-	 */
-	 boolean a(Material a)
+	public void b(NBTTagCompound a)
 	
 	/**
 	 * 
@@ -495,7 +104,17 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	 boolean a(EntityPlayer a)
+	public void L()
+	
+	/**
+	 * 
+	 */
+	public void b(ItemStack a)
+	
+	/**
+	 * 
+	 */
+	public boolean a(Entity a, int b)
 	
 	/**
 	 * 
@@ -505,92 +124,12 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	 void b(Entity a, float b)
-	
-	/**
-	 * 
-	 */
-	 void a(double a, boolean b)
-	
-	/**
-	 * 
-	 */
-	public void H()
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	 boolean r()
-	
-	/**
-	 * 
-	 */
-	public float s()
-	
-	/**
-	 * 
-	 */
-	public boolean b(Block a)
-	
-	/**
-	 * 
-	 */
-	public void h(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void z()
-	
-	/**
-	 * 
-	 */
-	 NBTTagList a(double[] a)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	 double b(Entity a)
-	
-	/**
-	 * 
-	 */
-	 void m()
-	
-	/**
-	 * 
-	 */
-	 NBTTagList a(float[] a)
-	
-	/**
-	 * 
-	 */
-	public void L()
-	
-	/**
-	 * 
-	 */
-	 boolean p()
-	
-	/**
-	 * 
-	 */
-	 void a(float a, float b)
-	
-	/**
-	 * 
-	 */
 	protected void c()
+	
+	/**
+	 * 
+	 */
+	public double B()
 	
 	/**
 	 * 
@@ -605,12 +144,7 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	 boolean equals(java.lang.Object a)
-	
-	/**
-	 * 
-	 */
-	 void c(Entity a)
+	public void a(NBTTagCompound a)
 	
 	/**
 	 * 
@@ -620,16 +154,36 @@ public abstract class EntityPlayer extends EntityLiving{
 	/**
 	 * 
 	 */
-	 void c(double a, double b, double c)
+	public void b_()
 	
 	/**
 	 * 
 	 */
-	 void u()
+	public void f(Entity a)
 	
 	/**
 	 * 
 	 */
-	 boolean d_()
+	public void g(Entity a)
+	
+	/**
+	 * 
+	 */
+	public void a(TileEntitySign a)
+	
+	/**
+	 * 
+	 */
+	public void N()
+	
+	/**
+	 * 
+	 */
+	public void H()
+	
+	/**
+	 * 
+	 */
+	public void a(ItemStack a)
 
 }

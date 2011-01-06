@@ -5,8 +5,6 @@ package net.minecraft.server;
 public abstract class Packet16BlockItemSwitch extends Packet{
 	// FIELDS
 	public int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	

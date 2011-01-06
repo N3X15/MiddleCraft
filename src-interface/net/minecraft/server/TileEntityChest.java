@@ -4,11 +4,7 @@ package net.minecraft.server;
 
 public abstract class TileEntityChest extends TileEntity{
 	// FIELDS
-	 int d;
 	private il[] e;
-	 int b;
-	 int c;
-	 World a;
 	
 	// METHODS
 	

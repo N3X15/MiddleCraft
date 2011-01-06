@@ -59,12 +59,12 @@ public abstract class Chunk{
 	/**
 	 * 
 	 */
-	private void g(int a, int b, int c)
+	public void b(int a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, int d)
+	private void g(int a, int b, int c)
 	
 	/**
 	 * 
@@ -174,16 +174,16 @@ public abstract class Chunk{
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, TileEntity d)
-	
-	/**
-	 * 
-	 */
 	public boolean a(int a, int b)
 	
 	/**
 	 * 
 	 */
 	public int c(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c, TileEntity d)
 
 }

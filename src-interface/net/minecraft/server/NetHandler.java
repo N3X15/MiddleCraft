@@ -35,12 +35,12 @@ public abstract class NetHandler{
 	/**
 	 * 
 	 */
-	public void a(Packet15Place a)
+	public void a(Packet100 a)
 	
 	/**
 	 * 
 	 */
-	public void a(Packet100 a)
+	public void a(Packet15Place a)
 	
 	/**
 	 * 
@@ -60,12 +60,12 @@ public abstract class NetHandler{
 	/**
 	 * 
 	 */
-	public void a(Packet14BlockDig a)
+	public void a(Packet101 a)
 	
 	/**
 	 * 
 	 */
-	public void a(Packet101 a)
+	public void a(Packet14BlockDig a)
 	
 	/**
 	 * 
@@ -165,6 +165,11 @@ public abstract class NetHandler{
 	/**
 	 * 
 	 */
+	public void a(Packet4UpdateTime a)
+	
+	/**
+	 * 
+	 */
 	public void a(Packet22Collect a)
 	
 	/**
@@ -175,17 +180,7 @@ public abstract class NetHandler{
 	/**
 	 * 
 	 */
-	public void a(Packet4UpdateTime a)
-	
-	/**
-	 * 
-	 */
 	public void a(Packet38 a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet255KickDisconnect a)
 	
 	/**
 	 * 
@@ -196,6 +191,11 @@ public abstract class NetHandler{
 	 * 
 	 */
 	public void a(Packet50PreChunk a)
+	
+	/**
+	 * 
+	 */
+	public void a(Packet255KickDisconnect a)
 	
 	/**
 	 * 

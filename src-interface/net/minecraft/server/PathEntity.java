@@ -13,12 +13,12 @@ public abstract class PathEntity{
 	/**
 	 * 
 	 */
-	public void a()
+	public Vec3D a(Entity a)
 	
 	/**
 	 * 
 	 */
-	public Vec3D a(Entity a)
+	public void a()
 	
 	/**
 	 * 

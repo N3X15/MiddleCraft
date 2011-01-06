@@ -26,36 +26,6 @@ public abstract class NBTTagShort extends NBTBase{
 	/**
 	 * 
 	 */
-	 NBTBase m(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	 NBTBase a(byte a)
-	
-	/**
-	 * 
-	 */
-	 void a(NBTBase a, java.io.DataOutput b)
-	
-	/**
-	 * 
-	 */
 	public byte a()
-	
-	/**
-	 * 
-	 */
-	 java.lang.String b(byte a)
-	
-	/**
-	 * 
-	 */
-	 java.lang.String c()
-	
-	/**
-	 * 
-	 */
-	 NBTBase b(java.io.DataInput a)
 
 }

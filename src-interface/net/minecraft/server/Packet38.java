@@ -6,8 +6,6 @@ public abstract class Packet38 extends Packet{
 	// FIELDS
 	public byte b;
 	public int a;
-	 long j;
-	 boolean k;
 	
 	// METHODS
 	

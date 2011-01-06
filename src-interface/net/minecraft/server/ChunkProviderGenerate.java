@@ -33,7 +33,17 @@ public abstract class ChunkProviderGenerate{
 	/**
 	 * 
 	 */
+	public boolean a(boolean a, IProgressUpdate b)
+	
+	/**
+	 * 
+	 */
 	private double[] a(double[] a, int b, int c, int d, int e, int f, int g)
+	
+	/**
+	 * 
+	 */
+	public Chunk b(int a, int b)
 	
 	/**
 	 * 
@@ -43,7 +53,7 @@ public abstract class ChunkProviderGenerate{
 	/**
 	 * 
 	 */
-	public Chunk b(int a, int b)
+	public boolean b()
 	
 	/**
 	 * 
@@ -58,21 +68,11 @@ public abstract class ChunkProviderGenerate{
 	/**
 	 * 
 	 */
-	public void a(IChunkProvider a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean a(boolean a, IProgressUpdate b)
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
 	public boolean a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public void a(IChunkProvider a, int b, int c)
 
 }

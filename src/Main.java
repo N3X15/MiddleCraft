@@ -51,7 +51,7 @@ public class Main {
 	public static void main(String[] arguments) throws Throwable {
 
 
-		// Get net.minecraft.server interfaces.
+		// Get net.minecraft.server interfaces and regenerate clean classmappings. Only use on new server updates.
 		if(arguments.length==1 && arguments[0].equals("GetServerInterfaces"))
 			getServerInterfaces=true;
 
@@ -157,6 +157,7 @@ public class Main {
 				MCClassInfo ci = SmartReflector.classes.get(className);
 				CtClass mcClass = mcClassPool.get(className);
 				ci.setClassModifiers(mcClass.getModifiers());
+				ci.clearAllDefs(); // Remapping.
 				for(CtField fld : mcClass.getDeclaredFields()) {
 					MCFieldInfo f = ci.getField(fld.getName());
 					if(f==null)
@@ -177,6 +178,7 @@ public class Main {
 					ci.setMethod(m);
 				}
 				ci.superClass=mcClass.getSuperclass().getName();
+				
 				File dir = new File("src-interface/net/minecraft/server/");
 				dir.mkdirs();
 				File f = new File(dir, newClassName+".java");

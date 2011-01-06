@@ -4,8 +4,6 @@ package net.minecraft.server;
 
 public abstract class MapGenCaves extends MapGenBase{
 	// FIELDS
-	 java.util.Random b;
-	 int a;
 	
 	// METHODS
 	
@@ -17,16 +15,11 @@ public abstract class MapGenCaves extends MapGenBase{
 	/**
 	 * 
 	 */
-	 void a(IChunkProvider a, World b, int c, int d, byte[] e)
+	protected void a(int a, int b, byte[] c, double d, double e, double f, float g, float h, float i, int j, int k, double l)
 	
 	/**
 	 * 
 	 */
 	protected void a(int a, int b, byte[] c, double d, double e, double f)
-	
-	/**
-	 * 
-	 */
-	protected void a(int a, int b, byte[] c, double d, double e, double f, float g, float h, float i, int j, int k, double l)
 
 }

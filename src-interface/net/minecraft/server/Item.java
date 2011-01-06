@@ -35,7 +35,7 @@ public abstract class Item{
 	public static Item d;
 	public static Item e;
 	protected static java.util.Random b;
-	public static Item[] c;
+	public static gm[] c;
 	private java.lang.String a;
 	public static Item n;
 	public static Item o;
@@ -135,26 +135,6 @@ public abstract class Item{
 	/**
 	 * 
 	 */
-	public Item d()
-	
-	/**
-	 * 
-	 */
-	public float a(ItemStack a, Block b)
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public Item a(int a, int b)
-	
-	/**
-	 * 
-	 */
 	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
 	
 	/**
@@ -175,6 +155,11 @@ public abstract class Item{
 	/**
 	 * 
 	 */
+	public Item d()
+	
+	/**
+	 * 
+	 */
 	public int a(Entity a)
 	
 	/**
@@ -185,6 +170,21 @@ public abstract class Item{
 	/**
 	 * 
 	 */
+	public void a(ItemStack a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	public float a(ItemStack a, Block b)
+	
+	/**
+	 * 
+	 */
 	public void b(ItemStack a, EntityLiving b)
+	
+	/**
+	 * 
+	 */
+	public Item a(int a, int b)
 
 }

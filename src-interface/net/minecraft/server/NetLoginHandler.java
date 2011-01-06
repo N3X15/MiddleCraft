@@ -19,62 +19,7 @@ public abstract class NetLoginHandler extends NetHandler{
 	/**
 	 * 
 	 */
-	 void a(Packet5PlayerInventory a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet100 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet53BlockChange a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet101 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet6SpawnPosition a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet105 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet52MultiBlockChange a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet30Entity a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet23VehicleSpawn a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet9 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet21PickupSpawn a)
+	public void a(Packet2Handshake a)
 	
 	/**
 	 * 
@@ -84,112 +29,7 @@ public abstract class NetLoginHandler extends NetHandler{
 	/**
 	 * 
 	 */
-	 void a(Packet106 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet103 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet104 a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet7 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet60 a)
-	
-	/**
-	 * 
-	 */
-	static java.lang.String a(NetLoginHandler a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet51MapChunk a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet38 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet50PreChunk a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet16BlockItemSwitch a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet255KickDisconnect a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet29DestroyEntity a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet2Handshake a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet39 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet130 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet15Place a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet28 a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet3Chat a)
-	
-	/**
-	 * 
-	 */
-	static Packet1Login a(NetLoginHandler a, Packet1Login b)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet14BlockDig a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet18ArmAnimation a)
+	public void a(java.lang.String a)
 	
 	/**
 	 * 
@@ -199,42 +39,12 @@ public abstract class NetLoginHandler extends NetHandler{
 	/**
 	 * 
 	 */
-	public void a(Packet a)
+	public void a(Packet1Login a)
 	
 	/**
 	 * 
 	 */
-	 void a(Packet102 a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet24MobSpawn a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet10Flying a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet20NamedEntitySpawn a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet4UpdateTime a)
-	
-	/**
-	 * 
-	 */
-	 void a(Packet22Collect a)
+	static Packet1Login a(NetLoginHandler a, Packet1Login b)
 	
 	/**
 	 * 
@@ -244,11 +54,16 @@ public abstract class NetLoginHandler extends NetHandler{
 	/**
 	 * 
 	 */
-	 void a(Packet34EntityTeleport a)
+	public void a(Packet a)
 	
 	/**
 	 * 
 	 */
-	 void a(Packet8 a)
+	public void b(Packet1Login a)
+	
+	/**
+	 * 
+	 */
+	static java.lang.String a(NetLoginHandler a)
 
 }

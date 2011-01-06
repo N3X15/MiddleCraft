@@ -5,11 +5,7 @@ package net.minecraft.server;
 public abstract class TileEntitySign extends TileEntity{
 	// FIELDS
 	public int f;
-	 int d;
 	public java.lang.String[] e;
-	 int b;
-	 int c;
-	 World a;
 	
 	// METHODS
 	

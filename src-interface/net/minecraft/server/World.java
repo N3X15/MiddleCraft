@@ -54,7 +54,7 @@ public abstract class World{
 	/**
 	 * 
 	 */
-	public int a(float a)
+	public void f(int a, int b, int c, int d)
 	
 	/**
 	 * 
@@ -64,12 +64,37 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public int e(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public int a(float a)
+	
+	/**
+	 * 
+	 */
+	public float b(float a)
+	
+	/**
+	 * 
+	 */
 	public float a(Vec3D a, AxisAlignedBB b)
 	
 	/**
 	 * 
 	 */
+	public EntityPlayer a(Entity a, double b)
+	
+	/**
+	 * 
+	 */
 	public void d(Entity a)
+	
+	/**
+	 * 
+	 */
+	public void b(EnumSkyBlock a, int b, int c, int d, int e)
 	
 	/**
 	 * 
@@ -84,12 +109,17 @@ public abstract class World{
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, int b, int c, int d)
+	public int a(java.lang.Class a)
 	
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, int d)
+	public void g(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, int b, int c, int d)
 	
 	/**
 	 * 
@@ -99,7 +129,22 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public void b(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public void h(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
 	public Explosion a(Entity a, double b, double c, double d, float e, boolean f)
+	
+	/**
+	 * 
+	 */
+	public int a(EnumSkyBlock a, int b, int c, int d)
 	
 	/**
 	 * 
@@ -114,257 +159,17 @@ public abstract class World{
 	/**
 	 * 
 	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b)
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a)
-	
-	/**
-	 * 
-	 */
-	public boolean c(AxisAlignedBB a)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void a(IWorldAccess a)
-	
-	/**
-	 * 
-	 */
-	public boolean j(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean a(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void f(Entity a)
-	
-	/**
-	 * 
-	 */
-	public boolean d()
-	
-	/**
-	 * 
-	 */
-	protected void e(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public byte[] c(int a, int b, int c, int d, int e, int f)
-	
-	/**
-	 * 
-	 */
-	protected void scheduleBlockUpdate()
-	
-	/**
-	 * 
-	 */
-	public java.util.List b(Entity a, AxisAlignedBB b)
-	
-	/**
-	 * 
-	 */
-	public boolean b(int a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	private boolean f(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void h()
-	
-	/**
-	 * 
-	 */
-	private void i()
-	
-	/**
-	 * 
-	 */
-	public int d(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public boolean j(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int i(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean a(AxisAlignedBB a, Material b, Entity c)
-	
-	/**
-	 * 
-	 */
-	public boolean o(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean f(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public EntityPlayer a(double a, double b, double c, double d)
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	public boolean d(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public WorldChunkManager a()
-	
-	/**
-	 * 
-	 */
-	public boolean d(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b, boolean c)
-	
-	/**
-	 * 
-	 */
-	public boolean c(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(boolean a)
-	
-	/**
-	 * 
-	 */
-	public Material c(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	private void k(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c, java.lang.String d, float e, float f)
-	
-	/**
-	 * 
-	 */
-	public void a(boolean a, IProgressUpdate b)
-	
-	/**
-	 * 
-	 */
-	public void a(EnumSkyBlock a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public void b(int a, int b, int c, TileEntity d)
-	
-	/**
-	 * 
-	 */
-	public void f()
-	
-	/**
-	 * 
-	 */
-	public int b(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public TileEntity l(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public void f(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int e(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public float b(float a)
-	
-	/**
-	 * 
-	 */
-	public EntityPlayer a(Entity a, double b)
-	
-	/**
-	 * 
-	 */
-	public void b(EnumSkyBlock a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public int a(java.lang.Class a)
-	
-	/**
-	 * 
-	 */
-	public void g(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void h(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(EnumSkyBlock a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
 	public boolean a(int a, int b, int c, int d, int e, int f)
 	
 	/**
 	 * 
 	 */
 	public void e()
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(Vec3D a, Vec3D b)
 	
 	/**
 	 * 
@@ -384,7 +189,17 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public boolean a(Entity a)
+	
+	/**
+	 * 
+	 */
 	public PathEntity a(Entity a, Entity b, float c)
+	
+	/**
+	 * 
+	 */
+	public boolean c(AxisAlignedBB a)
 	
 	/**
 	 * 
@@ -394,12 +209,7 @@ public abstract class World{
 	/**
 	 * 
 	 */
-	public boolean b(AxisAlignedBB a)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, int b, int c)
+	public int a(int a, int b)
 	
 	/**
 	 * 
@@ -409,7 +219,42 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public boolean b(AxisAlignedBB a)
+	
+	/**
+	 * 
+	 */
+	public void a(IWorldAccess a)
+	
+	/**
+	 * 
+	 */
+	public int a(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	public boolean j(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
 	public java.util.List a(java.lang.Class a, AxisAlignedBB b)
+	
+	/**
+	 * 
+	 */
+	public boolean d()
+	
+	/**
+	 * 
+	 */
+	public void f(Entity a)
 	
 	/**
 	 * 
@@ -419,7 +264,47 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	protected void e(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public byte[] c(int a, int b, int c, int d, int e, int f)
+	
+	/**
+	 * 
+	 */
+	protected void g()
+	
+	/**
+	 * 
+	 */
+	public java.util.List b(Entity a, AxisAlignedBB b)
+	
+	/**
+	 * 
+	 */
 	public void a(int a, int b, int c, TileEntity d)
+	
+	/**
+	 * 
+	 */
+	public boolean b(int a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	public void h()
+	
+	/**
+	 * 
+	 */
+	private boolean f(int a, int b)
+	
+	/**
+	 * 
+	 */
+	private void i()
 	
 	/**
 	 * 
@@ -429,7 +314,22 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public boolean j(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public int d(int a, int b)
+	
+	/**
+	 * 
+	 */
 	public void a(Entity a, boolean b)
+	
+	/**
+	 * 
+	 */
+	public int i(int a, int b, int c)
 	
 	/**
 	 * 
@@ -439,7 +339,22 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public boolean a(AxisAlignedBB a, Material b, Entity c)
+	
+	/**
+	 * 
+	 */
 	protected void b(Entity a)
+	
+	/**
+	 * 
+	 */
+	public boolean o(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	public boolean f(int a, int b, int c)
 	
 	/**
 	 * 
@@ -449,7 +364,37 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public EntityPlayer a(double a, double b, double c, double d)
+	
+	/**
+	 * 
+	 */
+	public boolean d(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
 	public void a(java.lang.String a, double b, double c, double d, double e, double f, double g)
+	
+	/**
+	 * 
+	 */
+	public boolean b()
+	
+	/**
+	 * 
+	 */
+	public WorldChunkManager a()
+	
+	/**
+	 * 
+	 */
+	public boolean d(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(Vec3D a, Vec3D b, boolean c)
 	
 	/**
 	 * 
@@ -479,7 +424,22 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public boolean c(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a)
+	
+	/**
+	 * 
+	 */
 	public void c()
+	
+	/**
+	 * 
+	 */
+	public Material c(int a, int b, int c)
 	
 	/**
 	 * 
@@ -494,7 +454,12 @@ public abstract class World{
 	/**
 	 * 
 	 */
-	public boolean h(int a, int b, int c)
+	private void k(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	public void a(double a, double b, double c, java.lang.String d, float e, float f)
 	
 	/**
 	 * 
@@ -504,7 +469,27 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public boolean h(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	public void a(boolean a, IProgressUpdate b)
+	
+	/**
+	 * 
+	 */
 	public PathEntity a(Entity a, int b, int c, int d, float e)
+	
+	/**
+	 * 
+	 */
+	public void a(EnumSkyBlock a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	public void b(int a, int b, int c, TileEntity d)
 	
 	/**
 	 * 
@@ -519,6 +504,21 @@ public abstract class World{
 	/**
 	 * 
 	 */
+	public void f()
+	
+	/**
+	 * 
+	 */
 	public void a(Entity a, byte b)
+	
+	/**
+	 * 
+	 */
+	public int b(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	public TileEntity l(int a, int b, int c)
 
 }
