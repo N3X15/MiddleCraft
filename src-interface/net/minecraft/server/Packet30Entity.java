@@ -2,36 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet30Entity extends Packet{
+public abstract class Packet30Entity extends NBTTagString{
 	// FIELDS
-	public byte f;
-	public boolean g;
-	public byte d;
-	public byte e;
-	public byte b;
-	public byte c;
-	public int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
 	 */
-	public void a(java.io.DataInputStream a)
+	protected boolean canThisPlantGrowOnThisBlockID(int a)
 	
 	/**
-	 * 
+	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
 	 */
-	public void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public boolean canBlockStay(Packet17AddToInventory a, int b, int c, int d)
 
 }

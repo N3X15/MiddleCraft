@@ -11,11 +11,11 @@ abstract class RecipeSorter{
 	/**
 	 * 
 	 */
-	public volatile int compare(java.lang.Object a, java.lang.Object b)
+	public int a(CraftingRecipe a, CraftingRecipe b)
 	
 	/**
 	 * 
 	 */
-	public int a(CraftingRecipe a, CraftingRecipe b)
+	public volatile int compare(java.lang.Object a, java.lang.Object b)
 
 }

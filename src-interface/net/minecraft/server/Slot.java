@@ -4,38 +4,13 @@ package net.minecraft.server;
 
 public abstract class Slot{
 	// FIELDS
-	public int d;
-	public int e;
+	private final int a;
 	private final IInventory b;
 	public int c;
-	private final int a;
+	public int d;
+	public int e;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void d()
-	
-	/**
-	 * 
-	 */
-	public void b(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public ItemStack c()
-	
-	/**
-	 * 
-	 */
-	public boolean a(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public void b()
 	
 	/**
 	 * 
@@ -50,6 +25,31 @@ public abstract class Slot{
 	/**
 	 * 
 	 */
+	public boolean a(ItemStack a)
+	
+	/**
+	 * 
+	 */
 	public boolean a(IInventory a, int b)
+	
+	/**
+	 * 
+	 */
+	public void b()
+	
+	/**
+	 * 
+	 */
+	public void b(ItemStack a)
+	
+	/**
+	 * 
+	 */
+	public ItemStack c()
+	
+	/**
+	 * 
+	 */
+	public void d()
 
 }

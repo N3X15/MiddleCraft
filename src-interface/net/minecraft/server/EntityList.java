@@ -2,38 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityList{
+public abstract class EntityList extends BlockStep{
 	// FIELDS
-	private static java.util.Map d;
-	private static java.util.Map b;
-	private static java.util.Map c;
-	private static java.util.Map a;
+	public int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public static Entity a(NBTTagCompound a, World b)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public static Entity a(java.lang.String a, World b)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	private static void a(java.lang.Class a, java.lang.String b, int c)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public static java.lang.String b(Entity a)
-	
-	/**
-	 * 
-	 */
-	public static int a(Entity a)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

@@ -2,76 +2,37 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class MinecartTrackLogic{
+public abstract class MinecartTrackLogic extends MaterialTransparent{
 	// FIELDS
-	private int f;
-	private java.util.List g;
-	private int d;
-	private int e;
-	private World b;
-	private int c;
-	final BlockMinecartTrack a;
+	private EnumCreatureType e;
+	private double f;
+	private double g;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	private boolean c(int a, int b, int c)
+	public EnumCreatureType a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	private void d(MinecartTrackLogic a)
+	public jq[] a(int a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	private void a()
+	public EnumCreatureType a(lk a)
 	
 	/**
-	 * 
+	 * Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length
 	 */
-	private boolean c(MinecartTrackLogic a)
+	public double[] getTemperatures(double[] a, int b, int c, int d, int e)
 	
 	/**
-	 * 
+	 * Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
 	 */
-	static int a(MinecartTrackLogic a)
-	
-	/**
-	 * 
-	 */
-	public void a(boolean a)
-	
-	/**
-	 * 
-	 */
-	private MinecartTrackLogic a(ChunkPosition a)
-	
-	/**
-	 * 
-	 */
-	private int c()
-	
-	/**
-	 * 
-	 */
-	private boolean b(MinecartTrackLogic a)
-	
-	/**
-	 * 
-	 */
-	private boolean b(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	private void b()
-	
-	/**
-	 * 
-	 */
-	private boolean a(int a, int b, int c)
+	public jq[] loadBlockGeneratorData(jq[] a, int b, int c, int d, int e)
 
 }

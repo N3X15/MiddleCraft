@@ -2,14 +2,68 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenTrees extends WorldGenerator{
+public abstract class WorldGenTrees{
 	// FIELDS
+	private java.util.List a;
+	private BlockSign b;
+	private java.util.List c;
+	private net.minecraft.server.MinecraftServer d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e)
+	public void a()
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	private boolean a(int a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	private BlockButton a(int a, int b, boolean c)
+	
+	/**
+	 * 
+	 */
+	public void a(WorldGenCactus a)
+	
+	/**
+	 * Returns the MinecraftServer associated with the PlayerManager.
+	 */
+	static net.minecraft.server.MinecraftServer getMinecraftServer(WorldGenTrees a)
+	
+	/**
+	 * 
+	 */
+	public int b()
+	
+	/**
+	 * 
+	 */
+	public void b(WorldGenCactus a)
+	
+	/**
+	 * 
+	 */
+	static BlockSign b(WorldGenTrees a)
+	
+	/**
+	 * 
+	 */
+	public void c(WorldGenCactus a)
+	
+	/**
+	 * 
+	 */
+	static java.util.List c(WorldGenTrees a)
 
 }

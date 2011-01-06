@@ -2,33 +2,27 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemTool extends Item{
+public abstract class ItemTool{
 	// FIELDS
-	protected int a;
-	private gv[] bb;
-	private float bc;
-	private int bd;
+	public final int a;
+	private final b[] b;
+	private int c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Directs this path to the next point in its array
 	 */
-	public void a(ItemStack a, EntityLiving b)
+	public void incrementPathIndex()
 	
 	/**
-	 * 
+	 * Gets the position that an entity should be at in the current point in the path
 	 */
-	public int a(Entity a)
+	public NoiseGenerator2 getPosition(IMobs a)
 	
 	/**
-	 * 
+	 * Returns true if this path has reached the end
 	 */
-	public void a(ItemStack a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public float a(ItemStack a, Block b)
+	public boolean isFinished()
 
 }

@@ -2,53 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemInWorldManager{
+abstract class ItemInWorldManager extends java.lang.Thread{
 	// FIELDS
-	private float f;
-	private int g;
-	private float d;
-	private int e;
-	private World b;
-	private float c;
-	public EntityPlayer a;
-	private int h;
-	private int i;
+	final ItemSword a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean c(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public void a()
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(EntityPlayer a, World b, ItemStack c)
-	
-	/**
-	 * 
-	 */
-	public boolean b(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean a(EntityPlayer a, World b, ItemStack c, int d, int e, int f, int g)
+	public void run()
 
 }

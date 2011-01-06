@@ -2,31 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet22Collect extends Packet{
+public abstract class Packet22Collect extends BlockStep{
 	// FIELDS
-	public int b;
 	public int a;
+	public int b;
+	public int c;
+	public short d;
+	public BlockSponge e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public void a(java.io.DataInputStream a)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public void a(NetHandler a)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public int a()
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

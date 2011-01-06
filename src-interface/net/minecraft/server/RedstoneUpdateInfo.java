@@ -2,13 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class RedstoneUpdateInfo{
+abstract final class RedstoneUpdateInfo extends java.util.logging.Formatter{
 	// FIELDS
-	 long d;
-	 int b;
-	 int c;
-	 int a;
+	private java.text.SimpleDateFormat a;
 	
 	// METHODS
+	
+	/**
+	 * 
+	 */
+	public java.lang.String format(java.util.logging.LogRecord a)
 
 }

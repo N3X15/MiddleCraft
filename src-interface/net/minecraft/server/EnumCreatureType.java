@@ -2,24 +2,69 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EnumCreatureType extends java.lang.Enum{
+public abstract class EnumCreatureType{
 	// FIELDS
-	public final int d;
-	private static final ku[] e;
-	public static final EnumCreatureType b;
-	public final java.lang.Class c;
 	public static final EnumCreatureType a;
+	public static final EnumCreatureType b;
+	public static final EnumCreatureType c;
+	public static final EnumCreatureType d;
+	public static final EnumCreatureType e;
+	public static final EnumCreatureType f;
+	public static final EnumCreatureType g;
+	public static final EnumCreatureType h;
+	public static final EnumCreatureType i;
+	public static final EnumCreatureType j;
+	public static final EnumCreatureType k;
+	public static final EnumCreatureType l;
+	public java.lang.String m;
+	public int n;
+	public byte o;
+	public byte p;
+	public int q;
+	protected java.lang.Class[] r;
+	protected java.lang.Class[] s;
+	private static jq[] t;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public static EnumCreatureType valueOf(java.lang.String a)
+	public static void generateBiomeLookup()
+	
+	/**
+	 * *
+	 */
+	public static EnumCreatureType getBiomeFromLookup(double a, double b)
+	
+	/**
+	 * *
+	 */
+	public static EnumCreatureType getBiome(float a, float b)
 	
 	/**
 	 * 
 	 */
-	public static ku[] values()
+	protected EnumCreatureType a(int a)
+	
+	/**
+	 * *
+	 */
+	protected EnumCreatureType setBiomeName(java.lang.String a)
+	
+	/**
+	 * *
+	 */
+	public java.lang.Class[] getEntitiesForType(ku a)
+	
+	/**
+	 * 
+	 */
+	protected EnumCreatureType b()
+	
+	/**
+	 * 
+	 */
+	protected EnumCreatureType b(int a)
 
 }

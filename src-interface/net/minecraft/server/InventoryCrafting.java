@@ -4,36 +4,11 @@ package net.minecraft.server;
 
 public abstract class InventoryCrafting{
 	// FIELDS
+	private il[] a;
 	private int b;
 	private CraftingInventoryCB c;
-	private il[] a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void d()
-	
-	/**
-	 * 
-	 */
-	public void a(int a, ItemStack b)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a, int b)
 	
 	/**
 	 * 
@@ -48,6 +23,31 @@ public abstract class InventoryCrafting{
 	/**
 	 * 
 	 */
+	public ItemStack a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public void a(int a, ItemStack b)
+	
+	/**
+	 * 
+	 */
 	public boolean a_(EntityPlayer a)
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b()
+	
+	/**
+	 * 
+	 */
+	public int c()
+	
+	/**
+	 * 
+	 */
+	public void d()
 
 }

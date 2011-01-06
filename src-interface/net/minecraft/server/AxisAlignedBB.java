@@ -2,112 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class AxisAlignedBB{
+public abstract class AxisAlignedBB extends BlockSoil{
 	// FIELDS
-	public double f;
-	private static java.util.List g;
-	public double d;
-	public double e;
-	public double b;
-	public double c;
-	public double a;
-	private static int h;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public static void a()
+	protected abstract EntitySnowball SetBlockEntity()
 	
 	/**
-	 * 
+	 * Called whenever the block is removed.
 	 */
-	public AxisAlignedBB c(double a, double b, double c)
+	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * 
+	 * Called whenever the block is added into the world. Args: world, x, y, z
 	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b)
-	
-	/**
-	 * 
-	 */
-	public boolean a(AxisAlignedBB a)
-	
-	/**
-	 * 
-	 */
-	public double c(AxisAlignedBB a, double b)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB a(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB c(double a, double b, double c, double d, double e, double f)
-	
-	/**
-	 * 
-	 */
-	private boolean c(Vec3D a)
-	
-	/**
-	 * 
-	 */
-	public static AxisAlignedBB a(double a, double b, double c, double d, double e, double f)
-	
-	/**
-	 * 
-	 */
-	private boolean a(Vec3D a)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB b(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public double a(AxisAlignedBB a, double b)
-	
-	/**
-	 * 
-	 */
-	public void b(AxisAlignedBB a)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB e(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public static AxisAlignedBB b(double a, double b, double c, double d, double e, double f)
-	
-	/**
-	 * 
-	 */
-	private boolean b(Vec3D a)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB b()
-	
-	/**
-	 * 
-	 */
-	public double b(AxisAlignedBB a, double b)
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
 
 }

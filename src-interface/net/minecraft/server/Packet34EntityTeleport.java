@@ -2,35 +2,38 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet34EntityTeleport extends Packet{
+abstract class Packet34EntityTeleport{
 	// FIELDS
-	public byte f;
-	public int d;
-	public byte e;
-	public int b;
-	public int c;
-	public int a;
+	final long a;
+	 java.lang.Object b;
+	 Packet34EntityTeleport c;
+	final int d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public final long a()
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public final java.lang.Object b()
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public final boolean equals(java.lang.Object a)
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public final int hashCode()
+	
+	/**
+	 * 
+	 */
+	public final java.lang.String toString()
 
 }

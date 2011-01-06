@@ -2,55 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityMobs extends EntityCreature{
+public abstract class EntityMobs extends NBTTagByteArray{
 	// FIELDS
-	protected int f;
+	private java.lang.String a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !
 	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	protected float a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	public void G()
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected void a(Entity a, float b)
-	
-	/**
-	 * 
-	 */
-	protected Entity k()
+	public boolean onItemUse(BlockSponge a, BlockLog b, Packet17AddToInventory c, int d, int e, int f, int g)
 
 }

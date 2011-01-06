@@ -2,168 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPlayerMP extends EntityPlayer{
+public abstract class EntityPlayerMP extends BlockStep{
 	// FIELDS
-	public java.util.List f;
-	public double d;
-	public double e;
-	public net.minecraft.server.MienCrapftHurrvurr b;
-	public ItemInWorldManager c;
-	public NetServerHandler a;
-	public double ak;
-	public boolean al;
-	public java.util.Set aj;
-	public boolean am;
-	private int bE;
-	private int bH;
-	private int bF;
-	private int[] bG;
+	public int a;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public float s()
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public int a(int a)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public void c(Entity a, int b)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void G()
-	
-	/**
-	 * 
-	 */
-	public void F()
-	
-	/**
-	 * 
-	 */
-	public void a(CraftingInventoryCB a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public void a(IInventory a)
-	
-	/**
-	 * 
-	 */
-	private int c(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public int[] E()
-	
-	/**
-	 * 
-	 */
-	public void c(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(CraftingInventoryCB a, int b, ItemStack c)
-	
-	/**
-	 * 
-	 */
-	public void a(CraftingInventoryCB a, java.util.List b)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public void e(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void K()
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	public boolean p()
-	
-	/**
-	 * 
-	 */
-	private void a(TileEntity a)
-	
-	/**
-	 * 
-	 */
-	public void k()
-	
-	/**
-	 * 
-	 */
-	public void b(double a, boolean b)
-	
-	/**
-	 * 
-	 */
-	public void a(TileEntityFurnace a)
-	
-	/**
-	 * 
-	 */
-	public void J()
-	
-	/**
-	 * 
-	 */
-	public void I()
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	protected void a(double a, boolean b)
-	
-	/**
-	 * 
-	 */
-	public void f(Entity a)
-	
-	/**
-	 * 
-	 */
-	private void R()
-	
-	/**
-	 * 
-	 */
-	public void H()
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

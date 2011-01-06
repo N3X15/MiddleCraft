@@ -2,14 +2,168 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenCactus extends WorldGenerator{
+public abstract class WorldGenCactus extends BlockLog{
 	// FIELDS
+	public kk a;
+	public java.util.Set aj;
+	public double ak;
+	public boolean al;
+	public boolean am;
+	public net.minecraft.server.MinecraftServer b;
+	private int bE;
+	private int bF;
+	private int[] bG;
+	private int bH;
+	public kw c;
+	public double d;
+	public double e;
+	public java.util.List f;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e)
+	public int[] E()
+	
+	/**
+	 * 
+	 */
+	public void F()
+	
+	/**
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	 */
+	public void onLivingUpdate()
+	
+	/**
+	 * 
+	 */
+	public void H()
+	
+	/**
+	 * 
+	 */
+	public void I()
+	
+	/**
+	 * 
+	 */
+	public void J()
+	
+	/**
+	 * 
+	 */
+	public void K()
+	
+	/**
+	 * 
+	 */
+	private void R()
+	
+	/**
+	 * Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+	 */
+	protected void updateFallState(double a, boolean b)
+	
+	/**
+	 * 
+	 */
+	public int a(int a)
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	private void a(EntitySnowball a)
+	
+	/**
+	 * 
+	 */
+	public void a(EntityArrow a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	public void a(EntityArrow a, int b, BlockSponge c)
+	
+	/**
+	 * 
+	 */
+	public void a(EntityArrow a, java.util.List b)
+	
+	/**
+	 * Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
+	 */
+	public void displayGUIFurnace(BlockFurnace a)
+	
+	/**
+	 * Called when the entity is attacked.
+	 */
+	public boolean attackEntity(IMobs a, int b)
+	
+	/**
+	 * 
+	 */
+	public void a(BlockSponge a)
+	
+	/**
+	 * 
+	 */
+	public void a(lg a)
+	
+	/**
+	 * 
+	 */
+	public void b(double a, boolean b)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
+	
+	/**
+	 * Heal living entity (param: amount of half-hearts)
+	 */
+	public void heal(int a)
+	
+	/**
+	 * 
+	 */
+	public void c(IMobs a, int b)
+	
+	/**
+	 * 
+	 */
+	private int c(BlockSponge a)
+	
+	/**
+	 * set entity to null to unmount
+	 */
+	public void mountEntity(IMobs a)
+	
+	/**
+	 * Called when the mob's health reaches 0.
+	 */
+	public void onDeath(IMobs a)
+	
+	/**
+	 * 
+	 */
+	public void k()
+	
+	/**
+	 * Returns if this entity is sneaking.
+	 */
+	public boolean isSneaking()
+	
+	/**
+	 * 
+	 */
+	public float s()
 
 }

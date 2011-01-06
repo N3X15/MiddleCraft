@@ -2,16 +2,52 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerListBox extends javax.swing.JList{
+public abstract class PlayerListBox{
 	// FIELDS
+	private il[] a;
 	private int b;
-	private net.minecraft.server.MienCrapftHurrvurr a;
+	private EntityArrow c;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	public int getSizeInventory()
+	
+	/**
+	 * Returns the stack in slot i
+	 */
+	public BlockSponge getStackInSlot(int a)
+	
+	/**
 	 * 
 	 */
-	public void a()
+	public BlockSponge a(int a, int b)
+	
+	/**
+	 * 
+	 */
+	public void a(int a, BlockSponge b)
+	
+	/**
+	 * 
+	 */
+	public boolean a_(BlockLog a)
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b()
+	
+	/**
+	 * 
+	 */
+	public int c()
+	
+	/**
+	 * Called when an the contents of an Inventory change, usually
+	 */
+	public void onInventoryChanged()
 
 }

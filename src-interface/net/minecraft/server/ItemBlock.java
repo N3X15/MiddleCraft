@@ -2,20 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemBlock extends Item{
+public abstract class ItemBlock{
 	// FIELDS
-	private int a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public java.lang.String a()
+	public void a(double a, double b, double c)
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
+	public abstract boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 
 }

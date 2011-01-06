@@ -2,58 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Pathfinder{
+public abstract class Pathfinder extends EnumCreatureType{
 	// FIELDS
-	private b[] d;
-	private Path b;
-	private MCHashTable c;
-	private IBlockAccess a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	private PathEntity a(PathPoint a, PathPoint b)
-	
-	/**
-	 * 
-	 */
-	private int a(Entity a, int b, int c, int d, PathPoint e)
-	
-	/**
-	 * 
-	 */
-	public PathEntity a(Entity a, int b, int c, int d, float e)
-	
-	/**
-	 * 
-	 */
-	private PathPoint a(Entity a, int b, int c, int d, PathPoint e, int f)
-	
-	/**
-	 * 
-	 */
-	private int b(Entity a, PathPoint b, PathPoint c, PathPoint d, float e)
-	
-	/**
-	 * 
-	 */
-	private PathEntity a(Entity a, PathPoint b, PathPoint c, PathPoint d, float e)
-	
-	/**
-	 * 
-	 */
-	private PathEntity a(Entity a, double b, double c, double d, float e)
-	
-	/**
-	 * 
-	 */
-	public PathEntity a(Entity a, Entity b, float c)
-	
-	/**
-	 * 
-	 */
-	private final PathPoint a(int a, int b, int c)
 
 }

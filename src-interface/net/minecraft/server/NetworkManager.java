@@ -2,112 +2,46 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkManager{
+public abstract class NetworkManager extends ServerWindowAdapter{
 	// FIELDS
-	private java.net.Socket f;
-	private final java.net.SocketAddress g;
-	public int d;
-	private java.lang.Object e;
-	public static int b;
-	public static int c;
-	public static final java.lang.Object a;
-	private NetHandler n;
-	private boolean o;
-	private java.util.List l;
-	private java.util.List m;
-	private boolean j;
-	private java.util.List k;
-	private java.io.DataInputStream h;
-	private java.io.DataOutputStream i;
-	private int w;
-	private int v;
-	private int u;
-	private java.lang.Object[] t;
-	private java.lang.String s;
-	private boolean r;
-	private java.lang.Thread q;
-	private java.lang.Thread p;
+	 int[] b;
+	private int c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	static boolean b(NetworkManager a)
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Returns the ID of the items to drop on destruction.
+	 */
+	public int idDropped(int a, java.util.Random b)
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Returns the quantity of items to drop on block destruction.
+	 */
+	public int quantityDropped(java.util.Random a)
 	
 	/**
 	 * 
 	 */
-	public void a()
+	public void b(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
+	 */
+	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
 	
 	/**
 	 * 
 	 */
-	private void e()
-	
-	/**
-	 * 
-	 */
-	static java.lang.Thread f(NetworkManager a)
-	
-	/**
-	 * 
-	 */
-	public int d()
-	
-	/**
-	 * 
-	 */
-	public java.net.SocketAddress b()
-	
-	/**
-	 * 
-	 */
-	private void a(java.lang.Exception a)
-	
-	/**
-	 * 
-	 */
-	public void c()
-	
-	/**
-	 * 
-	 */
-	static boolean a(NetworkManager a)
-	
-	/**
-	 * 
-	 */
-	private void f()
-	
-	/**
-	 * 
-	 */
-	public void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
-	static void d(NetworkManager a)
-	
-	/**
-	 * 
-	 */
-	static java.lang.Thread e(NetworkManager a)
-	
-	/**
-	 * 
-	 */
-	public transient void a(java.lang.String a, java.lang.Object[] b)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet a)
-	
-	/**
-	 * 
-	 */
-	static void c(NetworkManager a)
+	private void g(Packet17AddToInventory a, int b, int c, int d)
 
 }

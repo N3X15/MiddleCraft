@@ -2,41 +2,20 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldChunkManager{
+public abstract class WorldChunkManager extends BlockSoil{
 	// FIELDS
-	private NoiseGeneratorOctaves2 f;
-	private NoiseGeneratorOctaves2 g;
-	public jq[] d;
-	private NoiseGeneratorOctaves2 e;
-	public double[] b;
-	public double[] c;
-	public double[] a;
+	private boolean a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public jq[] a(jq[] a, int b, int c, int d, int e)
+	public boolean isOpaqueCube()
 	
 	/**
-	 * 
+	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
 	 */
-	public jq[] a(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public MobSpawnerBase a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public double[] a(double[] a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public MobSpawnerBase a(ChunkCoordIntPair a)
+	public boolean shouldSideBeRendered(ChunkCoordinates a, int b, int c, int d, int e)
 
 }

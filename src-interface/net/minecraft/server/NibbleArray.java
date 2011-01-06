@@ -4,23 +4,84 @@ package net.minecraft.server;
 
 public abstract class NibbleArray{
 	// FIELDS
-	public final byte[] a;
+	public IMobs a;
+	public boolean b;
+	public boolean c;
+	public boolean d;
+	public int e;
+	public int f;
+	public int g;
+	public int h;
+	public int i;
+	public int j;
+	public int k;
+	public double l;
+	public double m;
+	public double n;
+	public int o;
+	public boolean p;
+	public java.util.Set q;
+	private double r;
+	private double s;
+	private double t;
+	private boolean u;
+	private boolean v;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, int d)
+	public void a()
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b, int c)
+	public void a(WorldGenCactus a)
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public void a(java.util.List a)
+	
+	/**
+	 * 
+	 */
+	public void a(BlockStep a)
+	
+	/**
+	 * 
+	 */
+	private BlockStep b()
+	
+	/**
+	 * 
+	 */
+	public void b(WorldGenCactus a)
+	
+	/**
+	 * 
+	 */
+	public void b(java.util.List a)
+	
+	/**
+	 * 
+	 */
+	public void b(BlockStep a)
+	
+	/**
+	 * 
+	 */
+	public void c(WorldGenCactus a)
+	
+	/**
+	 * 
+	 */
+	public boolean equals(java.lang.Object a)
+	
+	/**
+	 * 
+	 */
+	public int hashCode()
 
 }

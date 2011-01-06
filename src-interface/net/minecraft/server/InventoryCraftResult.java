@@ -11,12 +11,27 @@ public abstract class InventoryCraftResult{
 	/**
 	 * 
 	 */
-	public void d()
+	public int a()
+	
+	/**
+	 * 
+	 */
+	public ItemStack a(int a)
+	
+	/**
+	 * 
+	 */
+	public ItemStack a(int a, int b)
 	
 	/**
 	 * 
 	 */
 	public void a(int a, ItemStack b)
+	
+	/**
+	 * 
+	 */
+	public boolean a_(EntityPlayer a)
 	
 	/**
 	 * 
@@ -31,21 +46,6 @@ public abstract class InventoryCraftResult{
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(EntityPlayer a)
+	public void d()
 
 }

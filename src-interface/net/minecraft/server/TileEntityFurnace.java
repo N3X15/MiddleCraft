@@ -2,88 +2,37 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntityFurnace extends TileEntity{
+public abstract class TileEntityFurnace{
 	// FIELDS
-	public int f;
-	public int g;
-	public int e;
-	private il[] h;
+	public static java.util.logging.Logger a;
+	private java.util.Properties b;
+	private java.io.File c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Generates a new properties file.
 	 */
-	public void h()
+	public void generateNewProperties()
 	
 	/**
-	 * 
+	 * Returns an integer property. If the property doesn't exist the default is returned.
 	 */
-	public void e()
+	public int getIntProperty(java.lang.String a, int b)
 	
 	/**
-	 * 
+	 * Returns a string property. If the property doesn't exist the default is returned.
 	 */
-	private int b(int a)
+	public java.lang.String getStringProperty(java.lang.String a, java.lang.String b)
 	
 	/**
-	 * 
+	 * Returns a boolean property. If the property doesn't exist the default is returned.
 	 */
-	public boolean g()
+	public boolean getBooleanProperty(java.lang.String a, boolean b)
 	
 	/**
-	 * 
+	 * Writes the properties to the properties file.
 	 */
-	public void a(int a, ItemStack b)
-	
-	/**
-	 * 
-	 */
-	private int a(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	private boolean i()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public int a()
+	public void saveProperties()
 
 }

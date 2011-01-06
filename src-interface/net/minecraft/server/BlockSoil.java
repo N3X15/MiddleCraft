@@ -2,49 +2,371 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSoil extends Block{
+public abstract class BlockSoil{
 	// FIELDS
+	public static final BlockSoil A;
+	public static final BlockSoil B;
+	public static final BlockSoil C;
+	public static final BlockSoil D;
+	public static final BlockSoil E;
+	public static final BlockSoil F;
+	public static final BlockSoil G;
+	public static final BlockSoil H;
+	public static final BlockSoil I;
+	public static final BlockSoil J;
+	public static final NetworkManager K;
+	public static final BlockSoil L;
+	public static final BlockSoil M;
+	public static final BlockSoil N;
+	public static final BlockSoil O;
+	public static final BlockSoil P;
+	public static final BlockSoil Q;
+	public static final BlockSoil R;
+	public static final BlockSoil S;
+	public static final BlockSoil T;
+	public static final BlockSoil U;
+	public static final BlockSoil V;
+	public static final BlockSoil W;
+	public static final BlockSoil X;
+	public static final BlockSoil Y;
+	public static final BlockSoil Z;
+	private java.lang.String a;
+	public static final BlockSoil aA;
+	public static final BlockSoil aB;
+	public static final BlockSoil aC;
+	public static final BlockSoil aD;
+	public static final BlockSoil aE;
+	public static final BlockSoil aF;
+	public static final BlockSoil aG;
+	public static final BlockSoil aH;
+	public static final BlockSoil aI;
+	public static final BlockSoil aJ;
+	public static final BlockSoil aK;
+	public static final BlockSoil aL;
+	public static final BlockSoil aM;
+	public static final BlockSoil aN;
+	public static final BlockSoil aO;
+	public static final BlockSoil aP;
+	public static final BlockSoil aQ;
+	public static final BlockSoil aR;
+	public static final BlockSoil aS;
+	public static final BlockSoil aT;
+	public static final BlockSoil aU;
+	public static final BlockSoil aV;
+	public static final BlockSoil aW;
+	public static final BlockSoil aX;
+	public static final BlockSoil aY;
+	public static final BlockSoil aZ;
+	public static final BlockSoil aa;
+	public static final BlockSoil ab;
+	public static final BlockSoil ac;
+	public static final NBTTagString ad;
+	public static final NBTTagString ae;
+	public static final NBTTagString af;
+	public static final NBTTagString ag;
+	public static final BlockSoil ah;
+	public static final BlockSoil ai;
+	public static final BlockSoil aj;
+	public static final BlockSoil ak;
+	public static final BlockSoil al;
+	public static final BlockSoil am;
+	public static final BlockSoil an;
+	public static final BlockSoil ao;
+	public static final BlockSoil ap;
+	public static final BlockSoil aq;
+	public static final kv ar;
+	public static final BlockSoil as;
+	public static final BlockSoil at;
+	public static final BlockSoil au;
+	public static final BlockSoil av;
+	public static final BlockSoil aw;
+	public static final BlockSoil ax;
+	public static final BlockSoil ay;
+	public static final BlockSoil az;
+	public static final BlockSoil ba;
+	public static final BlockSoil bb;
+	public static final BlockSoil bc;
+	public static final BlockSoil bd;
+	public static final CompressedStreamTools be;
+	public static final BlockSoil bf;
+	public int bg;
+	public final int bh;
+	protected float bi;
+	protected float bj;
+	public double bk;
+	public double bl;
+	public double bm;
+	public double bn;
+	public double bo;
+	public double bp;
+	public NoiseGenerator bq;
+	public float br;
+	public final la bs;
+	public float bt;
+	public static final NoiseGenerator d;
+	public static final NoiseGenerator e;
+	public static final NoiseGenerator f;
+	public static final NoiseGenerator g;
+	public static final NoiseGenerator h;
+	public static final NoiseGenerator i;
+	public static final NoiseGenerator j;
+	public static final NoiseGenerator k;
+	public static final NoiseGenerator l;
+	public static final gv[] m;
+	public static final boolean[] n;
+	public static final boolean[] o;
+	public static final boolean[] p;
+	public static final int[] q;
+	public static final boolean[] r;
+	public static final int[] s;
+	public static final BlockSoil t;
+	public static final EntityPigZombie u;
+	public static final BlockSoil v;
+	public static final BlockSoil w;
+	public static final BlockSoil x;
+	public static final BlockSoil y;
+	public static final BlockSoil z;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Sets the amount of light emitted by a block from 0.0f to 1.0f (converts internally to 0-15). Returns the object for convenience in constructing.
+	 */
+	protected BlockSoil setLightValue(float a)
+	
+	/**
+	 * Sets the bounds of the block.  minX, minY, minZ, maxX, maxY, maxZ
+	 */
+	public void setBlockBounds(float a, float b, float c, float d, float e, float f)
+	
+	/**
+	 * Returns the block texture based on the side being looked at.  Args: side
+	 */
+	public int getBlockTextureFromSide(int a)
+	
+	/**
+	 * Returns the ID of the items to drop on destruction.
+	 */
+	public int idDropped(int a, java.util.Random b)
+	
+	/**
+	 * Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag
+	 */
+	public boolean canCollideCheck(int a, boolean b)
+	
+	/**
+	 * Checks if a vector is within the Y and Z bounds of the block.
+	 */
+	private boolean isVecInsideYZBounds(NoiseGenerator2 a)
+	
+	/**
+	 * Sets the footstep sound for the block. Returns the object for convenience in constructing.
+	 */
+	protected BlockSoil setStepSound(NoiseGenerator a)
+	
+	/**
+	 * *
+	 */
+	public float getExplosionResistance(IMobs a)
+	
+	/**
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 */
+	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
+	 */
+	public void onBlockDestroyedByPlayer(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Drops the block items with a specified chance of dropping the specified items
+	 */
+	public void dropBlockAsItemWithChance(Packet17AddToInventory a, int b, int c, int d, int e, float f)
+	
+	/**
+	 * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
+	 */
+	public BlockFlower collisionRayTrace(Packet17AddToInventory a, int b, int c, int d, NoiseGenerator2 e, NoiseGenerator2 f)
+	
+	/**
+	 * Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z, axisAlignedBB, arrayList
+	 */
+	public void getCollidingBoundingBoxes(Packet17AddToInventory a, int b, int c, int d, IUpdatePlayerListBox e, java.util.ArrayList f)
+	
+	/**
+	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
+	 */
+	public void onEntityCollidedWithBlock(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	
+	/**
+	 * Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d
+	 */
+	public void velocityToAddToEntity(Packet17AddToInventory a, int b, int c, int d, IMobs e, NoiseGenerator2 f)
+	
+	/**
+	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
+	 */
+	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving
+	 */
+	public void onBlockPlacedBy(Packet17AddToInventory a, int b, int c, int d, lc e)
 	
 	/**
 	 * 
 	 */
-	private boolean h(World a, int b, int c, int d)
+	public float a(BlockLog a)
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
+	public BlockSoil a(java.lang.String a)
+	
+	/**
+	 * Returns the quantity of items to drop on block destruction.
+	 */
+	public int quantityDropped(java.util.Random a)
+	
+	/**
+	 * Updates the blocks bounds based on its current state. Args: world, x, y, z
+	 */
+	public void setBlockBoundsBasedOnState(ChunkCoordinates a, int b, int c, int d)
+	
+	/**
+	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+	 */
+	public boolean shouldSideBeRendered(ChunkCoordinates a, int b, int c, int d, int e)
+	
+	/**
+	 * Sets whether this block type will tick on loading the block or not
+	 */
+	protected void setTickOnLoad(boolean a)
+	
+	/**
+	 * Drops the specified block items
+	 */
+	public void dropBlockAsItem(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * How many world ticks before ticking
+	 */
+	public int tickRate()
+	
+	/**
+	 * Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
+	 */
+	protected BlockSoil setResistance(float a)
+	
+	/**
+	 * Checks if a vector is within the X and Z bounds of the block.
+	 */
+	private boolean isVecInsideXZBounds(NoiseGenerator2 a)
+	
+	/**
+	 * Called whenever the block is removed.
+	 */
+	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
+	 */
+	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	
+	/**
+	 * Called when the block is clicked by a player. Args: x, y, z, entityPlayer
+	 */
+	public void onBlockClicked(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	
+	/**
+	 * Is this block powering the block on the specified side
+	 */
+	public boolean isPoweringTo(ChunkCoordinates a, int b, int c, int d, int e)
+	
+	/**
+	 * Can this block provide power. Only wire currently seems to have this change based on its state.
+	 */
+	public boolean canProvidePower()
+	
+	/**
+	 * Sets how many hits it takes to break a block.
+	 */
+	protected BlockSoil setHardness(float a)
+	
+	/**
+	 * Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
+	 */
+	protected BlockSoil setLightOpacity(int a)
+	
+	/**
+	 * Checks if a vector is within the X and Y bounds of the block.
+	 */
+	private boolean isVecInsideXYBounds(NoiseGenerator2 a)
+	
+	/**
+	 * Called upon the block being destroyed by an explosion
+	 */
+	public void onBlockDestroyedByExplosion(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing
+	 */
+	public void onBlockPlaced(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Returns if this block is collidable (only used by Fire). Args: x, y, z
+	 */
+	public boolean isCollidable()
+	
+	/**
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 */
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Is this block indirectly powering the block on the specified side
+	 */
+	public boolean isIndirectlyPoweringTo(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
 	 * 
 	 */
-	private boolean g(World a, int b, int c, int d)
+	public java.lang.String e()
 	
 	/**
-	 * 
+	 * Called whenever the block is added into the world. Args: world, x, y, z
 	 */
-	public void b(World a, int b, int c, int d, int e)
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * 
+	 * Only used to fill an unused field
 	 */
-	public int a(int a, java.util.Random b)
+	private boolean unusedMethod()
 	
 	/**
-	 * 
+	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
 	 */
-	public boolean a()
+	public boolean canBlockStay(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void b(World a, int b, int c, int d, Entity e)
+	public void harvestBlock(Packet17AddToInventory a, int b, int c, int d, int e)
 
 }

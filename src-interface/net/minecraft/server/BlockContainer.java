@@ -2,24 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockContainer extends Block{
+public abstract class BlockContainer extends BlockSoil{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public void e(World a, int b, int c, int d)
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Returns the ID of the items to drop on destruction.
+	 */
+	public int idDropped(int a, java.util.Random b)
+	
+	/**
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 */
+	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 */
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+	 */
+	public boolean canBlockStay(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	protected abstract TileEntity a_()
+	protected final void g(Packet17AddToInventory a, int b, int c, int d)
 
 }

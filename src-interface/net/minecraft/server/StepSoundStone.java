@@ -2,9 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract final class StepSoundStone extends StepSound{
+public abstract class StepSoundStone extends BlockSoil{
 	// FIELDS
 	
 	// METHODS
+	
+	/**
+	 * Returns the block texture based on the side being looked at.  Args: side
+	 */
+	public int getBlockTextureFromSide(int a)
+	
+	/**
+	 * Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
+	 */
+	public void onBlockDestroyedByPlayer(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Returns the quantity of items to drop on block destruction.
+	 */
+	public int quantityDropped(java.util.Random a)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called upon the block being destroyed by an explosion
+	 */
+	public void onBlockDestroyedByExplosion(Packet17AddToInventory a, int b, int c, int d)
 
 }

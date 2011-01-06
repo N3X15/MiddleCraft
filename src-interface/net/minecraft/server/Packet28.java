@@ -2,33 +2,214 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet28 extends Packet{
+public abstract class Packet28{
 	// FIELDS
-	public int d;
-	public int b;
-	public int c;
-	public int a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a(Packet7 a)
+	
+	/**
+	 * *
+	 */
+	public void handleLogin(PlayerInstance a)
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public void a(TileEntity a)
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public void a(Packet3Chat a)
+	
+	/**
+	 * *
+	 */
+	public void handleChat(WorldGenHellLava a)
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(Packet22Collect a)
+	
+	/**
+	 * *
+	 */
+	public void handleNamedEntitySpawn(Packet20NamedEntitySpawn a)
+	
+	/**
+	 * *
+	 */
+	public void handleSpawnPosition(BlockLadder a)
+	
+	/**
+	 * *
+	 */
+	public void handleEntityTeleport(EnumMobType a)
+	
+	/**
+	 * *
+	 */
+	public void handleCollect(PropertyManager a)
+	
+	/**
+	 * 
+	 */
+	public void a(EnumSkyBlock a)
+	
+	/**
+	 * *
+	 */
+	public void handleDestroyEntity(BlockRedstoneWire a)
+	
+	/**
+	 * *
+	 */
+	public void handleMapChunk(Packet8 a)
+	
+	/**
+	 * *
+	 */
+	public void handlePreChunk(ChunkCache a)
+	
+	/**
+	 * *
+	 */
+	public void handleVehicleSpawn(EntityPlayerMP a)
+	
+	/**
+	 * *
+	 */
+	public void handleHealth(BlockGlass a)
+	
+	/**
+	 * 
+	 */
+	public void a(Packet2Handshake a)
+	
+	/**
+	 * *
+	 */
+	public void handleBlockChange(EntitySlime a)
+	
+	/**
+	 * *
+	 */
+	public void handleEntity(EntityItem a)
+	
+	/**
+	 * 
+	 */
+	public void a(ServerGUI a)
+	
+	/**
+	 * 
+	 */
+	public void a(ItemBoat a)
+	
+	/**
+	 * *
+	 */
+	public void handlePlace(EntityTracker a)
+	
+	/**
+	 * *
+	 */
+	public void handleHandshake(BlockOre a)
+	
+	/**
+	 * *
+	 */
+	public void handleUpdateTime(WorldGenBigTree a)
+	
+	/**
+	 * *
+	 */
+	public void handleBlockItemSwitch(EntityList a)
+	
+	/**
+	 * 
+	 */
+	public void a(ChunkPosition a)
+	
+	/**
+	 * *
+	 */
+	public void handleFlying(EntityFlying a)
+	
+	/**
+	 * 
+	 */
+	public void a(Packet52MultiBlockChange a)
+	
+	/**
+	 * 
+	 */
+	public void a(ThreadMonitorConnection a)
+	
+	/**
+	 * *
+	 */
+	public void handleMobSpawn(BlockLever a)
+	
+	/**
+	 * *
+	 */
+	public void handleErrorMessage(java.lang.String a, java.lang.Object[] b)
+	
+	/**
+	 * *
+	 */
+	public void handleBlockDig(ChunkProviderGenerate a)
+	
+	/**
+	 * *
+	 */
+	public void handleMultiBlockChange(BlockDoor a)
+	
+	/**
+	 * 
+	 */
+	public void a(TileEntitySign a)
+	
+	/**
+	 * 
+	 */
+	public void a(BlockStep a)
+	
+	/**
+	 * *
+	 */
+	public void handleKickDisconnect(ky a)
+	
+	/**
+	 * 
+	 */
+	public void a(NBTTagFloat a)
+	
+	/**
+	 * *
+	 */
+	public void handlePickupSpawn(BlockIce a)
+	
+	/**
+	 * *
+	 */
+	public void handlePlayerInventory(BlockLeavesBase a)
+	
+	/**
+	 * *
+	 */
+	public void handleArmAnimation(NBTTagCompound a)
+	
+	/**
+	 * 
+	 */
+	public void a(BlockSnowBlock a)
 
 }

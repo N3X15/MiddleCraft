@@ -2,8 +2,12 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldProviderHell extends WorldProvider{
+public abstract class WorldProviderHell{
 	// FIELDS
+	private java.util.Set a;
+	private Packet59ComplexEntity b;
+	private net.minecraft.server.MinecraftServer c;
+	private int d;
 	
 	// METHODS
 	
@@ -15,26 +19,36 @@ public abstract class WorldProviderHell extends WorldProvider{
 	/**
 	 * 
 	 */
-	public IChunkLoader a(java.io.File a)
+	public void a(IMobs a)
 	
 	/**
 	 * 
 	 */
-	public IChunkProvider c()
+	public void a(IMobs a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	protected void b()
+	public void a(IMobs a, int b, int c, boolean d)
 	
 	/**
 	 * 
 	 */
-	public float a(long a, float b)
+	public void a(IMobs a, BlockStep b)
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b)
+	public void a(WorldGenCactus a)
+	
+	/**
+	 * 
+	 */
+	public void b(IMobs a)
+	
+	/**
+	 * 
+	 */
+	public void b(IMobs a, BlockStep b)
 
 }

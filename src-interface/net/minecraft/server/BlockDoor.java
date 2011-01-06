@@ -2,69 +2,35 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockDoor extends Block{
+public abstract class BlockDoor extends BlockStep{
 	// FIELDS
+	public int a;
+	public int b;
+	public short[] c;
+	public byte[] d;
+	public byte[] e;
+	public int f;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public void a(World a, int b, int c, int d, boolean e)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public void b(int a)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int d(int a)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e)
-	
-	/**
-	 * 
-	 */
-	public void a(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

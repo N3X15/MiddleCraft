@@ -4,15 +4,10 @@ package net.minecraft.server;
 
 public abstract class CraftingManager{
 	// FIELDS
-	private java.util.List b;
 	private static final CraftingManager a;
+	private java.util.List b;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int[] a)
 	
 	/**
 	 * 
@@ -23,5 +18,10 @@ public abstract class CraftingManager{
 	 * 
 	 */
 	transient void a(ItemStack a, java.lang.Object[] b)
+	
+	/**
+	 * 
+	 */
+	public ItemStack a(int[] a)
 
 }

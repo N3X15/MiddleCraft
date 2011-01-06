@@ -2,32 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet6SpawnPosition extends Packet{
+public abstract class Packet6SpawnPosition extends NBTTagByteArray{
 	// FIELDS
-	public int b;
-	public int c;
-	public int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
 	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
 
 }

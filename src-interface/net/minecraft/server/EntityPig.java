@@ -2,45 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPig extends EntityAnimals{
+public abstract class EntityPig extends BlockSoil{
 	// FIELDS
-	public boolean a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	protected java.lang.String d()
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Returns the ID of the items to drop on destruction.
+	 */
+	public int idDropped(int a, java.util.Random b)
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
+	 */
+	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	
+	/**
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 */
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e()
+	private boolean g(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected int g()
+	private boolean h(Packet17AddToInventory a, int b, int c, int d)
 
 }

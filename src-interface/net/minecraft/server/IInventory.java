@@ -2,49 +2,72 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IInventory{
+public abstract class IInventory extends EntityCreature{
 	// FIELDS
+	private int a;
+	private int b;
+	private static final BlockSponge c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
-	public abstract void d()
+	public void onLivingUpdate()
+	
+	/**
+	 * Checks if the entity's current position is a valid location to spawn this entity.
+	 */
+	public boolean getCanSpawnHere()
+	
+	/**
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 */
+	public void writeEntityToNBT(Packet1Login a)
+	
+	/**
+	 * Called when the entity is attacked.
+	 */
+	public boolean attackEntity(IMobs a, int b)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	public void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
+	
+	/**
+	 * Returns the sound this mob makes while it's alive.
+	 */
+	protected java.lang.String getLivingSound()
+	
+	/**
+	 * Returns the sound this mob makes when it is hurt.
+	 */
+	protected java.lang.String getHurtSound()
+	
+	/**
+	 * Returns the sound this mob makes on death.
+	 */
+	protected java.lang.String getDeathSound()
+	
+	/**
+	 * Returns the item ID for the item the mob drops on death.
+	 */
+	protected int getDropItemId()
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b()
+	private void g(IMobs a)
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, ItemStack b)
-	
-	/**
-	 * 
-	 */
-	public abstract int c()
-	
-	/**
-	 * 
-	 */
-	public abstract ItemStack a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public abstract int a()
-	
-	/**
-	 * 
-	 */
-	public abstract ItemStack a(int a)
-	
-	/**
-	 * 
-	 */
-	public abstract boolean a_(EntityPlayer a)
+	protected IMobs k()
 
 }

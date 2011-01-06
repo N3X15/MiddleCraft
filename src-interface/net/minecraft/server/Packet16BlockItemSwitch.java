@@ -2,30 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet16BlockItemSwitch extends Packet{
+public abstract class Packet16BlockItemSwitch extends TileEntityChest{
 	// FIELDS
-	public int a;
+	public short a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Gets the type byte for the tag.
 	 */
-	public void a(java.io.DataInputStream a)
+	public byte getType()
+	
+	/**
+	 * Read the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void readTagContents(java.io.DataInput a)
+	
+	/**
+	 * Write the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void writeTagContents(java.io.DataOutput a)
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public java.lang.String toString()
 
 }

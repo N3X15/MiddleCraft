@@ -2,33 +2,32 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkCache{
+public abstract class ChunkCache extends BlockStep{
 	// FIELDS
-	private World d;
-	private int b;
-	private kx[][] c;
-	private int a;
+	public int a;
+	public int b;
+	public boolean c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public boolean d(int a, int b, int c)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public Material c(int a, int b, int c)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public int b(int a, int b, int c)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public int a(int a, int b, int c)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

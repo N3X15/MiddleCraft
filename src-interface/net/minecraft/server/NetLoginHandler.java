@@ -2,68 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetLoginHandler extends NetHandler{
+public abstract class NetLoginHandler{
 	// FIELDS
-	private int f;
-	private java.lang.String g;
-	private static java.util.Random d;
-	private net.minecraft.server.MienCrapftHurrvurr e;
-	public NetworkManager b;
-	public boolean c;
-	public static java.util.logging.Logger a;
-	private Packet1Login h;
-	private java.lang.String i;
+	public static final java.lang.String a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(Packet2Handshake a)
-	
-	/**
-	 * 
-	 */
-	public void a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public void a(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	static Packet1Login a(NetLoginHandler a, Packet1Login b)
-	
-	/**
-	 * 
-	 */
-	public void a(java.lang.String a, java.lang.Object[] b)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	static java.lang.String a(NetLoginHandler a)
+	private static java.lang.String a()
 
 }

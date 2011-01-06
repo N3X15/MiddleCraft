@@ -11,11 +11,11 @@ public abstract class BlockLeavesBase extends Block{
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e)
+	public boolean a()
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public boolean a(IBlockAccess a, int b, int c, int d, int e)
 
 }

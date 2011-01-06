@@ -2,29 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockJukeBox extends Block{
+public abstract class BlockJukeBox extends EntityItem{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public int a(int a)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void f(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, int e, float f)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

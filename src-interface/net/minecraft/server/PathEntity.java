@@ -2,27 +2,38 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PathEntity{
+public abstract class PathEntity extends EntitySnowball{
 	// FIELDS
-	private final b[] b;
-	private int c;
-	public final int a;
+	public int e;
+	public java.lang.String f;
+	public double g;
+	public double h;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public Vec3D a(Entity a)
+	public boolean a()
 	
 	/**
-	 * 
+	 * Reads a tile entity from NBT.
 	 */
-	public void a()
+	public void readFromNBT(Packet1Login a)
 	
 	/**
-	 * 
+	 * Sets the delay before a new spawn (base delay of 200 + random number up to 600).
 	 */
-	public boolean b()
+	private void updateDelay()
+	
+	/**
+	 * Writes a tile entity to NBT.
+	 */
+	public void writeToNBT(Packet1Login a)
+	
+	/**
+	 * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	 */
+	public void updateEntity()
 
 }

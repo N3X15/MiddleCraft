@@ -2,14 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemPainting extends Item{
+public abstract class ItemPainting extends BlockSoil{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called whenever the block is removed.
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
+	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 */
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
 
 }

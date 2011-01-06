@@ -11,11 +11,11 @@ public abstract class SlotCrafting extends Slot{
 	/**
 	 * 
 	 */
-	public void b()
+	public boolean a(ItemStack a)
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a)
+	public void b()
 
 }

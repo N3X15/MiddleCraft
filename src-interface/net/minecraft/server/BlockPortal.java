@@ -2,49 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockPortal extends BlockBreakable{
+public abstract class BlockPortal extends BlockSoil{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
+	public void onEntityCollidedWithBlock(Packet17AddToInventory a, int b, int c, int d, IMobs e)
 	
 	/**
-	 * 
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
 	 */
-	public void a(World a, int b, int c, int d, Entity e)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public void a(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
 
 }

@@ -2,14 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemRedstone extends Item{
+public abstract class ItemRedstone extends NBTTagString{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Ticks the block if it's been scheduled
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 
 }

@@ -2,49 +2,55 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockReed extends Block{
+public abstract class BlockReed extends IMobs{
 	// FIELDS
+	public int a;
+	public MCHashTable b;
+	private int c;
+	private int d;
+	private int e;
+	private int f;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean f(World a, int b, int c, int d)
+	public void a(int a)
+	
+	/**
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 */
+	public void writeEntityToNBT(Packet1Login a)
+	
+	/**
+	 * Called when the entity is attacked.
+	 */
+	public boolean attackEntity(IMobs a, int b)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	public void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public boolean c()
 	
 	/**
 	 * 
 	 */
-	protected final void g(World a, int b, int c, int d)
+	private float c(int a)
 	
 	/**
-	 * 
+	 * *
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
+	public boolean canBeCollidedWith()
 
 }

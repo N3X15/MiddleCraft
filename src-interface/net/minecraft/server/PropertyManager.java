@@ -2,37 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PropertyManager{
+public abstract class PropertyManager extends BlockStep{
 	// FIELDS
-	private java.util.Properties b;
-	private java.io.File c;
-	public static java.util.logging.Logger a;
+	public int a;
+	public int b;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public java.lang.String a(java.lang.String a, java.lang.String b)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public void a()
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public boolean a(java.lang.String a, boolean b)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public int a(java.lang.String a, int b)
-	
-	/**
-	 * 
-	 */
-	public void b()
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

@@ -2,34 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet14BlockDig extends Packet{
+public abstract class Packet14BlockDig{
 	// FIELDS
-	public int d;
-	public int e;
-	public int b;
-	public int c;
-	public int a;
+	private static float[] a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a(java.io.DataInputStream a)
+	public static final float sqrt_double(double a)
 	
 	/**
-	 * 
+	 * Maximum of the absolute value of two numbers.
 	 */
-	public void a(NetHandler a)
+	public static double abs_max(double a, double b)
 	
 	/**
-	 * 
+	 * sin looked up in a table
 	 */
-	public int a()
+	public static final float sin(float a)
 	
 	/**
-	 * 
+	 * Returns the greatest integer less than or equal to the double argument
 	 */
-	public void a(java.io.DataOutputStream a)
+	public static int floor_double(double a)
+	
+	/**
+	 * cos looked up in the sin table with the appropriate offset
+	 */
+	public static final float cos(float a)
+	
+	/**
+	 * *
+	 */
+	public static final float sqrt_float(float a)
+	
+	/**
+	 * Returns the greatest integer less than or equal to the float argument
+	 */
+	public static int floor_float(float a)
+	
+	/**
+	 * *
+	 */
+	public static float abs(float a)
 
 }

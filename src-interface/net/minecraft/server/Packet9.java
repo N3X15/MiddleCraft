@@ -2,29 +2,57 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet9 extends Packet{
+public abstract class Packet9 extends MaterialLiquid{
 	// FIELDS
+	 int a;
+	 boolean[] b;
+	 int[] c;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	private int a(Packet17AddToInventory a, int b, int c, int d, int e, int f)
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 */
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	protected int e(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
 	 * 
 	 */
-	public int a()
+	private void f(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	private void i(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	private boolean[] j(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	private boolean k(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	private boolean l(Packet17AddToInventory a, int b, int c, int d)
 
 }

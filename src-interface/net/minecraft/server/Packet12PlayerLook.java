@@ -2,24 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet12PlayerLook extends Packet10Flying{
+public abstract class Packet12PlayerLook extends java.lang.RuntimeException{
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
 
 }

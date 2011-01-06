@@ -2,69 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MobSpawnerBase{
+public abstract class MobSpawnerBase extends NetworkListenThread{
 	// FIELDS
-	public static final MobSpawnerBase f;
-	public static final MobSpawnerBase g;
-	public static final MobSpawnerBase d;
-	public static final MobSpawnerBase e;
-	public static final MobSpawnerBase b;
-	public static final MobSpawnerBase c;
-	public static final MobSpawnerBase a;
-	public int n;
-	public byte o;
-	public static final MobSpawnerBase l;
-	public java.lang.String m;
-	public static final MobSpawnerBase j;
-	public static final MobSpawnerBase k;
-	public static final MobSpawnerBase h;
-	public static final MobSpawnerBase i;
-	private static jq[] t;
-	protected java.lang.Class[] s;
-	protected java.lang.Class[] r;
-	public int q;
-	public byte p;
+	private static gv[] bb;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns if the item (tool) can harvest results from the block type.
 	 */
-	public static MobSpawnerBase a(double a, double b)
-	
-	/**
-	 * 
-	 */
-	public static void a()
-	
-	/**
-	 * 
-	 */
-	public java.lang.Class[] a(EnumCreatureType a)
-	
-	/**
-	 * 
-	 */
-	protected MobSpawnerBase a(int a)
-	
-	/**
-	 * 
-	 */
-	protected MobSpawnerBase b()
-	
-	/**
-	 * 
-	 */
-	public static MobSpawnerBase a(float a, float b)
-	
-	/**
-	 * 
-	 */
-	protected MobSpawnerBase b(int a)
-	
-	/**
-	 * 
-	 */
-	protected MobSpawnerBase a(java.lang.String a)
+	public boolean canHarvestBlock(BlockSoil a)
 
 }

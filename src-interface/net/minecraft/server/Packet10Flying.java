@@ -2,38 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet10Flying extends Packet{
+public abstract class Packet10Flying{
 	// FIELDS
-	public float f;
-	public boolean g;
-	public double d;
-	public float e;
-	public double b;
-	public double c;
-	public double a;
-	public boolean h;
-	public boolean i;
+	public static java.util.logging.Logger a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Initialises the console logger.
 	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public static void init()
 
 }

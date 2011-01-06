@@ -2,10 +2,8 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ServerCommand{
+abstract final class ServerCommand extends NoiseGenerator{
 	// FIELDS
-	public final ICommandListener b;
-	public final java.lang.String a;
 	
 	// METHODS
 

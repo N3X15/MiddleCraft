@@ -2,86 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFire extends Block{
+abstract class BlockFire extends java.lang.Thread{
 	// FIELDS
-	private int[] b;
-	private int[] a;
+	final ItemSword a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	private void a(World a, int b, int c, int d, int e, java.util.Random f)
-	
-	/**
-	 * 
-	 */
-	private void a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	public boolean b(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int f(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	private int h(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean d()
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
+	public void run()
 
 }

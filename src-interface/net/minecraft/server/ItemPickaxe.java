@@ -2,16 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemPickaxe extends ItemTool{
+public abstract class ItemPickaxe{
 	// FIELDS
-	private static gv[] bb;
-	private int bc;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(Block a)
+	public void a(NBTBase a)
 
 }

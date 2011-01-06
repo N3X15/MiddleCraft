@@ -2,248 +2,79 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityLiving extends Entity{
+public abstract class EntityLiving extends BlockSoil{
 	// FIELDS
-	protected float bz;
-	protected int bw;
-	 float bv;
-	protected float by;
-	protected int bx;
-	protected double bs;
-	protected double br;
-	protected double bu;
-	protected double bt;
-	public float bn;
-	public float bo;
-	protected int bp;
-	protected double bq;
-	protected boolean bj;
-	public int bk;
-	public float bl;
-	public float bm;
-	public int bf;
-	public int bg;
-	public float bh;
-	public float bi;
-	public int bb;
-	public int bc;
-	public int bd;
-	public float be;
-	public float aZ;
-	public float aY;
-	protected float bA;
-	protected boolean aR;
-	protected java.lang.String aQ;
-	protected java.lang.String aT;
-	protected float aS;
-	protected int aV;
-	protected float aU;
-	public boolean aX;
-	protected float aW;
-	public float aI;
-	public float aJ;
-	public float aK;
-	protected float aL;
-	protected float aM;
-	protected float aN;
-	protected float aO;
-	protected boolean aP;
-	public int aF;
-	public float aG;
-	public float aH;
-	private Entity b;
-	public int ba;
-	private int c;
-	private int a;
-	protected float bD;
-	protected boolean bB;
-	protected float bC;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public Vec3D c(float a)
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 */
+	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
+	 */
+	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	
+	/**
+	 * Updates the blocks bounds based on its current state. Args: world, x, y, z
+	 */
+	public void setBlockBoundsBasedOnState(ChunkCoordinates a, int b, int c, int d)
+	
+	/**
+	 * Called whenever the block is removed.
+	 */
+	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called when the block is clicked by a player. Args: x, y, z, entityPlayer
+	 */
+	public void onBlockClicked(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	
+	/**
+	 * Is this block powering the block on the specified side
+	 */
+	public boolean isPoweringTo(ChunkCoordinates a, int b, int c, int d, int e)
+	
+	/**
+	 * Can this block provide power. Only wire currently seems to have this change based on its state.
+	 */
+	public boolean canProvidePower()
+	
+	/**
+	 * Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing
+	 */
+	public void onBlockPlaced(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 */
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Is this block indirectly powering the block on the specified side
+	 */
+	public boolean isIndirectlyPoweringTo(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 */
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d()
-	
-	/**
-	 * 
-	 */
-	public float s()
-	
-	/**
-	 * 
-	 */
-	public void c(float a, float b)
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	public void z()
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String e()
-	
-	/**
-	 * 
-	 */
-	public void G()
-	
-	/**
-	 * 
-	 */
-	public boolean x()
-	
-	/**
-	 * 
-	 */
-	public int i()
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	protected void o()
-	
-	/**
-	 * 
-	 */
-	public boolean i(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void c(int a)
-	
-	/**
-	 * 
-	 */
-	protected float h()
-	
-	/**
-	 * 
-	 */
-	public boolean v()
-	
-	/**
-	 * 
-	 */
-	public void O()
-	
-	/**
-	 * 
-	 */
-	public boolean c_()
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public void m()
-	
-	/**
-	 * 
-	 */
-	protected void d(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(Entity a, int b, double c, double d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	protected void a(float a, float b)
-	
-	/**
-	 * 
-	 */
-	public void Q()
-	
-	/**
-	 * 
-	 */
-	protected void c()
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected int g()
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	public void b(Entity a, float b)
-	
-	/**
-	 * 
-	 */
-	protected void a(float a)
-	
-	/**
-	 * 
-	 */
-	private float b(float a, float b, float c)
-	
-	/**
-	 * 
-	 */
-	public void f(Entity a)
-	
-	/**
-	 * 
-	 */
-	public Vec3D C()
-	
-	/**
-	 * 
-	 */
-	protected void P()
-	
-	/**
-	 * 
-	 */
-	public boolean d_()
+	private boolean g(Packet17AddToInventory a, int b, int c, int d)
 
 }

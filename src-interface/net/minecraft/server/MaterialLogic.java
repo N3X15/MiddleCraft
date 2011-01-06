@@ -2,24 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MaterialLogic extends Material{
+public abstract interface interface MaterialLogic{
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean c()
 
 }

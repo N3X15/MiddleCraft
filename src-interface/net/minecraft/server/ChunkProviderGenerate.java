@@ -2,77 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderGenerate{
+public abstract class ChunkProviderGenerate extends BlockStep{
 	// FIELDS
-	 double[] f;
-	 double[] g;
-	 double[] d;
-	 double[] e;
-	public NoiseGeneratorOctaves b;
-	public NoiseGeneratorOctaves c;
-	public NoiseGeneratorOctaves a;
-	private NoiseGeneratorOctaves n;
-	private NoiseGeneratorOctaves o;
-	private NoiseGeneratorOctaves l;
-	private NoiseGeneratorOctaves m;
-	private java.util.Random j;
-	private NoiseGeneratorOctaves k;
-	 double[] h;
-	 int[][] i;
-	private double[] w;
-	private jq[] v;
-	private MapGenBase u;
-	private double[] t;
-	private double[] s;
-	private double[] r;
-	private double[] q;
-	private World p;
+	public int a;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public boolean a(boolean a, IProgressUpdate b)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	private double[] a(double[] a, int b, int c, int d, int e, int f, int g)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public Chunk b(int a, int b)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void a(int a, int b, byte[] c, jq[] d, double[] e)
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, byte[] c, jq[] d)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void a(IChunkProvider a, int b, int c)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

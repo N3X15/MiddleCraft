@@ -10,12 +10,12 @@ public abstract class BlockSnowBlock extends Block{
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public int a(int a, java.util.Random b)
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
+	public void a(World a, int b, int c, int d, java.util.Random e)
 	
 	/**
 	 * 

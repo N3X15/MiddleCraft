@@ -2,37 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityCreature extends EntityLiving{
+public abstract class EntityCreature extends EntityTrackerEntry{
 	// FIELDS
-	protected boolean ak;
-	protected Entity aj;
-	private PathEntity a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
-	protected float a(int a, int b, int c)
+	public void onLivingUpdate()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes while it's alive.
 	 */
-	protected void c()
+	protected java.lang.String getLivingSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes when it is hurt.
 	 */
-	public boolean a()
+	protected java.lang.String getHurtSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes on death.
 	 */
-	protected void a(Entity a, float b)
+	protected java.lang.String getDeathSound()
 	
 	/**
-	 * 
+	 * Returns the item ID for the item the mob drops on death.
 	 */
-	protected Entity k()
+	protected int getDropItemId()
 
 }

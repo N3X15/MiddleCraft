@@ -2,46 +2,23 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagList extends NBTBase{
+public abstract final class NBTTagList extends java.lang.Enum{
 	// FIELDS
-	private byte b;
-	private java.util.List a;
+	public static final NBTTagList a;
+	public static final NBTTagList b;
+	public final int c;
+	private static final eb[] d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public NBTBase a(int a)
+	public static NBTTagList valueOf(java.lang.String a)
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataOutput a)
-	
-	/**
-	 * 
-	 */
-	 void a(java.io.DataInput a)
-	
-	/**
-	 * 
-	 */
-	public void a(NBTBase a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString()
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	public byte a()
+	public static eb[] values()
 
 }

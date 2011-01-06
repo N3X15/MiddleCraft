@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySpider extends EntityMobs{
+public abstract class EntitySpider extends NBTTagShort{
 	// FIELDS
 	
 	// METHODS
@@ -10,46 +10,16 @@ public abstract class EntitySpider extends EntityMobs{
 	/**
 	 * 
 	 */
-	protected java.lang.String d()
+	protected void a(int a, int b, byte[] c, double d, double e, double f)
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e()
+	protected void a(int a, int b, byte[] c, double d, double e, double f, float g, float h, float i, int j, int k, double l)
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected void a(Entity a, float b)
-	
-	/**
-	 * 
-	 */
-	protected int g()
-	
-	/**
-	 * 
-	 */
-	protected Entity k()
-	
-	/**
-	 * 
-	 */
-	public double j()
+	protected void a(Packet17AddToInventory a, int b, int c, int d, int e, byte[] f)
 
 }

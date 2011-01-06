@@ -4,17 +4,17 @@ package net.minecraft.server;
 
 public abstract class Packet100 extends Packet{
 	// FIELDS
-	public int d;
+	public int a;
 	public int b;
 	public java.lang.String c;
-	public int a;
+	public int d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public int a()
 	
 	/**
 	 * 
@@ -24,7 +24,7 @@ public abstract class Packet100 extends Packet{
 	/**
 	 * 
 	 */
-	public int a()
+	public void a(java.io.DataInputStream a)
 	
 	/**
 	 * 

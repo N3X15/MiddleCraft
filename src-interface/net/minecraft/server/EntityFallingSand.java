@@ -2,31 +2,94 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFallingSand extends Entity{
+public abstract class EntityFallingSand extends ItemBlock{
 	// FIELDS
-	public int b;
-	public int a;
+	static final byte[] a;
+	 java.util.Random b;
+	 Packet17AddToInventory c;
+	 int[] d;
+	 int e;
+	 int f;
+	 double g;
+	 double h;
+	 double i;
+	 double j;
+	 double k;
+	 int l;
+	 int m;
+	 int n;
+	 int[][] o;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void b_()
+	 void a()
 	
 	/**
 	 * 
 	 */
-	public boolean c_()
+	public void a(double a, double b, double c)
 	
 	/**
 	 * 
 	 */
-	protected void b(NBTTagCompound a)
+	 float a(int a)
 	
 	/**
 	 * 
 	 */
-	protected void a(NBTTagCompound a)
+	 void a(int a, int b, int c)
+	
+	/**
+	 * 
+	 */
+	 void a(int a, int b, int c, float d, byte e, int f)
+	
+	/**
+	 * *
+	 */
+	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	 int a(int[] a, int[] b)
+	
+	/**
+	 * 
+	 */
+	 void a(int[] a, int[] b, int c)
+	
+	/**
+	 * 
+	 */
+	 void b()
+	
+	/**
+	 * 
+	 */
+	 float b(int a)
+	
+	/**
+	 * 
+	 */
+	 void c()
+	
+	/**
+	 * 
+	 */
+	 boolean c(int a)
+	
+	/**
+	 * 
+	 */
+	 void d()
+	
+	/**
+	 * 
+	 */
+	 boolean e()
 
 }

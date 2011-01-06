@@ -4,17 +4,32 @@ package net.minecraft.server;
 
 public abstract class EntityEgg extends Entity{
 	// FIELDS
-	private int ak;
-	private boolean f;
-	private int al;
-	private int d;
+	public int a;
 	private EntityLiving aj;
-	private int e;
+	private int ak;
+	private int al;
 	private int b;
 	private int c;
-	public int a;
+	private int d;
+	private int e;
+	private boolean f;
 	
 	// METHODS
+	
+	/**
+	 * 
+	 */
+	public void a(double a, double b, double c, float d, float e)
+	
+	/**
+	 * 
+	 */
+	public void a(NBTTagCompound a)
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a)
 	
 	/**
 	 * 
@@ -25,20 +40,5 @@ public abstract class EntityEgg extends Entity{
 	 * 
 	 */
 	public void b_()
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c, float d, float e)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
 
 }

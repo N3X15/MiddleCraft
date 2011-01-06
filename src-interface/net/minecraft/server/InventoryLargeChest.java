@@ -2,52 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class InventoryLargeChest{
+abstract final class InventoryLargeChest extends NoiseGenerator{
 	// FIELDS
-	private IInventory b;
-	private IInventory c;
-	private java.lang.String a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void d()
-	
-	/**
-	 * 
-	 */
-	public void a(int a, ItemStack b)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(EntityPlayer a)
 
 }

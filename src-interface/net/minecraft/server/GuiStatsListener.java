@@ -2,15 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class GuiStatsListener{
+public abstract class GuiStatsListener extends ItemBlock{
 	// FIELDS
-	final GuiStatsComponent a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void actionPerformed(java.awt.event.ActionEvent a)
+	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 
 }

@@ -2,30 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagLong extends NBTBase{
+public abstract class NBTTagLong extends TileEntityChest{
 	// FIELDS
 	public long a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Gets the type byte for the tag.
 	 */
-	 void a(java.io.DataOutput a)
+	public byte getType()
 	
 	/**
-	 * 
+	 * Read the actual data contents of the tag, implemented in NBT extension classes
 	 */
-	 void a(java.io.DataInput a)
+	 void readTagContents(java.io.DataInput a)
+	
+	/**
+	 * Write the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void writeTagContents(java.io.DataOutput a)
 	
 	/**
 	 * 
 	 */
 	public java.lang.String toString()
-	
-	/**
-	 * 
-	 */
-	public byte a()
 
 }

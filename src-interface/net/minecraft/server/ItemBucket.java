@@ -2,15 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemBucket extends Item{
+public abstract class ItemBucket{
 	// FIELDS
-	private int a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(ItemStack a, World b, EntityPlayer c)
+	public static void a(Packet1Login a, java.io.DataOutput b)
+	
+	/**
+	 * *
+	 */
+	public static void writeGzippedCompoundToOutputStream(Packet1Login a, java.io.OutputStream b)
+	
+	/**
+	 * 
+	 */
+	public static Packet1Login a(java.io.DataInput a)
+	
+	/**
+	 * 
+	 */
+	public static Packet1Login a(java.io.InputStream a)
 
 }

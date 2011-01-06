@@ -1,5 +1,5 @@
 Real Name,Signature,Parent Class,Readable Name,Description
-a,(Lff;Ljava/util/Random;III)Z,fz,,
+a,(Lff;Ljava/util/Random;III)Z,fz,generate,*
 a,(IJLjava/lang/Object;I)V,fv,,
 a,(JLjava/lang/Object;)V,fv,,
 b,(I)V,fv,,
@@ -13,15 +13,15 @@ b,(J)Ljava/lang/Object;,fv,,
 e,(J)I,fv,,
 a,(Lff;IIII[B)V,fw,,
 a,(Lcg;Lff;II[B)V,fw,,
-a,(Lb;Lb;)Ldc;,fx,,
-a,(Lep;IIILb;)I,fx,,
-a,(Lep;IIIF)Ldc;,fx,,
-a,(Lep;IIILb;I)Lb;,fx,,
-b,(Lep;Lb;Lb;Lb;F)I,fx,,
-a,(Lep;Lb;Lb;Lb;F)Ldc;,fx,,
-a,(Lep;DDDF)Ldc;,fx,,
-a,(Lep;Lep;F)Ldc;,fx,,
-a,(III)Lb;,fx,,
+a,(Lep;IIILb;)I,fx,getVerticalOffset,"Given an x y z, returns a vertical offset needed to search to find a block to stand on"
+a,(Lb;Lb;)Ldc;,fx,createEntityPath,Returns a new PathEntity for a given start and end point
+a,(Lep;IIIF)Ldc;,fx,createEntityPathTo,Creates a path from an entity to a specified location within a minimum distance
+a,(Lep;IIILb;I)Lb;,fx,getSafePoint,Returns a point that the entity can safely move to
+b,(Lep;Lb;Lb;Lb;F)I,fx,findPathOptions,"populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)"
+a,(Lep;Lb;Lb;Lb;F)Ldc;,fx,addToPath,"Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)"
+a,(Lep;DDDF)Ldc;,fx,createEntityPathTo,Internal implementation of creating a path from an entity to a point
+a,(Lep;Lep;F)Ldc;,fx,createEntityPathTo,Creates a path from one entity to another within a minimum distance
+a,(III)Lb;,fx,openPoint,Returns a mapped point or creates and adds one
 a,(Lff;II)Lkx;,fy,,
 a,()V,fy,,
 a,(II)Ljava/io/File;,fy,,
@@ -30,428 +30,428 @@ a,(Lff;Lkx;)V,fy,,
 a,(Lkx;Lff;Lad;)V,fy,,
 b,()V,fy,,
 a,(Lff;Lad;)Lkx;,fy,,
-b_,()V,gc,,
 d,(Lep;)Lel;,gc,,
+b_,()V,gc,onUpdate,Called to update the entity's position/logic.
 A,()V,gc,,
-a,(Lep;I)Z,gc,,
-v,()Z,gc,,
-c_,()Z,gc,,
+a,(Lep;I)Z,gc,attackEntity,Called when the entity is attacked.
+v,()Z,gc,canBePushed,*
+c_,()Z,gc,canBeCollidedWith,*
 a,(Lgq;)Z,gc,,
-b,(Lad;)V,gc,,
+b,(Lad;)V,gc,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
 q,()Lel;,gc,,
-a,(Lad;)V,gc,,
+a,(Lad;)V,gc,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 j,()D,gc,,
-a,(Ljava/io/DataInputStream;)V,gd,,
-a,(Lfs;)V,gd,,
-a,()I,gd,,
-a,(Ljava/io/DataOutputStream;)V,gd,,
-b_,()V,ge,,
-f,(Lep;)V,ge,,
-e,()Ljava/lang/String;,ge,,
+a,(Ljava/io/DataInputStream;)V,gd,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,gd,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,gd,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,gd,writePacketData,Abstract. Writes the raw packet data to the data stream.
+b_,()V,ge,onUpdate,Called to update the entity's position/logic.
+f,(Lep;)V,ge,onDeath,Called when the mob's health reaches 0.
+e,()Ljava/lang/String;,ge,getHurtSound,Returns the sound this mob makes when it is hurt.
 c,()V,ge,,
-b,(Lad;)V,ge,,
-f,()Ljava/lang/String;,ge,,
+b,(Lad;)V,ge,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,ge,getDeathSound,Returns the sound this mob makes on death.
 a,(Lep;F)V,ge,,
-a,(Lad;)V,ge,,
-g,()I,ge,,
-a,(Lff;Ljava/util/Random;III)Z,gf,,
+a,(Lad;)V,ge,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+g,()I,ge,getDropItemId,Returns the item ID for the item the mob drops on death.
+a,(Lff;Ljava/util/Random;III)Z,gf,generate,*
 a,(Lhe;)V,ga,,
-a,(Lil;Lgq;Lff;IIII)Z,gb,,
-a,(Lff;IIILgq;)Z,fk,,
-a,(I)I,fk,,
+a,(Lil;Lgq;Lff;IIII)Z,gb,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+a,(Lff;IIILgq;)Z,fk,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+a,(I)I,fk,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
 a,(III)V,fj,,
-a,()V,fj,,
-a,(Ljava/lang/String;III)V,fj,,
-a,(Ljava/lang/String;DDDDDD)V,fj,,
-a,(Ljava/lang/String;DDDFF)V,fj,,
-a,(Lep;)V,fj,,
+a,()V,fj,updateAllRenderers,*
+a,(Ljava/lang/String;III)V,fj,playRecord,"Plays the specified record. Arg: recordName, x, y, z"
+a,(Ljava/lang/String;DDDDDD)V,fj,spawnParticle,"Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ"
+a,(Ljava/lang/String;DDDFF)V,fj,playSound,"Plays the specified sound. Arg: x, y, z, soundName, unknown1, unknown2"
+a,(Lep;)V,fj,obtainEntitySkin,*
 a,(IIILbg;)V,fj,,
-a,(IIIIII)V,fj,,
 b,(Lep;)V,fj,,
+a,(IIIIII)V,fj,markBlockRangeNeedsUpdate,*
 a,(Ljava/io/File;)Lcg;,fm,,
-f,()V,fm,,
+f,()V,fm,tick,Runs a single tick for the world
 b,(Lep;Z)V,fm,,
 a,(Lep;B)V,fm,,
-a,(Lep;Z)V,fm,,
+a,(Lep;Z)V,fm,updateEntityWithOptionalForce,*
 d,(IIIIII)Ljava/util/List;,fm,,
 a,(Lgq;III)Z,fm,,
 a,(I)Lep;,fm,,
-b,(Lep;)V,fm,,
+b,(Lep;)V,fm,obtainEntitySkin,*
 a,(Lep;DDDFZ)Lcw;,fm,,
-c,(Lep;)V,fm,,
-a,(Ljava/util/Random;)I,fl,,
+c,(Lep;)V,fm,releaseEntitySkin,*
+a,(Ljava/util/Random;)I,fl,quantityDropped,Returns the quantity of items to drop on block destruction.
 a,(Ljava/util/List;)V,ff,,
 f,(IIII)V,ff,,
 b,(Ljava/util/List;)V,ff,,
 e,(II)I,ff,,
-a,(F)I,ff,,
-b,(F)F,ff,,
+a,(F)I,ff,calculateSkylightSubtracted,Returns the amount of skylight subtracted for the current time
+b,(F)F,ff,getCelestialAngle,*
 a,(Lbn;Lel;)F,ff,,
-a,(Lep;D)Lgq;,ff,,
+a,(Lep;D)Lgq;,ff,getClosestPlayerToEntity,"Gets the closest player to the entity within the specified distance (if distance is less than 0 then ignored). Args: entity, dist"
 d,(Lep;)V,ff,,
-b,(Leb;IIII)V,ff,,
-a,(IIIIZ)Z,ff,,
-a,(Lep;Ljava/lang/String;FF)V,ff,,
-a,(Ljava/lang/Class;)I,ff,,
-g,(IIII)V,ff,,
-a,(Ljava/lang/String;III)V,ff,,
-g,(III)V,ff,,
-b,(IIII)V,ff,,
-h,(IIII)V,ff,,
+b,(Leb;IIII)V,ff,setLightValue,"Sets the light value either into the sky map or block map depending on if enumSkyBlock is set to sky or block. Args: enumSkyBlock, x, y, z, lightValue"
+a,(IIIIZ)Z,ff,canBlockBePlacedAt,*
+a,(Lep;Ljava/lang/String;FF)V,ff,playSoundAtEntity,"Plays a sound at the entity's position. Args: entity, sound, unknown1, unknown2"
+a,(Ljava/lang/Class;)I,ff,countEntities,Counts how many entities of an entity class exist in the world. Args: entityClass
+g,(IIII)V,ff,notifyBlocksOfNeighborChange,"Notifies neighboring blocks that this specified block changed  Args: x, y, z, blockID"
+a,(Ljava/lang/String;III)V,ff,playRecord,"Plays a record at the specified coordinates of the specified name. Args: recordName, x, y, z"
+g,(III)V,ff,markBlockNeedsUpdate,*
+b,(IIII)V,ff,setBlockMetadataWithNotify,"Sets the blocks metadata and if set will then notify blocks that this block changed. Args: x, y, z, metadata"
+h,(IIII)V,ff,scheduleBlockUpdate,"Schedules a specific block to be to ticked by its specified delay. Args: x, y, z, blockID"
 a,(Lep;DDDFZ)Lcw;,ff,,
-a,(Leb;III)I,ff,,
+a,(Leb;III)I,ff,getSavedLightValue,Returns saved light value without taking into account the time of day.  Either looks in the sky light map or block light map based on the enumSkyBlock arg.
 e,(Lep;)V,ff,,
-b,(II)Lkx;,ff,,
-a,(IIIIII)Z,ff,,
-e,()V,ff,,
+b,(II)Lkx;,ff,getChunkFromBlockCoords,"Returns a chunk looked up by block coordinates. Args: x, y"
+a,(IIIIII)Z,ff,checkChunksExist,"Checks between a min and max all the chunks inbetween actually exist. Args: minX, minY, minZ, maxX, maxY, maxZ"
 a,(Lbn;Lbn;)Lhk;,ff,,
 e,(III)Z,ff,,
-a,(Lel;Lla;)Z,ff,,
+e,()V,ff,calculateInitialSkylight,Called on construction of the World class to setup the initial skylight values
+a,(Lel;Lla;)Z,ff,isMaterialInBB,Returns true if the given bounding box contains the given material
 a,(Leb;IIIIIIZ)V,ff,,
-a,(Lep;)Z,ff,,
-a,(Lep;Lep;F)Ldc;,ff,,
-c,(Lel;)Z,ff,,
-k,(III)F,ff,,
+a,(Lep;)Z,ff,entityJoinedWorld,Called when an entity is spawned in the world. This includes players.
+a,(Lep;Lep;F)Ldc;,ff,getPathToEntity,*
+c,(Lel;)Z,ff,isBoundingBoxBurning,*
+k,(III)F,ff,getLightBrightness,"Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brihgtness). Args: x, y, z"
 a,(II)I,ff,,
 a,(Leb;IIIIII)V,ff,,
-b,(Lel;)Z,ff,,
 a,(Lbw;)V,ff,,
-a,(III)I,ff,,
-j,(III)Z,ff,,
-a,(IIII)Z,ff,,
-a,(Ljava/lang/Class;Lel;)Ljava/util/List;,ff,,
+a,(III)I,ff,getBlockId,"Returns the block ID at coords x,y,z"
+b,(Lel;)Z,ff,getIsAnyLiquid,Returns if any of the blocks within the aabb are liquids. Args: aabb
+j,(III)Z,ff,canExistingBlockSeeTheSky,"Determines if a block can see the sky or not, but if the proper chunk does not already exist, it does not create a new one."
+a,(IIII)Z,ff,setBlock,"Sets the block to the specified blockID at the block coordinates Args x, y, z, blockID"
 d,()Z,ff,,
-f,(Lep;)V,ff,,
-c,(II)Lkx;,ff,,
-e,(IIII)V,ff,,
+f,(Lep;)V,ff,updateEntity,*
+a,(Ljava/lang/Class;Lel;)Ljava/util/List;,ff,getEntitiesWithinAABB,"Returns all entities of the specified class type which intersect with the AABB. Args: entityClass, aabb"
+c,(II)Lkx;,ff,getChunkFromChunkCoords,"Returns back a chunk looked up by chunk coordinates Args: x, y"
+e,(IIII)V,ff,notifyBlockChange,"The block type change and need to notify other systems  Args: x, y, z, blockID"
 c,(IIIIII)[B,ff,,
 g,()V,ff,,
-b,(Lep;Lel;)Ljava/util/List;,ff,,
-a,(IIILbg;)V,ff,,
-b,(IIIII)Z,ff,,
+a,(IIILbg;)V,ff,setBlockTileEntity,"Sets the TileEntity for a given block in X, Y, Z coordinates"
+b,(Lep;Lel;)Ljava/util/List;,ff,getEntitiesWithinAABBExcludingEntity,"Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb"
+b,(IIIII)Z,ff,setBlockAndMetadataWithNotify,*
 h,()V,ff,,
-f,(II)Z,ff,,
-i,()V,ff,,
-a,(Lel;)Z,ff,,
-j,(IIII)Z,ff,,
-d,(II)I,ff,,
-a,(Lep;Z)V,ff,,
-i,(III)I,ff,,
-n,(III)Z,ff,,
+f,(II)Z,ff,chunkExists,"Returns whether a chunk exists at chunk coordinates x, y"
+i,()V,ff,saveLevel,*
+a,(Lel;)Z,ff,checkIfAABBIsClear,*
+d,(II)I,ff,getHeightValue,"Returns the y coordinate with a block in it at this x, z coordinate"
+j,(IIII)Z,ff,isBlockIndirectlyProvidingPowerTo,"Is a block next to you getting powered (if its an attachable block) or is it providing power directly to you.  Args: x, y, z, direction"
+a,(Lep;Z)V,ff,updateEntityWithOptionalForce,*
+i,(III)I,ff,getBlockLightValue,Gets the light value of a block location
 a,(Lel;Lla;Lep;)Z,ff,,
-b,(Lep;)V,ff,,
-o,(III)Z,ff,,
-f,(III)Z,ff,,
+n,(III)Z,ff,isBlockGettingPowered,"Whether one of the neighboring blocks is putting power into this block. Args: x, y, z"
+b,(Lep;)V,ff,obtainEntitySkin,*
+f,(III)Z,ff,blockExists,*
+o,(III)Z,ff,isBlockIndirectlyGettingPowered,"Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z"
 b,(Lel;Lla;)Z,ff,,
-a,(DDDD)Lgq;,ff,,
-d,(III)Z,ff,,
-a,(Ljava/lang/String;DDDDDD)V,ff,,
-b,()Z,ff,,
+a,(DDDD)Lgq;,ff,getClosestPlayer,"Gets the closest player to the point within the specified distance (distance can be set to less than 0 to not limit the distance). Args: x, y, z, dist"
+b,()Z,ff,isDaytime,Checks whether its daytime by seeing if the light subtracted from the skylight is less than 4
+d,(III)Z,ff,doesBlockAllowAttachment,"Returns if the block at the specified coordinates allow attachment Args: x, y, z"
+a,(Ljava/lang/String;DDDDDD)V,ff,spawnParticle,"Spawns a particle.  Args particleName, x, y, z, velX, velY, velZ"
 a,()Lkb;,ff,,
-d,(IIII)Z,ff,,
-a,(Lbn;Lbn;Z)Lhk;,ff,,
+d,(IIII)Z,ff,setBlockWithNotify,"Sets a block and notifies relevant systems with the block change  Args: x, y, z, blockID"
 b,(IIIIII)V,ff,,
+a,(Lbn;Lbn;Z)Lhk;,ff,rayTraceBlocks,*
 a,(Lgq;III)Z,ff,,
 m,(III)V,ff,,
-a,(Lep;DDDF)Lcw;,ff,,
+a,(Lep;DDDF)Lcw;,ff,createExplosion,*
 a,(Ljava/io/File;)Lcg;,ff,,
-c,(IIII)Z,ff,,
-a,(Z)Z,ff,,
+c,(IIII)Z,ff,setBlockMetadata,Set the metadata of a block in global coordinates
+a,(Z)Z,ff,TickUpdates,Runs through the list of updates to run and ticks them
 c,()V,ff,,
-c,(III)Lla;,ff,,
-c,(Lep;)V,ff,,
-i,(IIII)Z,ff,,
-k,(IIII)V,ff,,
-a,(DDDLjava/lang/String;FF)V,ff,,
-a,(IIIZ)I,ff,,
-h,(III)Z,ff,,
-a,(ZLkf;)V,ff,,
-a,(Lep;IIIF)Ldc;,ff,,
-a,(Leb;IIII)V,ff,,
+c,(III)Lla;,ff,getBlockMaterial,Returns the block's material.
+c,(Lep;)V,ff,releaseEntitySkin,*
+i,(IIII)Z,ff,isBlockProvidingPowerTo,"Is this block powering in the specified direction Args: x, y, z, direction"
+k,(IIII)V,ff,notifyBlockOfNeighborChange,"Notifies a block that one of its neighbor change to the specified type Args: x, y, z, blockID"
+h,(III)Z,ff,canBlockSeeTheSky,Checks if the specified block is able to see the sky
+a,(DDDLjava/lang/String;FF)V,ff,playSoundEffect,"Play a sound effect. Many many parameters for this function. Not sure what they do, but a classic call is : (double)i + 0.5D, (double)j + 0.5D, (double)k + 0.5D, 'random.door_open', 1.0F, world.rand.nextFloat() * 0.1F + 0.9F with i,j,k position of the block."
+a,(IIIZ)I,ff,getBlockLightValue,"Gets the light value of a block location. This is the actual function that gets the value and has a bool flag that  indicates if its a half step block to get the maximum light value of a direct neighboring block (left, right, forward, back, and up)"
+a,(ZLkf;)V,ff,saveWorld,*
+a,(Leb;IIII)V,ff,neighborLightPropagationChanged,"Called when a neighboring block's light value has changed and its propagated light might change this blocks value.  Args: enumSkyBlock, x, y, z, propagatedLight"
+a,(Lep;IIIF)Ldc;,ff,getEntityPathToXYZ,*
 b,(IIILbg;)V,ff,,
-a,(Lep;Lel;)Ljava/util/List;,ff,,
-a,(IIIII)Z,ff,,
-f,()V,ff,,
+a,(IIIII)Z,ff,setBlockAndMetadata,*
+a,(Lep;Lel;)Ljava/util/List;,ff,getCollidingBoundingBoxes,"Returns a list of bounding boxes that collide with aabb excluding the passed in entity's collision. Args: entity, aabb"
+f,()V,ff,tick,Runs a single tick for the world
 a,(Lep;B)V,ff,,
-b,(III)I,ff,,
-l,(III)Lbg;,ff,,
+b,(III)I,ff,getBlockMetadata,"Returns the block metadata at coords x,y,z"
+l,(III)Lbg;,ff,getBlockTileEntity,"Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists"
 s,()F,fi,,
 a,(I)I,fi,,
 c,(Lep;I)V,fi,,
-G,()V,fi,,
+G,()V,fi,onLivingUpdate,"Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn."
 F,()V,fi,,
 a,(Ldw;II)V,fi,,
 a,(Llg;)V,fi,,
 c,(Lil;)I,fi,,
 E,()[I,fi,,
-c,(I)V,fi,,
+c,(I)V,fi,heal,Heal living entity (param: amount of half-hearts)
 a,(Ldw;ILil;)V,fi,,
 a,(Ldw;Ljava/util/List;)V,fi,,
 a,(III)V,fi,,
-e,(Lep;)V,fi,,
+e,(Lep;)V,fi,mountEntity,set entity to null to unmount
 K,()V,fi,,
-a,(Lep;I)Z,fi,,
-p,()Z,fi,,
+p,()Z,fi,isSneaking,Returns if this entity is sneaking.
+a,(Lep;I)Z,fi,attackEntity,Called when the entity is attacked.
 a,(Lbg;)V,fi,,
 k,()V,fi,,
 b,(DZ)V,fi,,
-a,(Lek;)V,fi,,
+a,(Lek;)V,fi,displayGUIFurnace,Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
 J,()V,fi,,
 I,()V,fi,,
-b_,()V,fi,,
-a,(DZ)V,fi,,
-f,(Lep;)V,fi,,
+b_,()V,fi,onUpdate,Called to update the entity's position/logic.
+a,(DZ)V,fi,updateFallState,"Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround"
+f,(Lep;)V,fi,onDeath,Called when the mob's health reaches 0.
 R,()V,fi,,
 H,()V,fi,,
 a,(Lil;)V,fi,,
-a,(Ldv;)V,fs,,
-a,(Lr;)V,fs,,
+a,(Ldv;)V,fs,handleDestroyEntity,*
+a,(Lr;)V,fs,handlePlayerInventory,*
 a,(Lx;)V,fs,,
-a,(Lh;)V,fs,,
+a,(Lh;)V,fs,handleHandshake,*
 a,(Lgn;)V,fs,,
 a,(Lih;)V,fs,,
-a,(Lgt;)V,fs,,
+a,(Lgt;)V,fs,handlePlace,*
 a,(Lgk;)V,fs,,
-a,(Lbr;)V,fs,,
-a,(Lgd;)V,fs,,
+a,(Lbr;)V,fs,handleChat,*
+a,(Lgd;)V,fs,handleBlockChange,*
 a,(Lf;)V,fs,,
-a,(Ljd;)V,fs,,
-a,(Lda;)V,fs,,
-a,(Lv;)V,fs,,
+a,(Ljd;)V,fs,handleBlockDig,*
+a,(Lda;)V,fs,handleSpawnPosition,*
+a,(Lv;)V,fs,handleArmAnimation,*
 a,(Lm;)V,fs,,
-a,(Ljj;)V,fs,,
-a,(Laj;)V,fs,,
-a,(Lgj;)V,fs,,
+a,(Ljj;)V,fs,handleMultiBlockChange,*
+a,(Laj;)V,fs,handleLogin,*
+a,(Lgj;)V,fs,handleEntity,*
 a,(Ljv;)V,fs,,
-a,(Ler;)V,fs,,
+a,(Ler;)V,fs,handleVehicleSpawn,*
 a,(Lcs;)V,fs,,
 a,(Lbh;)V,fs,,
-a,(Lo;)V,fs,,
+a,(Lo;)V,fs,handlePickupSpawn,*
 a,(Lay;)V,fs,,
-a,(Liu;)V,fs,,
-a,(Lhy;)V,fs,,
+a,(Liu;)V,fs,handleMobSpawn,*
+a,(Lhy;)V,fs,handleFlying,*
 a,(Lhq;)V,fs,,
 a,(Ljl;)V,fs,,
-a,(Ld;)V,fs,,
+a,(Ld;)V,fs,handleNamedEntitySpawn,*
 a,(Ldl;)V,fs,,
 a,(La;)V,fs,,
-a,(Lhc;)V,fs,,
-a,(Lde;)V,fs,,
-a,(Led;)V,fs,,
+a,(Led;)V,fs,handleMapChunk,*
+a,(Lhc;)V,fs,handleUpdateTime,*
+a,(Lde;)V,fs,handleCollect,*
 a,(Lio;)V,fs,,
-a,(Lhn;)V,fs,,
-a,(Leg;)V,fs,,
-a,(Lky;)V,fs,,
-a,(Ljava/lang/String;[Ljava/lang/Object;)V,fs,,
-a,(Ldd;)V,fs,,
-a,(Leu;)V,fs,,
-f,(Lff;III)Z,fr,,
-b,(I)Z,fr,,
-d,()Ljava/lang/String;,ft,,
-e,()Ljava/lang/String;,ft,,
-G,()V,ft,,
-b,(Lad;)V,ft,,
-f,()Ljava/lang/String;,ft,,
-a,(Lad;)V,ft,,
+a,(Leg;)V,fs,handlePreChunk,*
+a,(Lhn;)V,fs,handleBlockItemSwitch,*
+a,(Lky;)V,fs,handleKickDisconnect,*
+a,(Ljava/lang/String;[Ljava/lang/Object;)V,fs,handleErrorMessage,*
+a,(Ldd;)V,fs,handleEntityTeleport,*
+a,(Leu;)V,fs,handleHealth,*
+f,(Lff;III)Z,fr,canBlockStay,Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+b,(I)Z,fr,canThisPlantGrowOnThisBlockID,Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+d,()Ljava/lang/String;,ft,getLivingSound,Returns the sound this mob makes while it's alive.
+e,()Ljava/lang/String;,ft,getHurtSound,Returns the sound this mob makes when it is hurt.
+G,()V,ft,onLivingUpdate,"Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn."
+b,(Lad;)V,ft,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,ft,getDeathSound,Returns the sound this mob makes on death.
 a,(Lep;F)V,ft,,
-g,()I,ft,,
-a,(Lff;Ljava/util/Random;III)Z,fo,,
-b,(Ljava/lang/String;)V,fn,,
-c,()Ljava/lang/String;,fn,,
+a,(Lad;)V,ft,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+g,()I,ft,getDropItemId,Returns the item ID for the item the mob drops on death.
+a,(Lff;Ljava/util/Random;III)Z,fo,generate,*
+b,(Ljava/lang/String;)V,fn,log,Logs the message with a level of INFO.
+c,()Ljava/lang/String;,fn,getUsername,Gets the players username.
 a,()Ljava/lang/String;,fq,,
-a,(Lff;IIILgq;)Z,fp,,
-a,(I)I,fp,,
-f,(Lff;IIII)V,fp,,
-a,(Lff;IIIIF)V,fp,,
-a,(I)I,gy,,
-a,(Ljava/util/Random;)I,gy,,
-a,([Ljq;IIII)[Ljq;,gz,,
+a,(Lff;IIILgq;)Z,fp,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+a,(I)I,fp,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+f,(Lff;IIII)V,fp,ejectRecord,Ejects the current record inside of the jukebox
+a,(Lff;IIIIF)V,fp,dropBlockAsItemWithChance,Drops the block items with a specified chance of dropping the specified items
+a,(I)I,gy,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(Ljava/util/Random;)I,gy,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,([Ljq;IIII)[Ljq;,gz,loadBlockGeneratorData,"Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth"
 a,(IIII)[Ljq;,gz,,
 a,(II)Ljq;,gz,,
-a,([DIIII)[D,gz,,
+a,([DIIII)[D,gz,getTemperatures,"Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length"
 a,(Llk;)Ljq;,gz,,
 a,(Lhe;)V,gw,,
-b,(Lgq;)V,gx,,
-b_,()V,gx,,
-h,()F,gx,,
+b,(Lgq;)V,gx,onCollideWithPlayer,Called by a player entity when they collide with an entity
+b_,()V,gx,onUpdate,Called to update the entity's position/logic.
+h,()F,gx,getSoundVolume,Returns the volume for the sounds this mob makes.
 a,(I)V,gx,,
-e,()Ljava/lang/String;,gx,,
-l,()V,gx,,
+l,()V,gx,setEntityDead,Will get destroyed next tick
+e,()Ljava/lang/String;,gx,getHurtSound,Returns the sound this mob makes when it is hurt.
 c,()V,gx,,
-b,(Lad;)V,gx,,
-f,()Ljava/lang/String;,gx,,
-a,()Z,gx,,
-a,(Lad;)V,gx,,
-g,()I,gx,,
-b,(Lgq;)V,hf,,
-b_,()V,hf,,
-b,(I)V,hf,,
+b,(Lad;)V,gx,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,gx,getDeathSound,Returns the sound this mob makes on death.
+a,()Z,gx,getCanSpawnHere,Checks if the entity's current position is a valid location to spawn this entity.
+a,(Lad;)V,gx,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+g,()I,gx,getDropItemId,Returns the item ID for the item the mob drops on death.
+b,(Lgq;)V,hf,onCollideWithPlayer,Called by a player entity when they collide with an entity
+b_,()V,hf,onUpdate,Called to update the entity's position/logic.
+b,(I)V,hf,dealFireDamage,Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
 g,(DDD)Z,hf,,
-a,(Lep;I)Z,hf,,
-b,(Lad;)V,hf,,
-a,(Lad;)V,hf,,
-r,()Z,hf,,
-a,(Lnet/minecraft/server/MinecraftServer;)V,hg,,
-b,(Ljava/lang/String;)V,hg,,
-a,()Ljavax/swing/JComponent;,hg,,
-b,()Ljavax/swing/JComponent;,hg,,
-a,(Lhg;)Lnet/minecraft/server/MinecraftServer;,hg,,
-d,()Ljavax/swing/JComponent;,hg,,
-c,()Ljava/lang/String;,hg,,
-d,()Ljava/lang/String;,hd,,
-e,()Ljava/lang/String;,hd,,
-G,()V,hd,,
-f,()Ljava/lang/String;,hd,,
-g,()I,hd,,
+a,(Lep;I)Z,hf,attackEntity,Called when the entity is attacked.
+b,(Lad;)V,hf,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,(Lad;)V,hf,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+r,()Z,hf,handleWaterMovement,Returns if this entity is in water and will end up adding the waters velocity to the entity
+a,(Lnet/minecraft/server/MinecraftServer;)V,hg,initGui,Initialises the GUI components.
+b,(Ljava/lang/String;)V,hg,log,Logs the message with a level of INFO.
+a,()Ljavax/swing/JComponent;,hg,getStatsComponent,Returns a new JPanel with a new GuiStatsComponent inside.
+b,()Ljavax/swing/JComponent;,hg,getPlayerListComponent,Returns a new JScrollPane with a new PlayerListBox inside.
+a,(Lhg;)Lnet/minecraft/server/MinecraftServer;,hg,getMinecraftServer,Returns the MinecraftServer associated with the ServerGui.
+d,()Ljavax/swing/JComponent;,hg,getLogComponent,Returns a new JPanel with a new GuiStatsComponent inside.
+c,()Ljava/lang/String;,hg,getUsername,Gets the players username.
+d,()Ljava/lang/String;,hd,getLivingSound,Returns the sound this mob makes while it's alive.
+e,()Ljava/lang/String;,hd,getHurtSound,Returns the sound this mob makes when it is hurt.
+G,()V,hd,onLivingUpdate,"Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn."
+f,()Ljava/lang/String;,hd,getDeathSound,Returns the sound this mob makes on death.
+g,()I,hd,getDropItemId,Returns the item ID for the item the mob drops on death.
 a,([I)Lil;,he,,
 a,()Lhe;,he,,
 a,(Lil;[Ljava/lang/Object;)V,he,,
-a,()V,hb,,
-a,(Ljava/io/DataInputStream;)V,hc,,
-a,(Lfs;)V,hc,,
-a,()I,hc,,
-a,(Ljava/io/DataOutputStream;)V,hc,,
-a,(Lff;IIILjava/util/Random;)V,ha,,
-a,(Ljava/io/DataInputStream;)V,gn,,
-a,(Lfs;)V,gn,,
-a,()I,gn,,
-a,(Ljava/io/DataOutputStream;)V,gn,,
+a,()V,hb,init,Initialises the console logger.
+a,(Ljava/io/DataInputStream;)V,hc,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,hc,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,hc,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,hc,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;IIILjava/util/Random;)V,ha,updateTick,Ticks the block if it's been scheduled
+a,(Ljava/io/DataInputStream;)V,gn,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,gn,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,gn,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,gn,writePacketData,Abstract. Writes the raw packet data to the data stream.
 a,(Ljava/lang/String;)Lgm;,gm,,
-a,(Lgv;)Z,gm,,
-b,()I,gm,,
-a,(Lil;Lff;Lgq;)Lil;,gm,,
-a,(Lil;Lgq;Lff;IIII)Z,gm,,
-a,(I)Lgm;,gm,,
-a,(Lil;Llc;)V,gm,,
-c,()I,gm,,
-a,(Lep;)I,gm,,
-d,()Lgm;,gm,,
+a,(Lgv;)Z,gm,canHarvestBlock,Returns if the item (tool) can harvest results from the block type.
+b,()I,gm,getItemStackLimit,Returns the maximum size of the stack for a specific item. *Isn't this more a Set than a Get?*
+a,(Lil;Lff;Lgq;)Lil;,gm,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+a,(Lil;Lgq;Lff;IIII)Z,gm,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+a,(I)Lgm;,gm,setIconIndex,Sets the icon index for this item. Returns the item.
+a,(Lil;Llc;)V,gm,hitEntity,*
+c,()I,gm,getMaxDamage,Returns the maximum damage an item can take.
+d,()Lgm;,gm,setFull3D,Sets bFull3D to True and return the object.
+a,(Lep;)I,gm,getDamageVsEntity,*
 a,()Ljava/lang/String;,gm,,
-a,(Lil;Lgv;)F,gm,,
-a,(Lil;IIII)V,gm,,
+a,(Lil;IIII)V,gm,hitBlock,Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+a,(Lil;Lgv;)F,gm,getStrVsBlock,"Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword"
 a,(II)Lgm;,gm,,
 b,(Lil;Llc;)V,gm,,
-e,(Lff;III)V,gl,,
-a,(Lff;IIILjava/util/Random;)V,gl,,
-g,(Lff;III)Z,gl,,
-b,()I,gl,,
-h,(Lff;III)V,gl,,
-b,(Lff;IIII)V,gl,,
-a,(Ljava/io/DataInputStream;)V,gk,,
-a,(Lfs;)V,gk,,
-a,()I,gk,,
-a,(Ljava/io/DataOutputStream;)V,gk,,
-a,(Ljava/io/DataInputStream;)V,gj,,
-a,(Lfs;)V,gj,,
-a,()I,gj,,
-a,(Ljava/io/DataOutputStream;)V,gj,,
-a,(Lh;)V,gi,,
-a,()V,gi,,
-a,(Ljava/lang/String;)V,gi,,
-b,()Ljava/lang/String;,gi,,
-a,(Laj;)V,gi,,
-a,(Lgi;Laj;)Laj;,gi,,
-a,(Ljava/lang/String;[Ljava/lang/Object;)V,gi,,
+e,(Lff;III)V,gl,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,gl,updateTick,Ticks the block if it's been scheduled
+g,(Lff;III)Z,gl,canFallBelow,Checks to see if the sand can fall into the block below it
+b,()I,gl,tickRate,How many world ticks before ticking
+b,(Lff;IIII)V,gl,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+h,(Lff;III)V,gl,tryToFall,If there is space to fall below will start this block falling
+a,(Ljava/io/DataInputStream;)V,gk,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,gk,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,gk,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,gk,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,gj,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,gj,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,gj,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,gj,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lh;)V,gi,handleHandshake,*
+a,()V,gi,tryLogin,"Logs the user in if a login packet is found, otherwise keeps processing network packets unless the timeout has occurred."
+a,(Ljava/lang/String;)V,gi,kickUser,Disconnects the user with the given reason.
+b,()Ljava/lang/String;,gi,getUserAndIPString,Returns the user name (if any) and the remote address as a string.
+a,(Laj;)V,gi,handleLogin,*
+a,(Ljava/lang/String;[Ljava/lang/Object;)V,gi,handleErrorMessage,*
+a,(Lgi;Laj;)Laj;,gi,setLoginPacket,Sets and returns the login packet provided.
 a,(Ljv;)V,gi,,
-b,(Laj;)V,gi,,
-a,(Lgi;)Ljava/lang/String;,gi,,
+b,(Laj;)V,gi,doLogin,Processes the login packet and sends response packets to the user.
+a,(Lgi;)Ljava/lang/String;,gi,getServerId,Returns the server Id randomly generated by this login handler.
 a,(DD)D,gh,,
 a,([DDDDIIIDDD)[D,gh,,
 a,([DIIIIDDD)[D,gh,,
 a,([DDDIIDDD)[D,gg,,
 a,([DDDIIDDDD)[D,gg,,
-f,(Lff;III)Z,gv,,
-g,(Lff;IIII)V,gv,,
-a,(Lff;IIILep;)V,gv,,
-c,(F)Lgv;,gv,,
-c,(Lbn;)Z,gv,,
-b,()I,gv,,
+f,(Lff;III)Z,gv,canBlockStay,Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+g,(Lff;IIII)V,gv,harvestBlock,*
+a,(Lff;IIILep;)V,gv,onEntityCollidedWithBlock,"Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity"
+c,(F)Lgv;,gv,setHardness,Sets how many hits it takes to break a block.
+c,(Lbn;)Z,gv,isVecInsideXYBounds,Checks if a vector is within the X and Y bounds of the block.
+b,()I,gv,tickRate,How many world ticks before ticking
 e,()Ljava/lang/String;,gv,,
-a,(I)I,gv,,
-c,(Lff;IIII)V,gv,,
-b,(Lff;IIILgq;)V,gv,,
-a,(Lbn;)Z,gv,,
-b,(Lff;IIILep;)V,gv,,
-a,(Lff;IIIIF)V,gv,,
-e,(Lff;III)V,gv,,
-c,(I)Lgv;,gv,,
-a,(Lff;IIILjava/util/Random;)V,gv,,
-a,(Lff;IIILlc;)V,gv,,
-d,(Lff;III)Lel;,gv,,
-a,(Lff;IIII)V,gv,,
-a,(Z)V,gv,,
-b,(Lff;IIII)V,gv,,
-b,(Lbn;)Z,gv,,
-a,(ILjava/util/Random;)I,gv,,
-b,(Ljx;IIII)Z,gv,,
-a,(Ljx;IIII)Z,gv,,
-a,(F)Lgv;,gv,,
-a,(Lff;IIILbn;Lbn;)Lhk;,gv,,
-a,(Lff;IIILgq;)Z,gv,,
-a,(Lff;IIILel;Ljava/util/ArrayList;)V,gv,,
-a,(Lff;IIILep;Lbn;)V,gv,,
-a_,(Lff;IIII)V,gv,,
-a,(Ljx;III)V,gv,,
-a,(Lff;III)Z,gv,,
-b,(Lff;III)V,gv,,
-b,(F)Lgv;,gv,,
-d,(Lff;IIII)Z,gv,,
-a,()Z,gv,,
-c,()Z,gv,,
-a,(FFFFFF)V,gv,,
-c,(Lff;III)V,gv,,
-f,()Z,gv,,
-d,()Z,gv,,
-a,(IZ)Z,gv,,
-a,(Lcp;)Lgv;,gv,,
+a,(I)I,gv,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+c,(Lff;IIII)V,gv,onBlockPlaced,"Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing"
+b,(Lff;IIILgq;)V,gv,onBlockClicked,"Called when the block is clicked by a player. Args: x, y, z, entityPlayer"
+a,(Lbn;)Z,gv,isVecInsideYZBounds,Checks if a vector is within the Y and Z bounds of the block.
+a,(Lff;IIIIF)V,gv,dropBlockAsItemWithChance,Drops the block items with a specified chance of dropping the specified items
+b,(Lff;IIILep;)V,gv,onEntityWalking,"Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity"
+c,(I)Lgv;,gv,setLightOpacity,Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
+e,(Lff;III)V,gv,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,gv,updateTick,Ticks the block if it's been scheduled
+a,(Lff;IIILlc;)V,gv,onBlockPlacedBy,"Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving"
+d,(Lff;III)Lel;,gv,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+a,(Lff;IIII)V,gv,onBlockDestroyedByPlayer,"Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData"
+a,(Z)V,gv,setTickOnLoad,Sets whether this block type will tick on loading the block or not
+b,(Lff;IIII)V,gv,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+b,(Lbn;)Z,gv,isVecInsideXZBounds,Checks if a vector is within the X and Z bounds of the block.
+a,(ILjava/util/Random;)I,gv,idDropped,Returns the ID of the items to drop on destruction.
+b,(Ljx;IIII)Z,gv,isPoweringTo,Is this block powering the block on the specified side
+a,(Ljx;IIII)Z,gv,shouldSideBeRendered,"Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side"
+a,(F)Lgv;,gv,setLightValue,Sets the amount of light emitted by a block from 0.0f to 1.0f (converts internally to 0-15). Returns the object for convenience in constructing.
+a,(Lff;IIILbn;Lbn;)Lhk;,gv,collisionRayTrace,"Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec"
+a,(Lff;IIILgq;)Z,gv,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+a,(Lff;IIILel;Ljava/util/ArrayList;)V,gv,getCollidingBoundingBoxes,"Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z, axisAlignedBB, arrayList"
+a_,(Lff;IIII)V,gv,dropBlockAsItem,Drops the specified block items
+a,(Lff;IIILep;Lbn;)V,gv,velocityToAddToEntity,"Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d"
+a,(Ljx;III)V,gv,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+b,(Lff;III)V,gv,onBlockRemoval,Called whenever the block is removed.
+a,(Lff;III)Z,gv,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+b,(F)Lgv;,gv,setResistance,Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
+d,(Lff;IIII)Z,gv,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+a,()Z,gv,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+c,()Z,gv,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+a,(FFFFFF)V,gv,setBlockBounds,"Sets the bounds of the block.  minX, minY, minZ, maxX, maxY, maxZ"
+c,(Lff;III)V,gv,onBlockDestroyedByExplosion,Called upon the block being destroyed by an explosion
+f,()Z,gv,unusedMethod,Only used to fill an unused field
+d,()Z,gv,isCollidable,"Returns if this block is collidable (only used by Fire). Args: x, y, z"
+a,(IZ)Z,gv,canCollideCheck,"Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag"
+a,(Lcp;)Lgv;,gv,setStepSound,Sets the footstep sound for the block. Returns the object for convenience in constructing.
 a,(Ljava/lang/String;)Lgv;,gv,,
-a,(Lep;)F,gv,,
-a,(Ljava/util/Random;)I,gv,,
+a,(Lep;)F,gv,getExplosionResistance,*
+a,(Ljava/util/Random;)I,gv,quantityDropped,Returns the quantity of items to drop on block destruction.
 a,(Lgq;)F,gv,,
-b_,()V,gu,,
+b_,()V,gu,onUpdate,Called to update the entity's position/logic.
 a,(III)F,gu,,
-a,(Lep;I)Z,gu,,
-G,()V,gu,,
-b,(Lad;)V,gu,,
-a,()Z,gu,,
-a,(Lad;)V,gu,,
+a,(Lep;I)Z,gu,attackEntity,Called when the entity is attacked.
+G,()V,gu,onLivingUpdate,"Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn."
+b,(Lad;)V,gu,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
 a,(Lep;F)V,gu,,
+a,()Z,gu,getCanSpawnHere,Checks if the entity's current position is a valid location to spawn this entity.
+a,(Lad;)V,gu,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 k,()Lep;,gu,,
-a,(Ljava/io/DataInputStream;)V,gt,,
-a,(Lfs;)V,gt,,
-a,()I,gt,,
-a,(Ljava/io/DataOutputStream;)V,gt,,
-a,(Ljava/io/DataOutput;)V,gr,,
-a,(Ljava/io/DataInput;)V,gr,,
+a,(Ljava/io/DataInputStream;)V,gt,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,gt,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,gt,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,gt,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataOutput;)V,gr,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,gr,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
 toString,()Ljava/lang/String;,gr,,
-a,()B,gr,,
+a,()B,gr,getType,Gets the type byte for the tag.
 s,()F,gq,,
 h,(Lep;)V,gq,,
 z,()V,gq,,
 b,(Lgv;)Z,gq,,
-l,()V,gq,,
-b,(Lep;I)V,gq,,
+l,()V,gq,setEntityDead,Will get destroyed next tick
+b,(Lep;I)V,gq,addToPlayerScore,*
 c,(Lep;I)V,gq,,
-G,()V,gq,,
+G,()V,gq,onLivingUpdate,"Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn."
 a,(Llg;)V,gq,,
-a,(Lil;Z)V,gq,,
+a,(Lil;Z)V,gq,dropPlayerItemWithRandomChoice,*
 j,(Lep;)V,gq,,
-a,(Lgv;)F,gq,,
-b,(Lad;)V,gq,,
+a,(Lgv;)F,gq,getCurrentPlayerStrVsBlock,Returns how strong the player is against the specified block at this moment
+b,(Lad;)V,gq,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
 a,(III)V,gq,,
 d,(I)V,gq,,
 L,()V,gq,,
 b,(Lil;)V,gq,,
-a,(Lep;I)Z,gq,,
+a,(Lep;I)Z,gq,attackEntity,Called when the entity is attacked.
 M,()Lil;,gq,,
 c,()V,gq,,
 B,()D,gq,,
-a,(Lek;)V,gq,,
+a,(Lek;)V,gq,displayGUIFurnace,Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
 a,(Lhf;)V,gq,,
-a,(Lad;)V,gq,,
+a,(Lad;)V,gq,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 I,()V,gq,,
-b_,()V,gq,,
-f,(Lep;)V,gq,,
+b_,()V,gq,onUpdate,Called to update the entity's position/logic.
+f,(Lep;)V,gq,onDeath,Called when the mob's health reaches 0.
 g,(Lep;)V,gq,,
 a,(Lkp;)V,gq,,
 N,()V,gq,,
@@ -465,24 +465,24 @@ b,()V,gp,,
 a,()I,gp,,
 a,(I)Lil;,gp,,
 a,(Llg;I)Z,gp,,
-d,(Lff;III)Lel;,go,,
-b,(Lff;IIII)V,go,,
-a,(Ljx;III)V,go,,
-a,(ILjava/util/Random;)I,go,,
-a,()Z,go,,
-a_,()Lbg;,go,,
-a,(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;,dt,,
-a,()V,dt,,
-a,(Ljava/lang/String;Z)Z,dt,,
-a,(Ljava/lang/String;I)I,dt,,
-b,()V,dt,,
-e,(Lff;III)V,du,,
-b,(Lff;III)V,du,,
-a_,()Lbg;,du,,
-a,(Ljava/io/DataInputStream;)V,dv,,
-a,(Lfs;)V,dv,,
-a,()I,dv,,
-a,(Ljava/io/DataOutputStream;)V,dv,,
+d,(Lff;III)Lel;,go,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,go,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(Ljx;III)V,go,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+a,(ILjava/util/Random;)I,go,idDropped,Returns the ID of the items to drop on destruction.
+a,()Z,go,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+a_,()Lbg;,go,SetBlockEntity,*
+a,(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;,dt,getStringProperty,Returns a string property. If the property doesn't exist the default is returned.
+a,()V,dt,generateNewProperties,Generates a new properties file.
+a,(Ljava/lang/String;Z)Z,dt,getBooleanProperty,Returns a boolean property. If the property doesn't exist the default is returned.
+a,(Ljava/lang/String;I)I,dt,getIntProperty,Returns an integer property. If the property doesn't exist the default is returned.
+b,()V,dt,saveProperties,Writes the properties to the properties file.
+e,(Lff;III)V,du,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+b,(Lff;III)V,du,onBlockRemoval,Called whenever the block is removed.
+a_,()Lbg;,du,SetBlockEntity,*
+a,(Ljava/io/DataInputStream;)V,dv,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,dv,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,dv,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,dv,writePacketData,Abstract. Writes the raw packet data to the data stream.
 a,(Lgp;)V,dw,,
 a,(Lgq;Z)V,dw,,
 a,()V,dw,,
@@ -495,82 +495,82 @@ b,(Lgq;)Z,dw,,
 a,(Llg;)V,dw,,
 a,(Lgq;)V,dw,,
 run,()V,dx,,
-a,(ILjava/util/Random;)I,dy,,
-a,(Ljava/util/Random;)I,dy,,
-a,(Lil;Llc;)V,dz,,
+a,(ILjava/util/Random;)I,dy,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,dy,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,(Lil;Llc;)V,dz,hitEntity,*
 b,(Lil;Llc;)V,dz,,
-a,(Ljava/io/DataInputStream;)V,ea,,
-a,()I,ea,,
-a,(Ljava/io/DataOutputStream;)V,ea,,
+a,(Ljava/io/DataInputStream;)V,ea,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,()I,ea,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ea,writePacketData,Abstract. Writes the raw packet data to the data stream.
 values,()[Leb;,eb,,
 valueOf,(Ljava/lang/String;)Leb;,eb,,
 a,(Ldw;ILil;)V,ec,,
 a,(Ldw;Ljava/util/List;)V,ec,,
 a,(Ldw;II)V,ec,,
-a,(Ljava/io/DataInputStream;)V,ed,,
-a,(Lfs;)V,ed,,
-a,()I,ed,,
-a,(Ljava/io/DataOutputStream;)V,ed,,
-a,(Ljava/io/DataInputStream;)V,de,,
-a,(Lfs;)V,de,,
-a,()I,de,,
-a,(Ljava/io/DataOutputStream;)V,de,,
-a,(Ljava/io/DataInputStream;)V,dd,,
-a,(Lfs;)V,dd,,
-a,()I,dd,,
-a,(Ljava/io/DataOutputStream;)V,dd,,
-a,(Lff;Ljava/util/Random;III)Z,dg,,
-f,(Lff;III)Z,df,,
-a,(Lff;IIILjava/util/Random;)V,df,,
+a,(Ljava/io/DataInputStream;)V,ed,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,ed,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,ed,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ed,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,de,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,de,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,de,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,de,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,dd,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,dd,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,dd,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,dd,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;Ljava/util/Random;III)Z,dg,generate,*
+f,(Lff;III)Z,df,canBlockStay,Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+a,(Lff;IIILjava/util/Random;)V,df,updateTick,Ticks the block if it's been scheduled
 g,(Lff;III)V,df,,
-d,(Lff;III)Lel;,df,,
-b,(Lff;IIII)V,df,,
-a,(Lff;III)Z,df,,
-a,(ILjava/util/Random;)I,df,,
-a,()Z,df,,
-a,(Lil;Lgq;Lff;IIII)Z,di,,
-d,()Ljava/lang/String;,dh,,
-a,(Lep;I)Z,dh,,
-e,()Ljava/lang/String;,dh,,
-b,(Lad;)V,dh,,
-f,()Ljava/lang/String;,dh,,
-a,(Lad;)V,dh,,
-a,(Lil;Lgq;Lff;IIII)Z,dk,,
-a,(Lil;Lff;Lgq;)Lil;,dj,,
-b,(Lfi;)V,dm,,
-a,(Lfi;)V,dm,,
-a,(Ljava/io/DataInputStream;)V,dl,,
-a,(Lfs;)V,dl,,
-a,()I,dl,,
-a,(Ljava/io/DataOutputStream;)V,dl,,
-d,(Lff;III)Lel;,do,,
-b,(Lff;IIII)V,do,,
-c,(Lff;IIII)V,do,,
-a,(Lff;III)Z,do,,
-a,(Ljava/util/Random;)I,do,,
-a,()Z,do,,
+d,(Lff;III)Lel;,df,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,df,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(Lff;III)Z,df,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,(ILjava/util/Random;)I,df,idDropped,Returns the ID of the items to drop on destruction.
+a,()Z,df,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+a,(Lil;Lgq;Lff;IIII)Z,di,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+d,()Ljava/lang/String;,dh,getLivingSound,Returns the sound this mob makes while it's alive.
+a,(Lep;I)Z,dh,attackEntity,Called when the entity is attacked.
+e,()Ljava/lang/String;,dh,getHurtSound,Returns the sound this mob makes when it is hurt.
+b,(Lad;)V,dh,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,dh,getDeathSound,Returns the sound this mob makes on death.
+a,(Lad;)V,dh,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+a,(Lil;Lgq;Lff;IIII)Z,dk,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+a,(Lil;Lff;Lgq;)Lil;,dj,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+b,(Lfi;)V,dm,readPlayerData,Reads the player data from disk into the specified PlayerEntityMP.
+a,(Lfi;)V,dm,writePlayerData,Writes the player data to disk from the specified PlayerEntityMP.
+a,(Ljava/io/DataInputStream;)V,dl,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,dl,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,dl,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,dl,writePacketData,Abstract. Writes the raw packet data to the data stream.
+d,(Lff;III)Lel;,do,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,do,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+c,(Lff;IIII)V,do,onBlockPlaced,"Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing"
+a,(Lff;III)Z,do,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,(Ljava/util/Random;)I,do,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,()Z,do,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
 g,(Lff;III)I,dn,,
-a,(Lff;IIILep;Lbn;)V,dn,,
-b,()I,dn,,
-b,(I)F,dn,,
+a,(Lff;IIILep;Lbn;)V,dn,velocityToAddToEntity,"Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d"
+b,()I,dn,tickRate,How many world ticks before ticking
+b,(I)F,dn,setFluidHeight,Calculates the height of a fluid from its metadata
 h,(Lff;III)V,dn,,
-a,(I)I,dn,,
+a,(I)I,dn,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
 i,(Lff;III)V,dn,,
 c,(Ljx;III)Lbn;,dn,,
-a,()Z,dn,,
-e,(Lff;III)V,dn,,
-a,(Lff;IIILjava/util/Random;)V,dn,,
-d,(Lff;III)Lel;,dn,,
-b,(Lff;IIII)V,dn,,
-a,(ILjava/util/Random;)I,dn,,
-a,(IZ)Z,dn,,
-a,(Ljava/util/Random;)I,dn,,
-a,(Ljx;IIII)Z,dn,,
+a,()Z,dn,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+e,(Lff;III)V,dn,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,dn,updateTick,Ticks the block if it's been scheduled
+d,(Lff;III)Lel;,dn,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,dn,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(IZ)Z,dn,canCollideCheck,"Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag"
+a,(ILjava/util/Random;)I,dn,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,dn,quantityDropped,Returns the quantity of items to drop on block destruction.
 b,(Ljx;III)I,dn,,
-a,(Lil;Llc;)V,dq,,
-a,(Lep;)I,dq,,
-a,(Lil;IIII)V,dq,,
-a,(Lil;Lgv;)F,dq,,
+a,(Ljx;IIII)Z,dn,shouldSideBeRendered,"Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side"
+a,(Lil;Llc;)V,dq,hitEntity,*
+a,(Lep;)I,dq,getDamageVsEntity,*
+a,(Lil;Lgv;)F,dq,getStrVsBlock,"Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword"
+a,(Lil;IIII)V,dq,hitBlock,Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
 close,()V,dp,,
 flush,()V,dp,,
 publish,(Ljava/util/logging/LogRecord;)V,dp,,
@@ -580,315 +580,312 @@ b,([I)Lil;,dr,,
 a,([I)Z,dr,,
 a,([IIIZ)Z,dr,,
 a,()I,dr,,
-a,(Ljava/io/DataInputStream;)V,ew,,
-a,()I,ew,,
-a,(Ljava/io/DataOutputStream;)V,ew,,
-a,(Ljava/io/DataInputStream;)V,f,,
-a,(Lfs;)V,f,,
-a,()I,f,,
-a,(Ljava/io/DataOutputStream;)V,f,,
-d,(III)Z,ex,,
-c,(III)Lla;,ex,,
-b,(III)I,ex,,
-a,(III)I,ex,,
-a,(Lil;Lff;Lgq;)Lil;,g,,
-a,(Ljava/io/DataInputStream;)V,d,,
-a,(Lfs;)V,d,,
-a,()I,d,,
-a,(Ljava/io/DataOutputStream;)V,d,,
-a,(Ljava/io/DataInputStream;)V,eu,,
-a,(Lfs;)V,eu,,
-a,()I,eu,,
-a,(Ljava/io/DataOutputStream;)V,eu,,
-a,(Ljava/io/DataOutput;)V,e,,
-a,(Ljava/io/DataInput;)V,e,,
-toString,()Ljava/lang/String;,e,,
-a,()B,e,,
+a,(Ljava/io/DataInputStream;)V,f,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,f,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,f,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,f,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,ew,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,()I,ew,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ew,writePacketData,Abstract. Writes the raw packet data to the data stream.
+d,(III)Z,ex,doesBlockAllowAttachment,"Returns if the block at the specified coordinates allow attachment Args: x, y, z"
+b,(III)I,ex,getBlockMetadata,"Returns the block metadata at coords x,y,z"
+c,(III)Lla;,ex,getBlockMaterial,Returns the block's material.
+a,(III)I,ex,getBlockId,"Returns the block ID at coords x,y,z"
+a,(Lil;Lff;Lgq;)Lil;,g,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+a,(Ljava/io/DataInputStream;)V,d,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,d,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,d,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,d,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,eu,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,eu,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,eu,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,eu,writePacketData,Abstract. Writes the raw packet data to the data stream.
 a,(IIIIII)Z,ev,,
 a,(Lff;)V,ev,,
+a,(Ljava/io/DataOutput;)V,e,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,e,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
+toString,()Ljava/lang/String;,e,,
+a,()B,e,getType,Gets the type byte for the tag.
 toString,()Ljava/lang/String;,b,,
 hashCode,()I,b,,
-a,(Lb;)F,b,,
-a,()Z,b,,
+a,(Lb;)F,b,distanceTo,Returns the linear distance to another path point
+a,()Z,b,isAssigned,Returns true if this point has already been assigned to a path
 equals,(Ljava/lang/Object;)Z,b,,
-a,(Lff;IIILgq;)Z,c,,
-g,(Lff;III)Z,c,,
-a,(I)I,c,,
-b,(Lff;III)V,c,,
-a,(Lff;III)Z,c,,
-a_,()Lbg;,c,,
-a,(Ljava/io/DataInputStream;)V,ey,,
-a,()I,ey,,
-a,(Ljava/io/DataOutputStream;)V,ey,,
-a,(Ljava/io/DataInputStream;)V,a,,
-a,(Lfs;)V,a,,
-a,()I,a,,
-a,(Ljava/io/DataOutputStream;)V,a,,
-a,(Ljava/io/DataOutput;)V,ez,,
-a,(Ljava/io/DataInput;)V,ez,,
+a,(Lff;IIILgq;)Z,c,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+g,(Lff;III)Z,c,isThereANeighborChest,"Checks the neighbor blocks to see if there is a chest there. Args: world, x, y, z"
+a,(I)I,c,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(Lff;III)Z,c,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+b,(Lff;III)V,c,onBlockRemoval,Called whenever the block is removed.
+a_,()Lbg;,c,SetBlockEntity,*
+a,(Ljava/io/DataInputStream;)V,ey,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,()I,ey,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ey,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,a,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,a,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,a,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,a,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataOutput;)V,ez,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,ez,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
 toString,()Ljava/lang/String;,ez,,
-a,()B,ez,,
-a,(I)I,n,,
-a,(Ljava/io/DataInputStream;)V,o,,
-a,(Lfs;)V,o,,
-a,()I,o,,
-a,(Ljava/io/DataOutputStream;)V,o,,
-a,()V,l,,
-a,(Ljava/io/DataInputStream;)V,m,,
-a,(Lfs;)V,m,,
-a,()I,m,,
-a,(Ljava/io/DataOutputStream;)V,m,,
-a,(Lff;Ljava/util/Random;III)Z,j,,
-e,(Lff;III)V,fd,,
-a,(Lff;IIILlc;)V,fd,,
-a,(I)I,fd,,
-a,(Lff;III)Z,fd,,
-a,(ILjava/util/Random;)I,k,,
-a,(Ljava/util/Random;)I,k,,
-a,(ILjava/util/Random;)I,fe,,
-a,(Ljava/util/Random;)I,fe,,
-e,(Lff;III)V,fb,,
+a,()B,ez,getType,Gets the type byte for the tag.
+a,(I)I,n,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(Ljava/io/DataInputStream;)V,o,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,o,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,o,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,o,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,()V,l,update,Updates the Jlist with a new model.
+a,(Ljava/io/DataInputStream;)V,m,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,m,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,m,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,m,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;Ljava/util/Random;III)Z,j,generate,*
+e,(Lff;III)V,fd,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILlc;)V,fd,onBlockPlacedBy,"Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving"
+a,(I)I,fd,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(Lff;III)Z,fd,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,(ILjava/util/Random;)I,k,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,k,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,(ILjava/util/Random;)I,fe,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,fe,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,(Ljava/io/DataInputStream;)V,h,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,h,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,h,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,h,writePacketData,Abstract. Writes the raw packet data to the data stream.
+e,(Lff;III)V,fb,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
 g,(Lff;III)V,fb,,
-a,(Lff;IIILlc;)V,fb,,
-a,(Lff;IIILgq;)Z,fb,,
-a,(I)I,fb,,
-a,(ZLff;III)V,fb,,
-a,(ILjava/util/Random;)I,fb,,
-a_,()Lbg;,fb,,
-a,(Ljava/io/DataInputStream;)V,h,,
-a,(Lfs;)V,h,,
-a,()I,h,,
-a,(Ljava/io/DataOutputStream;)V,h,,
-d,()V,i,,
+a,(Lff;IIILgq;)Z,fb,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+a,(Lff;IIILlc;)V,fb,onBlockPlacedBy,"Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving"
+a,(I)I,fb,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(ZLff;III)V,fb,updateFurnaceBlockState,Update which block ID the furnace is using depending on whether or not it is burning
+a,(ILjava/util/Random;)I,fb,idDropped,Returns the ID of the items to drop on destruction.
+a_,()Lbg;,fb,SetBlockEntity,*
+d,()V,i,onInventoryChanged,"Called when an the contents of an Inventory change, usually"
 a,(ILil;)V,i,,
 b,()Ljava/lang/String;,i,,
 c,()I,i,,
 a,(II)Lil;,i,,
-a,()I,i,,
-a,(I)Lil;,i,,
+a,()I,i,getSizeInventory,*
+a,(I)Lil;,i,getStackInSlot,Returns the stack in slot i
 a_,(Lgq;)Z,i,,
-a,()V,fc,,
-a,(Ljx;IIII)Z,w,,
-a,()Z,w,,
+a,()V,fc,update,Updates the Jlist with a new model.
+a,(Ljx;IIII)Z,w,shouldSideBeRendered,"Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side"
+a,()Z,w,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
 b,(Leh;)I,eh,,
 a,()V,eh,,
 a,(Lgi;)V,eh,,
 a,(Leh;)Ljava/net/ServerSocket;,eh,,
 a,(Leh;Lgi;)V,eh,,
 a,(Lkk;)V,eh,,
-a,(Ljava/io/DataInputStream;)V,v,,
-a,(Lfs;)V,v,,
-a,()I,v,,
-a,(Ljava/io/DataOutputStream;)V,v,,
-a,(Ljava/io/DataInputStream;)V,eg,,
-a,(Lfs;)V,eg,,
-a,()I,eg,,
-a,(Ljava/io/DataOutputStream;)V,eg,,
-a,(Lff;Ljava/util/Random;III)Z,ef,,
-a,(Lff;IIILjava/util/Random;)V,t,,
-b,(Lff;III)V,t,,
-a,(Ljava/util/Random;)I,t,,
-a,(Ljx;IIII)Z,t,,
-d,()Z,ee,,
+a,(Ljava/io/DataInputStream;)V,eg,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,eg,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,eg,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,eg,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,v,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,v,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,v,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,v,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;Ljava/util/Random;III)Z,ef,generate,*
+a,(Lff;IIILjava/util/Random;)V,t,updateTick,Ticks the block if it's been scheduled
+b,(Lff;III)V,t,onBlockRemoval,Called whenever the block is removed.
+a,(Ljava/util/Random;)I,t,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,(Ljx;IIII)Z,t,shouldSideBeRendered,"Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side"
+d,()Z,ee,getIsLiquid,Returns if blocks of these materials are liquids.
 a,()Z,ee,,
 c,()Z,ee,,
-a,(Lff;IIILjava/util/Random;)V,s,,
-a,(Lff;IIII)V,s,,
-h,(Lff;III)F,s,,
-b,(I)Z,s,,
-a,(ILjava/util/Random;)I,s,,
-a,(Ljava/util/Random;)I,s,,
-a,()V,el,,
-c,(DDD)Lel;,el,,
+a,(Lff;IIILjava/util/Random;)V,s,updateTick,Ticks the block if it's been scheduled
+a,(Lff;IIII)V,s,onBlockDestroyedByPlayer,"Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData"
+h,(Lff;III)F,s,getGrowthRate,"Gets the growth rate for the crop. Setup to encourage rows by halving growth rate if there is diagonals, crops on different sides that aren't opposing, and by adding growth for every crop next to this one (and for crop below this one). Args: x, y, z"
+b,(I)Z,s,canThisPlantGrowOnThisBlockID,Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+a,(ILjava/util/Random;)I,s,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,s,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,()V,el,clearBoundingBoxPool,Sets the number of bounding boxes in use from the pool to 0 so they will be reused
+c,(DDD)Lel;,el,getOffsetBoundingBox,"Returns a bounding box offseted by the specified vector (if negative numbers are given it will shrink). Args: x, y, z"
 a,(Lbn;Lbn;)Lhk;,el,,
-a,(Lel;)Z,el,,
+a,(Lel;)Z,el,intersectsWith,Returns whether the given bounding box intersects with this one. Args: axisAlignedBB
 c,(Lel;D)D,el,,
-a,(DDD)Lel;,el,,
-c,(DDDDDD)Lel;,el,,
-c,(Lbn;)Z,el,,
-a,(DDDDDD)Lel;,el,,
-a,(Lbn;)Z,el,,
-b,(DDD)Lel;,el,,
-d,(DDD)Lel;,el,,
+c,(DDDDDD)Lel;,el,setBounds,"Sets the bounds of the bounding box. Args: minX, minY, minZ, maxX, maxY, maxZ"
+a,(DDD)Lel;,el,addCoord,"Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z"
+c,(Lbn;)Z,el,isVecInXY,Checks if the specified vector is within the XY dimensions of the bounding box. Args: Vec3D
+a,(DDDDDD)Lel;,el,getBoundingBox,"Returns a bounding box with the specified bounds. Args: minX, minY, minZ, maxX, maxY, maxZ"
+a,(Lbn;)Z,el,isVecInYZ,Checks if the specified vector is within the YZ dimensions of the bounding box. Args: Vec3D
+b,(DDD)Lel;,el,expands,"Returns a bounding box expanded by the specified vector (if negative numbers are given it will shrink). Args: x, y, z"
+d,(DDD)Lel;,el,offset,"Offsets the current bounding box by the specified coordinates. Args: x, y, z"
 a,(Lel;D)D,el,,
-b,(Lel;)V,el,,
+b,(Lel;)V,el,setBB,Sets the bounding box to the same bounds as the bounding box passed in. Args: axisAlignedBB
 e,(DDD)Lel;,el,,
-b,(DDDDDD)Lel;,el,,
-b,(Lbn;)Z,el,,
-b,()Lel;,el,,
+b,(DDDDDD)Lel;,el,getBoundingBoxFromPool,"Returns a bounding box with the specified bounds from the pool.  Args: minX, minY, minZ, maxX, maxY, maxZ"
+b,(Lbn;)Z,el,isVecInXZ,Checks if the specified vector is within the XZ dimensions of the bounding box. Args: Vec3D
+b,()Lel;,el,copy,Returns a copy of the bounding box.
 b,(Lel;D)D,el,,
-a,(Ljava/io/DataInputStream;)V,r,,
-a,(Lfs;)V,r,,
-a,()I,r,,
-a,(Ljava/io/DataOutputStream;)V,r,,
-h,()V,ek,,
-e,()V,ek,,
-b,(I)I,ek,,
-g,()Z,ek,,
+h,()V,ek,smeltItem,Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack
+e,()V,ek,updateEntity,"Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation."
+b,(I)I,ek,getSmeltingResultItem,"Returns the item ID of the result of smelting the given item ID, or -1 if the given item can't be smelted."
+g,()Z,ek,isBurning,Returns true if the furnace is currently burning
 a,(ILil;)V,ek,,
-a,(Lil;)I,ek,,
-a,(I)Lil;,ek,,
-a,(Lad;)V,ek,,
+a,(Lil;)I,ek,getItemBurnTime,"Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't fuel"
+a,(I)Lil;,ek,getStackInSlot,Returns the stack in slot i
+a,(Lad;)V,ek,readFromNBT,Reads a tile entity from NBT.
 a_,(Lgq;)Z,ek,,
+i,()Z,ek,canSmelt,"Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc."
 b,()Ljava/lang/String;,ek,,
-i,()Z,ek,,
-a,(II)Lil;,ek,,
 c,()I,ek,,
-b,(Lad;)V,ek,,
-a,()I,ek,,
-a,(Ljava/io/DataOutput;)V,q,,
-a,(Ljava/io/DataInput;)V,q,,
-toString,()Ljava/lang/String;,q,,
-a,()B,q,,
-a,(ILjava/util/Random;)I,ej,,
-a,(ILjava/util/Random;)I,p,,
+a,(II)Lil;,ek,,
+b,(Lad;)V,ek,writeToNBT,Writes a tile entity to NBT.
+a,()I,ek,getSizeInventory,*
+a,(Ljava/io/DataInputStream;)V,r,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,r,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,r,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,r,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataOutput;)V,q,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,q,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
+a,()B,q,getType,Gets the type byte for the tag.
+a,(ILjava/util/Random;)I,ej,idDropped,Returns the ID of the items to drop on destruction.
+a,(ILjava/util/Random;)I,p,idDropped,Returns the ID of the items to drop on destruction.
 run,()V,ei,,
 d,(Lep;)Lel;,ep,,
-e,(DDD)D,ep,,
-b,(DDDFF)V,ep,,
-b,(F)F,ep,,
+e,(DDD)D,ep,getDistance,"Gets the distance to the position. Args: x, y, z"
+b,(DDDFF)V,ep,setPositionAndRotation,"Sets the entity's position and rotation. Args: posX, posY, posZ, yaw, pitch"
+b,(F)F,ep,getEntityBrightness,Gets how bright this entity is.
 A,()V,ep,,
-c,(DDDFF)V,ep,,
-b,(Lep;I)V,ep,,
-x,()Z,ep,,
+b,(Lep;I)V,ep,addToPlayerScore,*
+c,(DDDFF)V,ep,setLocationAndAngles,*
+x,()Z,ep,isEntityAlive,*
 j,()D,ep,,
 E,()[I,ep,,
-f,(DDD)V,ep,,
-v,()Z,ep,,
-a,(Lla;)Z,ep,,
-c_,()Z,ep,,
-b,(Lgq;)V,ep,,
-e,(Lep;)V,ep,,
-n,()V,ep,,
-a,(IIF)Lhf;,ep,,
+f,(DDD)V,ep,addVelocity,"Adds to the current velocity of the entity. Args: x, y, z"
+v,()Z,ep,canBePushed,*
+c_,()Z,ep,canBeCollidedWith,*
+a,(Lla;)Z,ep,isInsideOfMaterial,Checks if the current block the entity is within of the specified material type
+b,(Lgq;)V,ep,onCollideWithPlayer,Called by a player entity when they collide with an entity
+e,(Lep;)V,ep,mountEntity,set entity to null to unmount
+n,()V,ep,setOnFireFromLava,Called whenever the entity is walking inside of lava.
+a,(IIF)Lhf;,ep,dropItemWithOffset,"Drops an item stack with a specified y offset. Args: itemID, count, yOffset"
 hashCode,()I,ep,,
-a,(Lep;I)Z,ep,,
-w,()Ljava/lang/String;,ep,,
+a,(Lep;I)Z,ep,attackEntity,Called when the entity is attacked.
+w,()Ljava/lang/String;,ep,getEntityString,*
 a,(Lgq;)Z,ep,,
 q,()Lel;,ep,,
-a,(Lad;)V,ep,,
-a,(DZ)V,ep,,
+a,(Lad;)V,ep,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+a,(DZ)V,ep,updateFallState,"Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround"
 C,()Lbn;,ep,,
-a,(Lep;)F,ep,,
-r,()Z,ep,,
+a,(Lep;)F,ep,getDistanceToEntity,Returns the distance to the entity. Args: entity
+r,()Z,ep,handleWaterMovement,Returns if this entity is in water and will end up adding the waters velocity to the entity
 s,()F,ep,,
-b,(DDD)Z,ep,,
+b,(DDD)Z,ep,isOffsetPositionInLiquid,*
 z,()V,ep,,
-l,()V,ep,,
-t,()Z,ep,,
-d,(DDD)D,ep,,
+d,(DDD)D,ep,getDistanceSq,"Gets the squared distance to the position. Args: x, y, z"
+t,()Z,ep,handleLavaMovement,*
+l,()V,ep,setEntityDead,Will get destroyed next tick
 a,([D)Les;,ep,,
 o,()V,ep,,
-b,(FF)V,ep,,
-b,(I)V,ep,,
+b,(FF)V,ep,setRotation,Sets the rotation of the entity
+b,(I)V,ep,dealFireDamage,Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
 D,()V,ep,,
+d,(Lad;)V,ep,writeToNBT,Save the entity to NBT (calls an abstract helper method to write extra data)
 a,(FFF)V,ep,,
-d,(Lad;)V,ep,,
-a,(DDD)V,ep,,
-b,(Lad;)V,ep,,
-b,(Lep;)D,ep,,
+a,(DDD)V,ep,setPosition,"Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box."
+b,(Lad;)V,ep,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+b,(Lep;)D,ep,getDistanceSqToEntity,Returns the squared distance to the entity. Args: entity
 m,()V,ep,,
 a,([F)Les;,ep,,
-e,(Lad;)V,ep,,
-p,()Z,ep,,
+e,(Lad;)V,ep,readFromNBT,Reads the entity from NBT (calls an abstract helper method to read specialized data)
 y,()Z,ep,,
-a,(FF)V,ep,,
+p,()Z,ep,isSneaking,Returns if this entity is sneaking.
+a,(FF)V,ep,setSize,"Sets the width and height of the entity. Args: width, height"
 B,()D,ep,,
+c,(Lep;)V,ep,applyEntityCollision,Applies a velocity to each of the entities pushing them away from each other. Args: entity
 equals,(Ljava/lang/Object;)Z,ep,,
-c,(Lep;)V,ep,,
-b_,()V,ep,,
-a,(F)V,ep,,
-b,(II)Lhf;,ep,,
-c,(DDD)V,ep,,
+b_,()V,ep,onUpdate,Called to update the entity's position/logic.
+a,(F)V,ep,fall,Called when the mob is falling. Calculates and applies fall damage.
+b,(II)Lhf;,ep,dropItem,"Drops an item stack at the entity's position. Args: itemID, count"
+c,(DDD)V,ep,moveEntity,"Tries to moves the entity by the passed in displacement. Args: x, y, z"
 u,()V,ep,,
 c,(Lad;)Z,ep,,
-a,(Lff;Ljava/util/Random;III)Z,eo,,
+a,(Lff;Ljava/util/Random;III)Z,eo,generate,*
 b,(Ljava/util/Random;)Ljava/lang/String;,eo,,
 a,(Ljava/util/Random;)Lil;,eo,,
-b,(Lgq;)V,en,,
-b_,()V,en,,
+b,(Lgq;)V,en,onCollideWithPlayer,Called by a player entity when they collide with an entity
+b_,()V,en,onUpdate,Called to update the entity's position/logic.
 a,(DDDFF)V,en,,
-b,(Lad;)V,en,,
-a,(Lad;)V,en,,
-b,(Ljx;III)Z,em,,
+b,(Lad;)V,en,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,(Lad;)V,en,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 h,(Lff;III)V,em,,
-a,(Lff;III)Z,em,,
-b,(Lff;III)V,em,,
-f,(Lff;IIII)I,em,,
-d,(Lff;IIII)Z,em,,
-a,()Z,em,,
-c,()Z,em,,
-e,(Lff;III)V,em,,
+b,(Ljx;III)Z,em,isPowerProviderOrWire,"Returns true if the block coordinate passed can provide power, or is a redstone wire."
+b,(Lff;III)V,em,onBlockRemoval,Called whenever the block is removed.
+a,(Lff;III)Z,em,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+f,(Lff;IIII)I,em,getMaxCurrentStrength,"Returns the current strength at the specified block if it is greater than the passed value, or the passed value otherwise. Signature: (world, x, y, z, strength)"
+d,(Lff;IIII)Z,em,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+a,()Z,em,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+c,()Z,em,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+e,(Lff;III)V,em,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
 g,(Lff;III)V,em,,
-d,(Lff;III)Lel;,em,,
-b,(Lff;IIII)V,em,,
-a,(ILjava/util/Random;)I,em,,
-b,(Ljx;IIII)Z,em,,
-b,()I,et,,
-a,(I)I,et,,
-b,(Lff;IIILgq;)V,et,,
-b,(Lff;IIILep;)V,et,,
-a,(Lff;IIIIF)V,et,,
-e,(Lff;III)V,et,,
-a,(Lff;IIILjava/util/Random;)V,et,,
-a,(Lff;IIILlc;)V,et,,
-d,(Lff;III)Lel;,et,,
-a,(Lff;IIII)V,et,,
-a,(ILjava/util/Random;)I,et,,
-a,(Ljx;IIII)Z,et,,
-a,(Lff;IIILgq;)Z,et,,
-a,(Lff;IIILel;Ljava/util/ArrayList;)V,et,,
-a_,(Lff;IIII)V,et,,
-a,(Lff;IIILep;Lbn;)V,et,,
-b,(Lff;III)V,et,,
-a,(Lff;III)Z,et,,
-a,(Ljx;III)V,et,,
-a,()Z,et,,
-c,(Lff;III)V,et,,
-d,()Z,et,,
-a,(IZ)Z,et,,
-a,(Lep;)F,et,,
-a,(Ljava/util/Random;)I,et,,
-a,(III)F,z,,
-a,(I)Lia;,es,,
-a,(Ljava/io/DataOutput;)V,es,,
-a,(Ljava/io/DataInput;)V,es,,
-a,(Lia;)V,es,,
+d,(Lff;III)Lel;,em,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,em,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(ILjava/util/Random;)I,em,idDropped,Returns the ID of the items to drop on destruction.
+b,(Ljx;IIII)Z,em,isPoweringTo,Is this block powering the block on the specified side
+b,()I,et,tickRate,How many world ticks before ticking
+a,(I)I,et,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+b,(Lff;IIILgq;)V,et,onBlockClicked,"Called when the block is clicked by a player. Args: x, y, z, entityPlayer"
+b,(Lff;IIILep;)V,et,onEntityWalking,"Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity"
+a,(Lff;IIIIF)V,et,dropBlockAsItemWithChance,Drops the block items with a specified chance of dropping the specified items
+e,(Lff;III)V,et,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,et,updateTick,Ticks the block if it's been scheduled
+a,(Lff;IIILlc;)V,et,onBlockPlacedBy,"Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving"
+d,(Lff;III)Lel;,et,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+a,(Lff;IIII)V,et,onBlockDestroyedByPlayer,"Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData"
+a,(ILjava/util/Random;)I,et,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljx;IIII)Z,et,shouldSideBeRendered,"Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side"
+a,(Lff;IIILgq;)Z,et,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+a,(Lff;IIILel;Ljava/util/ArrayList;)V,et,getCollidingBoundingBoxes,"Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z, axisAlignedBB, arrayList"
+a,(Lff;IIILep;Lbn;)V,et,velocityToAddToEntity,"Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d"
+a_,(Lff;IIII)V,et,dropBlockAsItem,Drops the specified block items
+a,(Lff;III)Z,et,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+b,(Lff;III)V,et,onBlockRemoval,Called whenever the block is removed.
+a,(Ljx;III)V,et,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+a,()Z,et,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+c,(Lff;III)V,et,onBlockDestroyedByExplosion,Called upon the block being destroyed by an explosion
+d,()Z,et,isCollidable,"Returns if this block is collidable (only used by Fire). Args: x, y, z"
+a,(IZ)Z,et,canCollideCheck,"Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag"
+a,(Lep;)F,et,getExplosionResistance,*
+a,(Ljava/util/Random;)I,et,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,(I)Lia;,es,tagAt,Retrieves the tag at the specified index from the list.
+a,(Ljava/io/DataOutput;)V,es,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,es,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
 toString,()Ljava/lang/String;,es,,
-b,()I,es,,
-a,()B,es,,
-a,(Lhe;)V,y,,
-a,(Ljava/io/DataInputStream;)V,er,,
-a,(Lfs;)V,er,,
-a,()I,er,,
-a,(Ljava/io/DataOutputStream;)V,er,,
-a,(Ljava/io/DataInputStream;)V,x,,
-a,(Lfs;)V,x,,
-a,()I,x,,
-a,(Ljava/io/DataOutputStream;)V,x,,
+a,(Lia;)V,es,setTag,Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any previous tag.
+a,()B,es,getType,Gets the type byte for the tag.
+b,()I,es,tagCount,Returns the number of tags in the list.
+a,(Ljava/io/DataInputStream;)V,er,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,er,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,er,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,er,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,x,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,x,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,x,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,x,writePacketData,Abstract. Writes the raw packet data to the data stream.
 a,(Lff;IIII[B)V,eq,,
 a,(II[BDDDFFFIID)V,eq,,
 a,(II[BDDD)V,eq,,
 a,(Lil;)Z,cb,,
 a,()I,cb,,
-b_,()V,ca,,
-a,(Lep;I)Z,ca,,
-c_,()Z,ca,,
-b,(Lad;)V,ca,,
-a,(Lad;)V,ca,,
-a,(Ljava/io/DataOutput;)V,bz,,
-a,(Ljava/io/DataInput;)V,bz,,
+b_,()V,ca,onUpdate,Called to update the entity's position/logic.
+a,(Lep;I)Z,ca,attackEntity,Called when the entity is attacked.
+c_,()Z,ca,canBeCollidedWith,*
+b,(Lad;)V,ca,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,(Lad;)V,ca,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+a,(Ljava/io/DataOutput;)V,bz,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,bz,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
 toString,()Ljava/lang/String;,bz,,
-a,()B,bz,,
+a,()B,bz,getType,Gets the type byte for the tag.
 a,(III)V,bw,,
-a,()V,bw,,
-a,(Ljava/lang/String;III)V,bw,,
-a,(Ljava/lang/String;DDDDDD)V,bw,,
-a,(Ljava/lang/String;DDDFF)V,bw,,
-a,(Lep;)V,bw,,
+a,()V,bw,updateAllRenderers,*
+a,(Ljava/lang/String;III)V,bw,playRecord,"Plays the specified record. Arg: recordName, x, y, z"
+a,(Ljava/lang/String;DDDDDD)V,bw,spawnParticle,"Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ"
+a,(Ljava/lang/String;DDDFF)V,bw,playSound,"Plays the specified sound. Arg: x, y, z, soundName, unknown1, unknown2"
+a,(Lep;)V,bw,obtainEntitySkin,*
 a,(IIILbg;)V,bw,,
 b,(Lep;)V,bw,,
-a,(IIIIII)V,bw,,
+a,(IIIIII)V,bw,markBlockRangeNeedsUpdate,*
 a,(Lff;IIII[B)V,bv,,
 a,(II[BDDDFFFIID)V,bv,,
 a,(II[BDDD)V,bv,,
@@ -896,311 +893,311 @@ a,([DDDIIDDD)V,by,,
 a,([IDD)D,by,,
 a,(D)I,by,,
 b,(Lgq;)Z,bx,,
-b,(Lbs;)Z,bs,,
-a,()V,bs,,
-e,()V,bs,,
-f,(Lbs;)Ljava/lang/Thread;,bs,,
-d,()I,bs,,
-b,()Ljava/net/SocketAddress;,bs,,
-a,(Ljava/lang/Exception;)V,bs,,
-c,()V,bs,,
-a,(Lbs;)Z,bs,,
-f,()V,bs,,
-a,(Lfs;)V,bs,,
-d,(Lbs;)V,bs,,
-e,(Lbs;)Ljava/lang/Thread;,bs,,
-a,(Ljava/lang/String;[Ljava/lang/Object;)V,bs,,
-a,(Ljv;)V,bs,,
-c,(Lbs;)V,bs,,
-a,(Ljava/io/DataInputStream;)V,br,,
-a,(Lfs;)V,br,,
-a,()I,br,,
-a,(Ljava/io/DataOutputStream;)V,br,,
-a,(Lil;Lff;Lgq;)Lil;,bu,,
-a,(Lff;Ljava/util/Random;III)Z,bt,,
+a,()V,bs,processReadPackets,Checks timeouts and processes all pending read packets.
+b,(Lbs;)Z,bs,isServerTerminating,Is the server terminating? Client side aways returns false.
+e,()V,bs,sendPacket,"Sends a data packet if there is one to send, or sends a chunk data packet if there is one and the counter is up, or does nothing. If it sends a packet, it sleeps for 10ms."
+f,(Lbs;)Ljava/lang/Thread;,bs,getWriteThread,Returns the write thread.
+d,()I,bs,getNumChunkDataPackets,Returns the number of chunk data packets waiting to be sent.
+b,()Ljava/net/SocketAddress;,bs,getRemoteAddress,Returns the socket address of the remote side. Server-only.
+a,(Ljava/lang/Exception;)V,bs,onNetworkError,Used to report network errors and causes a network shutdown.
+c,()V,bs,serverShutdown,Server-only method to shut down the network.
+a,(Lbs;)Z,bs,isRunning,Whether the network is operational.
+f,()V,bs,readPacket,"Reads a single packet from the input stream and adds it to the read queue. If no packet is read, it shuts down the network."
+a,(Lfs;)V,bs,setNetHandler,Sets the NetHandler for this NetworkManager. Server-only.
+d,(Lbs;)V,bs,sendNetworkPacket,Static accessor to sendPacket.
+e,(Lbs;)Ljava/lang/Thread;,bs,getReadThread,Returns the read thread.
+a,(Ljava/lang/String;[Ljava/lang/Object;)V,bs,networkShutdown,"Shuts down the network with the specified reason. Closes all streams and sockets, spawns NetworkMasterThread to stop reading and writing threads."
+a,(Ljv;)V,bs,addToSendQueue,Adds the packet to the correct send queue (chunk data packets go to a separate queue).
+c,(Lbs;)V,bs,readNetworkPacket,Static accessor to readPacket.
+a,(Ljava/io/DataInputStream;)V,br,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,br,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,br,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,br,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lil;Lff;Lgq;)Lil;,bu,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+a,(Lff;Ljava/util/Random;III)Z,bt,generate,*
 a,(DDD)V,bt,,
-b,(DDD)Lbn;,bn,,
-a,()V,bn,,
+b,(DDD)Lbn;,bn,createVector,Static method to create a new vector in the vector list and return it.
+a,()V,bn,initialize,Initializes the next empty vector slot in the list to 0.
 toString,()Ljava/lang/String;,bn,,
-a,(Lbn;D)Lbn;,bn,,
-d,(DDD)D,bn,,
-b,(Lbn;D)Lbn;,bn,,
-c,(DDD)Lbn;,bn,,
-c,(Lbn;D)Lbn;,bn,,
-b,(Lbn;)D,bn,,
-a,(Lbn;)D,bn,,
-b,()Lbn;,bn,,
-c,()D,bn,,
-e,(DDD)Lbn;,bn,,
-a,(DDD)Lbn;,bn,,
-a,(Lff;IIILep;)V,bo,,
-b,()I,bo,,
-a,(Ljx;III)V,bo,,
-b,(Lff;III)V,bo,,
-a,(Lff;III)Z,bo,,
-d,(Lff;IIII)Z,bo,,
-a,()Z,bo,,
-c,()Z,bo,,
-e,(Lff;III)V,bo,,
-a,(Lff;IIILjava/util/Random;)V,bo,,
+a,(Lbn;D)Lbn;,bn,getIntermediateWithXValue,"Returns a new vector with x value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible."
+d,(DDD)D,bn,squareDistanceTo,"The square of the Euclidean distance between this and the vector of x,y,z components passed in."
+c,(DDD)Lbn;,bn,addVector,"Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector."
+b,(Lbn;D)Lbn;,bn,getIntermediateWithYValue,"Returns a new vector with y value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible."
+b,(Lbn;)D,bn,squareDistanceTo,The square of the Euclidean distance between this and the specified vector.
+c,(Lbn;D)Lbn;,bn,getIntermediateWithZValue,"Returns a new vector with z value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible."
+a,(Lbn;)D,bn,distanceTo,"Euclidean distance between this and the specified vector, returned as double."
+b,()Lbn;,bn,normalize,Normalizes the vector to a length of 1 (except if it is the zero vector)
+c,()D,bn,lengthVector,Returns the length of the vector.
+e,(DDD)Lbn;,bn,setComponents,"Sets the x,y,z components of the vector as specified."
+a,(DDD)Lbn;,bn,createVectorHelper,"Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static method which creates and places it in the list."
+a,(Lff;IIILep;)V,bo,onEntityCollidedWithBlock,"Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity"
+b,()I,bo,tickRate,How many world ticks before ticking
+b,(Lff;III)V,bo,onBlockRemoval,Called whenever the block is removed.
+a,(Lff;III)Z,bo,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,(Ljx;III)V,bo,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+d,(Lff;IIII)Z,bo,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+a,()Z,bo,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+c,()Z,bo,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+e,(Lff;III)V,bo,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,bo,updateTick,Ticks the block if it's been scheduled
 g,(Lff;III)V,bo,,
-d,(Lff;III)Lel;,bo,,
-b,(Lff;IIII)V,bo,,
-b,(Ljx;IIII)Z,bo,,
-d,()Ljava/lang/String;,bp,,
-h,()F,bp,,
-e,()Ljava/lang/String;,bp,,
+d,(Lff;III)Lel;,bo,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,bo,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+b,(Ljx;IIII)Z,bo,isPoweringTo,Is this block powering the block on the specified side
+d,()Ljava/lang/String;,bp,getLivingSound,Returns the sound this mob makes while it's alive.
+h,()F,bp,getSoundVolume,Returns the volume for the sounds this mob makes.
+e,()Ljava/lang/String;,bp,getHurtSound,Returns the sound this mob makes when it is hurt.
 a,(Lgq;)Z,bp,,
-b,(Lad;)V,bp,,
-f,()Ljava/lang/String;,bp,,
-a,(Lad;)V,bp,,
-g,()I,bp,,
-b,(Lgq;)V,bq,,
-b_,()V,bq,,
+b,(Lad;)V,bp,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,bp,getDeathSound,Returns the sound this mob makes on death.
+a,(Lad;)V,bp,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+g,()I,bp,getDropItemId,Returns the item ID for the item the mob drops on death.
+b,(Lgq;)V,bq,onCollideWithPlayer,Called by a player entity when they collide with an entity
+b_,()V,bq,onUpdate,Called to update the entity's position/logic.
 a,(DDDFF)V,bq,,
-b,(Lad;)V,bq,,
-a,(Lad;)V,bq,,
+b,(Lad;)V,bq,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,(Lad;)V,bq,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 a,()V,bj,,
 a,(Lec;)V,bj,,
 b,(Lgq;)Z,bj,,
 a,(DDDD)Z,bk,,
-d,()Ljava/lang/String;,bk,,
-h,()F,bk,,
-e,()Ljava/lang/String;,bk,,
+d,()Ljava/lang/String;,bk,getLivingSound,Returns the sound this mob makes while it's alive.
+h,()F,bk,getSoundVolume,Returns the volume for the sounds this mob makes.
+e,()Ljava/lang/String;,bk,getHurtSound,Returns the sound this mob makes when it is hurt.
 c,()V,bk,,
 i,()I,bk,,
-f,()Ljava/lang/String;,bk,,
-a,()Z,bk,,
-g,()I,bk,,
-e,(Lff;III)V,bl,,
+f,()Ljava/lang/String;,bk,getDeathSound,Returns the sound this mob makes on death.
+a,()Z,bk,getCanSpawnHere,Checks if the entity's current position is a valid location to spawn this entity.
+g,()I,bk,getDropItemId,Returns the item ID for the item the mob drops on death.
+e,(Lff;III)V,bl,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
 g,(Lff;III)V,bl,,
-d,(Lff;III)Lel;,bl,,
-b,(Lff;IIII)V,bl,,
-a,(Lff;III)Z,bl,,
-a,(Ljx;III)V,bl,,
-a,(Ljava/util/Random;)I,bl,,
-a,()Z,bl,,
-a,(Lff;IIILbn;Lbn;)Lhk;,bl,,
-a,(Lff;IIILjava/util/Random;)V,bm,,
+d,(Lff;III)Lel;,bl,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+b,(Lff;IIII)V,bl,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(Ljx;III)V,bl,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+a,(Lff;III)Z,bl,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,(Ljava/util/Random;)I,bl,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,()Z,bl,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+a,(Lff;IIILbn;Lbn;)Lhk;,bl,collisionRayTrace,"Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec"
+a,(Lff;IIILjava/util/Random;)V,bm,updateTick,Ticks the block if it's been scheduled
 g,(Lff;III)V,bm,,
-a,(Lff;IIILgq;)Z,bm,,
-b,()I,bm,,
+a,(Lff;IIILgq;)Z,bm,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+b,()I,bm,tickRate,How many world ticks before ticking
 h,(Lff;III)V,bm,,
-b,(Lff;IIILgq;)V,bm,,
-a,(ILjava/util/Random;)I,bm,,
-a,(Ljava/util/Random;)I,bm,,
-b,(Lff;IIILep;)V,bm,,
+b,(Lff;IIILgq;)V,bm,onBlockClicked,"Called when the block is clicked by a player. Args: x, y, z, entityPlayer"
+a,(ILjava/util/Random;)I,bm,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,bm,quantityDropped,Returns the quantity of items to drop on block destruction.
+b,(Lff;IIILep;)V,bm,onEntityWalking,"Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity"
 a,(III)F,bf,,
 b,()I,bf,,
-b,(Lad;)V,bf,,
-a,()Z,bf,,
-a,(Lad;)V,bf,,
-d,()V,bg,,
-a,(Ljava/lang/Class;Ljava/lang/String;)V,bg,,
-e,()V,bg,,
-b,(Lad;)V,bg,,
+b,(Lad;)V,bf,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,()Z,bf,getCanSpawnHere,Checks if the entity's current position is a valid location to spawn this entity.
+a,(Lad;)V,bf,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+d,()V,bg,onInventoryChanged,"Called when an the contents of an Inventory change, usually"
+a,(Ljava/lang/Class;Ljava/lang/String;)V,bg,addMapping,Adds a new two-way mapping between the class and its string name in both hashmaps.
+e,()V,bg,updateEntity,"Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation."
+b,(Lad;)V,bg,writeToNBT,Writes a tile entity to NBT.
 f,()Ljv;,bg,,
-c,(Lad;)Lbg;,bg,,
-a,(Lad;)V,bg,,
-a,(Ljava/io/DataInputStream;)V,bh,,
-a,(Lfs;)V,bh,,
-a,()I,bh,,
-a,(Ljava/io/DataOutputStream;)V,bh,,
-a,(Lff;IIILjava/util/Random;)V,bi,,
+c,(Lad;)Lbg;,bg,createAndLoadEntity,Creates a new entity and loads its data from the specified NBT.
+a,(Lad;)V,bg,readFromNBT,Reads a tile entity from NBT.
+a,(Ljava/io/DataInputStream;)V,bh,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,bh,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,bh,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,bh,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;IIILjava/util/Random;)V,bi,updateTick,Ticks the block if it's been scheduled
 g,(Lff;III)V,bi,,
 b,(Lff;III)V,bi,,
-a,(ILjava/util/Random;)I,bi,,
-a,(Ljava/util/Random;)I,bi,,
-a,()Z,bi,,
-b,(Lff;IIILep;)V,bi,,
-a,(Lil;Lff;Lgq;)Lil;,bb,,
+a,(ILjava/util/Random;)I,bi,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,bi,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,()Z,bi,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+b,(Lff;IIILep;)V,bi,onEntityWalking,"Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity"
+a,(Lil;Lff;Lgq;)Lil;,bb,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
 a,(Lff;II)Lkx;,bd,,
 a,()V,bd,,
 b,(Lff;Lkx;)V,bd,,
 a,(Lff;Lkx;)V,bd,,
 b,()V,bd,,
-a,(Lff;Ljava/util/Random;III)Z,be,,
-a,(Lep;)Lbn;,dc,,
-a,()V,dc,,
-b,()Z,dc,,
-a,(Ljava/io/DataInputStream;)V,da,,
-a,(Lfs;)V,da,,
-a,()I,da,,
-a,(Ljava/io/DataOutputStream;)V,da,,
-a,(Lil;Lff;Lgq;)Lil;,cz,,
-a,(ILjava/util/Random;)I,cy,,
-a,(Ljava/util/Random;)I,cy,,
-a,()Z,cy,,
-a_,()Lbg;,cy,,
-b_,()V,cx,,
-c_,()Z,cx,,
-b,(Lad;)V,cx,,
-c,()V,cx,,
-a,(Lad;)V,cx,,
+a,(Lff;Ljava/util/Random;III)Z,be,generate,*
+a,(Lep;)Lbn;,dc,getPosition,Gets the position that an entity should be at in the current point in the path
+a,()V,dc,incrementPathIndex,Directs this path to the next point in its array
+b,()Z,dc,isFinished,Returns true if this path has reached the end
+a,(Ljava/io/DataInputStream;)V,da,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,da,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,da,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,da,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lil;Lff;Lgq;)Lil;,cz,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+a,(ILjava/util/Random;)I,cy,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,cy,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,()Z,cy,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+a_,()Lbg;,cy,SetBlockEntity,*
+b_,()V,cx,onUpdate,Called to update the entity's position/logic.
+c_,()Z,cx,canBeCollidedWith,*
+c,()V,cx,explode,*
+b,(Lad;)V,cx,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,(Lad;)V,cx,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 a,()V,cw,,
 b,()V,cw,,
 compareTo,(Ljava/lang/Object;)I,cv,,
 hashCode,()I,cv,,
-a,(Lcv;)I,cv,,
-a,(J)Lcv;,cv,,
+a,(J)Lcv;,cv,setScheduledTime,Sets the scheduled time for this tick entry
+a,(Lcv;)I,cv,comparer,Compares this tick entry to another tick entry for sorting purposes. Compared first based on the scheduled time and second based on tickEntryID.
 equals,(Ljava/lang/Object;)Z,cv,,
-e,(Lff;III)V,cu,,
-a,(Lff;IIILjava/util/Random;)V,cu,,
+e,(Lff;III)V,cu,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,cu,updateTick,Ticks the block if it's been scheduled
 g,(Lff;III)Z,cu,,
-b,()I,cu,,
-b,(Lff;IIII)V,cu,,
-a,(Lff;IIIZ)Z,cu,,
-b,(Lff;III)V,cu,,
-a,(ILjava/util/Random;)I,cu,,
-d,(Lff;IIII)Z,cu,,
-b,(Ljx;IIII)Z,cu,,
-c,()Z,cu,,
-b_,()V,ct,,
+b,()I,cu,tickRate,How many world ticks before ticking
+b,(Lff;IIII)V,cu,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(Lff;IIIZ)Z,cu,checkForBurnout,
+b,(Lff;III)V,cu,onBlockRemoval,Called whenever the block is removed.
+a,(ILjava/util/Random;)I,cu,idDropped,Returns the ID of the items to drop on destruction.
+b,(Ljx;IIII)Z,cu,isPoweringTo,Is this block powering the block on the specified side
+d,(Lff;IIII)Z,cu,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+c,()Z,cu,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+b_,()V,ct,onUpdate,Called to update the entity's position/logic.
 a,(I)V,ct,,
 c,(I)F,ct,,
-a,(Lep;I)Z,ct,,
-c_,()Z,ct,,
-b,(Lad;)V,ct,,
-a,(Lad;)V,ct,,
+a,(Lep;I)Z,ct,attackEntity,Called when the entity is attacked.
+c_,()Z,ct,canBeCollidedWith,*
+b,(Lad;)V,ct,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+a,(Lad;)V,ct,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 c,()Z,ct,,
-a,(Ljava/io/DataInputStream;)V,cs,,
-a,(Lfs;)V,cs,,
-a,()I,cs,,
-a,(Ljava/io/DataOutputStream;)V,cs,,
-e,()V,cq,,
-b,(Lad;)V,cq,,
-b,()V,cq,,
-a,(Lad;)V,cq,,
+a,(Ljava/io/DataInputStream;)V,cs,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,cs,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,cs,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,cs,writePacketData,Abstract. Writes the raw packet data to the data stream.
+e,()V,cq,updateEntity,"Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation."
+b,()V,cq,updateDelay,Sets the delay before a new spawn (base delay of 200 + random number up to 600).
+b,(Lad;)V,cq,writeToNBT,Writes a tile entity to NBT.
 a,()Z,cq,,
+a,(Lad;)V,cq,readFromNBT,Reads a tile entity from NBT.
 b,()Ljava/lang/Object;,cr,,
 toString,()Ljava/lang/String;,cr,,
 hashCode,()I,cr,,
 equals,(Ljava/lang/Object;)Z,cr,,
 a,()J,cr,,
-a,(Lil;Lff;Lgq;)Lil;,co,,
+a,(Lil;Lff;Lgq;)Lil;,co,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
 a,()F,cp,,
 b,()F,cp,,
 c,()Ljava/lang/String;,cp,,
-a,(Ljava/io/DataOutput;)V,cm,,
-a,(Ljava/io/DataInput;)V,cm,,
+a,(Ljava/io/DataOutput;)V,cm,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,cm,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
 toString,()Ljava/lang/String;,cm,,
-a,()B,cm,,
+a,()B,cm,getType,Gets the type byte for the tag.
 run,()V,cn,,
-a,(ZLkf;)Z,ck,,
+a,(ZLkf;)Z,ck,saveWorld,Called to save the world
 a,([DIIIIII)[D,ck,,
-b,(II)Lkx;,ck,,
+b,(II)Lkx;,ck,provideChunk,*
 b,()Z,ck,,
 b,(II[B)V,ck,,
 a,(II[B)V,ck,,
 a,()Z,ck,,
-a,(II)Z,ck,,
-a,(Lcg;II)V,ck,,
+a,(II)Z,ck,chunkExists,"Checks to see if a chunk exists at x, y"
+a,(Lcg;II)V,ck,populate,Populates chunk with ores etc etc
 run,()V,cl,,
-a,(Lff;II)Liq;,ci,,
-a,(Lff;)I,ci,,
+a,(Lff;II)Liq;,ci,getRandomSpawningPointInChunk,*
+a,(Lff;)I,ci,performSpawning,*
 run,()V,cj,,
-a,(ZLkf;)Z,cg,,
-b,(II)Lkx;,cg,,
+a,(ZLkf;)Z,cg,saveWorld,Called to save the world
+b,(II)Lkx;,cg,provideChunk,*
 b,()Z,cg,,
 a,()Z,cg,,
-a,(II)Z,cg,,
-a,(Lcg;II)V,cg,,
-d,()Ljava/lang/String;,ch,,
-e,()Ljava/lang/String;,ch,,
-b,(Lad;)V,ch,,
-f,()Ljava/lang/String;,ch,,
-a,(Lad;)V,ch,,
+a,(II)Z,cg,chunkExists,"Checks to see if a chunk exists at x, y"
+a,(Lcg;II)V,cg,populate,Populates chunk with ores etc etc
+d,()Ljava/lang/String;,ch,getLivingSound,Returns the sound this mob makes while it's alive.
+e,()Ljava/lang/String;,ch,getHurtSound,Returns the sound this mob makes when it is hurt.
+b,(Lad;)V,ch,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,ch,getDeathSound,Returns the sound this mob makes on death.
 a,(Lep;F)V,ch,,
-g,()I,ch,,
+a,(Lad;)V,ch,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
 k,()Lep;,ch,,
 j,()D,ch,,
-a,(Lil;Llc;)V,ce,,
-a,(Lep;)I,ce,,
-a,(Lil;IIII)V,ce,,
-a,(Lil;Lgv;)F,ce,,
+g,()I,ch,getDropItemId,Returns the item ID for the item the mob drops on death.
+a,(Lil;Llc;)V,ce,hitEntity,*
+a,(Lep;)I,ce,getDamageVsEntity,*
+a,(Lil;Lgv;)F,ce,getStrVsBlock,"Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword"
+a,(Lil;IIII)V,ce,hitBlock,Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
 a,()Ljava/lang/String;,cf,,
-a,(Lil;Lgq;Lff;IIII)Z,cf,,
-a,(Ljava/io/DataInputStream;)V,cc,,
-a,()I,cc,,
-a,(Ljava/io/DataOutputStream;)V,cc,,
-a,(Lff;Ljava/util/Random;III)Z,cd,,
-e,(Lff;III)V,az,,
+a,(Lil;Lgq;Lff;IIII)Z,cf,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+a,(Ljava/io/DataInputStream;)V,cc,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,()I,cc,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,cc,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;Ljava/util/Random;III)Z,cd,generate,*
+e,(Lff;III)V,az,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
 a,(Lff;IIIII)I,az,,
-a,(Lff;IIILjava/util/Random;)V,az,,
+a,(Lff;IIILjava/util/Random;)V,az,updateTick,Ticks the block if it's been scheduled
 j,(Lff;III)[Z,az,,
 e,(Lff;IIII)I,az,,
 k,(Lff;III)Z,az,,
 i,(Lff;III)V,az,,
 l,(Lff;III)Z,az,,
 f,(Lff;IIII)V,az,,
-a,(Ljava/io/DataInputStream;)V,ay,,
-a,(Lfs;)V,ay,,
-a,()I,ay,,
-a,(Ljava/io/DataOutputStream;)V,ay,,
-f,(Lff;III)Z,ba,,
-a,(Lff;IIILjava/util/Random;)V,ba,,
-d,(Lff;III)Lel;,ba,,
-a,(Lff;IIILep;)V,ba,,
-b,(Lff;IIII)V,ba,,
-a,(I)I,ba,,
-a,(Lff;III)Z,ba,,
-a,()Z,ba,,
-b,()Z,as,,
+a,(Ljava/io/DataInputStream;)V,ay,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,ay,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,ay,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ay,writePacketData,Abstract. Writes the raw packet data to the data stream.
+f,(Lff;III)Z,ba,canBlockStay,Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+a,(Lff;IIILjava/util/Random;)V,ba,updateTick,Ticks the block if it's been scheduled
+d,(Lff;III)Lel;,ba,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+a,(Lff;IIILep;)V,ba,onEntityCollidedWithBlock,"Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity"
+b,(Lff;IIII)V,ba,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(I)I,ba,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(Lff;III)Z,ba,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,()Z,ba,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+b,()Z,as,getCanBlockGrass,Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
 a,()Z,as,,
 c,()Z,as,,
 a,(IDD)D,ar,,
 a,(DD)D,ar,,
-a,(IDDD)D,ar,,
+a,(IDDD)D,ar,grad,*
 a,([DDDDIIIDDDD)V,ar,,
-b,(DDD)D,ar,,
-a,(DDD)D,ar,,
+a,(DDD)D,ar,generateNoise,*
+b,(DDD)D,ar,lerp,*
 a,(Lhe;)V,aq,,
-a,(Lgv;)Z,ax,,
-a,(Lff;IIILgq;)Z,aw,,
-b,()I,aw,,
-c,(Lff;IIII)V,aw,,
-b,(Lff;III)V,aw,,
-b,(Lff;IIILgq;)V,aw,,
-a,(Ljx;III)V,aw,,
-a,(Lff;III)Z,aw,,
-d,(Lff;IIII)Z,aw,,
-a,()Z,aw,,
-c,()Z,aw,,
-e,(Lff;III)V,aw,,
-a,(Lff;IIILjava/util/Random;)V,aw,,
-d,(Lff;III)Lel;,aw,,
+a,(Lgv;)Z,ax,canHarvestBlock,Returns if the item (tool) can harvest results from the block type.
+a,(Lff;IIILgq;)Z,aw,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+b,()I,aw,tickRate,How many world ticks before ticking
+c,(Lff;IIII)V,aw,onBlockPlaced,"Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing"
+b,(Lff;III)V,aw,onBlockRemoval,Called whenever the block is removed.
+a,(Lff;III)Z,aw,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+b,(Lff;IIILgq;)V,aw,onBlockClicked,"Called when the block is clicked by a player. Args: x, y, z, entityPlayer"
+a,(Ljx;III)V,aw,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+d,(Lff;IIII)Z,aw,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+a,()Z,aw,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+c,()Z,aw,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+e,(Lff;III)V,aw,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,aw,updateTick,Ticks the block if it's been scheduled
+d,(Lff;III)Lel;,aw,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
 g,(Lff;III)Z,aw,,
-b,(Lff;IIII)V,aw,,
-b,(Ljx;IIII)Z,aw,,
-d,()V,av,,
+b,(Lff;IIII)V,aw,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+b,(Ljx;IIII)Z,aw,isPoweringTo,Is this block powering the block on the specified side
+d,()V,av,onInventoryChanged,"Called when an the contents of an Inventory change, usually"
 a,(ILil;)V,av,,
 b,()Ljava/lang/String;,av,,
 c,()I,av,,
 a,(II)Lil;,av,,
-a,()I,av,,
-a,(I)Lil;,av,,
+a,()I,av,getSizeInventory,*
+a,(I)Lil;,av,getStackInSlot,Returns the stack in slot i
 a_,(Lgq;)Z,av,,
-a,(Lad;Ljava/io/OutputStream;)V,au,,
+a,(Lad;Ljava/io/OutputStream;)V,au,writeGzippedCompoundToOutputStream,*
 a,(Lad;Ljava/io/DataOutput;)V,au,,
 a,(Ljava/io/InputStream;)Lad;,au,,
 a,(Ljava/io/DataInput;)Lad;,au,,
-a,(Ljava/io/DataInputStream;)V,ak,,
-a,()I,ak,,
-a,(Ljava/io/DataOutputStream;)V,ak,,
-d,(Lff;III)Lel;,ai,,
-a,(Lff;IIILep;)V,ai,,
-a,(Ljava/io/DataInputStream;)V,aj,,
-a,(Lfs;)V,aj,,
-a,()I,aj,,
-a,(Ljava/io/DataOutputStream;)V,aj,,
-d,(Lff;III)Lel;,ao,,
-a,(Lff;IIILep;)V,ao,,
-a_,(Lff;III)Z,ao,,
-b,(Lff;IIII)V,ao,,
-a,(Ljx;III)V,ao,,
-a,(Ljava/util/Random;)I,ao,,
-a,(Ljx;IIII)Z,ao,,
-a,()Z,ao,,
+a,(Ljava/io/DataInputStream;)V,ak,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,()I,ak,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ak,writePacketData,Abstract. Writes the raw packet data to the data stream.
+d,(Lff;III)Lel;,ai,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+a,(Lff;IIILep;)V,ai,onEntityCollidedWithBlock,"Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity"
+a,(Ljava/io/DataInputStream;)V,aj,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,aj,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,aj,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,aj,writePacketData,Abstract. Writes the raw packet data to the data stream.
+d,(Lff;III)Lel;,ao,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+a,(Lff;IIILep;)V,ao,onEntityCollidedWithBlock,"Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity"
+a_,(Lff;III)Z,ao,tryToCreatePortal,"Checks to see if this location is valid to create a portal and will return True if it does. Args: world, x, y, z"
+b,(Lff;IIII)V,ao,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(Ljx;III)V,ao,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+a,(Ljava/util/Random;)I,ao,quantityDropped,Returns the quantity of items to drop on block destruction.
+a,(Ljx;IIII)Z,ao,shouldSideBeRendered,"Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side"
+a,()Z,ao,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
 a,(III)V,ap,,
 a,()V,ap,,
 a,(Lbg;)V,ap,,
@@ -1208,9 +1205,251 @@ b,(Lfi;)V,ap,,
 a,(Lfi;)V,ap,,
 a,(Ljv;)V,ap,,
 windowClosing,(Ljava/awt/event/WindowEvent;)V,ac,,
-h,(Ljava/lang/String;)Ljava/lang/String;,ad,,
-a,(Ljava/lang/String;J)V,ad,,
-a,(Ljava/io/DataOutput;)V,ad,,
-a,(Ljava/lang/String;I)V,ad,,
-a,(Ljava/io/DataInput;)V,ad,,
-toString,()Ljava/la
+h,(Ljava/lang/String;)Ljava/lang/String;,ad,getString,"Retrieves a string value using the specified key, or an empty string if no such key was stored."
+a,(Ljava/lang/String;J)V,ad,setLong,Stores a new NBTTagLong with the given long value into the map with the given string key.
+a,(Ljava/io/DataOutput;)V,ad,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/lang/String;I)V,ad,setInteger,Stores a new NBTTagInt with the given integer value into the map with the given string key.
+a,(Ljava/io/DataInput;)V,ad,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
+toString,()Ljava/lang/String;,ad,,
+a,(Ljava/lang/String;[B)V,ad,setByteArray,Stores a new NBTTagByteArray with the given array as data into the map with the given string key.
+d,(Ljava/lang/String;)I,ad,getInteger,"Retrieves an integer value using the specified key, or 0 if no such key was stored."
+a,(Ljava/lang/String;S)V,ad,setShort,Stores a new NBTTagShort with the given short value into the map with the given string key.
+j,(Ljava/lang/String;)Lad;,ad,getCompoundTag,"Retrieves a NBTTagCompound subtag matching the specified key, or a new empty NBTTagCompound if no such key was stored."
+l,(Ljava/lang/String;)Z,ad,getBoolean,"Retrieves a boolean value using the specified key, or false if no such key was stored. This uses the getByte method."
+a,(Ljava/lang/String;Z)V,ad,setBoolean,"Stores the given boolean value as a NBTTagByte, storing 1 for true and 0 for false, using the given string key."
+a,(Ljava/lang/String;)Z,ad,hasKey,Returns whether the given string has been previously stored as a key in the map.
+a,(Ljava/lang/String;B)V,ad,setByte,Stores a new NBTTagByte with the given byte value into the map with the given string key.
+g,(Ljava/lang/String;)D,ad,getDouble,"Retrieves a double value using the specified key, or 0 if no such key was stored."
+a,(Ljava/lang/String;Lia;)V,ad,setTag,Stores the given tag into the map with the given string key. This is mostly used to store tag lists.
+a,(Ljava/lang/String;Lad;)V,ad,setCompoundTag,Stores the given NBTTagCompound into the map with the given string key.
+a,(Ljava/lang/String;F)V,ad,setFloat,Stores a new NBTTagFloat with the given float value into the map with the given string key.
+c,(Ljava/lang/String;)S,ad,getShort,"Retrieves a short value using the specified key, or 0 if no such key was stored."
+i,(Ljava/lang/String;)[B,ad,getByteArray,"Retrieves a byte array using the specified key, or a zero-length array if no such key was stored."
+a,(Ljava/lang/String;D)V,ad,setDouble,Stores a new NBTTagDouble with the given double value into the map with the given string key.
+a,(Ljava/lang/String;Ljava/lang/String;)V,ad,setString,Stores a new NBTTagString with the given string value into the map with the given string key.
+k,(Ljava/lang/String;)Les;,ad,getTagList,"Retrieves a NBTTagList subtag matching the specified key, or a new empty NBTTagList if no such key was stored."
+e,(Ljava/lang/String;)J,ad,getLong,"Retrieves a long value using the specified key, or 0 if no such key was stored."
+a,()B,ad,getType,Gets the type byte for the tag.
+b,(Ljava/lang/String;)B,ad,getByte,"Retrieves a byte value using the specified key, or 0 if no such key was stored."
+f,(Ljava/lang/String;)F,ad,getFloat,"Retrieves a float value using the specified key, or 0 if no such key was stored."
+b,(Lgq;)Z,aa,,
+a,(Llg;)V,aa,,
+a,(Lgq;)V,aa,,
+a,(Lff;IIILjava/util/Random;)V,ab,updateTick,Ticks the block if it's been scheduled
+a,(ILjava/util/Random;)I,ab,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,ab,quantityDropped,Returns the quantity of items to drop on block destruction.
+focusGained,(Ljava/awt/event/FocusEvent;)V,ag,,
+c,(Lff;III)V,ah,onBlockDestroyedByExplosion,Called upon the block being destroyed by an explosion
+a,(Lff;IIII)V,ah,onBlockDestroyedByPlayer,"Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData"
+b,(Lff;IIII)V,ah,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(I)I,ah,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+a,(Ljava/util/Random;)I,ah,quantityDropped,Returns the quantity of items to drop on block destruction.
+actionPerformed,(Ljava/awt/event/ActionEvent;)V,ae,,
+a,(Lff;IIILjava/util/Random;)V,af,updateTick,Ticks the block if it's been scheduled
+b,(Lff;IIII)V,af,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+i,(Lff;III)V,af,,
+j,(Lff;III)Z,af,,
+d,(III)Z,jx,doesBlockAllowAttachment,"Returns if the block at the specified coordinates allow attachment Args: x, y, z"
+b,(III)I,jx,getBlockMetadata,"Returns the block metadata at coords x,y,z"
+c,(III)Lla;,jx,getBlockMaterial,Returns the block's material.
+a,(III)I,jx,getBlockId,"Returns the block ID at coords x,y,z"
+a,(Lff;IIILgq;)Z,jy,blockActivated,"Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block."
+c,(Lff;IIII)V,jy,onBlockPlaced,"Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing"
+b,(Lff;III)V,jy,onBlockRemoval,Called whenever the block is removed.
+a,(Lff;III)Z,jy,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+b,(Lff;IIILgq;)V,jy,onBlockClicked,"Called when the block is clicked by a player. Args: x, y, z, entityPlayer"
+a,(Ljx;III)V,jy,setBlockBoundsBasedOnState,"Updates the blocks bounds based on its current state. Args: world, x, y, z"
+d,(Lff;IIII)Z,jy,isIndirectlyPoweringTo,Is this block indirectly powering the block on the specified side
+a,()Z,jy,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+c,()Z,jy,canProvidePower,Can this block provide power. Only wire currently seems to have this change based on its state.
+e,(Lff;III)V,jy,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+d,(Lff;III)Lel;,jy,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+g,(Lff;III)Z,jy,,
+b,(Lff;IIII)V,jy,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+b,(Ljx;IIII)Z,jy,isPoweringTo,Is this block powering the block on the specified side
+a,(Ljava/io/DataInputStream;)V,jv,readPacketData,Abstract. Reads the raw packet data from the data stream.
+b,(Ljava/io/DataInputStream;)Ljv;,jv,readPacket,"Read a packet, prefixed by its ID, from the data stream."
+b,()I,jv,getPacketId,Returns the ID of this packet.
+a,(Lfs;)V,jv,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,jv,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,jv,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljv;Ljava/io/DataOutputStream;)V,jv,writePacket,"Writes a packet, prefixed by its ID, to the data stream."
+a,(ILjava/lang/Class;)V,jv,addIdClassMapping,Adds a two way mapping between the packet ID and packet class.
+a,(I)Ljv;,jv,getNewPacket,Returns a new instance of the specified Packet class.
+a,(Lff;Ljava/util/Random;III)Z,jw,generate,*
+run,()V,jt,,
+run,()V,ju,,
+run,()V,jr,,
+run,()V,js,,
+e,(Lff;III)V,jp,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+b,(Lff;III)V,jp,onBlockRemoval,Called whenever the block is removed.
+a,(DD)Ljq;,jq,getBiomeFromLookup,*
+a,()V,jq,generateBiomeLookup,*
+a,(Lku;)[Ljava/lang/Class;,jq,getEntitiesForType,*
+a,(I)Ljq;,jq,,
+b,()Ljq;,jq,,
+b,(I)Ljq;,jq,,
+a,(FF)Ljq;,jq,getBiome,*
+a,(Ljava/lang/String;)Ljq;,jq,setBiomeName,*
+a,(Lhe;)V,jn,,
+a,(Ljava/io/DataOutput;)V,jo,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,jo,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
+toString,()Ljava/lang/String;,jo,,
+a,()B,jo,getType,Gets the type byte for the tag.
+a,(Ljava/io/DataInputStream;)V,jl,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,jl,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,jl,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,jl,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,()V,jm,registerWorldChunkManager,*
+c,()Lcg;,jm,getChunkProvider,Returns the chunk provider back for the world provider
+a,(Ljava/io/File;)Lbd;,jm,getChunkLoader,Returns the chunk loader back for the world provider. Args: fileName
+b,()V,jm,generateLightBrightnessTable,Creates the light to brightness table
+a,(I)Ljm;,jm,,
+a,(Lff;)V,jm,registerWorld,*
+a,(JF)F,jm,calculateCelestialAngle,*
+a,(II)Z,jm,canCoordinateBeSpawn,"Will check if the x, z position specified is alright to be set as the map spawn point"
+a,(Ljava/io/DataInputStream;)V,jj,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,jj,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,jj,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,jj,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Lff;Ljava/util/Random;III)Z,jk,generate,*
+a,(Lil;Lgq;Lff;IIII)Z,kh,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+a,()V,kg,updateStats,Updates the stat values and calls paint to redraw the component.
+a,(Lkg;)V,kg,update,Public static accessor to call updateStats.
+paint,(Ljava/awt/Graphics;)V,kg,,
+a,(Ljava/lang/String;)V,kf,,
+a,(I)V,kf,setLoadingProgress,*
+b,(Ljava/lang/String;)V,kf,displayLoadingString,*
+a,(ZLkf;)Z,ke,saveWorld,Called to save the world
+b,(II)Lkx;,ke,provideChunk,*
+b,(Lkx;)V,ke,,
+b,()Z,ke,,
+c,(II)Lkx;,ke,,
+a,(Lkx;)V,ke,,
+a,()Z,ke,,
+a,(II)Z,ke,chunkExists,"Checks to see if a chunk exists at x, y"
+a,(Lcg;II)V,ke,populate,Populates chunk with ores etc etc
+compare,(Ljava/lang/Object;Ljava/lang/Object;)I,kd,,
+a,(Ldr;Ldr;)I,kd,,
+b_,()V,kc,onUpdate,Called to update the entity's position/logic.
+d,()Ljava/lang/String;,kc,getLivingSound,Returns the sound this mob makes while it's alive.
+a,(Lep;I)Z,kc,attackEntity,Called when the entity is attacked.
+e,()Ljava/lang/String;,kc,getHurtSound,Returns the sound this mob makes when it is hurt.
+G,()V,kc,onLivingUpdate,"Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn."
+g,(Lep;)V,kc,,
+b,(Lad;)V,kc,readEntityFromNBT,(abstract) Protected helper method to read subclass entity data from NBT.
+f,()Ljava/lang/String;,kc,getDeathSound,Returns the sound this mob makes on death.
+a,()Z,kc,getCanSpawnHere,Checks if the entity's current position is a valid location to spawn this entity.
+a,(Lad;)V,kc,writeEntityToNBT,(abstract) Protected helper method to write subclass entity data to NBT.
+k,()Lep;,kc,,
+g,()I,kc,getDropItemId,Returns the item ID for the item the mob drops on death.
+a,([Ljq;IIII)[Ljq;,kb,loadBlockGeneratorData,"Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth"
+a,(IIII)[Ljq;,kb,,
+a,(II)Ljq;,kb,,
+a,([DIIII)[D,kb,getTemperatures,"Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length"
+a,(Llk;)Ljq;,kb,,
+a,(Lff;Ljava/util/Random;III)Z,jz,generate,*
+b,(Ljv;)V,hr,,
+a,(Ljava/util/List;)V,hr,,
+b,(Ljava/util/List;)V,hr,,
+a,()V,hr,,
+hashCode,()I,hr,,
+b,()Ljv;,hr,,
+c,(Lfi;)V,hr,,
+b,(Lfi;)V,hr,,
+a,(Lfi;)V,hr,,
+a,(Ljv;)V,hr,,
+equals,(Ljava/lang/Object;)Z,hr,,
+a,(Lff;IIILjava/util/Random;)V,hs,updateTick,Ticks the block if it's been scheduled
+h,(Lff;III)Z,hs,,
+d,(Lff;III)Lel;,hs,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+g,(Lff;III)Z,hs,,
+b,(Lff;IIII)V,hs,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+a,(ILjava/util/Random;)I,hs,idDropped,Returns the ID of the items to drop on destruction.
+a,()Z,hs,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+b,(Lff;IIILep;)V,hs,onEntityWalking,"Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity"
+a,()V,hp,,
+a,(Lep;IIZ)V,hp,,
+b,(Lep;Ljv;)V,hp,,
+a,(Lep;II)V,hp,,
+a,(Lfi;)V,hp,,
+a,(Lep;Ljv;)V,hp,,
+a,(Lep;)V,hp,,
+b,(Lep;)V,hp,,
+a,(Ljava/io/DataInputStream;)V,hq,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,hq,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,hq,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,hq,writePacketData,Abstract. Writes the raw packet data to the data stream.
+e,(Lff;III)V,hv,onBlockAdded,"Called whenever the block is added into the world. Args: world, x, y, z"
+a,(Lff;IIILjava/util/Random;)V,hv,updateTick,Ticks the block if it's been scheduled
+d,(Lff;III)Lel;,hv,getCollisionBoundingBoxFromPool,Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+g,(Lff;III)Z,hv,,
+b,(Lff;IIII)V,hv,onNeighborBlockChange,"Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID"
+c,(Lff;IIII)V,hv,onBlockPlaced,"Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing"
+a,(Lff;III)Z,hv,canPlaceBlockAt,"Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z"
+a,()Z,hv,isOpaqueCube,"Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block."
+a,(Lff;IIILbn;Lbn;)Lhk;,hv,collisionRayTrace,"Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec"
+c,(III)Z,hw,,
+d,(Lhw;)V,hw,,
+a,()V,hw,,
+c,(Lhw;)Z,hw,handleKeyPress,*
+a,(Lhw;)I,hw,,
+a,(Z)V,hw,,
+a,(Liq;)Lhw;,hw,,
+c,()I,hw,,
+b,(Lhw;)Z,hw,,
+b,(III)Z,hw,,
+b,()V,hw,,
+a,(III)Z,hw,,
+a,(Lil;Lgq;Lff;IIII)Z,ht,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+format,(Ljava/util/logging/LogRecord;)Ljava/lang/String;,hu,,
+a,(Lil;Lff;Lgq;)Lil;,hj,onItemRightClick,"Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer"
+a,(Lil;Lgq;Lff;IIII)Z,hh,onItemUse,"Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !"
+a,(Ljava/io/DataOutput;)V,hi,writeTagContents,"Write the actual data contents of the tag, implemented in NBT extension classes"
+a,(Ljava/io/DataInput;)V,hi,readTagContents,"Read the actual data contents of the tag, implemented in NBT extension classes"
+toString,()Ljava/lang/String;,hi,,
+a,()B,hi,getType,Gets the type byte for the tag.
+a,(Ljava/io/DataInputStream;)V,hn,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,(Lfs;)V,hn,processPacket,Passes this Packet on to the NetHandler for processing.
+a,()I,hn,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,hn,writePacketData,Abstract. Writes the raw packet data to the data stream.
+a,(Ljava/io/DataInputStream;)V,ho,readPacketData,Abstract. Reads the raw packet data from the data stream.
+a,()I,ho,getPacketSize,Abstract. Return the size of the packet (not counting the header).
+a,(Ljava/io/DataOutputStream;)V,ho,writePacketData,Abstract. Writes the raw packet data to the data stream.
+h,()V,hl,saveBannedList,saves the list of banned players
+i,()V,hl,loadOps,loads the ops from the ops file
+h,(Ljava/lang/String;)Lfi;,hl,getPlayerEntity,gets the player entity for the player with the name specified
+e,(Ljava/lang/String;)V,hl,opPlayer,ops the player given
+g,(Ljava/lang/String;)Z,hl,isOp,"Returns true if the player is an OP, false otherwise."
+d,(Lfi;)Lfi;,hl,,
+i,(Ljava/lang/String;)V,hl,sendChatMessageToAllPlayers,sends a chat message to all players currently connected
+f,(Ljava/lang/String;)V,hl,deopPlayer,deops the player given
+b,(Ljava/lang/String;)V,hl,unbanPlayer,removes a player from the ban list
+c,(Lfi;)V,hl,playerLoggedOut,Called when a player disconnects from the game. Writes player data to disk and removes them from the world.
+b,()V,hl,,
+j,()V,hl,saveOps,saves the ops to the ops file
+c,()Ljava/lang/String;,hl,getPlayerList,returns a string containing a comma-seperated list of player names
+a,(Ljv;)V,hl,sendPacketToAllPlayers,sends a packet to all players
+a,(DDDDLjv;)V,hl,,
+a,(III)V,hl,,
+a,(Lfm;)V,hl,setPlayerManager,Sets the NBT manager to the one for the worldserver given
+a,(Lgi;Ljava/lang/String;Ljava/lang/String;)Lfi;,hl,login,Called when a player tries to login. Checks whether they are banned/server is full etc.
+a,(Ljava/lang/String;)V,hl,banPlayer,adds a player to the ban list
+e,()V,hl,readBannedPlayers,Reads the banned players file from disk.
+b,(Lfi;)V,hl,,
+a,(Lfi;)V,hl,playerLoggedIn,Called when a player successfully logs in. Reads player data from disk and inserts the player into the world.
+c,(Ljava/lang/String;)V,hl,banIP,bans the given IP string
+a,(Ljava/lang/String;Ljava/lang/String;)V,hl,sendChatMessageToPlayer,sends a chat message to the player with the name specified (not necessarily a whisper)
+d,()V,hl,savePlayerStates,Saves all of the player's states
+f,()V,hl,writeBannedPlayers,Writes the banned players file to disk.
+a,(Ljava/lang/String;Ljv;)Z,hl,sendPacketToPlayer,sends a packet to the player with the name specified
+a,()I,hl,,
+g,()V,hl,loadBannedList,loads the list of banned players
+d,(Ljava/lang/String;)V,hl,unbanIP,unbans the given IP string
+a,(IIILbg;)V,hl,sentTileEntityToPlayer,sends a tilentity to the player name specified
+a,(I)I,hm,getBlockTextureFromSide,Returns the block texture based on the side being looked at.  Args: side
+b,(Lff;III)V,hm,onBlockRemoval,Called whenever the block is removed.
+a,(ILjava/util/Random;)I,hm,idDropped,Returns the ID of the items to drop on destruction.
+a,(Ljava/util/Random;)I,hm,quantityDropped,Returns the quantity of items to drop on block destruction.
+b,(Lgq;)V,id,onCollideWithPlayer,Called by a player entity when they collide with an entity
+b_,()V,i

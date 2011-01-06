@@ -2,37 +2,59 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldChunkManagerHell extends WorldChunkManager{
+public abstract class WorldChunkManagerHell extends EntityTrackerEntry{
 	// FIELDS
-	private double f;
-	private double g;
-	private MobSpawnerBase e;
+	 int a;
+	 int b;
+	 int c;
+	 int d;
+	 int e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
-	public jq[] a(jq[] a, int b, int c, int d, int e)
+	public void writeEntityToNBT(Packet1Login a)
 	
 	/**
 	 * 
 	 */
-	public jq[] a(int a, int b, int c, int d)
+	protected void a(IMobs a, float b)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	public void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
 	
 	/**
 	 * 
 	 */
-	public MobSpawnerBase a(int a, int b)
+	protected void c()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes when it is hurt.
 	 */
-	public double[] a(double[] a, int b, int c, int d, int e)
+	protected java.lang.String getHurtSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes on death.
 	 */
-	public MobSpawnerBase a(ChunkCoordIntPair a)
+	protected java.lang.String getDeathSound()
+	
+	/**
+	 * Called when the mob's health reaches 0.
+	 */
+	public void onDeath(IMobs a)
+	
+	/**
+	 * Returns the item ID for the item the mob drops on death.
+	 */
+	protected int getDropItemId()
 
 }

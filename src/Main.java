@@ -157,7 +157,7 @@ public class Main {
 				MCClassInfo ci = SmartReflector.classes.get(className);
 				CtClass mcClass = mcClassPool.get(className);
 				ci.setClassModifiers(mcClass.getModifiers());
-				ci.clearAllDefs(); // Remapping.
+				//ci.clearAllDefs(); // Remapping.
 				for(CtField fld : mcClass.getDeclaredFields()) {
 					MCFieldInfo f = ci.getField(fld.getName());
 					if(f==null)

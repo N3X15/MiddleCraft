@@ -2,14 +2,40 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSign extends Item{
+public abstract class ItemSign extends BlockSoil{
 	// FIELDS
+	public static boolean a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Ticks the block if it's been scheduled
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * How many world ticks before ticking
+	 */
+	public int tickRate()
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 */
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Checks to see if the sand can fall into the block below it
+	 */
+	public static boolean canFallBelow(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * If there is space to fall below will start this block falling
+	 */
+	private void tryToFall(Packet17AddToInventory a, int b, int c, int d)
 
 }

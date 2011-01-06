@@ -4,7 +4,25 @@ package net.minecraft.server;
 
 public abstract class NoiseGenerator{
 	// FIELDS
+	public final java.lang.String a;
+	public final float b;
+	public final float c;
 	
 	// METHODS
+	
+	/**
+	 * 
+	 */
+	public float a()
+	
+	/**
+	 * 
+	 */
+	public float b()
+	
+	/**
+	 * 
+	 */
+	public java.lang.String c()
 
 }

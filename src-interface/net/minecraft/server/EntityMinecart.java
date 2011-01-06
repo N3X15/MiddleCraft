@@ -2,130 +2,57 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityMinecart extends Entity{
+public abstract class EntityMinecart{
 	// FIELDS
-	public double f;
-	public int d;
-	public int e;
-	public int b;
-	public int c;
-	public int a;
-	private double as;
-	private double ar;
-	private double aq;
-	private il[] ak;
-	private boolean al;
-	public double aj;
-	private double ao;
-	private double ap;
-	private static final int[][][] am;
-	private int an;
+	public Packet17AddToInventory a;
+	public MaterialTransparent b;
+	public boolean c;
+	public boolean d;
+	public boolean e;
+	public float[] f;
+	public int g;
+	private float[] h;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public AxisAlignedBB d(Entity a)
+	protected void registerWorldChunkManager()
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b)
+	public static EntityMinecart a(int a)
 	
 	/**
-	 * 
+	 * Will check if the x, z position specified is alright to be set as the map spawn point
 	 */
-	public void a(int a, ItemStack b)
+	public boolean canCoordinateBeSpawn(int a, int b)
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void l()
+	public float calculateCelestialAngle(long a, float b)
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean a(EntityPlayer a)
+	public final void registerWorld(Packet17AddToInventory a)
 	
 	/**
-	 * 
+	 * Returns the chunk loader back for the world provider. Args: fileName
 	 */
-	public AxisAlignedBB q()
+	public Vec3D getChunkLoader(java.io.File a)
 	
 	/**
-	 * 
+	 * Creates the light to brightness table
 	 */
-	public ItemStack a(int a)
+	protected void generateLightBrightnessTable()
 	
 	/**
-	 * 
+	 * Returns the chunk provider back for the world provider
 	 */
-	protected void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	public double j()
-	
-	/**
-	 * 
-	 */
-	public void c(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	public void d()
-	
-	/**
-	 * 
-	 */
-	public Vec3D g(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public boolean v()
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public boolean c_()
-	
-	/**
-	 * 
-	 */
-	protected void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public int a()
+	public HashEntry2 getChunkProvider()
 
 }

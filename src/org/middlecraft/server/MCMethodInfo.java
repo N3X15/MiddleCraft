@@ -57,7 +57,7 @@ public class MCMethodInfo {
 		signature=line.get(1);
 		parentClass=line.get(2);
 		name=line.get(3);
-
+		
 		if(name.equals("*"))
 			name="";
 

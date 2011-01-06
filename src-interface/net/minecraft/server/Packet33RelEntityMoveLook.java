@@ -2,24 +2,43 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet33RelEntityMoveLook extends Packet30Entity{
+public abstract class Packet33RelEntityMoveLook extends IMobs{
 	// FIELDS
+	public int a;
+	private lc aj;
+	private int ak;
+	private int al;
+	private int b;
+	private int c;
+	private int d;
+	private int e;
+	private boolean f;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a(double a, double b, double c, float d, float e)
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
-	public int a()
+	public void writeEntityToNBT(Packet1Login a)
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called by a player entity when they collide with an entity
+	 */
+	public void onCollideWithPlayer(BlockLog a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
 
 }

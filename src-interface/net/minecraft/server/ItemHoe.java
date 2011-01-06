@@ -2,14 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemHoe extends Item{
+public abstract class ItemHoe extends BlockSoil{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 */
+	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z, axisAlignedBB, arrayList
+	 */
+	public void getCollidingBoundingBoxes(Packet17AddToInventory a, int b, int c, int d, IUpdatePlayerListBox e, java.util.ArrayList f)
 
 }

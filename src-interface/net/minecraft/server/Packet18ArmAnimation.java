@@ -4,15 +4,15 @@ package net.minecraft.server;
 
 public abstract class Packet18ArmAnimation extends Packet{
 	// FIELDS
-	public int b;
 	public int a;
+	public int b;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public int a()
 	
 	/**
 	 * 
@@ -22,7 +22,7 @@ public abstract class Packet18ArmAnimation extends Packet{
 	/**
 	 * 
 	 */
-	public int a()
+	public void a(java.io.DataInputStream a)
 	
 	/**
 	 * 

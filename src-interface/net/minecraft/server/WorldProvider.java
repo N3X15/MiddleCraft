@@ -2,57 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldProvider{
+public abstract class WorldProvider extends NBTTagByteArray{
 	// FIELDS
-	public float[] f;
-	public int g;
-	public boolean d;
-	public boolean e;
-	public WorldChunkManager b;
-	public boolean c;
-	public World a;
-	private float[] h;
+	public final int a;
+	public final int bb;
+	public final int bc;
+	public final int bd;
+	private static final int[] be;
+	private static final int[] bf;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	protected void a()
-	
-	/**
-	 * 
-	 */
-	public IChunkLoader a(java.io.File a)
-	
-	/**
-	 * 
-	 */
-	public IChunkProvider c()
-	
-	/**
-	 * 
-	 */
-	protected void b()
-	
-	/**
-	 * 
-	 */
-	public static WorldProvider a(int a)
-	
-	/**
-	 * 
-	 */
-	public final void a(World a)
-	
-	/**
-	 * 
-	 */
-	public float a(long a, float b)
-	
-	/**
-	 * 
-	 */
-	public boolean a(int a, int b)
 
 }

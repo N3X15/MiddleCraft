@@ -2,62 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderLoadOrGenerate{
+public abstract class ChunkProviderLoadOrGenerate extends lc{
 	// FIELDS
-	private kx[] f;
-	private World g;
-	private IChunkProvider d;
-	private IChunkLoader e;
-	 int b;
-	private Chunk c;
-	 int a;
-	private Chunk h;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called when the mob is falling. Calculates and applies fall damage.
 	 */
-	public boolean a(boolean a, IProgressUpdate b)
+	protected void fall(float a)
 	
 	/**
 	 * 
 	 */
-	public Chunk b(int a, int b)
+	public void c(float a, float b)
 	
 	/**
-	 * 
+	 * returns true if this entity is by a ladder, false otherwise
 	 */
-	private void b(Chunk a)
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	private Chunk c(int a, int b)
-	
-	/**
-	 * 
-	 */
-	private void a(Chunk a)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void a(IChunkProvider a, int b, int c)
+	public boolean isByLadder()
 
 }

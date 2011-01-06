@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 public abstract class RecipesWeapons{
 	// FIELDS
-	private java.lang.Object[][] b;
 	private java.lang.String[][] a;
+	private java.lang.Object[][] b;
 	
 	// METHODS
 	

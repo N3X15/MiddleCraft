@@ -4,29 +4,82 @@ package net.minecraft.server;
 
 public abstract class NoiseGenerator2{
 	// FIELDS
-	private static final double f;
-	private static final double g;
-	private static int[][] d;
-	private int[] e;
+	public double a;
 	public double b;
 	public double c;
-	public double a;
+	private static java.util.List d;
+	private static int e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Initializes the next empty vector slot in the list to 0.
 	 */
-	public void a(double[] a, double b, double c, int d, int e, double f, double g, double h)
+	public static void initialize()
+	
+	/**
+	 * Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static method which creates and places it in the list.
+	 */
+	public static NoiseGenerator2 createVectorHelper(double a, double b, double c)
+	
+	/**
+	 * Euclidean distance between this and the specified vector, returned as double.
+	 */
+	public double distanceTo(NoiseGenerator2 a)
+	
+	/**
+	 * Returns a new vector with x value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+	 */
+	public NoiseGenerator2 getIntermediateWithXValue(NoiseGenerator2 a, double b)
+	
+	/**
+	 * Normalizes the vector to a length of 1 (except if it is the zero vector)
+	 */
+	public NoiseGenerator2 normalize()
+	
+	/**
+	 * Static method to create a new vector in the vector list and return it.
+	 */
+	public static NoiseGenerator2 createVector(double a, double b, double c)
+	
+	/**
+	 * The square of the Euclidean distance between this and the specified vector.
+	 */
+	public double squareDistanceTo(NoiseGenerator2 a)
+	
+	/**
+	 * Returns a new vector with y value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+	 */
+	public NoiseGenerator2 getIntermediateWithYValue(NoiseGenerator2 a, double b)
+	
+	/**
+	 * Returns the length of the vector.
+	 */
+	public double lengthVector()
+	
+	/**
+	 * Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector.
+	 */
+	public NoiseGenerator2 addVector(double a, double b, double c)
+	
+	/**
+	 * Returns a new vector with z value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+	 */
+	public NoiseGenerator2 getIntermediateWithZValue(NoiseGenerator2 a, double b)
+	
+	/**
+	 * The square of the Euclidean distance between this and the vector of x,y,z components passed in.
+	 */
+	public double squareDistanceTo(double a, double b, double c)
+	
+	/**
+	 * Sets the x,y,z components of the vector as specified.
+	 */
+	private NoiseGenerator2 setComponents(double a, double b, double c)
 	
 	/**
 	 * 
 	 */
-	private static double a(int[] a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	private static int a(double a)
+	public java.lang.String toString()
 
 }

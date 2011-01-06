@@ -2,14 +2,28 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSnowball extends Item{
+public abstract class ItemSnowball{
 	// FIELDS
+	public boolean a;
+	public double b;
+	public double c;
+	public double d;
+	public IMobs e;
+	public float f;
+	public java.util.Set g;
+	private java.util.Random h;
+	private Packet17AddToInventory i;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(ItemStack a, World b, EntityPlayer c)
+	public void a()
+	
+	/**
+	 * 
+	 */
+	public void b()
 
 }

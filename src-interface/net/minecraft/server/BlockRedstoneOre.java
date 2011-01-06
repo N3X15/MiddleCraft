@@ -2,55 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneOre extends Block{
+public abstract class BlockRedstoneOre extends BlockSoil{
 	// FIELDS
-	private boolean a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e)
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	private void h(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, Entity e)
 
 }

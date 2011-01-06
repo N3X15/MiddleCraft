@@ -2,29 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IBlockAccess{
+public abstract class IBlockAccess{
 	// FIELDS
+	private il[] a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean d(int a, int b, int c)
+	public int getSizeInventory()
+	
+	/**
+	 * Returns the stack in slot i
+	 */
+	public BlockSponge getStackInSlot(int a)
 	
 	/**
 	 * 
 	 */
-	public abstract Material c(int a, int b, int c)
+	public BlockSponge a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b, int c)
+	public void a(int a, BlockSponge b)
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c)
+	public boolean a_(BlockLog a)
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b()
+	
+	/**
+	 * 
+	 */
+	public int c()
+	
+	/**
+	 * Called when an the contents of an Inventory change, usually
+	 */
+	public void onInventoryChanged()
 
 }

@@ -2,58 +2,45 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet{
+public abstract class Packet extends EntityCow{
 	// FIELDS
-	private static java.util.Map b;
-	private static java.util.Map a;
-	public final long j;
-	public boolean k;
+	public boolean a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
-	public abstract void a(java.io.DataInputStream a)
+	public void writeEntityToNBT(Packet1Login a)
 	
 	/**
 	 * 
 	 */
-	public static Packet b(java.io.DataInputStream a)
+	public boolean a(BlockLog a)
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
-	public final int b()
+	public void readEntityFromNBT(Packet1Login a)
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes while it's alive.
 	 */
-	public abstract void a(NetHandler a)
+	protected java.lang.String getLivingSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes when it is hurt.
 	 */
-	public abstract int a()
+	protected java.lang.String getHurtSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes on death.
 	 */
-	public abstract void a(java.io.DataOutputStream a)
+	protected java.lang.String getDeathSound()
 	
 	/**
-	 * 
+	 * Returns the item ID for the item the mob drops on death.
 	 */
-	public static void a(Packet a, java.io.DataOutputStream b)
-	
-	/**
-	 * 
-	 */
-	static void a(int a, java.lang.Class b)
-	
-	/**
-	 * 
-	 */
-	public static Packet a(int a)
+	protected int getDropItemId()
 
 }

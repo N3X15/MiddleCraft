@@ -2,24 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet13PlayerLookMove extends Packet10Flying{
+public abstract class Packet13PlayerLookMove extends ItemBlock{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 
 }

@@ -2,15 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract final class ConsoleLogFormatter extends java.util.logging.Formatter{
+public abstract class ConsoleLogFormatter extends BlockSoil{
 	// FIELDS
-	private java.text.SimpleDateFormat a;
 	
 	// METHODS
 	
 	/**
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 */
+	public boolean isOpaqueCube()
+	
+	/**
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 */
+	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
+	 */
+	public BlockFlower collisionRayTrace(Packet17AddToInventory a, int b, int c, int d, NoiseGenerator2 e, NoiseGenerator2 f)
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing
+	 */
+	public void onBlockPlaced(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 */
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 */
+	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
 	 * 
 	 */
-	public java.lang.String format(java.util.logging.LogRecord a)
+	private boolean g(Packet17AddToInventory a, int b, int c, int d)
 
 }

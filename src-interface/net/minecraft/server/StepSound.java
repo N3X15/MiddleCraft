@@ -2,27 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class StepSound{
+public abstract class StepSound extends ItemBlock{
 	// FIELDS
-	public final float b;
-	public final float c;
-	public final java.lang.String a;
+	private int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public float a()
-	
-	/**
-	 * 
-	 */
-	public float b()
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c()
+	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 
 }

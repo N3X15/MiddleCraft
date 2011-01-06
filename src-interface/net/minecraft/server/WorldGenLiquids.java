@@ -2,15 +2,25 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenLiquids extends WorldGenerator{
+public abstract class WorldGenLiquids{
 	// FIELDS
-	private int a;
+	public final byte[] a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns if the byte array is null or not.
 	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e)
+	public boolean isValid()
+	
+	/**
+	 * Returns the nibble of data corresponding to the passed in i,j,k. j is at most 6 bits, k is at most 4.
+	 */
+	public int getNibble(int a, int b, int c)
+	
+	/**
+	 * Sets the nibble of data at i << 11 | k << 7 | j to l.
+	 */
+	public void setNibble(int a, int b, int c, int d)
 
 }

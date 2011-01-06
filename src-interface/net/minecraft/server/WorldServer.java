@@ -2,69 +2,26 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldServer extends World{
+public abstract class WorldServer{
 	// FIELDS
-	private net.minecraft.server.MienCrapftHurrvurr D;
-	private MCHashTable E;
-	public ChunkProviderServer A;
-	public boolean B;
-	public boolean C;
+	public final NBTTagList a;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
+	public int f;
+	public int g;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	protected IChunkProvider a(java.io.File a)
+	public boolean a(int a, int b, int c, int d, int e, int f)
 	
 	/**
 	 * 
 	 */
-	public void f()
-	
-	/**
-	 * 
-	 */
-	public void b(Entity a, boolean b)
-	
-	/**
-	 * 
-	 */
-	public void a(Entity a, byte b)
-	
-	/**
-	 * 
-	 */
-	public void a(Entity a, boolean b)
-	
-	/**
-	 * 
-	 */
-	public java.util.List d(int a, int b, int c, int d, int e, int f)
-	
-	/**
-	 * 
-	 */
-	public boolean a(EntityPlayer a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public Entity a(int a)
-	
-	/**
-	 * 
-	 */
-	protected void b(Entity a)
-	
-	/**
-	 * 
-	 */
-	public Explosion a(Entity a, double b, double c, double d, float e, boolean f)
-	
-	/**
-	 * 
-	 */
-	protected void c(Entity a)
+	public void a(Packet17AddToInventory a)
 
 }

@@ -2,23 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EnumSkyBlock extends java.lang.Enum{
+public abstract class EnumSkyBlock extends BlockStep{
 	// FIELDS
-	private static final eb[] d;
-	public static final EnumSkyBlock b;
-	public final int c;
-	public static final EnumSkyBlock a;
+	public double a;
+	public double b;
+	public double c;
+	public float d;
+	public java.util.Set e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public static eb[] values()
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public static EnumSkyBlock valueOf(java.lang.String a)
+	public void processPacket(Packet28 a)
+	
+	/**
+	 * Abstract. Reads the raw packet data from the data stream.
+	 */
+	public void readPacketData(java.io.DataInputStream a)
+	
+	/**
+	 * Abstract. Writes the raw packet data to the data stream.
+	 */
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

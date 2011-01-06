@@ -2,51 +2,62 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFish extends Entity{
+public abstract class EntityFish{
 	// FIELDS
-	private int f;
-	private int d;
-	private int e;
-	public EntityPlayer b;
-	public Entity c;
-	public int a;
-	private double at;
-	private double as;
-	private double ar;
-	private double aq;
-	private boolean ak;
-	private int al;
-	private int aj;
-	private int ao;
-	private double ap;
-	private int am;
-	private int an;
+	 int a;
+	 int b;
+	private kx c;
+	private HashEntry2 d;
+	private Vec3D e;
+	private kx[] f;
+	private Packet17AddToInventory g;
+	private kx h;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void b_()
+	public boolean a()
+	
+	/**
+	 * Checks to see if a chunk exists at x, y
+	 */
+	public boolean chunkExists(int a, int b)
+	
+	/**
+	 * Populates chunk with ores etc etc
+	 */
+	public void populate(HashEntry2 a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	public int c()
+	private void a(kx a)
+	
+	/**
+	 * Called to save the world
+	 */
+	public boolean saveWorld(boolean a, ChunkCoordIntPair b)
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, float d, float e)
+	public boolean b()
+	
+	/**
+	 * *
+	 */
+	public kx provideChunk(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a)
+	private void b(kx a)
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a)
+	private kx c(int a, int b)
 
 }

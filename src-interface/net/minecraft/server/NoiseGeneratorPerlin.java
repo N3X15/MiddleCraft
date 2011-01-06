@@ -2,43 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NoiseGeneratorPerlin extends NoiseGenerator{
+public abstract class NoiseGeneratorPerlin extends EntityFlying{
 	// FIELDS
-	private int[] d;
-	public double b;
-	public double c;
-	public double a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public final double a(int a, double b, double c)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public double a(double a, double b)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public final double a(int a, double b, double c, double d)
-	
-	/**
-	 * 
-	 */
-	public void a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j, double k)
-	
-	/**
-	 * 
-	 */
-	public final double b(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public double a(double a, double b, double c)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

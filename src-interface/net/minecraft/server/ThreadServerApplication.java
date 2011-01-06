@@ -2,15 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class ThreadServerApplication extends java.lang.Thread{
+public abstract class ThreadServerApplication extends EntityArrow{
 	// FIELDS
-	final net.minecraft.server.MienCrapftHurrvurr a;
+	private lg a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void run()
+	public boolean b(BlockLog a)
 
 }

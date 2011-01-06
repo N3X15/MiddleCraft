@@ -2,29 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagEnd extends NBTBase{
+public abstract class NBTTagEnd{
 	// FIELDS
+	private java.lang.String[][] a;
+	private java.lang.Object[][] b;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataOutput a)
-	
-	/**
-	 * 
-	 */
-	 void a(java.io.DataInput a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString()
-	
-	/**
-	 * 
-	 */
-	public byte a()
+	public void a(NBTBase a)
 
 }

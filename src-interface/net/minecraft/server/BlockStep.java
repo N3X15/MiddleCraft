@@ -2,40 +2,58 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockStep extends Block{
+public abstract class BlockStep{
 	// FIELDS
-	private boolean a;
+	private static java.util.Map a;
+	private static java.util.Map b;
+	public final long j;
+	public boolean k;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public void e(World a, int b, int c, int d)
+	public abstract int getPacketSize()
 	
 	/**
-	 * 
+	 * Returns a new instance of the specified Packet class.
 	 */
-	public void b(World a, int b, int c, int d, int e)
+	public static BlockStep getNewPacket(int a)
 	
 	/**
-	 * 
+	 * Adds a two way mapping between the packet ID and packet class.
 	 */
-	public int a(int a)
+	static void addIdClassMapping(int a, java.lang.Class b)
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public int a(int a, java.util.Random b)
+	public abstract void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e)
+	public abstract void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public boolean a()
+	public abstract void writePacketData(java.io.DataOutputStream a)
+	
+	/**
+	 * Writes a packet, prefixed by its ID, to the data stream.
+	 */
+	public static void writePacket(BlockStep a, java.io.DataOutputStream b)
+	
+	/**
+	 * Returns the ID of this packet.
+	 */
+	public final int getPacketId()
+	
+	/**
+	 * Read a packet, prefixed by its ID, from the data stream.
+	 */
+	public static BlockStep readPacket(java.io.DataInputStream a)
 
 }

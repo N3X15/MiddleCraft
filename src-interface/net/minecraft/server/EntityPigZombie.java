@@ -2,72 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPigZombie extends EntityZombie{
+public abstract class EntityPigZombie extends BlockSoil{
 	// FIELDS
-	private int b;
-	private static final ItemStack c;
-	private int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the ID of the items to drop on destruction.
 	 */
-	public void b_()
+	public int idDropped(int a, java.util.Random b)
 	
 	/**
-	 * 
+	 * Ticks the block if it's been scheduled
 	 */
-	protected java.lang.String d()
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String e()
-	
-	/**
-	 * 
-	 */
-	public void G()
-	
-	/**
-	 * 
-	 */
-	private void g(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	protected int g()
-	
-	/**
-	 * 
-	 */
-	protected Entity k()
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 
 }

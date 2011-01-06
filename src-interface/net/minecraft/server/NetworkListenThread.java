@@ -2,47 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkListenThread{
+public abstract class NetworkListenThread extends NBTTagByteArray{
 	// FIELDS
-	private int f;
-	private java.util.ArrayList g;
-	private java.net.ServerSocket d;
-	private java.lang.Thread e;
-	public volatile boolean b;
-	public net.minecraft.server.MienCrapftHurrvurr c;
-	public static java.util.logging.Logger a;
-	private java.util.ArrayList h;
+	protected int a;
+	private gv[] bb;
+	private float bc;
+	private int bd;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	static int b(NetworkListenThread a)
+	public int getDamageVsEntity(IMobs a)
 	
 	/**
-	 * 
+	 * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
 	 */
-	public void a()
+	public void hitBlock(BlockSponge a, int b, int c, int d, int e)
 	
 	/**
-	 * 
+	 * Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword
 	 */
-	private void a(NetLoginHandler a)
+	public float getStrVsBlock(BlockSponge a, BlockSoil b)
 	
 	/**
-	 * 
+	 * *
 	 */
-	static java.net.ServerSocket a(NetworkListenThread a)
-	
-	/**
-	 * 
-	 */
-	static void a(NetworkListenThread a, NetLoginHandler b)
-	
-	/**
-	 * 
-	 */
-	public void a(NetServerHandler a)
+	public void hitEntity(BlockSponge a, lc b)
 
 }

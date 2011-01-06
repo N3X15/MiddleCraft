@@ -2,71 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderServer{
+public abstract class ChunkProviderServer extends TileEntityChest{
 	// FIELDS
-	private java.util.List f;
-	private WorldServer g;
-	private IChunkLoader d;
-	private java.util.Map e;
-	private Chunk b;
-	private IChunkProvider c;
-	private java.util.Set a;
+	public java.lang.String a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Gets the type byte for the tag.
 	 */
-	public boolean a(boolean a, IProgressUpdate b)
+	public byte getType()
+	
+	/**
+	 * Read the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void readTagContents(java.io.DataInput a)
+	
+	/**
+	 * Write the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void writeTagContents(java.io.DataOutput a)
 	
 	/**
 	 * 
 	 */
-	private Chunk e(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public Chunk b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	private void b(Chunk a)
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	private void a(Chunk a)
-	
-	/**
-	 * 
-	 */
-	public Chunk d(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public void c(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public boolean a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void a(IChunkProvider a, int b, int c)
+	public java.lang.String toString()
 
 }

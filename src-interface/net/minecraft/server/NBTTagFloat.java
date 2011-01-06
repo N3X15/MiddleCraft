@@ -11,7 +11,7 @@ public abstract class NBTTagFloat extends NBTBase{
 	/**
 	 * 
 	 */
-	 void a(java.io.DataOutput a)
+	public byte a()
 	
 	/**
 	 * 
@@ -21,11 +21,11 @@ public abstract class NBTTagFloat extends NBTBase{
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	 void a(java.io.DataOutput a)
 	
 	/**
 	 * 
 	 */
-	public byte a()
+	public java.lang.String toString()
 
 }

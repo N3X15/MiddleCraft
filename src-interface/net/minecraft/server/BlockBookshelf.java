@@ -2,19 +2,73 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockBookshelf extends Block{
+public abstract class BlockBookshelf extends IMobs{
 	// FIELDS
+	public int a;
+	private double aj;
+	private double ak;
+	private double al;
+	public int b;
+	public int c;
+	private int d;
+	private double e;
+	private double f;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a)
+	public void A()
+	
+	/**
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 */
+	protected void writeEntityToNBT(Packet1Login a)
+	
+	/**
+	 * Called when the entity is attacked.
+	 */
+	public boolean attackEntity(IMobs a, int b)
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a)
+	public boolean a(BlockLog a)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	protected void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
+	
+	/**
+	 * *
+	 */
+	public boolean canBeCollidedWith()
+	
+	/**
+	 * 
+	 */
+	public IUpdatePlayerListBox d(IMobs a)
+	
+	/**
+	 * 
+	 */
+	public double j()
+	
+	/**
+	 * 
+	 */
+	public IUpdatePlayerListBox q()
+	
+	/**
+	 * *
+	 */
+	public boolean canBePushed()
 
 }

@@ -2,43 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySnowball extends Entity{
+public abstract class EntitySnowball{
 	// FIELDS
-	private int ak;
-	private boolean f;
-	private int al;
-	private int d;
-	private EntityLiving aj;
-	private int e;
-	private int b;
-	private int c;
-	public int a;
+	public Packet17AddToInventory a;
+	public int b;
+	public int c;
+	public int d;
+	private static java.util.Map e;
+	private static java.util.Map f;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Reads a tile entity from NBT.
 	 */
-	public void b(EntityPlayer a)
+	public void readFromNBT(Packet1Login a)
+	
+	/**
+	 * Adds a new two-way mapping between the class and its string name in both hashmaps.
+	 */
+	private static void addMapping(java.lang.Class a, java.lang.String b)
+	
+	/**
+	 * Writes a tile entity to NBT.
+	 */
+	public void writeToNBT(Packet1Login a)
+	
+	/**
+	 * Creates a new entity and loads its data from the specified NBT.
+	 */
+	public static EntitySnowball createAndLoadEntity(Packet1Login a)
+	
+	/**
+	 * Called when an the contents of an Inventory change, usually
+	 */
+	public void onInventoryChanged()
+	
+	/**
+	 * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	 */
+	public void updateEntity()
 	
 	/**
 	 * 
 	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c, float d, float e)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
+	public BlockStep f()
 
 }

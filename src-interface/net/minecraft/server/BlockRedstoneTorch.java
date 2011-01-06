@@ -2,66 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneTorch extends BlockTorch{
+public abstract class BlockRedstoneTorch extends java.lang.Thread{
 	// FIELDS
-	private static java.util.List b;
-	private boolean a;
+	final net.minecraft.server.MinecraftServer a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void e(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	private boolean a(World a, int b, int c, int d, boolean e)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public boolean d(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean c()
+	public void run()
 
 }

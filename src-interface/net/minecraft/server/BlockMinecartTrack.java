@@ -2,54 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockMinecartTrack extends Block{
+public abstract class BlockMinecartTrack extends NBTTagByteArray{
 	// FIELDS
+	private int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
 	 */
-	public void e(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f)
+	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
 
 }

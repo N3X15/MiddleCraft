@@ -2,24 +2,47 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet31RelEntityMove extends Packet30Entity{
+public abstract class Packet31RelEntityMove{
 	// FIELDS
+	public static java.util.logging.Logger a;
+	public volatile boolean b;
+	public net.minecraft.server.MinecraftServer c;
+	private java.net.ServerSocket d;
+	private java.lang.Thread e;
+	private int f;
+	private java.util.ArrayList g;
+	private java.util.ArrayList h;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a()
 	
 	/**
 	 * 
 	 */
-	public int a()
+	static java.net.ServerSocket a(Packet31RelEntityMove a)
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	static void a(Packet31RelEntityMove a, EntityZombie b)
+	
+	/**
+	 * 
+	 */
+	private void a(EntityZombie a)
+	
+	/**
+	 * 
+	 */
+	public void a(kk a)
+	
+	/**
+	 * 
+	 */
+	static int b(Packet31RelEntityMove a)
 
 }

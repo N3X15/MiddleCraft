@@ -2,40 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSand extends Block{
+public abstract class BlockSand extends EntityTrackerEntry{
 	// FIELDS
-	public static boolean a;
+	private static final BlockSponge a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
-	public void e(World a, int b, int c, int d)
+	public void onLivingUpdate()
+	
+	/**
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 */
+	public void writeEntityToNBT(Packet1Login a)
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	protected void a(IMobs a, float b)
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
-	public static boolean g(World a, int b, int c, int d)
+	public void readEntityFromNBT(Packet1Login a)
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes while it's alive.
 	 */
-	public int b()
+	protected java.lang.String getLivingSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes when it is hurt.
 	 */
-	private void h(World a, int b, int c, int d)
+	protected java.lang.String getHurtSound()
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes on death.
 	 */
-	public void b(World a, int b, int c, int d, int e)
+	protected java.lang.String getDeathSound()
+	
+	/**
+	 * Returns the item ID for the item the mob drops on death.
+	 */
+	protected int getDropItemId()
 
 }

@@ -2,46 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ServerGUI extends javax.swing.JComponent{
+public abstract class ServerGUI extends BlockStep{
 	// FIELDS
-	private net.minecraft.server.MienCrapftHurrvurr b;
-	public static java.util.logging.Logger a;
+	public int a;
+	public int b;
+	public int c;
+	public int d;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public static void a(net.minecraft.server.MienCrapftHurrvurr a)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public void b(java.lang.String a)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	private javax.swing.JComponent a()
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	private javax.swing.JComponent b()
-	
-	/**
-	 * 
-	 */
-	static net.minecraft.server.MienCrapftHurrvurr a(ServerGUI a)
-	
-	/**
-	 * 
-	 */
-	private javax.swing.JComponent d()
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c()
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

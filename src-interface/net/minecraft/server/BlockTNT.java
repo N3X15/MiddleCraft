@@ -2,34 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockTNT extends Block{
+public abstract class BlockTNT extends BlockSoil{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the ID of the items to drop on destruction.
 	 */
-	public void c(World a, int b, int c, int d)
+	public int idDropped(int a, java.util.Random b)
 	
 	/**
-	 * 
+	 * Ticks the block if it's been scheduled
 	 */
-	public void a(World a, int b, int c, int d, int e)
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 	
 	/**
-	 * 
+	 * Returns the quantity of items to drop on block destruction.
 	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public int a(int a)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
+	public int quantityDropped(java.util.Random a)
 
 }

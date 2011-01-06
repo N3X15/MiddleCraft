@@ -2,62 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityGhast extends EntityFlying{
+public abstract class EntityGhast extends BlockSoil{
 	// FIELDS
-	public int f;
-	private int ak;
-	public double d;
-	public int e;
-	private Entity aj;
-	public double b;
-	public double c;
-	public int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	private boolean a(double a, double b, double c, double d)
+	public boolean isOpaqueCube()
 	
 	/**
-	 * 
+	 * Returns the block texture based on the side being looked at.  Args: side
 	 */
-	protected java.lang.String d()
+	public int getBlockTextureFromSide(int a)
 	
 	/**
-	 * 
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
 	 */
-	protected float h()
+	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * 
+	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
 	 */
-	protected java.lang.String e()
+	public void onEntityCollidedWithBlock(Packet17AddToInventory a, int b, int c, int d, IMobs e)
 	
 	/**
-	 * 
+	 * Ticks the block if it's been scheduled
 	 */
-	protected void c()
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 	
 	/**
-	 * 
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
 	 */
-	public int i()
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
-	 * 
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
 	 */
-	protected java.lang.String f()
+	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * 
+	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
 	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	protected int g()
+	public boolean canBlockStay(Packet17AddToInventory a, int b, int c, int d)
 
 }

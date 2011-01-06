@@ -2,30 +2,26 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet4UpdateTime extends Packet{
+public abstract class Packet4UpdateTime extends GuiLogOutputHandler{
 	// FIELDS
-	public long a;
+	private ar[] a;
+	private int b;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public double a(double a, double b)
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public double[] a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j)
 	
 	/**
 	 * 
 	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public double[] a(double[] a, int b, int c, int d, int e, double f, double g, double h)
 
 }

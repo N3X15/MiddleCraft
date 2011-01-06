@@ -2,34 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet23VehicleSpawn extends Packet{
+public abstract class Packet23VehicleSpawn extends EntityItem{
 	// FIELDS
-	public int d;
-	public int e;
-	public int b;
-	public int c;
-	public int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public void a(java.io.DataInputStream a)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public void a(NetHandler a)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

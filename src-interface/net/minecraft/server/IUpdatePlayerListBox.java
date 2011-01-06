@@ -2,14 +2,112 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IUpdatePlayerListBox{
+public abstract class IUpdatePlayerListBox{
 	// FIELDS
+	public double a;
+	public double b;
+	public double c;
+	public double d;
+	public double e;
+	public double f;
+	private static java.util.List g;
+	private static int h;
 	
 	// METHODS
 	
 	/**
+	 * Sets the number of bounding boxes in use from the pool to 0 so they will be reused
+	 */
+	public static void clearBoundingBoxPool()
+	
+	/**
+	 * Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z
+	 */
+	public IUpdatePlayerListBox addCoord(double a, double b, double c)
+	
+	/**
+	 * Returns a bounding box with the specified bounds. Args: minX, minY, minZ, maxX, maxY, maxZ
+	 */
+	public static IUpdatePlayerListBox getBoundingBox(double a, double b, double c, double d, double e, double f)
+	
+	/**
+	 * Checks if the specified vector is within the YZ dimensions of the bounding box. Args: Vec3D
+	 */
+	private boolean isVecInYZ(NoiseGenerator2 a)
+	
+	/**
 	 * 
 	 */
-	public abstract void a()
+	public BlockFlower a(NoiseGenerator2 a, NoiseGenerator2 b)
+	
+	/**
+	 * Returns whether the given bounding box intersects with this one. Args: axisAlignedBB
+	 */
+	public boolean intersectsWith(IUpdatePlayerListBox a)
+	
+	/**
+	 * 
+	 */
+	public double a(IUpdatePlayerListBox a, double b)
+	
+	/**
+	 * Returns a copy of the bounding box.
+	 */
+	public IUpdatePlayerListBox copy()
+	
+	/**
+	 * Returns a bounding box expanded by the specified vector (if negative numbers are given it will shrink). Args: x, y, z
+	 */
+	public IUpdatePlayerListBox expands(double a, double b, double c)
+	
+	/**
+	 * Returns a bounding box with the specified bounds from the pool.  Args: minX, minY, minZ, maxX, maxY, maxZ
+	 */
+	public static IUpdatePlayerListBox getBoundingBoxFromPool(double a, double b, double c, double d, double e, double f)
+	
+	/**
+	 * Checks if the specified vector is within the XZ dimensions of the bounding box. Args: Vec3D
+	 */
+	private boolean isVecInXZ(NoiseGenerator2 a)
+	
+	/**
+	 * Sets the bounding box to the same bounds as the bounding box passed in. Args: axisAlignedBB
+	 */
+	public void setBB(IUpdatePlayerListBox a)
+	
+	/**
+	 * 
+	 */
+	public double b(IUpdatePlayerListBox a, double b)
+	
+	/**
+	 * Returns a bounding box offseted by the specified vector (if negative numbers are given it will shrink). Args: x, y, z
+	 */
+	public IUpdatePlayerListBox getOffsetBoundingBox(double a, double b, double c)
+	
+	/**
+	 * Sets the bounds of the bounding box. Args: minX, minY, minZ, maxX, maxY, maxZ
+	 */
+	public IUpdatePlayerListBox setBounds(double a, double b, double c, double d, double e, double f)
+	
+	/**
+	 * Checks if the specified vector is within the XY dimensions of the bounding box. Args: Vec3D
+	 */
+	private boolean isVecInXY(NoiseGenerator2 a)
+	
+	/**
+	 * 
+	 */
+	public double c(IUpdatePlayerListBox a, double b)
+	
+	/**
+	 * Offsets the current bounding box by the specified coordinates. Args: x, y, z
+	 */
+	public IUpdatePlayerListBox offset(double a, double b, double c)
+	
+	/**
+	 * 
+	 */
+	public IUpdatePlayerListBox e(double a, double b, double c)
 
 }

@@ -2,89 +2,52 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockButton extends Block{
+abstract class BlockButton{
 	// FIELDS
+	final WorldGenTrees a;
+	private java.util.List b;
+	private int c;
+	private int d;
+	private lk e;
+	private short[] f;
+	private int g;
+	private int h;
+	private int i;
+	private int j;
+	private int k;
+	private int l;
+	private int m;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e)
+	public void a()
 	
 	/**
 	 * 
 	 */
-	public int b()
+	public void a(int a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	public void c(World a, int b, int c, int d, int e)
+	private void a(EntitySnowball a)
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d)
+	public void a(WorldGenCactus a)
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e)
+	public void a(BlockStep a)
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean d(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean c()
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e)
+	public void b(WorldGenCactus a)
 
 }

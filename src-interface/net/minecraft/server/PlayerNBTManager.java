@@ -2,21 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerNBTManager{
+public abstract class PlayerNBTManager extends AxisAlignedBB{
 	// FIELDS
-	private java.io.File b;
-	public static java.util.logging.Logger a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public void b(EntityPlayerMP a)
+	public boolean isOpaqueCube()
 	
 	/**
-	 * 
+	 * Returns the ID of the items to drop on destruction.
 	 */
-	public void a(EntityPlayerMP a)
+	public int idDropped(int a, java.util.Random b)
+	
+	/**
+	 * Returns the quantity of items to drop on block destruction.
+	 */
+	public int quantityDropped(java.util.Random a)
+	
+	/**
+	 * *
+	 */
+	protected EntitySnowball SetBlockEntity()
 
 }

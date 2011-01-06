@@ -2,50 +2,32 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntity{
+public abstract class TileEntity extends BlockStep{
 	// FIELDS
-	private static java.util.Map f;
-	public int d;
-	private static java.util.Map e;
-	public int b;
-	public int c;
-	public World a;
+	public int a;
+	public short b;
+	public boolean c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public void d()
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	private static void a(java.lang.Class a, java.lang.String b)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public void e()
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public Packet f()
-	
-	/**
-	 * 
-	 */
-	public static TileEntity c(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

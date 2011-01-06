@@ -4,23 +4,33 @@ package net.minecraft.server;
 
 public abstract class PathPoint{
 	// FIELDS
-	 float f;
-	 float g;
-	public final int d;
-	 int e;
+	public final int a;
 	public final int b;
 	public final int c;
-	public final int a;
-	public boolean j;
+	public final int d;
+	 int e;
+	 float f;
+	 float g;
 	 float h;
 	 PathPoint i;
+	public boolean j;
 	
 	// METHODS
 	
 	/**
+	 * Returns true if this point has already been assigned to a path
+	 */
+	public boolean isAssigned()
+	
+	/**
+	 * Returns the linear distance to another path point
+	 */
+	public float distanceTo(PathPoint a)
+	
+	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public boolean equals(java.lang.Object a)
 	
 	/**
 	 * 
@@ -30,16 +40,6 @@ public abstract class PathPoint{
 	/**
 	 * 
 	 */
-	public float a(PathPoint a)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean equals(java.lang.Object a)
+	public java.lang.String toString()
 
 }

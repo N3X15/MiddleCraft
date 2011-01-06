@@ -2,64 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Material{
+public abstract class Material extends ItemBlock{
 	// FIELDS
-	public static final Material f;
-	public static final Material g;
-	public static final Material d;
-	public static final Material e;
-	public static final Material b;
-	public static final Material c;
-	public static final Material a;
-	public static final Material n;
-	public static final Material o;
-	public static final Material l;
-	public static final Material m;
-	public static final Material j;
-	public static final Material k;
-	public static final Material h;
-	public static final Material i;
-	public static final Material w;
-	public static final Material v;
-	public static final Material u;
-	public static final Material t;
-	public static final Material s;
-	public static final Material r;
-	public static final Material q;
-	public static final Material p;
-	private boolean y;
-	public static final Material x;
+	private int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean e()
-	
-	/**
-	 * 
-	 */
-	public boolean d()
-	
-	/**
-	 * 
-	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	private Material f()
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean c()
+	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 
 }

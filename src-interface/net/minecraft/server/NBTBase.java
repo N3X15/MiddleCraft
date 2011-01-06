@@ -4,53 +4,24 @@ package net.minecraft.server;
 
 public abstract class NBTBase{
 	// FIELDS
-	private java.lang.String a;
+	private static final NBTBase a;
+	private java.util.List b;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	abstract void a(java.io.DataOutput a)
+	public static final NBTBase a()
 	
 	/**
 	 * 
 	 */
-	public static void a(NBTBase a, java.io.DataOutput b)
+	transient void a(BlockSponge a, java.lang.Object[] b)
 	
 	/**
 	 * 
 	 */
-	abstract void a(java.io.DataInput a)
-	
-	/**
-	 * 
-	 */
-	public abstract byte a()
-	
-	/**
-	 * 
-	 */
-	public NBTBase m(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public static java.lang.String b(byte a)
-	
-	/**
-	 * 
-	 */
-	public static NBTBase b(java.io.DataInput a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c()
-	
-	/**
-	 * 
-	 */
-	public static NBTBase a(byte a)
+	public BlockSponge a(int[] a)
 
 }

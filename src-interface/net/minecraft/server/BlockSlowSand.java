@@ -2,19 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSlowSand extends Block{
+abstract final class BlockSlowSand extends java.awt.event.WindowAdapter{
 	// FIELDS
+	final net.minecraft.server.MinecraftServer a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(World a, int b, int c, int d, Entity e)
+	public void windowClosing(java.awt.event.WindowEvent a)
 
 }

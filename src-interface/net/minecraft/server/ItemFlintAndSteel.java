@@ -2,14 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemFlintAndSteel extends Item{
+public abstract class ItemFlintAndSteel extends IMobs{
 	// FIELDS
+	public int a;
+	public int b;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g)
+	protected void writeEntityToNBT(Packet1Login a)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	protected void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
+	
+	/**
+	 * *
+	 */
+	public boolean canBeCollidedWith()
 
 }

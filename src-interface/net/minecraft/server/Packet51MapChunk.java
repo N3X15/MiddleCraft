@@ -2,37 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet51MapChunk extends Packet{
+public abstract class Packet51MapChunk{
 	// FIELDS
-	public int f;
-	public byte[] g;
-	public int d;
-	public int e;
-	public int b;
-	public int c;
-	public int a;
-	private int h;
+	public static java.util.logging.Logger a;
+	private java.io.File b;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Writes the player data to disk from the specified PlayerEntityMP.
 	 */
-	public void a(java.io.DataInputStream a)
+	public void writePlayerData(WorldGenCactus a)
 	
 	/**
-	 * 
+	 * Reads the player data from disk into the specified PlayerEntityMP.
 	 */
-	public void a(NetHandler a)
-	
-	/**
-	 * 
-	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public void readPlayerData(WorldGenCactus a)
 
 }

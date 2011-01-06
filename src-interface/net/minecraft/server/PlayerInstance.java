@@ -2,52 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class PlayerInstance{
+public abstract class PlayerInstance extends BlockStep{
 	// FIELDS
-	private short[] f;
-	private int g;
-	private int d;
-	private ChunkCoordIntPair e;
-	private java.util.List b;
-	private int c;
-	final PlayerManager a;
-	private int l;
-	private int m;
-	private int j;
-	private int k;
-	private int h;
-	private int i;
+	public int a;
+	public java.lang.String b;
+	public java.lang.String c;
+	public long d;
+	public byte e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public void a(int a, int b, int c)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public void a()
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	private void a(TileEntity a)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void b(EntityPlayerMP a)
-	
-	/**
-	 * 
-	 */
-	public void a(EntityPlayerMP a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet a)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

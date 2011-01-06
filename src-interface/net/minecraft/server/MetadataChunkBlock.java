@@ -2,26 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MetadataChunkBlock{
+public abstract class MetadataChunkBlock extends la{
 	// FIELDS
-	public int f;
-	public int g;
-	public int d;
-	public int e;
-	public int b;
-	public int c;
-	public final EnumSkyBlock a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d, int e, int f)
+	public boolean a()
 	
 	/**
 	 * 
 	 */
-	public void a(World a)
+	public boolean c()
+	
+	/**
+	 * Returns if blocks of these materials are liquids.
+	 */
+	public boolean getIsLiquid()
 
 }

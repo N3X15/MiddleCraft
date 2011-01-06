@@ -4,24 +4,14 @@ package net.minecraft.server;
 
 public abstract class CraftingInventoryCB{
 	// FIELDS
-	public int f;
-	protected java.util.List g;
+	private short a;
+	private java.util.Set b;
 	public java.util.List d;
 	public java.util.List e;
-	private java.util.Set b;
-	private short a;
+	public int f;
+	protected java.util.List g;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	protected void a(Slot a)
-	
-	/**
-	 * 
-	 */
-	public void a(EntityPlayer a, boolean b)
 	
 	/**
 	 * 
@@ -36,27 +26,27 @@ public abstract class CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	public void a(ICrafting a)
-	
-	/**
-	 * 
-	 */
-	public boolean c(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	public Slot a(IInventory a, int b)
-	
-	/**
-	 * 
-	 */
 	public ItemStack a(int a, int b, EntityPlayer c)
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(EntityPlayer a)
+	public void a(ICrafting a)
+	
+	/**
+	 * 
+	 */
+	protected void a(Slot a)
+	
+	/**
+	 * 
+	 */
+	public void a(EntityPlayer a)
+	
+	/**
+	 * 
+	 */
+	public void a(EntityPlayer a, boolean b)
 	
 	/**
 	 * 
@@ -66,6 +56,16 @@ public abstract class CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a)
+	public Slot a(IInventory a, int b)
+	
+	/**
+	 * 
+	 */
+	public abstract boolean b(EntityPlayer a)
+	
+	/**
+	 * 
+	 */
+	public boolean c(EntityPlayer a)
 
 }

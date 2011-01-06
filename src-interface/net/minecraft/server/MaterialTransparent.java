@@ -2,24 +2,41 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MaterialTransparent extends Material{
+public abstract class MaterialTransparent{
 	// FIELDS
+	public double[] a;
+	public double[] b;
+	public double[] c;
+	public jq[] d;
+	private ConsoleLogManager e;
+	private ConsoleLogManager f;
+	private ConsoleLogManager g;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean b()
+	public EnumCreatureType a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public jq[] a(int a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public boolean c()
+	public EnumCreatureType a(lk a)
+	
+	/**
+	 * Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length
+	 */
+	public double[] getTemperatures(double[] a, int b, int c, int d, int e)
+	
+	/**
+	 * Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
+	 */
+	public jq[] loadBlockGeneratorData(jq[] a, int b, int c, int d, int e)
 
 }

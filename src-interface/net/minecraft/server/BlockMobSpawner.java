@@ -2,29 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockMobSpawner extends BlockContainer{
+public abstract class BlockMobSpawner extends java.lang.Thread{
 	// FIELDS
+	final net.minecraft.server.MinecraftServer a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	protected TileEntity a_()
+	public void run()
 
 }

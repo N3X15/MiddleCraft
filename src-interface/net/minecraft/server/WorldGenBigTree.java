@@ -2,94 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenBigTree extends WorldGenerator{
+public abstract class WorldGenBigTree extends BlockStep{
 	// FIELDS
-	 int f;
-	 double g;
-	 int[] d;
-	 int e;
-	 java.util.Random b;
-	 World c;
-	static final byte[] a;
-	 int n;
-	 int[][] o;
-	 int l;
-	 int m;
-	 double j;
-	 double k;
-	 double h;
-	 double i;
+	public long a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	 void a(int a, int b, int c)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	 boolean e()
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	 void a()
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	 void a(int[] a, int[] b, int c)
-	
-	/**
-	 * 
-	 */
-	 float b(int a)
-	
-	/**
-	 * 
-	 */
-	 void c()
-	
-	/**
-	 * 
-	 */
-	 void a(int a, int b, int c, float d, byte e, int f)
-	
-	/**
-	 * 
-	 */
-	 void d()
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	 int a(int[] a, int[] b)
-	
-	/**
-	 * 
-	 */
-	 boolean c(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	 float a(int a)
-	
-	/**
-	 * 
-	 */
-	 void b()
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

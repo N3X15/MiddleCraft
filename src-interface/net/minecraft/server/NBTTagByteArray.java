@@ -2,30 +2,189 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagByteArray extends NBTBase{
+public abstract class NBTTagByteArray{
 	// FIELDS
-	public byte[] a;
+	public static NBTTagByteArray A;
+	public static NBTTagByteArray B;
+	public static NBTTagByteArray C;
+	public static NBTTagByteArray D;
+	public static NBTTagByteArray E;
+	public static NBTTagByteArray F;
+	public static NBTTagByteArray G;
+	public static NBTTagByteArray H;
+	public static NBTTagByteArray I;
+	public static NBTTagByteArray J;
+	public static NBTTagByteArray K;
+	public static NBTTagByteArray L;
+	public static NBTTagByteArray M;
+	public static NBTTagByteArray N;
+	public static NBTTagByteArray O;
+	public static NBTTagByteArray P;
+	public static NBTTagByteArray Q;
+	public static NBTTagByteArray R;
+	public static NBTTagByteArray S;
+	public static NBTTagByteArray T;
+	public static NBTTagByteArray U;
+	public static NBTTagByteArray V;
+	public static NBTTagByteArray W;
+	public static NBTTagByteArray X;
+	public static NBTTagByteArray Y;
+	public static NBTTagByteArray Z;
+	private java.lang.String a;
+	public static NBTTagByteArray aA;
+	public static NBTTagByteArray aB;
+	public static NBTTagByteArray aC;
+	public static NBTTagByteArray aD;
+	public static NBTTagByteArray aE;
+	public static NBTTagByteArray aF;
+	public static NBTTagByteArray aG;
+	public static NBTTagByteArray aH;
+	public static NBTTagByteArray aI;
+	public static NBTTagByteArray aJ;
+	public static NBTTagByteArray aK;
+	public static NBTTagByteArray aL;
+	public static NBTTagByteArray aM;
+	public static NBTTagByteArray aN;
+	public static NBTTagByteArray aO;
+	public static NBTTagByteArray aP;
+	public static NBTTagByteArray aQ;
+	public static NBTTagByteArray aR;
+	public static NBTTagByteArray aS;
+	public static NBTTagByteArray aT;
+	public static NBTTagByteArray aU;
+	public static NBTTagByteArray aV;
+	public final int aW;
+	protected int aX;
+	protected int aY;
+	protected int aZ;
+	public static NBTTagByteArray aa;
+	public static NBTTagByteArray ab;
+	public static NBTTagByteArray ac;
+	public static NBTTagByteArray ad;
+	public static NBTTagByteArray ae;
+	public static NBTTagByteArray af;
+	public static NBTTagByteArray ag;
+	public static NBTTagByteArray ah;
+	public static NBTTagByteArray ai;
+	public static NBTTagByteArray aj;
+	public static NBTTagByteArray ak;
+	public static NBTTagByteArray al;
+	public static NBTTagByteArray am;
+	public static NBTTagByteArray an;
+	public static NBTTagByteArray ao;
+	public static NBTTagByteArray ap;
+	public static NBTTagByteArray aq;
+	public static NBTTagByteArray ar;
+	public static NBTTagByteArray as;
+	public static NBTTagByteArray at;
+	public static NBTTagByteArray au;
+	public static NBTTagByteArray av;
+	public static NBTTagByteArray aw;
+	public static NBTTagByteArray ax;
+	public static NBTTagByteArray ay;
+	public static NBTTagByteArray az;
+	protected static java.util.Random b;
+	protected boolean ba;
+	public static gm[] c;
+	public static NBTTagByteArray d;
+	public static NBTTagByteArray e;
+	public static NBTTagByteArray f;
+	public static NBTTagByteArray g;
+	public static NBTTagByteArray h;
+	public static NBTTagByteArray i;
+	public static NBTTagByteArray j;
+	public static NBTTagByteArray k;
+	public static NBTTagByteArray l;
+	public static NBTTagByteArray m;
+	public static NBTTagByteArray n;
+	public static NBTTagByteArray o;
+	public static NBTTagByteArray p;
+	public static NBTTagByteArray q;
+	public static NBTTagByteArray r;
+	public static NBTTagByteArray s;
+	public static NBTTagByteArray t;
+	public static NBTTagByteArray u;
+	public static NBTTagByteArray v;
+	public static NBTTagByteArray w;
+	public static NBTTagByteArray x;
+	public static NBTTagByteArray y;
+	public static NBTTagByteArray z;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataOutput a)
+	public java.lang.String a()
+	
+	/**
+	 * Sets the icon index for this item. Returns the item.
+	 */
+	public NBTTagByteArray setIconIndex(int a)
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataInput a)
+	public NBTTagByteArray a(int a, int b)
+	
+	/**
+	 * *
+	 */
+	public int getDamageVsEntity(IMobs a)
+	
+	/**
+	 * Returns if the item (tool) can harvest results from the block type.
+	 */
+	public boolean canHarvestBlock(BlockSoil a)
+	
+	/**
+	 * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+	 */
+	public void hitBlock(BlockSponge a, int b, int c, int d, int e)
+	
+	/**
+	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 */
+	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
+	
+	/**
+	 * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !
+	 */
+	public boolean onItemUse(BlockSponge a, BlockLog b, Packet17AddToInventory c, int d, int e, int f, int g)
+	
+	/**
+	 * Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword
+	 */
+	public float getStrVsBlock(BlockSponge a, BlockSoil b)
+	
+	/**
+	 * *
+	 */
+	public void hitEntity(BlockSponge a, lc b)
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public NBTTagByteArray a(java.lang.String a)
+	
+	/**
+	 * Returns the maximum size of the stack for a specific item. *Isn't this more a Set than a Get?*
+	 */
+	public int getItemStackLimit()
 	
 	/**
 	 * 
 	 */
-	public byte a()
+	public void b(BlockSponge a, lc b)
+	
+	/**
+	 * Returns the maximum damage an item can take.
+	 */
+	public int getMaxDamage()
+	
+	/**
+	 * Sets bFull3D to True and return the object.
+	 */
+	public NBTTagByteArray setFull3D()
 
 }

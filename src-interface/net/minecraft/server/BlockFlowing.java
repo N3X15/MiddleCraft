@@ -2,57 +2,43 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFlowing extends BlockFluids{
+public abstract class BlockFlowing extends GuiLogOutputHandler{
 	// FIELDS
-	 boolean[] b;
-	 int[] c;
-	 int a;
+	public double a;
+	public double b;
+	public double c;
+	private int[] d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void e(World a, int b, int c, int d)
+	public double a(double a, double b)
+	
+	/**
+	 * *
+	 */
+	public double generateNoise(double a, double b, double c)
 	
 	/**
 	 * 
 	 */
-	private int a(World a, int b, int c, int d, int e, int f)
+	public final double a(int a, double b, double c)
+	
+	/**
+	 * *
+	 */
+	public final double grad(int a, double b, double c, double d)
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public void a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j, double k)
 	
 	/**
-	 * 
+	 * *
 	 */
-	private boolean[] j(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	protected int e(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	private boolean k(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private void i(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean l(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private void f(World a, int b, int c, int d, int e)
+	public final double lerp(double a, double b, double c)
 
 }

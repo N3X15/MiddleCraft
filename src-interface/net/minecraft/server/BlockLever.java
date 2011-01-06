@@ -2,79 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockLever extends Block{
+public abstract class BlockLever extends BlockStep{
 	// FIELDS
+	public int a;
+	public byte b;
+	public int c;
+	public int d;
+	public int e;
+	public byte f;
+	public byte g;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public void c(World a, int b, int c, int d, int e)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public void b(World a, int b, int c, int d)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e)
-	
-	/**
-	 * 
-	 */
-	public void a(IBlockAccess a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean d(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean c()
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

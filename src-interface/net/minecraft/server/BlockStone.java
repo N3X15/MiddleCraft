@@ -2,14 +2,23 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockStone extends Block{
+public abstract final class BlockStone extends java.lang.Enum{
 	// FIELDS
+	public static final BlockStone a;
+	public static final BlockStone b;
+	public static final BlockStone c;
+	private static final ds[] d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
+	public static BlockStone valueOf(java.lang.String a)
+	
+	/**
+	 * 
+	 */
+	public static ds[] values()
 
 }

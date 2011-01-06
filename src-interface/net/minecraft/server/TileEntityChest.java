@@ -2,55 +2,55 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntityChest extends TileEntity{
+public abstract class TileEntityChest{
 	// FIELDS
-	private il[] e;
+	private java.lang.String a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Gets the type byte for the tag.
 	 */
-	public java.lang.String b()
+	public abstract byte getType()
 	
 	/**
-	 * 
+	 * Creates and returns a new tag of the specified type, or null if invalid.
 	 */
-	public void a(int a, ItemStack b)
+	public static TileEntityChest createTagOfType(byte a)
 	
 	/**
-	 * 
+	 * Writes the specified tag to the given DataOutput, writing the type byte, the UTF string key and then calling the tag to write its data.
 	 */
-	public int c()
+	public static void writeTag(TileEntityChest a, java.io.DataOutput b)
 	
 	/**
-	 * 
+	 * Read the actual data contents of the tag, implemented in NBT extension classes
 	 */
-	public ItemStack a(int a, int b)
+	abstract void readTagContents(java.io.DataInput a)
 	
 	/**
-	 * 
+	 * Write the actual data contents of the tag, implemented in NBT extension classes
 	 */
-	public void b(NBTTagCompound a)
+	abstract void writeTagContents(java.io.DataOutput a)
 	
 	/**
-	 * 
+	 * Returns the string name of a tag with the specified type, or 'UNKNOWN' if invalid.
 	 */
-	public int a()
+	public static java.lang.String getTagName(byte a)
 	
 	/**
-	 * 
+	 * Reads and returns a tag from the given DataInput, or the End tag if no tag could be read.
 	 */
-	public ItemStack a(int a)
+	public static TileEntityChest readTag(java.io.DataInput a)
 	
 	/**
-	 * 
+	 * Gets the key corresponding to the tag, or an empty string if none set.
 	 */
-	public void a(NBTTagCompound a)
+	public java.lang.String getKey()
 	
 	/**
-	 * 
+	 * Sets the key for this tag and returns this for convenience.
 	 */
-	public boolean a_(EntityPlayer a)
+	public TileEntityChest setKey(java.lang.String a)
 
 }

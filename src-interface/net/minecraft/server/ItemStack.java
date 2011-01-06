@@ -2,113 +2,176 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class ItemStack{
+public abstract class ItemStack{
 	// FIELDS
-	public int d;
-	public int b;
-	public int c;
-	public int a;
+	public static java.util.logging.Logger a;
+	public java.util.List b;
+	private net.minecraft.server.MinecraftServer c;
+	private WorldGenTrees d;
+	private int e;
+	private java.util.Set f;
+	private java.util.Set g;
+	private java.util.Set h;
+	private java.io.File i;
+	private java.io.File j;
+	private java.io.File k;
+	private Packet51MapChunk l;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static ItemStack a(ItemStack a)
+	public int a()
 	
 	/**
 	 * 
 	 */
-	private boolean b(ItemStack a)
+	public void a(double a, double b, double c, double d, BlockStep e)
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public void a(int a, int b, int c)
+	
+	/**
+	 * sends a tilentity to the player name specified
+	 */
+	public void sentTileEntityToPlayer(int a, int b, int c, EntitySnowball d)
+	
+	/**
+	 * Called when a player successfully logs in. Reads player data from disk and inserts the player into the world.
+	 */
+	public void playerLoggedIn(WorldGenCactus a)
+	
+	/**
+	 * Sets the NBT manager to the one for the worldserver given
+	 */
+	public void setPlayerManager(EntityCreeper a)
+	
+	/**
+	 * Called when a player tries to login. Checks whether they are banned/server is full etc.
+	 */
+	public WorldGenCactus login(EntityZombie a, java.lang.String b, java.lang.String c)
+	
+	/**
+	 * adds a player to the ban list
+	 */
+	public void banPlayer(java.lang.String a)
+	
+	/**
+	 * sends a chat message to the player with the name specified (not necessarily a whisper)
+	 */
+	public void sendChatMessageToPlayer(java.lang.String a, java.lang.String b)
+	
+	/**
+	 * sends a packet to the player with the name specified
+	 */
+	public boolean sendPacketToPlayer(java.lang.String a, BlockStep b)
+	
+	/**
+	 * sends a packet to all players
+	 */
+	public void sendPacketToAllPlayers(BlockStep a)
 	
 	/**
 	 * 
 	 */
-	public boolean b(Block a)
+	public void b()
 	
 	/**
 	 * 
 	 */
-	public int b()
+	public void b(WorldGenCactus a)
+	
+	/**
+	 * removes a player from the ban list
+	 */
+	public void unbanPlayer(java.lang.String a)
+	
+	/**
+	 * returns a string containing a comma-seperated list of player names
+	 */
+	public java.lang.String getPlayerList()
+	
+	/**
+	 * Called when a player disconnects from the game. Writes player data to disk and removes them from the world.
+	 */
+	public void playerLoggedOut(WorldGenCactus a)
+	
+	/**
+	 * bans the given IP string
+	 */
+	public void banIP(java.lang.String a)
+	
+	/**
+	 * Saves all of the player's states
+	 */
+	public void savePlayerStates()
 	
 	/**
 	 * 
 	 */
-	public ItemStack d()
+	public WorldGenCactus d(WorldGenCactus a)
 	
 	/**
-	 * 
+	 * unbans the given IP string
 	 */
-	public ItemStack a(int a)
+	public void unbanIP(java.lang.String a)
 	
 	/**
-	 * 
+	 * Reads the banned players file from disk.
 	 */
-	public void a(EntityPlayer a)
+	private void readBannedPlayers()
 	
 	/**
-	 * 
+	 * ops the player given
 	 */
-	public Item a()
+	public void opPlayer(java.lang.String a)
 	
 	/**
-	 * 
+	 * Writes the banned players file to disk.
 	 */
-	public void a(EntityLiving a)
+	private void writeBannedPlayers()
 	
 	/**
-	 * 
+	 * deops the player given
 	 */
-	public void b(int a)
+	public void deopPlayer(java.lang.String a)
 	
 	/**
-	 * 
+	 * loads the list of banned players
 	 */
-	public void a(int a, int b, int c, int d)
+	private void loadBannedList()
 	
 	/**
-	 * 
+	 * Returns true if the player is an OP, false otherwise.
 	 */
-	public int c()
+	public boolean isOp(java.lang.String a)
 	
 	/**
-	 * 
+	 * saves the list of banned players
 	 */
-	public NBTTagCompound a(NBTTagCompound a)
+	private void saveBannedList()
 	
 	/**
-	 * 
+	 * gets the player entity for the player with the name specified
 	 */
-	public boolean a(EntityPlayer a, World b, int c, int d, int e, int f)
+	public WorldGenCactus getPlayerEntity(java.lang.String a)
 	
 	/**
-	 * 
+	 * loads the ops from the ops file
 	 */
-	public int a(Entity a)
+	private void loadOps()
 	
 	/**
-	 * 
+	 * sends a chat message to all players currently connected
 	 */
-	public void b(NBTTagCompound a)
+	public void sendChatMessageToAllPlayers(java.lang.String a)
 	
 	/**
-	 * 
+	 * saves the ops to the ops file
 	 */
-	public ItemStack a(World a, EntityPlayer b)
-	
-	/**
-	 * 
-	 */
-	public float a(Block a)
-	
-	/**
-	 * 
-	 */
-	public static boolean a(ItemStack a, ItemStack b)
+	private void saveOps()
 
 }

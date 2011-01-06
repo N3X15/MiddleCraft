@@ -4,19 +4,19 @@ package net.minecraft.server;
 
 public abstract class CraftingInventoryWorkbenchCB extends CraftingInventoryCB{
 	// FIELDS
+	public InventoryCrafting a;
 	public IInventory b;
 	private World c;
-	public InventoryCrafting a;
-	private int j;
 	private int h;
 	private int i;
+	private int j;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean b(EntityPlayer a)
+	public void a(EntityPlayer a)
 	
 	/**
 	 * 
@@ -26,6 +26,6 @@ public abstract class CraftingInventoryWorkbenchCB extends CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a)
+	public boolean b(EntityPlayer a)
 
 }

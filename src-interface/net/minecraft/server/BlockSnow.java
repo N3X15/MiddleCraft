@@ -2,59 +2,37 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSnow extends Block{
+public abstract class BlockSnow extends lc{
 	// FIELDS
+	private ItemTool a;
+	protected IMobs aj;
+	protected boolean ak;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Checks if the entity's current position is a valid location to spawn this entity.
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public boolean getCanSpawnHere()
 	
 	/**
 	 * 
 	 */
-	public void g(World a, int b, int c, int d, int e)
+	protected float a(int a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
+	protected void a(IMobs a, float b)
 	
 	/**
 	 * 
 	 */
-	private boolean g(World a, int b, int c, int d)
+	protected void c()
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
+	protected IMobs k()
 
 }

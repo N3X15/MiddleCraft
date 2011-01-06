@@ -2,21 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract final class ChunkCoordinates{
+public abstract interface interface ChunkCoordinates{
 	// FIELDS
-	public final int b;
-	public final int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the block ID at coords x,y,z
 	 */
-	public int hashCode()
+	public abstract int getBlockId(int a, int b, int c)
 	
 	/**
-	 * 
+	 * Returns the block metadata at coords x,y,z
 	 */
-	public boolean equals(java.lang.Object a)
+	public abstract int getBlockMetadata(int a, int b, int c)
+	
+	/**
+	 * Returns the block's material.
+	 */
+	public abstract la getBlockMaterial(int a, int b, int c)
+	
+	/**
+	 * Returns if the block at the specified coordinates allow attachment Args: x, y, z
+	 */
+	public abstract boolean doesBlockAllowAttachment(int a, int b, int c)
 
 }

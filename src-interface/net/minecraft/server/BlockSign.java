@@ -2,41 +2,69 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSign extends BlockContainer{
+public abstract class BlockSign{
 	// FIELDS
-	private boolean b;
-	private java.lang.Class a;
+	private transient cr[] a;
+	private transient int b;
+	private int c;
+	private final float d;
+	private transient volatile int e;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
+	private static int a(int a)
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e)
+	private static int a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d)
+	private void a(int a, long b, java.lang.Object c, int d)
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
+	public java.lang.Object a(long a)
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public void a(long a, java.lang.Object b)
 	
 	/**
 	 * 
 	 */
-	protected TileEntity a_()
+	private void a(cr[] a)
+	
+	/**
+	 * 
+	 */
+	private void b(int a)
+	
+	/**
+	 * 
+	 */
+	public java.lang.Object b(long a)
+	
+	/**
+	 * 
+	 */
+	final Packet34EntityTeleport c(long a)
+	
+	/**
+	 * 
+	 */
+	static int d(long a)
+	
+	/**
+	 * 
+	 */
+	private static int e(long a)
 
 }

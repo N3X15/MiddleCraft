@@ -2,135 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetServerHandler extends NetHandler{
+public abstract class NetServerHandler{
 	// FIELDS
-	private int f;
-	private double g;
-	private net.minecraft.server.MienCrapftHurrvurr d;
-	private EntityPlayerMP e;
-	public NetworkManager b;
-	public boolean c;
-	public static java.util.logging.Logger a;
-	private boolean j;
-	private java.util.Map k;
-	private double h;
-	private double i;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(Packet102 a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet9 a)
-	
-	/**
-	 * 
-	 */
-	public void a()
-	
-	/**
-	 * 
-	 */
-	public void a(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet106 a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet130 a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet10Flying a)
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	public void a(Packet15Place a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet3Chat a)
-	
-	/**
-	 * 
-	 */
-	private void c(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet7 a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet101 a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet14BlockDig a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet18ArmAnimation a)
-	
-	/**
-	 * 
-	 */
-	public void b(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet255KickDisconnect a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet16BlockItemSwitch a)
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c, float d, float e)
-	
-	/**
-	 * 
-	 */
-	public void a(java.lang.String a, java.lang.Object[] b)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c()
-	
-	/**
-	 * 
-	 */
-	public void a(Packet a)
+	public void a(NBTBase a)
 
 }

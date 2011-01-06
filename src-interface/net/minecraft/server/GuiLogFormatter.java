@@ -2,15 +2,73 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class GuiLogFormatter extends java.util.logging.Formatter{
+public abstract class GuiLogFormatter extends lc{
 	// FIELDS
-	final GuiLogOutputHandler a;
+	public float a;
+	public float b;
+	public int c;
+	private int d;
 	
 	// METHODS
 	
 	/**
+	 * Checks if the entity's current position is a valid location to spawn this entity.
+	 */
+	public boolean getCanSpawnHere()
+	
+	/**
 	 * 
 	 */
-	public java.lang.String format(java.util.logging.LogRecord a)
+	public void a(int a)
+	
+	/**
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 */
+	public void writeEntityToNBT(Packet1Login a)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	public void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called by a player entity when they collide with an entity
+	 */
+	public void onCollideWithPlayer(BlockLog a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
+	
+	/**
+	 * 
+	 */
+	protected void c()
+	
+	/**
+	 * Returns the sound this mob makes when it is hurt.
+	 */
+	protected java.lang.String getHurtSound()
+	
+	/**
+	 * Returns the sound this mob makes on death.
+	 */
+	protected java.lang.String getDeathSound()
+	
+	/**
+	 * Returns the item ID for the item the mob drops on death.
+	 */
+	protected int getDropItemId()
+	
+	/**
+	 * Returns the volume for the sounds this mob makes.
+	 */
+	protected float getSoundVolume()
+	
+	/**
+	 * Will get destroyed next tick
+	 */
+	public void setEntityDead()
 
 }

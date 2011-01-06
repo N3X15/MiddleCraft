@@ -2,86 +2,55 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityTrackerEntry{
+public abstract class EntityTrackerEntry extends BlockSnow{
 	// FIELDS
-	public int f;
-	public int g;
-	public boolean d;
-	public int e;
-	public boolean b;
-	public boolean c;
-	public Entity a;
-	public double n;
-	public int o;
-	public double l;
-	public double m;
-	public int j;
-	public int k;
-	public int h;
-	public int i;
-	private boolean v;
-	private boolean u;
-	private double t;
-	private double s;
-	private double r;
-	public java.util.Set q;
-	public boolean p;
+	protected int f;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
-	public void b(Packet a)
+	public void onLivingUpdate()
+	
+	/**
+	 * Checks if the entity's current position is a valid location to spawn this entity.
+	 */
+	public boolean getCanSpawnHere()
 	
 	/**
 	 * 
 	 */
-	public void a(java.util.List a)
+	protected float a(int a, int b, int c)
+	
+	/**
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 */
+	public void writeEntityToNBT(Packet1Login a)
 	
 	/**
 	 * 
 	 */
-	public void b(java.util.List a)
+	protected void a(IMobs a, float b)
+	
+	/**
+	 * Called when the entity is attacked.
+	 */
+	public boolean attackEntity(IMobs a, int b)
+	
+	/**
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 */
+	public void readEntityFromNBT(Packet1Login a)
+	
+	/**
+	 * Called to update the entity's position/logic.
+	 */
+	public void onUpdate()
 	
 	/**
 	 * 
 	 */
-	public void a()
-	
-	/**
-	 * 
-	 */
-	public int hashCode()
-	
-	/**
-	 * 
-	 */
-	private Packet b()
-	
-	/**
-	 * 
-	 */
-	public void c(EntityPlayerMP a)
-	
-	/**
-	 * 
-	 */
-	public void b(EntityPlayerMP a)
-	
-	/**
-	 * 
-	 */
-	public void a(EntityPlayerMP a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet a)
-	
-	/**
-	 * 
-	 */
-	public boolean equals(java.lang.Object a)
+	protected IMobs k()
 
 }

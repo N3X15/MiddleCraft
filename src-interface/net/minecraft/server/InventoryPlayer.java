@@ -2,145 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class InventoryPlayer{
+public abstract class InventoryPlayer extends TileEntityChest{
 	// FIELDS
-	private ItemStack f;
-	public boolean d;
-	private EntityPlayer e;
-	public il[] b;
-	public int c;
-	public il[] a;
+	public byte[] a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Gets the type byte for the tag.
 	 */
-	public ItemStack i()
+	public byte getType()
+	
+	/**
+	 * Read the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void readTagContents(java.io.DataInput a)
+	
+	/**
+	 * Write the actual data contents of the tag, implemented in NBT extension classes
+	 */
+	 void writeTagContents(java.io.DataOutput a)
 	
 	/**
 	 * 
 	 */
-	public void h()
-	
-	/**
-	 * 
-	 */
-	public boolean b(Block a)
-	
-	/**
-	 * 
-	 */
-	public boolean b(int a)
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(EntityPlayer a)
-	
-	/**
-	 * 
-	 */
-	private int j()
-	
-	/**
-	 * 
-	 */
-	public void c(int a)
-	
-	/**
-	 * 
-	 */
-	private int d(int a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	private int b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public NBTTagList a(NBTTagList a)
-	
-	/**
-	 * 
-	 */
-	public float a(Block a)
-	
-	/**
-	 * 
-	 */
-	private int e(int a)
-	
-	/**
-	 * 
-	 */
-	public void b(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, ItemStack b)
-	
-	/**
-	 * 
-	 */
-	public int g()
-	
-	/**
-	 * 
-	 */
-	public void d()
-	
-	/**
-	 * 
-	 */
-	public ItemStack e()
-	
-	/**
-	 * 
-	 */
-	public void f()
-	
-	/**
-	 * 
-	 */
-	public ItemStack a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagList a)
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public boolean a(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public int a(Entity a)
-	
-	/**
-	 * 
-	 */
-	public int a()
+	public java.lang.String toString()
 
 }

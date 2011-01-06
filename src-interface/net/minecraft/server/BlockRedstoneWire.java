@@ -2,80 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneWire extends Block{
+public abstract class BlockRedstoneWire extends BlockStep{
 	// FIELDS
-	private boolean a;
+	public int a;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public static boolean b(IBlockAccess a, int b, int c, int d)
+	public int getPacketSize()
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	private void h(World a, int b, int c, int d)
+	public void processPacket(Packet28 a)
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public boolean a(World a, int b, int c, int d)
+	public void readPacketData(java.io.DataInputStream a)
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public void b(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private int f(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean d(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean c()
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(World a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e)
+	public void writePacketData(java.io.DataOutputStream a)
 
 }

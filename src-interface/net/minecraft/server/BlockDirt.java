@@ -2,8 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockDirt extends Block{
+public abstract class BlockDirt{
 	// FIELDS
+	public final java.lang.String a;
+	public final WorldGenLightStone1 b;
 	
 	// METHODS
 

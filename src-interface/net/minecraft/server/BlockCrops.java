@@ -10,7 +10,7 @@ public abstract class BlockCrops extends BlockFlower{
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public int a(int a, java.util.Random b)
 	
 	/**
 	 * 
@@ -20,7 +20,12 @@ public abstract class BlockCrops extends BlockFlower{
 	/**
 	 * 
 	 */
-	private float h(World a, int b, int c, int d)
+	public void a(World a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * 
+	 */
+	public int a(java.util.Random a)
 	
 	/**
 	 * 
@@ -30,11 +35,6 @@ public abstract class BlockCrops extends BlockFlower{
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
+	private float h(World a, int b, int c, int d)
 
 }

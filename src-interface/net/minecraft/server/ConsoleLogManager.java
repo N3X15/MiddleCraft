@@ -2,15 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ConsoleLogManager{
+public abstract class ConsoleLogManager extends GuiLogOutputHandler{
 	// FIELDS
-	public static java.util.logging.Logger a;
+	private by[] a;
+	private int b;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static void a()
+	public double[] a(double[] a, double b, double c, int d, int e, double f, double g, double h)
+	
+	/**
+	 * 
+	 */
+	public double[] a(double[] a, double b, double c, int d, int e, double f, double g, double h, double i)
 
 }

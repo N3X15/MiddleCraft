@@ -2,27 +2,55 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class GuiStatsComponent extends javax.swing.JComponent{
+public abstract class GuiStatsComponent extends EntitySnowball{
 	// FIELDS
-	private int b;
-	private java.lang.String[] c;
-	private int[] a;
+	private il[] e;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	private void a()
+	public int getSizeInventory()
+	
+	/**
+	 * Returns the stack in slot i
+	 */
+	public BlockSponge getStackInSlot(int a)
 	
 	/**
 	 * 
 	 */
-	static void a(GuiStatsComponent a)
+	public BlockSponge a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public void paint(java.awt.Graphics a)
+	public void a(int a, BlockSponge b)
+	
+	/**
+	 * Reads a tile entity from NBT.
+	 */
+	public void readFromNBT(Packet1Login a)
+	
+	/**
+	 * 
+	 */
+	public boolean a_(BlockLog a)
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b()
+	
+	/**
+	 * Writes a tile entity to NBT.
+	 */
+	public void writeToNBT(Packet1Login a)
+	
+	/**
+	 * 
+	 */
+	public int c()
 
 }

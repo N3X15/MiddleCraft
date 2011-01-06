@@ -2,34 +2,52 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IChunkLoader{
+public abstract class IChunkLoader{
 	// FIELDS
+	private java.lang.String a;
+	private lg b;
+	private lg c;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract Chunk a(World a, int b, int c)
+	public int getSizeInventory()
+	
+	/**
+	 * Returns the stack in slot i
+	 */
+	public BlockSponge getStackInSlot(int a)
 	
 	/**
 	 * 
 	 */
-	public abstract void a()
+	public BlockSponge a(int a, int b)
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, Chunk b)
+	public void a(int a, BlockSponge b)
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, Chunk b)
+	public boolean a_(BlockLog a)
 	
 	/**
 	 * 
 	 */
-	public abstract void b()
+	public java.lang.String b()
+	
+	/**
+	 * 
+	 */
+	public int c()
+	
+	/**
+	 * Called when an the contents of an Inventory change, usually
+	 */
+	public void onInventoryChanged()
 
 }

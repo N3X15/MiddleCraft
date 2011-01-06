@@ -2,19 +2,28 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenerator{
+public abstract class WorldGenerator extends EntityArrow{
 	// FIELDS
+	private BlockFurnace a;
+	private int b;
+	private int c;
+	private int h;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, java.util.Random b, int c, int d, int e)
+	public void a()
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c)
+	public void a(BlockStairs a)
+	
+	/**
+	 * 
+	 */
+	public boolean b(BlockLog a)
 
 }

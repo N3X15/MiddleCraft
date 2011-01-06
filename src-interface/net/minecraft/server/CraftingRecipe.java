@@ -4,18 +4,18 @@ package net.minecraft.server;
 
 public abstract class CraftingRecipe{
 	// FIELDS
-	private int[] d;
-	private ItemStack e;
+	public final int a;
 	private int b;
 	private int c;
-	public final int a;
+	private int[] d;
+	private ItemStack e;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public ItemStack b(int[] a)
+	public int a()
 	
 	/**
 	 * 
@@ -30,6 +30,6 @@ public abstract class CraftingRecipe{
 	/**
 	 * 
 	 */
-	public int a()
+	public ItemStack b(int[] a)
 
 }

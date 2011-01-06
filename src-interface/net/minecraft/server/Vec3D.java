@@ -2,84 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Vec3D{
+public abstract interface interface Vec3D{
 	// FIELDS
-	private static java.util.List d;
-	private static int e;
-	public double b;
-	public double c;
-	public double a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static Vec3D b(double a, double b, double c)
+	public abstract void a()
 	
 	/**
 	 * 
 	 */
-	public static void a()
+	public abstract kx a(Packet17AddToInventory a, int b, int c)
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public abstract void a(Packet17AddToInventory a, kx b)
 	
 	/**
 	 * 
 	 */
-	public Vec3D a(Vec3D a, double b)
+	public abstract void b()
 	
 	/**
 	 * 
 	 */
-	public double d(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public Vec3D b(Vec3D a, double b)
-	
-	/**
-	 * 
-	 */
-	public Vec3D c(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public Vec3D c(Vec3D a, double b)
-	
-	/**
-	 * 
-	 */
-	public double b(Vec3D a)
-	
-	/**
-	 * 
-	 */
-	public double a(Vec3D a)
-	
-	/**
-	 * 
-	 */
-	public Vec3D b()
-	
-	/**
-	 * 
-	 */
-	public double c()
-	
-	/**
-	 * 
-	 */
-	private Vec3D e(double a, double b, double c)
-	
-	/**
-	 * 
-	 */
-	public static Vec3D a(double a, double b, double c)
+	public abstract void b(Packet17AddToInventory a, kx b)
 
 }

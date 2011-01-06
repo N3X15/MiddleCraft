@@ -4,9 +4,9 @@ package net.minecraft.server;
 
 public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB{
 	// FIELDS
+	private TileEntityFurnace a;
 	private int b;
 	private int c;
-	private TileEntityFurnace a;
 	private int h;
 	
 	// METHODS

@@ -2,15 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemArmor extends Item{
+public abstract class ItemArmor extends NBTTagByteArray{
 	// FIELDS
-	public final int a;
-	private static final int[] bf;
-	public final int bb;
-	public final int bc;
-	public final int bd;
-	private static final int[] be;
 	
 	// METHODS
+	
+	/**
+	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 */
+	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
 
 }

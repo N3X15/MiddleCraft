@@ -2,9 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IAnimals{
+public abstract class IAnimals extends MaterialLiquid{
 	// FIELDS
 	
 	// METHODS
+	
+	/**
+	 * Ticks the block if it's been scheduled
+	 */
+	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	
+	/**
+	 * 
+	 */
+	private void i(Packet17AddToInventory a, int b, int c, int d)
+	
+	/**
+	 * 
+	 */
+	private boolean j(Packet17AddToInventory a, int b, int c, int d)
 
 }

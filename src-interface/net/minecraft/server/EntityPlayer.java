@@ -2,188 +2,58 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPlayer extends EntityLiving{
+public abstract class EntityPlayer{
 	// FIELDS
-	public double az;
-	public double ay;
-	private int a;
-	public float at;
-	public float as;
-	public int ar;
-	public byte aq;
-	public int ax;
-	public java.lang.String aw;
-	public int av;
-	public boolean au;
-	public CraftingInventoryCB ao;
-	public CraftingInventoryCB ap;
-	public InventoryPlayer an;
-	public double aA;
-	public double aB;
-	public double aC;
-	public double aD;
-	public EntityFish aE;
+	private ChunkCoordinates a;
+	private ko b;
+	private Packet59ComplexEntity c;
+	private b[] d;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns a mapped point or creates and adds one
 	 */
-	public float s()
+	private final PathPoint openPoint(int a, int b, int c)
 	
 	/**
-	 * 
+	 * Returns a new PathEntity for a given start and end point
 	 */
-	public void h(Entity a)
+	private ItemTool createEntityPath(PathPoint a, PathPoint b)
 	
 	/**
-	 * 
+	 * Internal implementation of creating a path from an entity to a point
 	 */
-	public void z()
+	private ItemTool createEntityPathTo(IMobs a, double b, double c, double d, float e)
 	
 	/**
-	 * 
+	 * Creates a path from an entity to a specified location within a minimum distance
 	 */
-	public boolean b(Block a)
+	public ItemTool createEntityPathTo(IMobs a, int b, int c, int d, float e)
 	
 	/**
-	 * 
+	 * Given an x y z, returns a vertical offset needed to search to find a block to stand on
 	 */
-	public void l()
+	private int getVerticalOffset(IMobs a, int b, int c, int d, PathPoint e)
 	
 	/**
-	 * 
+	 * Returns a point that the entity can safely move to
 	 */
-	public void b(Entity a, int b)
+	private PathPoint getSafePoint(IMobs a, int b, int c, int d, PathPoint e, int f)
 	
 	/**
-	 * 
+	 * Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)
 	 */
-	public void c(Entity a, int b)
+	private ItemTool addToPath(IMobs a, PathPoint b, PathPoint c, PathPoint d, float e)
 	
 	/**
-	 * 
+	 * Creates a path from one entity to another within a minimum distance
 	 */
-	public void G()
+	public ItemTool createEntityPathTo(IMobs a, IMobs b, float c)
 	
 	/**
-	 * 
+	 * populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)
 	 */
-	public void a(IInventory a)
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a, boolean b)
-	
-	/**
-	 * 
-	 */
-	private void j(Entity a)
-	
-	/**
-	 * 
-	 */
-	public float a(Block a)
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	protected void d(int a)
-	
-	/**
-	 * 
-	 */
-	public void L()
-	
-	/**
-	 * 
-	 */
-	public void b(ItemStack a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(Entity a, int b)
-	
-	/**
-	 * 
-	 */
-	public ItemStack M()
-	
-	/**
-	 * 
-	 */
-	protected void c()
-	
-	/**
-	 * 
-	 */
-	public double B()
-	
-	/**
-	 * 
-	 */
-	public void a(TileEntityFurnace a)
-	
-	/**
-	 * 
-	 */
-	protected void a(EntityItem a)
-	
-	/**
-	 * 
-	 */
-	public void a(NBTTagCompound a)
-	
-	/**
-	 * 
-	 */
-	protected void I()
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	public void f(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void g(Entity a)
-	
-	/**
-	 * 
-	 */
-	public void a(TileEntitySign a)
-	
-	/**
-	 * 
-	 */
-	public void N()
-	
-	/**
-	 * 
-	 */
-	public void H()
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a)
+	private int findPathOptions(IMobs a, PathPoint b, PathPoint c, PathPoint d, float e)
 
 }
