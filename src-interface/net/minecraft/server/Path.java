@@ -2,62 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Path{
+public abstract class Path {
 	// FIELDS
-	private b[] a;
-	private int b;
-	 ()V setChunkModified;
+	private b[] pathPoints;
+	private int count;
 	
 	// METHODS
 	
 	/**
-	 * Adds a point to the path
+	 * 
 	 */
-	 PathPoint addPoint(PathPoint a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract PathPoint a(PathPoint a);
 	
 	/**
 	 * 
 	 */
-	private void a(int a);
+	public abstract void a(PathPoint a, float b);
 	
 	/**
 	 * 
 	 */
-	public PathPoint a(PathPoint a);
+	public abstract PathPoint b();
 	
 	/**
 	 * 
 	 */
-	public void a(PathPoint a, float b);
-	
-	/**
-	 * Returns and removes the first point in the path
-	 */
-	 PathPoint dequeue();
-	
-	/**
-	 * 
-	 */
-	public PathPoint b();
-	
-	/**
-	 * 
-	 */
-	private void b(int a);
-	
-	/**
-	 * Returns true if this path contains no points
-	 */
-	 boolean isPathEmpty();
-	
-	/**
-	 * 
-	 */
-	public boolean c();
+	public abstract boolean c();
 
 }

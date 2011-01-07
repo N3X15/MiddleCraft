@@ -2,29 +2,23 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EnumMobType extends java.lang.Enum{
+public abstract final class EnumMobType extends java.lang.Enum {
 	// FIELDS
-	public static final EnumMobType a;
-	public static final EnumMobType b;
-	public static final EnumMobType c;
-	private static final ds[] d;
-	 ()V setChunkModified;
+	public static final EnumMobType ds_everything;
+	public static final EnumMobType ds_mobs;
+	public static final EnumMobType ds_players;
+	private static final ds[] field_990;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static EnumMobType valueOf(java.lang.String a);
-	
-	/**
-	 * *
-	 */
-	 ds[] ds_values();
+	public abstract static EnumMobType valueOf(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public static ds[] values();
+	public abstract static ds[] values();
 
 }

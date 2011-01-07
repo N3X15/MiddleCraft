@@ -2,151 +2,135 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockStairs extends Block{
+public abstract class BlockStairs extends Block {
 	// FIELDS
-	private Block a;
-	 ()V setChunkModified;
+	private Block field_651;
 	
 	// METHODS
 	
 	/**
-	 * Drops the block items with a specified chance of dropping the specified items
+	 * 
 	 */
-	 void dropBlockAsItemWithChance(World a, int b, int c, int d, int e, float f);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract boolean a(int a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, boolean b);
+	public abstract float a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public float a(Entity a);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract void a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e);
+	public abstract void a(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e, float f);
+	public abstract void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
+	public abstract void a(World a, int b, int c, int d, Entity e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, Entity e, Vec3D f);
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, EntityLiving e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, EntityLiving e);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract void a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d);
+	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e);
-	
-	/**
-	 * Drops the specified block items
-	 */
-	 void dropBlockAsItem(World a, int b, int c, int d, int e);
+	public abstract void a_(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a_(World a, int b, int c, int d, int e);
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, Entity e);
+	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void c(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void c(World a, int b, int c, int d);
-	
-	/**
-	 * Returns if this block is collidable (only used by Fire). Args: x, y, z
-	 */
-	 boolean isCollidable();
+	public abstract boolean d();
 	
 	/**
 	 * 
 	 */
-	public boolean d();
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

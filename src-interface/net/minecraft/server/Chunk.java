@@ -2,223 +2,173 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Chunk{
+public abstract class Chunk {
 	// FIELDS
-	public static boolean a;
-	public byte[] b;
-	public boolean c;
-	public World d;
-	public NibbleArray e;
-	public ()V setChunkModified;
-	public NibbleArray g;
-	public byte[] h;
-	public int i;
-	public final int j;
-	public final int k;
-	public java.util.Map l;
-	public java.util.List[] m;
-	public boolean n;
-	public boolean o;
-	public boolean p;
-	public boolean q;
-	public boolean r;
-	public long s;
+	public static boolean field_694;
+	public byte[] blocks;
+	public boolean isChunkLoaded;
+	public World worldObj;
+	public NibbleArray data;
+	public NibbleArray skylightMap;
+	public NibbleArray blocklightMap;
+	public byte[] heightMap;
+	public int field_686;
+	public final int xPosition;
+	public final int zPosition;
+	public java.util.Map chunkTileEntityMap;
+	public java.util.List[] entities;
+	public boolean isTerrainPopulated;
+	public boolean isModified;
+	public boolean neverSave;
+	public boolean field_678;
+	public boolean hasEntities;
+	public long lastSaveTime;
 	
 	// METHODS
 	
 	/**
-	 * Adds an entity to the chunk. Args: entity
+	 * 
 	 */
-	 void addEntity(Entity a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract boolean a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b);
+	public abstract int a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b, int c);
+	public abstract boolean a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d);
+	public abstract boolean a(int a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d, int e);
+	public abstract void a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, TileEntity d);
+	public abstract java.util.Random a(long a);
 	
 	/**
 	 * 
 	 */
-	public java.util.Random a(long a);
+	public abstract void a(TileEntity a);
 	
 	/**
 	 * 
 	 */
-	public void a(TileEntity a);
+	public abstract int a(EnumSkyBlock a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public int a(EnumSkyBlock a, int b, int c, int d);
+	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a);
+	public abstract void a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, int b);
+	public abstract void a(Entity a, AxisAlignedBB b, java.util.List c);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, AxisAlignedBB b, java.util.List c);
+	public abstract void a(java.lang.Class a, AxisAlignedBB b, java.util.List c);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.Class a, AxisAlignedBB b, java.util.List c);
+	public abstract boolean a(boolean a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(boolean a);
+	public abstract int a(byte[] a, int b, int c, int d, int e, int f, int g, int h);
 	
 	/**
 	 * 
 	 */
-	public int a(byte[] a, int b, int c, int d, int e, int f, int g, int h);
-	
-	/**
-	 * *
-	 */
-	 void func_350(Entity a);
+	public abstract void b();
 	
 	/**
 	 * 
 	 */
-	public void b();
+	public abstract int b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public int b(int a, int b);
+	public abstract int b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int b(int a, int b, int c);
+	public abstract void b(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, int d);
+	public abstract void b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a);
-	
-	/**
-	 * Returns whether is not a block above this one blocking sight to the sky (done via checking against the heightmap)
-	 */
-	 boolean canBlockSeeTheSky(int a, int b, int c);
+	public abstract void c();
 	
 	/**
 	 * 
 	 */
-	public void c();
+	public abstract boolean c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	private void c(int a, int b);
+	public abstract int c(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean c(int a, int b, int c);
+	public abstract void d();
 	
 	/**
 	 * 
 	 */
-	public int c(int a, int b, int c, int d);
-	
-	/**
-	 * Gets the TileEntity for a given block in this chunk
-	 */
-	 TileEntity getChunkBlockTileEntity(int a, int b, int c);
+	public abstract TileEntity d(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void d();
+	public abstract void e();
 	
 	/**
 	 * 
 	 */
-	public TileEntity d(int a, int b, int c);
-	
-	/**
-	 * *
-	 */
-	 void onChunkUnload();
+	public abstract void e(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void e();
-	
-	/**
-	 * 
-	 */
-	public void e(int a, int b, int c);
-	
-	/**
-	 * *
-	 */
-	 void func_355(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	public void f();
-	
-	/**
-	 * 
-	 */
-	private void f(int a, int b, int c);
-	
-	/**
-	 * *
-	 */
-	 void func_339(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	private void g(int a, int b, int c);
+	public abstract void f();
 
 }

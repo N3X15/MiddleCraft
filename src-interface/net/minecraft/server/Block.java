@@ -2,401 +2,351 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Block{
+public abstract class Block {
 	// FIELDS
-	public static final Block A;
-	public static final Block B;
-	public static final Block C;
-	public static final Block D;
-	public static final Block E;
-	public static final Block F;
-	public static final Block G;
-	public static final Block H;
-	public static final Block I;
-	public static final Block J;
-	public static final BlockLeaves K;
-	public static final Block L;
-	public static final Block M;
-	public static final Block N;
-	public static final Block O;
-	public static final Block P;
-	public static final Block Q;
-	public static final Block R;
-	public static final Block S;
-	public static final Block T;
-	public static final Block U;
-	public static final Block V;
-	public static final Block W;
-	public static final Block X;
-	public static final Block Y;
-	public static final Block Z;
-	private java.lang.String a;
-	public static final Block aA;
-	public static final Block aB;
-	public static final Block aC;
-	public static final Block aD;
-	public static final Block aE;
-	public static final Block aF;
-	public static final Block aG;
-	public static final Block aH;
-	public static final Block aI;
-	public static final Block aJ;
-	public static final Block aK;
-	public static final Block aL;
-	public static final Block aM;
-	public static final Block aN;
-	public static final Block aO;
-	public static final Block aP;
-	public static final Block aQ;
-	public static final Block aR;
-	public static final Block aS;
-	public static final Block aT;
-	public static final Block aU;
-	public static final Block aV;
-	public static final Block aW;
-	public static final Block aX;
-	public static final Block aY;
-	public static final Block aZ;
-	public static final Block aa;
-	public static final Block ab;
-	public static final Block ac;
-	public static final BlockFlower ad;
-	public static final BlockFlower ae;
-	public static final BlockFlower af;
-	public static final BlockFlower ag;
-	public static final Block ah;
-	public static final Block ai;
-	public static final Block aj;
-	public static final Block ak;
-	public static final Block al;
-	public static final Block am;
-	public static final Block an;
-	public static final Block ao;
-	public static final Block ap;
-	public static final Block aq;
-	public static final BlockFire ar;
-	public static final Block as;
-	public static final Block at;
-	public static final Block au;
-	public static final Block av;
-	public static final Block aw;
-	public static final Block ax;
-	public static final Block ay;
-	public static final Block az;
-	public static final Block ba;
-	public static final Block bb;
-	public static final Block bc;
-	public static final Block bd;
-	public static final BlockPortal be;
-	public static final Block bf;
-	public int bg;
-	public final int bh;
-	protected float bi;
-	protected float bj;
-	public double bk;
-	public double bl;
-	public double bm;
-	public double bn;
-	public double bo;
-	public double bp;
-	public StepSound bq;
-	public float br;
-	public final Material bs;
-	public float bt;
-	public static final StepSound d;
-	public static final StepSound e;
-	//public static final ()V setChunkModified; // WTF
-	public static final StepSound g;
-	public static final StepSound h;
-	public static final StepSound i;
-	public static final StepSound j;
-	public static final StepSound k;
-	public static final StepSound l;
-	public static final gv[] m;
-	public static final boolean[] n;
-	public static final boolean[] o;
-	public static final boolean[] p;
-	public static final int[] q;
-	public static final boolean[] r;
-	public static final int[] s;
-	public static final Block t;
-	public static final BlockGrass u;
-	public static final Block v;
-	public static final Block w;
-	public static final Block x;
-	public static final Block y;
-	public static final Block z;
+	public static final Block waterStill;
+	public static final Block waterMoving;
+	public static final Block lavaStill;
+	public static final Block lavaMoving;
+	public static final Block sand;
+	public static final Block gravel;
+	public static final Block oreGold;
+	public static final Block oreIron;
+	public static final Block oreCoal;
+	public static final Block wood;
+	public static final BlockLeaves leaves;
+	public static final Block sponge;
+	public static final Block glass;
+	public static final Block field_9042;
+	public static final Block field_9041;
+	public static final Block field_9040;
+	public static final Block field_9039;
+	public static final Block field_9038;
+	public static final Block field_9037;
+	public static final Block field_9036;
+	public static final Block field_9034;
+	public static final Block field_9033;
+	public static final Block field_9032;
+	public static final Block field_9031;
+	public static final Block field_9030;
+	public static final Block field_9029;
+	private java.lang.String field_666;
+	public static final Block tilledField;
+	public static final Block stoneOvenIdle;
+	public static final Block stoneOvenActive;
+	public static final Block signPost;
+	public static final Block doorWood;
+	public static final Block ladder;
+	public static final Block minecartTrack;
+	public static final Block stairCompactCobblestone;
+	public static final Block signWall;
+	public static final Block lever;
+	public static final Block pressurePlateStone;
+	public static final Block doorSteel;
+	public static final Block pressurePlatePlanks;
+	public static final Block oreRedstone;
+	public static final Block oreRedstoneGlowing;
+	public static final Block torchRedstoneIdle;
+	public static final Block torchRedstoneActive;
+	public static final Block button;
+	public static final Block snow;
+	public static final Block ice;
+	public static final Block blockSnow;
+	public static final Block cactus;
+	public static final Block blockClay;
+	public static final Block reed;
+	public static final Block jukebox;
+	public static final Block fence;
+	public static final Block field_9049;
+	public static final Block cloth;
+	public static final Block field_9048;
+	public static final BlockFlower plantYellow;
+	public static final BlockFlower plantRed;
+	public static final BlockFlower mushroomBrown;
+	public static final BlockFlower mushroomRed;
+	public static final Block blockGold;
+	public static final Block blockSteel;
+	public static final Block stairDouble;
+	public static final Block stairSingle;
+	public static final Block brick;
+	public static final Block tnt;
+	public static final Block bookShelf;
+	public static final Block cobblestoneMossy;
+	public static final Block obsidian;
+	public static final Block torchWood;
+	public static final BlockFire fire;
+	public static final Block mobSpawner;
+	public static final Block stairCompactPlanks;
+	public static final Block crate;
+	public static final Block redstoneWire;
+	public static final Block oreDiamond;
+	public static final Block blockDiamond;
+	public static final Block workbench;
+	public static final Block crops;
+	public static final Block pumpkin;
+	public static final Block bloodStone;
+	public static final Block slowSand;
+	public static final Block lightStone;
+	public static final BlockPortal portal;
+	public static final Block pumpkinLantern;
+	public int blockIndexInTexture;
+	public final int blockID;
+	protected float blockHardness;
+	protected float blockResistance;
+	public double minX;
+	public double minY;
+	public double minZ;
+	public double maxX;
+	public double maxY;
+	public double maxZ;
+	public StepSound stepSound;
+	public float field_554;
+	public final Material blockMaterial;
+	public float slipperiness;
+	public static final StepSound soundPowderFootstep;
+	public static final StepSound soundWoodFootstep;
+	public static final StepSound soundGravelFootstep;
+	public static final StepSound soundGrassFootstep;
+	public static final StepSound soundStoneFootstep;
+	public static final StepSound soundMetalFootstep;
+	public static final StepSound soundGlassFootstep;
+	public static final StepSound soundClothFootstep;
+	public static final StepSound soundSandFootstep;
+	public static final gv[] blocksList;
+	public static final boolean[] tickOnLoad;
+	public static final boolean[] opaqueCubeLookup;
+	public static final boolean[] isBlockContainer;
+	public static final int[] lightOpacity;
+	public static final boolean[] unusedBooleanArray;
+	public static final int[] lightValue;
+	public static final Block stone;
+	public static final BlockGrass grass;
+	public static final Block dirt;
+	public static final Block cobblestone;
+	public static final Block planks;
+	public static final Block sapling;
+	public static final Block bedrock;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 Block func_20037(java.lang.String a);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	protected abstract Block a(float a);
 	
 	/**
 	 * 
 	 */
-	protected Block a(float a);
+	public abstract void a(float a, float b, float c, float d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	public void a(float a, float b, float c, float d, float e, float f);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract boolean a(int a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, boolean b);
+	protected abstract Block a(StepSound a);
 	
 	/**
 	 * 
 	 */
-	private boolean a(Vec3D a);
+	public abstract float a(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected Block a(StepSound a);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public float a(Entity a);
+	public abstract void a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract void a(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e);
+	public abstract MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e, float f);
+	public abstract void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
 	
 	/**
 	 * 
 	 */
-	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract void a(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
+	public abstract void a(World a, int b, int c, int d, Entity e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, Entity e);
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, Entity e, Vec3D f);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void a(World a, int b, int c, int d, EntityLiving e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract float a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, EntityLiving e);
+	public abstract Block a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public float a(EntityPlayer a);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public Block a(java.lang.String a);
+	public abstract void a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d);
+	protected abstract void a(boolean a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract void a_(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	protected void a(boolean a);
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public void a_(World a, int b, int c, int d, int e);
-	
-	/**
-	 * Checks if a vector is within the X and Z bounds of the block.
-	 */
-	 boolean isVecInsideXZBounds(Vec3D a);
+	protected abstract Block b(float a);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected Block b(float a);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	private boolean b(Vec3D a);
+	public abstract void b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, Entity e);
+	public abstract boolean c();
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e);
+	protected abstract Block c(float a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e);
-	
-	/**
-	 * Checks if a vector is within the X and Y bounds of the block.
-	 */
-	 boolean isVecInsideXYBounds(Vec3D a);
+	protected abstract Block c(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean c();
+	public abstract void c(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected Block c(float a);
+	public abstract void c(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	protected Block c(int a);
+	public abstract boolean d();
 	
 	/**
 	 * 
 	 */
-	private boolean c(Vec3D a);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void c(World a, int b, int c, int d);
+	public abstract boolean d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void c(World a, int b, int c, int d, int e);
+	public abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	public boolean d();
+	public abstract void e(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract boolean f(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean d(World a, int b, int c, int d, int e);
-	
-	/**
-	 * *
-	 */
-	 java.lang.String func_20036();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String e();
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * Only used to fill an unused field
-	 */
-	 boolean unusedMethod();
-	
-	/**
-	 * 
-	 */
-	private boolean f();
-	
-	/**
-	 * 
-	 */
-	public boolean f(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void harvestBlock(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public void g(World a, int b, int c, int d, int e);
+	public abstract void g(World a, int b, int c, int d, int e);
 
 }

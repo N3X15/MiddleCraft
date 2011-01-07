@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class FontAllowedCharacters{
+public abstract class FontAllowedCharacters {
 	// FIELDS
-	public static final java.lang.String a;
-	 ()V setChunkModified;
+	public static final java.lang.String field_20162;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 java.lang.String func_20161();
-	
-	/**
 	 * 
 	 */
-	private static java.lang.String a();
+	private abstract static java.lang.String a();
 
 }

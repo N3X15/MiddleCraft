@@ -1,4 +1,5 @@
 @echo off
-echo Importing MCP 2.6 Test 3
-python lib/scripts/ImportMCP.py classes data/classes.csv
+echo Importing MCP 2.6 Test 4
+python lib/scripts/ImportMCP.py
+copy mappings.yml data\server\1.1_02\
 pause

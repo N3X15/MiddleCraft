@@ -2,43 +2,27 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class StepSound{
+public abstract class StepSound {
 	// FIELDS
-	public final java.lang.String a;
-	public final float b;
-	public final float c;
-	 ()V setChunkModified;
+	public final java.lang.String field_1029;
+	public final float field_1028;
+	public final float field_1030;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 float func_738();
+	public abstract float a();
 	
 	/**
 	 * 
 	 */
-	public float a();
-	
-	/**
-	 * *
-	 */
-	 float func_739();
+	public abstract float b();
 	
 	/**
 	 * 
 	 */
-	public float b();
-	
-	/**
-	 * *
-	 */
-	 java.lang.String func_737();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c();
+	public abstract java.lang.String c();
 
 }

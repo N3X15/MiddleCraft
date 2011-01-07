@@ -2,15 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IWorldAccess{
+public abstract interface IWorldAccess {
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * *
-	 */
-	 void func_683(int a, int b, int c);
 	
 	/**
 	 * 
@@ -51,11 +46,6 @@ public abstract interface interface IWorldAccess{
 	 * 
 	 */
 	public abstract void a(java.lang.String a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_688(Entity a);
 	
 	/**
 	 * 

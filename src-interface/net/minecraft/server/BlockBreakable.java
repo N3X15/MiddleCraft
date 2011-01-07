@@ -2,21 +2,20 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockBreakable extends Block{
+public abstract class BlockBreakable extends Block {
 	// FIELDS
-	private boolean a;
-	 ()V setChunkModified;
+	private boolean field_6084;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
 
 }

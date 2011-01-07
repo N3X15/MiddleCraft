@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MaterialLiquid extends Material{
+public abstract class MaterialLiquid extends Material {
 	// FIELDS
 	
 	// METHODS
@@ -10,21 +10,16 @@ public abstract class MaterialLiquid extends Material{
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean c();
-	
-	/**
-	 * Returns if blocks of these materials are liquids.
-	 */
-	 boolean getIsLiquid();
+	public abstract boolean c();
 	
 	/**
 	 * 
 	 */
-	public boolean d();
+	public abstract boolean d();
 
 }

@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MinecraftException extends java.lang.RuntimeException{
+public abstract class MinecraftException extends java.lang.RuntimeException {
 	// FIELDS
 	
 	// METHODS

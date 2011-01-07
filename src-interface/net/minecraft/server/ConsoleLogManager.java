@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ConsoleLogManager{
+public abstract class ConsoleLogManager {
 	// FIELDS
-	public static java.util.logging.Logger a;
-	 ()V setChunkModified;
+	public static java.util.logging.Logger logger;
 	
 	// METHODS
 	
 	/**
-	 * Initialises the console logger.
-	 */
-	 void init();
-	
-	/**
 	 * 
 	 */
-	public static void a();
+	public abstract static void a();
 
 }

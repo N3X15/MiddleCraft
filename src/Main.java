@@ -169,6 +169,9 @@ public class Main {
 				}
 				CtClass mcClass = mcClassPool.get(className);
 				ci.setClassModifiers(mcClass.getModifiers());
+				if(!Patches.isMinecraftPackage(mcClass.getPackageName()))
+					continue;
+				
 				//ci.clearAllDefs(); // Remapping.
 				for(CtField fld : mcClass.getDeclaredFields()) {
 					MCFieldInfo f = ci.getField(fld.getName());
@@ -177,6 +180,14 @@ public class Main {
 						Mappings.addObfuscatedFieldDefinition(className, fld.getName(), fld.getType().getName());
 						f = ci.getField(fld.getName());
 					}
+					if(f.type==null)
+						f.type=fld.getType().getName();
+					
+					if(!f.type.equals(fld.getType().getName())) {
+						f.type=fld.getType().getName();
+						l.info(f.name+" corrected to use the type "+f.type+".");
+					}
+					
 					f.setModifiers(fld.getModifiers());
 					try {
 						ci.setField(f);
@@ -191,6 +202,7 @@ public class Main {
 						Mappings.addObfuscatedMethodDefinition(className, method.getName(), method.getSignature(), "");
 						m=ci.getMethod(method.getName(),method.getSignature());
 					}
+					
 					m.setModifiers(method.getModifiers());
 					try {
 						ci.setMethod(m);
@@ -205,8 +217,9 @@ public class Main {
 				dir.mkdirs();
 				File f = new File(dir, newClassName+".java");
 				Utils.putFileContents(f, ci.toJava(mcClassPool,"net.minecraft.server"));
-				l.info(newClassName);
+				//l.info(newClassName);
 			}
 		}
+		Mappings.save();
 	}
 }

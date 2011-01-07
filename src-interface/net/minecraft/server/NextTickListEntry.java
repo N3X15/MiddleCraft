@@ -2,61 +2,41 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NextTickListEntry{
+public abstract class NextTickListEntry {
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public long e;
-	private static ()V setChunkModified;
-	private long g;
+	public int xCoord;
+	public int yCoord;
+	public int zCoord;
+	public int blockID;
+	public long scheduledTime;
+	private static long nextTickEntryID;
+	private long tickEntryID;
 	
 	// METHODS
 	
 	/**
-	 * Compares this tick entry to another tick entry for sorting purposes. Compared first based on the scheduled time and second based on tickEntryID.
+	 * 
 	 */
-	 int comparer(NextTickListEntry a);
+	public abstract NextTickListEntry a(long a);
 	
 	/**
 	 * 
 	 */
-	public NextTickListEntry a(long a);
+	public abstract int a(NextTickListEntry a);
 	
 	/**
 	 * 
 	 */
-	public int a(NextTickListEntry a);
-	
-	/**
-	 * *
-	 */
-	 int cv_compareTo(java.lang.Object a);
+	public abstract volatile int compareTo(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public volatile int compareTo(java.lang.Object a);
-	
-	/**
-	 * *
-	 */
-	 boolean cv_equals(java.lang.Object a);
+	public abstract boolean equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public boolean equals(java.lang.Object a);
-	
-	/**
-	 * *
-	 */
-	 int cv_hashCode();
-	
-	/**
-	 * 
-	 */
-	public int hashCode();
+	public abstract int hashCode();
 
 }

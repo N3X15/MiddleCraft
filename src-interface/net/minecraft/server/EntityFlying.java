@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFlying extends EntityLiving{
+public abstract class EntityFlying extends EntityLiving {
 	// FIELDS
 	
 	// METHODS
@@ -10,26 +10,16 @@ public abstract class EntityFlying extends EntityLiving{
 	/**
 	 * 
 	 */
-	protected void a(float a);
-	
-	/**
-	 * *
-	 */
-	 void func_148(float a, float b);
+	protected abstract void a(float a);
 	
 	/**
 	 * 
 	 */
-	public void c(float a, float b);
-	
-	/**
-	 * returns true if this entity is by a ladder, false otherwise
-	 */
-	 boolean isByLadder();
+	public abstract void c(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public boolean d_();
+	public abstract boolean d_();
 
 }

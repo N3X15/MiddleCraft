@@ -2,17 +2,11 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTBase{
+public abstract class NBTBase {
 	// FIELDS
-	private java.lang.String a;
-	 ()V setChunkModified;
+	private java.lang.String key;
 	
 	// METHODS
-	
-	/**
-	 * Creates and returns a new tag of the specified type, or null if invalid.
-	 */
-	 NBTBase createTagOfType(byte a);
 	
 	/**
 	 * 
@@ -22,56 +16,31 @@ public abstract class NBTBase{
 	/**
 	 * 
 	 */
-	public static NBTBase a(byte a);
+	public abstract static NBTBase a(byte a);
 	
 	/**
 	 * 
 	 */
-	public static void a(NBTBase a, java.io.DataOutput b);
+	public abstract static void a(NBTBase a, java.io.DataOutput b);
 	
 	/**
 	 * 
 	 */
-	abstract void a(java.io.DataInput a);
+	public abstract static java.lang.String b(byte a);
 	
 	/**
 	 * 
 	 */
-	abstract void a(java.io.DataOutput a);
-	
-	/**
-	 * Returns the string name of a tag with the specified type, or 'UNKNOWN' if invalid.
-	 */
-	 java.lang.String getTagName(byte a);
+	public abstract static NBTBase b(java.io.DataInput a);
 	
 	/**
 	 * 
 	 */
-	public static java.lang.String b(byte a);
+	public abstract java.lang.String c();
 	
 	/**
 	 * 
 	 */
-	public static NBTBase b(java.io.DataInput a);
-	
-	/**
-	 * Gets the key corresponding to the tag, or an empty string if none set.
-	 */
-	 java.lang.String getKey();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c();
-	
-	/**
-	 * Sets the key for this tag and returns this for convenience.
-	 */
-	 NBTBase setKey(java.lang.String a);
-	
-	/**
-	 * 
-	 */
-	public NBTBase m(java.lang.String a);
+	public abstract NBTBase m(java.lang.String a);
 
 }

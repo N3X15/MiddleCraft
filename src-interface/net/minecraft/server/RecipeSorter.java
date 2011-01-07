@@ -2,31 +2,20 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class RecipeSorter{
+abstract class RecipeSorter {
 	// FIELDS
-	final CraftingManager a;
-	 ()V setChunkModified;
+	final CraftingManager field_20108;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 int func_20107(CraftingRecipe a, CraftingRecipe b);
+	public abstract int a(CraftingRecipe a, CraftingRecipe b);
 	
 	/**
 	 * 
 	 */
-	public int a(CraftingRecipe a, CraftingRecipe b);
-	
-	/**
-	 * *
-	 */
-	 int kd_compare(java.lang.Object a, java.lang.Object b);
-	
-	/**
-	 * 
-	 */
-	public volatile int compare(java.lang.Object a, java.lang.Object b);
+	public abstract volatile int compare(java.lang.Object a, java.lang.Object b);
 
 }

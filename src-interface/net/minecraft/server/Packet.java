@@ -2,20 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet{
+public abstract class Packet {
 	// FIELDS
-	private static java.util.Map a;
-	private static java.util.Map b;
-	 ()V setChunkModified;
-	public final long j;
-	public boolean k;
+	private static java.util.Map packetIdToClassMap;
+	private static java.util.Map packetClassToIdMap;
+	public final long field_20009;
+	public boolean isChunkDataPacket;
 	
 	// METHODS
-	
-	/**
-	 * Adds a two way mapping between the packet ID and packet class.
-	 */
-	 void addIdClassMapping(int a, java.lang.Class b);
 	
 	/**
 	 * 
@@ -25,12 +19,12 @@ public abstract class Packet{
 	/**
 	 * 
 	 */
-	public static Packet a(int a);
+	public abstract static Packet a(int a);
 	
 	/**
 	 * 
 	 */
-	static void a(int a, java.lang.Class b);
+	abstract static void a(int a, java.lang.Class b);
 	
 	/**
 	 * 
@@ -50,21 +44,16 @@ public abstract class Packet{
 	/**
 	 * 
 	 */
-	public static void a(Packet a, java.io.DataOutputStream b);
-	
-	/**
-	 * Returns the ID of this packet.
-	 */
-	 int getPacketId();
+	public abstract static void a(Packet a, java.io.DataOutputStream b);
 	
 	/**
 	 * 
 	 */
-	public final int b();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public static Packet b(java.io.DataInputStream a);
+	public abstract static Packet b(java.io.DataInputStream a);
 
 }

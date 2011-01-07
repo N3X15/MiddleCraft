@@ -2,66 +2,45 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneOre extends Block{
+public abstract class BlockRedstoneOre extends Block {
 	// FIELDS
-	private boolean a;
-	 ()V setChunkModified;
+	private boolean field_665;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, Entity e);
+	public abstract void b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, EntityPlayer e);
-	
-	/**
-	 * *
-	 */
-	 void func_321(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_320(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void h(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
 
 }

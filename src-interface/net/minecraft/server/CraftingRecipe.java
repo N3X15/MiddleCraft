@@ -2,45 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class CraftingRecipe{
+public abstract class CraftingRecipe {
 	// FIELDS
-	public final int a;
-	private int b;
-	private int c;
-	private int[] d;
-	private ItemStack e;
-	 ()V setChunkModified;
+	public final int field_20168;
+	private int field_20167;
+	private int field_20171;
+	private int[] field_20170;
+	private ItemStack field_20169;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean func_20164(int[] a);
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract boolean a(int[] a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int[] a);
-	
-	/**
-	 * 
-	 */
-	private boolean a(int[] a, int b, int c, boolean d);
-	
-	/**
-	 * *
-	 */
-	 ItemStack func_20163(int[] a);
-	
-	/**
-	 * 
-	 */
-	public ItemStack b(int[] a);
+	public abstract ItemStack b(int[] a);
 
 }

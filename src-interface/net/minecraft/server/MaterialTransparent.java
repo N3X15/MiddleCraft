@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MaterialTransparent extends Material{
+public abstract class MaterialTransparent extends Material {
 	// FIELDS
 	
 	// METHODS
@@ -10,16 +10,16 @@ public abstract class MaterialTransparent extends Material{
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean b();
+	public abstract boolean b();
 	
 	/**
 	 * 
 	 */
-	public boolean c();
+	public abstract boolean c();
 
 }

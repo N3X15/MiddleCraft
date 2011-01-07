@@ -2,51 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class InventoryCraftResult{
+public abstract class InventoryCraftResult {
 	// FIELDS
-	private il[] a;
-	 ()V setChunkModified;
+	private il[] field_20071;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a);
+	public abstract ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b);
+	public abstract ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, ItemStack b);
+	public abstract void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public boolean a_(EntityPlayer a);
+	public abstract boolean a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public java.lang.String b();
+	public abstract java.lang.String b();
 	
 	/**
 	 * 
 	 */
-	public int c();
+	public abstract int c();
 	
 	/**
 	 * 
 	 */
-	public void d();
+	public abstract void d();
 
 }

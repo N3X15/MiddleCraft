@@ -2,69 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySpider extends EntityMobs{
+public abstract class EntitySpider extends EntityMobs {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_157(Entity a, float b);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	protected abstract void a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	protected void a(Entity a, float b);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	protected abstract java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	protected abstract int g();
 	
 	/**
 	 * 
 	 */
-	protected int g();
-	
-	/**
-	 * *
-	 */
-	 double func_130();
+	public abstract double j();
 	
 	/**
 	 * 
 	 */
-	public double j();
-	
-	/**
-	 * *
-	 */
-	 Entity func_158();
-	
-	/**
-	 * 
-	 */
-	protected Entity k();
+	protected abstract Entity k();
 
 }

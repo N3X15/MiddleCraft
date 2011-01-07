@@ -2,228 +2,153 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPlayerMP extends EntityPlayer{
+public abstract class EntityPlayerMP extends EntityPlayer {
 	// FIELDS
-	public NetServerHandler a;
-	public java.util.Set aj;
-	public double ak;
-	public boolean al;
-	public boolean am;
-	public net.minecraft.server.MinecraftServer b;
-	private int bE;
-	private int bF;
-	private int[] bG;
-	private int bH;
-	public ItemInWorldManager c;
-	public double d;
-	public double e;
-	public ()V setChunkModified;
+	public NetServerHandler field_421;
+	public java.util.Set field_420;
+	public double field_418;
+	public boolean field_12012;
+	public boolean field_20064;
+	public net.minecraft.server.MinecraftServer mcServer;
+	private int field_9156;
+	private int field_15004;
+	private int[] field_20066;
+	private int field_20065;
+	public ItemInWorldManager field_425;
+	public double field_9155;
+	public double field_9154;
+	public java.util.List loadedChunks;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int[] E();
-	
-	/**
-	 * *
-	 */
-	 void func_175();
+	public abstract int[] E();
 	
 	/**
 	 * 
 	 */
-	public void F();
-	
-	/**
-	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
-	 */
-	 void onLivingUpdate();
+	public abstract void F();
 	
 	/**
 	 * 
 	 */
-	public void G();
-	
-	/**
-	 * *
-	 */
-	 void func_168();
+	public abstract void G();
 	
 	/**
 	 * 
 	 */
-	public void H();
-	
-	/**
-	 * *
-	 */
-	 void func_20043();
+	public abstract void H();
 	
 	/**
 	 * 
 	 */
-	public void I();
-	
-	/**
-	 * *
-	 */
-	 void func_20058();
+	public abstract void I();
 	
 	/**
 	 * 
 	 */
-	public void J();
-	
-	/**
-	 * *
-	 */
-	 void func_20059();
+	public abstract void J();
 	
 	/**
 	 * 
 	 */
-	public void K();
-	
-	/**
-	 * *
-	 */
-	 void func_20060();
+	public abstract void K();
 	
 	/**
 	 * 
 	 */
-	private void R();
-	
-	/**
-	 * Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
-	 */
-	 void displayGUIFurnace(TileEntityFurnace a);
+	protected abstract void a(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	protected void a(double a, boolean b);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(CraftingInventoryCB a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	private void a(TileEntity a);
+	public abstract void a(CraftingInventoryCB a, int b, ItemStack c);
 	
 	/**
 	 * 
 	 */
-	public void a(CraftingInventoryCB a, int b, int c);
+	public abstract void a(CraftingInventoryCB a, java.util.List b);
 	
 	/**
 	 * 
 	 */
-	public void a(CraftingInventoryCB a, int b, ItemStack c);
+	public abstract void a(TileEntityFurnace a);
 	
 	/**
 	 * 
 	 */
-	public void a(CraftingInventoryCB a, java.util.List b);
+	public abstract boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public void a(TileEntityFurnace a);
+	public abstract void a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b);
+	public abstract void a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a);
+	public abstract void b(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a);
-	
-	/**
-	 * *
-	 */
-	 void func_9153(double a, boolean b);
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public void b(double a, boolean b);
+	public abstract void c(int a);
 	
 	/**
 	 * 
 	 */
-	public void b_();
-	
-	/**
-	 * *
-	 */
-	 void func_163(Entity a, int b);
+	public abstract void c(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public void c(int a);
+	public abstract void e(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void c(Entity a, int b);
+	public abstract void f(Entity a);
 	
 	/**
 	 * 
 	 */
-	private int c(ItemStack a);
+	public abstract void k();
 	
 	/**
 	 * 
 	 */
-	public void e(Entity a);
-	
-	/**
-	 * Called when the mob's health reaches 0.
-	 */
-	 void onDeath(Entity a);
+	public abstract boolean p();
 	
 	/**
 	 * 
 	 */
-	public void f(Entity a);
-	
-	/**
-	 * *
-	 */
-	 void func_20057();
-	
-	/**
-	 * 
-	 */
-	public void k();
-	
-	/**
-	 * 
-	 */
-	public boolean p();
-	
-	/**
-	 * 
-	 */
-	public float s();
+	public abstract float s();
 
 }

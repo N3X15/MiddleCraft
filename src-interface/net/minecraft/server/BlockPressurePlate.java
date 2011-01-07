@@ -2,86 +2,75 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockPressurePlate extends Block{
+public abstract class BlockPressurePlate extends Block {
 	// FIELDS
-	private EnumMobType a;
-	 ()V setChunkModified;
+	private EnumMobType triggerMobType;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, Entity e);
+	public abstract void a(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d);
+	public abstract void a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean c();
+	public abstract boolean c();
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean d(World a, int b, int c, int d, int e);
+	public abstract boolean d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_318(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

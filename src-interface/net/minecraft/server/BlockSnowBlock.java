@@ -2,29 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSnowBlock extends Block{
+public abstract class BlockSnowBlock extends Block {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * 
 	 */
-	 int idDropped(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a);
+	public abstract int a(java.util.Random a);
 
 }

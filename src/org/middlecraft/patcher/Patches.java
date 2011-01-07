@@ -327,7 +327,7 @@ public class Patches {
 	 * @param packageName Name of the package.
 	 * @return
 	 */
-	private static boolean isMinecraftPackage(String packageName) {
+	public static boolean isMinecraftPackage(String packageName) {
 		return packageName==null || packageName.equals("") || packageName.equals("net.minecraft.server");
 	}
 

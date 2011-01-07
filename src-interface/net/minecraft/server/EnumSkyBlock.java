@@ -2,29 +2,23 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EnumSkyBlock extends java.lang.Enum{
+public abstract final class EnumSkyBlock extends java.lang.Enum {
 	// FIELDS
-	public static final EnumSkyBlock a;
-	public static final EnumSkyBlock b;
-	public final int c;
-	private static final eb[] d;
-	 ()V setChunkModified;
+	public static final EnumSkyBlock eb_Sky;
+	public static final EnumSkyBlock eb_Block;
+	public final int field_984;
+	private static final eb[] field_983;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static EnumSkyBlock valueOf(java.lang.String a);
-	
-	/**
-	 * *
-	 */
-	 eb[] eb_values();
+	public abstract static EnumSkyBlock valueOf(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public static eb[] values();
+	public abstract static eb[] values();
 
 }

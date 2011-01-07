@@ -2,25 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface ICommandListener{
+public abstract interface ICommandListener {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Logs the message with a level of INFO.
-	 */
-	 void log(java.lang.String a);
-	
-	/**
 	 * 
 	 */
 	public abstract void b(java.lang.String a);
-	
-	/**
-	 * Gets the players username.
-	 */
-	 java.lang.String getUsername();
 	
 	/**
 	 * 

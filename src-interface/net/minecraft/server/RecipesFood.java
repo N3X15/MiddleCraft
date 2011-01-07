@@ -2,19 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class RecipesFood{
+public abstract class RecipesFood {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void func_20177(CraftingManager a);
-	
-	/**
 	 * 
 	 */
-	public void a(CraftingManager a);
+	public abstract void a(CraftingManager a);
 
 }

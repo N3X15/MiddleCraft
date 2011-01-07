@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract final class ConsoleLogFormatter extends java.util.logging.Formatter{
+abstract final class ConsoleLogFormatter extends java.util.logging.Formatter {
 	// FIELDS
-	private java.text.SimpleDateFormat a;
-	 ()V setChunkModified;
+	private java.text.SimpleDateFormat dateFormat;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 java.lang.String iw_format(java.util.logging.LogRecord a);
-	
-	/**
 	 * 
 	 */
-	public java.lang.String format(java.util.logging.LogRecord a);
+	public abstract java.lang.String format(java.util.logging.LogRecord a);
 
 }

@@ -2,120 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MCHashTable{
+public abstract class MCHashTable {
 	// FIELDS
-	private transient iv[] a;
-	private transient int b;
-	private int c;
-	private final float d;
-	private transient volatile int e;
-	 ()V setChunkModified;
+	private transient iv[] slots;
+	private transient int count;
+	private int threshold;
+	private final float growFactor;
+	private transient volatile int versionStamp;
 	
 	// METHODS
 	
 	/**
-	 * Adds a key and associated value to this map
+	 * 
 	 */
-	 void addKey(int a, java.lang.Object b);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract java.lang.Object a(int a);
 	
 	/**
 	 * 
 	 */
-	public java.lang.Object a(int a);
+	private abstract static int a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	private static int a(int a, int b);
+	public abstract void a(int a, java.lang.Object b);
 	
 	/**
 	 * 
 	 */
-	private void a(int a, int b, java.lang.Object c, int d);
+	public abstract boolean b(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, java.lang.Object b);
+	public abstract java.lang.Object d(int a);
 	
 	/**
 	 * 
 	 */
-	private void a(iv[] a);
-	
-	/**
-	 * Returns true if this hash table contains the specified item.
-	 */
-	 boolean containsItem(int a);
+	abstract static int f(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(int a);
-	
-	/**
-	 * Returns the internal entry for a key
-	 */
-	 HashEntry lookupEntry(int a);
-	
-	/**
-	 * 
-	 */
-	final HashEntry c(int a);
-	
-	/**
-	 * Removes the specified object from the map and returns it
-	 */
-	 java.lang.Object removeObject(int a);
-	
-	/**
-	 * 
-	 */
-	public java.lang.Object d(int a);
-	
-	/**
-	 * Removes the specified entry from the map and returns it
-	 */
-	 HashEntry removeEntry(int a);
-	
-	/**
-	 * 
-	 */
-	final HashEntry e(int a);
-	
-	/**
-	 * Returns the hash code for a key
-	 */
-	 int getHash(int a);
-	
-	/**
-	 * 
-	 */
-	static int f(int a);
-	
-	/**
-	 * Makes the passed in integer suitable for hashing by a number of shifts
-	 */
-	 int computeHash(int a);
-	
-	/**
-	 * 
-	 */
-	private static int g(int a);
-	
-	/**
-	 * Increases the number of hash slots
-	 */
-	 void grow(int a);
-	
-	/**
-	 * 
-	 */
-	private void h(int a);
+	private abstract static int g(int a);
 
 }

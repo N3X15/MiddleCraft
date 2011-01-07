@@ -2,139 +2,108 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class ItemStack{
+public abstract final class ItemStack {
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	 ()V setChunkModified;
+	public int stackSize;
+	public int animationsToGo;
+	public int itemID;
+	public int itemDamage;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 ItemStack func_20117(ItemStack a);
+	public abstract Item a();
 	
 	/**
 	 * 
 	 */
-	public Item a();
+	public abstract ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a);
+	public abstract void a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, int d);
+	public abstract NBTTagCompound a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public NBTTagCompound a(NBTTagCompound a);
+	public abstract int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public int a(Entity a);
+	public abstract ItemStack a(World a, EntityPlayer b);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(World a, EntityPlayer b);
+	public abstract void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a);
+	public abstract boolean a(EntityPlayer a, World b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a, World b, int c, int d, int e, int f);
+	public abstract float a(Block a);
 	
 	/**
 	 * 
 	 */
-	public float a(Block a);
+	public abstract static ItemStack a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public static ItemStack a(ItemStack a);
+	public abstract static boolean a(ItemStack a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public static boolean a(ItemStack a, ItemStack b);
+	public abstract void a(EntityLiving a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityLiving a);
-	
-	/**
-	 * *
-	 */
-	 boolean canHarvestBlock(Block a);
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract void b(int a);
 	
 	/**
 	 * 
 	 */
-	public void b(int a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract boolean b(Block a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(Block a);
+	public abstract int c();
 	
 	/**
 	 * 
 	 */
-	private boolean b(ItemStack a);
-	
-	/**
-	 * Returns the max damage an item in the stack can take.
-	 */
-	 int getMaxDamage();
+	public abstract ItemStack d();
 	
 	/**
 	 * 
 	 */
-	public int c();
-	
-	/**
-	 * Returns a new stack with the same properties.
-	 */
-	 ItemStack copy();
-	
-	/**
-	 * 
-	 */
-	public ItemStack d();
-	
-	/**
-	 * *
-	 */
-	 java.lang.String il_toString();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString();
+	public abstract java.lang.String toString();
 
 }

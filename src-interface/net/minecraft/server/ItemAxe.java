@@ -2,10 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemAxe extends ItemTool{
+public abstract class ItemAxe extends ItemTool {
 	// FIELDS
-	private static gv[] bb;
-	 ()V setChunkModified;
+	private static gv[] blocksGoodAgainst;
 	
 	// METHODS
 

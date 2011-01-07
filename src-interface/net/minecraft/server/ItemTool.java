@@ -2,34 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemTool extends Item{
+public abstract class ItemTool extends Item {
 	// FIELDS
-	protected int a;
-	private gv[] bb;
-	private float bc;
-	private int bd;
-	 ()V setChunkModified;
+	protected int field_262;
+	private gv[] blocksEffectiveAgainst;
+	private float field_264;
+	private int field_263;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(Entity a);
+	public abstract int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, int b, int c, int d, int e);
+	public abstract void a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public float a(ItemStack a, Block b);
+	public abstract float a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, EntityLiving b);
+	public abstract void a(ItemStack a, EntityLiving b);
 
 }

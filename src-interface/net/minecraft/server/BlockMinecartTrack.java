@@ -2,64 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockMinecartTrack extends Block{
+public abstract class BlockMinecartTrack extends Block {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
+	 * 
 	 */
-	 MovingObjectPosition collisionRayTrace(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract void a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_4038(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

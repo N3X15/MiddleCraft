@@ -39,37 +39,45 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import javassist.bytecode.Descriptor;
 
-
 /**
  * @author Rob
- *
+ * 
  */
 public class MCMethodInfo {
+	static int currentSeargeIndex = 0;
 	static Logger l = Logger.getLogger("Middlecraft");
 	public String realName;
 	public String signature;
 	public String parentClass;
-	public String name="";
-	public String description="";
-	public int modifiers=0;
-	private String searge;
-	public static final String[] header = new String[]{"Real Name","Signature","Parent Class","Readable Name","Description"};
-	public MCMethodInfo() {}
+	public String name = "";
+	public String description = "";
+	public int modifiers = 0;
+	public String searge = "";
+	private int seargeIndex;
+	public static final String[] header = new String[] { "Real Name",
+			"Signature", "Parent Class", "Readable Name", "Description" };
+
+	public MCMethodInfo() {
+	}
+
 	public MCMethodInfo(List<String> line) {
-		realName=line.get(0);
-		signature=line.get(1);
-		parentClass=line.get(2);
-		name=line.get(3);
-		
-		if(name.equals("*"))
-			name="";
+		realName = line.get(0);
+		signature = line.get(1);
+		parentClass = line.get(2);
+		name = line.get(3);
+
+		if (name.equals("*"))
+			name = "";
 
 		try {
-			description=line.get(4);
-		} catch(IndexOutOfBoundsException e) {
-			l.warning(String.format("Could not retrieve description for %s.%s%s.",parentClass,name,signature));
+			description = line.get(4);
+		} catch (IndexOutOfBoundsException e) {
+			l.warning(String.format(
+					"Could not retrieve description for %s.%s%s.", parentClass,
+					name, signature));
 		}
 	}
+
 	public List<String> toList() {
 		List<String> list = new ArrayList<String>();
 		list.add(realName);
@@ -79,83 +87,104 @@ public class MCMethodInfo {
 		list.add(description);
 		return list;
 	}
-	public void setModifiers(int m) {
-		this.modifiers=m;
-	}
 
+	public void setModifiers(int m) {
+		this.modifiers = m;
+	}
 
 	public MCMethodInfo(Map<String, Object> y) {
 		/*
-	    harvestBlock:
-	      annotation: ''
-	      class: Block
-	      csv: harvestBlock
-	      descript: '*'
-	      forced: false
-	      full: harvestBlock
-	      full_final: harvestBlock
-	      index: '12007'
-	      known: true
-	      modified: false
-	      new_mod: false
-	      nick_mod: null
-	      notch: g
-	      notch_class: gv
-	      notch_pkg: ''
-	      notch_sig: (Lff;IIII)V
-	      old_mod: false
-	      package: net/minecraft/server
-	      s_root: func_12007
-	      searge: func_12007_g
-	      time_mod: null
-	    */
-		description	=(String)y.get("descript");
-		name		=(String)y.get("csv");
-		searge		=(String)y.get("searge");
-		realName	=(String)y.get("notch");
-		signature	=(String)y.get("notch_sig");
-		parentClass	=(String)y.get("notch_class");
-		if(y.containsKey("modifiers"))
-			modifiers=(Integer)y.get("modifiers");
+		 * harvestBlock: annotation: '' class: Block csv: harvestBlock descript:
+		 * '*' forced: false full: harvestBlock full_final: harvestBlock index:
+		 * '12007' known: true modified: false new_mod: false nick_mod: null
+		 * notch: g notch_class: gv notch_pkg: '' notch_sig: (Lff;IIII)V
+		 * old_mod: false package: net/minecraft/server s_root: func_12007
+		 * searge: func_12007_g time_mod: null
+		 */
+		description = (String) y.get("descript");
+		name = (String) y.get("csv");
+		searge = (String) y.get("searge");
+		parseSearge();
+		realName = (String) y.get("notch");
+		signature = (String) y.get("notch_sig");
+		parentClass = (String) y.get("notch_class");
+		if (y.containsKey("modifiers"))
+			modifiers = (Integer) y.get("modifiers");
 	}
-	
-	public Map<String,Object> toMap() {
-		Map<String,Object> m = new HashMap<String,Object>();
 
-		m.put("descript",description);
-		m.put("csv",name);
-		m.put("searge",searge);
-		m.put("notch",realName);
-		m.put("notch_sig",signature);
-		m.put("notch_class",parentClass);
-		m.put("modifiers",modifiers);
-		
+	private void parseSearge() {
+		if (searge.equals(""))
+			return;
+		// func_0_a
+		try {
+			seargeIndex = Integer.parseInt(searge.split("_")[1]);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			seargeIndex = currentSeargeIndex++;
+			//l.severe(searge);
+		}
+	}
+
+	public Map<String, Object> toMap() {
+		Map<String, Object> m = new HashMap<String, Object>();
+
+		if (searge.equals(""))
+			searge = "MIDDLECRAFT_func_" + (currentSeargeIndex) + "_"
+					+ this.realName;
+		m.put("descript", description);
+		m.put("csv", name);
+		m.put("searge", searge);
+		m.put("notch", realName);
+		m.put("notch_sig", signature);
+		m.put("notch_class", parentClass);
+		m.put("modifiers", modifiers);
+
 		return m;
 	}
+
 	public String toString() {
 		String oName = name;
-		if(name.isEmpty())
-			oName="*";
-		return String.format("%s,%s,%s,%s,%s",realName,signature,parentClass,oName,description);
+		if (name.isEmpty())
+			oName = "*";
+		return String.format("%s,%s,%s,%s,%s", realName, signature,
+				parentClass, oName, description);
 	}
+
 	/**
 	 * @return
 	 */
 	public String toIndex() {
-		return String.format("%s %s",realName, signature);
+		return String.format("%s %s", realName, signature);
 	}
 
 	public String toAbstractJava(ClassPool cp) {
 		try {
-			String returnName = Descriptor.getReturnType(signature, cp).getName();
+			String returnName = Descriptor.getReturnType(signature, cp)
+					.getName();
 			int i = 0;
 			List<String> paramDefs = new ArrayList<String>();
-			for(CtClass c : Descriptor.getParameterTypes(signature, cp)) {
+			for (CtClass c : Descriptor.getParameterTypes(signature, cp)) {
 				String type = Mappings.getNewClassName(c.getName());
-				paramDefs.add(String.format("%s %s",type,(char)(i+97)));
+				paramDefs.add(String.format("%s %s", type, (char) (i + 97)));
 				i++;
 			}
-			return String.format("\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s);",description, Modifier.toString(modifiers),Mappings.getNewClassName(returnName), (name.isEmpty()) ? realName:name, Utils.join(paramDefs,", "));
+			int mod = modifiers;
+			if (!Modifier.isPublic(mod) && !Modifier.isProtected(mod)
+					&& !Modifier.isStatic(mod))
+				return "";
+
+			// Remove final flag, if required.
+			if (Modifier.isFinal(mod))
+				mod &= ~Modifier.FINAL;
+
+			if (!Modifier.isAbstract(mod))
+				mod |= Modifier.ABSTRACT;
+
+			return String.format(
+					"\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s);",
+					description, Modifier.toString(mod), Mappings
+							.getNewClassName(returnName),
+					(name.isEmpty()) ? realName : name, Utils.join(paramDefs,
+							", "));
 		} catch (NotFoundException e) {
 			return "";
 		}

@@ -2,54 +2,39 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldProviderHell extends WorldProvider{
+public abstract class WorldProviderHell extends WorldProvider {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 float calculateCelestialAngle(long a, float b);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract boolean a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b);
+	public abstract float a(long a, float b);
 	
 	/**
 	 * 
 	 */
-	public float a(long a, float b);
+	public abstract IChunkLoader a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	public IChunkLoader a(java.io.File a);
-	
-	/**
-	 * Creates the light to brightness table
-	 */
-	 void generateLightBrightnessTable();
+	protected abstract void b();
 	
 	/**
 	 * 
 	 */
-	protected void b();
-	
-	/**
-	 * Returns the chunk provider back for the world provider
-	 */
-	 IChunkProvider getChunkProvider();
-	
-	/**
-	 * 
-	 */
-	public IChunkProvider c();
+	public abstract IChunkProvider c();
 
 }

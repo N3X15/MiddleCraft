@@ -2,79 +2,69 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MobSpawnerBase{
+public abstract class MobSpawnerBase {
 	// FIELDS
-	public static final MobSpawnerBase a;
-	public static final MobSpawnerBase b;
-	public static final MobSpawnerBase c;
-	public static final MobSpawnerBase d;
-	public static final MobSpawnerBase e;
-	public static final ()V setChunkModified;
-	public static final MobSpawnerBase g;
-	public static final MobSpawnerBase h;
-	public static final MobSpawnerBase i;
-	public static final MobSpawnerBase j;
-	public static final MobSpawnerBase k;
-	public static final MobSpawnerBase l;
-	public java.lang.String m;
-	public int n;
-	public byte o;
-	public byte p;
-	public int q;
-	protected java.lang.Class[] r;
-	protected java.lang.Class[] s;
-	private static jq[] t;
+	public static final MobSpawnerBase rainforest;
+	public static final MobSpawnerBase swampland;
+	public static final MobSpawnerBase seasonalForest;
+	public static final MobSpawnerBase forest;
+	public static final MobSpawnerBase savanna;
+	public static final MobSpawnerBase shrubland;
+	public static final MobSpawnerBase taiga;
+	public static final MobSpawnerBase desert;
+	public static final MobSpawnerBase plains;
+	public static final MobSpawnerBase iceDesert;
+	public static final MobSpawnerBase tundra;
+	public static final MobSpawnerBase hell;
+	public java.lang.String biomeName;
+	public int field_6162;
+	public byte topBlock;
+	public byte fillerBlock;
+	public int field_6161;
+	protected java.lang.Class[] biomeMonsters;
+	protected java.lang.Class[] biomeCreatures;
+	private static jq[] biomeLookupTable;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 MobSpawnerBase func_4080(int a);
+	public abstract static void a();
 	
 	/**
 	 * 
 	 */
-	public static void a();
+	public abstract static MobSpawnerBase a(double a, double b);
 	
 	/**
 	 * 
 	 */
-	public static MobSpawnerBase a(double a, double b);
+	public abstract static MobSpawnerBase a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public static MobSpawnerBase a(float a, float b);
+	protected abstract MobSpawnerBase a(int a);
 	
 	/**
 	 * 
 	 */
-	protected MobSpawnerBase a(int a);
+	protected abstract MobSpawnerBase a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	protected MobSpawnerBase a(java.lang.String a);
+	public abstract java.lang.Class[] a(EnumCreatureType a);
 	
 	/**
 	 * 
 	 */
-	public java.lang.Class[] a(EnumCreatureType a);
-	
-	/**
-	 * *
-	 */
-	 MobSpawnerBase func_4079(int a);
+	protected abstract MobSpawnerBase b();
 	
 	/**
 	 * 
 	 */
-	protected MobSpawnerBase b();
-	
-	/**
-	 * 
-	 */
-	protected MobSpawnerBase b(int a);
+	protected abstract MobSpawnerBase b(int a);
 
 }

@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSapling extends BlockFlower{
+public abstract class BlockSapling extends BlockFlower {
 	// FIELDS
 	
 	// METHODS
@@ -10,6 +10,6 @@ public abstract class BlockSapling extends BlockFlower{
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 
 }

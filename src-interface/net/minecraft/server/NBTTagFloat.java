@@ -2,36 +2,20 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagFloat extends NBTBase{
+public abstract class NBTTagFloat extends NBTBase {
 	// FIELDS
-	public float a;
-	 ()V setChunkModified;
+	public float floatValue;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public byte a();
+	public abstract byte a();
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataInput a);
-	
-	/**
-	 * 
-	 */
-	 void a(java.io.DataOutput a);
-	
-	/**
-	 * *
-	 */
-	 java.lang.String q_toString();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString();
+	public abstract java.lang.String toString();
 
 }

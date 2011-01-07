@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSaddle extends Item{
+public abstract class ItemSaddle extends Item {
 	// FIELDS
 	
 	// METHODS
@@ -10,16 +10,11 @@ public abstract class ItemSaddle extends Item{
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, EntityLiving b);
-	
-	/**
-	 * *
-	 */
-	 void func_9202(ItemStack a, EntityLiving b);
+	public abstract void a(ItemStack a, EntityLiving b);
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a, EntityLiving b);
+	public abstract void b(ItemStack a, EntityLiving b);
 
 }

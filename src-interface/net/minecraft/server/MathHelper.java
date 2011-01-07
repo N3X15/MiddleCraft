@@ -2,76 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MathHelper{
+public abstract class MathHelper {
 	// FIELDS
-	private static float[] a;
-	 ()V setChunkModified;
+	private static float[] field_886;
 	
 	// METHODS
 	
 	/**
-	 * Maximum of the absolute value of two numbers.
+	 * 
 	 */
-	 double abs_max(double a, double b);
+	public abstract static float a(double a);
 	
 	/**
 	 * 
 	 */
-	public static final float a(double a);
+	public abstract static double a(double a, double b);
 	
 	/**
 	 * 
 	 */
-	public static double a(double a, double b);
+	public abstract static float a(float a);
 	
 	/**
 	 * 
 	 */
-	public static final float a(float a);
-	
-	/**
-	 * cos looked up in the sin table with the appropriate offset
-	 */
-	 float cos(float a);
+	public abstract static int b(double a);
 	
 	/**
 	 * 
 	 */
-	public static int b(double a);
+	public abstract static float b(float a);
 	
 	/**
 	 * 
 	 */
-	public static final float b(float a);
-	
-	/**
-	 * *
-	 */
-	 float sqrt_float(float a);
+	public abstract static float c(float a);
 	
 	/**
 	 * 
 	 */
-	public static final float c(float a);
-	
-	/**
-	 * Returns the greatest integer less than or equal to the float argument
-	 */
-	 int floor_float(float a);
+	public abstract static int d(float a);
 	
 	/**
 	 * 
 	 */
-	public static int d(float a);
-	
-	/**
-	 * *
-	 */
-	 float abs(float a);
-	
-	/**
-	 * 
-	 */
-	public static float e(float a);
+	public abstract static float e(float a);
 
 }

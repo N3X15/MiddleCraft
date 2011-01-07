@@ -2,33 +2,22 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkPosition{
+public abstract class ChunkPosition {
 	// FIELDS
-	public final int a;
-	public final int b;
-	public final int c;
-	 ()V setChunkModified;
+	public final int x;
+	public final int y;
+	public final int z;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean iq_equals(java.lang.Object a);
+	public abstract boolean equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public boolean equals(java.lang.Object a);
-	
-	/**
-	 * *
-	 */
-	 int iq_hashCode();
-	
-	/**
-	 * 
-	 */
-	public int hashCode();
+	public abstract int hashCode();
 
 }

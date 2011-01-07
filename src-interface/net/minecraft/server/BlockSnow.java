@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSnow extends Block{
+public abstract class BlockSnow extends Block {
 	// FIELDS
 	
 	// METHODS
@@ -10,56 +10,46 @@ public abstract class BlockSnow extends Block{
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 boolean func_275(World a, int b, int c, int d);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	private boolean g(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public void g(World a, int b, int c, int d, int e);
+	public abstract void g(World a, int b, int c, int d, int e);
 
 }

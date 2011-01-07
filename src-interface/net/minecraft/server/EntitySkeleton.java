@@ -2,51 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySkeleton extends EntityMobs{
+public abstract class EntitySkeleton extends EntityMobs {
 	// FIELDS
-	private static final ItemStack a;
-	 ()V setChunkModified;
+	private static final ItemStack field_4108;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void G();
+	public abstract void G();
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected void a(Entity a, float b);
+	protected abstract void a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d();
+	protected abstract java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	protected int g();
+	protected abstract int g();
 
 }

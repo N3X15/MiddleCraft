@@ -2,58 +2,43 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySnowball extends Entity{
+public abstract class EntitySnowball extends Entity {
 	// FIELDS
-	public int a;
-	private EntityLiving aj;
-	private int ak;
-	private int al;
-	private int b;
-	private int c;
-	private int d;
-	private int e;
-	private ()V setChunkModified;
+	public int field_458;
+	private EntityLiving field_455;
+	private int field_454;
+	private int field_453;
+	private int field_456;
+	private int field_461;
+	private int field_460;
+	private int field_459;
+	private boolean field_457;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_6141(double a, double b, double c, float d, float e);
+	public abstract void a(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, float d, float e);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
-	
-	/**
-	 * Called by a player entity when they collide with an entity
-	 */
-	 void onCollideWithPlayer(EntityPlayer a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayer a);
-	
-	/**
-	 * Called to update the entity's position/logic.
-	 */
-	 void onUpdate();
-	
-	/**
-	 * 
-	 */
-	public void b_();
+	public abstract void b_();
 
 }

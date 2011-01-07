@@ -2,234 +2,183 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPlayer extends EntityLiving{
+public abstract class EntityPlayer extends EntityLiving {
 	// FIELDS
 	private int a;
-	public double aA;
-	public double aB;
-	public double aC;
-	public double aD;
-	public EntityFish aE;
-	public InventoryPlayer an;
-	public CraftingInventoryCB ao;
-	public CraftingInventoryCB ap;
-	public byte aq;
-	public int ar;
-	public float as;
-	public float at;
-	public boolean au;
-	public int av;
-	public java.lang.String aw;
-	public int ax;
-	public double ay;
-	public double az;
-	 ()V setChunkModified;
+	public double field_20051;
+	public double field_20050;
+	public double field_20049;
+	public double field_20048;
+	public EntityFish field_6124;
+	public InventoryPlayer inventory;
+	public CraftingInventoryCB field_20053;
+	public CraftingInventoryCB field_20052;
+	public byte field_9152;
+	public int field_9151;
+	public float field_9150;
+	public float field_9149;
+	public boolean field_9148;
+	public int field_9147;
+	public java.lang.String username;
+	public int field_4110;
+	public double field_20047;
+	public double field_20046;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public double B();
+	public abstract double B();
 	
 	/**
 	 * 
 	 */
-	public void G();
+	public abstract void G();
 	
 	/**
 	 * 
 	 */
-	public void H();
+	public abstract void H();
 	
 	/**
 	 * 
 	 */
-	protected void I();
-	
-	/**
-	 * *
-	 */
-	 void func_161();
+	protected abstract void I();
 	
 	/**
 	 * 
 	 */
-	public void L();
-	
-	/**
-	 * *
-	 */
-	 ItemStack func_172();
+	public abstract void L();
 	
 	/**
 	 * 
 	 */
-	public ItemStack M();
-	
-	/**
-	 * *
-	 */
-	 void func_164();
+	public abstract ItemStack M();
 	
 	/**
 	 * 
 	 */
-	public void N();
-	
-	/**
-	 * *
-	 */
-	 void dropPlayerItemWithRandomChoice(ItemStack a, boolean b);
+	public abstract void N();
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(TileEntityFurnace a);
+	public abstract void a(TileEntityFurnace a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b);
+	public abstract boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public float a(Block a);
+	public abstract float a(Block a);
 	
 	/**
 	 * 
 	 */
-	protected void a(EntityItem a);
+	protected abstract void a(EntityItem a);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a);
+	public abstract void a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, boolean b);
+	public abstract void a(ItemStack a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public void a(TileEntitySign a);
+	public abstract void a(TileEntitySign a);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a);
-	
-	/**
-	 * *
-	 */
-	 boolean func_167(Block a);
+	public abstract void a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a, int b);
+	public abstract void b(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean b(Block a);
+	public abstract boolean b(Block a);
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a);
+	public abstract void b(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void b_();
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	protected void c();
+	protected abstract void c();
 	
 	/**
 	 * 
 	 */
-	public void c(Entity a, int b);
-	
-	/**
-	 * *
-	 */
-	 void func_6099(int a);
+	public abstract void c(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	protected void d(int a);
+	protected abstract void d(int a);
 	
 	/**
 	 * 
 	 */
-	public void f(Entity a);
-	
-	/**
-	 * *
-	 */
-	 void func_9145(Entity a);
+	public abstract void f(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void g(Entity a);
-	
-	/**
-	 * *
-	 */
-	 void func_9146(Entity a);
+	public abstract void g(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void h(Entity a);
-	
-	/**
-	 * *
-	 */
-	 void func_171(Entity a);
+	public abstract void h(Entity a);
 	
 	/**
 	 * 
 	 */
-	private void j(Entity a);
+	public abstract void l();
 	
 	/**
 	 * 
 	 */
-	public void l();
+	public abstract float s();
 	
 	/**
 	 * 
 	 */
-	public float s();
-	
-	/**
-	 * 
-	 */
-	public void z();
+	public abstract void z();
 
 }

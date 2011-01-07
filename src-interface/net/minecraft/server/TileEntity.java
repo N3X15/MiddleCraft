@@ -2,75 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntity{
+public abstract class TileEntity {
 	// FIELDS
-	public World a;
-	public int b;
-	public int c;
-	public int d;
-	private static java.util.Map e;
-	private static ()V setChunkModified;
+	public World worldObj;
+	public int xCoord;
+	public int yCoord;
+	public int zCoord;
+	private static java.util.Map nameToClassMap;
+	private static java.util.Map classToNameMap;
 	
 	// METHODS
 	
 	/**
-	 * Adds a new two-way mapping between the class and its string name in both hashmaps.
+	 * 
 	 */
-	 void addMapping(java.lang.Class a, java.lang.String b);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	private abstract static void a(java.lang.Class a, java.lang.String b);
 	
 	/**
 	 * 
 	 */
-	private static void a(java.lang.Class a, java.lang.String b);
-	
-	/**
-	 * Writes a tile entity to NBT.
-	 */
-	 void writeToNBT(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
-	
-	/**
-	 * Creates a new entity and loads its data from the specified NBT.
-	 */
-	 TileEntity createAndLoadEntity(NBTTagCompound a);
+	public abstract static TileEntity c(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public static TileEntity c(NBTTagCompound a);
+	public abstract void d();
 	
 	/**
 	 * 
 	 */
-	public void d();
-	
-	/**
-	 * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
-	 */
-	 void updateEntity();
+	public abstract void e();
 	
 	/**
 	 * 
 	 */
-	public void e();
-	
-	/**
-	 * *
-	 */
-	 Packet func_20070();
-	
-	/**
-	 * 
-	 */
-	public Packet f();
+	public abstract Packet f();
 
 }

@@ -2,34 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenDungeons extends WorldGenerator{
+public abstract class WorldGenDungeons extends WorldGenerator {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 ItemStack func_434(java.util.Random a);
-	
-	/**
 	 * 
 	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	private ItemStack a(java.util.Random a);
-	
-	/**
-	 * *
-	 */
-	 java.lang.String func_433(java.util.Random a);
-	
-	/**
-	 * 
-	 */
-	private java.lang.String b(java.util.Random a);
+	public abstract boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

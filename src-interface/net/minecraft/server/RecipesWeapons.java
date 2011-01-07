@@ -2,22 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class RecipesWeapons{
+public abstract class RecipesWeapons {
 	// FIELDS
-	private java.lang.String[][] a;
-	private java.lang.Object[][] b;
-	 ()V setChunkModified;
+	private java.lang.String[][] field_20114;
+	private java.lang.Object[][] field_20113;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void func_20112(CraftingManager a);
-	
-	/**
 	 * 
 	 */
-	public void a(CraftingManager a);
+	public abstract void a(CraftingManager a);
 
 }

@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockReed extends Block{
+public abstract class BlockReed extends Block {
 	// FIELDS
 	
 	// METHODS
@@ -10,46 +10,41 @@ public abstract class BlockReed extends Block{
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean f(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_4037(World a, int b, int c, int d);
+	public abstract boolean f(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected final void g(World a, int b, int c, int d);
+	protected abstract void g(World a, int b, int c, int d);
 
 }

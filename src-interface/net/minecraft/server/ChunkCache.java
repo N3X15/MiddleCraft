@@ -2,54 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkCache{
+public abstract class ChunkCache {
 	// FIELDS
-	private int a;
-	private int b;
-	private kx[][] c;
-	private World d;
-	 ()V setChunkModified;
+	private int field_823;
+	private int field_822;
+	private kx[][] field_825;
+	private World worldObj;
 	
 	// METHODS
 	
 	/**
-	 * Returns the block ID at coords x,y,z
+	 * 
 	 */
-	 int getBlockId(int a, int b, int c);
+	public abstract int a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b, int c);
-	
-	/**
-	 * Returns the block metadata at coords x,y,z
-	 */
-	 int getBlockMetadata(int a, int b, int c);
+	public abstract int b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int b(int a, int b, int c);
-	
-	/**
-	 * Returns the block's material.
-	 */
-	 Material getBlockMaterial(int a, int b, int c);
+	public abstract Material c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public Material c(int a, int b, int c);
-	
-	/**
-	 * Returns if the block at the specified coordinates allow attachment Args: x, y, z
-	 */
-	 boolean doesBlockAllowAttachment(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	public boolean d(int a, int b, int c);
+	public abstract boolean d(int a, int b, int c);
 
 }

@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract final class ServerWindowAdapter extends java.awt.event.WindowAdapter{
+abstract final class ServerWindowAdapter extends java.awt.event.WindowAdapter {
 	// FIELDS
-	final net.minecraft.server.MinecraftServer a;
-	 ()V setChunkModified;
+	final net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void ac_windowClosing(java.awt.event.WindowEvent a);
-	
-	/**
 	 * 
 	 */
-	public void windowClosing(java.awt.event.WindowEvent a);
+	public abstract void windowClosing(java.awt.event.WindowEvent a);
 
 }

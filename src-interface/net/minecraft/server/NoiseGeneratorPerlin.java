@@ -2,54 +2,43 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NoiseGeneratorPerlin extends NoiseGenerator{
+public abstract class NoiseGeneratorPerlin extends NoiseGenerator {
 	// FIELDS
-	public double a;
-	public double b;
-	public double c;
-	private int[] d;
-	 ()V setChunkModified;
+	public double xCoord;
+	public double yCoord;
+	public double zCoord;
+	private int[] permutations;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 double func_4102(int a, double b, double c);
+	public abstract double a(double a, double b);
 	
 	/**
 	 * 
 	 */
-	public double a(double a, double b);
+	public abstract double a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public double a(double a, double b, double c);
+	public abstract double a(int a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public final double a(int a, double b, double c);
+	public abstract double a(int a, double b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public final double a(int a, double b, double c, double d);
+	public abstract void a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j, double k);
 	
 	/**
 	 * 
 	 */
-	public void a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j, double k);
-	
-	/**
-	 * *
-	 */
-	 double lerp(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public final double b(double a, double b, double c);
+	public abstract double b(double a, double b, double c);
 
 }

@@ -2,68 +2,53 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemInWorldManager{
+public abstract class ItemInWorldManager {
 	// FIELDS
-	public EntityPlayer a;
-	private World b;
-	private float c;
-	private float d;
-	private int e;
-	private ()V setChunkModified;
-	private int g;
-	private int h;
-	private int i;
+	public EntityPlayer field_675;
+	private World field_674;
+	private float field_673;
+	private float field_672;
+	private int field_671;
+	private float field_670;
+	private int field_669;
+	private int field_668;
+	private int field_667;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_324(int a, int b, int c);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, int d);
+	public abstract boolean a(EntityPlayer a, World b, ItemStack c);
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a, World b, ItemStack c);
+	public abstract boolean a(EntityPlayer a, World b, ItemStack c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a, World b, ItemStack c, int d, int e, int f, int g);
-	
-	/**
-	 * *
-	 */
-	 boolean func_323(int a, int b, int c);
+	public abstract boolean b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public boolean b(int a, int b, int c);
-	
-	/**
-	 * *
-	 */
-	 boolean func_325(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	public boolean c(int a, int b, int c);
+	public abstract boolean c(int a, int b, int c);
 
 }

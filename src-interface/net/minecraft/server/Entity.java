@@ -2,156 +2,125 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Entity{
+public abstract class Entity {
 	// FIELDS
-	public boolean A;
-	public boolean B;
-	public boolean C;
-	public boolean D;
-	public boolean E;
-	public boolean F;
-	public boolean G;
-	public float H;
-	public float I;
-	public float J;
-	public float K;
-	public float L;
-	protected boolean M;
-	protected float N;
-	public double O;
-	public double P;
-	public double Q;
-	public float R;
-	public float S;
-	public boolean T;
-	public float U;
-	public boolean V;
-	protected java.util.Random W;
-	public int X;
-	public int Y;
-	public int Z;
-	private static int a;
-	protected int aa;
-	protected boolean ab;
-	public int ac;
-	public int ad;
-	protected boolean ae;
-	public boolean af;
-	public int ag;
-	public int ah;
-	public int ai;
-	private int b;
-	private boolean c;
-	private double d;
-	private double e;
-	 ()V setChunkModified;
-	public int g;
-	public double h;
-	public boolean i;
-	public Entity j;
-	public Entity k;
-	public World l;
-	public double m;
-	public double n;
-	public double o;
-	public double p;
-	public double q;
-	public double r;
-	public double s;
-	public double t;
-	public double u;
-	public float v;
-	public float w;
-	public float x;
-	public float y;
-	public final AxisAlignedBB z;
+	public boolean onGround;
+	public boolean isTryingToMoveUp;
+	public boolean field_9082;
+	public boolean field_9080;
+	public boolean field_9078;
+	public boolean field_9077;
+	public boolean isDead;
+	public float yOffset;
+	public float width;
+	public float height;
+	public float field_9075;
+	public float field_9074;
+	protected boolean entityWalks;
+	protected float fallDistance;
+	public double lastTickPosX;
+	public double lastTickPosY;
+	public double lastTickPosZ;
+	public float field_9068;
+	public float field_9067;
+	public boolean field_9066;
+	public float field_286;
+	public boolean field_9065;
+	protected java.util.Random rand;
+	public int field_9063;
+	public int field_9062;
+	public int fire;
+	private static int field_384;
+	protected int maxAir;
+	protected boolean field_9085;
+	public int field_9083;
+	public int air;
+	protected boolean isImmuneToFire;
+	public boolean field_276;
+	public int field_307;
+	public int field_305;
+	public int field_303;
+	private int field_6151;
+	private boolean field_4131;
+	private double field_4130;
+	private double field_4128;
+	public int field_331;
+	public double renderDistanceWeight;
+	public boolean field_329;
+	public Entity riddenByEntity;
+	public Entity ridingEntity;
+	public World worldObj;
+	public double prevPosX;
+	public double prevPosY;
+	public double prevPosZ;
+	public double posX;
+	public double posY;
+	public double posZ;
+	public double motionX;
+	public double motionY;
+	public double motionZ;
+	public float rotationYaw;
+	public float rotationPitch;
+	public float prevRotationYaw;
+	public float prevRotationPitch;
+	public final AxisAlignedBB boundingBox;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_127();
+	public abstract void A();
 	
 	/**
 	 * 
 	 */
-	public void A();
-	
-	/**
-	 * *
-	 */
-	 double func_117();
+	public abstract double B();
 	
 	/**
 	 * 
 	 */
-	public double B();
-	
-	/**
-	 * *
-	 */
-	 Vec3D func_4039();
+	public abstract Vec3D C();
 	
 	/**
 	 * 
 	 */
-	public Vec3D C();
-	
-	/**
-	 * *
-	 */
-	 void func_4042();
+	public abstract void D();
 	
 	/**
 	 * 
 	 */
-	public void D();
-	
-	/**
-	 * *
-	 */
-	 int[] func_20042();
+	public abstract int[] E();
 	
 	/**
 	 * 
 	 */
-	public int[] E();
-	
-	/**
-	 * Drops an item stack with a specified y offset. Args: itemID, count, yOffset
-	 */
-	 EntityItem dropItemWithOffset(int a, int b, float c);
+	public abstract void a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c);
+	protected abstract void a(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	protected void a(double a, boolean b);
+	protected abstract void a(float a);
 	
 	/**
 	 * 
 	 */
-	protected void a(float a);
+	protected abstract void a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	protected void a(float a, float b);
+	public abstract void a(float a, float b, float c);
 	
 	/**
 	 * 
 	 */
-	public void a(float a, float b, float c);
-	
-	/**
-	 * 
-	 */
-	public EntityItem a(int a, int b, float c);
+	public abstract EntityItem a(int a, int b, float c);
 	
 	/**
 	 * 
@@ -161,67 +130,62 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public float a(Entity a);
+	public abstract float a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b);
+	public abstract boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a);
+	public abstract boolean a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Material a);
+	public abstract boolean a(Material a);
 	
 	/**
 	 * 
 	 */
-	protected transient NBTTagList a(double[] a);
+	protected abstract transient NBTTagList a(double[] a);
 	
 	/**
 	 * 
 	 */
-	protected transient NBTTagList a(float[] a);
-	
-	/**
-	 * *
-	 */
-	 void addToPlayerScore(Entity a, int b);
+	protected abstract transient NBTTagList a(float[] a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(double a, double b, double c);
+	public abstract boolean b(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public void b(double a, double b, double c, float d, float e);
+	public abstract void b(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public float b(float a);
+	public abstract float b(float a);
 	
 	/**
 	 * 
 	 */
-	protected void b(float a, float b);
+	protected abstract void b(float a, float b);
 	
 	/**
 	 * 
 	 */
-	protected void b(int a);
+	protected abstract void b(int a);
 	
 	/**
 	 * 
 	 */
-	public EntityItem b(int a, int b);
+	public abstract EntityItem b(int a, int b);
 	
 	/**
 	 * 
@@ -231,276 +195,171 @@ public abstract class Entity{
 	/**
 	 * 
 	 */
-	public double b(Entity a);
+	public abstract double b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a, int b);
+	public abstract void b(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayer a);
+	public abstract void b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void b_();
-	
-	/**
-	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
-	 */
-	 void applyEntityCollision(Entity a);
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public void c(double a, double b, double c);
+	public abstract void c(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public void c(double a, double b, double c, float d, float e);
+	public abstract void c(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public boolean c(NBTTagCompound a);
+	public abstract boolean c(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void c(Entity a);
+	public abstract void c(Entity a);
 	
 	/**
 	 * 
 	 */
-	public boolean c_();
-	
-	/**
-	 * *
-	 */
-	 AxisAlignedBB func_89(Entity a);
+	public abstract boolean c_();
 	
 	/**
 	 * 
 	 */
-	public double d(double a, double b, double c);
+	public abstract double d(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public void d(NBTTagCompound a);
+	public abstract void d(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(Entity a);
-	
-	/**
-	 * Gets the distance to the position. Args: x, y, z
-	 */
-	 double getDistance(double a, double b, double c);
+	public abstract AxisAlignedBB d(Entity a);
 	
 	/**
 	 * 
 	 */
-	public double e(double a, double b, double c);
+	public abstract double e(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public void e(NBTTagCompound a);
+	public abstract void e(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void e(Entity a);
-	
-	/**
-	 * *
-	 */
-	 boolean ep_equals(java.lang.Object a);
+	public abstract void e(Entity a);
 	
 	/**
 	 * 
 	 */
-	public boolean equals(java.lang.Object a);
-	
-	/**
-	 * Adds to the current velocity of the entity. Args: x, y, z
-	 */
-	 void addVelocity(double a, double b, double c);
+	public abstract boolean equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public void f(double a, double b, double c);
-	
-	/**
-	 * *
-	 */
-	 int ep_hashCode();
+	public abstract void f(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public int hashCode();
+	public abstract int hashCode();
 	
 	/**
 	 * 
 	 */
-	public double j();
-	
-	/**
-	 * Will get destroyed next tick
-	 */
-	 void setEntityDead();
+	public abstract double j();
 	
 	/**
 	 * 
 	 */
-	public void l();
-	
-	/**
-	 * *
-	 */
-	 void func_84();
+	public abstract void l();
 	
 	/**
 	 * 
 	 */
-	public void m();
-	
-	/**
-	 * Called whenever the entity is walking inside of lava.
-	 */
-	 void setOnFireFromLava();
+	public abstract void m();
 	
 	/**
 	 * 
 	 */
-	protected void n();
-	
-	/**
-	 * *
-	 */
-	 void func_4043();
+	protected abstract void n();
 	
 	/**
 	 * 
 	 */
-	protected void o();
-	
-	/**
-	 * Returns if this entity is sneaking.
-	 */
-	 boolean isSneaking();
+	protected abstract void o();
 	
 	/**
 	 * 
 	 */
-	public boolean p();
-	
-	/**
-	 * *
-	 */
-	 AxisAlignedBB func_93();
+	public abstract boolean p();
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB q();
-	
-	/**
-	 * Returns if this entity is in water and will end up adding the waters velocity to the entity
-	 */
-	 boolean handleWaterMovement();
+	public abstract AxisAlignedBB q();
 	
 	/**
 	 * 
 	 */
-	public boolean r();
-	
-	/**
-	 * *
-	 */
-	 float func_104();
+	public abstract boolean r();
 	
 	/**
 	 * 
 	 */
-	public float s();
-	
-	/**
-	 * *
-	 */
-	 boolean handleLavaMovement();
+	public abstract float s();
 	
 	/**
 	 * 
 	 */
-	public boolean t();
-	
-	/**
-	 * *
-	 */
-	 void func_9060();
+	public abstract boolean t();
 	
 	/**
 	 * 
 	 */
-	protected void u();
-	
-	/**
-	 * *
-	 */
-	 boolean canBePushed();
+	protected abstract void u();
 	
 	/**
 	 * 
 	 */
-	public boolean v();
-	
-	/**
-	 * *
-	 */
-	 java.lang.String getEntityString();
+	public abstract boolean v();
 	
 	/**
 	 * 
 	 */
-	protected final java.lang.String w();
-	
-	/**
-	 * *
-	 */
-	 boolean isEntityAlive();
+	protected abstract java.lang.String w();
 	
 	/**
 	 * 
 	 */
-	public boolean x();
-	
-	/**
-	 * *
-	 */
-	 boolean func_91();
+	public abstract boolean x();
 	
 	/**
 	 * 
 	 */
-	public boolean y();
-	
-	/**
-	 * *
-	 */
-	 void func_115();
+	public abstract boolean y();
 	
 	/**
 	 * 
 	 */
-	public void z();
+	public abstract void z();
 
 }

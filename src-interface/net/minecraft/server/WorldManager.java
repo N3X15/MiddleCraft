@@ -2,56 +2,55 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldManager{
+public abstract class WorldManager {
 	// FIELDS
-	private net.minecraft.server.MinecraftServer a;
-	 ()V setChunkModified;
+	private net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, int d, int e, int f);
+	public abstract void a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, TileEntity d);
+	public abstract void a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a);
+	public abstract void a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	public abstract void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, double b, double c, double d, float e, float f);
+	public abstract void a(java.lang.String a, double b, double c, double d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, int b, int c, int d);
+	public abstract void a(java.lang.String a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a);
+	public abstract void b(Entity a);
 
 }

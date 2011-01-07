@@ -2,209 +2,189 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Item{
+public abstract class Item {
 	// FIELDS
-	public static Item A;
-	public static Item B;
-	public static Item C;
-	public static Item D;
-	public static Item E;
-	public static Item F;
-	public static Item G;
-	public static Item H;
-	public static Item I;
-	public static Item J;
-	public static Item K;
-	public static Item L;
-	public static Item M;
-	public static Item N;
-	public static Item O;
-	public static Item P;
-	public static Item Q;
-	public static Item R;
-	public static Item S;
-	public static Item T;
-	public static Item U;
-	public static Item V;
-	public static Item W;
-	public static Item X;
-	public static Item Y;
-	public static Item Z;
-	private java.lang.String a;
-	public static Item aA;
-	public static Item aB;
-	public static Item aC;
-	public static Item aD;
-	public static Item aE;
-	public static Item aF;
-	public static Item aG;
-	public static Item aH;
-	public static Item aI;
-	public static Item aJ;
-	public static Item aK;
-	public static Item aL;
-	public static Item aM;
-	public static Item aN;
-	public static Item aO;
-	public static Item aP;
-	public static Item aQ;
-	public static Item aR;
-	public static Item aS;
-	public static Item aT;
-	public static Item aU;
-	public static Item aV;
-	public final int aW;
-	protected int aX;
-	protected int aY;
-	protected int aZ;
-	public static Item aa;
-	public static Item ab;
-	public static Item ac;
-	public static Item ad;
-	public static Item ae;
-	public static Item af;
-	public static Item ag;
-	public static Item ah;
-	public static Item ai;
-	public static Item aj;
-	public static Item ak;
-	public static Item al;
-	public static Item am;
-	public static Item an;
-	public static Item ao;
-	public static Item ap;
-	public static Item aq;
-	public static Item ar;
-	public static Item as;
-	public static Item at;
-	public static Item au;
-	public static Item av;
-	public static Item aw;
-	public static Item ax;
-	public static Item ay;
-	public static Item az;
-	protected static java.util.Random b;
-	protected boolean ba;
-	public static gm[] c;
-	public static Item d;
-	public static Item e;
-	public static ()V setChunkModified;
-	public static Item g;
-	public static Item h;
-	public static Item i;
-	public static Item j;
-	public static Item k;
-	public static Item l;
-	public static Item m;
-	public static Item n;
-	public static Item o;
-	public static Item p;
-	public static Item q;
-	public static Item r;
-	public static Item s;
-	public static Item t;
-	public static Item u;
-	public static Item v;
-	public static Item w;
-	public static Item x;
-	public static Item y;
-	public static Item z;
+	public static Item axeDiamond;
+	public static Item stick;
+	public static Item bowlEmpty;
+	public static Item bowlSoup;
+	public static Item swordGold;
+	public static Item shovelGold;
+	public static Item pickaxeGold;
+	public static Item axeGold;
+	public static Item silk;
+	public static Item feather;
+	public static Item gunpowder;
+	public static Item hoeWood;
+	public static Item hoeStone;
+	public static Item hoeSteel;
+	public static Item hoeDiamond;
+	public static Item hoeGold;
+	public static Item seeds;
+	public static Item wheat;
+	public static Item bread;
+	public static Item helmetLeather;
+	public static Item plateLeather;
+	public static Item legsLeather;
+	public static Item bootsLeather;
+	public static Item helmetChain;
+	public static Item plateChain;
+	public static Item legsChain;
+	private java.lang.String healAmount;
+	public static Item redstone;
+	public static Item snowball;
+	public static Item boat;
+	public static Item leather;
+	public static Item bucketMilk;
+	public static Item brick;
+	public static Item clay;
+	public static Item reed;
+	public static Item paper;
+	public static Item book;
+	public static Item slimeBall;
+	public static Item minecartCrate;
+	public static Item minecartPowered;
+	public static Item egg;
+	public static Item compass;
+	public static Item fishingRod;
+	public static Item pocketSundial;
+	public static Item lightStoneDust;
+	public static Item fishRaw;
+	public static Item fishCooked;
+	public static Item record13;
+	public static Item recordCat;
+	public final int swiftedIndex;
+	protected int maxStackSize;
+	protected int maxDamage;
+	protected int iconIndex;
+	public static Item bootsChain;
+	public static Item helmetSteel;
+	public static Item plateSteel;
+	public static Item legsSteel;
+	public static Item bootsSteel;
+	public static Item helmetDiamond;
+	public static Item plateDiamond;
+	public static Item legsDiamond;
+	public static Item bootsDiamond;
+	public static Item helmetGold;
+	public static Item plateGold;
+	public static Item legsGold;
+	public static Item bootsGold;
+	public static Item flint;
+	public static Item porkRaw;
+	public static Item porkCooked;
+	public static Item painting;
+	public static Item appleGold;
+	public static Item sign;
+	public static Item doorWood;
+	public static Item bucketEmpty;
+	public static Item bucketWater;
+	public static Item bucketLava;
+	public static Item minecartEmpty;
+	public static Item saddle;
+	public static Item doorSteel;
+	protected static java.util.Random rand;
+	protected boolean bFull3D;
+	public static gm[] itemsList;
+	public static Item shovelSteel;
+	public static Item pickaxeSteel;
+	public static Item axeSteel;
+	public static Item flintAndSteel;
+	public static Item appleRed;
+	public static Item bow;
+	public static Item arrow;
+	public static Item coal;
+	public static Item diamond;
+	public static Item ingotIron;
+	public static Item ingotGold;
+	public static Item swordSteel;
+	public static Item swordWood;
+	public static Item shovelWood;
+	public static Item pickaxeWood;
+	public static Item axeWood;
+	public static Item swordStone;
+	public static Item shovelStone;
+	public static Item pickaxeStone;
+	public static Item axeStone;
+	public static Item swordDiamond;
+	public static Item shovelDiamond;
+	public static Item pickaxeDiamond;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 Item func_20104(int a, int b);
+	public abstract java.lang.String a();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String a();
+	public abstract Item a(int a);
 	
 	/**
 	 * 
 	 */
-	public Item a(int a);
+	public abstract Item a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public Item a(int a, int b);
+	public abstract int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public int a(Entity a);
+	public abstract boolean a(Block a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Block a);
+	public abstract void a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, int b, int c, int d, int e);
+	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract float a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public float a(ItemStack a, Block b);
+	public abstract void a(ItemStack a, EntityLiving b);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, EntityLiving b);
+	public abstract Item a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public Item a(java.lang.String a);
-	
-	/**
-	 * Returns the maximum size of the stack for a specific item. *Isn't this more a Set than a Get?*
-	 */
-	 int getItemStackLimit();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract void b(ItemStack a, EntityLiving b);
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a, EntityLiving b);
-	
-	/**
-	 * Returns the maximum damage an item can take.
-	 */
-	 int getMaxDamage();
+	public abstract int c();
 	
 	/**
 	 * 
 	 */
-	public int c();
-	
-	/**
-	 * Sets bFull3D to True and return the object.
-	 */
-	 Item setFull3D();
-	
-	/**
-	 * 
-	 */
-	public Item d();
+	public abstract Item d();
 
 }

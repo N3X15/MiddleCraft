@@ -2,61 +2,45 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFurnace extends BlockContainer{
+public abstract class BlockFurnace extends BlockContainer {
 	// FIELDS
-	private final boolean a;
-	 ()V setChunkModified;
+	private final boolean field_655;
 	
 	// METHODS
 	
 	/**
-	 * Update which block ID the furnace is using depending on whether or not it is burning
+	 * 
 	 */
-	 void updateFurnaceBlockState(boolean a, World b, int c, int d, int e);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void a(World a, int b, int c, int d, EntityLiving e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, EntityLiving e);
+	public abstract static void a(boolean a, World b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public static void a(boolean a, World b, int c, int d, int e);
+	protected abstract TileEntity a_();
 	
 	/**
 	 * 
 	 */
-	protected TileEntity a_();
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_296(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

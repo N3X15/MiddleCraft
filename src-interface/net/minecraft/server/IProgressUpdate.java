@@ -2,15 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IProgressUpdate{
+public abstract interface IProgressUpdate {
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * *
-	 */
-	 void func_438(java.lang.String a);
 	
 	/**
 	 * 
@@ -21,11 +16,6 @@ public abstract interface interface IProgressUpdate{
 	 * 
 	 */
 	public abstract void a(java.lang.String a);
-	
-	/**
-	 * *
-	 */
-	 void displayLoadingString(java.lang.String a);
 	
 	/**
 	 * 

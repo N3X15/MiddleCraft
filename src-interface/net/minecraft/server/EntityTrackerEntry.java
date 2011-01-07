@@ -2,111 +2,81 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityTrackerEntry{
+public abstract class EntityTrackerEntry {
 	// FIELDS
-	public Entity a;
-	public boolean b;
-	public boolean c;
-	public boolean d;
-	public int e;
-	public ()V setChunkModified;
-	public int g;
-	public int h;
-	public int i;
-	public int j;
-	public int k;
-	public double l;
-	public double m;
-	public double n;
-	public int o;
-	public boolean p;
-	public java.util.Set q;
-	private double r;
-	private double s;
-	private double t;
-	private boolean u;
-	private boolean v;
+	public Entity field_909;
+	public boolean field_9237;
+	public boolean field_9236;
+	public boolean field_9225;
+	public int field_9235;
+	public int field_9234;
+	public int field_9233;
+	public int field_9232;
+	public int field_9231;
+	public int field_9230;
+	public int field_9229;
+	public double field_9228;
+	public double field_9227;
+	public double field_9226;
+	public int field_9221;
+	public boolean field_900;
+	public java.util.Set field_899;
+	private double field_9224;
+	private double field_9223;
+	private double field_9222;
+	private boolean field_12020;
+	private boolean field_9220;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_12019(EntityPlayerMP a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayerMP a);
+	public abstract void a(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.util.List a);
+	public abstract void a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet a);
-	
-	/**
-	 * *
-	 */
-	 void func_12018(Packet a);
+	public abstract void b(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	private Packet b();
+	public abstract void b(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayerMP a);
+	public abstract void b(Packet a);
 	
 	/**
 	 * 
 	 */
-	public void b(java.util.List a);
+	public abstract void c(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void b(Packet a);
-	
-	/**
-	 * *
-	 */
-	 void func_9219(EntityPlayerMP a);
+	public abstract boolean equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public void c(EntityPlayerMP a);
-	
-	/**
-	 * *
-	 */
-	 boolean hr_equals(java.lang.Object a);
-	
-	/**
-	 * 
-	 */
-	public boolean equals(java.lang.Object a);
-	
-	/**
-	 * *
-	 */
-	 int hr_hashCode();
-	
-	/**
-	 * 
-	 */
-	public int hashCode();
+	public abstract int hashCode();
 
 }

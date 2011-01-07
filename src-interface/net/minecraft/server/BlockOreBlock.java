@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockOreBlock extends Block{
+public abstract class BlockOreBlock extends Block {
 	// FIELDS
 	
 	// METHODS
@@ -10,6 +10,6 @@ public abstract class BlockOreBlock extends Block{
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a);
 
 }

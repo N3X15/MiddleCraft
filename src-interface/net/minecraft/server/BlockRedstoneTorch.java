@@ -2,77 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneTorch extends BlockTorch{
+public abstract class BlockRedstoneTorch extends BlockTorch {
 	// FIELDS
-	private boolean a;
-	private static java.util.List b;
-	 ()V setChunkModified;
+	private boolean torchActive;
+	private static java.util.List torchUpdates;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean checkForBurnout(World a, int b, int c, int d, boolean e);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	private boolean a(World a, int b, int c, int d, boolean e);
+	public abstract void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
+	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract boolean c();
 	
 	/**
 	 * 
 	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean c();
-	
-	/**
-	 * 
-	 */
-	public boolean d(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 boolean func_20038(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

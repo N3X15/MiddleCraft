@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IAnimals{
+public abstract interface IAnimals {
 	// FIELDS
 	
 	// METHODS

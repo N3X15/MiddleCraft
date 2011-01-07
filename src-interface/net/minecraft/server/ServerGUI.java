@@ -2,62 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ServerGUI extends javax.swing.JComponent{
+public abstract class ServerGUI extends javax.swing.JComponent {
 	// FIELDS
-	public static java.util.logging.Logger a;
-	private net.minecraft.server.MinecraftServer b;
-	 ()V setChunkModified;
+	public static java.util.logging.Logger logger;
+	private net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	
 	/**
-	 * Returns the MinecraftServer associated with the ServerGui.
+	 * 
 	 */
-	 net.minecraft.server.MinecraftServer getMinecraftServer(ServerGUI a);
+	abstract static net.minecraft.server.MinecraftServer a(ServerGUI a);
 	
 	/**
 	 * 
 	 */
-	private javax.swing.JComponent a();
+	public abstract static void a(net.minecraft.server.MinecraftServer a);
 	
 	/**
 	 * 
 	 */
-	static net.minecraft.server.MinecraftServer a(ServerGUI a);
+	public abstract void b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public static void a(net.minecraft.server.MinecraftServer a);
-	
-	/**
-	 * Returns a new JScrollPane with a new PlayerListBox inside.
-	 */
-	 javax.swing.JComponent getPlayerListComponent();
-	
-	/**
-	 * 
-	 */
-	private javax.swing.JComponent b();
-	
-	/**
-	 * 
-	 */
-	public void b(java.lang.String a);
-	
-	/**
-	 * 
-	 */
-	public java.lang.String c();
-	
-	/**
-	 * Returns a new JPanel with a new GuiStatsComponent inside.
-	 */
-	 javax.swing.JComponent getLogComponent();
-	
-	/**
-	 * 
-	 */
-	private javax.swing.JComponent d();
+	public abstract java.lang.String c();
 
 }

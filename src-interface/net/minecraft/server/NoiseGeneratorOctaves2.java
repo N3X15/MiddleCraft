@@ -2,27 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NoiseGeneratorOctaves2 extends NoiseGenerator{
+public abstract class NoiseGeneratorOctaves2 extends NoiseGenerator {
 	// FIELDS
-	private by[] a;
-	private int b;
-	 ()V setChunkModified;
+	private by[] field_4308;
+	private int field_4307;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 double[] func_4100(double[] a, double b, double c, int d, int e, double f, double g, double h, double i);
+	public abstract double[] a(double[] a, double b, double c, int d, int e, double f, double g, double h);
 	
 	/**
 	 * 
 	 */
-	public double[] a(double[] a, double b, double c, int d, int e, double f, double g, double h);
-	
-	/**
-	 * 
-	 */
-	public double[] a(double[] a, double b, double c, int d, int e, double f, double g, double h, double i);
+	public abstract double[] a(double[] a, double b, double c, int d, int e, double f, double g, double h, double i);
 
 }

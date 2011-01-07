@@ -2,64 +2,53 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityTracker{
+public abstract class EntityTracker {
 	// FIELDS
-	private java.util.Set a;
-	private MCHashTable b;
-	private net.minecraft.server.MinecraftServer c;
-	private int d;
-	 ()V setChunkModified;
+	private java.util.Set field_911;
+	private MCHashTable field_910;
+	private net.minecraft.server.MinecraftServer mcServer;
+	private int field_912;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_12021(Entity a, Packet b);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a);
+	public abstract void a(Entity a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, int b, int c);
+	public abstract void a(Entity a, int b, int c, boolean d);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, int b, int c, boolean d);
+	public abstract void a(Entity a, Packet b);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, Packet b);
+	public abstract void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayerMP a);
-	
-	/**
-	 * *
-	 */
-	 void func_609(Entity a, Packet b);
+	public abstract void b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a);
-	
-	/**
-	 * 
-	 */
-	public void b(Entity a, Packet b);
+	public abstract void b(Entity a, Packet b);
 
 }

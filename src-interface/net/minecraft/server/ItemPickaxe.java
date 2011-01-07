@@ -2,22 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemPickaxe extends ItemTool{
+public abstract class ItemPickaxe extends ItemTool {
 	// FIELDS
-	private static gv[] bb;
-	private int bc;
-	 ()V setChunkModified;
+	private static gv[] goodAgainst;
+	private int field_4208;
 	
 	// METHODS
 	
 	/**
-	 * Returns if the item (tool) can harvest results from the block type.
-	 */
-	 boolean canHarvestBlock(Block a);
-	
-	/**
 	 * 
 	 */
-	public boolean a(Block a);
+	public abstract boolean a(Block a);
 
 }

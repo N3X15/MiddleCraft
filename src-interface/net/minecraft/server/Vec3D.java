@@ -2,115 +2,79 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Vec3D{
+public abstract class Vec3D {
 	// FIELDS
-	public double a;
-	public double b;
-	public double c;
-	private static java.util.List d;
-	private static int e;
-	 ()V setChunkModified;
+	public double xCoord;
+	public double yCoord;
+	public double zCoord;
+	private static java.util.List vectorList;
+	private static int nextVector;
 	
 	// METHODS
 	
 	/**
-	 * Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static method which creates and places it in the list.
+	 * 
 	 */
-	 Vec3D createVectorHelper(double a, double b, double c);
+	public abstract static void a();
 	
 	/**
 	 * 
 	 */
-	public static void a();
+	public abstract static Vec3D a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public static Vec3D a(double a, double b, double c);
+	public abstract double a(Vec3D a);
 	
 	/**
 	 * 
 	 */
-	public double a(Vec3D a);
+	public abstract Vec3D a(Vec3D a, double b);
 	
 	/**
 	 * 
 	 */
-	public Vec3D a(Vec3D a, double b);
-	
-	/**
-	 * Static method to create a new vector in the vector list and return it.
-	 */
-	 Vec3D createVector(double a, double b, double c);
+	public abstract Vec3D b();
 	
 	/**
 	 * 
 	 */
-	public Vec3D b();
+	public abstract static Vec3D b(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public static Vec3D b(double a, double b, double c);
+	public abstract double b(Vec3D a);
 	
 	/**
 	 * 
 	 */
-	public double b(Vec3D a);
+	public abstract Vec3D b(Vec3D a, double b);
 	
 	/**
 	 * 
 	 */
-	public Vec3D b(Vec3D a, double b);
-	
-	/**
-	 * Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector.
-	 */
-	 Vec3D addVector(double a, double b, double c);
+	public abstract double c();
 	
 	/**
 	 * 
 	 */
-	public double c();
+	public abstract Vec3D c(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public Vec3D c(double a, double b, double c);
+	public abstract Vec3D c(Vec3D a, double b);
 	
 	/**
 	 * 
 	 */
-	public Vec3D c(Vec3D a, double b);
-	
-	/**
-	 * The square of the Euclidean distance between this and the vector of x,y,z components passed in.
-	 */
-	 double squareDistanceTo(double a, double b, double c);
+	public abstract double d(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public double d(double a, double b, double c);
-	
-	/**
-	 * Sets the x,y,z components of the vector as specified.
-	 */
-	 Vec3D setComponents(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	private Vec3D e(double a, double b, double c);
-	
-	/**
-	 * *
-	 */
-	 java.lang.String bn_toString();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString();
+	public abstract java.lang.String toString();
 
 }

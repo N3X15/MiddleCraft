@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemBucket extends Item{
+public abstract class ItemBucket extends Item {
 	// FIELDS
-	private int a;
-	 ()V setChunkModified;
+	private int field_274;
 	
 	// METHODS
 	
 	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
-	 */
-	 ItemStack onItemRightClick(ItemStack a, World b, EntityPlayer c);
-	
-	/**
 	 * 
 	 */
-	public ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
 
 }

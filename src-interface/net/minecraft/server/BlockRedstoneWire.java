@@ -2,101 +2,65 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneWire extends Block{
+public abstract class BlockRedstoneWire extends Block {
 	// FIELDS
-	private boolean a;
-	 ()V setChunkModified;
+	private boolean wiresProvidePower;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
-	
-	/**
-	 * Returns true if the block coordinate passed can provide power, or is a redstone wire.
-	 */
-	 boolean isPowerProviderOrWire(IBlockAccess a, int b, int c, int d);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public static boolean b(IBlockAccess a, int b, int c, int d);
+	public abstract static boolean b(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean c();
+	public abstract boolean c();
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean d(World a, int b, int c, int d, int e);
+	public abstract boolean d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * Returns the current strength at the specified block if it is greater than the passed value, or the passed value otherwise. Signature: (world, x, y, z, strength)
-	 */
-	 int getMaxCurrentStrength(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	private int f(World a, int b, int c, int d, int e);
-	
-	/**
-	 * *
-	 */
-	 void func_292(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void g(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 void func_291(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void h(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

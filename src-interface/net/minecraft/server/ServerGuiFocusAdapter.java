@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class ServerGuiFocusAdapter extends java.awt.event.FocusAdapter{
+abstract class ServerGuiFocusAdapter extends java.awt.event.FocusAdapter {
 	// FIELDS
-	final ServerGUI a;
-	 ()V setChunkModified;
+	final ServerGUI mcServerGui;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void ag_focusGained(java.awt.event.FocusEvent a);
-	
-	/**
 	 * 
 	 */
-	public void focusGained(java.awt.event.FocusEvent a);
+	public abstract void focusGained(java.awt.event.FocusEvent a);
 
 }

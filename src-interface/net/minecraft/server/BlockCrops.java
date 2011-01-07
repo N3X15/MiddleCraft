@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockCrops extends BlockFlower{
+public abstract class BlockCrops extends BlockFlower {
 	// FIELDS
 	
 	// METHODS
@@ -10,41 +10,26 @@ public abstract class BlockCrops extends BlockFlower{
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e);
+	public abstract void a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
-	
-	/**
-	 * Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
-	 */
-	 boolean canThisPlantGrowOnThisBlockID(int a);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	protected boolean b(int a);
-	
-	/**
-	 * Gets the growth rate for the crop. Setup to encourage rows by halving growth rate if there is diagonals, crops on different sides that aren't opposing, and by adding growth for every crop next to this one (and for crop below this one). Args: x, y, z
-	 */
-	 float getGrowthRate(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private float h(World a, int b, int c, int d);
+	protected abstract boolean b(int a);
 
 }

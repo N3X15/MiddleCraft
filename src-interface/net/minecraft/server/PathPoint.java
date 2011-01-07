@@ -2,64 +2,44 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PathPoint{
+public abstract class PathPoint {
 	// FIELDS
-	public final int a;
-	public final int b;
-	public final int c;
-	public final int d;
-	 int e;
-	 ()V setChunkModified;
-	 float g;
-	 float h;
-	 PathPoint i;
-	public boolean j;
+	public final int xCoord;
+	public final int yCoord;
+	public final int zCoord;
+	public final int hash;
+	 int index;
+	 float totalPathDistance;
+	 float distanceToNext;
+	 float distanceToTarget;
+	 PathPoint previous;
+	public boolean isFirst;
 	
 	// METHODS
 	
 	/**
-	 * Returns the linear distance to another path point
+	 * 
 	 */
-	 float distanceTo(PathPoint a);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract float a(PathPoint a);
 	
 	/**
 	 * 
 	 */
-	public float a(PathPoint a);
-	
-	/**
-	 * *
-	 */
-	 boolean b_equals(java.lang.Object a);
+	public abstract boolean equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public boolean equals(java.lang.Object a);
-	
-	/**
-	 * *
-	 */
-	 int b_hashCode();
+	public abstract int hashCode();
 	
 	/**
 	 * 
 	 */
-	public int hashCode();
-	
-	/**
-	 * *
-	 */
-	 java.lang.String b_toString();
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString();
+	public abstract java.lang.String toString();
 
 }

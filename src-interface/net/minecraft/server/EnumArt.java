@@ -2,54 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EnumArt extends java.lang.Enum{
+public abstract final class EnumArt extends java.lang.Enum {
 	// FIELDS
-	public final int A;
-	public final int B;
-	public final int C;
-	private static final ie[] D;
-	public static final EnumArt a;
-	public static final EnumArt b;
-	public static final EnumArt c;
-	public static final EnumArt d;
-	public static final EnumArt e;
-	public static final ()V setChunkModified;
-	public static final EnumArt g;
-	public static final EnumArt h;
-	public static final EnumArt i;
-	public static final EnumArt j;
-	public static final EnumArt k;
-	public static final EnumArt l;
-	public static final EnumArt m;
-	public static final EnumArt n;
-	public static final EnumArt o;
-	public static final EnumArt p;
-	public static final EnumArt q;
-	public static final EnumArt r;
-	public static final EnumArt s;
-	public static final EnumArt t;
-	public static final EnumArt u;
-	public static final EnumArt v;
-	public static final EnumArt w;
-	public static final EnumArt x;
-	public final java.lang.String y;
-	public final int z;
+	public final int field_869;
+	public final int field_867;
+	public final int field_865;
+	private static final ie[] field_863;
+	public static final EnumArt ie_Kebab;
+	public static final EnumArt ie_Aztec;
+	public static final EnumArt ie_Alban;
+	public static final EnumArt ie_Aztec2;
+	public static final EnumArt ie_Bomb;
+	public static final EnumArt ie_Plant;
+	public static final EnumArt ie_Wasteland;
+	public static final EnumArt ie_Pool;
+	public static final EnumArt ie_Courbet;
+	public static final EnumArt ie_Sea;
+	public static final EnumArt ie_Sunset;
+	public static final EnumArt ie_Creebet;
+	public static final EnumArt ie_Wanderer;
+	public static final EnumArt ie_Graham;
+	public static final EnumArt ie_Match;
+	public static final EnumArt ie_Bust;
+	public static final EnumArt ie_Stage;
+	public static final EnumArt ie_Void;
+	public static final EnumArt ie_SkullAndRoses;
+	public static final EnumArt ie_Fighters;
+	public static final EnumArt ie_Pointer;
+	public static final EnumArt ie_Pigscene;
+	public static final EnumArt ie_Skeleton;
+	public static final EnumArt ie_DonkeyKong;
+	public final java.lang.String field_857;
+	public final int field_856;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static EnumArt valueOf(java.lang.String a);
-	
-	/**
-	 * *
-	 */
-	 ie[] ie_values();
+	public abstract static EnumArt valueOf(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public static ie[] values();
+	public abstract static ie[] values();
 
 }

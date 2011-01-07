@@ -2,38 +2,27 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PathEntity{
+public abstract class PathEntity {
 	// FIELDS
-	public final int a;
-	private final b[] b;
-	private int c;
-	 ()V setChunkModified;
+	public final int pathLength;
+	private final b[] points;
+	private int pathIndex;
 	
 	// METHODS
 	
 	/**
-	 * Gets the position that an entity should be at in the current point in the path
+	 * 
 	 */
-	 Vec3D getPosition(Entity a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract Vec3D a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public Vec3D a(Entity a);
-	
-	/**
-	 * Returns true if this path has reached the end
-	 */
-	 boolean isFinished();
-	
-	/**
-	 * 
-	 */
-	public boolean b();
+	public abstract boolean b();
 
 }

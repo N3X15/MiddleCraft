@@ -2,102 +2,57 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityGhast extends EntityFlying{
+public abstract class EntityGhast extends EntityFlying {
 	// FIELDS
-	public int a;
-	private Entity aj;
-	private int ak;
-	public double b;
-	public double c;
-	public double d;
-	public int e;
-	public ()V setChunkModified;
+	public int field_4099;
+	private Entity field_4097;
+	private int field_4103;
+	public double field_4098;
+	public double field_4104;
+	public double field_4102;
+	public int field_4101;
+	public int field_4100;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean func_4046(double a, double b, double c, double d);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	protected abstract void c();
 	
 	/**
 	 * 
 	 */
-	private boolean a(double a, double b, double c, double d);
-	
-	/**
-	 * *
-	 */
-	 void func_152();
+	protected abstract java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	protected void c();
-	
-	/**
-	 * Returns the sound this mob makes while it's alive.
-	 */
-	 java.lang.String getLivingSound();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d();
-	
-	/**
-	 * Returns the sound this mob makes when it is hurt.
-	 */
-	 java.lang.String getHurtSound();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
-	
-	/**
-	 * Returns the sound this mob makes on death.
-	 */
-	 java.lang.String getDeathSound();
+	protected abstract int g();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
-	
-	/**
-	 * Returns the item ID for the item the mob drops on death.
-	 */
-	 int getDropItemId();
+	protected abstract float h();
 	
 	/**
 	 * 
 	 */
-	protected int g();
-	
-	/**
-	 * Returns the volume for the sounds this mob makes.
-	 */
-	 float getSoundVolume();
-	
-	/**
-	 * 
-	 */
-	protected float h();
-	
-	/**
-	 * *
-	 */
-	 int func_4045();
-	
-	/**
-	 * 
-	 */
-	public int i();
+	public abstract int i();
 
 }

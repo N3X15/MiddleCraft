@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemBow extends Item{
+public abstract class ItemBow extends Item {
 	// FIELDS
 	
 	// METHODS
@@ -10,6 +10,6 @@ public abstract class ItemBow extends Item{
 	/**
 	 * 
 	 */
-	public ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
 
 }

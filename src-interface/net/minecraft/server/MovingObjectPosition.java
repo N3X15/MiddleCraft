@@ -2,15 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MovingObjectPosition{
+public abstract class MovingObjectPosition {
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public int e;
-	public ()V setChunkModified;
-	public Entity g;
+	public int typeOfHit;
+	public int blockX;
+	public int blockY;
+	public int blockZ;
+	public int sideHit;
+	public Vec3D hitVec;
+	public Entity entityHit;
 	
 	// METHODS
 

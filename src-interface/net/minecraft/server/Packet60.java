@@ -2,35 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet60 extends Packet{
+public abstract class Packet60 extends Packet {
 	// FIELDS
-	public double a;
-	public double b;
-	public double c;
-	public float d;
-	public java.util.Set e;
-	 ()V setChunkModified;
+	public double field_12003;
+	public double field_12002;
+	public double field_12006;
+	public float field_12005;
+	public java.util.Set field_12004;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a);
+	public abstract void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a);
+	public abstract void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a);
+	public abstract void a(java.io.DataOutputStream a);
 
 }

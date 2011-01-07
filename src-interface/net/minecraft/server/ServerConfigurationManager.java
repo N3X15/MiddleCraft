@@ -2,226 +2,146 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ServerConfigurationManager{
+public abstract class ServerConfigurationManager {
 	// FIELDS
-	public static java.util.logging.Logger a;
-	public java.util.List b;
-	private net.minecraft.server.MinecraftServer c;
-	private PlayerManager d;
-	private int e;
-	private ()V setChunkModified;
-	private java.util.Set g;
-	private java.util.Set h;
-	private java.io.File i;
-	private java.io.File j;
-	private java.io.File k;
-	private PlayerNBTManager l;
+	public static java.util.logging.Logger logger;
+	public java.util.List playerEntities;
+	private net.minecraft.server.MinecraftServer mcServer;
+	private PlayerManager playerManagerObj;
+	private int maxPlayers;
+	private java.util.Set field_9252;
+	private java.util.Set bannedIPs;
+	private java.util.Set ops;
+	private java.io.File bannedPlayersFile;
+	private java.io.File ipBanFile;
+	private java.io.File opFile;
+	private PlayerNBTManager playerNBTManagerObj;
 	
 	// METHODS
 	
 	/**
-	 * adds a player to the ban list
+	 * 
 	 */
-	 void banPlayer(java.lang.String a);
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract void a(double a, double b, double c, double d, Packet e);
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, double d, Packet e);
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, TileEntity d);
+	public abstract void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayerMP a);
+	public abstract void a(WorldServer a);
 	
 	/**
 	 * 
 	 */
-	public void a(WorldServer a);
+	public abstract EntityPlayerMP a(NetLoginHandler a, java.lang.String b, java.lang.String c);
 	
 	/**
 	 * 
 	 */
-	public EntityPlayerMP a(NetLoginHandler a, java.lang.String b, java.lang.String c);
+	public abstract void a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a);
+	public abstract void a(java.lang.String a, java.lang.String b);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, java.lang.String b);
+	public abstract boolean a(java.lang.String a, Packet b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(java.lang.String a, Packet b);
+	public abstract void a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet a);
-	
-	/**
-	 * *
-	 */
-	 void func_613(EntityPlayerMP a);
+	public abstract void b();
 	
 	/**
 	 * 
 	 */
-	public void b();
+	public abstract void b(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayerMP a);
+	public abstract void b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void b(java.lang.String a);
-	
-	/**
-	 * bans the given IP string
-	 */
-	 void banIP(java.lang.String a);
+	public abstract java.lang.String c();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String c();
+	public abstract void c(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void c(EntityPlayerMP a);
+	public abstract void c(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void c(java.lang.String a);
-	
-	/**
-	 * *
-	 */
-	 EntityPlayerMP func_9242(EntityPlayerMP a);
+	public abstract void d();
 	
 	/**
 	 * 
 	 */
-	public void d();
+	public abstract EntityPlayerMP d(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public EntityPlayerMP d(EntityPlayerMP a);
+	public abstract void d(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void d(java.lang.String a);
-	
-	/**
-	 * ops the player given
-	 */
-	 void opPlayer(java.lang.String a);
+	public abstract void e(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	private void e();
+	public abstract void f(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void e(java.lang.String a);
-	
-	/**
-	 * deops the player given
-	 */
-	 void deopPlayer(java.lang.String a);
+	public abstract boolean g(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	private void f();
+	public abstract EntityPlayerMP h(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void f(java.lang.String a);
-	
-	/**
-	 * Returns true if the player is an OP, false otherwise.
-	 */
-	 boolean isOp(java.lang.String a);
-	
-	/**
-	 * 
-	 */
-	private void g();
-	
-	/**
-	 * 
-	 */
-	public boolean g(java.lang.String a);
-	
-	/**
-	 * gets the player entity for the player with the name specified
-	 */
-	 EntityPlayerMP getPlayerEntity(java.lang.String a);
-	
-	/**
-	 * 
-	 */
-	private void h();
-	
-	/**
-	 * 
-	 */
-	public EntityPlayerMP h(java.lang.String a);
-	
-	/**
-	 * loads the ops from the ops file
-	 */
-	 void loadOps();
-	
-	/**
-	 * 
-	 */
-	private void i();
-	
-	/**
-	 * 
-	 */
-	public void i(java.lang.String a);
-	
-	/**
-	 * saves the ops to the ops file
-	 */
-	 void saveOps();
-	
-	/**
-	 * 
-	 */
-	private void j();
+	public abstract void i(java.lang.String a);
 
 }

@@ -2,59 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockPortal extends BlockBreakable{
+public abstract class BlockPortal extends BlockBreakable {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	 boolean isOpaqueCube();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract void a(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, Entity e);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract void a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(IBlockAccess a, int b, int c, int d);
+	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e);
-	
-	/**
-	 * Checks to see if this location is valid to create a portal and will return True if it does. Args: world, x, y, z
-	 */
-	 boolean tryToCreatePortal(World a, int b, int c, int d);
+	public abstract boolean a_(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a_(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 
 }

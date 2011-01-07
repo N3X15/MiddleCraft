@@ -2,44 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockTNT extends Block{
+public abstract class BlockTNT extends Block {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * 
 	 */
-	 int getBlockTextureFromSide(int a);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract void a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
-	
-	/**
-	 * Called upon the block being destroyed by an explosion
-	 */
-	 void onBlockDestroyedByExplosion(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public void c(World a, int b, int c, int d);
+	public abstract void c(World a, int b, int c, int d);
 
 }

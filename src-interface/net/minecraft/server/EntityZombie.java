@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityZombie extends EntityMobs{
+public abstract class EntityZombie extends EntityMobs {
 	// FIELDS
 	
 	// METHODS
@@ -10,26 +10,26 @@ public abstract class EntityZombie extends EntityMobs{
 	/**
 	 * 
 	 */
-	public void G();
+	public abstract void G();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d();
+	protected abstract java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	protected int g();
+	protected abstract int g();
 
 }

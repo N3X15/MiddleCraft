@@ -2,39 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MaterialLogic extends Material{
+public abstract class MaterialLogic extends Material {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean func_216();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
-	
-	/**
-	 * Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
-	 */
-	 boolean getCanBlockGrass();
+	public abstract boolean b();
 	
 	/**
 	 * 
 	 */
-	public boolean b();
-	
-	/**
-	 * *
-	 */
-	 boolean func_218();
-	
-	/**
-	 * 
-	 */
-	public boolean c();
+	public abstract boolean c();
 
 }

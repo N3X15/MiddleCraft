@@ -2,15 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IChunkProvider{
+public abstract interface IChunkProvider {
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * Checks to see if a chunk exists at x, y
-	 */
-	 boolean chunkExists(int a, int b);
 	
 	/**
 	 * 
@@ -31,11 +26,6 @@ public abstract interface interface IChunkProvider{
 	 * 
 	 */
 	public abstract boolean a(boolean a, IProgressUpdate b);
-	
-	/**
-	 * *
-	 */
-	 boolean func_364();
 	
 	/**
 	 * 

@@ -2,61 +2,51 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFish extends Entity{
+public abstract class EntityFish extends Entity {
 	// FIELDS
-	public int a;
-	private int aj;
-	private boolean ak;
-	private int al;
-	private int am;
-	private int an;
-	private int ao;
-	private double ap;
-	private double aq;
-	private double ar;
-	private double as;
-	private double at;
+	public int field_4134;
+	private int field_4132;
+	private boolean field_4129;
+	private int field_6150;
+	private int field_4125;
+	private int field_4124;
+	private int field_6149;
+	private double field_6148;
+	private double field_6147;
+	private double field_6146;
+	private double field_6145;
+	private double field_6144;
 	public EntityPlayer b;
 	public Entity c;
 	private int d;
 	private int e;
-	private ()V setChunkModified;
+	private int field_4126;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_6142(double a, double b, double c, float d, float e);
+	public abstract void a(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, float d, float e);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public void b_();
-	
-	/**
-	 * *
-	 */
-	 int func_6143();
-	
-	/**
-	 * 
-	 */
-	public int c();
+	public abstract int c();
 
 }

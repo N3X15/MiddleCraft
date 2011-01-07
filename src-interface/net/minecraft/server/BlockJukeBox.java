@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockJukeBox extends Block{
+public abstract class BlockJukeBox extends Block {
 	// FIELDS
 	
 	// METHODS
@@ -10,26 +10,21 @@ public abstract class BlockJukeBox extends Block{
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, int e, float f);
+	public abstract void a(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
-	
-	/**
-	 * Ejects the current record inside of the jukebox
-	 */
-	 void ejectRecord(World a, int b, int c, int d, int e);
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void f(World a, int b, int c, int d, int e);
+	public abstract void f(World a, int b, int c, int d, int e);
 
 }

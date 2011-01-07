@@ -2,34 +2,28 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB{
+public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB {
 	// FIELDS
-	private TileEntityFurnace a;
-	private int b;
-	private int c;
-	 ()V setChunkModified;
-	private int h;
+	private TileEntityFurnace field_20139;
+	private int field_20138;
+	private int field_20141;
+	private int field_20140;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_20125();
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a(ICrafting a);
 	
 	/**
 	 * 
 	 */
-	public void a(ICrafting a);
-	
-	/**
-	 * 
-	 */
-	public boolean b(EntityPlayer a);
+	public abstract boolean b(EntityPlayer a);
 
 }

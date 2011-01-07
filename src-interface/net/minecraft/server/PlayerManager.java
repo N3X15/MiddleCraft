@@ -2,84 +2,58 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerManager{
+public abstract class PlayerManager {
 	// FIELDS
-	private java.util.List a;
-	private MCHashTable2 b;
-	private java.util.List c;
-	private net.minecraft.server.MinecraftServer d;
-	 ()V setChunkModified;
+	private java.util.List field_9216;
+	private MCHashTable2 field_9215;
+	private java.util.List field_833;
+	private net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_535(int a, int b, int c);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	private boolean a(int a, int b, int c, int d);
+	abstract static net.minecraft.server.MinecraftServer a(PlayerManager a);
 	
 	/**
 	 * 
 	 */
-	private PlayerInstance a(int a, int b, boolean c);
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayerMP a);
+	public abstract void b(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	static net.minecraft.server.MinecraftServer a(PlayerManager a);
-	
-	/**
-	 * *
-	 */
-	 MCHashTable2 func_539(PlayerManager a);
+	abstract static MCHashTable2 b(PlayerManager a);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract void c(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayerMP a);
-	
-	/**
-	 * 
-	 */
-	static MCHashTable2 b(PlayerManager a);
-	
-	/**
-	 * *
-	 */
-	 java.util.List func_533(PlayerManager a);
-	
-	/**
-	 * 
-	 */
-	public void c(EntityPlayerMP a);
-	
-	/**
-	 * 
-	 */
-	static java.util.List c(PlayerManager a);
+	abstract static java.util.List c(PlayerManager a);
 
 }

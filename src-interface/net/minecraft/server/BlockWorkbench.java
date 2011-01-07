@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockWorkbench extends Block{
+public abstract class BlockWorkbench extends Block {
 	// FIELDS
 	
 	// METHODS
@@ -10,11 +10,11 @@ public abstract class BlockWorkbench extends Block{
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 
 }

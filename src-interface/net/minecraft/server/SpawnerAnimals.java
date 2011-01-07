@@ -2,26 +2,20 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class SpawnerAnimals{
+public abstract final class SpawnerAnimals {
 	// FIELDS
-	private static java.util.Set a;
-	 ()V setChunkModified;
+	private static java.util.Set eligibleChunksForSpawning;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 ChunkPosition getRandomSpawningPointInChunk(World a, int b, int c);
+	public abstract static int a(World a);
 	
 	/**
 	 * 
 	 */
-	public static final int a(World a);
-	
-	/**
-	 * 
-	 */
-	protected static ChunkPosition a(World a, int b, int c);
+	protected abstract static ChunkPosition a(World a, int b, int c);
 
 }

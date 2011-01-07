@@ -1,3 +1,3 @@
 @echo off
-java -jar staged/middlecraft.jar GetServerInterfaces
+java -Xmx1024M -Xms1024M -jar staged/middlecraft.jar GetServerInterfaces
 pause

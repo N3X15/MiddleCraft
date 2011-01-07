@@ -2,83 +2,68 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderHell{
+public abstract class ChunkProviderHell {
 	// FIELDS
-	public NoiseGeneratorOctaves a;
-	public NoiseGeneratorOctaves b;
-	 double[] c;
-	 double[] d;
-	 double[] e;
-	 ()V setChunkModified;
-	 double[] g;
-	private java.util.Random h;
-	private NoiseGeneratorOctaves i;
-	private NoiseGeneratorOctaves j;
-	private NoiseGeneratorOctaves k;
-	private NoiseGeneratorOctaves l;
-	private NoiseGeneratorOctaves m;
-	private World n;
-	private double[] o;
-	private double[] p;
-	private double[] q;
-	private double[] r;
-	private MapGenBase s;
+	public NoiseGeneratorOctaves field_4248;
+	public NoiseGeneratorOctaves field_4247;
+	 double[] field_4246;
+	 double[] field_4245;
+	 double[] field_4244;
+	 double[] field_4243;
+	 double[] field_4242;
+	private java.util.Random field_4241;
+	private NoiseGeneratorOctaves field_4240;
+	private NoiseGeneratorOctaves field_4239;
+	private NoiseGeneratorOctaves field_4238;
+	private NoiseGeneratorOctaves field_4237;
+	private NoiseGeneratorOctaves field_4236;
+	private World field_4235;
+	private double[] field_4234;
+	private double[] field_4233;
+	private double[] field_4232;
+	private double[] field_4231;
+	private MapGenBase field_4230;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 double[] func_4060(double[] a, int b, int c, int d, int e, int f, int g);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b);
+	public abstract void a(int a, int b, byte[] c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, byte[] c);
+	public abstract void a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(IChunkProvider a, int b, int c);
+	public abstract boolean a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(boolean a, IProgressUpdate b);
+	public abstract boolean b();
 	
 	/**
 	 * 
 	 */
-	private double[] a(double[] a, int b, int c, int d, int e, int f, int g);
-	
-	/**
-	 * *
-	 */
-	 void func_4061(int a, int b, byte[] c);
+	public abstract Chunk b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean b();
-	
-	/**
-	 * 
-	 */
-	public Chunk b(int a, int b);
-	
-	/**
-	 * 
-	 */
-	public void b(int a, int b, byte[] c);
+	public abstract void b(int a, int b, byte[] c);
 
 }

@@ -2,96 +2,26 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class MinecartTrackLogic{
+abstract class MinecartTrackLogic {
 	// FIELDS
-	final BlockMinecartTrack a;
-	private World b;
-	private int c;
-	private int d;
-	private int e;
-	private ()V setChunkModified;
-	private java.util.List g;
+	final BlockMinecartTrack field_888;
+	private World worldObj;
+	private int field_893;
+	private int field_892;
+	private int field_891;
+	private int field_890;
+	private java.util.List field_889;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean func_589(int a, int b, int c);
+	abstract static int a(MinecartTrackLogic a);
 	
 	/**
 	 * 
 	 */
-	private void a();
-	
-	/**
-	 * 
-	 */
-	private boolean a(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	static int a(MinecartTrackLogic a);
-	
-	/**
-	 * 
-	 */
-	private MinecartTrackLogic a(ChunkPosition a);
-	
-	/**
-	 * 
-	 */
-	public void a(boolean a);
-	
-	/**
-	 * *
-	 */
-	 boolean func_590(MinecartTrackLogic a);
-	
-	/**
-	 * 
-	 */
-	private void b();
-	
-	/**
-	 * 
-	 */
-	private boolean b(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	private boolean b(MinecartTrackLogic a);
-	
-	/**
-	 * *
-	 */
-	 boolean func_592(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	private int c();
-	
-	/**
-	 * 
-	 */
-	private boolean c(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	private boolean c(MinecartTrackLogic a);
-	
-	/**
-	 * *
-	 */
-	 void func_598(MinecartTrackLogic a);
-	
-	/**
-	 * 
-	 */
-	private void d(MinecartTrackLogic a);
+	public abstract void a(boolean a);
 
 }

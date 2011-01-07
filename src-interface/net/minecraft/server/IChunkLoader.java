@@ -2,15 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface IChunkLoader{
+public abstract interface IChunkLoader {
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * *
-	 */
-	 Chunk func_659(World a, int b, int c);
 	
 	/**
 	 * 
@@ -26,11 +21,6 @@ public abstract interface interface IChunkLoader{
 	 * 
 	 */
 	public abstract void a(World a, Chunk b);
-	
-	/**
-	 * *
-	 */
-	 void func_4104(World a, Chunk b);
 	
 	/**
 	 * 

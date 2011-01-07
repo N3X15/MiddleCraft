@@ -2,15 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemArmor extends Item{
+public abstract class ItemArmor extends Item {
 	// FIELDS
-	public final int a;
-	public final int bb;
-	public final int bc;
-	public final int bd;
-	private static final int[] be;
-	private static final int[] bf;
-	 ()V setChunkModified;
+	public final int field_254;
+	public final int field_257;
+	public final int field_256;
+	public final int field_255;
+	private static final int[] field_259;
+	private static final int[] field_258;
 	
 	// METHODS
 

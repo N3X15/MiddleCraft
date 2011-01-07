@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class NetworkWriterThread extends java.lang.Thread{
+abstract class NetworkWriterThread extends java.lang.Thread {
 	// FIELDS
-	final NetworkManager a;
-	 ()V setChunkModified;
+	final NetworkManager netManager;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void ju_run();
-	
-	/**
 	 * 
 	 */
-	public void run();
+	public abstract void run();
 
 }

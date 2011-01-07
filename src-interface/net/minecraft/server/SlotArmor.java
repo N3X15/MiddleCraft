@@ -2,27 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class SlotArmor extends Slot{
+abstract class SlotArmor extends Slot {
 	// FIELDS
-	final int a;
-	final CraftingInventoryPlayerCB b;
-	 ()V setChunkModified;
+	final int field_20102;
+	final CraftingInventoryPlayerCB field_20101;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 int func_20093();
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
-	
-	/**
-	 * 
-	 */
-	public boolean a(ItemStack a);
+	public abstract boolean a(ItemStack a);
 
 }

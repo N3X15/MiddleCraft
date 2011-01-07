@@ -2,57 +2,42 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkListenThread{
+public abstract class NetworkListenThread {
 	// FIELDS
-	public static java.util.logging.Logger a;
-	public volatile boolean b;
-	public net.minecraft.server.MinecraftServer c;
-	private java.net.ServerSocket d;
-	private java.lang.Thread e;
-	private ()V setChunkModified;
-	private java.util.ArrayList g;
-	private java.util.ArrayList h;
+	public static java.util.logging.Logger logger;
+	public volatile boolean field_973;
+	public net.minecraft.server.MinecraftServer mcServer;
+	private java.net.ServerSocket serverSocket;
+	private java.lang.Thread networkAcceptThread;
+	private int field_977;
+	private java.util.ArrayList field_976;
+	private java.util.ArrayList field_975;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_4108(NetServerHandler a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	abstract static java.net.ServerSocket a(NetworkListenThread a);
 	
 	/**
 	 * 
 	 */
-	static java.net.ServerSocket a(NetworkListenThread a);
+	abstract static void a(NetworkListenThread a, NetLoginHandler b);
 	
 	/**
 	 * 
 	 */
-	static void a(NetworkListenThread a, NetLoginHandler b);
+	public abstract void a(NetServerHandler a);
 	
 	/**
 	 * 
 	 */
-	private void a(NetLoginHandler a);
-	
-	/**
-	 * 
-	 */
-	public void a(NetServerHandler a);
-	
-	/**
-	 * *
-	 */
-	 int func_712(NetworkListenThread a);
-	
-	/**
-	 * 
-	 */
-	static int b(NetworkListenThread a);
+	abstract static int b(NetworkListenThread a);
 
 }

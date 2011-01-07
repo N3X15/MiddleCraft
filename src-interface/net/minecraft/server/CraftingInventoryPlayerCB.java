@@ -2,38 +2,27 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class CraftingInventoryPlayerCB extends CraftingInventoryCB{
+public abstract class CraftingInventoryPlayerCB extends CraftingInventoryCB {
 	// FIELDS
-	public InventoryCrafting a;
-	public IInventory b;
-	public boolean c;
-	 ()V setChunkModified;
+	public InventoryCrafting field_20143;
+	public IInventory field_20142;
+	public boolean field_20144;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_20121(IInventory a);
+	public abstract void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a);
+	public abstract void a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a);
-	
-	/**
-	 * *
-	 */
-	 boolean func_20126(EntityPlayer a);
-	
-	/**
-	 * 
-	 */
-	public boolean b(EntityPlayer a);
+	public abstract boolean b(EntityPlayer a);
 
 }

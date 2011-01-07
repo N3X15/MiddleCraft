@@ -2,22 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class ServerGuiCommandListener{
+abstract class ServerGuiCommandListener {
 	// FIELDS
-	final javax.swing.JTextField a;
-	final ServerGUI b;
-	 ()V setChunkModified;
+	final javax.swing.JTextField textField;
+	final ServerGUI mcServerGui;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void ae_actionPerformed(java.awt.event.ActionEvent a);
-	
-	/**
 	 * 
 	 */
-	public void actionPerformed(java.awt.event.ActionEvent a);
+	public abstract void actionPerformed(java.awt.event.ActionEvent a);
 
 }

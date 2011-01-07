@@ -2,21 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ThreadCommandReader extends java.lang.Thread{
+public abstract class ThreadCommandReader extends java.lang.Thread {
 	// FIELDS
-	final net.minecraft.server.MinecraftServer a;
-	 ()V setChunkModified;
+	final net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void cl_run();
-	
-	/**
 	 * 
 	 */
-	public void run();
+	public abstract void run();
 
 }

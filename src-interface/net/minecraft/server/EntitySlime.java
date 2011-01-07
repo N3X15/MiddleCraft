@@ -2,79 +2,73 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySlime extends EntityLiving{
+public abstract class EntitySlime extends EntityLiving {
 	// FIELDS
-	public float a;
-	public float b;
-	public int c;
-	private int d;
-	 ()V setChunkModified;
+	public float field_401;
+	public float field_400;
+	public int field_403;
+	private int field_402;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_160(int a);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract void a(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(int a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayer a);
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public void b_();
+	protected abstract void c();
 	
 	/**
 	 * 
 	 */
-	protected void c();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	protected abstract int g();
 	
 	/**
 	 * 
 	 */
-	protected int g();
+	protected abstract float h();
 	
 	/**
 	 * 
 	 */
-	protected float h();
-	
-	/**
-	 * 
-	 */
-	public void l();
+	public abstract void l();
 
 }

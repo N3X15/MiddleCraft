@@ -2,51 +2,35 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSand extends Block{
+public abstract class BlockSand extends Block {
 	// FIELDS
-	public static boolean a;
-	 ()V setChunkModified;
+	public static boolean fallInstantly;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * Checks to see if the sand can fall into the block below it
-	 */
-	 boolean canFallBelow(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public static boolean g(World a, int b, int c, int d);
-	
-	/**
-	 * If there is space to fall below will start this block falling
-	 */
-	 void tryToFall(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void h(World a, int b, int c, int d);
+	public abstract static boolean g(World a, int b, int c, int d);
 
 }

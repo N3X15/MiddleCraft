@@ -2,34 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class CompressedStreamTools{
+public abstract class CompressedStreamTools {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 NBTTagCompound func_770(java.io.InputStream a);
+	public abstract static void a(NBTTagCompound a, java.io.DataOutput b);
 	
 	/**
 	 * 
 	 */
-	public static void a(NBTTagCompound a, java.io.DataOutput b);
+	public abstract static void a(NBTTagCompound a, java.io.OutputStream b);
 	
 	/**
 	 * 
 	 */
-	public static void a(NBTTagCompound a, java.io.OutputStream b);
+	public abstract static NBTTagCompound a(java.io.DataInput a);
 	
 	/**
 	 * 
 	 */
-	public static NBTTagCompound a(java.io.DataInput a);
-	
-	/**
-	 * 
-	 */
-	public static NBTTagCompound a(java.io.InputStream a);
+	public abstract static NBTTagCompound a(java.io.InputStream a);
 
 }

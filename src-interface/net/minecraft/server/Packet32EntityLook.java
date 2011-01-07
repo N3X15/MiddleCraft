@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet32EntityLook extends Packet30Entity{
+public abstract class Packet32EntityLook extends Packet30Entity {
 	// FIELDS
 	
 	// METHODS
@@ -10,16 +10,16 @@ public abstract class Packet32EntityLook extends Packet30Entity{
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a);
+	public abstract void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a);
+	public abstract void a(java.io.DataOutputStream a);
 
 }

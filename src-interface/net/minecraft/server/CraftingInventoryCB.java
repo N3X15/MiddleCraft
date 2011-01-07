@@ -2,66 +2,61 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class CraftingInventoryCB{
+public abstract class CraftingInventoryCB {
 	// FIELDS
-	private short a;
-	private java.util.Set b;
-	public java.util.List d;
-	public java.util.List e;
-	public ()V setChunkModified;
-	protected java.util.List g;
+	private short field_20132;
+	private java.util.Set field_20131;
+	public java.util.List field_20136;
+	public java.util.List field_20135;
+	public int field_20134;
+	protected java.util.List field_20133;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 Slot func_20120(int a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract Slot a(int a);
 	
 	/**
 	 * 
 	 */
-	public Slot a(int a);
+	public abstract ItemStack a(int a, int b, EntityPlayer c);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b, EntityPlayer c);
+	public abstract void a(ICrafting a);
 	
 	/**
 	 * 
 	 */
-	public void a(ICrafting a);
+	protected abstract void a(Slot a);
 	
 	/**
 	 * 
 	 */
-	protected void a(Slot a);
+	public abstract void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a);
+	public abstract void a(EntityPlayer a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a, boolean b);
+	public abstract void a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a);
-	
-	/**
-	 * 
-	 */
-	public Slot a(IInventory a, int b);
+	public abstract Slot a(IInventory a, int b);
 	
 	/**
 	 * 
@@ -69,13 +64,8 @@ public abstract class CraftingInventoryCB{
 	public abstract boolean b(EntityPlayer a);
 	
 	/**
-	 * *
-	 */
-	 boolean func_20124(EntityPlayer a);
-	
-	/**
 	 * 
 	 */
-	public boolean c(EntityPlayer a);
+	public abstract boolean c(EntityPlayer a);
 
 }

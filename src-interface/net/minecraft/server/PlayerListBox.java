@@ -2,22 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerListBox extends javax.swing.JList{
+public abstract class PlayerListBox extends javax.swing.JList {
 	// FIELDS
-	private net.minecraft.server.MinecraftServer a;
-	private int b;
-	 ()V setChunkModified;
+	private net.minecraft.server.MinecraftServer mcServer;
+	private int updateCounter;
 	
 	// METHODS
 	
 	/**
-	 * Updates the Jlist with a new model.
-	 */
-	 void update();
-	
-	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a();
 
 }

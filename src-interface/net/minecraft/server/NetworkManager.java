@@ -2,142 +2,97 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkManager{
+public abstract class NetworkManager {
 	// FIELDS
-	public static final java.lang.Object a;
-	public static int b;
-	public static int c;
-	public int d;
-	private java.lang.Object e;
-	private ()V setChunkModified;
-	private final java.net.SocketAddress g;
-	private java.io.DataInputStream h;
-	private java.io.DataOutputStream i;
-	private boolean j;
-	private java.util.List k;
-	private java.util.List l;
-	private java.util.List m;
-	private NetHandler n;
-	private boolean o;
-	private java.lang.Thread p;
-	private java.lang.Thread q;
-	private boolean r;
-	private java.lang.String s;
-	private java.lang.Object[] t;
-	private int u;
-	private int v;
-	private int w;
+	public static final java.lang.Object threadSyncObject;
+	public static int numReadThreads;
+	public static int numWriteThreads;
+	public int chunkDataSendCounter;
+	private java.lang.Object sendQueueLock;
+	private java.net.Socket networkSocket;
+	private final java.net.SocketAddress field_12032;
+	private java.io.DataInputStream socketInputStream;
+	private java.io.DataOutputStream socketOutputStream;
+	private boolean isRunning;
+	private java.util.List readPackets;
+	private java.util.List dataPackets;
+	private java.util.List chunkDataPackets;
+	private NetHandler netHandler;
+	private boolean isServerTerminating;
+	private java.lang.Thread writeThread;
+	private java.lang.Thread readThread;
+	private boolean isTerminating;
+	private java.lang.String terminationReason;
+	private java.lang.Object[] field_20176;
+	private int timeSinceLastRead;
+	private int sendQueueByteLength;
+	private int field_20175;
 	
 	// METHODS
 	
 	/**
-	 * Adds the packet to the correct send queue (chunk data packets go to a separate queue).
+	 * 
 	 */
-	 void addToSendQueue(Packet a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	abstract static boolean a(NetworkManager a);
 	
 	/**
 	 * 
 	 */
-	static boolean a(NetworkManager a);
+	public abstract void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a);
+	public abstract transient void a(java.lang.String a, java.lang.Object[] b);
 	
 	/**
 	 * 
 	 */
-	private void a(java.lang.Exception a);
+	public abstract void a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public transient void a(java.lang.String a, java.lang.Object[] b);
+	public abstract java.net.SocketAddress b();
 	
 	/**
 	 * 
 	 */
-	public void a(Packet a);
-	
-	/**
-	 * Returns the socket address of the remote side. Server-only.
-	 */
-	 java.net.SocketAddress getRemoteAddress();
+	abstract static boolean b(NetworkManager a);
 	
 	/**
 	 * 
 	 */
-	public java.net.SocketAddress b();
+	public abstract void c();
 	
 	/**
 	 * 
 	 */
-	static boolean b(NetworkManager a);
-	
-	/**
-	 * Static accessor to readPacket.
-	 */
-	 void readNetworkPacket(NetworkManager a);
+	abstract static void c(NetworkManager a);
 	
 	/**
 	 * 
 	 */
-	public void c();
+	public abstract int d();
 	
 	/**
 	 * 
 	 */
-	static void c(NetworkManager a);
-	
-	/**
-	 * Returns the number of chunk data packets waiting to be sent.
-	 */
-	 int getNumChunkDataPackets();
+	abstract static void d(NetworkManager a);
 	
 	/**
 	 * 
 	 */
-	public int d();
+	abstract static java.lang.Thread e(NetworkManager a);
 	
 	/**
 	 * 
 	 */
-	static void d(NetworkManager a);
-	
-	/**
-	 * Returns the read thread.
-	 */
-	 java.lang.Thread getReadThread(NetworkManager a);
-	
-	/**
-	 * 
-	 */
-	private void e();
-	
-	/**
-	 * 
-	 */
-	static java.lang.Thread e(NetworkManager a);
-	
-	/**
-	 * Returns the write thread.
-	 */
-	 java.lang.Thread getWriteThread(NetworkManager a);
-	
-	/**
-	 * 
-	 */
-	private void f();
-	
-	/**
-	 * 
-	 */
-	static java.lang.Thread f(NetworkManager a);
+	abstract static java.lang.Thread f(NetworkManager a);
 
 }

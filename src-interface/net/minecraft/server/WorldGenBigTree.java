@@ -2,119 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenBigTree extends WorldGenerator{
+public abstract class WorldGenBigTree extends WorldGenerator {
 	// FIELDS
-	static final byte[] a;
-	 java.util.Random b;
-	 World c;
-	 int[] d;
-	 int e;
-	 ()V setChunkModified;
-	 double g;
-	 double h;
-	 double i;
-	 double j;
-	 double k;
-	 int l;
-	 int m;
-	 int n;
-	 int[][] o;
+	static final byte[] field_760;
+	 java.util.Random field_759;
+	 World worldObj;
+	 int[] field_757;
+	 int field_756;
+	 int field_755;
+	 double field_754;
+	 double field_753;
+	 double field_752;
+	 double field_751;
+	 double field_750;
+	 int field_749;
+	 int field_748;
+	 int field_747;
+	 int[][] field_746;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_423(int a, int b, int c);
+	public abstract void a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	 void a();
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	 float a(int a);
-	
-	/**
-	 * 
-	 */
-	 void a(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	 void a(int a, int b, int c, float d, byte e, int f);
-	
-	/**
-	 * 
-	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	 int a(int[] a, int[] b);
-	
-	/**
-	 * 
-	 */
-	 void a(int[] a, int[] b, int c);
-	
-	/**
-	 * *
-	 */
-	 void func_421();
-	
-	/**
-	 * 
-	 */
-	 void b();
-	
-	/**
-	 * 
-	 */
-	 float b(int a);
-	
-	/**
-	 * *
-	 */
-	 boolean func_430(int a);
-	
-	/**
-	 * 
-	 */
-	 void c();
-	
-	/**
-	 * 
-	 */
-	 boolean c(int a);
-	
-	/**
-	 * *
-	 */
-	 void func_428();
-	
-	/**
-	 * 
-	 */
-	 void d();
-	
-	/**
-	 * *
-	 */
-	 boolean func_422();
-	
-	/**
-	 * 
-	 */
-	 boolean e();
+	public abstract boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

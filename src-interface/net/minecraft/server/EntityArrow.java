@@ -2,48 +2,43 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityArrow extends Entity{
+public abstract class EntityArrow extends Entity {
 	// FIELDS
-	public int a;
-	private boolean aj;
-	private int ak;
-	private int al;
-	public EntityLiving b;
-	private int c;
-	private int d;
-	private int e;
-	private ()V setChunkModified;
+	public int field_9184;
+	private boolean field_9181;
+	private int field_438;
+	private int field_437;
+	public EntityLiving field_439;
+	private int field_9183;
+	private int field_9182;
+	private int field_9180;
+	private int field_9179;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_177(double a, double b, double c, float d, float e);
+	public abstract void a(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, float d, float e);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayer a);
-	
-	/**
-	 * 
-	 */
-	public void b_();
+	public abstract void b_();
 
 }

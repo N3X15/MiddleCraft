@@ -2,31 +2,25 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NibbleArray{
+public abstract class NibbleArray {
 	// FIELDS
-	public final byte[] a;
-	 ()V setChunkModified;
+	public final byte[] data;
 	
 	// METHODS
 	
 	/**
-	 * Returns the nibble of data corresponding to the passed in i,j,k. j is at most 6 bits, k is at most 4.
+	 * 
 	 */
-	 int getNibble(int a, int b, int c);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract int a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c, int d);
+	public abstract void a(int a, int b, int c, int d);
 
 }

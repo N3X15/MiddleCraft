@@ -2,95 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MCHashTable2{
+public abstract class MCHashTable2 {
 	// FIELDS
-	private transient cr[] a;
-	private transient int b;
-	private int c;
-	private final float d;
-	private transient volatile int e;
-	 ()V setChunkModified;
+	private transient cr[] field_949;
+	private transient int field_948;
+	private int field_952;
+	private final float field_951;
+	private transient volatile int field_950;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_673(cr[] a);
+	private abstract static int a(int a);
 	
 	/**
 	 * 
 	 */
-	private static int a(int a);
+	private abstract static int a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	private static int a(int a, int b);
+	public abstract java.lang.Object a(long a);
 	
 	/**
 	 * 
 	 */
-	private void a(int a, long b, java.lang.Object c, int d);
+	public abstract void a(long a, java.lang.Object b);
 	
 	/**
 	 * 
 	 */
-	public java.lang.Object a(long a);
+	public abstract java.lang.Object b(long a);
 	
 	/**
 	 * 
 	 */
-	public void a(long a, java.lang.Object b);
+	abstract static int d(long a);
 	
 	/**
 	 * 
 	 */
-	private void a(cr[] a);
-	
-	/**
-	 * *
-	 */
-	 java.lang.Object func_670(long a);
-	
-	/**
-	 * 
-	 */
-	private void b(int a);
-	
-	/**
-	 * 
-	 */
-	public java.lang.Object b(long a);
-	
-	/**
-	 * *
-	 */
-	 HashEntry2 func_672(long a);
-	
-	/**
-	 * 
-	 */
-	final HashEntry2 c(long a);
-	
-	/**
-	 * *
-	 */
-	 int func_674(long a);
-	
-	/**
-	 * 
-	 */
-	static int d(long a);
-	
-	/**
-	 * *
-	 */
-	 int func_671(long a);
-	
-	/**
-	 * 
-	 */
-	private static int e(long a);
+	private abstract static int e(long a);
 
 }

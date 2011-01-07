@@ -2,41 +2,41 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldChunkManager{
+public abstract class WorldChunkManager {
 	// FIELDS
-	public double[] a;
-	public double[] b;
-	public double[] c;
-	public jq[] d;
-	private NoiseGeneratorOctaves2 e;
-	private ()V setChunkModified;
-	private NoiseGeneratorOctaves2 g;
+	public double[] temperature;
+	public double[] humidity;
+	public double[] field_4257;
+	public jq[] field_4256;
+	private NoiseGeneratorOctaves2 field_4255;
+	private NoiseGeneratorOctaves2 field_4254;
+	private NoiseGeneratorOctaves2 field_4253;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public MobSpawnerBase a(int a, int b);
+	public abstract MobSpawnerBase a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public jq[] a(int a, int b, int c, int d);
+	public abstract jq[] a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public MobSpawnerBase a(ChunkCoordIntPair a);
+	public abstract MobSpawnerBase a(ChunkCoordIntPair a);
 	
 	/**
 	 * 
 	 */
-	public double[] a(double[] a, int b, int c, int d, int e);
+	public abstract double[] a(double[] a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public jq[] a(jq[] a, int b, int c, int d, int e);
+	public abstract jq[] a(jq[] a, int b, int c, int d, int e);
 
 }

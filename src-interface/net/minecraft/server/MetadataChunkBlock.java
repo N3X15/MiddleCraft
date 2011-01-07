@@ -2,31 +2,26 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MetadataChunkBlock{
+public abstract class MetadataChunkBlock {
 	// FIELDS
-	public final EnumSkyBlock a;
-	public int b;
-	public int c;
-	public int d;
-	public int e;
-	public ()V setChunkModified;
-	public int g;
+	public final EnumSkyBlock field_957;
+	public int field_956;
+	public int field_962;
+	public int field_961;
+	public int field_960;
+	public int field_959;
+	public int field_958;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_4107(World a);
+	public abstract boolean a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d, int e, int f);
-	
-	/**
-	 * 
-	 */
-	public void a(World a);
+	public abstract void a(World a);
 
 }

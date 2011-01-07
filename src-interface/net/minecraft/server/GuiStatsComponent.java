@@ -2,38 +2,22 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class GuiStatsComponent extends javax.swing.JComponent{
+public abstract class GuiStatsComponent extends javax.swing.JComponent {
 	// FIELDS
-	private int[] a;
-	private int b;
-	private java.lang.String[] c;
-	 ()V setChunkModified;
+	private int[] memoryUse;
+	private int updateCounter;
+	private java.lang.String[] displayStrings;
 	
 	// METHODS
 	
 	/**
-	 * Public static accessor to call updateStats.
+	 * 
 	 */
-	 void update(GuiStatsComponent a);
+	abstract static void a(GuiStatsComponent a);
 	
 	/**
 	 * 
 	 */
-	private void a();
-	
-	/**
-	 * 
-	 */
-	static void a(GuiStatsComponent a);
-	
-	/**
-	 * *
-	 */
-	 void kg_paint(java.awt.Graphics a);
-	
-	/**
-	 * 
-	 */
-	public void paint(java.awt.Graphics a);
+	public abstract void paint(java.awt.Graphics a);
 
 }

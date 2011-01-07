@@ -86,7 +86,7 @@ public class MCClassInfo {
 		searge=(String)o.get("searge");
 		name=(String)o.get("class");
 		if(o.containsKey("superclass"))
-			name=(String)o.get("superclass");
+			superClass=(String)o.get("superclass");
 		if(o.containsKey("modifiers"))
 			modifiers=(Integer)o.get("modifiers");
 		
@@ -97,7 +97,10 @@ public class MCClassInfo {
 		
 		for(Object _f : ((Map<String,Object>)o.get("fields")).values()) {
 			if(_f instanceof Map<?,?>)
-				addField(new MCFieldInfo((Map<String,Object>)_f));
+			{
+				MCFieldInfo f = new MCFieldInfo((Map<String,Object>)_f);
+				addField(f);
+			}
 		}
 		
 	}
@@ -171,7 +174,7 @@ public class MCClassInfo {
 		if(!superClass.equals("java.lang.Object")&&!superClass.equals("*")) {
 			sb.append(String.format(" extends %s", Mappings.getNewClassName(superClass)));
 		}
-		sb.append("{\n\t// FIELDS");
+		sb.append(" {\n\t// FIELDS");
 		List<String> fieldKeys = new ArrayList<String>(fields.keySet());
 		Collections.sort(fieldKeys);
 		for(String fi : fieldKeys) {
@@ -186,7 +189,7 @@ public class MCClassInfo {
 			sb.append(m.toAbstractJava(cp));
 		}
 		sb.append("\n\n}\n");
-		return sb.toString();
+		return sb.toString().replace("interface interface","interface");
 	}
 
 	public void setClassModifiers(int m) {
@@ -223,15 +226,22 @@ public class MCClassInfo {
 		Map<String,Object> c = new HashMap<String,Object>();
 		Map<String,Object> m = new HashMap<String,Object>();
 		for(MCMethodInfo _m : methods.values()) {
-			m.put(_m.name, _m.toMap());
+			String name = _m.name;
+			if(name.isEmpty())
+				name=_m.searge;
+			m.put(name, _m.toMap());
 		}
 		Map<String,Object> f = new HashMap<String,Object>();
-		for(MCMethodInfo _f : methods.values()) {
-			f.put(_f.name, _f.toMap());
+		for(MCFieldInfo _f : fields.values()) {
+			String name = _f.name;
+			if(name.isEmpty())
+				name=_f.searge;
+			f.put(name, _f.toMap());
 		}
 
 		c.put("class",name);
 		c.put("fields",f);
+		c.put("methods",m);
 		c.put("searge",searge);
 		c.put("notch",realName);
 		c.put("superclass",superClass);

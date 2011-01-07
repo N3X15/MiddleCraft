@@ -2,22 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class ThreadLoginVerifier extends java.lang.Thread{
+abstract class ThreadLoginVerifier extends java.lang.Thread {
 	// FIELDS
-	final Packet1Login a;
-	final NetLoginHandler b;
-	 ()V setChunkModified;
+	final Packet1Login loginPacket;
+	final NetLoginHandler loginHandler;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	 void ei_run();
-	
-	/**
 	 * 
 	 */
-	public void run();
+	public abstract void run();
 
 }

@@ -2,40 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet1Login extends Packet{
+public abstract class Packet1Login extends Packet {
 	// FIELDS
-	public int a;
-	public java.lang.String b;
-	public java.lang.String c;
-	public long d;
-	public byte e;
-	 ()V setChunkModified;
+	public int protocolVersion;
+	public java.lang.String username;
+	public java.lang.String password;
+	public long field_4026;
+	public byte field_4025;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	 int getPacketSize();
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a);
+	public abstract void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a);
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a);
+	public abstract void a(java.io.DataOutputStream a);
 
 }

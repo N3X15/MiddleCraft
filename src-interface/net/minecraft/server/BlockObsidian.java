@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockObsidian extends BlockStone{
+public abstract class BlockObsidian extends BlockStone {
 	// FIELDS
 	
 	// METHODS
@@ -10,11 +10,11 @@ public abstract class BlockObsidian extends BlockStone{
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b);
+	public abstract int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
+	public abstract int a(java.util.Random a);
 
 }

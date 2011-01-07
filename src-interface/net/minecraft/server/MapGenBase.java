@@ -2,27 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MapGenBase{
+public abstract class MapGenBase {
 	// FIELDS
-	protected int a;
-	protected java.util.Random b;
-	 ()V setChunkModified;
+	protected int field_947;
+	protected java.util.Random field_946;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_667(IChunkProvider a, World b, int c, int d, byte[] e);
+	public abstract void a(IChunkProvider a, World b, int c, int d, byte[] e);
 	
 	/**
 	 * 
 	 */
-	public void a(IChunkProvider a, World b, int c, int d, byte[] e);
-	
-	/**
-	 * 
-	 */
-	protected void a(World a, int b, int c, int d, int e, byte[] f);
+	protected abstract void a(World a, int b, int c, int d, int e, byte[] f);
 
 }

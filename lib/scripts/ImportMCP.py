@@ -175,7 +175,7 @@ def parse_all_files():
                 nmethods=nmethods+1
                 nmkey = method['csv'] # Use CSV name to determine method key.
                 if nmkey==None:
-                    nmkey=method['notch']
+                    nmkey=method['searge']
                 class_dict_s[ckey]['methods'][nmkey]=method
         for fkey in field_dict_s:
             field = field_dict_s[fkey]
@@ -183,8 +183,8 @@ def parse_all_files():
                 nfields=nfields+1
                 nfkey = field['csv'] # Use CSV name to determine field key.
                 if nfkey==None:
-                    nfkey=field['notch']
-                class_dict_s[ckey]['fields'][nfkey]=method
+                    nfkey=field['searge']
+                class_dict_s[ckey]['fields'][nfkey]=field
                 
     print '*** POST-PROCESSING COMPLETE ***'
     print ' + %d classes' % nclasses

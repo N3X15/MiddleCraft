@@ -2,38 +2,28 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Explosion{
+public abstract class Explosion {
 	// FIELDS
-	public boolean a;
-	public double b;
-	public double c;
-	public double d;
-	public Entity e;
-	public ()V setChunkModified;
-	public java.util.Set g;
-	private java.util.Random h;
-	private World i;
+	public boolean field_12031;
+	public double field_12030;
+	public double field_12029;
+	public double field_12028;
+	public Entity field_12027;
+	public float field_12026;
+	public java.util.Set field_12025;
+	private java.util.Random field_12024;
+	private World field_4310;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_12023();
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
-	
-	/**
-	 * *
-	 */
-	 void func_732();
-	
-	/**
-	 * 
-	 */
-	public void b();
+	public abstract void b();
 
 }

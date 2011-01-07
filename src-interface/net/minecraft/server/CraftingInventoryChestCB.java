@@ -2,16 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class CraftingInventoryChestCB extends CraftingInventoryCB{
+public abstract class CraftingInventoryChestCB extends CraftingInventoryCB {
 	// FIELDS
-	private IInventory a;
-	 ()V setChunkModified;
+	private IInventory field_20137;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean b(EntityPlayer a);
+	public abstract boolean b(EntityPlayer a);
 
 }

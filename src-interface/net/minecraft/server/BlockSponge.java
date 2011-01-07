@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSponge extends Block{
+public abstract class BlockSponge extends Block {
 	// FIELDS
 	
 	// METHODS
@@ -10,11 +10,11 @@ public abstract class BlockSponge extends Block{
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void e(World a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 
 }

@@ -2,48 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntityMobSpawner extends TileEntity{
+public abstract class TileEntityMobSpawner extends TileEntity {
 	// FIELDS
-	public int e;
-	public ()V setChunkModified;
-	public double g;
-	public double h;
+	public int delay;
+	public java.lang.String entityID;
+	public double field_491;
+	public double field_490;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 boolean func_195();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
-	
-	/**
-	 * Sets the delay before a new spawn (base delay of 200 + random number up to 600).
-	 */
-	 void updateDelay();
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	private void b();
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a);
-	
-	/**
-	 * 
-	 */
-	public void e();
+	public abstract void e();
 
 }

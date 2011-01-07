@@ -2,38 +2,37 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityCreature extends EntityLiving{
+public abstract class EntityCreature extends EntityLiving {
 	// FIELDS
-	private PathEntity a;
-	protected Entity aj;
-	protected boolean ak;
-	 ()V setChunkModified;
+	private PathEntity field_388;
+	protected Entity field_389;
+	protected boolean field_387;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	protected float a(int a, int b, int c);
+	protected abstract float a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	protected void a(Entity a, float b);
+	protected abstract void a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	protected void c();
+	protected abstract void c();
 	
 	/**
 	 * 
 	 */
-	protected Entity k();
+	protected abstract Entity k();
 
 }

@@ -2,41 +2,40 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySheep extends EntityAnimals{
+public abstract class EntitySheep extends EntityAnimals {
 	// FIELDS
-	public boolean a;
-	 ()V setChunkModified;
+	public boolean sheared;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b);
+	public abstract boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d();
+	protected abstract java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	protected abstract java.lang.String f();
 
 }

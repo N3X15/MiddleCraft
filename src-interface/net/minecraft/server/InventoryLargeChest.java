@@ -2,78 +2,52 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class InventoryLargeChest{
+public abstract class InventoryLargeChest {
 	// FIELDS
-	private java.lang.String a;
-	private IInventory b;
-	private IInventory c;
-	 ()V setChunkModified;
+	private java.lang.String name;
+	private IInventory upperChest;
+	private IInventory lowerChest;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 ItemStack func_20069(int a, int b);
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a);
+	public abstract ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b);
+	public abstract void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, ItemStack b);
-	
-	/**
-	 * *
-	 */
-	 boolean func_20067(EntityPlayer a);
+	public abstract boolean a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public boolean a_(EntityPlayer a);
-	
-	/**
-	 * *
-	 */
-	 java.lang.String func_20068();
+	public abstract java.lang.String b();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String b();
-	
-	/**
-	 * Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
-	 */
-	 int getInventoryStackLimit();
+	public abstract int c();
 	
 	/**
 	 * 
 	 */
-	public int c();
-	
-	/**
-	 * Called when an the contents of an Inventory change, usually
-	 */
-	 void onInventoryChanged();
-	
-	/**
-	 * 
-	 */
-	public void d();
+	public abstract void d();
 
 }

@@ -2,64 +2,38 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class HashEntry2{
+abstract class HashEntry2 {
 	// FIELDS
-	final long a;
-	 java.lang.Object b;
-	 HashEntry2 c;
-	final int d;
-	 ()V setChunkModified;
+	final long field_1025;
+	 java.lang.Object field_1024;
+	 HashEntry2 field_1027;
+	final int field_1026;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 long func_736();
+	public abstract long a();
 	
 	/**
 	 * 
 	 */
-	public final long a();
-	
-	/**
-	 * *
-	 */
-	 java.lang.Object func_735();
+	public abstract java.lang.Object b();
 	
 	/**
 	 * 
 	 */
-	public final java.lang.Object b();
-	
-	/**
-	 * *
-	 */
-	 boolean cr_equals(java.lang.Object a);
+	public abstract boolean equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public final boolean equals(java.lang.Object a);
-	
-	/**
-	 * *
-	 */
-	 int cr_hashCode();
+	public abstract int hashCode();
 	
 	/**
 	 * 
 	 */
-	public final int hashCode();
-	
-	/**
-	 * *
-	 */
-	 java.lang.String cr_toString();
-	
-	/**
-	 * 
-	 */
-	public final java.lang.String toString();
+	public abstract java.lang.String toString();
 
 }

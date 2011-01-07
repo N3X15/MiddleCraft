@@ -2,36 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSword extends Item{
+public abstract class ItemSword extends Item {
 	// FIELDS
-	private int a;
-	 ()V setChunkModified;
+	private int field_4210;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 int getDamageVsEntity(Entity a);
+	public abstract int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public int a(Entity a);
+	public abstract void a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void a(ItemStack a, int b, int c, int d, int e);
+	public abstract float a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public float a(ItemStack a, Block b);
-	
-	/**
-	 * 
-	 */
-	public void a(ItemStack a, EntityLiving b);
+	public abstract void a(ItemStack a, EntityLiving b);
 
 }

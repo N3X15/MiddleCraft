@@ -2,112 +2,66 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFire extends Block{
+public abstract class BlockFire extends Block {
 	// FIELDS
-	private int[] a;
-	private int[] b;
-	 ()V setChunkModified;
+	private int[] chanceToEncourageFire;
+	private int[] abilityToCatchFire;
 	
 	// METHODS
 	
 	/**
-	 * Sets the burn rate for a block. The larger abilityToCatchFire the more easily it will catch on fire Args: blockID, unknown1, abilityToCatchFire
+	 * 
 	 */
-	 void setBurnRate(int a, int b, int c);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	private void a(int a, int b, int c);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	private void a(World a, int b, int c, int d, int e, java.util.Random f);
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a);
-	
-	/**
-	 * Checks the specified block coordinate to see if it can catch fire.  Args: blockAccess, x, y, z
-	 */
-	 boolean canBlockCatchFire(IBlockAccess a, int b, int c, int d);
+	public abstract boolean b(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract boolean d();
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e);
+	public abstract AxisAlignedBB d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean b(IBlockAccess a, int b, int c, int d);
+	public abstract void e(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean d();
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * Retrieves a specified block's chance to encourage their neighbors to burn and if the number is greater than the current number passed in it will return its number instead of the passed in one.  Args: world, x, y, z, curChanceToEncourageFire
-	 */
-	 int getChanceToEncourageFire(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public int f(World a, int b, int c, int d, int e);
-	
-	/**
-	 * *
-	 */
-	 boolean func_268(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d);
-	
-	/**
-	 * Gets the highest chance of a neighbor block encouraging this block to catch fire
-	 */
-	 int getChanceOfNeighborsEncouragingFire(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private int h(World a, int b, int c, int d);
+	public abstract int f(World a, int b, int c, int d, int e);
 
 }

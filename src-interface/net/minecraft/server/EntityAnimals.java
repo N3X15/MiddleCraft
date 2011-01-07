@@ -2,44 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityAnimals extends EntityCreature{
+public abstract class EntityAnimals extends EntityCreature {
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 float func_159(int a, int b, int c);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	protected abstract float a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	protected float a(int a, int b, int c);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
-	
-	/**
-	 * *
-	 */
-	 int func_146();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	public int b();
-	
-	/**
-	 * 
-	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 
 }

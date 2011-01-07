@@ -2,32 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerNBTManager{
+public abstract class PlayerNBTManager {
 	// FIELDS
-	public static java.util.logging.Logger a;
-	private java.io.File b;
-	 ()V setChunkModified;
+	public static java.util.logging.Logger logger;
+	private java.io.File worldFile;
 	
 	// METHODS
 	
 	/**
-	 * Writes the player data to disk from the specified PlayerEntityMP.
+	 * 
 	 */
-	 void writePlayerData(EntityPlayerMP a);
+	public abstract void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayerMP a);
-	
-	/**
-	 * Reads the player data from disk into the specified PlayerEntityMP.
-	 */
-	 void readPlayerData(EntityPlayerMP a);
-	
-	/**
-	 * 
-	 */
-	public void b(EntityPlayerMP a);
+	public abstract void b(EntityPlayerMP a);
 
 }

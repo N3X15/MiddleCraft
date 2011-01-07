@@ -2,51 +2,35 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockChest extends BlockContainer{
+public abstract class BlockChest extends BlockContainer {
 	// FIELDS
-	private java.util.Random a;
-	 ()V setChunkModified;
+	private java.util.Random field_656;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a);
+	public abstract int a(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d);
+	public abstract boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, int b, int c, int d, EntityPlayer e);
-	
-	/**
-	 * *
-	 */
-	 TileEntity SetBlockEntity();
+	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	protected TileEntity a_();
+	protected abstract TileEntity a_();
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d);
-	
-	/**
-	 * Checks the neighbor blocks to see if there is a chest there. Args: world, x, y, z
-	 */
-	 boolean isThereANeighborChest(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private boolean g(World a, int b, int c, int d);
+	public abstract void b(World a, int b, int c, int d);
 
 }

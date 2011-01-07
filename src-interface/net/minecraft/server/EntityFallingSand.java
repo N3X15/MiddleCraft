@@ -2,32 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFallingSand extends Entity{
+public abstract class EntityFallingSand extends Entity {
 	// FIELDS
-	public int a;
-	public int b;
-	 ()V setChunkModified;
+	public int field_427;
+	public int field_426;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	protected void a(NBTTagCompound a);
+	protected abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected void b(NBTTagCompound a);
+	protected abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b_();
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public boolean c_();
+	public abstract boolean c_();
 
 }

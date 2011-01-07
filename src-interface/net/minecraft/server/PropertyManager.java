@@ -2,48 +2,37 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PropertyManager{
+public abstract class PropertyManager {
 	// FIELDS
-	public static java.util.logging.Logger a;
-	private java.util.Properties b;
-	private java.io.File c;
-	 ()V setChunkModified;
+	public static java.util.logging.Logger logger;
+	private java.util.Properties serverProperties;
+	private java.io.File serverPropertiesFile;
 	
 	// METHODS
 	
 	/**
-	 * Generates a new properties file.
+	 * 
 	 */
-	 void generateNewProperties();
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract int a(java.lang.String a, int b);
 	
 	/**
 	 * 
 	 */
-	public int a(java.lang.String a, int b);
+	public abstract java.lang.String a(java.lang.String a, java.lang.String b);
 	
 	/**
 	 * 
 	 */
-	public java.lang.String a(java.lang.String a, java.lang.String b);
+	public abstract boolean a(java.lang.String a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(java.lang.String a, boolean b);
-	
-	/**
-	 * Writes the properties to the properties file.
-	 */
-	 void saveProperties();
-	
-	/**
-	 * 
-	 */
-	public void b();
+	public abstract void b();
 
 }

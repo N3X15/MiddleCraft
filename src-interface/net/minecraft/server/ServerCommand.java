@@ -2,11 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ServerCommand{
+public abstract class ServerCommand {
 	// FIELDS
-	public final java.lang.String a;
-	public final ICommandListener b;
-	 ()V setChunkModified;
+	public final java.lang.String command;
+	public final ICommandListener commandListener;
 	
 	// METHODS
 

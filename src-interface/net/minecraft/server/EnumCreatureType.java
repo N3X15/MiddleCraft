@@ -2,30 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EnumCreatureType extends java.lang.Enum{
+public abstract final class EnumCreatureType extends java.lang.Enum {
 	// FIELDS
-	public static final EnumCreatureType a;
-	public static final EnumCreatureType b;
-	public final java.lang.Class c;
-	public final int d;
-	private static final ku[] e;
-	 ()V setChunkModified;
+	public static final EnumCreatureType ku_monster;
+	public static final EnumCreatureType ku_creature;
+	public final java.lang.Class field_4221;
+	public final int maxNumberOfEntityType;
+	private static final ku[] field_6155;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static EnumCreatureType valueOf(java.lang.String a);
-	
-	/**
-	 * *
-	 */
-	 ku[] ku_values();
+	public abstract static EnumCreatureType valueOf(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public static ku[] values();
+	public abstract static ku[] values();
 
 }

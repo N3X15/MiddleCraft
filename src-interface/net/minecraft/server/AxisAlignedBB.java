@@ -2,137 +2,97 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class AxisAlignedBB{
+public abstract class AxisAlignedBB {
 	// FIELDS
-	public double a;
-	public double b;
-	public double c;
-	public double d;
-	public double e;
-	public ()V setChunkModified;
-	private static java.util.List g;
-	private static int h;
+	public double minX;
+	public double minY;
+	public double minZ;
+	public double maxX;
+	public double maxY;
+	public double maxZ;
+	private static java.util.List boundingBoxes;
+	private static int numBoundingBoxesInUse;
 	
 	// METHODS
 	
 	/**
-	 * Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z
+	 * 
 	 */
-	 AxisAlignedBB addCoord(double a, double b, double c);
+	public abstract static void a();
 	
 	/**
 	 * 
 	 */
-	public static void a();
+	public abstract AxisAlignedBB a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB a(double a, double b, double c);
+	public abstract static AxisAlignedBB a(double a, double b, double c, double d, double e, double f);
 	
 	/**
 	 * 
 	 */
-	public static AxisAlignedBB a(double a, double b, double c, double d, double e, double f);
+	public abstract MovingObjectPosition a(Vec3D a, Vec3D b);
 	
 	/**
 	 * 
 	 */
-	private boolean a(Vec3D a);
+	public abstract boolean a(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b);
+	public abstract double a(AxisAlignedBB a, double b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(AxisAlignedBB a);
+	public abstract AxisAlignedBB b();
 	
 	/**
 	 * 
 	 */
-	public double a(AxisAlignedBB a, double b);
-	
-	/**
-	 * Returns a copy of the bounding box.
-	 */
-	 AxisAlignedBB copy();
+	public abstract AxisAlignedBB b(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB b();
+	public abstract static AxisAlignedBB b(double a, double b, double c, double d, double e, double f);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB b(double a, double b, double c);
+	public abstract void b(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public static AxisAlignedBB b(double a, double b, double c, double d, double e, double f);
+	public abstract double b(AxisAlignedBB a, double b);
 	
 	/**
 	 * 
 	 */
-	private boolean b(Vec3D a);
+	public abstract AxisAlignedBB c(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public void b(AxisAlignedBB a);
+	public abstract AxisAlignedBB c(double a, double b, double c, double d, double e, double f);
 	
 	/**
 	 * 
 	 */
-	public double b(AxisAlignedBB a, double b);
-	
-	/**
-	 * *
-	 */
-	 double func_709(AxisAlignedBB a, double b);
+	public abstract double c(AxisAlignedBB a, double b);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB c(double a, double b, double c);
+	public abstract AxisAlignedBB d(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public AxisAlignedBB c(double a, double b, double c, double d, double e, double f);
-	
-	/**
-	 * 
-	 */
-	private boolean c(Vec3D a);
-	
-	/**
-	 * 
-	 */
-	public double c(AxisAlignedBB a, double b);
-	
-	/**
-	 * Offsets the current bounding box by the specified coordinates. Args: x, y, z
-	 */
-	 AxisAlignedBB offset(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB d(double a, double b, double c);
-	
-	/**
-	 * *
-	 */
-	 AxisAlignedBB func_694(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public AxisAlignedBB e(double a, double b, double c);
+	public abstract AxisAlignedBB e(double a, double b, double c);
 
 }

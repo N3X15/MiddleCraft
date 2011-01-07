@@ -2,195 +2,125 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class InventoryPlayer{
+public abstract class InventoryPlayer {
 	// FIELDS
-	public il[] a;
-	public il[] b;
-	public int c;
-	public boolean d;
-	private EntityPlayer e;
-	private ()V setChunkModified;
+	public il[] mainInventory;
+	public il[] armorInventory;
+	public int currentItem;
+	public boolean inventoryChanged;
+	private EntityPlayer player;
+	private ItemStack field_20074;
 	
 	// METHODS
 	
 	/**
-	 * Adds the item stack to the inventory, returns false if it is impossible.
+	 * 
 	 */
-	 boolean addItemStackToInventory(ItemStack a);
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a);
+	public abstract ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b);
+	public abstract void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, ItemStack b);
+	public abstract int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public int a(Entity a);
+	public abstract NBTTagList a(NBTTagList a);
 	
 	/**
 	 * 
 	 */
-	public NBTTagList a(NBTTagList a);
+	public abstract float a(Block a);
 	
 	/**
 	 * 
 	 */
-	public float a(Block a);
+	public abstract boolean a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a);
+	public abstract boolean a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public boolean a_(EntityPlayer a);
-	
-	/**
-	 * Adds the j items of type i to inventory and returns the number of items that couldn't fit (0 if they all fit).
-	 */
-	 int addItemsToInventory(int a, int b);
+	public abstract java.lang.String b();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String b();
+	public abstract boolean b(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(int a);
+	public abstract void b(NBTTagList a);
 	
 	/**
 	 * 
 	 */
-	private int b(int a, int b);
+	public abstract boolean b(Block a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagList a);
+	public abstract void b(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(Block a);
+	public abstract int c();
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a);
-	
-	/**
-	 * Damages armor in each slot by the specified amount.
-	 */
-	 void damageArmor(int a);
+	public abstract void c(int a);
 	
 	/**
 	 * 
 	 */
-	public int c();
+	public abstract void d();
 	
 	/**
 	 * 
 	 */
-	public void c(int a);
-	
-	/**
-	 * *
-	 */
-	 int getInventorySlotContainItem(int a);
+	public abstract ItemStack e();
 	
 	/**
 	 * 
 	 */
-	public void d();
+	public abstract void f();
 	
 	/**
 	 * 
 	 */
-	private int d(int a);
-	
-	/**
-	 * Returns the item stack currently held by the player.
-	 */
-	 ItemStack getCurrentItem();
+	public abstract int g();
 	
 	/**
 	 * 
 	 */
-	public ItemStack e();
+	public abstract void h();
 	
 	/**
 	 * 
 	 */
-	private int e(int a);
-	
-	/**
-	 * Decrement the number of animations remaining. Only called on client side. This is used to handle the animation of receiving a block.
-	 */
-	 void decrementAnimations();
-	
-	/**
-	 * 
-	 */
-	public void f();
-	
-	/**
-	 * Based on the damage values and maximum damage values of each armor item, returns the current armor value.
-	 */
-	 int getTotalArmorValue();
-	
-	/**
-	 * 
-	 */
-	public int g();
-	
-	/**
-	 * Drop all armor and main inventory items.
-	 */
-	 void dropAllItems();
-	
-	/**
-	 * 
-	 */
-	public void h();
-	
-	/**
-	 * *
-	 */
-	 ItemStack func_20072();
-	
-	/**
-	 * 
-	 */
-	public ItemStack i();
-	
-	/**
-	 * Returns the first item stack that is empty.
-	 */
-	 int getFirstEmptyStack();
-	
-	/**
-	 * 
-	 */
-	private int j();
+	public abstract ItemStack i();
 
 }

@@ -44,6 +44,7 @@ import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.NotFoundException;
 
+import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.Yaml;
 
 /**
@@ -91,7 +92,7 @@ public class Mappings {
 			if(o instanceof Map<?,?>) {
 				MCClassInfo ci = new MCClassInfo((Map<String,Object>)o);
 				classes.put(ci.realName,ci);
-				l.info("Loaded "+ci.realName+".");
+				//l.info("Loaded "+ci.realName+".");
 			}
 		}
 		return true;
@@ -193,7 +194,9 @@ public class Mappings {
 	 */
 	private static void writeClasses() throws IOException {
 		l.info("Writing class mappings to disk...");
-		Yaml yml = new Yaml();
+	    DumperOptions options = new DumperOptions();
+	    options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+		Yaml yml = new Yaml(options);
 		Map<String,Object> classMap = new HashMap<String,Object>();
 		for(MCClassInfo ci : classes.values()) {
 			classMap.put(ci.name, ci.toMap());

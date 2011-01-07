@@ -2,284 +2,243 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityLiving extends Entity{
+public abstract class EntityLiving extends Entity {
 	// FIELDS
 	private int a;
-	public int aF;
-	public float aG;
-	public float aH;
-	public float aI;
-	public float aJ;
-	public float aK;
-	protected float aL;
-	protected float aM;
-	protected float aN;
-	protected float aO;
-	protected boolean aP;
-	protected java.lang.String aQ;
-	protected boolean aR;
-	protected float aS;
-	protected java.lang.String aT;
-	protected float aU;
-	protected int aV;
-	protected float aW;
-	public boolean aX;
-	public float aY;
-	public float aZ;
+	public int field_9099;
+	public float field_9098;
+	public float field_9097;
+	public float field_9096;
+	public float renderYawOffset;
+	public float field_9125;
+	protected float prevRenderYawOffset;
+	protected float field_9123;
+	protected float field_9122;
+	protected float field_9121;
+	protected boolean field_9120;
+	protected java.lang.String skinPath;
+	protected boolean field_9118;
+	protected float field_9117;
+	protected java.lang.String field_9116;
+	protected float field_9115;
+	protected int field_9114;
+	protected float field_9113;
+	public boolean field_9112;
+	public float prevSwingProgress;
+	public float swingProgress;
 	private Entity b;
-	protected float bA;
-	protected boolean bB;
-	protected float bC;
-	protected float bD;
-	public int ba;
-	public int bb;
-	public int bc;
-	public int bd;
-	public float be;
-	public int bf;
-	public int bg;
-	public float bh;
-	public float bi;
-	protected boolean bj;
-	public int bk;
-	public float bl;
-	public float bm;
-	public float bn;
-	public float bo;
-	protected int bp;
-	protected double bq;
-	protected double br;
-	protected double bs;
-	protected double bt;
-	protected double bu;
-	 float bv;
-	protected int bw;
-	protected int bx;
-	protected float by;
-	protected float bz;
+	protected float field_9129;
+	protected boolean isJumping;
+	protected float defaultPitch;
+	protected float field_9126;
+	public int health;
+	public int field_9108;
+	public int hurtTime;
+	public int maxHurtTime;
+	public float field_9105;
+	public int deathTime;
+	public int attackTime;
+	public float field_9102;
+	public float field_9101;
+	protected boolean field_9100;
+	public int field_9144;
+	public float field_9143;
+	public float field_9142;
+	public float field_9141;
+	public float field_386;
+	protected int field_9140;
+	protected double field_9139;
+	protected double field_9138;
+	protected double field_9137;
+	protected double field_9136;
+	protected double field_9135;
+	 float field_9134;
+	protected int field_9133;
+	protected int field_9132;
+	protected float moveStrafing;
+	protected float moveForward;
 	private int c;
-	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public Vec3D C();
+	public abstract Vec3D C();
 	
 	/**
 	 * 
 	 */
-	public void G();
-	
-	/**
-	 * *
-	 */
-	 void spawnExplosionParticle();
+	public abstract void G();
 	
 	/**
 	 * 
 	 */
-	public void O();
-	
-	/**
-	 * causes this entity to jump (or at least move upwards)
-	 */
-	 void jump();
+	public abstract void O();
 	
 	/**
 	 * 
 	 */
-	protected void P();
-	
-	/**
-	 * *
-	 */
-	 void func_6101();
+	protected abstract void P();
 	
 	/**
 	 * 
 	 */
-	public void Q();
-	
-	/**
-	 * *
-	 */
-	 void func_143(Entity a, int b, double c, double d);
+	public abstract void Q();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	protected void a(float a);
+	protected abstract void a(float a);
 	
 	/**
 	 * 
 	 */
-	protected void a(float a, float b);
+	protected abstract void a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b);
+	public abstract boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, int b, double c, double d);
-	
-	/**
-	 * *
-	 */
-	 float func_140(float a, float b, float c);
+	public abstract void a(Entity a, int b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public int b();
+	public abstract int b();
 	
 	/**
 	 * 
 	 */
-	private float b(float a, float b, float c);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a, float b);
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public void b_();
-	
-	/**
-	 * *
-	 */
-	 Vec3D func_141(float a);
+	protected abstract void c();
 	
 	/**
 	 * 
 	 */
-	protected void c();
+	public abstract Vec3D c(float a);
 	
 	/**
 	 * 
 	 */
-	public Vec3D c(float a);
+	public abstract void c(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public void c(float a, float b);
+	public abstract void c(int a);
 	
 	/**
 	 * 
 	 */
-	public void c(int a);
+	public abstract boolean c_();
 	
 	/**
 	 * 
 	 */
-	public boolean c_();
+	protected abstract java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d();
+	protected abstract void d(int a);
 	
 	/**
 	 * 
 	 */
-	protected void d(int a);
+	public abstract boolean d_();
 	
 	/**
 	 * 
 	 */
-	public boolean d_();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	public abstract void f(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void f(Entity a);
+	protected abstract int g();
 	
 	/**
 	 * 
 	 */
-	protected int g();
+	protected abstract float h();
 	
 	/**
 	 * 
 	 */
-	protected float h();
-	
-	/**
-	 * *
-	 */
-	 boolean canEntityBeSeen(Entity a);
+	public abstract int i();
 	
 	/**
 	 * 
 	 */
-	public int i();
+	public abstract boolean i(Entity a);
 	
 	/**
 	 * 
 	 */
-	public boolean i(Entity a);
+	public abstract void m();
 	
 	/**
 	 * 
 	 */
-	public void m();
+	protected abstract void o();
 	
 	/**
 	 * 
 	 */
-	protected void o();
+	public abstract float s();
 	
 	/**
 	 * 
 	 */
-	public float s();
+	public abstract boolean v();
 	
 	/**
 	 * 
 	 */
-	public boolean v();
+	public abstract boolean x();
 	
 	/**
 	 * 
 	 */
-	public boolean x();
-	
-	/**
-	 * 
-	 */
-	public void z();
+	public abstract void z();
 
 }

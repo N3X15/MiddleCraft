@@ -2,60 +2,59 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityCreeper extends EntityMobs{
+public abstract class EntityCreeper extends EntityMobs {
 	// FIELDS
-	 int a;
-	 int b;
-	 int c;
-	 int d;
-	 int e;
-	 ()V setChunkModified;
+	 int field_406;
+	 int field_405;
+	 int field_408;
+	 int field_407;
+	 int field_12011;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected void a(Entity a, float b);
+	protected abstract void a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b_();
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	protected void c();
+	protected abstract void c();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e();
+	protected abstract java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f();
+	protected abstract java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	public void f(Entity a);
+	public abstract void f(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected int g();
+	protected abstract int g();
 
 }

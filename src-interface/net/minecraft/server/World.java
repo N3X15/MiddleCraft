@@ -2,598 +2,508 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class World{
+public abstract class World {
 	// FIELDS
-	private java.util.List A;
-	private java.util.List B;
-	private java.util.TreeSet C;
-	private java.util.Set D;
-	private long E;
-	private long F;
-	private IChunkProvider G;
-	private NBTTagCompound H;
-	private java.util.ArrayList I;
-	private int J;
-	private java.util.Set K;
-	private int L;
-	private java.util.List M;
-	public boolean a;
-	public java.util.List b;
-	public java.util.List c;
-	public java.util.List d;
-	public long e;
-	public ()V setChunkModified;
-	protected int g;
-	protected int h;
-	public boolean i;
-	protected int j;
-	public int k;
-	public java.util.Random l;
-	public int m;
-	public int n;
-	public int o;
-	public boolean p;
-	public final WorldProvider q;
-	protected java.util.List r;
-	public java.io.File s;
-	public java.io.File t;
-	public long u;
-	public long v;
-	public final java.lang.String w;
-	public boolean x;
-	static int y;
-	public boolean z;
+	private java.util.List field_821;
+	private java.util.List field_790;
+	private java.util.TreeSet scheduledTickTreeSet;
+	private java.util.Set scheduledTickSet;
+	private long field_6159;
+	private long field_784;
+	private IChunkProvider chunkProvider;
+	private NBTTagCompound nbtCompoundPlayer;
+	private java.util.ArrayList field_9207;
+	private int field_4265;
+	private java.util.Set field_4264;
+	private int field_4263;
+	private java.util.List field_778;
+	public boolean field_4280;
+	public java.util.List loadedEntityList;
+	public java.util.List loadedTileEntityList;
+	public java.util.List playerEntities;
+	public long worldTime;
+	public int skylightSubtracted;
+	protected int field_4279;
+	protected int field_4278;
+	public boolean field_808;
+	protected int autosavePeriod;
+	public int monstersEnabled;
+	public java.util.Random rand;
+	public int spawnX;
+	public int spawnY;
+	public int spawnZ;
+	public boolean field_9212;
+	public final WorldProvider worldProvider;
+	protected java.util.List worldAccesses;
+	public java.io.File field_9211;
+	public java.io.File field_797;
+	public long randomSeed;
+	public long sizeOnDisk;
+	public final java.lang.String field_9210;
+	public boolean field_9209;
+	static int field_4268;
+	public boolean multiplayerWorld;
 	
 	// METHODS
 	
 	/**
-	 * Runs through the list of updates to run and ticks them
-	 */
-	 boolean TickUpdates(boolean a);
-	
-	/**
-	 * 
-	 */
-	public WorldChunkManager a();
-	
-	/**
-	 * 
-	 */
-	public EntityPlayer a(double a, double b, double c, double d);
-	
-	/**
-	 * 
-	 */
-	public void a(double a, double b, double c, java.lang.String d, float e, float f);
-	
-	/**
 	 * 
 	 */
-	public int a(float a);
+	public abstract WorldChunkManager a();
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b);
+	public abstract EntityPlayer a(double a, double b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b, int c);
+	public abstract void a(double a, double b, double c, java.lang.String d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d);
+	public abstract int a(float a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d, int e);
+	public abstract int a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d, int e, int f);
+	public abstract int a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b, int c, int d, boolean e);
+	public abstract boolean a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, TileEntity d);
+	public abstract boolean a(int a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, int b, int c, boolean d);
+	public abstract boolean a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b);
+	public abstract boolean a(int a, int b, int c, int d, boolean e);
 	
 	/**
 	 * 
 	 */
-	public MovingObjectPosition a(Vec3D a, Vec3D b, boolean c);
+	public abstract void a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public float a(Vec3D a, AxisAlignedBB b);
+	public abstract int a(int a, int b, int c, boolean d);
 	
 	/**
 	 * 
 	 */
-	public void a(IWorldAccess a);
+	public abstract MovingObjectPosition a(Vec3D a, Vec3D b);
 	
 	/**
 	 * 
 	 */
-	public int a(EnumSkyBlock a, int b, int c, int d);
+	public abstract MovingObjectPosition a(Vec3D a, Vec3D b, boolean c);
 	
 	/**
 	 * 
 	 */
-	public void a(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract float a(Vec3D a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
+	public abstract void a(IWorldAccess a);
 	
 	/**
 	 * 
 	 */
-	public void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
+	public abstract int a(EnumSkyBlock a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a(AxisAlignedBB a);
+	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(AxisAlignedBB a, Material b);
+	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public boolean a(AxisAlignedBB a, Material b, Entity c);
+	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a);
+	public abstract boolean a(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, byte b);
+	public abstract boolean a(AxisAlignedBB a, Material b);
 	
 	/**
 	 * 
 	 */
-	public EntityPlayer a(Entity a, double b);
+	public abstract boolean a(AxisAlignedBB a, Material b, Entity c);
 	
 	/**
 	 * 
 	 */
-	public Explosion a(Entity a, double b, double c, double d, float e);
+	public abstract boolean a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public Explosion a(Entity a, double b, double c, double d, float e, boolean f);
+	public abstract void a(Entity a, byte b);
 	
 	/**
 	 * 
 	 */
-	public PathEntity a(Entity a, int b, int c, int d, float e);
+	public abstract EntityPlayer a(Entity a, double b);
 	
 	/**
 	 * 
 	 */
-	public java.util.List a(Entity a, AxisAlignedBB b);
+	public abstract Explosion a(Entity a, double b, double c, double d, float e);
 	
 	/**
 	 * 
 	 */
-	public PathEntity a(Entity a, Entity b, float c);
+	public abstract Explosion a(Entity a, double b, double c, double d, float e, boolean f);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, java.lang.String b, float c, float d);
+	public abstract PathEntity a(Entity a, int b, int c, int d, float e);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, boolean b);
+	public abstract java.util.List a(Entity a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a, int b, int c, int d);
+	public abstract PathEntity a(Entity a, Entity b, float c);
 	
 	/**
 	 * 
 	 */
-	protected IChunkProvider a(java.io.File a);
+	public abstract void a(Entity a, java.lang.String b, float c, float d);
 	
 	/**
 	 * 
 	 */
-	public int a(java.lang.Class a);
+	public abstract void a(Entity a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public java.util.List a(java.lang.Class a, AxisAlignedBB b);
+	public abstract boolean a(EntityPlayer a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	protected abstract IChunkProvider a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, int b, int c, int d);
+	public abstract int a(java.lang.Class a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.util.List a);
+	public abstract java.util.List a(java.lang.Class a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(boolean a);
+	public abstract void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
 	 * 
-	 */
-	public void a(boolean a, IProgressUpdate b);
-	
-	/**
-	 * *
 	 */
-	 void func_461(java.util.List a);
+	public abstract void a(java.lang.String a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean b();
+	public abstract void a(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public float b(float a);
+	public abstract boolean a(boolean a);
 	
 	/**
 	 * 
 	 */
-	public Chunk b(int a, int b);
+	public abstract void a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public int b(int a, int b, int c);
+	public abstract boolean b();
 	
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, int d);
+	public abstract float b(float a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(int a, int b, int c, int d, int e);
+	public abstract Chunk b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, int d, int e, int f);
+	public abstract int b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void b(int a, int b, int c, TileEntity d);
+	public abstract void b(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract boolean b(int a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public boolean b(AxisAlignedBB a);
+	public abstract void b(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public boolean b(AxisAlignedBB a, Material b);
+	public abstract void b(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	protected void b(Entity a);
+	public abstract void b(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public java.util.List b(Entity a, AxisAlignedBB b);
+	public abstract boolean b(AxisAlignedBB a);
 	
 	/**
 	 * 
-	 */
-	public void b(java.util.List a);
-	
-	/**
-	 * *
 	 */
-	 void func_459();
+	public abstract boolean b(AxisAlignedBB a, Material b);
 	
 	/**
 	 * 
 	 */
-	public void c();
+	protected abstract void b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public Chunk c(int a, int b);
+	public abstract java.util.List b(Entity a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public Material c(int a, int b, int c);
+	public abstract void b(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public boolean c(int a, int b, int c, int d);
+	public abstract void c();
 	
 	/**
 	 * 
 	 */
-	public byte[] c(int a, int b, int c, int d, int e, int f);
+	public abstract Chunk c(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean c(AxisAlignedBB a);
+	public abstract Material c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	protected void c(Entity a);
+	public abstract boolean c(int a, int b, int c, int d);
 	
 	/**
-	 * *
-	 */
-	 void func_20109(Entity a);
-	
-	/**
 	 * 
 	 */
-	public boolean d();
+	public abstract byte[] c(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public int d(int a, int b);
+	public abstract boolean c(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public boolean d(int a, int b, int c);
+	protected abstract void c(Entity a);
 	
 	/**
 	 * 
 	 */
-	public boolean d(int a, int b, int c, int d);
+	public abstract boolean d();
 	
 	/**
 	 * 
 	 */
-	public void d(Entity a);
+	public abstract int d(int a, int b);
 	
 	/**
-	 * Called on construction of the World class to setup the initial skylight values
-	 */
-	 void calculateInitialSkylight();
-	
-	/**
 	 * 
 	 */
-	public void e();
+	public abstract boolean d(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int e(int a, int b);
+	public abstract boolean d(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean e(int a, int b, int c);
+	public abstract void d(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected void e(int a, int b, int c, int d);
+	public abstract void e();
 	
 	/**
 	 * 
-	 */
-	public void e(Entity a);
-	
-	/**
-	 * *
 	 */
-	 boolean blockExists(int a, int b, int c);
+	public abstract int e(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public void f();
+	public abstract boolean e(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	private boolean f(int a, int b);
+	protected abstract void e(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean f(int a, int b, int c);
+	public abstract void e(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void f(int a, int b, int c, int d);
+	public abstract void f();
 	
 	/**
 	 * 
-	 */
-	public void f(Entity a);
-	
-	/**
-	 * *
 	 */
-	 void func_4073();
+	public abstract boolean f(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	protected void g();
+	public abstract void f(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void g(int a, int b, int c);
+	public abstract void f(Entity a);
 	
 	/**
 	 * 
-	 */
-	public void g(int a, int b, int c, int d);
-	
-	/**
-	 * Checks if the specified block is able to see the sky
 	 */
-	 boolean canBlockSeeTheSky(int a, int b, int c);
+	protected abstract void g();
 	
 	/**
 	 * 
 	 */
-	public void h();
+	public abstract void g(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public boolean h(int a, int b, int c);
+	public abstract void g(int a, int b, int c, int d);
 	
 	/**
 	 * 
-	 */
-	public void h(int a, int b, int c, int d);
-	
-	/**
-	 * Is this block powering in the specified direction Args: x, y, z, direction
 	 */
-	 boolean isBlockProvidingPowerTo(int a, int b, int c, int d);
+	public abstract void h();
 	
 	/**
 	 * 
 	 */
-	private void i();
+	public abstract boolean h(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public int i(int a, int b, int c);
+	public abstract void h(int a, int b, int c, int d);
 	
 	/**
 	 * 
-	 */
-	public boolean i(int a, int b, int c, int d);
-	
-	/**
-	 * Determines if a block can see the sky or not, but if the proper chunk does not already exist, it does not create a new one.
 	 */
-	 boolean canExistingBlockSeeTheSky(int a, int b, int c);
+	public abstract int i(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public boolean j(int a, int b, int c);
+	public abstract boolean i(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean j(int a, int b, int c, int d);
+	public abstract boolean j(int a, int b, int c);
 	
 	/**
-	 * Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brihgtness). Args: x, y, z
-	 */
-	 float getLightBrightness(int a, int b, int c);
-	
-	/**
 	 * 
 	 */
-	public float k(int a, int b, int c);
+	public abstract boolean j(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	private void k(int a, int b, int c, int d);
+	public abstract float k(int a, int b, int c);
 	
 	/**
-	 * Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists
-	 */
-	 TileEntity getBlockTileEntity(int a, int b, int c);
-	
-	/**
 	 * 
-	 */
-	public TileEntity l(int a, int b, int c);
-	
-	/**
-	 * *
 	 */
-	 void func_513(int a, int b, int c);
+	public abstract TileEntity l(int a, int b, int c);
 	
 	/**
 	 * 
-	 */
-	public void m(int a, int b, int c);
-	
-	/**
-	 * Whether one of the neighboring blocks is putting power into this block. Args: x, y, z
 	 */
-	 boolean isBlockGettingPowered(int a, int b, int c);
+	public abstract void m(int a, int b, int c);
 	
 	/**
 	 * 
-	 */
-	public boolean n(int a, int b, int c);
-	
-	/**
-	 * Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z
 	 */
-	 boolean isBlockIndirectlyGettingPowered(int a, int b, int c);
+	public abstract boolean n(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public boolean o(int a, int b, int c);
+	public abstract boolean o(int a, int b, int c);
 
 }

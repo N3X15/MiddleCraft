@@ -2,62 +2,47 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class PlayerInstance{
+abstract class PlayerInstance {
 	// FIELDS
-	final PlayerManager a;
-	private java.util.List b;
-	private int c;
-	private int d;
-	private ChunkCoordIntPair e;
-	private ()V setChunkModified;
-	private int g;
-	private int h;
-	private int i;
-	private int j;
-	private int k;
-	private int l;
-	private int m;
+	final PlayerManager field_1073;
+	private java.util.List field_1072;
+	private int field_1071;
+	private int field_1070;
+	private ChunkCoordIntPair field_1069;
+	private short[] field_1068;
+	private int field_1067;
+	private int field_1066;
+	private int field_1065;
+	private int field_1064;
+	private int field_1063;
+	private int field_1062;
+	private int field_1061;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_20178(TileEntity a);
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	public void a();
+	public abstract void a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c);
+	public abstract void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	private void a(TileEntity a);
+	public abstract void a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayerMP a);
-	
-	/**
-	 * 
-	 */
-	public void a(Packet a);
-	
-	/**
-	 * *
-	 */
-	 void func_778(EntityPlayerMP a);
-	
-	/**
-	 * 
-	 */
-	public void b(EntityPlayerMP a);
+	public abstract void b(EntityPlayerMP a);
 
 }

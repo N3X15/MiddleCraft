@@ -2,96 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderServer{
+public abstract class ChunkProviderServer {
 	// FIELDS
-	private java.util.Set a;
-	private Chunk b;
-	private IChunkProvider c;
-	private IChunkLoader d;
-	private java.util.Map e;
-	private ()V setChunkModified;
-	private WorldServer g;
+	private java.util.Set field_725;
+	private Chunk field_724;
+	private IChunkProvider field_730;
+	private IChunkLoader field_729;
+	private java.util.Map field_728;
+	private java.util.List field_727;
+	private WorldServer field_726;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_375(Chunk a);
+	public abstract boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean a();
+	public abstract boolean a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b);
+	public abstract void a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(IChunkProvider a, int b, int c);
+	public abstract boolean a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	private void a(Chunk a);
+	public abstract boolean b();
 	
 	/**
 	 * 
 	 */
-	public boolean a(boolean a, IProgressUpdate b);
-	
-	/**
-	 * *
-	 */
-	 void func_373(Chunk a);
+	public abstract Chunk b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean b();
+	public abstract void c(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public Chunk b(int a, int b);
-	
-	/**
-	 * 
-	 */
-	private void b(Chunk a);
-	
-	/**
-	 * *
-	 */
-	 void func_374(int a, int b);
-	
-	/**
-	 * 
-	 */
-	public void c(int a, int b);
-	
-	/**
-	 * loads or generates the chunk at the chunk location specified
-	 */
-	 Chunk loadChunk(int a, int b);
-	
-	/**
-	 * 
-	 */
-	public Chunk d(int a, int b);
-	
-	/**
-	 * *
-	 */
-	 Chunk func_4063(int a, int b);
-	
-	/**
-	 * 
-	 */
-	private Chunk e(int a, int b);
+	public abstract Chunk d(int a, int b);
 
 }

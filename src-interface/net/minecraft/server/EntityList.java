@@ -2,49 +2,38 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityList{
+public abstract class EntityList {
 	// FIELDS
-	private static java.util.Map a;
-	private static java.util.Map b;
-	private static java.util.Map c;
-	private static java.util.Map d;
-	 ()V setChunkModified;
+	private static java.util.Map field_849;
+	private static java.util.Map field_848;
+	private static java.util.Map field_851;
+	private static java.util.Map field_850;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_563(java.lang.Class a, java.lang.String b, int c);
+	public abstract static Entity a(NBTTagCompound a, World b);
 	
 	/**
 	 * 
 	 */
-	public static Entity a(NBTTagCompound a, World b);
+	public abstract static int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public static int a(Entity a);
+	private abstract static void a(java.lang.Class a, java.lang.String b, int c);
 	
 	/**
 	 * 
 	 */
-	private static void a(java.lang.Class a, java.lang.String b, int c);
+	public abstract static Entity a(java.lang.String a, World b);
 	
 	/**
 	 * 
 	 */
-	public static Entity a(java.lang.String a, World b);
-	
-	/**
-	 * *
-	 */
-	 java.lang.String func_564(Entity a);
-	
-	/**
-	 * 
-	 */
-	public static java.lang.String b(Entity a);
+	public abstract static java.lang.String b(Entity a);
 
 }

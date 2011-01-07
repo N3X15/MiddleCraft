@@ -2,85 +2,69 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldServer extends World{
+public abstract class WorldServer extends World {
 	// FIELDS
 	public ChunkProviderServer A;
-	public boolean B;
-	public boolean C;
-	private net.minecraft.server.MinecraftServer D;
+	public boolean field_819;
+	public boolean field_816;
+	private net.minecraft.server.MinecraftServer field_6160;
 	private MCHashTable E;
-	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 Entity func_6158(int a);
+	public abstract Entity a(int a);
 	
 	/**
 	 * 
 	 */
-	public Entity a(int a);
+	public abstract void a(Entity a, byte b);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, byte b);
+	public abstract Explosion a(Entity a, double b, double c, double d, float e, boolean f);
 	
 	/**
 	 * 
 	 */
-	public Explosion a(Entity a, double b, double c, double d, float e, boolean f);
+	public abstract void a(Entity a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public void a(Entity a, boolean b);
+	public abstract boolean a(EntityPlayer a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public boolean a(EntityPlayer a, int b, int c, int d);
+	protected abstract IChunkProvider a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	protected IChunkProvider a(java.io.File a);
-	
-	/**
-	 * *
-	 */
-	 void func_12017(Entity a, boolean b);
+	protected abstract void b(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected void b(Entity a);
+	public abstract void b(Entity a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public void b(Entity a, boolean b);
+	protected abstract void c(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected void c(Entity a);
-	
-	/**
-	 * *
-	 */
-	 java.util.List func_532(int a, int b, int c, int d, int e, int f);
+	public abstract java.util.List d(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public java.util.List d(int a, int b, int c, int d, int e, int f);
-	
-	/**
-	 * 
-	 */
-	public void f();
+	public abstract void f();
 
 }

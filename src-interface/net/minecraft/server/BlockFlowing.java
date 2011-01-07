@@ -2,93 +2,27 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFlowing extends BlockFluids{
+public abstract class BlockFlowing extends BlockFluids {
 	// FIELDS
-	 int a;
-	 boolean[] b;
-	 int[] c;
-	 ()V setChunkModified;
+	 int field_659;
+	 boolean[] field_658;
+	 int[] field_660;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 int func_4034(World a, int b, int c, int d, int e, int f);
+	public abstract void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	private int a(World a, int b, int c, int d, int e, int f);
+	public abstract void e(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e);
-	
-	/**
-	 * *
-	 */
-	 int func_307(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public void e(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	protected int e(World a, int b, int c, int d, int e);
-	
-	/**
-	 * *
-	 */
-	 void func_311(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	private void f(World a, int b, int c, int d, int e);
-	
-	/**
-	 * *
-	 */
-	 void func_20039(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private void i(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 boolean[] func_4035(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private boolean[] j(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 boolean func_309(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private boolean k(World a, int b, int c, int d);
-	
-	/**
-	 * *
-	 */
-	 boolean func_312(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	private boolean l(World a, int b, int c, int d);
+	protected abstract int e(World a, int b, int c, int d, int e);
 
 }

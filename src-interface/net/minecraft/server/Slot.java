@@ -2,75 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Slot{
+public abstract class Slot {
 	// FIELDS
-	private final int a;
-	private final IInventory b;
-	public int c;
-	public int d;
-	public int e;
-	 ()V setChunkModified;
+	private final int field_20097;
+	private final IInventory field_20096;
+	public int field_20100;
+	public int field_20099;
+	public int field_20098;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 ItemStack func_20088(int a);
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public int a();
+	public abstract ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a);
+	public abstract boolean a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a);
+	public abstract boolean a(IInventory a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IInventory a, int b);
-	
-	/**
-	 * *
-	 */
-	 void func_20089(ItemStack a);
+	public abstract void b();
 	
 	/**
 	 * 
 	 */
-	public void b();
+	public abstract void b(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a);
-	
-	/**
-	 * *
-	 */
-	 ItemStack func_20092();
+	public abstract ItemStack c();
 	
 	/**
 	 * 
 	 */
-	public ItemStack c();
-	
-	/**
-	 * *
-	 */
-	 void func_20094();
-	
-	/**
-	 * 
-	 */
-	public void d();
+	public abstract void d();
 
 }

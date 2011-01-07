@@ -2,15 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface ICrafting{
+public abstract interface ICrafting {
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * *
-	 */
-	 void func_20054(CraftingInventoryCB a, java.util.List b);
 	
 	/**
 	 * 

@@ -2,65 +2,50 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPainting extends Entity{
+public abstract class EntityPainting extends Entity {
 	// FIELDS
-	public int a;
-	public EnumArt b;
-	private int c;
-	private int d;
-	private int e;
-	private ()V setChunkModified;
+	public int field_448;
+	public EnumArt field_9185;
+	private int field_452;
+	private int field_9188;
+	private int field_9187;
+	private int field_9186;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	 void func_179(int a);
+	public abstract void a(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(int a);
+	public abstract void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a);
+	public abstract boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Entity a, int b);
+	public abstract void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a);
+	public abstract void b_();
 	
 	/**
 	 * 
 	 */
-	public void b_();
-	
-	/**
-	 * *
-	 */
-	 float func_180(int a);
+	public abstract boolean c();
 	
 	/**
 	 * 
 	 */
-	public boolean c();
-	
-	/**
-	 * 
-	 */
-	private float c(int a);
-	
-	/**
-	 * 
-	 */
-	public boolean c_();
+	public abstract boolean c_();
 
 }
