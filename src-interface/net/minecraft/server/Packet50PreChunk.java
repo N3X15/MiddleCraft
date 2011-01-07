@@ -2,39 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet50PreChunk extends BlockSoil{
+public abstract class Packet50PreChunk extends Packet{
 	// FIELDS
+	public int a;
+	public int b;
+	public boolean c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	public boolean isOpaqueCube()
+	public int a();
 	
 	/**
-	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 * 
 	 */
-	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	public void a(NetHandler a);
 	
 	/**
-	 * Returns the quantity of items to drop on block destruction.
+	 * 
 	 */
-	public int quantityDropped(java.util.Random a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 * 
 	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing
-	 */
-	public void onBlockPlaced(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
-	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	public void a(java.io.DataOutputStream a);
 
 }

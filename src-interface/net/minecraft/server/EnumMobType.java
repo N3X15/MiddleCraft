@@ -2,35 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EnumMobType extends BlockStep{
+public abstract final class EnumMobType extends java.lang.Enum{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public byte e;
-	public byte f;
+	public static final EnumMobType a;
+	public static final EnumMobType b;
+	public static final EnumMobType c;
+	private static final ds[] d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	public int getPacketSize()
+	public static EnumMobType valueOf(java.lang.String a);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * *
 	 */
-	public void processPacket(Packet28 a)
+	 ds[] ds_values();
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
-	
-	/**
-	 * Abstract. Writes the raw packet data to the data stream.
-	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public static ds[] values();
 
 }

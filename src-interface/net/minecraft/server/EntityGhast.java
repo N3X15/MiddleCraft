@@ -2,49 +2,102 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityGhast extends BlockSoil{
+public abstract class EntityGhast extends EntityFlying{
 	// FIELDS
+	public int a;
+	private Entity aj;
+	private int ak;
+	public double b;
+	public double c;
+	public double d;
+	public int e;
+	public ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * *
 	 */
-	public boolean isOpaqueCube()
+	 boolean func_4046(double a, double b, double c, double d);
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * 
 	 */
-	public int getBlockTextureFromSide(int a)
+	public boolean a();
 	
 	/**
-	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 * 
 	 */
-	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	private boolean a(double a, double b, double c, double d);
 	
 	/**
-	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
+	 * *
 	 */
-	public void onEntityCollidedWithBlock(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	 void func_152();
 	
 	/**
-	 * Ticks the block if it's been scheduled
+	 * 
 	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	protected void c();
 	
 	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 * Returns the sound this mob makes while it's alive.
 	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	 java.lang.String getLivingSound();
 	
 	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 * 
 	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	protected java.lang.String d();
 	
 	/**
-	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+	 * Returns the sound this mob makes when it is hurt.
 	 */
-	public boolean canBlockStay(Packet17AddToInventory a, int b, int c, int d)
+	 java.lang.String getHurtSound();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * Returns the sound this mob makes on death.
+	 */
+	 java.lang.String getDeathSound();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * Returns the item ID for the item the mob drops on death.
+	 */
+	 int getDropItemId();
+	
+	/**
+	 * 
+	 */
+	protected int g();
+	
+	/**
+	 * Returns the volume for the sounds this mob makes.
+	 */
+	 float getSoundVolume();
+	
+	/**
+	 * 
+	 */
+	protected float h();
+	
+	/**
+	 * *
+	 */
+	 int func_4045();
+	
+	/**
+	 * 
+	 */
+	public int i();
 
 }

@@ -2,50 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class IBlockAccess{
+public abstract interface interface IBlockAccess{
 	// FIELDS
-	private il[] a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public abstract int a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public BlockSponge a(int a)
+	public abstract int b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public BlockSponge a(int a, int b)
+	public abstract Material c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, BlockSponge b)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(BlockLog a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public void d()
+	public abstract boolean d(int a, int b, int c);
 
 }

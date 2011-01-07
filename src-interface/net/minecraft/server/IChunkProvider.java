@@ -2,14 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class IChunkProvider extends lh{
+public abstract interface interface IChunkProvider{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 * Checks to see if a chunk exists at x, y
 	 */
-	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
+	 boolean chunkExists(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public abstract boolean a();
+	
+	/**
+	 * 
+	 */
+	public abstract boolean a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(IChunkProvider a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public abstract boolean a(boolean a, IProgressUpdate b);
+	
+	/**
+	 * *
+	 */
+	 boolean func_364();
+	
+	/**
+	 * 
+	 */
+	public abstract boolean b();
+	
+	/**
+	 * 
+	 */
+	public abstract Chunk b(int a, int b);
 
 }

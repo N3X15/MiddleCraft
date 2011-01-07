@@ -2,29 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet3Chat extends BlockStep{
+public abstract class Packet3Chat extends Packet{
 	// FIELDS
+	public java.lang.String a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	public int getPacketSize()
+	public int a();
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public void a(NetHandler a);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public void a(java.io.DataOutputStream a);
 
 }

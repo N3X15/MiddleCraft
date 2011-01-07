@@ -8,27 +8,28 @@ public abstract class Packet130 extends Packet{
 	public int b;
 	public int c;
 	public java.lang.String[] d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(java.io.DataOutputStream a);
 
 }

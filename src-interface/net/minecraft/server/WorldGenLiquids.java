@@ -2,25 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenLiquids{
+public abstract class WorldGenLiquids extends WorldGenerator{
 	// FIELDS
-	public final byte[] a;
+	private int a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public int a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c, int d)
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

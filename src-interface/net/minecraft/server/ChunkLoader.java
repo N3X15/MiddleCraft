@@ -2,9 +2,57 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface ChunkLoader{
+public abstract class ChunkLoader{
 	// FIELDS
+	private java.io.File a;
+	private boolean b;
+	 ()V setChunkModified;
 	
 	// METHODS
+	
+	/**
+	 * *
+	 */
+	 void func_663(Chunk a, World b, NBTTagCompound c);
+	
+	/**
+	 * 
+	 */
+	public void a();
+	
+	/**
+	 * 
+	 */
+	private java.io.File a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public Chunk a(World a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public static Chunk a(World a, NBTTagCompound b);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, Chunk b);
+	
+	/**
+	 * 
+	 */
+	public void a(Chunk a, World b, NBTTagCompound c);
+	
+	/**
+	 * 
+	 */
+	public void b();
+	
+	/**
+	 * 
+	 */
+	public void b(World a, Chunk b);
 
 }

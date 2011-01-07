@@ -2,34 +2,82 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderGenerate extends BlockStep{
+public abstract class ChunkProviderGenerate{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public int e;
+	public NoiseGeneratorOctaves a;
+	public NoiseGeneratorOctaves b;
+	public NoiseGeneratorOctaves c;
+	 double[] d;
+	 double[] e;
+	 ()V setChunkModified;
+	 double[] g;
+	 double[] h;
+	 int[][] i;
+	private java.util.Random j;
+	private NoiseGeneratorOctaves k;
+	private NoiseGeneratorOctaves l;
+	private NoiseGeneratorOctaves m;
+	private NoiseGeneratorOctaves n;
+	private NoiseGeneratorOctaves o;
+	private World p;
+	private double[] q;
+	private double[] r;
+	private double[] s;
+	private double[] t;
+	private MapGenBase u;
+	private jq[] v;
+	private double[] w;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 double[] func_4058(double[] a, int b, int c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public boolean a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(int a, int b, byte[] c, jq[] d);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, byte[] c, jq[] d, double[] e);
+	
+	/**
+	 * 
+	 */
+	public void a(IChunkProvider a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a, IProgressUpdate b);
+	
+	/**
+	 * 
+	 */
+	private double[] a(double[] a, int b, int c, int d, int e, int f, int g);
+	
+	/**
+	 * 
+	 */
+	public boolean b();
+	
+	/**
+	 * 
+	 */
+	public Chunk b(int a, int b);
 
 }

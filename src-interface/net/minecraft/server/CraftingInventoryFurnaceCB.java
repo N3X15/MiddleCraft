@@ -7,23 +7,29 @@ public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB{
 	private TileEntityFurnace a;
 	private int b;
 	private int c;
+	 ()V setChunkModified;
 	private int h;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a()
+	 void func_20125();
 	
 	/**
 	 * 
 	 */
-	public void a(ICrafting a)
+	public void a();
 	
 	/**
 	 * 
 	 */
-	public boolean b(EntityPlayer a)
+	public void a(ICrafting a);
+	
+	/**
+	 * 
+	 */
+	public boolean b(EntityPlayer a);
 
 }

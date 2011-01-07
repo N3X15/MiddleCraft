@@ -2,34 +2,79 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySlime extends BlockStep{
+public abstract class EntitySlime extends EntityLiving{
 	// FIELDS
-	public int a;
-	public int b;
+	public float a;
+	public float b;
 	public int c;
-	public int d;
-	public int e;
+	private int d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * *
 	 */
-	public int getPacketSize()
+	 void func_160(int a);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public boolean a();
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public void a(int a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * 
+	 */
+	protected void c();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * 
+	 */
+	protected int g();
+	
+	/**
+	 * 
+	 */
+	protected float h();
+	
+	/**
+	 * 
+	 */
+	public void l();
 
 }

@@ -2,20 +2,41 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldChunkManager extends BlockSoil{
+public abstract class WorldChunkManager{
 	// FIELDS
-	private boolean a;
+	public double[] a;
+	public double[] b;
+	public double[] c;
+	public jq[] d;
+	private NoiseGeneratorOctaves2 e;
+	private ()V setChunkModified;
+	private NoiseGeneratorOctaves2 g;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public MobSpawnerBase a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(ChunkCoordinates a, int b, int c, int d, int e)
+	public jq[] a(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public MobSpawnerBase a(ChunkCoordIntPair a);
+	
+	/**
+	 * 
+	 */
+	public double[] a(double[] a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public jq[] a(jq[] a, int b, int c, int d, int e);
 
 }

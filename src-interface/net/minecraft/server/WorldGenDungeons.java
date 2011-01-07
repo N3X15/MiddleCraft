@@ -2,19 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenDungeons extends BlockSoil{
+public abstract class WorldGenDungeons extends WorldGenerator{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * *
 	 */
-	public int idDropped(int a, java.util.Random b)
+	 ItemStack func_434(java.util.Random a);
 	
 	/**
-	 * Returns the quantity of items to drop on block destruction.
+	 * 
 	 */
-	public int quantityDropped(java.util.Random a)
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	private ItemStack a(java.util.Random a);
+	
+	/**
+	 * *
+	 */
+	 java.lang.String func_433(java.util.Random a);
+	
+	/**
+	 * 
+	 */
+	private java.lang.String b(java.util.Random a);
 
 }

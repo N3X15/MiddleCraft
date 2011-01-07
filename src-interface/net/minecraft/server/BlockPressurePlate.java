@@ -2,15 +2,86 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockPressurePlate extends ItemBlock{
+public abstract class BlockPressurePlate extends Block{
 	// FIELDS
-	private int a;
+	private EnumMobType a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * 
+	 */
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, Entity e);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * 
+	 */
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public boolean c();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean d(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
+	
+	/**
 	 * *
 	 */
-	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	 void func_318(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void g(World a, int b, int c, int d);
 
 }

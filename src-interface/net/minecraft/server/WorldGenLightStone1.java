@@ -2,19 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface WorldGenLightStone1{
+public abstract class WorldGenLightStone1 extends WorldGenerator{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Logs the message with a level of INFO.
+	 * 
 	 */
-	public abstract void log(java.lang.String a)
-	
-	/**
-	 * Gets the players username.
-	 */
-	public abstract java.lang.String getUsername()
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

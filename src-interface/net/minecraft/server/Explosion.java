@@ -2,20 +2,38 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class Explosion{
+public abstract class Explosion{
 	// FIELDS
-	private static java.util.Set a;
+	public boolean a;
+	public double b;
+	public double c;
+	public double d;
+	public Entity e;
+	public ()V setChunkModified;
+	public java.util.Set g;
+	private java.util.Random h;
+	private World i;
 	
 	// METHODS
 	
 	/**
 	 * *
 	 */
-	public static final int performSpawning(Packet17AddToInventory a)
+	 void func_12023();
+	
+	/**
+	 * 
+	 */
+	public void a();
 	
 	/**
 	 * *
 	 */
-	protected static NetworkWriterThread getRandomSpawningPointInChunk(Packet17AddToInventory a, int b, int c)
+	 void func_732();
+	
+	/**
+	 * 
+	 */
+	public void b();
 
 }

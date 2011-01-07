@@ -9,7 +9,7 @@ public abstract class Packet21PickupSpawn extends Packet{
 	public int c;
 	public int d;
 	public byte e;
-	public byte f;
+	public ()V setChunkModified;
 	public byte g;
 	public int h;
 	public int i;
@@ -19,21 +19,21 @@ public abstract class Packet21PickupSpawn extends Packet{
 	/**
 	 * 
 	 */
-	public int a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(java.io.DataOutputStream a);
 
 }

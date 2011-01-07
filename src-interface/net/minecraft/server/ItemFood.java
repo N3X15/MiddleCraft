@@ -2,20 +2,15 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class ItemFood{
+public abstract class ItemFood extends Item{
 	// FIELDS
-	final NBTBase a;
+	private int a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(ThreadLoginVerifier a, ThreadLoginVerifier b)
-	
-	/**
-	 * 
-	 */
-	public volatile int compare(java.lang.Object a, java.lang.Object b)
+	public ItemStack a(ItemStack a, World b, EntityPlayer c);
 
 }

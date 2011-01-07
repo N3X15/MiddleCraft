@@ -2,35 +2,84 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockDoor extends BlockStep{
+public abstract class BlockDoor extends Block{
 	// FIELDS
-	public int a;
-	public int b;
-	public short[] c;
-	public byte[] d;
-	public byte[] e;
-	public int f;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 void func_272(World a, int b, int c, int d, boolean e);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, boolean e);
+	
+	/**
+	 * 
+	 */
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 void func_273(int a);
+	
+	/**
+	 * 
+	 */
+	public void b(int a);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * *
+	 */
+	 int func_271(int a);
+	
+	/**
+	 * 
+	 */
+	public int d(int a);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
 
 }

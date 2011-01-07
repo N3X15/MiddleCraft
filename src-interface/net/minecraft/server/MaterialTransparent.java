@@ -2,41 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MaterialTransparent{
+public abstract class MaterialTransparent extends Material{
 	// FIELDS
-	public double[] a;
-	public double[] b;
-	public double[] c;
-	public jq[] d;
-	private ConsoleLogManager e;
-	private ConsoleLogManager f;
-	private ConsoleLogManager g;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public EnumCreatureType a(int a, int b)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public jq[] a(int a, int b, int c, int d)
+	public boolean b();
 	
 	/**
 	 * 
 	 */
-	public EnumCreatureType a(lk a)
-	
-	/**
-	 * 
-	 */
-	public double[] a(double[] a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public jq[] a(jq[] a, int b, int c, int d, int e)
+	public boolean c();
 
 }

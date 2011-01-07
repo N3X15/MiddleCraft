@@ -2,30 +2,95 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MCHashTable2 extends BlockSoil{
+public abstract class MCHashTable2{
 	// FIELDS
-	private boolean a;
+	private transient cr[] a;
+	private transient int b;
+	private int c;
+	private final float d;
+	private transient volatile int e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * *
 	 */
-	public int getBlockTextureFromSide(int a)
+	 void func_673(cr[] a);
 	
 	/**
-	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 * 
 	 */
-	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	private static int a(int a);
 	
 	/**
-	 * Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving
+	 * 
 	 */
-	public void onBlockPlacedBy(Packet17AddToInventory a, int b, int c, int d, lc e)
+	private static int a(int a, int b);
 	
 	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 * 
 	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	private void a(int a, long b, java.lang.Object c, int d);
+	
+	/**
+	 * 
+	 */
+	public java.lang.Object a(long a);
+	
+	/**
+	 * 
+	 */
+	public void a(long a, java.lang.Object b);
+	
+	/**
+	 * 
+	 */
+	private void a(cr[] a);
+	
+	/**
+	 * *
+	 */
+	 java.lang.Object func_670(long a);
+	
+	/**
+	 * 
+	 */
+	private void b(int a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.Object b(long a);
+	
+	/**
+	 * *
+	 */
+	 HashEntry2 func_672(long a);
+	
+	/**
+	 * 
+	 */
+	final HashEntry2 c(long a);
+	
+	/**
+	 * *
+	 */
+	 int func_674(long a);
+	
+	/**
+	 * 
+	 */
+	static int d(long a);
+	
+	/**
+	 * *
+	 */
+	 int func_671(long a);
+	
+	/**
+	 * 
+	 */
+	private static int e(long a);
 
 }

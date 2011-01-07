@@ -2,29 +2,32 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NoiseGeneratorOctaves extends BlockSoil{
+public abstract class NoiseGeneratorOctaves extends NoiseGenerator{
 	// FIELDS
+	private ar[] a;
+	private int b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * *
 	 */
-	public int getBlockTextureFromSide(int a)
+	 double[] func_4103(double[] a, int b, int c, int d, int e, double f, double g, double h);
 	
 	/**
-	 * Drops the block items with a specified chance of dropping the specified items
+	 * 
 	 */
-	public void dropBlockAsItemWithChance(Packet17AddToInventory a, int b, int c, int d, int e, float f)
+	public double a(double a, double b);
 	
 	/**
-	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
+	 * 
 	 */
-	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	public double[] a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j);
 	
 	/**
-	 * Ejects the current record inside of the jukebox
+	 * 
 	 */
-	public void ejectRecord(Packet17AddToInventory a, int b, int c, int d, int e)
+	public double[] a(double[] a, int b, int c, int d, int e, double f, double g, double h);
 
 }

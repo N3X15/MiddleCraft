@@ -2,31 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ThreadMonitorConnection extends BlockStep{
+abstract class ThreadMonitorConnection extends java.lang.Thread{
 	// FIELDS
-	public int a;
-	public byte b;
+	final NetworkManager a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 void js_run();
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public void run();
 
 }

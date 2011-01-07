@@ -8,64 +8,74 @@ public abstract class CraftingInventoryCB{
 	private java.util.Set b;
 	public java.util.List d;
 	public java.util.List e;
-	public int f;
+	public ()V setChunkModified;
 	protected java.util.List g;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a()
+	 Slot func_20120(int a);
 	
 	/**
 	 * 
 	 */
-	public Slot a(int a)
+	public void a();
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b, EntityPlayer c)
+	public Slot a(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(ICrafting a)
+	public ItemStack a(int a, int b, EntityPlayer c);
 	
 	/**
 	 * 
 	 */
-	protected void a(Slot a)
+	public void a(ICrafting a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a)
+	protected void a(Slot a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a, boolean b)
+	public void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a)
+	public void a(EntityPlayer a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public Slot a(IInventory a, int b)
+	public void a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(EntityPlayer a)
+	public Slot a(IInventory a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean c(EntityPlayer a)
+	public abstract boolean b(EntityPlayer a);
+	
+	/**
+	 * *
+	 */
+	 boolean func_20124(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	public boolean c(EntityPlayer a);
 
 }

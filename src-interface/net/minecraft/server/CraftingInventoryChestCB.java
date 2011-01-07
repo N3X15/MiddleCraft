@@ -5,12 +5,13 @@ package net.minecraft.server;
 public abstract class CraftingInventoryChestCB extends CraftingInventoryCB{
 	// FIELDS
 	private IInventory a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean b(EntityPlayer a)
+	public boolean b(EntityPlayer a);
 
 }

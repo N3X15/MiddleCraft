@@ -2,9 +2,69 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Pathfinder extends EnumCreatureType{
+public abstract class Pathfinder{
 	// FIELDS
+	private IBlockAccess a;
+	private Path b;
+	private MCHashTable c;
+	private b[] d;
+	 ()V setChunkModified;
 	
 	// METHODS
+	
+	/**
+	 * Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)
+	 */
+	 PathEntity addToPath(Entity a, PathPoint b, PathPoint c, PathPoint d, float e);
+	
+	/**
+	 * 
+	 */
+	private final PathPoint a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private PathEntity a(PathPoint a, PathPoint b);
+	
+	/**
+	 * 
+	 */
+	private PathEntity a(Entity a, double b, double c, double d, float e);
+	
+	/**
+	 * 
+	 */
+	public PathEntity a(Entity a, int b, int c, int d, float e);
+	
+	/**
+	 * 
+	 */
+	private int a(Entity a, int b, int c, int d, PathPoint e);
+	
+	/**
+	 * 
+	 */
+	private PathPoint a(Entity a, int b, int c, int d, PathPoint e, int f);
+	
+	/**
+	 * 
+	 */
+	private PathEntity a(Entity a, PathPoint b, PathPoint c, PathPoint d, float e);
+	
+	/**
+	 * 
+	 */
+	public PathEntity a(Entity a, Entity b, float c);
+	
+	/**
+	 * populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)
+	 */
+	 int findPathOptions(Entity a, PathPoint b, PathPoint c, PathPoint d, float e);
+	
+	/**
+	 * 
+	 */
+	private int b(Entity a, PathPoint b, PathPoint c, PathPoint d, float e);
 
 }

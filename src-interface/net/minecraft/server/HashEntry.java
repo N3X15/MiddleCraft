@@ -2,15 +2,64 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class HashEntry extends java.util.logging.Formatter{
+abstract class HashEntry{
 	// FIELDS
-	final WorldGenLightStone2 a;
+	final int a;
+	 java.lang.Object b;
+	 HashEntry c;
+	final int d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 int getHash();
+	
+	/**
 	 * 
 	 */
-	public java.lang.String format(java.util.logging.LogRecord a)
+	public final int a();
+	
+	/**
+	 * *
+	 */
+	 java.lang.Object getValue();
+	
+	/**
+	 * 
+	 */
+	public final java.lang.Object b();
+	
+	/**
+	 * *
+	 */
+	 boolean iv_equals(java.lang.Object a);
+	
+	/**
+	 * 
+	 */
+	public final boolean equals(java.lang.Object a);
+	
+	/**
+	 * *
+	 */
+	 int iv_hashCode();
+	
+	/**
+	 * 
+	 */
+	public final int hashCode();
+	
+	/**
+	 * *
+	 */
+	 java.lang.String iv_toString();
+	
+	/**
+	 * 
+	 */
+	public final java.lang.String toString();
 
 }

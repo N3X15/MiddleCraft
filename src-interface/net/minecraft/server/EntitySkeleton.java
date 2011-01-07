@@ -2,50 +2,51 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySkeleton extends AxisAlignedBB{
+public abstract class EntitySkeleton extends EntityMobs{
 	// FIELDS
-	private final boolean a;
+	private static final ItemStack a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * 
 	 */
-	public int getBlockTextureFromSide(int a)
-	
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
-	 */
-	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
-	
-	/**
-	 * Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving
-	 */
-	public void onBlockPlacedBy(Packet17AddToInventory a, int b, int c, int d, lc e)
-	
-	/**
-	 * Update which block ID the furnace is using depending on whether or not it is burning
-	 */
-	public static void updateFurnaceBlockState(boolean a, Packet17AddToInventory b, int c, int d, int e)
-	
-	/**
-	 * *
-	 */
-	protected EntitySnowball SetBlockEntity()
-	
-	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
-	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	public void G();
 	
 	/**
 	 * 
 	 */
-	private void g(Packet17AddToInventory a, int b, int c, int d)
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	protected void a(Entity a, float b);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String d();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * 
+	 */
+	protected int g();
 
 }

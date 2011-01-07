@@ -2,38 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkMasterThread{
+abstract class NetworkMasterThread extends java.lang.Thread{
 	// FIELDS
-	private static java.util.Map a;
-	private static java.util.Map b;
-	private static java.util.Map c;
-	private static java.util.Map d;
+	final NetworkManager a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public static IMobs a(Packet1Login a, Packet17AddToInventory b)
+	 void jr_run();
 	
 	/**
 	 * 
 	 */
-	public static int a(IMobs a)
-	
-	/**
-	 * 
-	 */
-	private static void a(java.lang.Class a, java.lang.String b, int c)
-	
-	/**
-	 * 
-	 */
-	public static IMobs a(java.lang.String a, Packet17AddToInventory b)
-	
-	/**
-	 * 
-	 */
-	public static java.lang.String b(IMobs a)
+	public void run();
 
 }

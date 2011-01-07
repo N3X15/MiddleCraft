@@ -2,19 +2,73 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityBoat extends BlockSoil{
+public abstract class EntityBoat extends Entity{
 	// FIELDS
+	public int a;
+	private double aj;
+	private double ak;
+	private double al;
+	public int b;
+	public int c;
+	private int d;
+	private double e;
+	private ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * 
 	 */
-	public int getBlockTextureFromSide(int a)
+	public void A();
 	
 	/**
-	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
+	 * 
 	 */
-	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	protected void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public boolean a(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	protected void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * 
+	 */
+	public boolean c_();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(Entity a);
+	
+	/**
+	 * 
+	 */
+	public double j();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB q();
+	
+	/**
+	 * 
+	 */
+	public boolean v();
 
 }

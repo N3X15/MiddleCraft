@@ -7,27 +7,28 @@ public abstract class Packet103 extends Packet{
 	public int a;
 	public int b;
 	public ItemStack c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(java.io.DataOutputStream a);
 
 }

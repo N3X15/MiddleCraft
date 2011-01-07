@@ -2,36 +2,84 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockLever extends BlockStep{
+public abstract class BlockLever extends Block{
 	// FIELDS
-	public int a;
-	public byte b;
-	public int c;
-	public int d;
-	public int e;
-	public byte f;
-	public byte g;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * 
+	 */
+	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public boolean c();
+	
+	/**
+	 * 
+	 */
+	public void c(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean d(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 boolean func_274(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private boolean g(World a, int b, int c, int d);
 
 }

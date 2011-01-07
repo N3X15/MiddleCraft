@@ -2,56 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockBloodStone extends EntityCow{
+public abstract class BlockBloodStone extends Block{
 	// FIELDS
-	public boolean a;
-	public int al;
-	public float b;
-	public float c;
-	public float d;
-	public float e;
-	public float f;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void G()
-	
-	/**
-	 * 
-	 */
-	protected void a(float a)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String d()
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String e()
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	protected int g()
 
 }

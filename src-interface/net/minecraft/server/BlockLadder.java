@@ -2,32 +2,39 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockLadder extends BlockStep{
+public abstract class BlockLadder extends Block{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	public int getPacketSize()
+	public boolean a();
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public int a(java.util.Random a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void c(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
 
 }

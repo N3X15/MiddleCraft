@@ -2,176 +2,139 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemStack{
+public abstract final class ItemStack{
 	// FIELDS
-	public static java.util.logging.Logger a;
-	public java.util.List b;
-	private net.minecraft.server.MinecraftServer c;
-	private WorldGenTrees d;
-	private int e;
-	private java.util.Set f;
-	private java.util.Set g;
-	private java.util.Set h;
-	private java.io.File i;
-	private java.io.File j;
-	private java.io.File k;
-	private Packet51MapChunk l;
+	public int a;
+	public int b;
+	public int c;
+	public int d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 ItemStack func_20117(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, double d, BlockStep e)
+	public Item a();
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c)
+	public ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c, EntitySnowball d)
+	public void a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(WorldGenCactus a)
+	public NBTTagCompound a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(EntityCreeper a)
+	public int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public WorldGenCactus a(EntityZombie a, java.lang.String b, java.lang.String c)
+	public ItemStack a(World a, EntityPlayer b);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a)
+	public void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.lang.String a, java.lang.String b)
+	public boolean a(EntityPlayer a, World b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public boolean a(java.lang.String a, BlockStep b)
+	public float a(Block a);
 	
 	/**
 	 * 
 	 */
-	public void a(BlockStep a)
+	public static ItemStack a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void b()
+	public static boolean a(ItemStack a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public void b(WorldGenCactus a)
+	public void a(EntityLiving a);
+	
+	/**
+	 * *
+	 */
+	 boolean canHarvestBlock(Block a);
 	
 	/**
 	 * 
 	 */
-	public void b(java.lang.String a)
+	public int b();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String c()
+	public void b(int a);
 	
 	/**
 	 * 
 	 */
-	public void c(WorldGenCactus a)
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void c(java.lang.String a)
+	public boolean b(Block a);
 	
 	/**
 	 * 
 	 */
-	public void d()
+	private boolean b(ItemStack a);
+	
+	/**
+	 * Returns the max damage an item in the stack can take.
+	 */
+	 int getMaxDamage();
 	
 	/**
 	 * 
 	 */
-	public WorldGenCactus d(WorldGenCactus a)
+	public int c();
+	
+	/**
+	 * Returns a new stack with the same properties.
+	 */
+	 ItemStack copy();
 	
 	/**
 	 * 
 	 */
-	public void d(java.lang.String a)
+	public ItemStack d();
+	
+	/**
+	 * *
+	 */
+	 java.lang.String il_toString();
 	
 	/**
 	 * 
 	 */
-	private void e()
-	
-	/**
-	 * 
-	 */
-	public void e(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	private void f()
-	
-	/**
-	 * 
-	 */
-	public void f(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	private void g()
-	
-	/**
-	 * 
-	 */
-	public boolean g(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	private void h()
-	
-	/**
-	 * 
-	 */
-	public WorldGenCactus h(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	private void i()
-	
-	/**
-	 * 
-	 */
-	public void i(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	private void j()
+	public java.lang.String toString();
 
 }

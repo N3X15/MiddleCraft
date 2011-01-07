@@ -2,72 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class IInventory extends EntityCreature{
+public abstract interface interface IInventory{
 	// FIELDS
-	private int a;
-	private int b;
-	private static final BlockSponge c;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void G()
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public abstract ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet1Login a)
+	public abstract ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IMobs a, int b)
+	public abstract void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public void b(Packet1Login a)
+	public abstract boolean a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void b_()
+	public abstract java.lang.String b();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d()
+	public abstract int c();
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e()
-	
-	/**
-	 * 
-	 */
-	protected java.lang.String f()
-	
-	/**
-	 * 
-	 */
-	protected int g()
-	
-	/**
-	 * 
-	 */
-	private void g(IMobs a)
-	
-	/**
-	 * 
-	 */
-	protected IMobs k()
+	public abstract void d();
 
 }

@@ -10,21 +10,21 @@ public abstract class BlockIce extends BlockBreakable{
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public int a(java.util.Random a)
+	public int a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IBlockAccess a, int b, int c, int d, int e)
+	public boolean a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d)
+	public void b(World a, int b, int c, int d);
 
 }

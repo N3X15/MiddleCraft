@@ -2,31 +2,26 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntitySign extends BlockStep{
+public abstract class TileEntitySign extends TileEntity{
 	// FIELDS
-	public int a;
-	public il[] b;
+	public java.lang.String[] e;
+	public ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public Packet f();
 
 }

@@ -2,50 +2,35 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet14BlockDig{
+public abstract class Packet14BlockDig extends Packet{
 	// FIELDS
-	private static float[] a;
+	public int a;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static final float a(double a)
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public static double a(double a, double b)
+	public void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public static final float a(float a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public static int b(double a)
-	
-	/**
-	 * 
-	 */
-	public static final float b(float a)
-	
-	/**
-	 * 
-	 */
-	public static final float c(float a)
-	
-	/**
-	 * 
-	 */
-	public static int d(float a)
-	
-	/**
-	 * 
-	 */
-	public static float e(float a)
+	public void a(java.io.DataOutputStream a);
 
 }

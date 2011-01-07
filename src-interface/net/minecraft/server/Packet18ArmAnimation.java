@@ -6,27 +6,28 @@ public abstract class Packet18ArmAnimation extends Packet{
 	// FIELDS
 	public int a;
 	public int b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public void a(NetHandler a)
+	public void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	public void a(java.io.DataOutputStream a);
 
 }

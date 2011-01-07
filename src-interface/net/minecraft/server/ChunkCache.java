@@ -2,32 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkCache extends BlockStep{
+public abstract class ChunkCache{
 	// FIELDS
-	public int a;
-	public int b;
-	public boolean c;
+	private int a;
+	private int b;
+	private kx[][] c;
+	private World d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * Returns the block ID at coords x,y,z
 	 */
-	public int getPacketSize()
+	 int getBlockId(int a, int b, int c);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public int a(int a, int b, int c);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * Returns the block metadata at coords x,y,z
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	 int getBlockMetadata(int a, int b, int c);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public int b(int a, int b, int c);
+	
+	/**
+	 * Returns the block's material.
+	 */
+	 Material getBlockMaterial(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public Material c(int a, int b, int c);
+	
+	/**
+	 * Returns if the block at the specified coordinates allow attachment Args: x, y, z
+	 */
+	 boolean doesBlockAllowAttachment(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean d(int a, int b, int c);
 
 }

@@ -2,14 +2,62 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Path extends ItemBlock{
+public abstract class Path{
 	// FIELDS
+	private b[] a;
+	private int b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * Adds a point to the path
+	 */
+	 PathPoint addPoint(PathPoint a);
+	
+	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public void a();
+	
+	/**
+	 * 
+	 */
+	private void a(int a);
+	
+	/**
+	 * 
+	 */
+	public PathPoint a(PathPoint a);
+	
+	/**
+	 * 
+	 */
+	public void a(PathPoint a, float b);
+	
+	/**
+	 * Returns and removes the first point in the path
+	 */
+	 PathPoint dequeue();
+	
+	/**
+	 * 
+	 */
+	public PathPoint b();
+	
+	/**
+	 * 
+	 */
+	private void b(int a);
+	
+	/**
+	 * Returns true if this path contains no points
+	 */
+	 boolean isPathEmpty();
+	
+	/**
+	 * 
+	 */
+	public boolean c();
 
 }

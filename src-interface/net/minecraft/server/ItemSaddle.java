@@ -2,14 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSaddle extends NBTTagByteArray{
+public abstract class ItemSaddle extends Item{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 * 
 	 */
-	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
+	public void a(ItemStack a, EntityLiving b);
+	
+	/**
+	 * *
+	 */
+	 void func_9202(ItemStack a, EntityLiving b);
+	
+	/**
+	 * 
+	 */
+	public void b(ItemStack a, EntityLiving b);
 
 }

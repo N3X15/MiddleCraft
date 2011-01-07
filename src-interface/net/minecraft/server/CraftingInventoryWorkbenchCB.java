@@ -7,6 +7,7 @@ public abstract class CraftingInventoryWorkbenchCB extends CraftingInventoryCB{
 	public InventoryCrafting a;
 	public IInventory b;
 	private World c;
+	 ()V setChunkModified;
 	private int h;
 	private int i;
 	private int j;
@@ -16,16 +17,16 @@ public abstract class CraftingInventoryWorkbenchCB extends CraftingInventoryCB{
 	/**
 	 * 
 	 */
-	public void a(EntityPlayer a)
+	public void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a)
+	public void a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(EntityPlayer a)
+	public boolean b(EntityPlayer a);
 
 }

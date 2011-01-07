@@ -2,19 +2,78 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPigZombie extends BlockSoil{
+public abstract class EntityPigZombie extends EntityZombie{
 	// FIELDS
+	private int a;
+	private int b;
+	private static final ItemStack c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
+	public void G();
 	
 	/**
 	 * 
 	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String d();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * *
+	 */
+	 void func_4047(Entity a);
+	
+	/**
+	 * 
+	 */
+	protected int g();
+	
+	/**
+	 * 
+	 */
+	private void g(Entity a);
+	
+	/**
+	 * 
+	 */
+	protected Entity k();
 
 }

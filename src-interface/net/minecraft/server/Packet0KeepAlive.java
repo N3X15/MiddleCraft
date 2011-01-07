@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet0KeepAlive extends NBTTagByteArray{
+public abstract class Packet0KeepAlive extends Packet{
 	// FIELDS
 	
 	// METHODS
@@ -10,6 +10,21 @@ public abstract class Packet0KeepAlive extends NBTTagByteArray{
 	/**
 	 * 
 	 */
-	public boolean a(BlockSponge a, BlockLog b, Packet17AddToInventory c, int d, int e, int f, int g)
+	public int a();
+	
+	/**
+	 * 
+	 */
+	public void a(NetHandler a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataInputStream a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataOutputStream a);
 
 }

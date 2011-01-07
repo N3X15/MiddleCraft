@@ -2,58 +2,234 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPlayer{
+public abstract class EntityPlayer extends EntityLiving{
 	// FIELDS
-	private ChunkCoordinates a;
-	private ko b;
-	private Packet59ComplexEntity c;
-	private b[] d;
+	private int a;
+	public double aA;
+	public double aB;
+	public double aC;
+	public double aD;
+	public EntityFish aE;
+	public InventoryPlayer an;
+	public CraftingInventoryCB ao;
+	public CraftingInventoryCB ap;
+	public byte aq;
+	public int ar;
+	public float as;
+	public float at;
+	public boolean au;
+	public int av;
+	public java.lang.String aw;
+	public int ax;
+	public double ay;
+	public double az;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns a mapped point or creates and adds one
+	 * 
 	 */
-	private final PathPoint openPoint(int a, int b, int c)
+	public double B();
 	
 	/**
-	 * Returns a new PathEntity for a given start and end point
+	 * 
 	 */
-	private ItemTool createEntityPath(PathPoint a, PathPoint b)
+	public void G();
 	
 	/**
-	 * Internal implementation of creating a path from an entity to a point
+	 * 
 	 */
-	private ItemTool createEntityPathTo(IMobs a, double b, double c, double d, float e)
+	public void H();
 	
 	/**
-	 * Creates a path from an entity to a specified location within a minimum distance
+	 * 
 	 */
-	public ItemTool createEntityPathTo(IMobs a, int b, int c, int d, float e)
+	protected void I();
 	
 	/**
-	 * Given an x y z, returns a vertical offset needed to search to find a block to stand on
+	 * *
 	 */
-	private int getVerticalOffset(IMobs a, int b, int c, int d, PathPoint e)
+	 void func_161();
 	
 	/**
-	 * Returns a point that the entity can safely move to
+	 * 
 	 */
-	private PathPoint getSafePoint(IMobs a, int b, int c, int d, PathPoint e, int f)
+	public void L();
 	
 	/**
-	 * Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)
+	 * *
 	 */
-	private ItemTool addToPath(IMobs a, PathPoint b, PathPoint c, PathPoint d, float e)
+	 ItemStack func_172();
 	
 	/**
-	 * Creates a path from one entity to another within a minimum distance
+	 * 
 	 */
-	public ItemTool createEntityPathTo(IMobs a, IMobs b, float c)
+	public ItemStack M();
 	
 	/**
-	 * populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)
+	 * *
 	 */
-	private int findPathOptions(IMobs a, PathPoint b, PathPoint c, PathPoint d, float e)
+	 void func_164();
+	
+	/**
+	 * 
+	 */
+	public void N();
+	
+	/**
+	 * *
+	 */
+	 void dropPlayerItemWithRandomChoice(ItemStack a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void a(TileEntityFurnace a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public float a(Block a);
+	
+	/**
+	 * 
+	 */
+	protected void a(EntityItem a);
+	
+	/**
+	 * 
+	 */
+	public void a(ItemStack a);
+	
+	/**
+	 * 
+	 */
+	public void a(ItemStack a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public void a(TileEntitySign a);
+	
+	/**
+	 * 
+	 */
+	public void a(IInventory a);
+	
+	/**
+	 * *
+	 */
+	 boolean func_167(Block a);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public boolean b(Block a);
+	
+	/**
+	 * 
+	 */
+	public void b(ItemStack a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * 
+	 */
+	protected void c();
+	
+	/**
+	 * 
+	 */
+	public void c(Entity a, int b);
+	
+	/**
+	 * *
+	 */
+	 void func_6099(int a);
+	
+	/**
+	 * 
+	 */
+	protected void d(int a);
+	
+	/**
+	 * 
+	 */
+	public void f(Entity a);
+	
+	/**
+	 * *
+	 */
+	 void func_9145(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void g(Entity a);
+	
+	/**
+	 * *
+	 */
+	 void func_9146(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void h(Entity a);
+	
+	/**
+	 * *
+	 */
+	 void func_171(Entity a);
+	
+	/**
+	 * 
+	 */
+	private void j(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void l();
+	
+	/**
+	 * 
+	 */
+	public float s();
+	
+	/**
+	 * 
+	 */
+	public void z();
 
 }

@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemHoe extends BlockSoil{
+public abstract class ItemHoe extends Item{
 	// FIELDS
 	
 	// METHODS
@@ -10,16 +10,6 @@ public abstract class ItemHoe extends BlockSoil{
 	/**
 	 * 
 	 */
-	public boolean a()
-	
-	/**
-	 * 
-	 */
-	public boolean a(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, IUpdatePlayerListBox e, java.util.ArrayList f)
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

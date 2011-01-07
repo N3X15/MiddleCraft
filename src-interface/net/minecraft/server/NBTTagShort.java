@@ -2,21 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagShort{
+public abstract class NBTTagShort extends NBTBase{
 	// FIELDS
-	protected int a;
-	protected java.util.Random b;
+	public short a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(HashEntry2 a, Packet17AddToInventory b, int c, int d, byte[] e)
+	public byte a();
 	
 	/**
 	 * 
 	 */
-	protected void a(Packet17AddToInventory a, int b, int c, int d, int e, byte[] f)
+	 void a(java.io.DataInput a);
+	
+	/**
+	 * 
+	 */
+	 void a(java.io.DataOutput a);
+	
+	/**
+	 * *
+	 */
+	 java.lang.String gr_toString();
+	
+	/**
+	 * 
+	 */
+	public java.lang.String toString();
 
 }

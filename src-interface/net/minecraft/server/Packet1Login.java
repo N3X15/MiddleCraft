@@ -2,145 +2,40 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet1Login extends TileEntityChest{
+public abstract class Packet1Login extends Packet{
 	// FIELDS
-	private java.util.Map a;
+	public int a;
+	public java.lang.String b;
+	public java.lang.String c;
+	public long d;
+	public byte e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Gets the type byte for the tag.
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public byte getType()
-	
-	/**
-	 * Read the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void readTagContents(java.io.DataInput a)
-	
-	/**
-	 * Write the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void writeTagContents(java.io.DataOutput a)
-	
-	/**
-	 * Returns whether the given string has been previously stored as a key in the map.
-	 */
-	public boolean hasKey(java.lang.String a)
-	
-	/**
-	 * Stores a new NBTTagByte with the given byte value into the map with the given string key.
-	 */
-	public void setByte(java.lang.String a, byte b)
-	
-	/**
-	 * Stores a new NBTTagDouble with the given double value into the map with the given string key.
-	 */
-	public void setDouble(java.lang.String a, double b)
-	
-	/**
-	 * Stores a new NBTTagFloat with the given float value into the map with the given string key.
-	 */
-	public void setFloat(java.lang.String a, float b)
-	
-	/**
-	 * Stores a new NBTTagInt with the given integer value into the map with the given string key.
-	 */
-	public void setInteger(java.lang.String a, int b)
-	
-	/**
-	 * Stores a new NBTTagLong with the given long value into the map with the given string key.
-	 */
-	public void setLong(java.lang.String a, long b)
-	
-	/**
-	 * Stores the given NBTTagCompound into the map with the given string key.
-	 */
-	public void setCompoundTag(java.lang.String a, Packet1Login b)
-	
-	/**
-	 * Stores the given tag into the map with the given string key. This is mostly used to store tag lists.
-	 */
-	public void setTag(java.lang.String a, TileEntityChest b)
-	
-	/**
-	 * Stores a new NBTTagString with the given string value into the map with the given string key.
-	 */
-	public void setString(java.lang.String a, java.lang.String b)
-	
-	/**
-	 * Stores a new NBTTagShort with the given short value into the map with the given string key.
-	 */
-	public void setShort(java.lang.String a, short b)
-	
-	/**
-	 * Stores the given boolean value as a NBTTagByte, storing 1 for true and 0 for false, using the given string key.
-	 */
-	public void setBoolean(java.lang.String a, boolean b)
-	
-	/**
-	 * Stores a new NBTTagByteArray with the given array as data into the map with the given string key.
-	 */
-	public void setByteArray(java.lang.String a, byte[] b)
-	
-	/**
-	 * Retrieves a byte value using the specified key, or 0 if no such key was stored.
-	 */
-	public byte getByte(java.lang.String a)
-	
-	/**
-	 * Retrieves a short value using the specified key, or 0 if no such key was stored.
-	 */
-	public short getShort(java.lang.String a)
-	
-	/**
-	 * Retrieves an integer value using the specified key, or 0 if no such key was stored.
-	 */
-	public int getInteger(java.lang.String a)
-	
-	/**
-	 * Retrieves a long value using the specified key, or 0 if no such key was stored.
-	 */
-	public long getLong(java.lang.String a)
-	
-	/**
-	 * Retrieves a float value using the specified key, or 0 if no such key was stored.
-	 */
-	public float getFloat(java.lang.String a)
-	
-	/**
-	 * Retrieves a double value using the specified key, or 0 if no such key was stored.
-	 */
-	public double getDouble(java.lang.String a)
-	
-	/**
-	 * Retrieves a string value using the specified key, or an empty string if no such key was stored.
-	 */
-	public java.lang.String getString(java.lang.String a)
-	
-	/**
-	 * Retrieves a byte array using the specified key, or a zero-length array if no such key was stored.
-	 */
-	public byte[] getByteArray(java.lang.String a)
-	
-	/**
-	 * Retrieves a NBTTagCompound subtag matching the specified key, or a new empty NBTTagCompound if no such key was stored.
-	 */
-	public Packet1Login getCompoundTag(java.lang.String a)
-	
-	/**
-	 * Retrieves a NBTTagList subtag matching the specified key, or a new empty NBTTagList if no such key was stored.
-	 */
-	public WorldManager getTagList(java.lang.String a)
-	
-	/**
-	 * Retrieves a boolean value using the specified key, or false if no such key was stored. This uses the getByte method.
-	 */
-	public boolean getBoolean(java.lang.String a)
+	 int getPacketSize();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public int a();
+	
+	/**
+	 * 
+	 */
+	public void a(NetHandler a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataInputStream a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataOutputStream a);
 
 }

@@ -2,14 +2,35 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet53BlockChange extends WorldChunkManager{
+public abstract class Packet53BlockChange extends Packet{
 	// FIELDS
+	public int a;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the quantity of items to drop on block destruction.
+	 * 
 	 */
-	public int quantityDropped(java.util.Random a)
+	public int a();
+	
+	/**
+	 * 
+	 */
+	public void a(NetHandler a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataInputStream a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataOutputStream a);
 
 }

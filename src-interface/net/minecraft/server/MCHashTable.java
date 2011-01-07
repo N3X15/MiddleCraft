@@ -2,49 +2,120 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class MCHashTable extends java.lang.Enum{
+public abstract class MCHashTable{
 	// FIELDS
-	public final int A;
-	public final int B;
-	public final int C;
-	private static final ie[] D;
-	public static final MCHashTable a;
-	public static final MCHashTable b;
-	public static final MCHashTable c;
-	public static final MCHashTable d;
-	public static final MCHashTable e;
-	public static final MCHashTable f;
-	public static final MCHashTable g;
-	public static final MCHashTable h;
-	public static final MCHashTable i;
-	public static final MCHashTable j;
-	public static final MCHashTable k;
-	public static final MCHashTable l;
-	public static final MCHashTable m;
-	public static final MCHashTable n;
-	public static final MCHashTable o;
-	public static final MCHashTable p;
-	public static final MCHashTable q;
-	public static final MCHashTable r;
-	public static final MCHashTable s;
-	public static final MCHashTable t;
-	public static final MCHashTable u;
-	public static final MCHashTable v;
-	public static final MCHashTable w;
-	public static final MCHashTable x;
-	public final java.lang.String y;
-	public final int z;
+	private transient iv[] a;
+	private transient int b;
+	private int c;
+	private final float d;
+	private transient volatile int e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Adds a key and associated value to this map
 	 */
-	public static MCHashTable valueOf(java.lang.String a)
+	 void addKey(int a, java.lang.Object b);
 	
 	/**
 	 * 
 	 */
-	public static ie[] values()
+	public void a();
+	
+	/**
+	 * 
+	 */
+	public java.lang.Object a(int a);
+	
+	/**
+	 * 
+	 */
+	private static int a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	private void a(int a, int b, java.lang.Object c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, java.lang.Object b);
+	
+	/**
+	 * 
+	 */
+	private void a(iv[] a);
+	
+	/**
+	 * Returns true if this hash table contains the specified item.
+	 */
+	 boolean containsItem(int a);
+	
+	/**
+	 * 
+	 */
+	public boolean b(int a);
+	
+	/**
+	 * Returns the internal entry for a key
+	 */
+	 HashEntry lookupEntry(int a);
+	
+	/**
+	 * 
+	 */
+	final HashEntry c(int a);
+	
+	/**
+	 * Removes the specified object from the map and returns it
+	 */
+	 java.lang.Object removeObject(int a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.Object d(int a);
+	
+	/**
+	 * Removes the specified entry from the map and returns it
+	 */
+	 HashEntry removeEntry(int a);
+	
+	/**
+	 * 
+	 */
+	final HashEntry e(int a);
+	
+	/**
+	 * Returns the hash code for a key
+	 */
+	 int getHash(int a);
+	
+	/**
+	 * 
+	 */
+	static int f(int a);
+	
+	/**
+	 * Makes the passed in integer suitable for hashing by a number of shifts
+	 */
+	 int computeHash(int a);
+	
+	/**
+	 * 
+	 */
+	private static int g(int a);
+	
+	/**
+	 * Increases the number of hash slots
+	 */
+	 void grow(int a);
+	
+	/**
+	 * 
+	 */
+	private void h(int a);
 
 }

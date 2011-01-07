@@ -2,30 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityChicken extends EntityArrow{
+public abstract class EntityChicken extends EntityAnimals{
 	// FIELDS
-	public PlayerListBox a;
-	public lg b;
-	private Packet17AddToInventory c;
-	private int h;
-	private int i;
-	private int j;
+	public boolean a;
+	public int al;
+	public float b;
+	public float c;
+	public float d;
+	public float e;
+	public ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(BlockLog a)
+	public void G();
 	
 	/**
 	 * 
 	 */
-	public void a(lg a)
+	protected void a(float a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(BlockLog a)
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String d();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * 
+	 */
+	protected int g();
 
 }

@@ -2,55 +2,38 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class GuiStatsComponent extends EntitySnowball{
+public abstract class GuiStatsComponent extends javax.swing.JComponent{
 	// FIELDS
-	private il[] e;
+	private int[] a;
+	private int b;
+	private java.lang.String[] c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Public static accessor to call updateStats.
 	 */
-	public int a()
+	 void update(GuiStatsComponent a);
 	
 	/**
 	 * 
 	 */
-	public BlockSponge a(int a)
+	private void a();
 	
 	/**
 	 * 
 	 */
-	public BlockSponge a(int a, int b)
+	static void a(GuiStatsComponent a);
+	
+	/**
+	 * *
+	 */
+	 void kg_paint(java.awt.Graphics a);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, BlockSponge b)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(BlockLog a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public int c()
+	public void paint(java.awt.Graphics a);
 
 }

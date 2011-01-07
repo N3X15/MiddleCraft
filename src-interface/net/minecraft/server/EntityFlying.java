@@ -2,38 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFlying extends BlockStep{
+public abstract class EntityFlying extends EntityLiving{
 	// FIELDS
-	public double a;
-	public double b;
-	public double c;
-	public double d;
-	public float e;
-	public float f;
-	public boolean g;
-	public boolean h;
-	public boolean i;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	protected void a(float a);
+	
+	/**
+	 * *
+	 */
+	 void func_148(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public void c(float a, float b);
+	
+	/**
+	 * returns true if this entity is by a ladder, false otherwise
+	 */
+	 boolean isByLadder();
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public boolean d_();
 
 }

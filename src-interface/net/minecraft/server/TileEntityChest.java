@@ -2,55 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntityChest{
+public abstract class TileEntityChest extends TileEntity{
 	// FIELDS
-	private java.lang.String a;
+	private il[] e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public abstract byte a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public static TileEntityChest a(byte a)
+	public ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public static void a(TileEntityChest a, java.io.DataOutput b)
+	public ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	abstract void a(java.io.DataInput a)
+	public void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	abstract void a(java.io.DataOutput a)
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public static java.lang.String b(byte a)
+	public boolean a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public static TileEntityChest b(java.io.DataInput a)
+	public java.lang.String b();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String c()
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public TileEntityChest m(java.lang.String a)
+	public int c();
 
 }

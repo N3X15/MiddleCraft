@@ -2,19 +2,59 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockPortal extends BlockSoil{
+public abstract class BlockPortal extends BlockBreakable{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
 	 */
-	public void onEntityCollidedWithBlock(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	 boolean isOpaqueCube();
 	
 	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 * 
 	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, Entity e);
+	
+	/**
+	 * 
+	 */
+	public int a(java.util.Random a);
+	
+	/**
+	 * 
+	 */
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean a(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * Checks to see if this location is valid to create a portal and will return True if it does. Args: world, x, y, z
+	 */
+	 boolean tryToCreatePortal(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean a_(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
 
 }

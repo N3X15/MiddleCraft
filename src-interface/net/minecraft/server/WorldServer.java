@@ -2,26 +2,85 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldServer{
+public abstract class WorldServer extends World{
 	// FIELDS
-	public final NBTTagList a;
-	public int b;
-	public int c;
-	public int d;
-	public int e;
-	public int f;
-	public int g;
+	public ChunkProviderServer A;
+	public boolean B;
+	public boolean C;
+	private net.minecraft.server.MinecraftServer D;
+	private MCHashTable E;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean a(int a, int b, int c, int d, int e, int f)
+	 Entity func_6158(int a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet17AddToInventory a)
+	public Entity a(int a);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, byte b);
+	
+	/**
+	 * 
+	 */
+	public Explosion a(Entity a, double b, double c, double d, float e, boolean f);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public boolean a(EntityPlayer a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	protected IChunkProvider a(java.io.File a);
+	
+	/**
+	 * *
+	 */
+	 void func_12017(Entity a, boolean b);
+	
+	/**
+	 * 
+	 */
+	protected void b(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a, boolean b);
+	
+	/**
+	 * 
+	 */
+	protected void c(Entity a);
+	
+	/**
+	 * *
+	 */
+	 java.util.List func_532(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public java.util.List d(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public void f();
 
 }

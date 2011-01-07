@@ -2,46 +2,142 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkManager extends ServerWindowAdapter{
+public abstract class NetworkManager{
 	// FIELDS
-	 int[] b;
-	private int c;
+	public static final java.lang.Object a;
+	public static int b;
+	public static int c;
+	public int d;
+	private java.lang.Object e;
+	private ()V setChunkModified;
+	private final java.net.SocketAddress g;
+	private java.io.DataInputStream h;
+	private java.io.DataOutputStream i;
+	private boolean j;
+	private java.util.List k;
+	private java.util.List l;
+	private java.util.List m;
+	private NetHandler n;
+	private boolean o;
+	private java.lang.Thread p;
+	private java.lang.Thread q;
+	private boolean r;
+	private java.lang.String s;
+	private java.lang.Object[] t;
+	private int u;
+	private int v;
+	private int w;
 	
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * Adds the packet to the correct send queue (chunk data packets go to a separate queue).
 	 */
-	public boolean isOpaqueCube()
-	
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Ticks the block if it's been scheduled
-	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * Returns the quantity of items to drop on block destruction.
-	 */
-	public int quantityDropped(java.util.Random a)
+	 void addToSendQueue(Packet a);
 	
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
-	 */
-	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	public void a();
 	
 	/**
 	 * 
 	 */
-	private void g(Packet17AddToInventory a, int b, int c, int d)
+	static boolean a(NetworkManager a);
+	
+	/**
+	 * 
+	 */
+	public void a(NetHandler a);
+	
+	/**
+	 * 
+	 */
+	private void a(java.lang.Exception a);
+	
+	/**
+	 * 
+	 */
+	public transient void a(java.lang.String a, java.lang.Object[] b);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet a);
+	
+	/**
+	 * Returns the socket address of the remote side. Server-only.
+	 */
+	 java.net.SocketAddress getRemoteAddress();
+	
+	/**
+	 * 
+	 */
+	public java.net.SocketAddress b();
+	
+	/**
+	 * 
+	 */
+	static boolean b(NetworkManager a);
+	
+	/**
+	 * Static accessor to readPacket.
+	 */
+	 void readNetworkPacket(NetworkManager a);
+	
+	/**
+	 * 
+	 */
+	public void c();
+	
+	/**
+	 * 
+	 */
+	static void c(NetworkManager a);
+	
+	/**
+	 * Returns the number of chunk data packets waiting to be sent.
+	 */
+	 int getNumChunkDataPackets();
+	
+	/**
+	 * 
+	 */
+	public int d();
+	
+	/**
+	 * 
+	 */
+	static void d(NetworkManager a);
+	
+	/**
+	 * Returns the read thread.
+	 */
+	 java.lang.Thread getReadThread(NetworkManager a);
+	
+	/**
+	 * 
+	 */
+	private void e();
+	
+	/**
+	 * 
+	 */
+	static java.lang.Thread e(NetworkManager a);
+	
+	/**
+	 * Returns the write thread.
+	 */
+	 java.lang.Thread getWriteThread(NetworkManager a);
+	
+	/**
+	 * 
+	 */
+	private void f();
+	
+	/**
+	 * 
+	 */
+	static java.lang.Thread f(NetworkManager a);
 
 }

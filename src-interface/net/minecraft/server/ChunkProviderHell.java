@@ -4,29 +4,81 @@ package net.minecraft.server;
 
 public abstract class ChunkProviderHell{
 	// FIELDS
-	public double a;
-	public double b;
-	public double c;
-	private static int[][] d;
-	private int[] e;
-	private static final double f;
-	private static final double g;
+	public NoiseGeneratorOctaves a;
+	public NoiseGeneratorOctaves b;
+	 double[] c;
+	 double[] d;
+	 double[] e;
+	 ()V setChunkModified;
+	 double[] g;
+	private java.util.Random h;
+	private NoiseGeneratorOctaves i;
+	private NoiseGeneratorOctaves j;
+	private NoiseGeneratorOctaves k;
+	private NoiseGeneratorOctaves l;
+	private NoiseGeneratorOctaves m;
+	private World n;
+	private double[] o;
+	private double[] p;
+	private double[] q;
+	private double[] r;
+	private MapGenBase s;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	private static int a(double a)
+	 double[] func_4060(double[] a, int b, int c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public void a(double[] a, double b, double c, int d, int e, double f, double g, double h)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	private static double a(int[] a, double b, double c)
+	public boolean a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, byte[] c);
+	
+	/**
+	 * 
+	 */
+	public void a(IChunkProvider a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a, IProgressUpdate b);
+	
+	/**
+	 * 
+	 */
+	private double[] a(double[] a, int b, int c, int d, int e, int f, int g);
+	
+	/**
+	 * *
+	 */
+	 void func_4061(int a, int b, byte[] c);
+	
+	/**
+	 * 
+	 */
+	public boolean b();
+	
+	/**
+	 * 
+	 */
+	public Chunk b(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public void b(int a, int b, byte[] c);
 
 }

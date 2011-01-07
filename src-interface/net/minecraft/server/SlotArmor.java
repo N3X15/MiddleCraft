@@ -6,17 +6,23 @@ abstract class SlotArmor extends Slot{
 	// FIELDS
 	final int a;
 	final CraftingInventoryPlayerCB b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 int func_20093();
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a)
+	public int a();
+	
+	/**
+	 * 
+	 */
+	public boolean a(ItemStack a);
 
 }

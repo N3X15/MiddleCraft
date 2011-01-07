@@ -10,21 +10,36 @@ public abstract class BlockStationary extends BlockFluids{
 	/**
 	 * 
 	 */
-	public void a(World a, int b, int c, int d, java.util.Random e)
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 */
+	 void onNeighborBlockChange(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public void b(World a, int b, int c, int d, int e)
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * *
+	 */
+	 void func_20040(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	private void i(World a, int b, int c, int d)
+	private void i(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 boolean func_4033(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	private boolean j(World a, int b, int c, int d)
+	private boolean j(World a, int b, int c, int d);
 
 }

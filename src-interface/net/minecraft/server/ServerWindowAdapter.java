@@ -4,13 +4,19 @@ package net.minecraft.server;
 
 abstract final class ServerWindowAdapter extends java.awt.event.WindowAdapter{
 	// FIELDS
-	final net.minecraft.server.MienCrapftHurrvurr a;
+	final net.minecraft.server.MinecraftServer a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 void ac_windowClosing(java.awt.event.WindowEvent a);
+	
+	/**
 	 * 
 	 */
-	public void windowClosing(java.awt.event.WindowEvent a)
+	public void windowClosing(java.awt.event.WindowEvent a);
 
 }

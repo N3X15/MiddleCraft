@@ -2,30 +2,57 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockLeaves extends NBTTagByteArray{
+public abstract class BlockLeaves extends BlockLeavesBase{
 	// FIELDS
-	private int a;
+	 int[] b;
+	private int c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * 
+	 */
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public int a(int a, java.util.Random b);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * 
+	 */
+	public int a(java.util.Random a);
+	
+	/**
 	 * *
 	 */
-	public int getDamageVsEntity(IMobs a)
+	 void func_316(World a, int b, int c, int d);
 	
 	/**
-	 * Current implementations of this method in child classes do not use the entry argument beside ev. They just raise the damage on the stack.
+	 * 
 	 */
-	public void hitBlock(BlockSponge a, int b, int c, int d, int e)
+	public void b(World a, int b, int c, int d);
 	
 	/**
-	 * Returns the strength of the stack against a given block. 1.0F base, (Quality+1)*2 if correct blocktype, 1.5F if sword
+	 * 
 	 */
-	public float getStrVsBlock(BlockSponge a, BlockSoil b)
+	public void b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * *
 	 */
-	public void hitEntity(BlockSponge a, lc b)
+	 void func_6091(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void g(World a, int b, int c, int d);
 
 }

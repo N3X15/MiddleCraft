@@ -2,76 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class BlockBreakable{
+public abstract class BlockBreakable extends Block{
 	// FIELDS
-	final MapGenCavesHell a;
-	private Packet17AddToInventory b;
-	private int c;
-	private int d;
-	private int e;
-	private int f;
-	private java.util.List g;
+	private boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	private void a()
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	private boolean a(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	static int a(BlockBreakable a)
-	
-	/**
-	 * 
-	 */
-	private BlockBreakable a(NetworkWriterThread a)
-	
-	/**
-	 * 
-	 */
-	public void a(boolean a)
-	
-	/**
-	 * 
-	 */
-	private void b()
-	
-	/**
-	 * 
-	 */
-	private boolean b(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	private boolean b(BlockBreakable a)
-	
-	/**
-	 * 
-	 */
-	private int c()
-	
-	/**
-	 * 
-	 */
-	private boolean c(int a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	private boolean c(BlockBreakable a)
-	
-	/**
-	 * 
-	 */
-	private void d(BlockBreakable a)
+	public boolean a(IBlockAccess a, int b, int c, int d, int e);
 
 }

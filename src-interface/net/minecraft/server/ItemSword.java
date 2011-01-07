@@ -2,112 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSword{
+public abstract class ItemSword extends Item{
 	// FIELDS
-	public static final java.lang.Object a;
-	public static int b;
-	public static int c;
-	public int d;
-	private java.lang.Object e;
-	private java.net.Socket f;
-	private final java.net.SocketAddress g;
-	private java.io.DataInputStream h;
-	private java.io.DataOutputStream i;
-	private boolean j;
-	private java.util.List k;
-	private java.util.List l;
-	private java.util.List m;
-	private Packet28 n;
-	private boolean o;
-	private java.lang.Thread p;
-	private java.lang.Thread q;
-	private boolean r;
-	private java.lang.String s;
-	private java.lang.Object[] t;
-	private int u;
-	private int v;
-	private int w;
+	private int a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Checks timeouts and processes all pending read packets.
+	 * *
 	 */
-	public void processReadPackets()
+	 int getDamageVsEntity(Entity a);
 	
 	/**
-	 * Whether the network is operational.
+	 * 
 	 */
-	static boolean isRunning(ItemSword a)
+	public int a(Entity a);
 	
 	/**
-	 * Sets the NetHandler for this NetworkManager. Server-only.
+	 * 
 	 */
-	public void setNetHandler(Packet28 a)
+	public void a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
-	 * Used to report network errors and causes a network shutdown.
+	 * 
 	 */
-	private void onNetworkError(java.lang.Exception a)
+	public float a(ItemStack a, Block b);
 	
 	/**
-	 * Shuts down the network with the specified reason. Closes all streams and sockets, spawns NetworkMasterThread to stop reading and writing threads.
+	 * 
 	 */
-	public transient void networkShutdown(java.lang.String a, java.lang.Object[] b)
-	
-	/**
-	 * Adds the packet to the correct send queue (chunk data packets go to a separate queue).
-	 */
-	public void addToSendQueue(BlockStep a)
-	
-	/**
-	 * Returns the socket address of the remote side. Server-only.
-	 */
-	public java.net.SocketAddress getRemoteAddress()
-	
-	/**
-	 * Is the server terminating? Client side aways returns false.
-	 */
-	static boolean isServerTerminating(ItemSword a)
-	
-	/**
-	 * Server-only method to shut down the network.
-	 */
-	public void serverShutdown()
-	
-	/**
-	 * Static accessor to readPacket.
-	 */
-	static void readNetworkPacket(ItemSword a)
-	
-	/**
-	 * Returns the number of chunk data packets waiting to be sent.
-	 */
-	public int getNumChunkDataPackets()
-	
-	/**
-	 * Static accessor to sendPacket.
-	 */
-	static void sendNetworkPacket(ItemSword a)
-	
-	/**
-	 * Sends a data packet if there is one to send, or sends a chunk data packet if there is one and the counter is up, or does nothing. If it sends a packet, it sleeps for 10ms.
-	 */
-	private void sendPacket()
-	
-	/**
-	 * Returns the read thread.
-	 */
-	static java.lang.Thread getReadThread(ItemSword a)
-	
-	/**
-	 * Reads a single packet from the input stream and adds it to the read queue. If no packet is read, it shuts down the network.
-	 */
-	private void readPacket()
-	
-	/**
-	 * Returns the write thread.
-	 */
-	static java.lang.Thread getWriteThread(ItemSword a)
+	public void a(ItemStack a, EntityLiving b);
 
 }

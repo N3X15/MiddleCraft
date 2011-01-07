@@ -6,12 +6,18 @@ public abstract class RecipesWeapons{
 	// FIELDS
 	private java.lang.String[][] a;
 	private java.lang.Object[][] b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 void func_20112(CraftingManager a);
+	
+	/**
 	 * 
 	 */
-	public void a(CraftingManager a)
+	public void a(CraftingManager a);
 
 }

@@ -2,54 +2,65 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPainting extends EntityTrackerEntry{
+public abstract class EntityPainting extends Entity{
 	// FIELDS
+	public int a;
+	public EnumArt b;
+	private int c;
+	private int d;
+	private int e;
+	private ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * *
 	 */
-	public void writeEntityToNBT(Packet1Login a)
+	 void func_179(int a);
 	
 	/**
 	 * 
 	 */
-	protected void a(IMobs a, float b)
-	
-	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
-	 */
-	public void readEntityFromNBT(Packet1Login a)
-	
-	/**
-	 * Returns the sound this mob makes while it's alive.
-	 */
-	protected java.lang.String getLivingSound()
-	
-	/**
-	 * Returns the sound this mob makes when it is hurt.
-	 */
-	protected java.lang.String getHurtSound()
-	
-	/**
-	 * Returns the sound this mob makes on death.
-	 */
-	protected java.lang.String getDeathSound()
-	
-	/**
-	 * Returns the item ID for the item the mob drops on death.
-	 */
-	protected int getDropItemId()
+	public void a(int a);
 	
 	/**
 	 * 
 	 */
-	public double j()
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected IMobs k()
+	public boolean a(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * *
+	 */
+	 float func_180(int a);
+	
+	/**
+	 * 
+	 */
+	public boolean c();
+	
+	/**
+	 * 
+	 */
+	private float c(int a);
+	
+	/**
+	 * 
+	 */
+	public boolean c_();
 
 }

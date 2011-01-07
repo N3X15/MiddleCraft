@@ -2,34 +2,228 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPlayerMP extends BlockStep{
+public abstract class EntityPlayerMP extends EntityPlayer{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public int e;
+	public NetServerHandler a;
+	public java.util.Set aj;
+	public double ak;
+	public boolean al;
+	public boolean am;
+	public net.minecraft.server.MinecraftServer b;
+	private int bE;
+	private int bF;
+	private int[] bG;
+	private int bH;
+	public ItemInWorldManager c;
+	public double d;
+	public double e;
+	public ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	public int getPacketSize()
+	public int[] E();
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * *
 	 */
-	public void processPacket(Packet28 a)
+	 void func_175();
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public void F();
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	 void onLivingUpdate();
+	
+	/**
+	 * 
+	 */
+	public void G();
+	
+	/**
+	 * *
+	 */
+	 void func_168();
+	
+	/**
+	 * 
+	 */
+	public void H();
+	
+	/**
+	 * *
+	 */
+	 void func_20043();
+	
+	/**
+	 * 
+	 */
+	public void I();
+	
+	/**
+	 * *
+	 */
+	 void func_20058();
+	
+	/**
+	 * 
+	 */
+	public void J();
+	
+	/**
+	 * *
+	 */
+	 void func_20059();
+	
+	/**
+	 * 
+	 */
+	public void K();
+	
+	/**
+	 * *
+	 */
+	 void func_20060();
+	
+	/**
+	 * 
+	 */
+	private void R();
+	
+	/**
+	 * Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
+	 */
+	 void displayGUIFurnace(TileEntityFurnace a);
+	
+	/**
+	 * 
+	 */
+	protected void a(double a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public int a(int a);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private void a(TileEntity a);
+	
+	/**
+	 * 
+	 */
+	public void a(CraftingInventoryCB a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void a(CraftingInventoryCB a, int b, ItemStack c);
+	
+	/**
+	 * 
+	 */
+	public void a(CraftingInventoryCB a, java.util.List b);
+	
+	/**
+	 * 
+	 */
+	public void a(TileEntityFurnace a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public void a(ItemStack a);
+	
+	/**
+	 * 
+	 */
+	public void a(IInventory a);
+	
+	/**
+	 * *
+	 */
+	 void func_9153(double a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public void b(double a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * *
+	 */
+	 void func_163(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public void c(int a);
+	
+	/**
+	 * 
+	 */
+	public void c(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	private int c(ItemStack a);
+	
+	/**
+	 * 
+	 */
+	public void e(Entity a);
+	
+	/**
+	 * Called when the mob's health reaches 0.
+	 */
+	 void onDeath(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void f(Entity a);
+	
+	/**
+	 * *
+	 */
+	 void func_20057();
+	
+	/**
+	 * 
+	 */
+	public void k();
+	
+	/**
+	 * 
+	 */
+	public boolean p();
+	
+	/**
+	 * 
+	 */
+	public float s();
 
 }

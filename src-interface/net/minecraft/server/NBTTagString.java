@@ -2,49 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagString extends BlockSoil{
+public abstract class NBTTagString extends NBTBase{
 	// FIELDS
+	public java.lang.String a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public byte a();
 	
 	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, int b, int c, int d)
+	 void a(java.io.DataInput a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	 void a(java.io.DataOutput a);
+	
+	/**
+	 * *
+	 */
+	 java.lang.String jo_toString();
 	
 	/**
 	 * 
 	 */
-	protected boolean b(int a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public boolean f(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	protected final void g(Packet17AddToInventory a, int b, int c, int d)
+	public java.lang.String toString();
 
 }

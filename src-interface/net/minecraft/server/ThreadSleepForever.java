@@ -2,21 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class ThreadSleepForever extends ServerConfigurationManager{
+public abstract class ThreadSleepForever extends java.lang.Thread{
 	// FIELDS
-	final int a;
-	final ServerGuiFocusAdapter b;
+	final net.minecraft.server.MinecraftServer a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 void cn_run();
 	
 	/**
 	 * 
 	 */
-	public boolean a(BlockSponge a)
+	public void run();
 
 }

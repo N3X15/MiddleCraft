@@ -2,28 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenLightStone2 extends java.util.logging.Handler{
+public abstract class WorldGenLightStone2 extends WorldGenerator{
 	// FIELDS
-	 java.util.logging.Formatter a;
-	private int[] b;
-	private int c;
-	private javax.swing.JTextArea d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void close()
-	
-	/**
-	 * 
-	 */
-	public void flush()
-	
-	/**
-	 * 
-	 */
-	public void publish(java.util.logging.LogRecord a)
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

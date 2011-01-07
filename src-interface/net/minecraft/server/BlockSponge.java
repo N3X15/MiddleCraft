@@ -2,113 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class BlockSponge{
+public abstract class BlockSponge extends Block{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public NBTTagByteArray a()
+	public void b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public BlockSponge a(int a)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public Packet1Login a(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public int a(IMobs a)
-	
-	/**
-	 * 
-	 */
-	public BlockSponge a(Packet17AddToInventory a, BlockLog b)
-	
-	/**
-	 * 
-	 */
-	public void a(BlockLog a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(BlockLog a, Packet17AddToInventory b, int c, int d, int e, int f)
-	
-	/**
-	 * 
-	 */
-	public float a(BlockSoil a)
-	
-	/**
-	 * 
-	 */
-	public static BlockSponge a(BlockSponge a)
-	
-	/**
-	 * 
-	 */
-	public static boolean a(BlockSponge a, BlockSponge b)
-	
-	/**
-	 * 
-	 */
-	public void a(lc a)
-	
-	/**
-	 * 
-	 */
-	public int b()
-	
-	/**
-	 * 
-	 */
-	public void b(int a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public boolean b(BlockSoil a)
-	
-	/**
-	 * 
-	 */
-	private boolean b(BlockSponge a)
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public BlockSponge d()
-	
-	/**
-	 * 
-	 */
-	public java.lang.String toString()
+	public void e(World a, int b, int c, int d);
 
 }

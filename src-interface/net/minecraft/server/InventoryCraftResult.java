@@ -5,47 +5,48 @@ package net.minecraft.server;
 public abstract class InventoryCraftResult{
 	// FIELDS
 	private il[] a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a)
+	public ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a, int b)
+	public ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, ItemStack b)
+	public void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public boolean a_(EntityPlayer a)
+	public boolean a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public java.lang.String b()
+	public java.lang.String b();
 	
 	/**
 	 * 
 	 */
-	public int c()
+	public int c();
 	
 	/**
 	 * 
 	 */
-	public void d()
+	public void d();
 
 }

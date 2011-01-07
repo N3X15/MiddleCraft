@@ -4,84 +4,29 @@ package net.minecraft.server;
 
 public abstract class NibbleArray{
 	// FIELDS
-	public IMobs a;
-	public boolean b;
-	public boolean c;
-	public boolean d;
-	public int e;
-	public int f;
-	public int g;
-	public int h;
-	public int i;
-	public int j;
-	public int k;
-	public double l;
-	public double m;
-	public double n;
-	public int o;
-	public boolean p;
-	public java.util.Set q;
-	private double r;
-	private double s;
-	private double t;
-	private boolean u;
-	private boolean v;
+	public final byte[] a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the nibble of data corresponding to the passed in i,j,k. j is at most 6 bits, k is at most 4.
 	 */
-	public void a()
+	 int getNibble(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(WorldGenCactus a)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public void a(java.util.List a)
+	public int a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(BlockStep a)
-	
-	/**
-	 * 
-	 */
-	private BlockStep b()
-	
-	/**
-	 * 
-	 */
-	public void b(WorldGenCactus a)
-	
-	/**
-	 * 
-	 */
-	public void b(java.util.List a)
-	
-	/**
-	 * 
-	 */
-	public void b(BlockStep a)
-	
-	/**
-	 * 
-	 */
-	public void c(WorldGenCactus a)
-	
-	/**
-	 * 
-	 */
-	public boolean equals(java.lang.Object a)
-	
-	/**
-	 * 
-	 */
-	public int hashCode()
+	public void a(int a, int b, int c, int d);
 
 }

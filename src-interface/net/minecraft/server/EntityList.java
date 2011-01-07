@@ -2,30 +2,49 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityList extends BlockStep{
+public abstract class EntityList{
 	// FIELDS
-	public int a;
+	private static java.util.Map a;
+	private static java.util.Map b;
+	private static java.util.Map c;
+	private static java.util.Map d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 void func_563(java.lang.Class a, java.lang.String b, int c);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public static Entity a(NBTTagCompound a, World b);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
+	public static int a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataOutputStream a)
+	private static void a(java.lang.Class a, java.lang.String b, int c);
+	
+	/**
+	 * 
+	 */
+	public static Entity a(java.lang.String a, World b);
+	
+	/**
+	 * *
+	 */
+	 java.lang.String func_564(Entity a);
+	
+	/**
+	 * 
+	 */
+	public static java.lang.String b(Entity a);
 
 }

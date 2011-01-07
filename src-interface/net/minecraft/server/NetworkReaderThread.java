@@ -2,39 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkReaderThread extends EntityMinecart{
+abstract class NetworkReaderThread extends java.lang.Thread{
 	// FIELDS
+	final NetworkManager a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a()
+	 void jt_run();
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public float a(long a, float b)
-	
-	/**
-	 * 
-	 */
-	public Vec3D a(java.io.File a)
-	
-	/**
-	 * 
-	 */
-	protected void b()
-	
-	/**
-	 * 
-	 */
-	public HashEntry2 c()
+	public void run();
 
 }

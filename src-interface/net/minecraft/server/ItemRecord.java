@@ -2,55 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemRecord{
+public abstract class ItemRecord extends Item{
 	// FIELDS
-	private net.minecraft.server.MinecraftServer a;
+	private java.lang.String a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * *
-	 */
-	public void updateAllRenderers()
-	
-	/**
 	 * 
 	 */
-	public void a(int a, int b, int c)
-	
-	/**
-	 * *
-	 */
-	public void markBlockRangeNeedsUpdate(int a, int b, int c, int d, int e, int f)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, int b, int c, EntitySnowball d)
-	
-	/**
-	 * *
-	 */
-	public void obtainEntitySkin(IMobs a)
-	
-	/**
-	 * Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
-	 */
-	public void spawnParticle(java.lang.String a, double b, double c, double d, double e, double f, double g)
-	
-	/**
-	 * Plays the specified sound. Arg: x, y, z, soundName, unknown1, unknown2
-	 */
-	public void playSound(java.lang.String a, double b, double c, double d, float e, float f)
-	
-	/**
-	 * Plays the specified record. Arg: recordName, x, y, z
-	 */
-	public void playRecord(java.lang.String a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void b(IMobs a)
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

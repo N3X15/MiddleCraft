@@ -2,55 +2,64 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class IWorldAccess extends BlockSoil{
+public abstract interface interface IWorldAccess{
 	// FIELDS
-	private boolean a;
 	
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * *
 	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
-	 */
-	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
-	
-	/**
-	 * Ticks the block if it's been scheduled
-	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * Returns the quantity of items to drop on block destruction.
-	 */
-	public int quantityDropped(java.util.Random a)
-	
-	/**
-	 * How many world ticks before ticking
-	 */
-	public int tickRate()
-	
-	/**
-	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
-	 */
-	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
-	
-	/**
-	 * Called when the block is clicked by a player. Args: x, y, z, entityPlayer
-	 */
-	public void onBlockClicked(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	 void func_683(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	private void g(Packet17AddToInventory a, int b, int c, int d)
+	public abstract void a();
 	
 	/**
 	 * 
 	 */
-	private void h(Packet17AddToInventory a, int b, int c, int d)
+	public abstract void a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(int a, int b, int c, TileEntity d);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(Entity a);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(java.lang.String a, double b, double c, double d, float e, float f);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(java.lang.String a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 void func_688(Entity a);
+	
+	/**
+	 * 
+	 */
+	public abstract void b(Entity a);
 
 }

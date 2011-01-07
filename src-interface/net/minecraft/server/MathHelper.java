@@ -2,55 +2,76 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MathHelper extends IMobs{
+public abstract class MathHelper{
 	// FIELDS
-	public BlockSponge a;
-	public int b;
-	public int c;
-	public float d;
-	private int e;
-	private int f;
+	private static float[] a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * Maximum of the absolute value of two numbers.
 	 */
-	public void writeEntityToNBT(Packet1Login a)
-	
-	/**
-	 * Called when the entity is attacked.
-	 */
-	public boolean attackEntity(IMobs a, int b)
-	
-	/**
-	 * Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
-	 */
-	protected void dealFireDamage(int a)
-	
-	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
-	 */
-	public void readEntityFromNBT(Packet1Login a)
-	
-	/**
-	 * Called by a player entity when they collide with an entity
-	 */
-	public void onCollideWithPlayer(BlockLog a)
-	
-	/**
-	 * Called to update the entity's position/logic.
-	 */
-	public void onUpdate()
+	 double abs_max(double a, double b);
 	
 	/**
 	 * 
 	 */
-	private boolean g(double a, double b, double c)
+	public static final float a(double a);
 	
 	/**
-	 * Returns if this entity is in water and will end up adding the waters velocity to the entity
+	 * 
 	 */
-	public boolean handleWaterMovement()
+	public static double a(double a, double b);
+	
+	/**
+	 * 
+	 */
+	public static final float a(float a);
+	
+	/**
+	 * cos looked up in the sin table with the appropriate offset
+	 */
+	 float cos(float a);
+	
+	/**
+	 * 
+	 */
+	public static int b(double a);
+	
+	/**
+	 * 
+	 */
+	public static final float b(float a);
+	
+	/**
+	 * *
+	 */
+	 float sqrt_float(float a);
+	
+	/**
+	 * 
+	 */
+	public static final float c(float a);
+	
+	/**
+	 * Returns the greatest integer less than or equal to the float argument
+	 */
+	 int floor_float(float a);
+	
+	/**
+	 * 
+	 */
+	public static int d(float a);
+	
+	/**
+	 * *
+	 */
+	 float abs(float a);
+	
+	/**
+	 * 
+	 */
+	public static float e(float a);
 
 }

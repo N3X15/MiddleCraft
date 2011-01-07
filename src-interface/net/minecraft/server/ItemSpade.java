@@ -2,29 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSpade extends BlockSoil{
+public abstract class ItemSpade extends ItemTool{
 	// FIELDS
+	private static gv[] bb;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a(int a)
-	
-	/**
-	 * 
-	 */
-	public int a(int a, java.util.Random b)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a(Block a);
 
 }

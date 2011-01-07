@@ -2,57 +2,135 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityMinecart{
+public abstract class EntityMinecart extends Entity{
 	// FIELDS
-	public Packet17AddToInventory a;
-	public MaterialTransparent b;
-	public boolean c;
-	public boolean d;
-	public boolean e;
-	public float[] f;
-	public int g;
-	private float[] h;
+	public int a;
+	public double aj;
+	private il[] ak;
+	private boolean al;
+	private static final int[][][] am;
+	private int an;
+	private double ao;
+	private double ap;
+	private double aq;
+	private double ar;
+	private double as;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
+	public ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	protected void a()
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public static EntityMinecart a(int a)
+	public ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b)
+	public ItemStack a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public float a(long a, float b)
+	public void a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public final void a(Packet17AddToInventory a)
+	protected void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public Vec3D a(java.io.File a)
+	public boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	protected void b()
+	public boolean a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public HashEntry2 c()
+	public boolean a_(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b();
+	
+	/**
+	 * 
+	 */
+	protected void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * 
+	 */
+	public int c();
+	
+	/**
+	 * 
+	 */
+	public void c(Entity a);
+	
+	/**
+	 * 
+	 */
+	public boolean c_();
+	
+	/**
+	 * 
+	 */
+	public void d();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(Entity a);
+	
+	/**
+	 * *
+	 */
+	 Vec3D func_182(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public Vec3D g(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public double j();
+	
+	/**
+	 * 
+	 */
+	public void l();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB q();
+	
+	/**
+	 * 
+	 */
+	public boolean v();
 
 }

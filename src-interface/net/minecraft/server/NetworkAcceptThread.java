@@ -2,40 +2,22 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetworkAcceptThread extends EntityCow{
+abstract class NetworkAcceptThread extends java.lang.Thread{
 	// FIELDS
-	public boolean a;
+	final net.minecraft.server.MinecraftServer a;
+	final NetworkListenThread b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * *
 	 */
-	public void writeEntityToNBT(Packet1Login a)
+	 void dx_run();
 	
 	/**
-	 * Called when the entity is attacked.
+	 * 
 	 */
-	public boolean attackEntity(IMobs a, int b)
-	
-	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
-	 */
-	public void readEntityFromNBT(Packet1Login a)
-	
-	/**
-	 * Returns the sound this mob makes while it's alive.
-	 */
-	protected java.lang.String getLivingSound()
-	
-	/**
-	 * Returns the sound this mob makes when it is hurt.
-	 */
-	protected java.lang.String getHurtSound()
-	
-	/**
-	 * Returns the sound this mob makes on death.
-	 */
-	protected java.lang.String getDeathSound()
+	public void run();
 
 }

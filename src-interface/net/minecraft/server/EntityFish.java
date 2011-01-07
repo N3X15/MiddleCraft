@@ -2,62 +2,61 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFish{
+public abstract class EntityFish extends Entity{
 	// FIELDS
-	 int a;
-	 int b;
-	private kx c;
-	private HashEntry2 d;
-	private Vec3D e;
-	private kx[] f;
-	private Packet17AddToInventory g;
-	private kx h;
+	public int a;
+	private int aj;
+	private boolean ak;
+	private int al;
+	private int am;
+	private int an;
+	private int ao;
+	private double ap;
+	private double aq;
+	private double ar;
+	private double as;
+	private double at;
+	public EntityPlayer b;
+	public Entity c;
+	private int d;
+	private int e;
+	private ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean a()
+	 void func_6142(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int a, int b)
+	public void a(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public void a(HashEntry2 a, int b, int c)
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	private void a(kx a)
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(boolean a, ChunkCoordIntPair b)
+	public void b_();
+	
+	/**
+	 * *
+	 */
+	 int func_6143();
 	
 	/**
 	 * 
 	 */
-	public boolean b()
-	
-	/**
-	 * 
-	 */
-	public kx b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	private void b(kx a)
-	
-	/**
-	 * 
-	 */
-	private kx c(int a, int b)
+	public int c();
 
 }

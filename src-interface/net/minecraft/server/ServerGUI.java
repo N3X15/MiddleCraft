@@ -2,33 +2,62 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ServerGUI extends BlockStep{
+public abstract class ServerGUI extends javax.swing.JComponent{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
+	public static java.util.logging.Logger a;
+	private net.minecraft.server.MinecraftServer b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * Returns the MinecraftServer associated with the ServerGui.
 	 */
-	public int getPacketSize()
+	 net.minecraft.server.MinecraftServer getMinecraftServer(ServerGUI a);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	private javax.swing.JComponent a();
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	static net.minecraft.server.MinecraftServer a(ServerGUI a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public static void a(net.minecraft.server.MinecraftServer a);
+	
+	/**
+	 * Returns a new JScrollPane with a new PlayerListBox inside.
+	 */
+	 javax.swing.JComponent getPlayerListComponent();
+	
+	/**
+	 * 
+	 */
+	private javax.swing.JComponent b();
+	
+	/**
+	 * 
+	 */
+	public void b(java.lang.String a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.String c();
+	
+	/**
+	 * Returns a new JPanel with a new GuiStatsComponent inside.
+	 */
+	 javax.swing.JComponent getLogComponent();
+	
+	/**
+	 * 
+	 */
+	private javax.swing.JComponent d();
 
 }

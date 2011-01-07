@@ -31,6 +31,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Timer;
@@ -83,11 +85,13 @@ public class Mappings {
 			return false;
 		}
 		Yaml yml = new Yaml();
-		Map<String,Object> classes = (Map<String,Object>)yml.load(new FileReader(f));
-		for(Object o : classes.values()) {
+		Map<String,Object> _classes = (Map<String,Object>)yml.load(new FileReader(f));
+		Collection<Object> vals = new ArrayList<Object>(_classes.values());
+		for(Object o : vals) {
 			if(o instanceof Map<?,?>) {
 				MCClassInfo ci = new MCClassInfo((Map<String,Object>)o);
 				classes.put(ci.realName,ci);
+				l.info("Loaded "+ci.realName+".");
 			}
 		}
 		return true;
@@ -188,6 +192,7 @@ public class Mappings {
 	 * 
 	 */
 	private static void writeClasses() throws IOException {
+		l.info("Writing class mappings to disk...");
 		Yaml yml = new Yaml();
 		Map<String,Object> classMap = new HashMap<String,Object>();
 		for(MCClassInfo ci : classes.values()) {

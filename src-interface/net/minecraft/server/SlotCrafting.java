@@ -5,17 +5,18 @@ package net.minecraft.server;
 public abstract class SlotCrafting extends Slot{
 	// FIELDS
 	private final IInventory a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a)
+	public boolean a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void b()
+	public void b();
 
 }

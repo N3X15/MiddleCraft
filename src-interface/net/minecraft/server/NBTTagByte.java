@@ -2,46 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NBTTagByte extends IMobs{
+public abstract class NBTTagByte extends NBTBase{
 	// FIELDS
-	public int a;
-	private int aj;
-	private int ak;
-	private boolean al;
-	private lc am;
-	private int an;
-	private int ao;
-	public double b;
-	public double c;
-	public double d;
-	private int e;
-	private int f;
+	public byte a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * 
 	 */
-	public void writeEntityToNBT(Packet1Login a)
+	public byte a();
 	
 	/**
-	 * Called when the entity is attacked.
+	 * 
 	 */
-	public boolean attackEntity(IMobs a, int b)
+	 void a(java.io.DataInput a);
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	public void readEntityFromNBT(Packet1Login a)
-	
-	/**
-	 * Called to update the entity's position/logic.
-	 */
-	public void onUpdate()
+	 void a(java.io.DataOutput a);
 	
 	/**
 	 * *
 	 */
-	public boolean canBeCollidedWith()
+	 java.lang.String cm_toString();
+	
+	/**
+	 * 
+	 */
+	public java.lang.String toString();
 
 }

@@ -2,58 +2,40 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockStep{
+public abstract class BlockStep extends Block{
 	// FIELDS
-	private static java.util.Map a;
-	private static java.util.Map b;
-	public final long j;
-	public boolean k;
+	private boolean a;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public abstract int a()
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public static BlockStep a(int a)
+	public int a(int a);
 	
 	/**
 	 * 
 	 */
-	static void a(int a, java.lang.Class b)
+	public int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet28 a)
+	public boolean a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataInputStream a)
+	public void b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataOutputStream a)
-	
-	/**
-	 * 
-	 */
-	public static void a(BlockStep a, java.io.DataOutputStream b)
-	
-	/**
-	 * 
-	 */
-	public final int b()
-	
-	/**
-	 * 
-	 */
-	public static BlockStep b(java.io.DataInputStream a)
+	public void e(World a, int b, int c, int d);
 
 }

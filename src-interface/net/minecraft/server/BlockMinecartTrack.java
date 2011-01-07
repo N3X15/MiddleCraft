@@ -2,15 +2,64 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockMinecartTrack extends NBTTagByteArray{
+public abstract class BlockMinecartTrack extends Block{
 	// FIELDS
-	private int a;
 	
 	// METHODS
 	
 	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 * Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
 	 */
-	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
+	 MovingObjectPosition collisionRayTrace(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	
+	/**
+	 * 
+	 */
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	
+	/**
+	 * 
+	 */
+	public int a(java.util.Random a);
+	
+	/**
+	 * 
+	 */
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 void func_4038(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void g(World a, int b, int c, int d);
 
 }

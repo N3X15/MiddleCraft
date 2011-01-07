@@ -2,34 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityCow extends BlockSnow{
+public abstract class EntityCow extends EntityAnimals{
 	// FIELDS
+	public boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this entity.
+	 * *
 	 */
-	public boolean getCanSpawnHere()
+	 boolean func_6092(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	protected float a(int a, int b, int c)
-	
-	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
-	 */
-	public void writeEntityToNBT(Packet1Login a)
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public int b()
+	public boolean a(EntityPlayer a);
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	public void readEntityFromNBT(Packet1Login a)
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String d();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * 
+	 */
+	protected int g();
+	
+	/**
+	 * 
+	 */
+	protected float h();
 
 }

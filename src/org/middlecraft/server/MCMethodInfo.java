@@ -155,7 +155,7 @@ public class MCMethodInfo {
 				paramDefs.add(String.format("%s %s",type,(char)(i+97)));
 				i++;
 			}
-			return String.format("\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s)",description, Modifier.toString(modifiers),Mappings.getNewClassName(returnName), (name.isEmpty()) ? realName:name, Utils.join(paramDefs,", "));
+			return String.format("\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s);",description, Modifier.toString(modifiers),Mappings.getNewClassName(returnName), (name.isEmpty()) ? realName:name, Utils.join(paramDefs,", "));
 		} catch (NotFoundException e) {
 			return "";
 		}

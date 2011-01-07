@@ -2,9 +2,44 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class GuiLogOutputHandler{
+public abstract class GuiLogOutputHandler extends java.util.logging.Handler{
 	// FIELDS
+	 java.util.logging.Formatter a;
+	private int[] b;
+	private int c;
+	private javax.swing.JTextArea d;
+	 ()V setChunkModified;
 	
 	// METHODS
+	
+	/**
+	 * *
+	 */
+	 void dp_close();
+	
+	/**
+	 * 
+	 */
+	public void close();
+	
+	/**
+	 * *
+	 */
+	 void dp_flush();
+	
+	/**
+	 * 
+	 */
+	public void flush();
+	
+	/**
+	 * *
+	 */
+	 void dp_publish(java.util.logging.LogRecord a);
+	
+	/**
+	 * 
+	 */
+	public void publish(java.util.logging.LogRecord a);
 
 }

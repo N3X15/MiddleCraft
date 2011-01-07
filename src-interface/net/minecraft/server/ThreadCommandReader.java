@@ -2,30 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ThreadCommandReader extends TileEntityChest{
+public abstract class ThreadCommandReader extends java.lang.Thread{
 	// FIELDS
-	public int a;
+	final net.minecraft.server.MinecraftServer a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Gets the type byte for the tag.
+	 * *
 	 */
-	public byte getType()
-	
-	/**
-	 * Read the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void readTagContents(java.io.DataInput a)
-	
-	/**
-	 * Write the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void writeTagContents(java.io.DataOutput a)
+	 void cl_run();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public void run();
 
 }

@@ -2,14 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface MobSpawnerDesert{
+public abstract class MobSpawnerDesert extends MobSpawnerBase{
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * Updates the Jlist with a new model.
-	 */
-	public abstract void update()
 
 }

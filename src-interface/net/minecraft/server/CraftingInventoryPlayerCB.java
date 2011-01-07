@@ -7,22 +7,33 @@ public abstract class CraftingInventoryPlayerCB extends CraftingInventoryCB{
 	public InventoryCrafting a;
 	public IInventory b;
 	public boolean c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a(EntityPlayer a)
+	 void func_20121(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public void a(IInventory a)
+	public void a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(EntityPlayer a)
+	public void a(IInventory a);
+	
+	/**
+	 * *
+	 */
+	 boolean func_20126(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	public boolean b(EntityPlayer a);
 
 }

@@ -2,24 +2,77 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderLoadOrGenerate extends lc{
+public abstract class ChunkProviderLoadOrGenerate{
 	// FIELDS
+	 int a;
+	 int b;
+	private Chunk c;
+	private IChunkProvider d;
+	private IChunkLoader e;
+	private ()V setChunkModified;
+	private World g;
+	private Chunk h;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected void a(float a)
+	 void func_371(Chunk a);
 	
 	/**
 	 * 
 	 */
-	public void c(float a, float b)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean d_()
+	public boolean a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public void a(IChunkProvider a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private void a(Chunk a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a, IProgressUpdate b);
+	
+	/**
+	 * *
+	 */
+	 void func_370(Chunk a);
+	
+	/**
+	 * 
+	 */
+	public boolean b();
+	
+	/**
+	 * 
+	 */
+	public Chunk b(int a, int b);
+	
+	/**
+	 * 
+	 */
+	private void b(Chunk a);
+	
+	/**
+	 * *
+	 */
+	 Chunk func_4059(int a, int b);
+	
+	/**
+	 * 
+	 */
+	private Chunk c(int a, int b);
 
 }

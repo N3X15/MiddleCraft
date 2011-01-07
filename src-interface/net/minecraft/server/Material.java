@@ -2,15 +2,74 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Material extends ItemBlock{
+public abstract class Material{
 	// FIELDS
-	private int a;
+	public static final Material a;
+	public static final Material b;
+	public static final Material c;
+	public static final Material d;
+	public static final Material e;
+	public static final ()V setChunkModified;
+	public static final Material g;
+	public static final Material h;
+	public static final Material i;
+	public static final Material j;
+	public static final Material k;
+	public static final Material l;
+	public static final Material m;
+	public static final Material n;
+	public static final Material o;
+	public static final Material p;
+	public static final Material q;
+	public static final Material r;
+	public static final Material s;
+	public static final Material t;
+	public static final Material u;
+	public static final Material v;
+	public static final Material w;
+	public static final Material x;
+	private boolean y;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public boolean b();
+	
+	/**
+	 * 
+	 */
+	public boolean c();
+	
+	/**
+	 * 
+	 */
+	public boolean d();
+	
+	/**
+	 * Returns if the block can burn or not.
+	 */
+	 boolean getBurning();
+	
+	/**
+	 * 
+	 */
+	public boolean e();
+	
+	/**
+	 * Set the canBurn bool to True and return the current object.
+	 */
+	 Material setBurning();
+	
+	/**
+	 * 
+	 */
+	private Material f();
 
 }

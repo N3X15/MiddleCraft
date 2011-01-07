@@ -9,27 +9,38 @@ public abstract class CraftingRecipe{
 	private int c;
 	private int[] d;
 	private ItemStack e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 boolean func_20164(int[] a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(int[] a)
+	public int a();
 	
 	/**
 	 * 
 	 */
-	private boolean a(int[] a, int b, int c, boolean d)
+	public boolean a(int[] a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack b(int[] a)
+	private boolean a(int[] a, int b, int c, boolean d);
+	
+	/**
+	 * *
+	 */
+	 ItemStack func_20163(int[] a);
+	
+	/**
+	 * 
+	 */
+	public ItemStack b(int[] a);
 
 }

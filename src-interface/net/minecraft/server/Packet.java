@@ -2,45 +2,69 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet extends EntityCow{
+public abstract class Packet{
 	// FIELDS
-	public boolean a;
+	private static java.util.Map a;
+	private static java.util.Map b;
+	 ()V setChunkModified;
+	public final long j;
+	public boolean k;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Adds a two way mapping between the packet ID and packet class.
 	 */
-	public void a(Packet1Login a)
+	 void addIdClassMapping(int a, java.lang.Class b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(BlockLog a)
+	public abstract int a();
 	
 	/**
 	 * 
 	 */
-	public void b(Packet1Login a)
+	public static Packet a(int a);
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String d()
+	static void a(int a, java.lang.Class b);
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String e()
+	public abstract void a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	protected java.lang.String f()
+	public abstract void a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	protected int g()
+	public abstract void a(java.io.DataOutputStream a);
+	
+	/**
+	 * 
+	 */
+	public static void a(Packet a, java.io.DataOutputStream b);
+	
+	/**
+	 * Returns the ID of this packet.
+	 */
+	 int getPacketId();
+	
+	/**
+	 * 
+	 */
+	public final int b();
+	
+	/**
+	 * 
+	 */
+	public static Packet b(java.io.DataInputStream a);
 
 }

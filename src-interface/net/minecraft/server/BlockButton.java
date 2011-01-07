@@ -2,52 +2,119 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class BlockButton{
+public abstract class BlockButton extends Block{
 	// FIELDS
-	final WorldGenTrees a;
-	private java.util.List b;
-	private int c;
-	private int d;
-	private lk e;
-	private short[] f;
-	private int g;
-	private int h;
-	private int i;
-	private int j;
-	private int k;
-	private int l;
-	private int m;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
 	 */
-	public void a()
+	 boolean blockActivated(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void a(int a, int b, int c)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	private void a(EntitySnowball a)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void a(WorldGenCactus a)
+	public boolean a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public void a(BlockStep a)
+	public void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public void b(WorldGenCactus a)
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * Is this block powering the block on the specified side
+	 */
+	 boolean isPoweringTo(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * 
+	 */
+	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * Can this block provide power. Only wire currently seems to have this change based on its state.
+	 */
+	 boolean canProvidePower();
+	
+	/**
+	 * 
+	 */
+	public boolean c();
+	
+	/**
+	 * 
+	 */
+	public void c(World a, int b, int c, int d, int e);
+	
+	/**
+	 * Is this block indirectly powering the block on the specified side
+	 */
+	 boolean isIndirectlyPoweringTo(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean d(World a, int b, int c, int d, int e);
+	
+	/**
+	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 */
+	 void onBlockAdded(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 boolean func_322(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private boolean g(World a, int b, int c, int d);
 
 }

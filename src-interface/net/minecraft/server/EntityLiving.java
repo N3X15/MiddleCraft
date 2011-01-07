@@ -2,79 +2,284 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityLiving extends BlockSoil{
+public abstract class EntityLiving extends Entity{
 	// FIELDS
+	private int a;
+	public int aF;
+	public float aG;
+	public float aH;
+	public float aI;
+	public float aJ;
+	public float aK;
+	protected float aL;
+	protected float aM;
+	protected float aN;
+	protected float aO;
+	protected boolean aP;
+	protected java.lang.String aQ;
+	protected boolean aR;
+	protected float aS;
+	protected java.lang.String aT;
+	protected float aU;
+	protected int aV;
+	protected float aW;
+	public boolean aX;
+	public float aY;
+	public float aZ;
+	private Entity b;
+	protected float bA;
+	protected boolean bB;
+	protected float bC;
+	protected float bD;
+	public int ba;
+	public int bb;
+	public int bc;
+	public int bd;
+	public float be;
+	public int bf;
+	public int bg;
+	public float bh;
+	public float bi;
+	protected boolean bj;
+	public int bk;
+	public float bl;
+	public float bm;
+	public float bn;
+	public float bo;
+	protected int bp;
+	protected double bq;
+	protected double br;
+	protected double bs;
+	protected double bt;
+	protected double bu;
+	 float bv;
+	protected int bw;
+	protected int bx;
+	protected float by;
+	protected float bz;
+	private int c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public Vec3D C();
 	
 	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, int b, int c, int d)
+	public void G();
+	
+	/**
+	 * *
+	 */
+	 void spawnExplosionParticle();
 	
 	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	public void O();
+	
+	/**
+	 * causes this entity to jump (or at least move upwards)
+	 */
+	 void jump();
 	
 	/**
 	 * 
 	 */
-	public void a(ChunkCoordinates a, int b, int c, int d)
+	protected void P();
+	
+	/**
+	 * *
+	 */
+	 void func_6101();
 	
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d)
+	public void Q();
+	
+	/**
+	 * *
+	 */
+	 void func_143(Entity a, int b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
+	protected void a(float a);
 	
 	/**
 	 * 
 	 */
-	public boolean b(ChunkCoordinates a, int b, int c, int d, int e)
+	protected void a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public boolean c()
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void c(Packet17AddToInventory a, int b, int c, int d, int e)
+	public boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
+	public void a(Entity a, int b, double c, double d);
+	
+	/**
+	 * *
+	 */
+	 float func_140(float a, float b, float c);
 	
 	/**
 	 * 
 	 */
-	public boolean d(Packet17AddToInventory a, int b, int c, int d, int e)
+	public int b();
 	
 	/**
 	 * 
 	 */
-	public void e(Packet17AddToInventory a, int b, int c, int d)
+	private float b(float a, float b, float c);
 	
 	/**
 	 * 
 	 */
-	private boolean g(Packet17AddToInventory a, int b, int c, int d)
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a, float b);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * *
+	 */
+	 Vec3D func_141(float a);
+	
+	/**
+	 * 
+	 */
+	protected void c();
+	
+	/**
+	 * 
+	 */
+	public Vec3D c(float a);
+	
+	/**
+	 * 
+	 */
+	public void c(float a, float b);
+	
+	/**
+	 * 
+	 */
+	public void c(int a);
+	
+	/**
+	 * 
+	 */
+	public boolean c_();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String d();
+	
+	/**
+	 * 
+	 */
+	protected void d(int a);
+	
+	/**
+	 * 
+	 */
+	public boolean d_();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
+	
+	/**
+	 * 
+	 */
+	public void f(Entity a);
+	
+	/**
+	 * 
+	 */
+	protected int g();
+	
+	/**
+	 * 
+	 */
+	protected float h();
+	
+	/**
+	 * *
+	 */
+	 boolean canEntityBeSeen(Entity a);
+	
+	/**
+	 * 
+	 */
+	public int i();
+	
+	/**
+	 * 
+	 */
+	public boolean i(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void m();
+	
+	/**
+	 * 
+	 */
+	protected void o();
+	
+	/**
+	 * 
+	 */
+	public float s();
+	
+	/**
+	 * 
+	 */
+	public boolean v();
+	
+	/**
+	 * 
+	 */
+	public boolean x();
+	
+	/**
+	 * 
+	 */
+	public void z();
 
 }

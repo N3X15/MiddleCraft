@@ -2,41 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSeeds{
+public abstract class ItemSeeds extends Item{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public long e;
-	private static long f;
-	private long g;
+	private int a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Sets the scheduled time for this tick entry
-	 */
-	public ItemSeeds setScheduledTime(long a)
-	
-	/**
-	 * Compares this tick entry to another tick entry for sorting purposes. Compared first based on the scheduled time and second based on tickEntryID.
-	 */
-	public int comparer(ItemSeeds a)
-	
-	/**
 	 * 
 	 */
-	public volatile int compareTo(java.lang.Object a)
-	
-	/**
-	 * 
-	 */
-	public boolean equals(java.lang.Object a)
-	
-	/**
-	 * 
-	 */
-	public int hashCode()
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

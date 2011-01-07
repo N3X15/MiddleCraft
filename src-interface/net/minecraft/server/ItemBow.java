@@ -2,30 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemBow extends TileEntityChest{
+public abstract class ItemBow extends Item{
 	// FIELDS
-	public byte a;
 	
 	// METHODS
 	
 	/**
-	 * Gets the type byte for the tag.
-	 */
-	public byte getType()
-	
-	/**
-	 * Read the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void readTagContents(java.io.DataInput a)
-	
-	/**
-	 * Write the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void writeTagContents(java.io.DataOutput a)
-	
-	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public ItemStack a(ItemStack a, World b, EntityPlayer c);
 
 }

@@ -2,50 +2,51 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSand extends EntityTrackerEntry{
+public abstract class BlockSand extends Block{
 	// FIELDS
-	private static final BlockSponge a;
+	public static boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	 * 
 	 */
-	public void onLivingUpdate()
-	
-	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
-	 */
-	public void writeEntityToNBT(Packet1Login a)
+	public void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	protected void a(IMobs a, float b)
+	public int b();
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	public void readEntityFromNBT(Packet1Login a)
+	public void b(World a, int b, int c, int d, int e);
 	
 	/**
-	 * Returns the sound this mob makes while it's alive.
+	 * 
 	 */
-	protected java.lang.String getLivingSound()
+	public void e(World a, int b, int c, int d);
 	
 	/**
-	 * Returns the sound this mob makes when it is hurt.
+	 * Checks to see if the sand can fall into the block below it
 	 */
-	protected java.lang.String getHurtSound()
+	 boolean canFallBelow(World a, int b, int c, int d);
 	
 	/**
-	 * Returns the sound this mob makes on death.
+	 * 
 	 */
-	protected java.lang.String getDeathSound()
+	public static boolean g(World a, int b, int c, int d);
 	
 	/**
-	 * Returns the item ID for the item the mob drops on death.
+	 * If there is space to fall below will start this block falling
 	 */
-	protected int getDropItemId()
+	 void tryToFall(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void h(World a, int b, int c, int d);
 
 }

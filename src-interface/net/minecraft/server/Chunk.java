@@ -2,15 +2,223 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class Chunk extends java.lang.Thread{
+public abstract class Chunk{
 	// FIELDS
-	final ItemSword a;
+	public static boolean a;
+	public byte[] b;
+	public boolean c;
+	public World d;
+	public NibbleArray e;
+	public ()V setChunkModified;
+	public NibbleArray g;
+	public byte[] h;
+	public int i;
+	public final int j;
+	public final int k;
+	public java.util.Map l;
+	public java.util.List[] m;
+	public boolean n;
+	public boolean o;
+	public boolean p;
+	public boolean q;
+	public boolean r;
+	public long s;
 	
 	// METHODS
 	
 	/**
+	 * Adds an entity to the chunk. Args: entity
+	 */
+	 void addEntity(Entity a);
+	
+	/**
 	 * 
 	 */
-	public void run()
+	public void a();
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public int a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c, TileEntity d);
+	
+	/**
+	 * 
+	 */
+	public java.util.Random a(long a);
+	
+	/**
+	 * 
+	 */
+	public void a(TileEntity a);
+	
+	/**
+	 * 
+	 */
+	public int a(EnumSkyBlock a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(EnumSkyBlock a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, int b);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, AxisAlignedBB b, java.util.List c);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.Class a, AxisAlignedBB b, java.util.List c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a);
+	
+	/**
+	 * 
+	 */
+	public int a(byte[] a, int b, int c, int d, int e, int f, int g, int h);
+	
+	/**
+	 * *
+	 */
+	 void func_350(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void b();
+	
+	/**
+	 * 
+	 */
+	public int b(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public int b(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void b(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a);
+	
+	/**
+	 * Returns whether is not a block above this one blocking sight to the sky (done via checking against the heightmap)
+	 */
+	 boolean canBlockSeeTheSky(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void c();
+	
+	/**
+	 * 
+	 */
+	private void c(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public boolean c(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public int c(int a, int b, int c, int d);
+	
+	/**
+	 * Gets the TileEntity for a given block in this chunk
+	 */
+	 TileEntity getChunkBlockTileEntity(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void d();
+	
+	/**
+	 * 
+	 */
+	public TileEntity d(int a, int b, int c);
+	
+	/**
+	 * *
+	 */
+	 void onChunkUnload();
+	
+	/**
+	 * 
+	 */
+	public void e();
+	
+	/**
+	 * 
+	 */
+	public void e(int a, int b, int c);
+	
+	/**
+	 * *
+	 */
+	 void func_355(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void f();
+	
+	/**
+	 * 
+	 */
+	private void f(int a, int b, int c);
+	
+	/**
+	 * *
+	 */
+	 void func_339(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private void g(int a, int b, int c);
 
 }

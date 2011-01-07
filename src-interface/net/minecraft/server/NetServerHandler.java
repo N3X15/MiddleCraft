@@ -2,14 +2,150 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class NetServerHandler{
+public abstract class NetServerHandler extends NetHandler{
 	// FIELDS
+	public static java.util.logging.Logger a;
+	public NetworkManager b;
+	public boolean c;
+	private net.minecraft.server.MinecraftServer d;
+	private EntityPlayerMP e;
+	private ()V setChunkModified;
+	private double g;
+	private double h;
+	private double i;
+	private boolean j;
+	private java.util.Map k;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 void func_41(double a, double b, double c, float d, float e);
+	
+	/**
 	 * 
 	 */
-	public void a(NBTBase a)
+	public void a();
+	
+	/**
+	 * 
+	 */
+	public void a(double a, double b, double c, float d, float e);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet7 a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet106 a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet9 a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet3Chat a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet102 a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet101 a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet130 a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet15Place a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet16BlockItemSwitch a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet10Flying a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, java.lang.Object[] b);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet14BlockDig a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet255KickDisconnect a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet18ArmAnimation a);
+	
+	/**
+	 * *
+	 */
+	 int func_38();
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(java.lang.String a);
+	
+	/**
+	 * 
+	 */
+	public void b(Packet a);
+	
+	/**
+	 * *
+	 */
+	 void func_4010(java.lang.String a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.String c();
+	
+	/**
+	 * 
+	 */
+	private void c(java.lang.String a);
 
 }

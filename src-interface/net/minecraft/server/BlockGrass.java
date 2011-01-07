@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockGrass extends NBTTagByteArray{
+public abstract class BlockGrass extends Block{
 	// FIELDS
 	
 	// METHODS
@@ -10,6 +10,11 @@ public abstract class BlockGrass extends NBTTagByteArray{
 	/**
 	 * 
 	 */
-	public boolean a(BlockSponge a, BlockLog b, Packet17AddToInventory c, int d, int e, int f, int g)
+	public int a(int a, java.util.Random b);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
 
 }

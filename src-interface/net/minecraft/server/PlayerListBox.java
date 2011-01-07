@@ -2,52 +2,22 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerListBox{
+public abstract class PlayerListBox extends javax.swing.JList{
 	// FIELDS
-	private il[] a;
+	private net.minecraft.server.MinecraftServer a;
 	private int b;
-	private EntityArrow c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * Updates the Jlist with a new model.
 	 */
-	public int getSizeInventory()
-	
-	/**
-	 * Returns the stack in slot i
-	 */
-	public BlockSponge getStackInSlot(int a)
+	 void update();
 	
 	/**
 	 * 
 	 */
-	public BlockSponge a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, BlockSponge b)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(BlockLog a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * Called when an the contents of an Inventory change, usually
-	 */
-	public void onInventoryChanged()
+	public void a();
 
 }

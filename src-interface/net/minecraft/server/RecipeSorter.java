@@ -5,17 +5,28 @@ package net.minecraft.server;
 abstract class RecipeSorter{
 	// FIELDS
 	final CraftingManager a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a(CraftingRecipe a, CraftingRecipe b)
+	 int func_20107(CraftingRecipe a, CraftingRecipe b);
 	
 	/**
 	 * 
 	 */
-	public volatile int compare(java.lang.Object a, java.lang.Object b)
+	public int a(CraftingRecipe a, CraftingRecipe b);
+	
+	/**
+	 * *
+	 */
+	 int kd_compare(java.lang.Object a, java.lang.Object b);
+	
+	/**
+	 * 
+	 */
+	public volatile int compare(java.lang.Object a, java.lang.Object b);
 
 }

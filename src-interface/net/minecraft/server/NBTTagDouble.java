@@ -2,16 +2,36 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class NBTTagDouble extends java.lang.Thread{
+public abstract class NBTTagDouble extends NBTBase{
 	// FIELDS
-	final PlayerInstance a;
-	final EntityZombie b;
+	public double a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void run()
+	public byte a();
+	
+	/**
+	 * 
+	 */
+	 void a(java.io.DataInput a);
+	
+	/**
+	 * 
+	 */
+	 void a(java.io.DataOutput a);
+	
+	/**
+	 * *
+	 */
+	 java.lang.String ez_toString();
+	
+	/**
+	 * 
+	 */
+	public java.lang.String toString();
 
 }

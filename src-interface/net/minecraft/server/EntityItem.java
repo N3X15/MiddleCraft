@@ -2,36 +2,60 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityItem extends BlockStep{
+public abstract class EntityItem extends Entity{
 	// FIELDS
-	public int a;
-	public byte b;
-	public byte c;
-	public byte d;
-	public byte e;
-	public byte f;
-	public boolean g;
+	public ItemStack a;
+	public int b;
+	public int c;
+	public float d;
+	private int e;
+	private ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	public int getPacketSize()
+	public void a(NBTTagCompound a);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public boolean a(Entity a, int b);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	protected void b(int a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * *
+	 */
+	 boolean func_176(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	private boolean g(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public boolean r();
 
 }

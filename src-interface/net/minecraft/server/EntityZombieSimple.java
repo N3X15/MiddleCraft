@@ -10,6 +10,6 @@ public abstract class EntityZombieSimple extends EntityMobs{
 	/**
 	 * 
 	 */
-	protected float a(int a, int b, int c)
+	protected float a(int a, int b, int c);
 
 }

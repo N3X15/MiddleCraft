@@ -2,69 +2,60 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityCreeper extends Packet17AddToInventory{
+public abstract class EntityCreeper extends EntityMobs{
 	// FIELDS
-	public ks A;
-	public boolean B;
-	public boolean C;
-	private net.minecraft.server.MinecraftServer D;
-	private Packet59ComplexEntity E;
+	 int a;
+	 int b;
+	 int c;
+	 int d;
+	 int e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public IMobs a(int a)
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void a(IMobs a, byte b)
+	protected void a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public ItemSnowball a(IMobs a, double b, double c, double d, float e, boolean f)
-	
-	/**
-	 * *
-	 */
-	public void updateEntityWithOptionalForce(IMobs a, boolean b)
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(BlockLog a, int b, int c, int d)
+	public void b_();
 	
 	/**
 	 * 
 	 */
-	protected HashEntry2 a(java.io.File a)
-	
-	/**
-	 * *
-	 */
-	protected void obtainEntitySkin(IMobs a)
+	protected void c();
 	
 	/**
 	 * 
 	 */
-	public void b(IMobs a, boolean b)
-	
-	/**
-	 * *
-	 */
-	protected void releaseEntitySkin(IMobs a)
+	protected java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	public java.util.List d(int a, int b, int c, int d, int e, int f)
+	protected java.lang.String f();
 	
 	/**
-	 * Runs a single tick for the world
+	 * 
 	 */
-	public void tick()
+	public void f(Entity a);
+	
+	/**
+	 * 
+	 */
+	protected int g();
 
 }

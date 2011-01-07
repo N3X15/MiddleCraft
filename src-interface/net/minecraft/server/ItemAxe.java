@@ -2,14 +2,11 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemAxe extends BlockSoil{
+public abstract class ItemAxe extends ItemTool{
 	// FIELDS
+	private static gv[] bb;
+	 ()V setChunkModified;
 	
 	// METHODS
-	
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
-	public int idDropped(int a, java.util.Random b)
 
 }

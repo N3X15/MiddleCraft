@@ -2,50 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityFireball extends EntityCow{
+public abstract class EntityFireball extends Entity{
 	// FIELDS
-	public boolean a;
+	public int a;
+	private int aj;
+	private int ak;
+	private boolean al;
+	private EntityLiving am;
+	private int an;
+	private int ao;
+	public double b;
+	public double c;
+	public double d;
+	private int e;
+	private ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * Called when the entity is attacked.
 	 */
-	public void writeEntityToNBT(Packet1Login a)
+	 boolean attackEntity(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public boolean a(BlockLog a)
+	public void a(NBTTagCompound a);
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	public void readEntityFromNBT(Packet1Login a)
+	public boolean a(Entity a, int b);
 	
 	/**
-	 * Returns the sound this mob makes while it's alive.
+	 * 
 	 */
-	protected java.lang.String getLivingSound()
+	public void b(NBTTagCompound a);
 	
 	/**
-	 * Returns the sound this mob makes when it is hurt.
+	 * 
 	 */
-	protected java.lang.String getHurtSound()
+	public void b_();
 	
 	/**
-	 * Returns the sound this mob makes on death.
+	 * *
 	 */
-	protected java.lang.String getDeathSound()
+	 boolean canBeCollidedWith();
 	
 	/**
-	 * Returns the item ID for the item the mob drops on death.
+	 * 
 	 */
-	protected int getDropItemId()
-	
-	/**
-	 * Returns the volume for the sounds this mob makes.
-	 */
-	protected float getSoundVolume()
+	public boolean c_();
 
 }

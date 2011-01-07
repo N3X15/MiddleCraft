@@ -5,12 +5,18 @@ package net.minecraft.server;
 public abstract class FontAllowedCharacters{
 	// FIELDS
 	public static final java.lang.String a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 java.lang.String func_20161();
+	
+	/**
 	 * 
 	 */
-	private static java.lang.String a()
+	private static java.lang.String a();
 
 }

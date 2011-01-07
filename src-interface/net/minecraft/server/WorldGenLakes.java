@@ -5,12 +5,13 @@ package net.minecraft.server;
 public abstract class WorldGenLakes extends WorldGenerator{
 	// FIELDS
 	private int a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a(World a, java.util.Random b, int c, int d, int e)
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

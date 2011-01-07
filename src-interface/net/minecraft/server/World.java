@@ -2,24 +2,598 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class World extends ItemBlock{
+public abstract class World{
 	// FIELDS
+	private java.util.List A;
+	private java.util.List B;
+	private java.util.TreeSet C;
+	private java.util.Set D;
+	private long E;
+	private long F;
+	private IChunkProvider G;
+	private NBTTagCompound H;
+	private java.util.ArrayList I;
+	private int J;
+	private java.util.Set K;
+	private int L;
+	private java.util.List M;
+	public boolean a;
+	public java.util.List b;
+	public java.util.List c;
+	public java.util.List d;
+	public long e;
+	public ()V setChunkModified;
+	protected int g;
+	protected int h;
+	public boolean i;
+	protected int j;
+	public int k;
+	public java.util.Random l;
+	public int m;
+	public int n;
+	public int o;
+	public boolean p;
+	public final WorldProvider q;
+	protected java.util.List r;
+	public java.io.File s;
+	public java.io.File t;
+	public long u;
+	public long v;
+	public final java.lang.String w;
+	public boolean x;
+	static int y;
+	public boolean z;
 	
 	// METHODS
 	
 	/**
+	 * Runs through the list of updates to run and ticks them
+	 */
+	 boolean TickUpdates(boolean a);
+	
+	/**
+	 * 
+	 */
+	public WorldChunkManager a();
+	
+	/**
+	 * 
+	 */
+	public EntityPlayer a(double a, double b, double c, double d);
+	
+	/**
+	 * 
+	 */
+	public void a(double a, double b, double c, java.lang.String d, float e, float f);
+	
+	/**
+	 * 
+	 */
+	public int a(float a);
+	
+	/**
+	 * 
+	 */
+	public int a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public int a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, int b, int c, int d, boolean e);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c, TileEntity d);
+	
+	/**
+	 * 
+	 */
+	public int a(int a, int b, int c, boolean d);
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(Vec3D a, Vec3D b);
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(Vec3D a, Vec3D b, boolean c);
+	
+	/**
+	 * 
+	 */
+	public float a(Vec3D a, AxisAlignedBB b);
+	
+	/**
+	 * 
+	 */
+	public void a(IWorldAccess a);
+	
+	/**
+	 * 
+	 */
+	public int a(EnumSkyBlock a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(EnumSkyBlock a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
+	
+	/**
+	 * 
+	 */
+	public void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
+	
+	/**
+	 * 
+	 */
+	public boolean a(AxisAlignedBB a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(AxisAlignedBB a, Material b);
+	
+	/**
+	 * 
+	 */
+	public boolean a(AxisAlignedBB a, Material b, Entity c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, byte b);
+	
+	/**
+	 * 
+	 */
+	public EntityPlayer a(Entity a, double b);
+	
+	/**
+	 * 
+	 */
+	public Explosion a(Entity a, double b, double c, double d, float e);
+	
+	/**
+	 * 
+	 */
+	public Explosion a(Entity a, double b, double c, double d, float e, boolean f);
+	
+	/**
+	 * 
+	 */
+	public PathEntity a(Entity a, int b, int c, int d, float e);
+	
+	/**
+	 * 
+	 */
+	public java.util.List a(Entity a, AxisAlignedBB b);
+	
+	/**
+	 * 
+	 */
+	public PathEntity a(Entity a, Entity b, float c);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, java.lang.String b, float c, float d);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public boolean a(EntityPlayer a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	protected IChunkProvider a(java.io.File a);
+	
+	/**
+	 * 
+	 */
+	public int a(java.lang.Class a);
+	
+	/**
+	 * 
+	 */
+	public java.util.List a(java.lang.Class a, AxisAlignedBB b);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(java.util.List a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a);
+	
+	/**
+	 * 
+	 */
+	public void a(boolean a, IProgressUpdate b);
+	
+	/**
 	 * *
 	 */
-	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	 void func_461(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	private BlockSponge a(java.util.Random a)
+	public boolean b();
 	
 	/**
 	 * 
 	 */
-	private java.lang.String b(java.util.Random a)
+	public float b(float a);
+	
+	/**
+	 * 
+	 */
+	public Chunk b(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public int b(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void b(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean b(int a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void b(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public void b(int a, int b, int c, TileEntity d);
+	
+	/**
+	 * 
+	 */
+	public void b(EnumSkyBlock a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public boolean b(AxisAlignedBB a);
+	
+	/**
+	 * 
+	 */
+	public boolean b(AxisAlignedBB a, Material b);
+	
+	/**
+	 * 
+	 */
+	protected void b(Entity a);
+	
+	/**
+	 * 
+	 */
+	public java.util.List b(Entity a, AxisAlignedBB b);
+	
+	/**
+	 * 
+	 */
+	public void b(java.util.List a);
+	
+	/**
+	 * *
+	 */
+	 void func_459();
+	
+	/**
+	 * 
+	 */
+	public void c();
+	
+	/**
+	 * 
+	 */
+	public Chunk c(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public Material c(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean c(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public byte[] c(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public boolean c(AxisAlignedBB a);
+	
+	/**
+	 * 
+	 */
+	protected void c(Entity a);
+	
+	/**
+	 * *
+	 */
+	 void func_20109(Entity a);
+	
+	/**
+	 * 
+	 */
+	public boolean d();
+	
+	/**
+	 * 
+	 */
+	public int d(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public boolean d(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean d(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void d(Entity a);
+	
+	/**
+	 * Called on construction of the World class to setup the initial skylight values
+	 */
+	 void calculateInitialSkylight();
+	
+	/**
+	 * 
+	 */
+	public void e();
+	
+	/**
+	 * 
+	 */
+	public int e(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public boolean e(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	protected void e(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void e(Entity a);
+	
+	/**
+	 * *
+	 */
+	 boolean blockExists(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void f();
+	
+	/**
+	 * 
+	 */
+	private boolean f(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public boolean f(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void f(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void f(Entity a);
+	
+	/**
+	 * *
+	 */
+	 void func_4073();
+	
+	/**
+	 * 
+	 */
+	protected void g();
+	
+	/**
+	 * 
+	 */
+	public void g(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void g(int a, int b, int c, int d);
+	
+	/**
+	 * Checks if the specified block is able to see the sky
+	 */
+	 boolean canBlockSeeTheSky(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void h();
+	
+	/**
+	 * 
+	 */
+	public boolean h(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void h(int a, int b, int c, int d);
+	
+	/**
+	 * Is this block powering in the specified direction Args: x, y, z, direction
+	 */
+	 boolean isBlockProvidingPowerTo(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void i();
+	
+	/**
+	 * 
+	 */
+	public int i(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean i(int a, int b, int c, int d);
+	
+	/**
+	 * Determines if a block can see the sky or not, but if the proper chunk does not already exist, it does not create a new one.
+	 */
+	 boolean canExistingBlockSeeTheSky(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean j(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean j(int a, int b, int c, int d);
+	
+	/**
+	 * Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brihgtness). Args: x, y, z
+	 */
+	 float getLightBrightness(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public float k(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private void k(int a, int b, int c, int d);
+	
+	/**
+	 * Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists
+	 */
+	 TileEntity getBlockTileEntity(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public TileEntity l(int a, int b, int c);
+	
+	/**
+	 * *
+	 */
+	 void func_513(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void m(int a, int b, int c);
+	
+	/**
+	 * Whether one of the neighboring blocks is putting power into this block. Args: x, y, z
+	 */
+	 boolean isBlockGettingPowered(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean n(int a, int b, int c);
+	
+	/**
+	 * Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z
+	 */
+	 boolean isBlockIndirectlyGettingPowered(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean o(int a, int b, int c);
 
 }

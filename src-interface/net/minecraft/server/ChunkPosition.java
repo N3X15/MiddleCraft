@@ -2,32 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkPosition extends BlockStep{
+public abstract class ChunkPosition{
 	// FIELDS
-	public int a;
-	public int b;
-	public BlockSponge c;
+	public final int a;
+	public final int b;
+	public final int c;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 boolean iq_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet28 a)
+	public boolean equals(java.lang.Object a);
+	
+	/**
+	 * *
+	 */
+	 int iq_hashCode();
 	
 	/**
 	 * 
 	 */
-	public void a(java.io.DataInputStream a)
-	
-	/**
-	 * 
-	 */
-	public void a(java.io.DataOutputStream a)
+	public int hashCode();
 
 }

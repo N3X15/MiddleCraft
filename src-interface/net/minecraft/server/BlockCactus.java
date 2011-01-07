@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockCactus extends la{
+public abstract class BlockCactus extends Block{
 	// FIELDS
 	
 	// METHODS
@@ -10,16 +10,46 @@ public abstract class BlockCactus extends la{
 	/**
 	 * 
 	 */
-	public boolean a()
-	
-	/**
-	 * Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
-	 */
-	public boolean getCanBlockGrass()
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public boolean c()
+	public int a(int a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, Entity e);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+	 */
+	 boolean canBlockStay(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean f(World a, int b, int c, int d);
 
 }

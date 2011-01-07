@@ -2,24 +2,42 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface ChunkCoordIntPair{
+public abstract class ChunkCoordIntPair{
 	// FIELDS
+	public int a;
+	public int b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void a(int a)
+	 double func_73(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a)
+	public double a(Entity a);
+	
+	/**
+	 * *
+	 */
+	 boolean lk_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(java.lang.String a)
+	public boolean equals(java.lang.Object a);
+	
+	/**
+	 * *
+	 */
+	 int lk_hashCode();
+	
+	/**
+	 * 
+	 */
+	public int hashCode();
 
 }

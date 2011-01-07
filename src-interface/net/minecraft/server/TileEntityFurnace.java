@@ -2,37 +2,113 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntityFurnace{
+public abstract class TileEntityFurnace extends TileEntity{
 	// FIELDS
-	public static java.util.logging.Logger a;
-	private java.util.Properties b;
-	private java.io.File c;
+	public int e;
+	public ()V setChunkModified;
+	public int g;
+	private il[] h;
 	
 	// METHODS
 	
 	/**
-	 * Generates a new properties file.
+	 * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't fuel
 	 */
-	public void generateNewProperties()
+	 int getItemBurnTime(ItemStack a);
 	
 	/**
-	 * Returns an integer property. If the property doesn't exist the default is returned.
+	 * 
 	 */
-	public int getIntProperty(java.lang.String a, int b)
+	public int a();
 	
 	/**
-	 * Returns a string property. If the property doesn't exist the default is returned.
+	 * 
 	 */
-	public java.lang.String getStringProperty(java.lang.String a, java.lang.String b)
+	public ItemStack a(int a);
 	
 	/**
-	 * Returns a boolean property. If the property doesn't exist the default is returned.
+	 * 
 	 */
-	public boolean getBooleanProperty(java.lang.String a, boolean b)
+	public ItemStack a(int a, int b);
 	
 	/**
-	 * Writes the properties to the properties file.
+	 * 
 	 */
-	public void saveProperties()
+	public void a(int a, ItemStack b);
+	
+	/**
+	 * 
+	 */
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	private int a(ItemStack a);
+	
+	/**
+	 * 
+	 */
+	public boolean a_(EntityPlayer a);
+	
+	/**
+	 * Returns the item ID of the result of smelting the given item ID, or -1 if the given item can't be smelted.
+	 */
+	 int getSmeltingResultItem(int a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.String b();
+	
+	/**
+	 * 
+	 */
+	private int b(int a);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public int c();
+	
+	/**
+	 * 
+	 */
+	public void e();
+	
+	/**
+	 * Returns true if the furnace is currently burning
+	 */
+	 boolean isBurning();
+	
+	/**
+	 * 
+	 */
+	public boolean g();
+	
+	/**
+	 * Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack
+	 */
+	 void smeltItem();
+	
+	/**
+	 * 
+	 */
+	public void h();
+	
+	/**
+	 * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
+	 */
+	 boolean canSmelt();
+	
+	/**
+	 * 
+	 */
+	private boolean i();
 
 }

@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenReed extends NBTTagByteArray{
+public abstract class WorldGenReed extends WorldGenerator{
 	// FIELDS
 	
 	// METHODS
@@ -10,6 +10,6 @@ public abstract class WorldGenReed extends NBTTagByteArray{
 	/**
 	 * 
 	 */
-	public boolean a(BlockSponge a, BlockLog b, Packet17AddToInventory c, int d, int e, int f, int g)
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

@@ -6,22 +6,28 @@ public abstract class CraftingManager{
 	// FIELDS
 	private static final CraftingManager a;
 	private java.util.List b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public static final CraftingManager a()
+	 CraftingManager func_20151();
 	
 	/**
 	 * 
 	 */
-	transient void a(ItemStack a, java.lang.Object[] b)
+	public static final CraftingManager a();
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int[] a)
+	transient void a(ItemStack a, java.lang.Object[] b);
+	
+	/**
+	 * 
+	 */
+	public ItemStack a(int[] a);
 
 }

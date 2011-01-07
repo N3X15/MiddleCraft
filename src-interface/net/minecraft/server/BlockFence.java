@@ -2,43 +2,24 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFence extends IMobs{
+public abstract class BlockFence extends Block{
 	// FIELDS
-	public int a;
-	private lc aj;
-	private int ak;
-	private int al;
-	private int b;
-	private int c;
-	private int d;
-	private int e;
-	private boolean f;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(double a, double b, double c, float d, float e)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public void a(Packet1Login a)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public void b(BlockLog a)
-	
-	/**
-	 * 
-	 */
-	public void b_()
+	public void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
 
 }

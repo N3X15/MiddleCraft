@@ -2,19 +2,59 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockTorch extends BlockSoil{
+public abstract class BlockTorch extends Block{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * 
 	 */
-	public int getBlockTextureFromSide(int a)
+	public boolean a();
 	
 	/**
-	 * Returns the quantity of items to drop on block destruction.
+	 * 
 	 */
-	public int quantityDropped(java.util.Random a)
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void c(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 boolean func_279(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private boolean g(World a, int b, int c, int d);
 
 }

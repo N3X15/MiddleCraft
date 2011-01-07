@@ -2,31 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemFlintAndSteel extends IMobs{
+public abstract class ItemFlintAndSteel extends Item{
 	// FIELDS
-	public int a;
-	public int b;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	protected void a(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	protected void b(Packet1Login a)
-	
-	/**
-	 * 
-	 */
-	public void b_()
-	
-	/**
-	 * 
-	 */
-	public boolean c_()
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

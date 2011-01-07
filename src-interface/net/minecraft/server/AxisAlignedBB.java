@@ -2,24 +2,137 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class AxisAlignedBB extends BlockSoil{
+public abstract class AxisAlignedBB{
 	// FIELDS
+	public double a;
+	public double b;
+	public double c;
+	public double d;
+	public double e;
+	public ()V setChunkModified;
+	private static java.util.List g;
+	private static int h;
 	
 	// METHODS
 	
 	/**
+	 * Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z
+	 */
+	 AxisAlignedBB addCoord(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public static void a();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB a(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public static AxisAlignedBB a(double a, double b, double c, double d, double e, double f);
+	
+	/**
+	 * 
+	 */
+	private boolean a(Vec3D a);
+	
+	/**
+	 * 
+	 */
+	public MovingObjectPosition a(Vec3D a, Vec3D b);
+	
+	/**
+	 * 
+	 */
+	public boolean a(AxisAlignedBB a);
+	
+	/**
+	 * 
+	 */
+	public double a(AxisAlignedBB a, double b);
+	
+	/**
+	 * Returns a copy of the bounding box.
+	 */
+	 AxisAlignedBB copy();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB b();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB b(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public static AxisAlignedBB b(double a, double b, double c, double d, double e, double f);
+	
+	/**
+	 * 
+	 */
+	private boolean b(Vec3D a);
+	
+	/**
+	 * 
+	 */
+	public void b(AxisAlignedBB a);
+	
+	/**
+	 * 
+	 */
+	public double b(AxisAlignedBB a, double b);
+	
+	/**
 	 * *
 	 */
-	protected abstract EntitySnowball SetBlockEntity()
+	 double func_709(AxisAlignedBB a, double b);
 	
 	/**
-	 * Called whenever the block is removed.
+	 * 
 	 */
-	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
+	public AxisAlignedBB c(double a, double b, double c);
 	
 	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 * 
 	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	public AxisAlignedBB c(double a, double b, double c, double d, double e, double f);
+	
+	/**
+	 * 
+	 */
+	private boolean c(Vec3D a);
+	
+	/**
+	 * 
+	 */
+	public double c(AxisAlignedBB a, double b);
+	
+	/**
+	 * Offsets the current bounding box by the specified coordinates. Args: x, y, z
+	 */
+	 AxisAlignedBB offset(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(double a, double b, double c);
+	
+	/**
+	 * *
+	 */
+	 AxisAlignedBB func_694(double a, double b, double c);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB e(double a, double b, double c);
 
 }

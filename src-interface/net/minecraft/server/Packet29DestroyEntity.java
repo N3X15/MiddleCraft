@@ -2,15 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Packet29DestroyEntity extends ItemBlock{
+public abstract class Packet29DestroyEntity extends Packet{
 	// FIELDS
-	private int a;
+	public int a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public int a();
+	
+	/**
+	 * 
+	 */
+	public void a(NetHandler a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataInputStream a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.io.DataOutputStream a);
 
 }

@@ -9,47 +9,68 @@ public abstract class Slot{
 	public int c;
 	public int d;
 	public int e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public int a()
+	 ItemStack func_20088(int a);
 	
 	/**
 	 * 
 	 */
-	public ItemStack a(int a)
+	public int a();
 	
 	/**
 	 * 
 	 */
-	public boolean a(ItemStack a)
+	public ItemStack a(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(IInventory a, int b)
+	public boolean a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void b()
+	public boolean a(IInventory a, int b);
+	
+	/**
+	 * *
+	 */
+	 void func_20089(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public void b(ItemStack a)
+	public void b();
 	
 	/**
 	 * 
 	 */
-	public ItemStack c()
+	public void b(ItemStack a);
+	
+	/**
+	 * *
+	 */
+	 ItemStack func_20092();
 	
 	/**
 	 * 
 	 */
-	public void d()
+	public ItemStack c();
+	
+	/**
+	 * *
+	 */
+	 void func_20094();
+	
+	/**
+	 * 
+	 */
+	public void d();
 
 }

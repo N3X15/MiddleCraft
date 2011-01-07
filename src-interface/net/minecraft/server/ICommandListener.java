@@ -2,24 +2,29 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ICommandListener extends EntityFlying{
+public abstract interface interface ICommandListener{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * Logs the message with a level of INFO.
 	 */
-	public int getPacketSize()
+	 void log(java.lang.String a);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public abstract void b(java.lang.String a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * Gets the players username.
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	 java.lang.String getUsername();
+	
+	/**
+	 * 
+	 */
+	public abstract java.lang.String c();
 
 }

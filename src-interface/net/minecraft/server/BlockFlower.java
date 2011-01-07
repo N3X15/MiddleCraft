@@ -2,16 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockFlower{
+public abstract class BlockFlower extends Block{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public int e;
-	public NoiseGenerator2 f;
-	public IMobs g;
 	
 	// METHODS
+	
+	/**
+	 * 
+	 */
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * 
+	 */
+	protected boolean b(int a);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean f(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 void func_276(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	protected final void g(World a, int b, int c, int d);
 
 }

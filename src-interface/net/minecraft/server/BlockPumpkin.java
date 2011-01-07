@@ -2,80 +2,31 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockPumpkin extends BlockSoil{
+public abstract class BlockPumpkin extends Block{
 	// FIELDS
 	private boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	public boolean isOpaqueCube()
-	
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
-	 */
-	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Called whenever the block is removed.
-	 */
-	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
-	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Returns true if the block coordinate passed can provide power, or is a redstone wire.
-	 */
-	public static boolean isPowerProviderOrWire(ChunkCoordinates a, int b, int c, int d)
-	
-	/**
-	 * Is this block powering the block on the specified side
-	 */
-	public boolean isPoweringTo(ChunkCoordinates a, int b, int c, int d, int e)
-	
-	/**
-	 * Can this block provide power. Only wire currently seems to have this change based on its state.
-	 */
-	public boolean canProvidePower()
-	
-	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
-	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Is this block indirectly powering the block on the specified side
-	 */
-	public boolean isIndirectlyPoweringTo(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
-	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Returns the current strength at the specified block if it is greater than the passed value, or the passed value otherwise. Signature: (world, x, y, z, strength)
-	 */
-	private int getMaxCurrentStrength(Packet17AddToInventory a, int b, int c, int d, int e)
+	public int a(int a);
 	
 	/**
 	 * 
 	 */
-	private void g(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	private void h(Packet17AddToInventory a, int b, int c, int d)
+	public void a(World a, int b, int c, int d, EntityLiving e);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
 
 }

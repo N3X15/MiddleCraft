@@ -2,15 +2,79 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MobSpawnerBase extends NetworkListenThread{
+public abstract class MobSpawnerBase{
 	// FIELDS
-	private static gv[] bb;
+	public static final MobSpawnerBase a;
+	public static final MobSpawnerBase b;
+	public static final MobSpawnerBase c;
+	public static final MobSpawnerBase d;
+	public static final MobSpawnerBase e;
+	public static final ()V setChunkModified;
+	public static final MobSpawnerBase g;
+	public static final MobSpawnerBase h;
+	public static final MobSpawnerBase i;
+	public static final MobSpawnerBase j;
+	public static final MobSpawnerBase k;
+	public static final MobSpawnerBase l;
+	public java.lang.String m;
+	public int n;
+	public byte o;
+	public byte p;
+	public int q;
+	protected java.lang.Class[] r;
+	protected java.lang.Class[] s;
+	private static jq[] t;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 MobSpawnerBase func_4080(int a);
+	
+	/**
 	 * 
 	 */
-	public boolean a(BlockSoil a)
+	public static void a();
+	
+	/**
+	 * 
+	 */
+	public static MobSpawnerBase a(double a, double b);
+	
+	/**
+	 * 
+	 */
+	public static MobSpawnerBase a(float a, float b);
+	
+	/**
+	 * 
+	 */
+	protected MobSpawnerBase a(int a);
+	
+	/**
+	 * 
+	 */
+	protected MobSpawnerBase a(java.lang.String a);
+	
+	/**
+	 * 
+	 */
+	public java.lang.Class[] a(EnumCreatureType a);
+	
+	/**
+	 * *
+	 */
+	 MobSpawnerBase func_4079(int a);
+	
+	/**
+	 * 
+	 */
+	protected MobSpawnerBase b();
+	
+	/**
+	 * 
+	 */
+	protected MobSpawnerBase b(int a);
 
 }

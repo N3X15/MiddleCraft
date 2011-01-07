@@ -2,39 +2,64 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface HashEntry2{
+abstract class HashEntry2{
 	// FIELDS
+	final long a;
+	 java.lang.Object b;
+	 HashEntry2 c;
+	final int d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean a()
-	
-	/**
-	 * Checks to see if a chunk exists at x, y
-	 */
-	public abstract boolean chunkExists(int a, int b)
-	
-	/**
-	 * Populates chunk with ores etc etc
-	 */
-	public abstract void populate(HashEntry2 a, int b, int c)
-	
-	/**
-	 * Called to save the world
-	 */
-	public abstract boolean saveWorld(boolean a, ChunkCoordIntPair b)
+	 long func_736();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b()
+	public final long a();
 	
 	/**
 	 * *
 	 */
-	public abstract kx provideChunk(int a, int b)
+	 java.lang.Object func_735();
+	
+	/**
+	 * 
+	 */
+	public final java.lang.Object b();
+	
+	/**
+	 * *
+	 */
+	 boolean cr_equals(java.lang.Object a);
+	
+	/**
+	 * 
+	 */
+	public final boolean equals(java.lang.Object a);
+	
+	/**
+	 * *
+	 */
+	 int cr_hashCode();
+	
+	/**
+	 * 
+	 */
+	public final int hashCode();
+	
+	/**
+	 * *
+	 */
+	 java.lang.String cr_toString();
+	
+	/**
+	 * 
+	 */
+	public final java.lang.String toString();
 
 }

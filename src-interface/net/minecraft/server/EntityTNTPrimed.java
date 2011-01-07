@@ -2,15 +2,41 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class EntityTNTPrimed extends java.lang.Thread{
+public abstract class EntityTNTPrimed extends Entity{
 	// FIELDS
-	final net.minecraft.server.MinecraftServer a;
+	public int a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void run()
+	protected void a(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	protected void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
+	
+	/**
+	 * *
+	 */
+	 void explode();
+	
+	/**
+	 * 
+	 */
+	private void c();
+	
+	/**
+	 * 
+	 */
+	public boolean c_();
 
 }

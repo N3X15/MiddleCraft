@@ -2,49 +2,46 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityPig extends BlockSoil{
+public abstract class EntityPig extends EntityAnimals{
 	// FIELDS
+	public boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
+	public boolean a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
+	protected java.lang.String d();
 	
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	protected java.lang.String e();
 	
 	/**
 	 * 
 	 */
-	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
+	protected java.lang.String f();
 	
 	/**
 	 * 
 	 */
-	private boolean g(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean h(Packet17AddToInventory a, int b, int c, int d)
+	protected int g();
 
 }

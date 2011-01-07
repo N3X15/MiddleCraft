@@ -2,46 +2,56 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldManager extends TileEntityChest{
+public abstract class WorldManager{
 	// FIELDS
-	private java.util.List a;
-	private byte b;
+	private net.minecraft.server.MinecraftServer a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Gets the type byte for the tag.
+	 * 
 	 */
-	public byte getType()
-	
-	/**
-	 * Retrieves the tag at the specified index from the list.
-	 */
-	public TileEntityChest tagAt(int a)
-	
-	/**
-	 * Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any previous tag.
-	 */
-	public void setTag(TileEntityChest a)
-	
-	/**
-	 * Read the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void readTagContents(java.io.DataInput a)
-	
-	/**
-	 * Write the actual data contents of the tag, implemented in NBT extension classes
-	 */
-	 void writeTagContents(java.io.DataOutput a)
-	
-	/**
-	 * Returns the number of tags in the list.
-	 */
-	public int tagCount()
+	public void a();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public void a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c, int d, int e, int f);
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c, TileEntity d);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, double b, double c, double d, float e, float f);
+	
+	/**
+	 * 
+	 */
+	public void a(java.lang.String a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a);
 
 }

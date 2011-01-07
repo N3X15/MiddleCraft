@@ -8,18 +8,23 @@ public abstract interface interface ICrafting{
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void a(CraftingInventoryCB a, int b, int c)
+	 void func_20054(CraftingInventoryCB a, java.util.List b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingInventoryCB a, int b, ItemStack c)
+	public abstract void a(CraftingInventoryCB a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingInventoryCB a, java.util.List b)
+	public abstract void a(CraftingInventoryCB a, int b, ItemStack c);
+	
+	/**
+	 * 
+	 */
+	public abstract void a(CraftingInventoryCB a, java.util.List b);
 
 }

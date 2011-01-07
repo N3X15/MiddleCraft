@@ -2,16 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockOreBlock extends ItemBlock{
+public abstract class BlockOreBlock extends Block{
 	// FIELDS
-	private int a;
-	private int b;
 	
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public int a(int a);
 
 }

@@ -2,30 +2,101 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockRedstoneWire extends BlockStep{
+public abstract class BlockRedstoneWire extends Block{
 	// FIELDS
-	public int a;
+	private boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * 
 	 */
-	public int getPacketSize()
+	public boolean a();
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public int a(int a, java.util.Random b);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * Returns true if the block coordinate passed can provide power, or is a redstone wire.
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	 boolean isPowerProviderOrWire(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public static boolean b(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean b(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public boolean c();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean d(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
+	
+	/**
+	 * Returns the current strength at the specified block if it is greater than the passed value, or the passed value otherwise. Signature: (world, x, y, z, strength)
+	 */
+	 int getMaxCurrentStrength(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	private int f(World a, int b, int c, int d, int e);
+	
+	/**
+	 * *
+	 */
+	 void func_292(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void g(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 void func_291(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private void h(World a, int b, int c, int d);
 
 }

@@ -2,41 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MovingObjectPosition extends AxisAlignedBB{
+public abstract class MovingObjectPosition{
 	// FIELDS
-	private java.lang.Class a;
-	private boolean b;
+	public int a;
+	public int b;
+	public int c;
+	public int d;
+	public int e;
+	public ()V setChunkModified;
+	public Entity g;
 	
 	// METHODS
-	
-	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
-	 */
-	public boolean isOpaqueCube()
-	
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Updates the blocks bounds based on its current state. Args: world, x, y, z
-	 */
-	public void setBlockBoundsBasedOnState(ChunkCoordinates a, int b, int c, int d)
-	
-	/**
-	 * *
-	 */
-	protected EntitySnowball SetBlockEntity()
-	
-	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
-	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
-	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
 
 }

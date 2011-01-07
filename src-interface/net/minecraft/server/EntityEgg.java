@@ -12,33 +12,38 @@ public abstract class EntityEgg extends Entity{
 	private int c;
 	private int d;
 	private int e;
-	private boolean f;
+	private ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public void a(double a, double b, double c, float d, float e)
+	 void func_20078(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public void a(NBTTagCompound a)
+	public void a(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public void b(NBTTagCompound a)
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b(EntityPlayer a)
+	public void b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public void b_()
+	public void b(EntityPlayer a);
+	
+	/**
+	 * 
+	 */
+	public void b_();
 
 }

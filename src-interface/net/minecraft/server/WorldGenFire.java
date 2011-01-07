@@ -2,38 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class WorldGenFire{
+public abstract class WorldGenFire extends WorldGenerator{
 	// FIELDS
-	final int a;
-	 java.lang.Object b;
-	 WorldGenFire c;
-	final int d;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public final int a()
-	
-	/**
-	 * 
-	 */
-	public final java.lang.Object b()
-	
-	/**
-	 * 
-	 */
-	public final boolean equals(java.lang.Object a)
-	
-	/**
-	 * 
-	 */
-	public final int hashCode()
-	
-	/**
-	 * 
-	 */
-	public final java.lang.String toString()
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

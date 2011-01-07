@@ -2,16 +2,44 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityAnimals extends NetworkListenThread{
+public abstract class EntityAnimals extends EntityCreature{
 	// FIELDS
-	private static gv[] bb;
-	private int bc;
 	
 	// METHODS
 	
 	/**
-	 * Returns if the item (tool) can harvest results from the block type.
+	 * *
 	 */
-	public boolean canHarvestBlock(BlockSoil a)
+	 float func_159(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public boolean a();
+	
+	/**
+	 * 
+	 */
+	protected float a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void a(NBTTagCompound a);
+	
+	/**
+	 * *
+	 */
+	 int func_146();
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
 
 }

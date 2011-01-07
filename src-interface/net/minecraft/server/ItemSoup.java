@@ -2,62 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemSoup extends ChunkProviderLoadOrGenerate{
+public abstract class ItemSoup extends ItemFood{
 	// FIELDS
-	public int a;
-	private IMobs aj;
-	private int ak;
-	public double b;
-	public double c;
-	public double d;
-	public int e;
-	public int f;
 	
 	// METHODS
 	
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this entity.
-	 */
-	public boolean getCanSpawnHere()
-	
-	/**
 	 * 
 	 */
-	private boolean a(double a, double b, double c, double d)
-	
-	/**
-	 * 
-	 */
-	protected void c()
-	
-	/**
-	 * Returns the sound this mob makes while it's alive.
-	 */
-	protected java.lang.String getLivingSound()
-	
-	/**
-	 * Returns the sound this mob makes when it is hurt.
-	 */
-	protected java.lang.String getHurtSound()
-	
-	/**
-	 * Returns the sound this mob makes on death.
-	 */
-	protected java.lang.String getDeathSound()
-	
-	/**
-	 * Returns the item ID for the item the mob drops on death.
-	 */
-	protected int getDropItemId()
-	
-	/**
-	 * Returns the volume for the sounds this mob makes.
-	 */
-	protected float getSoundVolume()
-	
-	/**
-	 * 
-	 */
-	public int i()
+	public ItemStack a(ItemStack a, World b, EntityPlayer c);
 
 }

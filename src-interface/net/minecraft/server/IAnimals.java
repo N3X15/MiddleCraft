@@ -2,29 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class IAnimals extends MaterialLiquid{
+public abstract interface interface IAnimals{
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	private void i(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean j(Packet17AddToInventory a, int b, int c, int d)
 
 }

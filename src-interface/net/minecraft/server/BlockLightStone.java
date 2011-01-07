@@ -2,27 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockLightStone extends javax.swing.JComponent{
+public abstract class BlockLightStone extends Block{
 	// FIELDS
-	private int[] a;
-	private int b;
-	private java.lang.String[] c;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	private void a()
-	
-	/**
-	 * 
-	 */
-	static void a(BlockLightStone a)
-	
-	/**
-	 * 
-	 */
-	public void paint(java.awt.Graphics a)
+	public int a(int a, java.util.Random b);
 
 }

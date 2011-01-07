@@ -2,135 +2,19 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockWorkbench extends BlockSoil{
+public abstract class BlockWorkbench extends Block{
 	// FIELDS
-	private BlockSoil a;
 	
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	public boolean isOpaqueCube()
+	public int a(int a);
 	
 	/**
-	 * Returns the block texture based on the side being looked at.  Args: side
+	 * 
 	 */
-	public int getBlockTextureFromSide(int a)
-	
-	/**
-	 * Returns the ID of the items to drop on destruction.
-	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag
-	 */
-	public boolean canCollideCheck(int a, boolean b)
-	
-	/**
-	 * *
-	 */
-	public float getExplosionResistance(IMobs a)
-	
-	/**
-	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
-	 */
-	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
-	 */
-	public void onBlockDestroyedByPlayer(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Drops the block items with a specified chance of dropping the specified items
-	 */
-	public void dropBlockAsItemWithChance(Packet17AddToInventory a, int b, int c, int d, int e, float f)
-	
-	/**
-	 * Adds to the supplied array any colliding bounding boxes with the passed in bounding box. Args: world, x, y, z, axisAlignedBB, arrayList
-	 */
-	public void getCollidingBoundingBoxes(Packet17AddToInventory a, int b, int c, int d, IUpdatePlayerListBox e, java.util.ArrayList f)
-	
-	/**
-	 * Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d
-	 */
-	public void velocityToAddToEntity(Packet17AddToInventory a, int b, int c, int d, IMobs e, NoiseGenerator2 f)
-	
-	/**
-	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
-	 */
-	public boolean blockActivated(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
-	
-	/**
-	 * Ticks the block if it's been scheduled
-	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * Called when a block is using an item and passed in who placed it. Args: x, y, z, entityLiving
-	 */
-	public void onBlockPlacedBy(Packet17AddToInventory a, int b, int c, int d, lc e)
-	
-	/**
-	 * Returns the quantity of items to drop on block destruction.
-	 */
-	public int quantityDropped(java.util.Random a)
-	
-	/**
-	 * Updates the blocks bounds based on its current state. Args: world, x, y, z
-	 */
-	public void setBlockBoundsBasedOnState(ChunkCoordinates a, int b, int c, int d)
-	
-	/**
-	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
-	 */
-	public boolean shouldSideBeRendered(ChunkCoordinates a, int b, int c, int d, int e)
-	
-	/**
-	 * Drops the specified block items
-	 */
-	public void dropBlockAsItem(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * How many world ticks before ticking
-	 */
-	public int tickRate()
-	
-	/**
-	 * Called whenever the block is removed.
-	 */
-	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
-	 */
-	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
-	
-	/**
-	 * Called when the block is clicked by a player. Args: x, y, z, entityPlayer
-	 */
-	public void onBlockClicked(Packet17AddToInventory a, int b, int c, int d, BlockLog e)
-	
-	/**
-	 * Called upon the block being destroyed by an explosion
-	 */
-	public void onBlockDestroyedByExplosion(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Returns if this block is collidable (only used by Fire). Args: x, y, z
-	 */
-	public boolean isCollidable()
-	
-	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
-	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
-	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a(World a, int b, int c, int d, EntityPlayer e);
 
 }

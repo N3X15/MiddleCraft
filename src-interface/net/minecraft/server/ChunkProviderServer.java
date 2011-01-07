@@ -2,30 +2,96 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ChunkProviderServer extends TileEntityChest{
+public abstract class ChunkProviderServer{
 	// FIELDS
-	public java.lang.String a;
+	private java.util.Set a;
+	private Chunk b;
+	private IChunkProvider c;
+	private IChunkLoader d;
+	private java.util.Map e;
+	private ()V setChunkModified;
+	private WorldServer g;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public byte a()
+	 void func_375(Chunk a);
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataInput a)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataOutput a)
+	public boolean a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public void a(IChunkProvider a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private void a(Chunk a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(boolean a, IProgressUpdate b);
+	
+	/**
+	 * *
+	 */
+	 void func_373(Chunk a);
+	
+	/**
+	 * 
+	 */
+	public boolean b();
+	
+	/**
+	 * 
+	 */
+	public Chunk b(int a, int b);
+	
+	/**
+	 * 
+	 */
+	private void b(Chunk a);
+	
+	/**
+	 * *
+	 */
+	 void func_374(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public void c(int a, int b);
+	
+	/**
+	 * loads or generates the chunk at the chunk location specified
+	 */
+	 Chunk loadChunk(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public Chunk d(int a, int b);
+	
+	/**
+	 * *
+	 */
+	 Chunk func_4063(int a, int b);
+	
+	/**
+	 * 
+	 */
+	private Chunk e(int a, int b);
 
 }

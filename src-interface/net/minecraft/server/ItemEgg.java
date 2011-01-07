@@ -10,6 +10,6 @@ public abstract class ItemEgg extends Item{
 	/**
 	 * 
 	 */
-	public ItemStack a(ItemStack a, World b, EntityPlayer c)
+	public ItemStack a(ItemStack a, World b, EntityPlayer c);
 
 }

@@ -2,9 +2,209 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class Item extends EnumCreatureType{
+public abstract class Item{
 	// FIELDS
+	public static Item A;
+	public static Item B;
+	public static Item C;
+	public static Item D;
+	public static Item E;
+	public static Item F;
+	public static Item G;
+	public static Item H;
+	public static Item I;
+	public static Item J;
+	public static Item K;
+	public static Item L;
+	public static Item M;
+	public static Item N;
+	public static Item O;
+	public static Item P;
+	public static Item Q;
+	public static Item R;
+	public static Item S;
+	public static Item T;
+	public static Item U;
+	public static Item V;
+	public static Item W;
+	public static Item X;
+	public static Item Y;
+	public static Item Z;
+	private java.lang.String a;
+	public static Item aA;
+	public static Item aB;
+	public static Item aC;
+	public static Item aD;
+	public static Item aE;
+	public static Item aF;
+	public static Item aG;
+	public static Item aH;
+	public static Item aI;
+	public static Item aJ;
+	public static Item aK;
+	public static Item aL;
+	public static Item aM;
+	public static Item aN;
+	public static Item aO;
+	public static Item aP;
+	public static Item aQ;
+	public static Item aR;
+	public static Item aS;
+	public static Item aT;
+	public static Item aU;
+	public static Item aV;
+	public final int aW;
+	protected int aX;
+	protected int aY;
+	protected int aZ;
+	public static Item aa;
+	public static Item ab;
+	public static Item ac;
+	public static Item ad;
+	public static Item ae;
+	public static Item af;
+	public static Item ag;
+	public static Item ah;
+	public static Item ai;
+	public static Item aj;
+	public static Item ak;
+	public static Item al;
+	public static Item am;
+	public static Item an;
+	public static Item ao;
+	public static Item ap;
+	public static Item aq;
+	public static Item ar;
+	public static Item as;
+	public static Item at;
+	public static Item au;
+	public static Item av;
+	public static Item aw;
+	public static Item ax;
+	public static Item ay;
+	public static Item az;
+	protected static java.util.Random b;
+	protected boolean ba;
+	public static gm[] c;
+	public static Item d;
+	public static Item e;
+	public static ()V setChunkModified;
+	public static Item g;
+	public static Item h;
+	public static Item i;
+	public static Item j;
+	public static Item k;
+	public static Item l;
+	public static Item m;
+	public static Item n;
+	public static Item o;
+	public static Item p;
+	public static Item q;
+	public static Item r;
+	public static Item s;
+	public static Item t;
+	public static Item u;
+	public static Item v;
+	public static Item w;
+	public static Item x;
+	public static Item y;
+	public static Item z;
 	
 	// METHODS
+	
+	/**
+	 * *
+	 */
+	 Item func_20104(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public java.lang.String a();
+	
+	/**
+	 * 
+	 */
+	public Item a(int a);
+	
+	/**
+	 * 
+	 */
+	public Item a(int a, int b);
+	
+	/**
+	 * 
+	 */
+	public int a(Entity a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(Block a);
+	
+	/**
+	 * 
+	 */
+	public void a(ItemStack a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public ItemStack a(ItemStack a, World b, EntityPlayer c);
+	
+	/**
+	 * 
+	 */
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	
+	/**
+	 * 
+	 */
+	public float a(ItemStack a, Block b);
+	
+	/**
+	 * 
+	 */
+	public void a(ItemStack a, EntityLiving b);
+	
+	/**
+	 * 
+	 */
+	public Item a(java.lang.String a);
+	
+	/**
+	 * Returns the maximum size of the stack for a specific item. *Isn't this more a Set than a Get?*
+	 */
+	 int getItemStackLimit();
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(ItemStack a, EntityLiving b);
+	
+	/**
+	 * Returns the maximum damage an item can take.
+	 */
+	 int getMaxDamage();
+	
+	/**
+	 * 
+	 */
+	public int c();
+	
+	/**
+	 * Sets bFull3D to True and return the object.
+	 */
+	 Item setFull3D();
+	
+	/**
+	 * 
+	 */
+	public Item d();
 
 }

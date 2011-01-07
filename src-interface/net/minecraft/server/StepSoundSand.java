@@ -2,15 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract class StepSoundSand extends java.awt.event.FocusAdapter{
+abstract final class StepSoundSand extends StepSound{
 	// FIELDS
-	final EnumArt a;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void focusGained(java.awt.event.FocusEvent a)
 
 }

@@ -2,14 +2,17 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenClay extends NBTTagByteArray{
+public abstract class WorldGenClay extends WorldGenerator{
 	// FIELDS
+	private int a;
+	private int b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 * 
 	 */
-	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

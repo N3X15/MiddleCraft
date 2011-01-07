@@ -2,51 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MinecraftException{
+public abstract class MinecraftException extends java.lang.RuntimeException{
 	// FIELDS
-	private java.io.File a;
-	private boolean b;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public void a()
-	
-	/**
-	 * 
-	 */
-	private java.io.File a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public kx a(Packet17AddToInventory a, int b, int c)
-	
-	/**
-	 * 
-	 */
-	public static kx a(Packet17AddToInventory a, Packet1Login b)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet17AddToInventory a, kx b)
-	
-	/**
-	 * 
-	 */
-	public void a(kx a, Packet17AddToInventory b, Packet1Login c)
-	
-	/**
-	 * 
-	 */
-	public void b()
-	
-	/**
-	 * 
-	 */
-	public void b(Packet17AddToInventory a, kx b)
 
 }

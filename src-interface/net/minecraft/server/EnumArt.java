@@ -2,46 +2,54 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EnumArt extends javax.swing.JComponent{
+public abstract final class EnumArt extends java.lang.Enum{
 	// FIELDS
-	public static java.util.logging.Logger a;
-	private net.minecraft.server.MinecraftServer b;
+	public final int A;
+	public final int B;
+	public final int C;
+	private static final ie[] D;
+	public static final EnumArt a;
+	public static final EnumArt b;
+	public static final EnumArt c;
+	public static final EnumArt d;
+	public static final EnumArt e;
+	public static final ()V setChunkModified;
+	public static final EnumArt g;
+	public static final EnumArt h;
+	public static final EnumArt i;
+	public static final EnumArt j;
+	public static final EnumArt k;
+	public static final EnumArt l;
+	public static final EnumArt m;
+	public static final EnumArt n;
+	public static final EnumArt o;
+	public static final EnumArt p;
+	public static final EnumArt q;
+	public static final EnumArt r;
+	public static final EnumArt s;
+	public static final EnumArt t;
+	public static final EnumArt u;
+	public static final EnumArt v;
+	public static final EnumArt w;
+	public static final EnumArt x;
+	public final java.lang.String y;
+	public final int z;
 	
 	// METHODS
 	
 	/**
-	 * Returns a new JPanel with a new GuiStatsComponent inside.
+	 * 
 	 */
-	private javax.swing.JComponent getStatsComponent()
+	public static EnumArt valueOf(java.lang.String a);
 	
 	/**
-	 * Returns the MinecraftServer associated with the ServerGui.
+	 * *
 	 */
-	static net.minecraft.server.MinecraftServer getMinecraftServer(EnumArt a)
+	 ie[] ie_values();
 	
 	/**
-	 * Initialises the GUI components.
+	 * 
 	 */
-	public static void initGui(net.minecraft.server.MinecraftServer a)
-	
-	/**
-	 * Returns a new JScrollPane with a new PlayerListBox inside.
-	 */
-	private javax.swing.JComponent getPlayerListComponent()
-	
-	/**
-	 * Logs the message with a level of INFO.
-	 */
-	public void log(java.lang.String a)
-	
-	/**
-	 * Gets the players username.
-	 */
-	public java.lang.String getUsername()
-	
-	/**
-	 * Returns a new JPanel with a new GuiStatsComponent inside.
-	 */
-	private javax.swing.JComponent getLogComponent()
+	public static ie[] values();
 
 }

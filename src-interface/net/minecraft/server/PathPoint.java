@@ -9,7 +9,7 @@ public abstract class PathPoint{
 	public final int c;
 	public final int d;
 	 int e;
-	 float f;
+	 ()V setChunkModified;
 	 float g;
 	 float h;
 	 PathPoint i;
@@ -18,28 +18,48 @@ public abstract class PathPoint{
 	// METHODS
 	
 	/**
-	 * Returns true if this point has already been assigned to a path
-	 */
-	public boolean isAssigned()
-	
-	/**
 	 * Returns the linear distance to another path point
 	 */
-	public float distanceTo(PathPoint a)
+	 float distanceTo(PathPoint a);
 	
 	/**
 	 * 
 	 */
-	public boolean equals(java.lang.Object a)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public int hashCode()
+	public float a(PathPoint a);
+	
+	/**
+	 * *
+	 */
+	 boolean b_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public boolean equals(java.lang.Object a);
+	
+	/**
+	 * *
+	 */
+	 int b_hashCode();
+	
+	/**
+	 * 
+	 */
+	public int hashCode();
+	
+	/**
+	 * *
+	 */
+	 java.lang.String b_toString();
+	
+	/**
+	 * 
+	 */
+	public java.lang.String toString();
 
 }

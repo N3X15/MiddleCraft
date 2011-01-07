@@ -2,66 +2,41 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntitySheep extends ConsoleLogFormatter{
+public abstract class EntitySheep extends EntityAnimals{
 	// FIELDS
-	private boolean a;
-	private static java.util.List b;
+	public boolean a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * 
 	 */
-	public int idDropped(int a, java.util.Random b)
-	
-	/**
-	 * Ticks the block if it's been scheduled
-	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public void a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	private boolean checkForBurnout(Packet17AddToInventory a, int b, int c, int d, boolean e)
-	
-	/**
-	 * How many world ticks before ticking
-	 */
-	public int tickRate()
-	
-	/**
-	 * Called whenever the block is removed.
-	 */
-	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
-	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Is this block powering the block on the specified side
-	 */
-	public boolean isPoweringTo(ChunkCoordinates a, int b, int c, int d, int e)
-	
-	/**
-	 * Can this block provide power. Only wire currently seems to have this change based on its state.
-	 */
-	public boolean canProvidePower()
-	
-	/**
-	 * Is this block indirectly powering the block on the specified side
-	 */
-	public boolean isIndirectlyPoweringTo(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
-	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	private boolean g(Packet17AddToInventory a, int b, int c, int d)
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String d();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String e();
+	
+	/**
+	 * 
+	 */
+	protected java.lang.String f();
 
 }

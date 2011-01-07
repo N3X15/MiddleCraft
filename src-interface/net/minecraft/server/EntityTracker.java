@@ -2,34 +2,64 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityTracker extends BlockStep{
+public abstract class EntityTracker{
 	// FIELDS
-	public int a;
-	public int b;
-	public int c;
-	public int d;
-	public BlockSponge e;
+	private java.util.Set a;
+	private MCHashTable b;
+	private net.minecraft.server.MinecraftServer c;
+	private int d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * *
 	 */
-	public int getPacketSize()
+	 void func_12021(Entity a, Packet b);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public void a();
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	public void a(Entity a);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * 
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	public void a(Entity a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, int b, int c, boolean d);
+	
+	/**
+	 * 
+	 */
+	public void a(Entity a, Packet b);
+	
+	/**
+	 * 
+	 */
+	public void a(EntityPlayerMP a);
+	
+	/**
+	 * *
+	 */
+	 void func_609(Entity a, Packet b);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a);
+	
+	/**
+	 * 
+	 */
+	public void b(Entity a, Packet b);
 
 }

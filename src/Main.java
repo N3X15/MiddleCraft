@@ -50,6 +50,14 @@ public class Main {
 
 	public static void main(String[] arguments) throws Throwable {
 
+		String classPath="";
+		try { classPath = System.getProperty( "java.class.path" ) ; }
+        catch ( Exception e ) 
+          {
+            System.out.println( "Exception: " + e ) ;
+            e.printStackTrace() ;
+          }
+        System.out.println( "CLASSPATH = " + classPath) ;
 
 		// Get net.minecraft.server interfaces and regenerate clean classmappings. Only use on new server updates.
 		if(arguments.length==1 && arguments[0].equals("GetServerInterfaces"))
@@ -81,7 +89,7 @@ public class Main {
 		}
 		if(getServerInterfaces) {
 			GenServerClasses();
-			return;
+			System.exit(0); // Hangs afterwards...
 		}
 
 		l.info("Stage 2: Patching server jar...");
@@ -150,12 +158,15 @@ public class Main {
 			if(e.getName().endsWith(".class")) {
 				// Strip off the .class
 				String className = e.getName().substring(0, e.getName().indexOf('.'));
-				l.info(className);
+				//l.info(className);
 				// Get new classname
 				String newClassName=Mappings.getNewClassName(className.replace('/','.'));
 
 				MCClassInfo ci = Mappings.classes.get(className);
-				if(ci==null) continue;
+				if(ci==null) {
+					//l.warning("Can't find mappings for "+className);
+					continue;
+				}
 				CtClass mcClass = mcClassPool.get(className);
 				ci.setClassModifiers(mcClass.getModifiers());
 				//ci.clearAllDefs(); // Remapping.
@@ -194,6 +205,7 @@ public class Main {
 				dir.mkdirs();
 				File f = new File(dir, newClassName+".java");
 				Utils.putFileContents(f, ci.toJava(mcClassPool,"net.minecraft.server"));
+				l.info(newClassName);
 			}
 		}
 	}

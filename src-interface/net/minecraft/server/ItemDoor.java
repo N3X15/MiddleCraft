@@ -2,16 +2,16 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemDoor{
+public abstract class ItemDoor extends Item{
 	// FIELDS
-	private java.lang.String[][] a;
-	private java.lang.Object[][] b;
+	private Material a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public void a(NBTBase a)
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

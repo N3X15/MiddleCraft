@@ -2,69 +2,30 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EnumCreatureType{
+public abstract final class EnumCreatureType extends java.lang.Enum{
 	// FIELDS
 	public static final EnumCreatureType a;
 	public static final EnumCreatureType b;
-	public static final EnumCreatureType c;
-	public static final EnumCreatureType d;
-	public static final EnumCreatureType e;
-	public static final EnumCreatureType f;
-	public static final EnumCreatureType g;
-	public static final EnumCreatureType h;
-	public static final EnumCreatureType i;
-	public static final EnumCreatureType j;
-	public static final EnumCreatureType k;
-	public static final EnumCreatureType l;
-	public java.lang.String m;
-	public int n;
-	public byte o;
-	public byte p;
-	public int q;
-	protected java.lang.Class[] r;
-	protected java.lang.Class[] s;
-	private static jq[] t;
+	public final java.lang.Class c;
+	public final int d;
+	private static final ku[] e;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public static void a()
+	public static EnumCreatureType valueOf(java.lang.String a);
+	
+	/**
+	 * *
+	 */
+	 ku[] ku_values();
 	
 	/**
 	 * 
 	 */
-	public static EnumCreatureType a(double a, double b)
-	
-	/**
-	 * 
-	 */
-	public static EnumCreatureType a(float a, float b)
-	
-	/**
-	 * 
-	 */
-	protected EnumCreatureType a(int a)
-	
-	/**
-	 * 
-	 */
-	protected EnumCreatureType a(java.lang.String a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.Class[] a(ku a)
-	
-	/**
-	 * 
-	 */
-	protected EnumCreatureType b()
-	
-	/**
-	 * 
-	 */
-	protected EnumCreatureType b(int a)
+	public static ku[] values();
 
 }

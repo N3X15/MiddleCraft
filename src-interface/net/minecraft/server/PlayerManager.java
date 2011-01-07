@@ -2,14 +2,84 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class PlayerManager extends ItemBlock{
+public abstract class PlayerManager{
 	// FIELDS
+	private java.util.List a;
+	private MCHashTable2 b;
+	private java.util.List c;
+	private net.minecraft.server.MinecraftServer d;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 void func_535(int a, int b, int c);
+	
+	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public void a();
+	
+	/**
+	 * 
+	 */
+	public void a(int a, int b, int c);
+	
+	/**
+	 * 
+	 */
+	private boolean a(int a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private PlayerInstance a(int a, int b, boolean c);
+	
+	/**
+	 * 
+	 */
+	public void a(EntityPlayerMP a);
+	
+	/**
+	 * 
+	 */
+	static net.minecraft.server.MinecraftServer a(PlayerManager a);
+	
+	/**
+	 * *
+	 */
+	 MCHashTable2 func_539(PlayerManager a);
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(EntityPlayerMP a);
+	
+	/**
+	 * 
+	 */
+	static MCHashTable2 b(PlayerManager a);
+	
+	/**
+	 * *
+	 */
+	 java.util.List func_533(PlayerManager a);
+	
+	/**
+	 * 
+	 */
+	public void c(EntityPlayerMP a);
+	
+	/**
+	 * 
+	 */
+	static java.util.List c(PlayerManager a);
 
 }

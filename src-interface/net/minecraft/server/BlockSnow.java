@@ -2,37 +2,64 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class BlockSnow extends lc{
+public abstract class BlockSnow extends Block{
 	// FIELDS
-	private ItemTool a;
-	protected IMobs aj;
-	protected boolean ak;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public boolean a()
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	protected float a(int a, int b, int c)
+	public int a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	protected void a(IMobs a, float b)
+	public boolean a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected void c()
+	public void a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	protected IMobs k()
+	public int a(java.util.Random a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	 boolean func_275(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	private boolean g(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void g(World a, int b, int c, int d, int e);
 
 }

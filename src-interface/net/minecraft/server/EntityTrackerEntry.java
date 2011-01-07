@@ -2,55 +2,111 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EntityTrackerEntry extends BlockSnow{
+public abstract class EntityTrackerEntry{
 	// FIELDS
-	protected int f;
+	public Entity a;
+	public boolean b;
+	public boolean c;
+	public boolean d;
+	public int e;
+	public ()V setChunkModified;
+	public int g;
+	public int h;
+	public int i;
+	public int j;
+	public int k;
+	public double l;
+	public double m;
+	public double n;
+	public int o;
+	public boolean p;
+	public java.util.Set q;
+	private double r;
+	private double s;
+	private double t;
+	private boolean u;
+	private boolean v;
 	
 	// METHODS
 	
 	/**
-	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	 * *
 	 */
-	public void onLivingUpdate()
-	
-	/**
-	 * Checks if the entity's current position is a valid location to spawn this entity.
-	 */
-	public boolean getCanSpawnHere()
+	 void func_12019(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	protected float a(int a, int b, int c)
-	
-	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
-	 */
-	public void writeEntityToNBT(Packet1Login a)
+	public void a();
 	
 	/**
 	 * 
 	 */
-	protected void a(IMobs a, float b)
-	
-	/**
-	 * Called when the entity is attacked.
-	 */
-	public boolean attackEntity(IMobs a, int b)
-	
-	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
-	 */
-	public void readEntityFromNBT(Packet1Login a)
-	
-	/**
-	 * Called to update the entity's position/logic.
-	 */
-	public void onUpdate()
+	public void a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	protected IMobs k()
+	public void a(java.util.List a);
+	
+	/**
+	 * 
+	 */
+	public void a(Packet a);
+	
+	/**
+	 * *
+	 */
+	 void func_12018(Packet a);
+	
+	/**
+	 * 
+	 */
+	private Packet b();
+	
+	/**
+	 * 
+	 */
+	public void b(EntityPlayerMP a);
+	
+	/**
+	 * 
+	 */
+	public void b(java.util.List a);
+	
+	/**
+	 * 
+	 */
+	public void b(Packet a);
+	
+	/**
+	 * *
+	 */
+	 void func_9219(EntityPlayerMP a);
+	
+	/**
+	 * 
+	 */
+	public void c(EntityPlayerMP a);
+	
+	/**
+	 * *
+	 */
+	 boolean hr_equals(java.lang.Object a);
+	
+	/**
+	 * 
+	 */
+	public boolean equals(java.lang.Object a);
+	
+	/**
+	 * *
+	 */
+	 int hr_hashCode();
+	
+	/**
+	 * 
+	 */
+	public int hashCode();
 
 }

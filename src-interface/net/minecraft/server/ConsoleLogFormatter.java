@@ -2,54 +2,21 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ConsoleLogFormatter extends BlockSoil{
+abstract final class ConsoleLogFormatter extends java.util.logging.Formatter{
 	// FIELDS
+	private java.text.SimpleDateFormat a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean a()
+	 java.lang.String iw_format(java.util.logging.LogRecord a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public BlockFlower a(Packet17AddToInventory a, int b, int c, int d, NoiseGenerator2 e, NoiseGenerator2 f)
-	
-	/**
-	 * 
-	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public void c(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void e(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean g(Packet17AddToInventory a, int b, int c, int d)
+	public java.lang.String format(java.util.logging.LogRecord a);
 
 }

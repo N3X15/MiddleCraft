@@ -2,19 +2,27 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class MapGenBase extends ItemAxe{
+public abstract class MapGenBase{
 	// FIELDS
+	protected int a;
+	protected java.util.Random b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * *
 	 */
-	public int idDropped(int a, java.util.Random b)
+	 void func_667(IChunkProvider a, World b, int c, int d, byte[] e);
 	
 	/**
-	 * Returns the quantity of items to drop on block destruction.
+	 * 
 	 */
-	public int quantityDropped(java.util.Random a)
+	public void a(IChunkProvider a, World b, int c, int d, byte[] e);
+	
+	/**
+	 * 
+	 */
+	protected void a(World a, int b, int c, int d, int e, byte[] f);
 
 }

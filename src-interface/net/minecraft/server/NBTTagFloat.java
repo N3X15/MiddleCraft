@@ -5,27 +5,33 @@ package net.minecraft.server;
 public abstract class NBTTagFloat extends NBTBase{
 	// FIELDS
 	public float a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public byte a()
+	public byte a();
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataInput a)
+	 void a(java.io.DataInput a);
 	
 	/**
 	 * 
 	 */
-	 void a(java.io.DataOutput a)
+	 void a(java.io.DataOutput a);
+	
+	/**
+	 * *
+	 */
+	 java.lang.String q_toString();
 	
 	/**
 	 * 
 	 */
-	public java.lang.String toString()
+	public java.lang.String toString();
 
 }

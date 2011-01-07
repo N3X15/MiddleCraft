@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class ItemPainting extends BlockSoil{
+public abstract class ItemPainting extends Item{
 	// FIELDS
 	
 	// METHODS
@@ -10,11 +10,6 @@ public abstract class ItemPainting extends BlockSoil{
 	/**
 	 * 
 	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void e(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

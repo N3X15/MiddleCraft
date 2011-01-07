@@ -2,24 +2,151 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract interface interface BlockStairs{
+public abstract class BlockStairs extends Block{
 	// FIELDS
+	private Block a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * Drops the block items with a specified chance of dropping the specified items
 	 */
-	public abstract void a(EntityArrow a, int b, int c)
+	 void dropBlockAsItemWithChance(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EntityArrow a, int b, BlockSponge c)
+	public boolean a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EntityArrow a, java.util.List b)
+	public int a(int a);
+	
+	/**
+	 * 
+	 */
+	public int a(int a, java.util.Random b);
+	
+	/**
+	 * 
+	 */
+	public boolean a(int a, boolean b);
+	
+	/**
+	 * 
+	 */
+	public float a(Entity a);
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, int e, float f);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, Entity e, Vec3D f);
+	
+	/**
+	 * 
+	 */
+	public boolean a(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, java.util.Random e);
+	
+	/**
+	 * 
+	 */
+	public void a(World a, int b, int c, int d, EntityLiving e);
+	
+	/**
+	 * 
+	 */
+	public int a(java.util.Random a);
+	
+	/**
+	 * 
+	 */
+	public void a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public boolean a(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * Drops the specified block items
+	 */
+	 void dropBlockAsItem(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public void a_(World a, int b, int c, int d, int e);
+	
+	/**
+	 * 
+	 */
+	public int b();
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, Entity e);
+	
+	/**
+	 * 
+	 */
+	public void b(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * 
+	 */
+	public void c(World a, int b, int c, int d);
+	
+	/**
+	 * Returns if this block is collidable (only used by Fire). Args: x, y, z
+	 */
+	 boolean isCollidable();
+	
+	/**
+	 * 
+	 */
+	public boolean d();
+	
+	/**
+	 * 
+	 */
+	public AxisAlignedBB d(World a, int b, int c, int d);
+	
+	/**
+	 * 
+	 */
+	public void e(World a, int b, int c, int d);
 
 }

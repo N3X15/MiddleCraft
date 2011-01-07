@@ -6,12 +6,18 @@ abstract class ServerGuiCommandListener{
 	// FIELDS
 	final javax.swing.JTextField a;
 	final ServerGUI b;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 void ae_actionPerformed(java.awt.event.ActionEvent a);
+	
+	/**
 	 * 
 	 */
-	public void actionPerformed(java.awt.event.ActionEvent a)
+	public void actionPerformed(java.awt.event.ActionEvent a);
 
 }

@@ -2,145 +2,14 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class WorldGenPumpkin{
+public abstract class WorldGenPumpkin extends WorldGenerator{
 	// FIELDS
-	public il[] a;
-	public il[] b;
-	public int c;
-	public boolean d;
-	private BlockLog e;
-	private BlockSponge f;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	public int a()
-	
-	/**
-	 * 
-	 */
-	public BlockSponge a(int a)
-	
-	/**
-	 * 
-	 */
-	public BlockSponge a(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void a(int a, BlockSponge b)
-	
-	/**
-	 * 
-	 */
-	public int a(IMobs a)
-	
-	/**
-	 * 
-	 */
-	public WorldManager a(WorldManager a)
-	
-	/**
-	 * 
-	 */
-	public float a(BlockSoil a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(BlockSponge a)
-	
-	/**
-	 * 
-	 */
-	public boolean a_(BlockLog a)
-	
-	/**
-	 * 
-	 */
-	public java.lang.String b()
-	
-	/**
-	 * 
-	 */
-	public boolean b(int a)
-	
-	/**
-	 * 
-	 */
-	private int b(int a, int b)
-	
-	/**
-	 * 
-	 */
-	public void b(WorldManager a)
-	
-	/**
-	 * 
-	 */
-	public boolean b(BlockSoil a)
-	
-	/**
-	 * 
-	 */
-	public void b(BlockSponge a)
-	
-	/**
-	 * 
-	 */
-	public int c()
-	
-	/**
-	 * 
-	 */
-	public void c(int a)
-	
-	/**
-	 * 
-	 */
-	public void d()
-	
-	/**
-	 * 
-	 */
-	private int d(int a)
-	
-	/**
-	 * 
-	 */
-	public BlockSponge e()
-	
-	/**
-	 * 
-	 */
-	private int e(int a)
-	
-	/**
-	 * 
-	 */
-	public void f()
-	
-	/**
-	 * 
-	 */
-	public int g()
-	
-	/**
-	 * 
-	 */
-	public void h()
-	
-	/**
-	 * 
-	 */
-	public BlockSponge i()
-	
-	/**
-	 * 
-	 */
-	private int j()
+	public boolean a(World a, java.util.Random b, int c, int d, int e);
 
 }

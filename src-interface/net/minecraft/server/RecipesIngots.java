@@ -5,12 +5,18 @@ package net.minecraft.server;
 public abstract class RecipesIngots{
 	// FIELDS
 	private java.lang.Object[][] a;
+	 ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
+	 * *
+	 */
+	 void func_20159(CraftingManager a);
+	
+	/**
 	 * 
 	 */
-	public void a(CraftingManager a)
+	public void a(CraftingManager a);
 
 }

@@ -2,59 +2,34 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class IProgressUpdate extends BlockSoil{
+public abstract interface interface IProgressUpdate{
 	// FIELDS
 	
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public boolean a()
+	 void func_438(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public int a(int a, java.util.Random b)
+	public abstract void a(int a);
 	
 	/**
 	 * 
 	 */
-	public boolean a(Packet17AddToInventory a, int b, int c, int d)
+	public abstract void a(java.lang.String a);
+	
+	/**
+	 * *
+	 */
+	 void displayLoadingString(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
-	
-	/**
-	 * 
-	 */
-	public int a(java.util.Random a)
-	
-	/**
-	 * 
-	 */
-	public boolean a(ChunkCoordinates a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
-	
-	/**
-	 * 
-	 */
-	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	private boolean g(Packet17AddToInventory a, int b, int c, int d)
-	
-	/**
-	 * 
-	 */
-	public void g(Packet17AddToInventory a, int b, int c, int d, int e)
+	public abstract void b(java.lang.String a);
 
 }

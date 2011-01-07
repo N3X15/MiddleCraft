@@ -2,32 +2,75 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class TileEntity extends BlockStep{
+public abstract class TileEntity{
 	// FIELDS
-	public int a;
-	public short b;
-	public boolean c;
+	public World a;
+	public int b;
+	public int c;
+	public int d;
+	private static java.util.Map e;
+	private static ()V setChunkModified;
 	
 	// METHODS
 	
 	/**
-	 * Abstract. Return the size of the packet (not counting the header).
+	 * Adds a new two-way mapping between the class and its string name in both hashmaps.
 	 */
-	public int getPacketSize()
+	 void addMapping(java.lang.Class a, java.lang.String b);
 	
 	/**
-	 * Passes this Packet on to the NetHandler for processing.
+	 * 
 	 */
-	public void processPacket(Packet28 a)
+	public void a(NBTTagCompound a);
 	
 	/**
-	 * Abstract. Reads the raw packet data from the data stream.
+	 * 
 	 */
-	public void readPacketData(java.io.DataInputStream a)
+	private static void a(java.lang.Class a, java.lang.String b);
 	
 	/**
-	 * Abstract. Writes the raw packet data to the data stream.
+	 * Writes a tile entity to NBT.
 	 */
-	public void writePacketData(java.io.DataOutputStream a)
+	 void writeToNBT(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void b(NBTTagCompound a);
+	
+	/**
+	 * Creates a new entity and loads its data from the specified NBT.
+	 */
+	 TileEntity createAndLoadEntity(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public static TileEntity c(NBTTagCompound a);
+	
+	/**
+	 * 
+	 */
+	public void d();
+	
+	/**
+	 * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
+	 */
+	 void updateEntity();
+	
+	/**
+	 * 
+	 */
+	public void e();
+	
+	/**
+	 * *
+	 */
+	 Packet func_20070();
+	
+	/**
+	 * 
+	 */
+	public Packet f();
 
 }
