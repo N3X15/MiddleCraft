@@ -8,34 +8,34 @@ public abstract class EntityPig extends BlockSoil{
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	public boolean isOpaqueCube()
+	public boolean a()
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * 
 	 */
-	public int idDropped(int a, java.util.Random b)
+	public int a(int a, java.util.Random b)
 	
 	/**
-	 * Ticks the block if it's been scheduled
+	 * 
 	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 	
 	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 * 
 	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
-	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
+	 * 
 	 */
-	public void onEntityWalking(Packet17AddToInventory a, int b, int c, int d, IMobs e)
+	public void b(Packet17AddToInventory a, int b, int c, int d, IMobs e)
 	
 	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 * 
 	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 

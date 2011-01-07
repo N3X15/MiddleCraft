@@ -8,8 +8,8 @@ public abstract class ItemArmor extends NBTTagByteArray{
 	// METHODS
 	
 	/**
-	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
+	 * 
 	 */
-	public BlockSponge onItemRightClick(BlockSponge a, Packet17AddToInventory b, BlockLog c)
+	public BlockSponge a(BlockSponge a, Packet17AddToInventory b, BlockLog c)
 
 }

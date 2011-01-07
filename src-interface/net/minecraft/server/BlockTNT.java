@@ -8,7 +8,7 @@ public abstract class BlockTNT extends BlockSoil{
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * Returns the ID o
 	 */
 	public int idDropped(int a, java.util.Random b)
 	
@@ -18,8 +18,8 @@ public abstract class BlockTNT extends BlockSoil{
 	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 	
 	/**
-	 * Returns the quantity of items to drop on block destruction.
+	 * 
 	 */
-	public int quantityDropped(java.util.Random a)
+	public int a(java.util.Random a)
 
 }

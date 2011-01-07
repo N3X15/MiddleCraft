@@ -30,13 +30,13 @@ public abstract class MaterialTransparent{
 	public EnumCreatureType a(lk a)
 	
 	/**
-	 * Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length
+	 * 
 	 */
-	public double[] getTemperatures(double[] a, int b, int c, int d, int e)
+	public double[] a(double[] a, int b, int c, int d, int e)
 	
 	/**
-	 * Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
+	 * 
 	 */
-	public jq[] loadBlockGeneratorData(jq[] a, int b, int c, int d, int e)
+	public jq[] a(jq[] a, int b, int c, int d, int e)
 
 }

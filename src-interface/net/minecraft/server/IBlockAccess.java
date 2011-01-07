@@ -9,14 +9,14 @@ public abstract class IBlockAccess{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public int getSizeInventory()
+	public int a()
 	
 	/**
-	 * Returns the stack in slot i
+	 * 
 	 */
-	public BlockSponge getStackInSlot(int a)
+	public BlockSponge a(int a)
 	
 	/**
 	 * 
@@ -44,8 +44,8 @@ public abstract class IBlockAccess{
 	public int c()
 	
 	/**
-	 * Called when an the contents of an Inventory change, usually
+	 * 
 	 */
-	public void onInventoryChanged()
+	public void d()
 
 }

@@ -27,6 +27,8 @@
  */
 package org.middlecraft.server;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -42,6 +44,8 @@ public class MCFieldInfo {
 	public String className;
 	public String name="";
 	public int modifiers;
+	public String description;
+	public String searge;
 
 
 	public static String header="Class,Real Name,Readable Name,Type";
@@ -61,6 +65,54 @@ public class MCFieldInfo {
 		}
 	}
 
+	public MCFieldInfo(Map<String, Object> y) {
+		/*
+	    harvestBlock:
+	      annotation: ''
+	      class: Block
+	      csv: harvestBlock
+	      descript: '*'
+	      forced: false
+	      full: harvestBlock
+	      full_final: harvestBlock
+	      index: '12007'
+	      known: true
+	      modified: false
+	      new_mod: false
+	      nick_mod: null
+	      notch: g
+	      notch_class: gv
+	      notch_pkg: ''
+	      notch_sig: (Lff;IIII)V
+	      old_mod: false
+	      package: net/minecraft/server
+	      s_root: func_12007
+	      searge: func_12007_g
+	      time_mod: null
+	    */
+		description	=(String)y.get("descript");
+		name		=(String)y.get("csv");
+		searge		=(String)y.get("searge");
+		realName	=(String)y.get("notch");
+		type		=(String)y.get("notch_sig");
+		className	=(String)y.get("notch_class");
+		if(y.containsKey("modifiers"))
+			modifiers=(Integer)y.get("modifiers");
+	}
+	
+	public Map<String,Object> toMap() {
+		Map<String,Object> m = new HashMap<String,Object>();
+
+		m.put("descript",description);
+		m.put("csv",name);
+		m.put("searge",searge);
+		m.put("notch",realName);
+		m.put("notch_sig",type);
+		m.put("notch_class",className);
+		m.put("modifiers",modifiers);
+		return m;
+	}
+	
 	public String toString() {
 		String oName = (name.isEmpty()) ? "*" : name;
 		return String.format("%s,%s,%s,%s",className,realName,oName,type);

@@ -14,14 +14,14 @@ public abstract class WorldGenPumpkin{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public int getSizeInventory()
+	public int a()
 	
 	/**
-	 * Returns the stack in slot i
+	 * 
 	 */
-	public BlockSponge getStackInSlot(int a)
+	public BlockSponge a(int a)
 	
 	/**
 	 * 
@@ -39,19 +39,19 @@ public abstract class WorldGenPumpkin{
 	public int a(IMobs a)
 	
 	/**
-	 * Writes the inventory out as a list of compound tags. This is where the slot indices are used (+100 for armor, +80 for crafting).
+	 * 
 	 */
-	public WorldManager writeToNBT(WorldManager a)
+	public WorldManager a(WorldManager a)
 	
 	/**
-	 * Gets the strength of the current item (tool) against the specified block, 1.0f if not holding anything.
+	 * 
 	 */
-	public float getStrVsBlock(BlockSoil a)
+	public float a(BlockSoil a)
 	
 	/**
-	 * Adds the item stack to the inventory, returns false if it is impossible.
+	 * 
 	 */
-	public boolean addItemStackToInventory(BlockSponge a)
+	public boolean a(BlockSponge a)
 	
 	/**
 	 * 
@@ -64,24 +64,24 @@ public abstract class WorldGenPumpkin{
 	public java.lang.String b()
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean consumeInventoryItem(int a)
+	public boolean b(int a)
 	
 	/**
-	 * Adds the j items of type i to inventory and returns the number of items that couldn't fit (0 if they all fit).
+	 * 
 	 */
-	private int addItemsToInventory(int a, int b)
+	private int b(int a, int b)
 	
 	/**
-	 * Reads from the given tag list and fills the slots in the inventory with the correct items.
+	 * 
 	 */
-	public void readFromNBT(WorldManager a)
+	public void b(WorldManager a)
 	
 	/**
-	 * Returns whether the current item (tool) can harvest from the specified block (actually get a result).
+	 * 
 	 */
-	public boolean canHarvestBlock(BlockSoil a)
+	public boolean b(BlockSoil a)
 	
 	/**
 	 * 
@@ -94,44 +94,44 @@ public abstract class WorldGenPumpkin{
 	public int c()
 	
 	/**
-	 * Damages armor in each slot by the specified amount.
+	 * 
 	 */
-	public void damageArmor(int a)
+	public void c(int a)
 	
 	/**
-	 * Called when an the contents of an Inventory change, usually
+	 * 
 	 */
-	public void onInventoryChanged()
+	public void d()
 	
 	/**
-	 * *
+	 * 
 	 */
-	private int getInventorySlotContainItem(int a)
+	private int d(int a)
 	
 	/**
-	 * Returns the item stack currently held by the player.
+	 * 
 	 */
-	public BlockSponge getCurrentItem()
+	public BlockSponge e()
 	
 	/**
-	 * Returns the first item stack in inventory that matches the given item stack and isn't full.
+	 * 
 	 */
-	private int getFirstPartialMatchingStack(int a)
+	private int e(int a)
 	
 	/**
-	 * Decrement the number of animations remaining. Only called on client side. This is used to handle the animation of receiving a block.
+	 * 
 	 */
-	public void decrementAnimations()
+	public void f()
 	
 	/**
-	 * Based on the damage values and maximum damage values of each armor item, returns the current armor value.
+	 * 
 	 */
-	public int getTotalArmorValue()
+	public int g()
 	
 	/**
-	 * Drop all armor and main inventory items.
+	 * 
 	 */
-	public void dropAllItems()
+	public void h()
 	
 	/**
 	 * 
@@ -139,8 +139,8 @@ public abstract class WorldGenPumpkin{
 	public BlockSponge i()
 	
 	/**
-	 * Returns the first item stack that is empty.
+	 * 
 	 */
-	private int getFirstEmptyStack()
+	private int j()
 
 }

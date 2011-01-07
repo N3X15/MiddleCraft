@@ -11,9 +11,9 @@ public abstract class BlockSnow extends lc{
 	// METHODS
 	
 	/**
-	 * Checks if the entity's current position is a valid location to spawn this entity.
+	 * 
 	 */
-	public boolean getCanSpawnHere()
+	public boolean a()
 	
 	/**
 	 * 

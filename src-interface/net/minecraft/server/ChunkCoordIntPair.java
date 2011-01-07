@@ -8,9 +8,9 @@ public abstract interface interface ChunkCoordIntPair{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public abstract void setLoadingProgress(int a)
+	public abstract void a(int a)
 	
 	/**
 	 * 
@@ -18,8 +18,8 @@ public abstract interface interface ChunkCoordIntPair{
 	public abstract void a(java.lang.String a)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public abstract void displayLoadingString(java.lang.String a)
+	public abstract void b(java.lang.String a)
 
 }

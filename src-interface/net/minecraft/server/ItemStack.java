@@ -35,44 +35,44 @@ public abstract class ItemStack{
 	public void a(int a, int b, int c)
 	
 	/**
-	 * sends a tilentity to the player name specified
+	 * 
 	 */
-	public void sentTileEntityToPlayer(int a, int b, int c, EntitySnowball d)
+	public void a(int a, int b, int c, EntitySnowball d)
 	
 	/**
-	 * Called when a player successfully logs in. Reads player data from disk and inserts the player into the world.
+	 * 
 	 */
-	public void playerLoggedIn(WorldGenCactus a)
+	public void a(WorldGenCactus a)
 	
 	/**
-	 * Sets the NBT manager to the one for the worldserver given
+	 * 
 	 */
-	public void setPlayerManager(EntityCreeper a)
+	public void a(EntityCreeper a)
 	
 	/**
-	 * Called when a player tries to login. Checks whether they are banned/server is full etc.
+	 * 
 	 */
-	public WorldGenCactus login(EntityZombie a, java.lang.String b, java.lang.String c)
+	public WorldGenCactus a(EntityZombie a, java.lang.String b, java.lang.String c)
 	
 	/**
-	 * adds a player to the ban list
+	 * 
 	 */
-	public void banPlayer(java.lang.String a)
+	public void a(java.lang.String a)
 	
 	/**
-	 * sends a chat message to the player with the name specified (not necessarily a whisper)
+	 * 
 	 */
-	public void sendChatMessageToPlayer(java.lang.String a, java.lang.String b)
+	public void a(java.lang.String a, java.lang.String b)
 	
 	/**
-	 * sends a packet to the player with the name specified
+	 * 
 	 */
-	public boolean sendPacketToPlayer(java.lang.String a, BlockStep b)
+	public boolean a(java.lang.String a, BlockStep b)
 	
 	/**
-	 * sends a packet to all players
+	 * 
 	 */
-	public void sendPacketToAllPlayers(BlockStep a)
+	public void a(BlockStep a)
 	
 	/**
 	 * 
@@ -85,29 +85,29 @@ public abstract class ItemStack{
 	public void b(WorldGenCactus a)
 	
 	/**
-	 * removes a player from the ban list
+	 * 
 	 */
-	public void unbanPlayer(java.lang.String a)
+	public void b(java.lang.String a)
 	
 	/**
-	 * returns a string containing a comma-seperated list of player names
+	 * 
 	 */
-	public java.lang.String getPlayerList()
+	public java.lang.String c()
 	
 	/**
-	 * Called when a player disconnects from the game. Writes player data to disk and removes them from the world.
+	 * 
 	 */
-	public void playerLoggedOut(WorldGenCactus a)
+	public void c(WorldGenCactus a)
 	
 	/**
-	 * bans the given IP string
+	 * 
 	 */
-	public void banIP(java.lang.String a)
+	public void c(java.lang.String a)
 	
 	/**
-	 * Saves all of the player's states
+	 * 
 	 */
-	public void savePlayerStates()
+	public void d()
 	
 	/**
 	 * 
@@ -115,63 +115,63 @@ public abstract class ItemStack{
 	public WorldGenCactus d(WorldGenCactus a)
 	
 	/**
-	 * unbans the given IP string
+	 * 
 	 */
-	public void unbanIP(java.lang.String a)
+	public void d(java.lang.String a)
 	
 	/**
-	 * Reads the banned players file from disk.
+	 * 
 	 */
-	private void readBannedPlayers()
+	private void e()
 	
 	/**
-	 * ops the player given
+	 * 
 	 */
-	public void opPlayer(java.lang.String a)
+	public void e(java.lang.String a)
 	
 	/**
-	 * Writes the banned players file to disk.
+	 * 
 	 */
-	private void writeBannedPlayers()
+	private void f()
 	
 	/**
-	 * deops the player given
+	 * 
 	 */
-	public void deopPlayer(java.lang.String a)
+	public void f(java.lang.String a)
 	
 	/**
-	 * loads the list of banned players
+	 * 
 	 */
-	private void loadBannedList()
+	private void g()
 	
 	/**
-	 * Returns true if the player is an OP, false otherwise.
+	 * 
 	 */
-	public boolean isOp(java.lang.String a)
+	public boolean g(java.lang.String a)
 	
 	/**
-	 * saves the list of banned players
+	 * 
 	 */
-	private void saveBannedList()
+	private void h()
 	
 	/**
-	 * gets the player entity for the player with the name specified
+	 * 
 	 */
-	public WorldGenCactus getPlayerEntity(java.lang.String a)
+	public WorldGenCactus h(java.lang.String a)
 	
 	/**
-	 * loads the ops from the ops file
+	 * 
 	 */
-	private void loadOps()
+	private void i()
 	
 	/**
-	 * sends a chat message to all players currently connected
+	 * 
 	 */
-	public void sendChatMessageToAllPlayers(java.lang.String a)
+	public void i(java.lang.String a)
 	
 	/**
-	 * saves the ops to the ops file
+	 * 
 	 */
-	private void saveOps()
+	private void j()
 
 }

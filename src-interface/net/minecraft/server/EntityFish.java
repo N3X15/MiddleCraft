@@ -21,14 +21,14 @@ public abstract class EntityFish{
 	public boolean a()
 	
 	/**
-	 * Checks to see if a chunk exists at x, y
+	 * 
 	 */
-	public boolean chunkExists(int a, int b)
+	public boolean a(int a, int b)
 	
 	/**
-	 * Populates chunk with ores etc etc
+	 * 
 	 */
-	public void populate(HashEntry2 a, int b, int c)
+	public void a(HashEntry2 a, int b, int c)
 	
 	/**
 	 * 
@@ -36,9 +36,9 @@ public abstract class EntityFish{
 	private void a(kx a)
 	
 	/**
-	 * Called to save the world
+	 * 
 	 */
-	public boolean saveWorld(boolean a, ChunkCoordIntPair b)
+	public boolean a(boolean a, ChunkCoordIntPair b)
 	
 	/**
 	 * 
@@ -46,9 +46,9 @@ public abstract class EntityFish{
 	public boolean b()
 	
 	/**
-	 * *
+	 * 
 	 */
-	public kx provideChunk(int a, int b)
+	public kx b(int a, int b)
 	
 	/**
 	 * 

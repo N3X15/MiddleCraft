@@ -12,14 +12,14 @@ abstract class WorldGenFire{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public final int getHash()
+	public final int a()
 	
 	/**
-	 * *
+	 * 
 	 */
-	public final java.lang.Object getValue()
+	public final java.lang.Object b()
 	
 	/**
 	 * 

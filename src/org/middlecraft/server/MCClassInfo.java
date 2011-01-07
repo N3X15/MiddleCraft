@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import javassist.ClassPool;
@@ -46,14 +47,15 @@ public class MCClassInfo {
 			"MCP Name", "Real Superclass", "MiddleCraft Superclass",
 			"Description" };
 	public String description = "*";
-	public HashMap<String, MCFieldInfo> fieldNames = new HashMap<String, MCFieldInfo>();
+	public HashMap<String, MCFieldInfo> fields = new HashMap<String, MCFieldInfo>();
 	static Logger l = Logger.getLogger("Middlecraft");
-	public HashMap<String, MCMethodInfo> methodNames = new HashMap<String, MCMethodInfo>();
+	public HashMap<String, MCMethodInfo> methods = new HashMap<String, MCMethodInfo>();
 	public String name;
 	public String realName;
 	public String realSuperClass;
 	public String superClass = "*";
 	public int modifiers = 0;
+	private String searge="";
 
 	public MCClassInfo() {
 	}
@@ -66,9 +68,54 @@ public class MCClassInfo {
 		description = cells.get(4);
 	}
 
-	public void setField(MCFieldInfo f) {
-		if (fieldNames.containsKey(f.realName))
-			fieldNames.put(f.realName, f);
+	@SuppressWarnings("unchecked")
+	public MCClassInfo(Map<String, Object> o) {
+		/*
+        return_dic[entry['trg_name']] = {}                
+        return_dic[entry['trg_name']]['notch']      = notch_data[-1]
+        return_dic[entry['trg_name']]['searge']     = entry['trg_name']
+        return_dic[entry['trg_name']]['full']       = entry['trg_name']
+        return_dic[entry['trg_name']]['class']      = entry['trg_name']
+        return_dic[entry['trg_name']]['full_final'] = entry['trg_name']
+        return_dic[entry['trg_name']]['notch_pkg']  = '/'.join(notch_data[:-1])
+        return_dic[entry['trg_name']]['modified']   = False
+        return_dic[entry['trg_name']]['methods']    = {}
+        return_dic[entry['trg_name']]['fields']    = {}
+        */
+		realName = (String)o.get("notch");
+		searge=(String)o.get("searge");
+		name=(String)o.get("class");
+		if(o.containsKey("superclass"))
+			name=(String)o.get("superclass");
+		if(o.containsKey("modifiers"))
+			modifiers=(Integer)o.get("modifiers");
+		
+		for(Object _m : ((Map<String,Object>)o.get("methods")).values()) {
+			if(_m instanceof Map<?,?>)
+				addMethod(new MCMethodInfo((Map<String,Object>)_m));
+		}
+		
+		for(Object _f : ((Map<String,Object>)o.get("fields")).values()) {
+			if(_f instanceof Map<?,?>)
+				addField(new MCFieldInfo((Map<String,Object>)_f));
+		}
+		
+	}
+
+	private void addField(MCFieldInfo f) {
+		if (!fields.containsKey(f.realName))
+			fields.put(f.realName, f);
+	}
+
+	private void addMethod(MCMethodInfo m) {
+		if (!methods.containsKey(m.realName))
+			methods.put(m.realName, m);
+	}
+
+	public void setField(MCFieldInfo f) throws Exception {
+		if (fields.containsKey(f.realName))
+			fields.put(f.realName, f);
+		else throw new Exception("Can't find "+f.realName+" in array.");
 	}
 
 	/**
@@ -76,7 +123,7 @@ public class MCClassInfo {
 	 * @return
 	 */
 	public MCFieldInfo getField(String fldName) {
-		return fieldNames.get(fldName);
+		return fields.get(fldName);
 	}
 
 	/**
@@ -85,12 +132,13 @@ public class MCClassInfo {
 	 * @return
 	 */
 	public MCMethodInfo getMethod(String methName, String methSig) {
-		return methodNames.get(methName + " " + methSig);
+		return methods.get(methName + " " + methSig);
 	}
 
-	public void setMethod(MCMethodInfo m) {
-		if (methodNames.containsKey(m.toIndex()))
-			methodNames.put(m.toIndex(), m);
+	public void setMethod(MCMethodInfo m) throws Exception {
+		if (methods.containsKey(m.toIndex()))
+			methods.put(m.toIndex(), m);
+		else throw new Exception("Can't find "+m.realName+" in array.");
 	}
 
 	public List<String> toList() {
@@ -121,20 +169,20 @@ public class MCClassInfo {
 			modifiers |= Modifier.ABSTRACT;
 		sb.append(String.format("\n\n%s %s %s", Modifier.toString(modifiers),classorinterface,name));
 		if(!superClass.equals("java.lang.Object")&&!superClass.equals("*")) {
-			sb.append(String.format(" extends %s", SmartReflector.getNewClassName(superClass)));
+			sb.append(String.format(" extends %s", Mappings.getNewClassName(superClass)));
 		}
 		sb.append("{\n\t// FIELDS");
-		List<String> fieldKeys = new ArrayList<String>(fieldNames.keySet());
+		List<String> fieldKeys = new ArrayList<String>(fields.keySet());
 		Collections.sort(fieldKeys);
 		for(String fi : fieldKeys) {
-			MCFieldInfo f = fieldNames.get(fi);
-			sb.append(String.format("\n\t%s %s %s;", Modifier.toString(f.modifiers),SmartReflector.getNewClassName(f.type),(f.name.isEmpty()) ? f.realName : f.name));
+			MCFieldInfo f = fields.get(fi);
+			sb.append(String.format("\n\t%s %s %s;", Modifier.toString(f.modifiers),Mappings.getNewClassName(f.type),(f.name.isEmpty()) ? f.realName : f.name));
 		}
 		sb.append("\n\t\n\t// METHODS");
-		List<String> methodKeys = new ArrayList<String>(methodNames.keySet());
+		List<String> methodKeys = new ArrayList<String>(methods.keySet());
 		Collections.sort(methodKeys);
 		for(String fi : methodKeys) {
-			MCMethodInfo m = methodNames.get(fi);
+			MCMethodInfo m = methods.get(fi);
 			sb.append(m.toAbstractJava(cp));
 		}
 		sb.append("\n\n}\n");
@@ -155,7 +203,40 @@ public class MCClassInfo {
 	}
 
 	public void clearAllDefs() {
-		fieldNames.clear();
-		methodNames.clear();
+		fields.clear();
+		methods.clear();
+	}
+
+	public Map<String,Object> toMap() {
+		/*
+		BlockLeavesBase:
+		  class: BlockLeavesBase
+		  fields: {}
+		  full: BlockLeavesBase
+		  full_final: BlockLeavesBase
+		  methods: {}
+		  modified: false
+		  notch: w
+		  notch_pkg: ''
+		  searge: BlockLeavesBase
+		*/
+		Map<String,Object> c = new HashMap<String,Object>();
+		Map<String,Object> m = new HashMap<String,Object>();
+		for(MCMethodInfo _m : methods.values()) {
+			m.put(_m.name, _m.toMap());
+		}
+		Map<String,Object> f = new HashMap<String,Object>();
+		for(MCMethodInfo _f : methods.values()) {
+			f.put(_f.name, _f.toMap());
+		}
+
+		c.put("class",name);
+		c.put("fields",f);
+		c.put("searge",searge);
+		c.put("notch",realName);
+		c.put("superclass",superClass);
+		c.put("modifiers",modifiers);
+		
+		return c;
 	}
 }

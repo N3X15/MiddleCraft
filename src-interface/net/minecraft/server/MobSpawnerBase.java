@@ -9,8 +9,8 @@ public abstract class MobSpawnerBase extends NetworkListenThread{
 	// METHODS
 	
 	/**
-	 * Returns if the item (tool) can harvest results from the block type.
+	 * 
 	 */
-	public boolean canHarvestBlock(BlockSoil a)
+	public boolean a(BlockSoil a)
 
 }

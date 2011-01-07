@@ -65,9 +65,9 @@ abstract class BlockBreakable{
 	private boolean c(int a, int b, int c)
 	
 	/**
-	 * *
+	 * 
 	 */
-	private boolean handleKeyPress(BlockBreakable a)
+	private boolean c(BlockBreakable a)
 	
 	/**
 	 * 

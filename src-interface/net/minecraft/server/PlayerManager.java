@@ -8,8 +8,8 @@ public abstract class PlayerManager extends ItemBlock{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public boolean a(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 
 }

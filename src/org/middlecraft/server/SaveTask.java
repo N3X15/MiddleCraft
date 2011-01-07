@@ -40,9 +40,9 @@ public class SaveTask extends TimerTask {
 	Logger l = Logger.getLogger("Middlecraft");
 	public void run() {
 		l.log(Level.INFO,"Saving reflection mappings...");
-		SmartReflector.save();
+		Mappings.save();
 		try {
-			SmartReflector.saveTimer.cancel();
+			Mappings.saveTimer.cancel();
 		} catch(IllegalStateException e) {}
 	}
 }

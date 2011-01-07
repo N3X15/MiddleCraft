@@ -8,39 +8,39 @@ public abstract class NBTTagString extends BlockSoil{
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	public boolean isOpaqueCube()
+	public boolean a()
 	
 	/**
-	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 * 
 	 */
-	public boolean canPlaceBlockAt(Packet17AddToInventory a, int b, int c, int d)
+	public boolean a(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * Ticks the block if it's been scheduled
+	 * 
 	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 	
 	/**
-	 * Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
+	 * 
 	 */
-	protected boolean canThisPlantGrowOnThisBlockID(int a)
+	protected boolean b(int a)
 	
 	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 * 
 	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
-	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+	 * 
 	 */
-	public IUpdatePlayerListBox getCollisionBoundingBoxFromPool(Packet17AddToInventory a, int b, int c, int d)
+	public IUpdatePlayerListBox d(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+	 * 
 	 */
-	public boolean canBlockStay(Packet17AddToInventory a, int b, int c, int d)
+	public boolean f(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
 	 * 

@@ -28,7 +28,9 @@
 package org.middlecraft.server;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 import javassist.ClassPool;
@@ -50,6 +52,7 @@ public class MCMethodInfo {
 	public String name="";
 	public String description="";
 	public int modifiers=0;
+	private String searge;
 	public static final String[] header = new String[]{"Real Name","Signature","Parent Class","Readable Name","Description"};
 	public MCMethodInfo() {}
 	public MCMethodInfo(List<String> line) {
@@ -80,6 +83,55 @@ public class MCMethodInfo {
 		this.modifiers=m;
 	}
 
+
+	public MCMethodInfo(Map<String, Object> y) {
+		/*
+	    harvestBlock:
+	      annotation: ''
+	      class: Block
+	      csv: harvestBlock
+	      descript: '*'
+	      forced: false
+	      full: harvestBlock
+	      full_final: harvestBlock
+	      index: '12007'
+	      known: true
+	      modified: false
+	      new_mod: false
+	      nick_mod: null
+	      notch: g
+	      notch_class: gv
+	      notch_pkg: ''
+	      notch_sig: (Lff;IIII)V
+	      old_mod: false
+	      package: net/minecraft/server
+	      s_root: func_12007
+	      searge: func_12007_g
+	      time_mod: null
+	    */
+		description	=(String)y.get("descript");
+		name		=(String)y.get("csv");
+		searge		=(String)y.get("searge");
+		realName	=(String)y.get("notch");
+		signature	=(String)y.get("notch_sig");
+		parentClass	=(String)y.get("notch_class");
+		if(y.containsKey("modifiers"))
+			modifiers=(Integer)y.get("modifiers");
+	}
+	
+	public Map<String,Object> toMap() {
+		Map<String,Object> m = new HashMap<String,Object>();
+
+		m.put("descript",description);
+		m.put("csv",name);
+		m.put("searge",searge);
+		m.put("notch",realName);
+		m.put("notch_sig",signature);
+		m.put("notch_class",parentClass);
+		m.put("modifiers",modifiers);
+		
+		return m;
+	}
 	public String toString() {
 		String oName = name;
 		if(name.isEmpty())
@@ -99,11 +151,11 @@ public class MCMethodInfo {
 			int i = 0;
 			List<String> paramDefs = new ArrayList<String>();
 			for(CtClass c : Descriptor.getParameterTypes(signature, cp)) {
-				String type = SmartReflector.getNewClassName(c.getName());
+				String type = Mappings.getNewClassName(c.getName());
 				paramDefs.add(String.format("%s %s",type,(char)(i+97)));
 				i++;
 			}
-			return String.format("\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s)",description, Modifier.toString(modifiers),SmartReflector.getNewClassName(returnName), (name.isEmpty()) ? realName:name, Utils.join(paramDefs,", "));
+			return String.format("\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s)",description, Modifier.toString(modifiers),Mappings.getNewClassName(returnName), (name.isEmpty()) ? realName:name, Utils.join(paramDefs,", "));
 		} catch (NotFoundException e) {
 			return "";
 		}

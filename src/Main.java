@@ -63,7 +63,7 @@ public class Main {
 
 		l.info("Stage-1 Boot Sequence Start");
 		l.info(" + Setting up SmartReflector classmappings...");
-		SmartReflector.initialize();
+		Mappings.initialize();
 		l.info(" + Setting up bootloader...");
 		try {
 			File mcServerJar = new File("lib/minecraft_server.jar");
@@ -105,7 +105,7 @@ public class Main {
 					String className = e.getName().substring(0, e.getName().indexOf('.'));
 
 					// Get new classname
-					String newClassName=SmartReflector.getNewClassName(className.replace('/','.'));
+					String newClassName=Mappings.getNewClassName(className.replace('/','.'));
 
 					// Place the new class into the JAR.
 					outJar.putNextEntry(new ZipEntry(newClassName.replace('.','/')+".class"));
@@ -119,13 +119,13 @@ public class Main {
 		l.info(" + Updating Classpath...");
 		mcClassLoader.addURI(newMCServerJar.toURI());
 
-		SmartReflector.save(); // Force save.
+		Mappings.save(); // Force save.
 
 		l.info("Stage 3: Booting server!");
 		try {
 			// Bootstrap...
 			Class<?> mcBootClass =
-				Class.forName(SmartReflector.getNewClassName("net.minecraft.server.MinecraftServer"), true, mcClassLoader);
+				Class.forName(Mappings.getNewClassName("net.minecraft.server.MinecraftServer"), true, mcClassLoader);
 			Method mainMethod = mcBootClass.getMethod("main", String[].class);
 			mainMethod.invoke(null, new Object[] {arguments});
 		} catch (Throwable e) {
@@ -152,9 +152,10 @@ public class Main {
 				String className = e.getName().substring(0, e.getName().indexOf('.'));
 				l.info(className);
 				// Get new classname
-				String newClassName=SmartReflector.getNewClassName(className.replace('/','.'));
+				String newClassName=Mappings.getNewClassName(className.replace('/','.'));
 
-				MCClassInfo ci = SmartReflector.classes.get(className);
+				MCClassInfo ci = Mappings.classes.get(className);
+				if(ci==null) continue;
 				CtClass mcClass = mcClassPool.get(className);
 				ci.setClassModifiers(mcClass.getModifiers());
 				//ci.clearAllDefs(); // Remapping.
@@ -162,20 +163,30 @@ public class Main {
 					MCFieldInfo f = ci.getField(fld.getName());
 					if(f==null)
 					{
-						SmartReflector.addObfuscatedFieldDefinition(className, fld.getName(), fld.getType().getName());
+						Mappings.addObfuscatedFieldDefinition(className, fld.getName(), fld.getType().getName());
 						f = ci.getField(fld.getName());
 					}
 					f.setModifiers(fld.getModifiers());
-					ci.setField(f);
+					try {
+						ci.setField(f);
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}
 				for(CtMethod method : mcClass.getDeclaredMethods()) {
 					MCMethodInfo m = ci.getMethod(method.getName(),method.getSignature());
 					if(m==null) {
-						SmartReflector.addObfuscatedMethodDefinition(className, method.getName(), method.getSignature(), "");
+						Mappings.addObfuscatedMethodDefinition(className, method.getName(), method.getSignature(), "");
 						m=ci.getMethod(method.getName(),method.getSignature());
 					}
 					m.setModifiers(method.getModifiers());
-					ci.setMethod(m);
+					try {
+						ci.setMethod(m);
+					} catch (Exception e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}
 				ci.superClass=mcClass.getSuperclass().getName();
 				

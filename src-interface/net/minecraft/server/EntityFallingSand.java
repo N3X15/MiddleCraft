@@ -48,9 +48,9 @@ public abstract class EntityFallingSand extends ItemBlock{
 	 void a(int a, int b, int c, float d, byte e, int f)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean generate(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
+	public boolean a(Packet17AddToInventory a, java.util.Random b, int c, int d, int e)
 	
 	/**
 	 * 

@@ -22,23 +22,23 @@ public abstract class BlockFence extends IMobs{
 	public void a(double a, double b, double c, float d, float e)
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * 
 	 */
-	public void writeEntityToNBT(Packet1Login a)
+	public void a(Packet1Login a)
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	public void readEntityFromNBT(Packet1Login a)
+	public void b(Packet1Login a)
 	
 	/**
-	 * Called by a player entity when they collide with an entity
+	 * 
 	 */
-	public void onCollideWithPlayer(BlockLog a)
+	public void b(BlockLog a)
 	
 	/**
-	 * Called to update the entity's position/logic.
+	 * 
 	 */
-	public void onUpdate()
+	public void b_()
 
 }

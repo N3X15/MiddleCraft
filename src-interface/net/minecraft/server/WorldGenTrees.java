@@ -37,9 +37,9 @@ public abstract class WorldGenTrees{
 	public void a(WorldGenCactus a)
 	
 	/**
-	 * Returns the MinecraftServer associated with the PlayerManager.
+	 * 
 	 */
-	static net.minecraft.server.MinecraftServer getMinecraftServer(WorldGenTrees a)
+	static net.minecraft.server.MinecraftServer a(WorldGenTrees a)
 	
 	/**
 	 * 

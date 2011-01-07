@@ -9,9 +9,9 @@ public abstract class Packet extends EntityCow{
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * 
 	 */
-	public void writeEntityToNBT(Packet1Login a)
+	public void a(Packet1Login a)
 	
 	/**
 	 * 
@@ -19,28 +19,28 @@ public abstract class Packet extends EntityCow{
 	public boolean a(BlockLog a)
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	public void readEntityFromNBT(Packet1Login a)
+	public void b(Packet1Login a)
 	
 	/**
-	 * Returns the sound this mob makes while it's alive.
+	 * 
 	 */
-	protected java.lang.String getLivingSound()
+	protected java.lang.String d()
 	
 	/**
-	 * Returns the sound this mob makes when it is hurt.
+	 * 
 	 */
-	protected java.lang.String getHurtSound()
+	protected java.lang.String e()
 	
 	/**
-	 * Returns the sound this mob makes on death.
+	 * 
 	 */
-	protected java.lang.String getDeathSound()
+	protected java.lang.String f()
 	
 	/**
-	 * Returns the item ID for the item the mob drops on death.
+	 * 
 	 */
-	protected int getDropItemId()
+	protected int g()
 
 }

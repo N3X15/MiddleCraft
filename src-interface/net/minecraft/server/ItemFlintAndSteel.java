@@ -10,23 +10,23 @@ public abstract class ItemFlintAndSteel extends IMobs{
 	// METHODS
 	
 	/**
-	 * (abstract) Protected helper method to write subclass entity data to NBT.
+	 * 
 	 */
-	protected void writeEntityToNBT(Packet1Login a)
+	protected void a(Packet1Login a)
 	
 	/**
-	 * (abstract) Protected helper method to read subclass entity data from NBT.
+	 * 
 	 */
-	protected void readEntityFromNBT(Packet1Login a)
+	protected void b(Packet1Login a)
 	
 	/**
-	 * Called to update the entity's position/logic.
+	 * 
 	 */
-	public void onUpdate()
+	public void b_()
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean canBeCollidedWith()
+	public boolean c_()
 
 }

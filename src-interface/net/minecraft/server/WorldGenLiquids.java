@@ -9,18 +9,18 @@ public abstract class WorldGenLiquids{
 	// METHODS
 	
 	/**
-	 * Returns if the byte array is null or not.
+	 * 
 	 */
-	public boolean isValid()
+	public boolean a()
 	
 	/**
-	 * Returns the nibble of data corresponding to the passed in i,j,k. j is at most 6 bits, k is at most 4.
+	 * 
 	 */
-	public int getNibble(int a, int b, int c)
+	public int a(int a, int b, int c)
 	
 	/**
-	 * Sets the nibble of data at i << 11 | k << 7 | j to l.
+	 * 
 	 */
-	public void setNibble(int a, int b, int c, int d)
+	public void a(int a, int b, int c, int d)
 
 }

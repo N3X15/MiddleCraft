@@ -8,13 +8,13 @@ public abstract class EntityPigZombie extends BlockSoil{
 	// METHODS
 	
 	/**
-	 * Returns the ID of the items to drop on destruction.
+	 * 
 	 */
-	public int idDropped(int a, java.util.Random b)
+	public int a(int a, java.util.Random b)
 	
 	/**
-	 * Ticks the block if it's been scheduled
+	 * 
 	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 
 }

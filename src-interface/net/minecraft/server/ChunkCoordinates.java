@@ -8,23 +8,23 @@ public abstract interface interface ChunkCoordinates{
 	// METHODS
 	
 	/**
-	 * Returns the block ID at coords x,y,z
+	 * 
 	 */
-	public abstract int getBlockId(int a, int b, int c)
+	public abstract int a(int a, int b, int c)
 	
 	/**
-	 * Returns the block metadata at coords x,y,z
+	 * 
 	 */
-	public abstract int getBlockMetadata(int a, int b, int c)
+	public abstract int b(int a, int b, int c)
 	
 	/**
-	 * Returns the block's material.
+	 * 
 	 */
-	public abstract la getBlockMaterial(int a, int b, int c)
+	public abstract la c(int a, int b, int c)
 	
 	/**
-	 * Returns if the block at the specified coordinates allow attachment Args: x, y, z
+	 * 
 	 */
-	public abstract boolean doesBlockAllowAttachment(int a, int b, int c)
+	public abstract boolean d(int a, int b, int c)
 
 }

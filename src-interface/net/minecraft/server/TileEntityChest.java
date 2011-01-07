@@ -9,48 +9,48 @@ public abstract class TileEntityChest{
 	// METHODS
 	
 	/**
-	 * Gets the type byte for the tag.
+	 * 
 	 */
-	public abstract byte getType()
+	public abstract byte a()
 	
 	/**
-	 * Creates and returns a new tag of the specified type, or null if invalid.
+	 * 
 	 */
-	public static TileEntityChest createTagOfType(byte a)
+	public static TileEntityChest a(byte a)
 	
 	/**
-	 * Writes the specified tag to the given DataOutput, writing the type byte, the UTF string key and then calling the tag to write its data.
+	 * 
 	 */
-	public static void writeTag(TileEntityChest a, java.io.DataOutput b)
+	public static void a(TileEntityChest a, java.io.DataOutput b)
 	
 	/**
-	 * Read the actual data contents of the tag, implemented in NBT extension classes
+	 * 
 	 */
-	abstract void readTagContents(java.io.DataInput a)
+	abstract void a(java.io.DataInput a)
 	
 	/**
-	 * Write the actual data contents of the tag, implemented in NBT extension classes
+	 * 
 	 */
-	abstract void writeTagContents(java.io.DataOutput a)
+	abstract void a(java.io.DataOutput a)
 	
 	/**
-	 * Returns the string name of a tag with the specified type, or 'UNKNOWN' if invalid.
+	 * 
 	 */
-	public static java.lang.String getTagName(byte a)
+	public static java.lang.String b(byte a)
 	
 	/**
-	 * Reads and returns a tag from the given DataInput, or the End tag if no tag could be read.
+	 * 
 	 */
-	public static TileEntityChest readTag(java.io.DataInput a)
+	public static TileEntityChest b(java.io.DataInput a)
 	
 	/**
-	 * Gets the key corresponding to the tag, or an empty string if none set.
+	 * 
 	 */
-	public java.lang.String getKey()
+	public java.lang.String c()
 	
 	/**
-	 * Sets the key for this tag and returns this for convenience.
+	 * 
 	 */
-	public TileEntityChest setKey(java.lang.String a)
+	public TileEntityChest m(java.lang.String a)
 
 }

@@ -11,14 +11,14 @@ public abstract class BlockLightStone extends javax.swing.JComponent{
 	// METHODS
 	
 	/**
-	 * Updates the stat values and calls paint to redraw the component.
+	 * 
 	 */
-	private void updateStats()
+	private void a()
 	
 	/**
-	 * Public static accessor to call updateStats.
+	 * 
 	 */
-	static void update(BlockLightStone a)
+	static void a(BlockLightStone a)
 	
 	/**
 	 * 

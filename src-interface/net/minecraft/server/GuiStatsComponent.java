@@ -9,14 +9,14 @@ public abstract class GuiStatsComponent extends EntitySnowball{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public int getSizeInventory()
+	public int a()
 	
 	/**
-	 * Returns the stack in slot i
+	 * 
 	 */
-	public BlockSponge getStackInSlot(int a)
+	public BlockSponge a(int a)
 	
 	/**
 	 * 
@@ -29,9 +29,9 @@ public abstract class GuiStatsComponent extends EntitySnowball{
 	public void a(int a, BlockSponge b)
 	
 	/**
-	 * Reads a tile entity from NBT.
+	 * 
 	 */
-	public void readFromNBT(Packet1Login a)
+	public void a(Packet1Login a)
 	
 	/**
 	 * 
@@ -44,9 +44,9 @@ public abstract class GuiStatsComponent extends EntitySnowball{
 	public java.lang.String b()
 	
 	/**
-	 * Writes a tile entity to NBT.
+	 * 
 	 */
-	public void writeToNBT(Packet1Login a)
+	public void b(Packet1Login a)
 	
 	/**
 	 * 

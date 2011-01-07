@@ -12,9 +12,9 @@ public abstract final class BlockSponge{
 	// METHODS
 	
 	/**
-	 * Returns the object corresponding to the stack.
+	 * 
 	 */
-	public NBTTagByteArray getItem()
+	public NBTTagByteArray a()
 	
 	/**
 	 * 
@@ -22,24 +22,24 @@ public abstract final class BlockSponge{
 	public BlockSponge a(int a)
 	
 	/**
-	 * Calls the corresponding fct in di
+	 * 
 	 */
-	public void hitBlock(int a, int b, int c, int d)
-	
-	/**
-	 * Write the stack fields to a NBT object. Return the new NBT object.
-	 */
-	public Packet1Login writeToNBT(Packet1Login a)
+	public void a(int a, int b, int c, int d)
 	
 	/**
 	 * 
 	 */
-	public int getDamageVsEntity(IMobs a)
+	public Packet1Login a(Packet1Login a)
 	
 	/**
-	 * Called whenever this item stack is equipped and right clicked. Returns the new item stack to put in the position where this item is. Args: world, player
+	 * 
 	 */
-	public BlockSponge useItemRightClick(Packet17AddToInventory a, BlockLog b)
+	public int a(IMobs a)
+	
+	/**
+	 * 
+	 */
+	public BlockSponge a(Packet17AddToInventory a, BlockLog b)
 	
 	/**
 	 * 
@@ -47,14 +47,14 @@ public abstract final class BlockSponge{
 	public void a(BlockLog a)
 	
 	/**
-	 * Uses the item stack by the player. Gives the coordinates of the block its being used against and the side. Args: player, world, x, y, z, side
+	 * 
 	 */
-	public boolean useItem(BlockLog a, Packet17AddToInventory b, int c, int d, int e, int f)
+	public boolean a(BlockLog a, Packet17AddToInventory b, int c, int d, int e, int f)
 	
 	/**
-	 * Returns the strength of the stack against a given block.
+	 * 
 	 */
-	public float getStrVsBlock(BlockSoil a)
+	public float a(BlockSoil a)
 	
 	/**
 	 * 
@@ -69,27 +69,27 @@ public abstract final class BlockSponge{
 	/**
 	 * 
 	 */
-	public void hitEntity(lc a)
+	public void a(lc a)
 	
 	/**
-	 * Returns maximum size of the stack.
+	 * 
 	 */
-	public int getMaxStackSize()
+	public int b()
 	
 	/**
-	 * Raise the damage on the item by the argument. If the dmg is superior to health, destroy one element of the stack.
+	 * 
 	 */
-	public void damageItem(int a)
+	public void b(int a)
 	
 	/**
-	 * Read the stack fields from a NBT object.
+	 * 
 	 */
-	public void readFromNBT(Packet1Login a)
+	public void b(Packet1Login a)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public boolean canHarvestBlock(BlockSoil a)
+	public boolean b(BlockSoil a)
 	
 	/**
 	 * 
@@ -97,14 +97,14 @@ public abstract final class BlockSponge{
 	private boolean b(BlockSponge a)
 	
 	/**
-	 * Returns the max damage an item in the stack can take.
+	 * 
 	 */
-	public int getMaxDamage()
+	public int c()
 	
 	/**
-	 * Returns a new stack with the same properties.
+	 * 
 	 */
-	public BlockSponge copy()
+	public BlockSponge d()
 	
 	/**
 	 * 

@@ -8,13 +8,13 @@ public abstract class ItemPainting extends BlockSoil{
 	// METHODS
 	
 	/**
-	 * Called whenever the block is removed.
+	 * 
 	 */
-	public void onBlockRemoval(Packet17AddToInventory a, int b, int c, int d)
+	public void b(Packet17AddToInventory a, int b, int c, int d)
 	
 	/**
-	 * Called whenever the block is added into the world. Args: world, x, y, z
+	 * 
 	 */
-	public void onBlockAdded(Packet17AddToInventory a, int b, int c, int d)
+	public void e(Packet17AddToInventory a, int b, int c, int d)
 
 }

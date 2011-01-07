@@ -31,7 +31,7 @@ import java.net.*;
 import java.util.*;
 import java.util.logging.*;
 
-import org.middlecraft.server.SmartReflector;
+import org.middlecraft.server.Mappings;
 
 /**
  * A custom ClassLoader that patches certain classes as they are loaded.
@@ -125,7 +125,7 @@ public class PatchingClassLoader extends URLClassLoader {
 			// Determine if patching is required, and patch if needed.
 			try {
 				Patches.Patch(className, null);
-				className=SmartReflector.getNewClassName(className);
+				className=Mappings.getNewClassName(className);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

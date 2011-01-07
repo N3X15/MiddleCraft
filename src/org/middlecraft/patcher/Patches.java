@@ -39,7 +39,7 @@ import javassist.bytecode.Descriptor;
 import org.middlecraft.patcher.reflect.*;
 import org.middlecraft.server.MCFieldInfo;
 import org.middlecraft.server.MCMethodInfo;
-import org.middlecraft.server.SmartReflector;
+import org.middlecraft.server.Mappings;
 
 /**
  * Terribad class patcher.
@@ -82,13 +82,13 @@ public class Patches {
 		try {
 			cc = pool.get(className);
 		} catch(NotFoundException e) {
-			l.warning(String.format("Can't find %s, trying again with %s.",className,SmartReflector.getOldClassName(className)));
+			l.warning(String.format("Can't find %s, trying again with %s.",className,Mappings.getOldClassName(className)));
 			//System.exit(1);
 			//return;
 		}
 		/* Assume trying to load new class name that hasn't been deobf'd yet. */ 
 		if(cc==null) {
-			className=SmartReflector.getOldClassName(className);
+			className=Mappings.getOldClassName(className);
 			try {
 				cc = pool.get(className);
 				l.info("Got it.");
@@ -107,10 +107,10 @@ public class Patches {
 		//l.info(String.format("Processing [%s] %s...",cc.getPackageName(),className));
 
 		/* Check if superclass mappings are correct. */
-		SmartReflector.updateSuperclassInfo(cc);
+		Mappings.updateSuperclassInfo(cc);
 
 		/* Deobfuscate class name, assuming MCP mappings are installed... :/ */
-		String newClassName=SmartReflector.getNewClassName(className);
+		String newClassName=Mappings.getNewClassName(className);
 //		if(newClassName.equals(className))
 //		{
 //			newClassName=className+"2"; // To ensure we get fresh classes.
@@ -155,7 +155,7 @@ public class Patches {
 					if(method.hasAnnotation(Replace.class)) {
 						String name = method.getName();
 						String sig = fixSig(method);
-						MCMethodInfo mi = SmartReflector.getMethod(className, name, sig);
+						MCMethodInfo mi = Mappings.getMethod(className, name, sig);
 						l.info(String.format(" + Replacing %s...",method.getLongName()));
 						try{
 							cc.getMethod(mi.name, sig).setBody(method, null);
@@ -203,7 +203,7 @@ public class Patches {
 			}
 		}
 		// Fix refs.
-		cc.replaceClassName(SmartReflector.deobfuscationMap);
+		cc.replaceClassName(Mappings.deobfuscationMap);
 
 		// Save.
 		if(outJar==null)
@@ -216,7 +216,7 @@ public class Patches {
 
 	private static void renameFields(CtClass cc) throws NotFoundException {
 		for(CtField field : cc.getDeclaredFields()) {
-			MCFieldInfo fi = SmartReflector.getField(SmartReflector.getOldClassName(cc.getName()), field.getName(), field.getType().getName());
+			MCFieldInfo fi = Mappings.getField(Mappings.getOldClassName(cc.getName()), field.getName(), field.getType().getName());
 			if(fi!=null && !fi.name.isEmpty()) {
 				field.setName(fi.name);
 			}
@@ -225,8 +225,8 @@ public class Patches {
 
 	private static void renameMethods(CtClass cc) {
 		for(CtMethod method : cc.getDeclaredMethods()) {
-			String oldClass=SmartReflector.getOldClassName(cc.getName());
-			MCMethodInfo mi = SmartReflector.getMethod(oldClass, method.getName(), method.getSignature());
+			String oldClass=Mappings.getOldClassName(cc.getName());
+			MCMethodInfo mi = Mappings.getMethod(oldClass, method.getName(), method.getSignature());
 			if(mi!=null && !mi.name.isEmpty()) {
 				method.setName(mi.name);
 			}
@@ -256,7 +256,7 @@ public class Patches {
 					if(newType==null)
 					{
 						try {
-							newType=pool.get(SmartReflector.getOldClassName(spt.value()));
+							newType=pool.get(Mappings.getOldClassName(spt.value()));
 						} catch(NotFoundException e) {
 							e.printStackTrace();
 							System.exit(1);
@@ -295,7 +295,7 @@ public class Patches {
 					if(newType==null)
 					{
 						try {
-							newType=pool.get(SmartReflector.getOldClassName(spt.value()));
+							newType=pool.get(Mappings.getOldClassName(spt.value()));
 						} catch(NotFoundException e) {
 							e.printStackTrace();
 							System.exit(1);

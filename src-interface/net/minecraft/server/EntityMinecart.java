@@ -16,9 +16,9 @@ public abstract class EntityMinecart{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	protected void registerWorldChunkManager()
+	protected void a()
 	
 	/**
 	 * 
@@ -26,33 +26,33 @@ public abstract class EntityMinecart{
 	public static EntityMinecart a(int a)
 	
 	/**
-	 * Will check if the x, z position specified is alright to be set as the map spawn point
+	 * 
 	 */
-	public boolean canCoordinateBeSpawn(int a, int b)
+	public boolean a(int a, int b)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public float calculateCelestialAngle(long a, float b)
+	public float a(long a, float b)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public final void registerWorld(Packet17AddToInventory a)
+	public final void a(Packet17AddToInventory a)
 	
 	/**
-	 * Returns the chunk loader back for the world provider. Args: fileName
+	 * 
 	 */
-	public Vec3D getChunkLoader(java.io.File a)
+	public Vec3D a(java.io.File a)
 	
 	/**
-	 * Creates the light to brightness table
+	 * 
 	 */
-	protected void generateLightBrightnessTable()
+	protected void b()
 	
 	/**
-	 * Returns the chunk provider back for the world provider
+	 * 
 	 */
-	public HashEntry2 getChunkProvider()
+	public HashEntry2 c()
 
 }

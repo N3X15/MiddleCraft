@@ -9,19 +9,19 @@ public abstract class InventoryPlayer extends TileEntityChest{
 	// METHODS
 	
 	/**
-	 * Gets the type byte for the tag.
+	 * 
 	 */
-	public byte getType()
+	public byte a()
 	
 	/**
-	 * Read the actual data contents of the tag, implemented in NBT extension classes
+	 * 
 	 */
-	 void readTagContents(java.io.DataInput a)
+	 void a(java.io.DataInput a)
 	
 	/**
-	 * Write the actual data contents of the tag, implemented in NBT extension classes
+	 * 
 	 */
-	 void writeTagContents(java.io.DataOutput a)
+	 void a(java.io.DataOutput a)
 	
 	/**
 	 * 

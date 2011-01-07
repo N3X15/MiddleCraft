@@ -28,19 +28,19 @@ public abstract class EnumCreatureType{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public static void generateBiomeLookup()
+	public static void a()
 	
 	/**
-	 * *
+	 * 
 	 */
-	public static EnumCreatureType getBiomeFromLookup(double a, double b)
+	public static EnumCreatureType a(double a, double b)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public static EnumCreatureType getBiome(float a, float b)
+	public static EnumCreatureType a(float a, float b)
 	
 	/**
 	 * 
@@ -48,14 +48,14 @@ public abstract class EnumCreatureType{
 	protected EnumCreatureType a(int a)
 	
 	/**
-	 * *
+	 * 
 	 */
-	protected EnumCreatureType setBiomeName(java.lang.String a)
+	protected EnumCreatureType a(java.lang.String a)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public java.lang.Class[] getEntitiesForType(ku a)
+	public java.lang.Class[] a(ku a)
 	
 	/**
 	 * 

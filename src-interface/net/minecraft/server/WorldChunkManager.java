@@ -9,13 +9,13 @@ public abstract class WorldChunkManager extends BlockSoil{
 	// METHODS
 	
 	/**
-	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 * 
 	 */
-	public boolean isOpaqueCube()
+	public boolean a()
 	
 	/**
-	 * Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+	 * 
 	 */
-	public boolean shouldSideBeRendered(ChunkCoordinates a, int b, int c, int d, int e)
+	public boolean a(ChunkCoordinates a, int b, int c, int d, int e)
 
 }

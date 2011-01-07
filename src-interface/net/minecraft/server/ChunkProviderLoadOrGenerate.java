@@ -8,9 +8,9 @@ public abstract class ChunkProviderLoadOrGenerate extends lc{
 	// METHODS
 	
 	/**
-	 * Called when the mob is falling. Calculates and applies fall damage.
+	 * 
 	 */
-	protected void fall(float a)
+	protected void a(float a)
 	
 	/**
 	 * 
@@ -18,8 +18,8 @@ public abstract class ChunkProviderLoadOrGenerate extends lc{
 	public void c(float a, float b)
 	
 	/**
-	 * returns true if this entity is by a ladder, false otherwise
+	 * 
 	 */
-	public boolean isByLadder()
+	public boolean d_()
 
 }

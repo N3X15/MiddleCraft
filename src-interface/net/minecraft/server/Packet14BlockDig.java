@@ -9,43 +9,43 @@ public abstract class Packet14BlockDig{
 	// METHODS
 	
 	/**
-	 * *
+	 * 
 	 */
-	public static final float sqrt_double(double a)
+	public static final float a(double a)
 	
 	/**
-	 * Maximum of the absolute value of two numbers.
+	 * 
 	 */
-	public static double abs_max(double a, double b)
+	public static double a(double a, double b)
 	
 	/**
-	 * sin looked up in a table
+	 * 
 	 */
-	public static final float sin(float a)
+	public static final float a(float a)
 	
 	/**
-	 * Returns the greatest integer less than or equal to the double argument
+	 * 
 	 */
-	public static int floor_double(double a)
+	public static int b(double a)
 	
 	/**
-	 * cos looked up in the sin table with the appropriate offset
+	 * 
 	 */
-	public static final float cos(float a)
+	public static final float b(float a)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public static final float sqrt_float(float a)
+	public static final float c(float a)
 	
 	/**
-	 * Returns the greatest integer less than or equal to the float argument
+	 * 
 	 */
-	public static int floor_float(float a)
+	public static int d(float a)
 	
 	/**
-	 * *
+	 * 
 	 */
-	public static float abs(float a)
+	public static float e(float a)
 
 }

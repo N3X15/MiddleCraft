@@ -16,6 +16,10 @@
 	<path id="middlecraft.build-patch.classpath">
 		<pathelement path="lib/minecraft_server.jar" />
 		<pathelement path="bin/classes" />
+		<pathelement path="bin/classes-interface" />
+	</path>
+	
+	<path id="middlecraft.build-interfaces.classpath">
 	</path>
 	
 	<!-- Create workspace directories. -->
@@ -23,6 +27,7 @@
 		<mkdir dir="bin" />
 		<mkdir dir="bin/classes" />
 		<mkdir dir="bin/classes-patches" />
+		<mkdir dir="bin/classes-interface" />
 		<mkdir dir="staged" />
 		<mkdir dir="staged/plugins" />
 		<mkdir dir="staged/lib" />
@@ -66,6 +71,15 @@
 			source="6"
 			includeAntRuntime="false"
 			compiler="javac1.6" />
+	</target>
+	<target name="build-patches" depends="mainjar">
+		<javac srcdir="src-interface"
+			destdir="bin/classes-interface"
+			classpathref="middlecraft.build-interfaces.classpath"
+			target="6"
+			source="6"
+			includeAntRuntime="false"
+			compiler="javac1.6" />
 		<javac srcdir="src-patches"
 			destdir="bin/classes-patches"
 			classpathref="middlecraft.build-patch.classpath"
@@ -77,13 +91,21 @@
 	
 	<!-- Packages all of the class files in to jars so they are ready to
 	     be ran. -->
-	<target name="jar" depends="build">
+	<target name="mainjar" depends="build">
 		<jar basedir="bin/classes" destfile="bin/middlecraft.jar">
 			<manifest>
 				<attribute name="Main-Class"
 					value="Main" />
 				<attribute name="Class-Path"
 					value="lib/javassist.jar lib/SuperCSV-1.52.jar" />
+			</manifest>
+		</jar>
+	</target>
+	<target name="patchjar" depends="build-patches">
+		<jar basedir="bin/classes-interface" destfile="bin/interfaces.jar">
+			<manifest>
+				<attribute name="For-Minecraft-Server"
+					value="${minecraft.server.md5}" />
 			</manifest>
 		</jar>
 		<jar basedir="bin/classes-patches" destfile="bin/patches.jar">
@@ -93,6 +115,7 @@
 			</manifest>
 		</jar>
 	</target>
+	<target name="jar" depends="patchjar" />
 	
 	<!-- Copies any built files and packaged plugins to a separate
 	     directory that is safe for use as a Minecraft hosting

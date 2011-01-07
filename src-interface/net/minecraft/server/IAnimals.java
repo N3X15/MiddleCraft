@@ -8,14 +8,14 @@ public abstract class IAnimals extends MaterialLiquid{
 	// METHODS
 	
 	/**
-	 * Ticks the block if it's been scheduled
+	 * 
 	 */
-	public void updateTick(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
+	public void a(Packet17AddToInventory a, int b, int c, int d, java.util.Random e)
 	
 	/**
-	 * Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, blockID
+	 * 
 	 */
-	public void onNeighborBlockChange(Packet17AddToInventory a, int b, int c, int d, int e)
+	public void b(Packet17AddToInventory a, int b, int c, int d, int e)
 	
 	/**
 	 * 
