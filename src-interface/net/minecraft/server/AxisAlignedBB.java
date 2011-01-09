@@ -18,17 +18,7 @@ public abstract class AxisAlignedBB {
 	/**
 	 * 
 	 */
-	public abstract static void a();
-	
-	/**
-	 * 
-	 */
 	public abstract AxisAlignedBB a(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract static AxisAlignedBB a(double a, double b, double c, double d, double e, double f);
 	
 	/**
 	 * 
@@ -54,11 +44,6 @@ public abstract class AxisAlignedBB {
 	 * 
 	 */
 	public abstract AxisAlignedBB b(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract static AxisAlignedBB b(double a, double b, double c, double d, double e, double f);
 	
 	/**
 	 * 

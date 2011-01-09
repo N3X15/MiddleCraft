@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class Path {
 	// FIELDS
-	private b[] pathPoints;
+	private PathPoint[] pathPoints;
 	private int count;
 	
 	// METHODS

@@ -27,11 +27,6 @@ public abstract class NextTickListEntry {
 	/**
 	 * 
 	 */
-	public abstract volatile int compareTo(java.lang.Object a);
-	
-	/**
-	 * 
-	 */
 	public abstract boolean equals(java.lang.Object a);
 	
 	/**

@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class PlayerInstance {
 	// FIELDS
-	final PlayerManager field_1073;
+	 PlayerManager field_1073;
 	private java.util.List field_1072;
 	private int field_1071;
 	private int field_1070;

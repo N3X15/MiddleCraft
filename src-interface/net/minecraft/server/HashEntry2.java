@@ -4,10 +4,10 @@ package net.minecraft.server;
 
 abstract class HashEntry2 {
 	// FIELDS
-	final long field_1025;
+	 long field_1025;
 	 java.lang.Object field_1024;
 	 HashEntry2 field_1027;
-	final int field_1026;
+	 int field_1026;
 	
 	// METHODS
 	

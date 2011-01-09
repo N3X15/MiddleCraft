@@ -23,11 +23,6 @@ public abstract class WorldProvider {
 	/**
 	 * 
 	 */
-	public abstract static WorldProvider a(int a);
-	
-	/**
-	 * 
-	 */
 	public abstract boolean a(int a, int b);
 	
 	/**

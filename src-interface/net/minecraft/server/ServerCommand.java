@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 public abstract class ServerCommand {
 	// FIELDS
-	public final java.lang.String command;
-	public final ICommandListener commandListener;
+	public java.lang.String command;
+	public ICommandListener commandListener;
 	
 	// METHODS
 

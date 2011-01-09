@@ -4,30 +4,30 @@ package net.minecraft.server;
 
 public abstract class Material {
 	// FIELDS
-	public static final Material air;
-	public static final Material ground;
-	public static final Material wood;
-	public static final Material rock;
-	public static final Material iron;
-	public static final Material water;
-	public static final Material lava;
-	public static final Material leaves;
-	public static final Material plants;
-	public static final Material sponge;
-	public static final Material cloth;
-	public static final Material fire;
-	public static final Material sand;
-	public static final Material circuits;
-	public static final Material glass;
-	public static final Material tnt;
-	public static final Material unused;
-	public static final Material ice;
-	public static final Material snow;
-	public static final Material builtSnow;
-	public static final Material cactus;
-	public static final Material clay;
-	public static final Material pumpkin;
-	public static final Material field_4212;
+	public static Material air;
+	public static Material ground;
+	public static Material wood;
+	public static Material rock;
+	public static Material iron;
+	public static Material water;
+	public static Material lava;
+	public static Material leaves;
+	public static Material plants;
+	public static Material sponge;
+	public static Material cloth;
+	public static Material fire;
+	public static Material sand;
+	public static Material circuits;
+	public static Material glass;
+	public static Material tnt;
+	public static Material unused;
+	public static Material ice;
+	public static Material snow;
+	public static Material builtSnow;
+	public static Material cactus;
+	public static Material clay;
+	public static Material pumpkin;
+	public static Material field_4212;
 	private boolean canBurn;
 	
 	// METHODS

@@ -7,7 +7,7 @@ public abstract class WorldChunkManager {
 	public double[] temperature;
 	public double[] humidity;
 	public double[] field_4257;
-	public jq[] field_4256;
+	public MobSpawnerBase[] field_4256;
 	private NoiseGeneratorOctaves2 field_4255;
 	private NoiseGeneratorOctaves2 field_4254;
 	private NoiseGeneratorOctaves2 field_4253;
@@ -22,7 +22,7 @@ public abstract class WorldChunkManager {
 	/**
 	 * 
 	 */
-	public abstract jq[] a(int a, int b, int c, int d);
+	public abstract MobSpawnerBase[] a(int a, int b, int c, int d);
 	
 	/**
 	 * 
@@ -37,6 +37,6 @@ public abstract class WorldChunkManager {
 	/**
 	 * 
 	 */
-	public abstract jq[] a(jq[] a, int b, int c, int d, int e);
+	public abstract MobSpawnerBase[] a(MobSpawnerBase[] a, int b, int c, int d, int e);
 
 }

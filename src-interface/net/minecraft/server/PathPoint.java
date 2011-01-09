@@ -4,10 +4,10 @@ package net.minecraft.server;
 
 public abstract class PathPoint {
 	// FIELDS
-	public final int xCoord;
-	public final int yCoord;
-	public final int zCoord;
-	public final int hash;
+	public int xCoord;
+	public int yCoord;
+	public int zCoord;
+	public int hash;
 	 int index;
 	 float totalPathDistance;
 	 float distanceToNext;

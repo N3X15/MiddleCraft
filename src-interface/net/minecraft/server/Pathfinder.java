@@ -7,7 +7,7 @@ public abstract class Pathfinder {
 	private IBlockAccess worldMap;
 	private Path path;
 	private MCHashTable pointMap;
-	private b[] pathOptions;
+	private PathPoint[] pathOptions;
 	
 	// METHODS
 	

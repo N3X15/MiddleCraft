@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 abstract class NetworkAcceptThread extends java.lang.Thread {
 	// FIELDS
-	final net.minecraft.server.MinecraftServer mcServer;
-	final NetworkListenThread field_985;
+	 net.minecraft.server.MinecraftServer mcServer;
+	 NetworkListenThread field_985;
 	
 	// METHODS
 	

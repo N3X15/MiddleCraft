@@ -7,10 +7,5 @@ public abstract class ConsoleLogManager {
 	public static java.util.logging.Logger logger;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public abstract static void a();
 
 }

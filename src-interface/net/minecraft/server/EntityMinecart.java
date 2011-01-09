@@ -6,9 +6,9 @@ public abstract class EntityMinecart extends Entity {
 	// FIELDS
 	public int field_9168;
 	public double field_9166;
-	private il[] cargoItems;
+	private ItemStack[] cargoItems;
 	private boolean field_469;
-	private static final int[][][] field_468;
+	private static int[][][] field_468;
 	private int field_9163;
 	private double field_9162;
 	private double field_9161;

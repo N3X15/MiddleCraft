@@ -53,7 +53,7 @@ public abstract class Item {
 	public static Item fishCooked;
 	public static Item record13;
 	public static Item recordCat;
-	public final int swiftedIndex;
+	public int swiftedIndex;
 	protected int maxStackSize;
 	protected int maxDamage;
 	protected int iconIndex;
@@ -85,7 +85,7 @@ public abstract class Item {
 	public static Item doorSteel;
 	protected static java.util.Random rand;
 	protected boolean bFull3D;
-	public static gm[] itemsList;
+	public static Item[] itemsList;
 	public static Item shovelSteel;
 	public static Item pickaxeSteel;
 	public static Item axeSteel;

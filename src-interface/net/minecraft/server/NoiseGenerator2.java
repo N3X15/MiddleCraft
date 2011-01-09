@@ -9,24 +9,14 @@ public abstract class NoiseGenerator2 {
 	public double field_4318;
 	private static int[][] field_4317;
 	private int[] field_4316;
-	private static final double field_4315;
-	private static final double field_4314;
+	private static double field_4315;
+	private static double field_4314;
 	
 	// METHODS
 	
 	/**
 	 * 
 	 */
-	private abstract static int a(double a);
-	
-	/**
-	 * 
-	 */
 	public abstract void a(double[] a, double b, double c, int d, int e, double f, double g, double h);
-	
-	/**
-	 * 
-	 */
-	private abstract static double a(int[] a, double b, double c);
 
 }

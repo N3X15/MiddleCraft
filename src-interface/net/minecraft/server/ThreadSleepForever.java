@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class ThreadSleepForever extends java.lang.Thread {
 	// FIELDS
-	final net.minecraft.server.MinecraftServer mc;
+	 net.minecraft.server.MinecraftServer mc;
 	
 	// METHODS
 	

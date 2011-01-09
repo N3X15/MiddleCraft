@@ -55,11 +55,6 @@ public abstract class BlockFluids extends Block {
 	/**
 	 * 
 	 */
-	public abstract static float b(int a);
-	
-	/**
-	 * 
-	 */
 	public abstract void b(World a, int b, int c, int d, int e);
 	
 	/**

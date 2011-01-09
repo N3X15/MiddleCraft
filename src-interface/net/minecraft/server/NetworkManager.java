@@ -4,13 +4,13 @@ package net.minecraft.server;
 
 public abstract class NetworkManager {
 	// FIELDS
-	public static final java.lang.Object threadSyncObject;
+	public static java.lang.Object threadSyncObject;
 	public static int numReadThreads;
 	public static int numWriteThreads;
 	public int chunkDataSendCounter;
 	private java.lang.Object sendQueueLock;
 	private java.net.Socket networkSocket;
-	private final java.net.SocketAddress field_12032;
+	private java.net.SocketAddress field_12032;
 	private java.io.DataInputStream socketInputStream;
 	private java.io.DataOutputStream socketOutputStream;
 	private boolean isRunning;
@@ -38,17 +38,7 @@ public abstract class NetworkManager {
 	/**
 	 * 
 	 */
-	abstract static boolean a(NetworkManager a);
-	
-	/**
-	 * 
-	 */
 	public abstract void a(NetHandler a);
-	
-	/**
-	 * 
-	 */
-	public abstract transient void a(java.lang.String a, java.lang.Object[] b);
 	
 	/**
 	 * 
@@ -63,36 +53,11 @@ public abstract class NetworkManager {
 	/**
 	 * 
 	 */
-	abstract static boolean b(NetworkManager a);
-	
-	/**
-	 * 
-	 */
 	public abstract void c();
 	
 	/**
 	 * 
 	 */
-	abstract static void c(NetworkManager a);
-	
-	/**
-	 * 
-	 */
 	public abstract int d();
-	
-	/**
-	 * 
-	 */
-	abstract static void d(NetworkManager a);
-	
-	/**
-	 * 
-	 */
-	abstract static java.lang.Thread e(NetworkManager a);
-	
-	/**
-	 * 
-	 */
-	abstract static java.lang.Thread f(NetworkManager a);
 
 }

@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class ItemPickaxe extends ItemTool {
 	// FIELDS
-	private static gv[] goodAgainst;
+	private static Block[] goodAgainst;
 	private int field_4208;
 	
 	// METHODS

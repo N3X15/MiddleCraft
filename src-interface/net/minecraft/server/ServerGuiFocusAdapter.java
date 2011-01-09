@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class ServerGuiFocusAdapter extends java.awt.event.FocusAdapter {
 	// FIELDS
-	final ServerGUI mcServerGui;
+	 ServerGUI mcServerGui;
 	
 	// METHODS
 	

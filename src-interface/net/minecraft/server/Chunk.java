@@ -13,8 +13,8 @@ public abstract class Chunk {
 	public NibbleArray blocklightMap;
 	public byte[] heightMap;
 	public int field_686;
-	public final int xPosition;
-	public final int zPosition;
+	public int xPosition;
+	public int zPosition;
 	public java.util.Map chunkTileEntityMap;
 	public java.util.List[] entities;
 	public boolean isTerrainPopulated;

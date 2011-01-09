@@ -36,11 +36,6 @@ public abstract class BlockRedstoneWire extends Block {
 	/**
 	 * 
 	 */
-	public abstract static boolean b(IBlockAccess a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
 	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**

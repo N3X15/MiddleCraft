@@ -18,7 +18,7 @@ public abstract class WorldChunkManagerHell extends WorldChunkManager {
 	/**
 	 * 
 	 */
-	public abstract jq[] a(int a, int b, int c, int d);
+	public abstract MobSpawnerBase[] a(int a, int b, int c, int d);
 	
 	/**
 	 * 
@@ -33,6 +33,6 @@ public abstract class WorldChunkManagerHell extends WorldChunkManager {
 	/**
 	 * 
 	 */
-	public abstract jq[] a(jq[] a, int b, int c, int d, int e);
+	public abstract MobSpawnerBase[] a(MobSpawnerBase[] a, int b, int c, int d, int e);
 
 }

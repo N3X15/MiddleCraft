@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class RecipeSorter {
 	// FIELDS
-	final CraftingManager field_20108;
+	 CraftingManager field_20108;
 	
 	// METHODS
 	
@@ -12,10 +12,5 @@ abstract class RecipeSorter {
 	 * 
 	 */
 	public abstract int a(CraftingRecipe a, CraftingRecipe b);
-	
-	/**
-	 * 
-	 */
-	public abstract volatile int compare(java.lang.Object a, java.lang.Object b);
 
 }

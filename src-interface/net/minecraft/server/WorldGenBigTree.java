@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class WorldGenBigTree extends WorldGenerator {
 	// FIELDS
-	static final byte[] field_760;
+	static byte[] field_760;
 	 java.util.Random field_759;
 	 World worldObj;
 	 int[] field_757;

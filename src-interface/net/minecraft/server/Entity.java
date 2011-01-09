@@ -63,7 +63,7 @@ public abstract class Entity {
 	public float rotationPitch;
 	public float prevRotationYaw;
 	public float prevRotationPitch;
-	public final AxisAlignedBB boundingBox;
+	public AxisAlignedBB boundingBox;
 	
 	// METHODS
 	
@@ -146,16 +146,6 @@ public abstract class Entity {
 	 * 
 	 */
 	public abstract boolean a(Material a);
-	
-	/**
-	 * 
-	 */
-	protected abstract transient NBTTagList a(double[] a);
-	
-	/**
-	 * 
-	 */
-	protected abstract transient NBTTagList a(float[] a);
 	
 	/**
 	 * 

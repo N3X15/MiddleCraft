@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class ThreadCommandReader extends java.lang.Thread {
 	// FIELDS
-	final net.minecraft.server.MinecraftServer mcServer;
+	 net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	

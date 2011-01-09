@@ -6,7 +6,7 @@ public abstract class ChunkCache {
 	// FIELDS
 	private int field_823;
 	private int field_822;
-	private kx[][] field_825;
+	private Chunk[][] field_825;
 	private World worldObj;
 	
 	// METHODS

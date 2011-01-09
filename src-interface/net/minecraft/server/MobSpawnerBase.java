@@ -4,18 +4,18 @@ package net.minecraft.server;
 
 public abstract class MobSpawnerBase {
 	// FIELDS
-	public static final MobSpawnerBase rainforest;
-	public static final MobSpawnerBase swampland;
-	public static final MobSpawnerBase seasonalForest;
-	public static final MobSpawnerBase forest;
-	public static final MobSpawnerBase savanna;
-	public static final MobSpawnerBase shrubland;
-	public static final MobSpawnerBase taiga;
-	public static final MobSpawnerBase desert;
-	public static final MobSpawnerBase plains;
-	public static final MobSpawnerBase iceDesert;
-	public static final MobSpawnerBase tundra;
-	public static final MobSpawnerBase hell;
+	public static MobSpawnerBase rainforest;
+	public static MobSpawnerBase swampland;
+	public static MobSpawnerBase seasonalForest;
+	public static MobSpawnerBase forest;
+	public static MobSpawnerBase savanna;
+	public static MobSpawnerBase shrubland;
+	public static MobSpawnerBase taiga;
+	public static MobSpawnerBase desert;
+	public static MobSpawnerBase plains;
+	public static MobSpawnerBase iceDesert;
+	public static MobSpawnerBase tundra;
+	public static MobSpawnerBase hell;
 	public java.lang.String biomeName;
 	public int field_6162;
 	public byte topBlock;
@@ -23,24 +23,9 @@ public abstract class MobSpawnerBase {
 	public int field_6161;
 	protected java.lang.Class[] biomeMonsters;
 	protected java.lang.Class[] biomeCreatures;
-	private static jq[] biomeLookupTable;
+	private static MobSpawnerBase[] biomeLookupTable;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public abstract static void a();
-	
-	/**
-	 * 
-	 */
-	public abstract static MobSpawnerBase a(double a, double b);
-	
-	/**
-	 * 
-	 */
-	public abstract static MobSpawnerBase a(float a, float b);
 	
 	/**
 	 * 

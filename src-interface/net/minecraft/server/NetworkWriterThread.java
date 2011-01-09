@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class NetworkWriterThread extends java.lang.Thread {
 	// FIELDS
-	final NetworkManager netManager;
+	 NetworkManager netManager;
 	
 	// METHODS
 	

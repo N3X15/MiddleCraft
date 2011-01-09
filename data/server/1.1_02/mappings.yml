@@ -187,7 +187,7 @@ ConsoleLogFormatter:
   superclass: java.util.logging.Formatter
   searge: ConsoleLogFormatter
   class: ConsoleLogFormatter
-  modifiers: 1040
+  modifiers: 1024
   notch: iw
   fields:
     dateFormat:
@@ -1505,7 +1505,7 @@ Item:
       descript: Item index + 256
       notch_class: gm
       csv: swiftedIndex
-      modifiers: 17
+      modifiers: 1
       notch: aW
     fishingRod:
       notch_sig: gm
@@ -1689,7 +1689,7 @@ ChunkPosition:
       descript: '*'
       notch_class: iq
       csv: z
-      modifiers: 17
+      modifiers: 1
       notch: c
     y:
       notch_sig: int
@@ -1697,7 +1697,7 @@ ChunkPosition:
       descript: '*'
       notch_class: iq
       csv: y
-      modifiers: 17
+      modifiers: 1
       notch: b
     x:
       notch_sig: int
@@ -1705,7 +1705,7 @@ ChunkPosition:
       descript: '*'
       notch_class: iq
       csv: x
-      modifiers: 17
+      modifiers: 1
       notch: a
 Packet18ArmAnimation:
   methods:
@@ -1801,7 +1801,7 @@ NetworkReaderThread:
       descript: Reference to the NetworkManager object.
       notch_class: jt
       csv: netManager
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 BlockReed:
   methods:
@@ -1985,7 +1985,7 @@ MCHashTable:
       descript: The scale factor used to determine when to grow the table
       notch_class: jf
       csv: growFactor
-      modifiers: 18
+      modifiers: 2
       notch: d
     threshold:
       notch_sig: int
@@ -2057,7 +2057,7 @@ MinecartTrackLogic:
       descript: '*'
       notch_class: hw
       csv: field_888
-      modifiers: 4112
+      modifiers: 4096
       notch: a
     field_893:
       notch_sig: int
@@ -2388,7 +2388,7 @@ NibbleArray:
       descript: Byte array of data stored in this holder. Possibly a light map or some chunk data. Data is accessed in 4-bit pieces.
       notch_class: is
       csv: data
-      modifiers: 17
+      modifiers: 1
       notch: a
 Packet29DestroyEntity:
   methods:
@@ -2475,7 +2475,7 @@ ChunkCoordinates:
   superclass: java.lang.Object
   searge: ChunkCoordinates
   class: ChunkCoordinates
-  modifiers: 1040
+  modifiers: 1024
   notch: lb
   fields:
     field_528:
@@ -2484,7 +2484,7 @@ ChunkCoordinates:
       descript: '*'
       notch_class: lb
       csv: field_528
-      modifiers: 17
+      modifiers: 1
       notch: b
     field_529:
       notch_sig: int
@@ -2492,7 +2492,7 @@ ChunkCoordinates:
       descript: '*'
       notch_class: lb
       csv: field_529
-      modifiers: 17
+      modifiers: 1
       notch: a
 BlockBreakable:
   methods:
@@ -4044,7 +4044,7 @@ World:
       descript: '*'
       notch_class: ff
       csv: worldProvider
-      modifiers: 17
+      modifiers: 1
       notch: q
     monstersEnabled:
       notch_sig: int
@@ -4108,7 +4108,7 @@ World:
       descript: '*'
       notch_class: ff
       csv: field_9210
-      modifiers: 17
+      modifiers: 1
       notch: w
     rand:
       notch_sig: java.util.Random
@@ -4484,7 +4484,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: torchRedstoneIdle
-      modifiers: 25
+      modifiers: 9
       notch: aP
     blockDiamond:
       notch_sig: gv
@@ -4492,7 +4492,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: blockDiamond
-      modifiers: 25
+      modifiers: 9
       notch: ax
     waterStill:
       notch_sig: gv
@@ -4500,7 +4500,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: waterStill
-      modifiers: 25
+      modifiers: 9
       notch: A
     wood:
       notch_sig: gv
@@ -4508,7 +4508,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: wood
-      modifiers: 25
+      modifiers: 9
       notch: J
     soundWoodFootstep:
       notch_sig: cp
@@ -4516,7 +4516,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundWoodFootstep
-      modifiers: 25
+      modifiers: 9
       notch: e
     maxZ:
       notch_sig: double
@@ -4548,7 +4548,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: leaves
-      modifiers: 25
+      modifiers: 9
       notch: K
     pumpkinLantern:
       notch_sig: gv
@@ -4556,7 +4556,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: pumpkinLantern
-      modifiers: 25
+      modifiers: 9
       notch: bf
     soundPowderFootstep:
       notch_sig: cp
@@ -4564,7 +4564,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundPowderFootstep
-      modifiers: 25
+      modifiers: 9
       notch: d
     button:
       notch_sig: gv
@@ -4572,7 +4572,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: button
-      modifiers: 25
+      modifiers: 9
       notch: aR
     stepSound:
       notch_sig: cp
@@ -4588,7 +4588,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: snow
-      modifiers: 25
+      modifiers: 9
       notch: aS
     workbench:
       notch_sig: gv
@@ -4596,7 +4596,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: workbench
-      modifiers: 25
+      modifiers: 9
       notch: ay
     blockIndexInTexture:
       notch_sig: int
@@ -4612,7 +4612,7 @@ Block:
       descript: Amount of light emitted
       notch_class: gv
       csv: lightValue
-      modifiers: 25
+      modifiers: 9
       notch: s
     minecartTrack:
       notch_sig: gv
@@ -4620,7 +4620,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: minecartTrack
-      modifiers: 25
+      modifiers: 9
       notch: aG
     grass:
       notch_sig: iy
@@ -4628,7 +4628,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: grass
-      modifiers: 25
+      modifiers: 9
       notch: u
     lavaStill:
       notch_sig: gv
@@ -4636,7 +4636,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: lavaStill
-      modifiers: 25
+      modifiers: 9
       notch: C
     soundGravelFootstep:
       notch_sig: cp
@@ -4644,7 +4644,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundGravelFootstep
-      modifiers: 25
+      modifiers: 9
       notch: f
     redstoneWire:
       notch_sig: gv
@@ -4652,7 +4652,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: redstoneWire
-      modifiers: 25
+      modifiers: 9
       notch: av
     fence:
       notch_sig: gv
@@ -4660,7 +4660,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: fence
-      modifiers: 25
+      modifiers: 9
       notch: aZ
     blocksList:
       notch_sig: gv[]
@@ -4668,7 +4668,7 @@ Block:
       descript: List of ly/ff (BlockType) containing the already registered blocks.
       notch_class: gv
       csv: blocksList
-      modifiers: 25
+      modifiers: 9
       notch: m
     stairCompactCobblestone:
       notch_sig: gv
@@ -4676,7 +4676,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stairCompactCobblestone
-      modifiers: 25
+      modifiers: 9
       notch: aH
     mushroomRed:
       notch_sig: ik
@@ -4684,7 +4684,7 @@ Block:
       descript: Was mushroomFlyAgaric
       notch_class: gv
       csv: mushroomRed
-      modifiers: 25
+      modifiers: 9
       notch: ag
     mobSpawner:
       notch_sig: gv
@@ -4692,7 +4692,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: mobSpawner
-      modifiers: 25
+      modifiers: 9
       notch: as
     slipperiness:
       notch_sig: float
@@ -4708,7 +4708,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundClothFootstep
-      modifiers: 25
+      modifiers: 9
       notch: k
     lightStone:
       notch_sig: gv
@@ -4716,7 +4716,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: lightStone
-      modifiers: 25
+      modifiers: 9
       notch: bd
     opaqueCubeLookup:
       notch_sig: boolean[]
@@ -4724,7 +4724,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: opaqueCubeLookup
-      modifiers: 25
+      modifiers: 9
       notch: o
     field_9031:
       notch_sig: gv
@@ -4732,7 +4732,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9031
-      modifiers: 25
+      modifiers: 9
       notch: X
     minZ:
       notch_sig: double
@@ -4748,7 +4748,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9032
-      modifiers: 25
+      modifiers: 9
       notch: W
     oreRedstoneGlowing:
       notch_sig: gv
@@ -4756,7 +4756,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: oreRedstoneGlowing
-      modifiers: 25
+      modifiers: 9
       notch: aO
     soundGrassFootstep:
       notch_sig: cp
@@ -4764,7 +4764,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundGrassFootstep
-      modifiers: 25
+      modifiers: 9
       notch: g
     field_9030:
       notch_sig: gv
@@ -4772,7 +4772,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9030
-      modifiers: 25
+      modifiers: 9
       notch: Y
     field_9036:
       notch_sig: gv
@@ -4780,7 +4780,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9036
-      modifiers: 25
+      modifiers: 9
       notch: T
     field_9033:
       notch_sig: gv
@@ -4788,7 +4788,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9033
-      modifiers: 25
+      modifiers: 9
       notch: V
     field_9034:
       notch_sig: gv
@@ -4796,7 +4796,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9034
-      modifiers: 25
+      modifiers: 9
       notch: U
     oreDiamond:
       notch_sig: gv
@@ -4804,7 +4804,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: oreDiamond
-      modifiers: 25
+      modifiers: 9
       notch: aw
     torchWood:
       notch_sig: gv
@@ -4812,7 +4812,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: torchWood
-      modifiers: 25
+      modifiers: 9
       notch: aq
     gravel:
       notch_sig: gv
@@ -4820,7 +4820,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: gravel
-      modifiers: 25
+      modifiers: 9
       notch: F
     mushroomBrown:
       notch_sig: ik
@@ -4828,7 +4828,7 @@ Block:
       descript: Was mushroomKingBolete
       notch_class: gv
       csv: mushroomBrown
-      modifiers: 25
+      modifiers: 9
       notch: af
     minX:
       notch_sig: double
@@ -4852,7 +4852,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: cloth
-      modifiers: 25
+      modifiers: 9
       notch: ab
     blockGold:
       notch_sig: gv
@@ -4860,7 +4860,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: blockGold
-      modifiers: 25
+      modifiers: 9
       notch: ah
     field_9029:
       notch_sig: gv
@@ -4868,7 +4868,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9029
-      modifiers: 25
+      modifiers: 9
       notch: Z
     stoneOvenActive:
       notch_sig: gv
@@ -4876,7 +4876,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stoneOvenActive
-      modifiers: 25
+      modifiers: 9
       notch: aC
     bedrock:
       notch_sig: gv
@@ -4884,7 +4884,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: bedrock
-      modifiers: 25
+      modifiers: 9
       notch: z
     field_9040:
       notch_sig: gv
@@ -4892,7 +4892,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9040
-      modifiers: 25
+      modifiers: 9
       notch: P
     planks:
       notch_sig: gv
@@ -4900,7 +4900,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: planks
-      modifiers: 25
+      modifiers: 9
       notch: x
     field_9041:
       notch_sig: gv
@@ -4908,7 +4908,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9041
-      modifiers: 25
+      modifiers: 9
       notch: O
     sand:
       notch_sig: gv
@@ -4916,7 +4916,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: sand
-      modifiers: 25
+      modifiers: 9
       notch: E
     field_9042:
       notch_sig: gv
@@ -4924,7 +4924,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9042
-      modifiers: 25
+      modifiers: 9
       notch: N
     reed:
       notch_sig: gv
@@ -4932,7 +4932,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: reed
-      modifiers: 25
+      modifiers: 9
       notch: aX
     stairCompactPlanks:
       notch_sig: gv
@@ -4940,7 +4940,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stairCompactPlanks
-      modifiers: 25
+      modifiers: 9
       notch: at
     blockSteel:
       notch_sig: gv
@@ -4948,7 +4948,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: blockSteel
-      modifiers: 25
+      modifiers: 9
       notch: ai
     signPost:
       notch_sig: gv
@@ -4956,7 +4956,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: signPost
-      modifiers: 25
+      modifiers: 9
       notch: aD
     fire:
       notch_sig: kv
@@ -4964,7 +4964,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: fire
-      modifiers: 25
+      modifiers: 9
       notch: ar
     waterMoving:
       notch_sig: gv
@@ -4972,7 +4972,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: waterMoving
-      modifiers: 25
+      modifiers: 9
       notch: B
     oreGold:
       notch_sig: gv
@@ -4980,7 +4980,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: oreGold
-      modifiers: 25
+      modifiers: 9
       notch: G
     lightOpacity:
       notch_sig: int[]
@@ -4988,7 +4988,7 @@ Block:
       descript: How much light is subtracted for going through this block
       notch_class: gv
       csv: lightOpacity
-      modifiers: 25
+      modifiers: 9
       notch: q
     field_9048:
       notch_sig: gv
@@ -4996,7 +4996,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9048
-      modifiers: 25
+      modifiers: 9
       notch: ac
     field_9038:
       notch_sig: gv
@@ -5004,7 +5004,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9038
-      modifiers: 25
+      modifiers: 9
       notch: R
     field_9049:
       notch_sig: gv
@@ -5012,7 +5012,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9049
-      modifiers: 25
+      modifiers: 9
       notch: aa
     field_9037:
       notch_sig: gv
@@ -5020,7 +5020,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9037
-      modifiers: 25
+      modifiers: 9
       notch: S
     crops:
       notch_sig: gv
@@ -5028,7 +5028,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: crops
-      modifiers: 25
+      modifiers: 9
       notch: az
     field_9039:
       notch_sig: gv
@@ -5036,7 +5036,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: field_9039
-      modifiers: 25
+      modifiers: 9
       notch: Q
     cactus:
       notch_sig: gv
@@ -5044,7 +5044,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: cactus
-      modifiers: 25
+      modifiers: 9
       notch: aV
     pressurePlateStone:
       notch_sig: gv
@@ -5052,7 +5052,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: pressurePlateStone
-      modifiers: 25
+      modifiers: 9
       notch: aK
     soundStoneFootstep:
       notch_sig: cp
@@ -5060,7 +5060,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundStoneFootstep
-      modifiers: 25
+      modifiers: 9
       notch: h
     blockHardness:
       notch_sig: float
@@ -5076,7 +5076,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: torchRedstoneActive
-      modifiers: 25
+      modifiers: 9
       notch: aQ
     stone:
       notch_sig: gv
@@ -5084,7 +5084,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stone
-      modifiers: 25
+      modifiers: 9
       notch: t
     isBlockContainer:
       notch_sig: boolean[]
@@ -5092,7 +5092,7 @@ Block:
       descript: Can this block be type casted to a BlockContainer (list indexed on blockIDs)
       notch_class: gv
       csv: isBlockContainer
-      modifiers: 25
+      modifiers: 9
       notch: p
     lavaMoving:
       notch_sig: gv
@@ -5100,7 +5100,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: lavaMoving
-      modifiers: 25
+      modifiers: 9
       notch: D
     tilledField:
       notch_sig: gv
@@ -5108,7 +5108,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: tilledField
-      modifiers: 25
+      modifiers: 9
       notch: aA
     signWall:
       notch_sig: gv
@@ -5116,7 +5116,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: signWall
-      modifiers: 25
+      modifiers: 9
       notch: aI
     obsidian:
       notch_sig: gv
@@ -5124,7 +5124,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: obsidian
-      modifiers: 25
+      modifiers: 9
       notch: ap
     dirt:
       notch_sig: gv
@@ -5132,7 +5132,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: dirt
-      modifiers: 25
+      modifiers: 9
       notch: v
     slowSand:
       notch_sig: gv
@@ -5140,7 +5140,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: slowSand
-      modifiers: 25
+      modifiers: 9
       notch: bc
     lever:
       notch_sig: gv
@@ -5148,7 +5148,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: lever
-      modifiers: 25
+      modifiers: 9
       notch: aJ
     cobblestone:
       notch_sig: gv
@@ -5156,7 +5156,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: cobblestone
-      modifiers: 25
+      modifiers: 9
       notch: w
     pumpkin:
       notch_sig: gv
@@ -5164,7 +5164,7 @@ Block:
       descript: A pumpkin
       notch_class: gv
       csv: pumpkin
-      modifiers: 25
+      modifiers: 9
       notch: ba
     blockMaterial:
       notch_sig: la
@@ -5172,7 +5172,7 @@ Block:
       descript: Block material definition.
       notch_class: gv
       csv: blockMaterial
-      modifiers: 17
+      modifiers: 1
       notch: bs
     portal:
       notch_sig: ao
@@ -5180,7 +5180,7 @@ Block:
       descript: The purple teleport blocks inside the obsidian circle
       notch_class: gv
       csv: portal
-      modifiers: 25
+      modifiers: 9
       notch: be
     tickOnLoad:
       notch_sig: boolean[]
@@ -5188,7 +5188,7 @@ Block:
       descript: List of whether this blockType will run its tick on loading or not
       notch_class: gv
       csv: tickOnLoad
-      modifiers: 25
+      modifiers: 9
       notch: n
     stoneOvenIdle:
       notch_sig: gv
@@ -5196,7 +5196,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stoneOvenIdle
-      modifiers: 25
+      modifiers: 9
       notch: aB
     tnt:
       notch_sig: gv
@@ -5204,7 +5204,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: tnt
-      modifiers: 25
+      modifiers: 9
       notch: am
     soundSandFootstep:
       notch_sig: cp
@@ -5212,7 +5212,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundSandFootstep
-      modifiers: 25
+      modifiers: 9
       notch: l
     oreRedstone:
       notch_sig: gv
@@ -5220,7 +5220,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: oreRedstone
-      modifiers: 25
+      modifiers: 9
       notch: aN
     unusedBooleanArray:
       notch_sig: boolean[]
@@ -5228,7 +5228,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: unusedBooleanArray
-      modifiers: 25
+      modifiers: 9
       notch: r
     stairDouble:
       notch_sig: gv
@@ -5236,7 +5236,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stairDouble
-      modifiers: 25
+      modifiers: 9
       notch: aj
     brick:
       notch_sig: gv
@@ -5244,7 +5244,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: brick
-      modifiers: 25
+      modifiers: 9
       notch: al
     pressurePlatePlanks:
       notch_sig: gv
@@ -5252,7 +5252,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: pressurePlatePlanks
-      modifiers: 25
+      modifiers: 9
       notch: aM
     jukebox:
       notch_sig: gv
@@ -5260,7 +5260,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: jukebox
-      modifiers: 25
+      modifiers: 9
       notch: aY
     oreIron:
       notch_sig: gv
@@ -5268,7 +5268,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: oreIron
-      modifiers: 25
+      modifiers: 9
       notch: H
     field_554:
       notch_sig: float
@@ -5284,7 +5284,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: blockSnow
-      modifiers: 25
+      modifiers: 9
       notch: aU
     sponge:
       notch_sig: gv
@@ -5292,7 +5292,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: sponge
-      modifiers: 25
+      modifiers: 9
       notch: L
     bloodStone:
       notch_sig: gv
@@ -5300,7 +5300,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: bloodStone
-      modifiers: 25
+      modifiers: 9
       notch: bb
     ice:
       notch_sig: gv
@@ -5308,7 +5308,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: ice
-      modifiers: 25
+      modifiers: 9
       notch: aT
     plantYellow:
       notch_sig: ik
@@ -5316,7 +5316,7 @@ Block:
       descript: Was dandelion
       notch_class: gv
       csv: plantYellow
-      modifiers: 25
+      modifiers: 9
       notch: ad
     glass:
       notch_sig: gv
@@ -5324,7 +5324,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: glass
-      modifiers: 25
+      modifiers: 9
       notch: M
     blockResistance:
       notch_sig: float
@@ -5340,7 +5340,7 @@ Block:
       descript: ID of the block.
       notch_class: gv
       csv: blockID
-      modifiers: 17
+      modifiers: 1
       notch: bh
     bookShelf:
       notch_sig: gv
@@ -5348,7 +5348,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: bookShelf
-      modifiers: 25
+      modifiers: 9
       notch: an
     stairSingle:
       notch_sig: gv
@@ -5356,7 +5356,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: stairSingle
-      modifiers: 25
+      modifiers: 9
       notch: ak
     blockClay:
       notch_sig: gv
@@ -5364,7 +5364,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: blockClay
-      modifiers: 25
+      modifiers: 9
       notch: aW
     doorSteel:
       notch_sig: gv
@@ -5372,7 +5372,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: doorSteel
-      modifiers: 25
+      modifiers: 9
       notch: aL
     ladder:
       notch_sig: gv
@@ -5380,7 +5380,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: ladder
-      modifiers: 25
+      modifiers: 9
       notch: aF
     oreCoal:
       notch_sig: gv
@@ -5388,7 +5388,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: oreCoal
-      modifiers: 25
+      modifiers: 9
       notch: I
     soundMetalFootstep:
       notch_sig: cp
@@ -5396,7 +5396,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundMetalFootstep
-      modifiers: 25
+      modifiers: 9
       notch: i
     sapling:
       notch_sig: gv
@@ -5404,7 +5404,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: sapling
-      modifiers: 25
+      modifiers: 9
       notch: y
     plantRed:
       notch_sig: ik
@@ -5412,7 +5412,7 @@ Block:
       descript: Was rose
       notch_class: gv
       csv: plantRed
-      modifiers: 25
+      modifiers: 9
       notch: ae
     doorWood:
       notch_sig: gv
@@ -5420,7 +5420,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: doorWood
-      modifiers: 25
+      modifiers: 9
       notch: aE
     cobblestoneMossy:
       notch_sig: gv
@@ -5428,7 +5428,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: cobblestoneMossy
-      modifiers: 25
+      modifiers: 9
       notch: ao
     soundGlassFootstep:
       notch_sig: cp
@@ -5436,7 +5436,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: soundGlassFootstep
-      modifiers: 25
+      modifiers: 9
       notch: j
     crate:
       notch_sig: gv
@@ -5444,7 +5444,7 @@ Block:
       descript: '*'
       notch_class: gv
       csv: crate
-      modifiers: 25
+      modifiers: 9
       notch: au
     field_666:
       notch_sig: java.lang.String
@@ -5491,7 +5491,7 @@ EnumArt:
   superclass: java.lang.Enum
   searge: EnumArt
   class: EnumArt
-  modifiers: 17425
+  modifiers: 17409
   notch: ie
   fields:
     field_856:
@@ -5500,7 +5500,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_856
-      modifiers: 17
+      modifiers: 1
       notch: z
     field_857:
       notch_sig: java.lang.String
@@ -5508,7 +5508,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_857
-      modifiers: 17
+      modifiers: 1
       notch: y
     ie_Kebab:
       notch_sig: ie
@@ -5516,7 +5516,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Kebab
-      modifiers: 16409
+      modifiers: 16393
       notch: a
     ie_Graham:
       notch_sig: ie
@@ -5524,7 +5524,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Graham
-      modifiers: 16409
+      modifiers: 16393
       notch: n
     ie_Wanderer:
       notch_sig: ie
@@ -5532,7 +5532,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Wanderer
-      modifiers: 16409
+      modifiers: 16393
       notch: m
     ie_Bust:
       notch_sig: ie
@@ -5540,7 +5540,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Bust
-      modifiers: 16409
+      modifiers: 16393
       notch: p
     ie_Creebet:
       notch_sig: ie
@@ -5548,7 +5548,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Creebet
-      modifiers: 16409
+      modifiers: 16393
       notch: l
     ie_Sunset:
       notch_sig: ie
@@ -5556,7 +5556,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Sunset
-      modifiers: 16409
+      modifiers: 16393
       notch: k
     ie_Alban:
       notch_sig: ie
@@ -5564,7 +5564,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Alban
-      modifiers: 16409
+      modifiers: 16393
       notch: c
     ie_Skeleton:
       notch_sig: ie
@@ -5572,7 +5572,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Skeleton
-      modifiers: 16409
+      modifiers: 16393
       notch: w
     ie_Stage:
       notch_sig: ie
@@ -5580,7 +5580,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Stage
-      modifiers: 16409
+      modifiers: 16393
       notch: q
     ie_DonkeyKong:
       notch_sig: ie
@@ -5588,7 +5588,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_DonkeyKong
-      modifiers: 16409
+      modifiers: 16393
       notch: x
     ie_Wasteland:
       notch_sig: ie
@@ -5596,7 +5596,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Wasteland
-      modifiers: 16409
+      modifiers: 16393
       notch: g
     ie_Aztec2:
       notch_sig: ie
@@ -5604,7 +5604,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Aztec2
-      modifiers: 16409
+      modifiers: 16393
       notch: d
     ie_Aztec:
       notch_sig: ie
@@ -5612,7 +5612,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Aztec
-      modifiers: 16409
+      modifiers: 16393
       notch: b
     ie_Sea:
       notch_sig: ie
@@ -5620,7 +5620,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Sea
-      modifiers: 16409
+      modifiers: 16393
       notch: j
     ie_Courbet:
       notch_sig: ie
@@ -5628,7 +5628,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Courbet
-      modifiers: 16409
+      modifiers: 16393
       notch: i
     field_869:
       notch_sig: int
@@ -5636,7 +5636,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_869
-      modifiers: 17
+      modifiers: 1
       notch: A
     field_867:
       notch_sig: int
@@ -5644,7 +5644,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_867
-      modifiers: 17
+      modifiers: 1
       notch: B
     field_865:
       notch_sig: int
@@ -5652,7 +5652,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_865
-      modifiers: 17
+      modifiers: 1
       notch: C
     ie_Match:
       notch_sig: ie
@@ -5660,7 +5660,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Match
-      modifiers: 16409
+      modifiers: 16393
       notch: o
     field_863:
       notch_sig: ie[]
@@ -5668,7 +5668,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_863
-      modifiers: 4122
+      modifiers: 4106
       notch: D
     ie_Pigscene:
       notch_sig: ie
@@ -5676,7 +5676,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Pigscene
-      modifiers: 16409
+      modifiers: 16393
       notch: v
     ie_Void:
       notch_sig: ie
@@ -5684,7 +5684,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Void
-      modifiers: 16409
+      modifiers: 16393
       notch: r
     ie_Bomb:
       notch_sig: ie
@@ -5692,7 +5692,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Bomb
-      modifiers: 16409
+      modifiers: 16393
       notch: e
     ie_Plant:
       notch_sig: ie
@@ -5700,7 +5700,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Plant
-      modifiers: 16409
+      modifiers: 16393
       notch: f
     ie_Pool:
       notch_sig: ie
@@ -5708,7 +5708,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Pool
-      modifiers: 16409
+      modifiers: 16393
       notch: h
     ie_SkullAndRoses:
       notch_sig: ie
@@ -5716,7 +5716,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_SkullAndRoses
-      modifiers: 16409
+      modifiers: 16393
       notch: s
     ie_Fighters:
       notch_sig: ie
@@ -5724,7 +5724,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Fighters
-      modifiers: 16409
+      modifiers: 16393
       notch: t
     ie_Pointer:
       notch_sig: ie
@@ -5732,7 +5732,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Pointer
-      modifiers: 16409
+      modifiers: 16393
       notch: u
 TileEntitySign:
   methods:
@@ -6573,7 +6573,7 @@ Packet:
       descript: '*'
       notch_class: jv
       csv: field_20009
-      modifiers: 17
+      modifiers: 1
       notch: j
 WorldGenDungeons:
   methods:
@@ -6637,7 +6637,7 @@ GuiStatsListener:
       descript: '*'
       notch_class: ld
       csv: statsComponent
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 WorldServer:
   methods:
@@ -7061,7 +7061,7 @@ ItemArmor:
       descript: '*'
       notch_class: ij
       csv: field_257
-      modifiers: 17
+      modifiers: 1
       notch: bb
     field_256:
       notch_sig: int
@@ -7069,7 +7069,7 @@ ItemArmor:
       descript: '*'
       notch_class: ij
       csv: field_256
-      modifiers: 17
+      modifiers: 1
       notch: bc
     field_255:
       notch_sig: int
@@ -7077,7 +7077,7 @@ ItemArmor:
       descript: '*'
       notch_class: ij
       csv: field_255
-      modifiers: 17
+      modifiers: 1
       notch: bd
     field_254:
       notch_sig: int
@@ -7085,7 +7085,7 @@ ItemArmor:
       descript: '*'
       notch_class: ij
       csv: field_254
-      modifiers: 17
+      modifiers: 1
       notch: a
     field_258:
       notch_sig: int[]
@@ -7093,7 +7093,7 @@ ItemArmor:
       descript: '*'
       notch_class: ij
       csv: field_258
-      modifiers: 26
+      modifiers: 10
       notch: bf
     field_259:
       notch_sig: int[]
@@ -7101,7 +7101,7 @@ ItemArmor:
       descript: '*'
       notch_class: ij
       csv: field_259
-      modifiers: 26
+      modifiers: 10
       notch: be
 RecipesArmor:
   methods:
@@ -7276,7 +7276,7 @@ EnumSkyBlock:
   superclass: java.lang.Enum
   searge: EnumSkyBlock
   class: EnumSkyBlock
-  modifiers: 17425
+  modifiers: 17409
   notch: eb
   fields:
     field_983:
@@ -7285,7 +7285,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: field_983
-      modifiers: 4122
+      modifiers: 4106
       notch: d
     eb_Block:
       notch_sig: eb
@@ -7293,7 +7293,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: eb_Block
-      modifiers: 16409
+      modifiers: 16393
       notch: b
     field_984:
       notch_sig: int
@@ -7301,7 +7301,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: field_984
-      modifiers: 17
+      modifiers: 1
       notch: c
     eb_Sky:
       notch_sig: eb
@@ -7309,7 +7309,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: eb_Sky
-      modifiers: 16409
+      modifiers: 16393
       notch: a
 IInventory:
   methods:
@@ -7566,7 +7566,7 @@ ServerGuiCommandListener:
       descript: Reference to the ServerGui object.
       notch_class: ae
       csv: mcServerGui
-      modifiers: 4112
+      modifiers: 4096
       notch: b
     textField:
       notch_sig: javax.swing.JTextField
@@ -7574,7 +7574,7 @@ ServerGuiCommandListener:
       descript: Text field.
       notch_class: ae
       csv: textField
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 Packet30Entity:
   methods:
@@ -7991,7 +7991,7 @@ Chunk:
       descript: The x coordinate of the chunk.
       notch_class: kx
       csv: xPosition
-      modifiers: 17
+      modifiers: 1
       notch: j
     field_678:
       notch_sig: boolean
@@ -8023,7 +8023,7 @@ Chunk:
       descript: The z coordinate of the chunk.
       notch_class: kx
       csv: zPosition
-      modifiers: 17
+      modifiers: 1
       notch: k
 Entity:
   methods:
@@ -8673,7 +8673,7 @@ Entity:
       descript: Axis aligned bounding box.
       notch_class: ep
       csv: boundingBox
-      modifiers: 17
+      modifiers: 1
       notch: z
     prevPosX:
       notch_sig: double
@@ -8898,7 +8898,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: clay
-      modifiers: 25
+      modifiers: 9
       notch: v
     wood:
       notch_sig: la
@@ -8906,7 +8906,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: wood
-      modifiers: 25
+      modifiers: 9
       notch: c
     ground:
       notch_sig: la
@@ -8914,7 +8914,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: ground
-      modifiers: 25
+      modifiers: 9
       notch: b
     plants:
       notch_sig: la
@@ -8922,7 +8922,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: plants
-      modifiers: 25
+      modifiers: 9
       notch: i
     rock:
       notch_sig: la
@@ -8930,7 +8930,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: rock
-      modifiers: 25
+      modifiers: 9
       notch: d
     leaves:
       notch_sig: la
@@ -8938,7 +8938,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: leaves
-      modifiers: 25
+      modifiers: 9
       notch: h
     field_4212:
       notch_sig: la
@@ -8946,7 +8946,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: field_4212
-      modifiers: 25
+      modifiers: 9
       notch: x
     iron:
       notch_sig: la
@@ -8954,7 +8954,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: iron
-      modifiers: 25
+      modifiers: 9
       notch: e
     sponge:
       notch_sig: la
@@ -8962,7 +8962,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: sponge
-      modifiers: 25
+      modifiers: 9
       notch: j
     cloth:
       notch_sig: la
@@ -8970,7 +8970,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: cloth
-      modifiers: 25
+      modifiers: 9
       notch: k
     ice:
       notch_sig: la
@@ -8978,7 +8978,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: ice
-      modifiers: 25
+      modifiers: 9
       notch: r
     canBurn:
       notch_sig: boolean
@@ -8994,7 +8994,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: snow
-      modifiers: 25
+      modifiers: 9
       notch: s
     glass:
       notch_sig: la
@@ -9002,7 +9002,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: glass
-      modifiers: 25
+      modifiers: 9
       notch: o
     unused:
       notch_sig: la
@@ -9010,7 +9010,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: unused
-      modifiers: 25
+      modifiers: 9
       notch: q
     water:
       notch_sig: la
@@ -9018,7 +9018,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: water
-      modifiers: 25
+      modifiers: 9
       notch: f
     sand:
       notch_sig: la
@@ -9026,7 +9026,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: sand
-      modifiers: 25
+      modifiers: 9
       notch: m
     pumpkin:
       notch_sig: la
@@ -9034,7 +9034,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: pumpkin
-      modifiers: 25
+      modifiers: 9
       notch: w
     builtSnow:
       notch_sig: la
@@ -9042,7 +9042,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: builtSnow
-      modifiers: 25
+      modifiers: 9
       notch: t
     fire:
       notch_sig: la
@@ -9050,7 +9050,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: fire
-      modifiers: 25
+      modifiers: 9
       notch: l
     lava:
       notch_sig: la
@@ -9058,7 +9058,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: lava
-      modifiers: 25
+      modifiers: 9
       notch: g
     tnt:
       notch_sig: la
@@ -9066,7 +9066,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: tnt
-      modifiers: 25
+      modifiers: 9
       notch: p
     air:
       notch_sig: la
@@ -9074,7 +9074,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: air
-      modifiers: 25
+      modifiers: 9
       notch: a
     circuits:
       notch_sig: la
@@ -9082,7 +9082,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: circuits
-      modifiers: 25
+      modifiers: 9
       notch: n
     cactus:
       notch_sig: la
@@ -9090,7 +9090,7 @@ Material:
       descript: '*'
       notch_class: la
       csv: cactus
-      modifiers: 25
+      modifiers: 9
       notch: u
 ServerConfigurationManager:
   methods:
@@ -9662,7 +9662,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: shrubland
-      modifiers: 25
+      modifiers: 9
       notch: f
     desert:
       notch_sig: jq
@@ -9670,7 +9670,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: desert
-      modifiers: 25
+      modifiers: 9
       notch: h
     taiga:
       notch_sig: jq
@@ -9678,7 +9678,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: taiga
-      modifiers: 25
+      modifiers: 9
       notch: g
     tundra:
       notch_sig: jq
@@ -9686,7 +9686,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: tundra
-      modifiers: 25
+      modifiers: 9
       notch: k
     topBlock:
       notch_sig: byte
@@ -9702,7 +9702,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: hell
-      modifiers: 25
+      modifiers: 9
       notch: l
     forest:
       notch_sig: jq
@@ -9710,7 +9710,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: forest
-      modifiers: 25
+      modifiers: 9
       notch: d
     field_6161:
       notch_sig: int
@@ -9734,7 +9734,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: rainforest
-      modifiers: 25
+      modifiers: 9
       notch: a
     iceDesert:
       notch_sig: jq
@@ -9742,7 +9742,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: iceDesert
-      modifiers: 25
+      modifiers: 9
       notch: j
     swampland:
       notch_sig: jq
@@ -9750,7 +9750,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: swampland
-      modifiers: 25
+      modifiers: 9
       notch: b
     biomeMonsters:
       notch_sig: java.lang.Class[]
@@ -9774,7 +9774,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: savanna
-      modifiers: 25
+      modifiers: 9
       notch: e
     biomeLookupTable:
       notch_sig: jq[]
@@ -9798,7 +9798,7 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: plains
-      modifiers: 25
+      modifiers: 9
       notch: i
     seasonalForest:
       notch_sig: jq
@@ -9806,14 +9806,14 @@ MobSpawnerBase:
       descript: '*'
       notch_class: jq
       csv: seasonalForest
-      modifiers: 25
+      modifiers: 9
       notch: c
 StepSoundStone:
   methods: {}
   superclass: cp
   searge: StepSoundStone
   class: StepSoundStone
-  modifiers: 1040
+  modifiers: 1024
   notch: an
   fields: {}
 BlockObsidian:
@@ -10110,7 +10110,7 @@ HashEntry2:
       descript: '*'
       notch_class: cr
       csv: field_1025
-      modifiers: 16
+      modifiers: 0
       notch: a
     field_1024:
       notch_sig: java.lang.Object
@@ -10134,7 +10134,7 @@ HashEntry2:
       descript: '*'
       notch_class: cr
       csv: field_1026
-      modifiers: 16
+      modifiers: 0
       notch: d
 TileEntityChest:
   methods:
@@ -10230,7 +10230,7 @@ ServerGuiFocusAdapter:
       descript: Reference to the ServerGui object.
       notch_class: ag
       csv: mcServerGui
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 ThreadSleepForever:
   methods:
@@ -10262,7 +10262,7 @@ ThreadSleepForever:
       descript: A reference to the Minecraft object.
       notch_class: cn
       csv: mc
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 GuiLogFormatter:
   methods:
@@ -10294,7 +10294,7 @@ GuiLogFormatter:
       descript: Reference to the GuiLogOutputHandler.
       notch_class: hu
       csv: outputHandler
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 Packet23VehicleSpawn:
   methods:
@@ -11078,7 +11078,7 @@ HashEntry:
       descript: '*'
       notch_class: iv
       csv: hashEntry
-      modifiers: 16
+      modifiers: 0
       notch: a
     slotHash:
       notch_sig: int
@@ -11086,7 +11086,7 @@ HashEntry:
       descript: '*'
       notch_class: iv
       csv: slotHash
-      modifiers: 16
+      modifiers: 0
       notch: d
     valueEntry:
       notch_sig: java.lang.Object
@@ -11166,7 +11166,7 @@ SlotCrafting:
       descript: '*'
       notch_class: li
       csv: field_20103
-      modifiers: 18
+      modifiers: 2
       notch: a
 ItemMinecart:
   methods:
@@ -11502,7 +11502,7 @@ CraftingRecipe:
       descript: '*'
       notch_class: dr
       csv: field_20168
-      modifiers: 17
+      modifiers: 1
       notch: a
     field_20170:
       notch_sig: int[]
@@ -11558,7 +11558,7 @@ ThreadLoginVerifier:
       descript: The login packet to be verified.
       notch_class: ei
       csv: loginPacket
-      modifiers: 4112
+      modifiers: 4096
       notch: a
     loginHandler:
       notch_sig: gi
@@ -11566,7 +11566,7 @@ ThreadLoginVerifier:
       descript: The login handler that spawned this thread.
       notch_class: ei
       csv: loginHandler
-      modifiers: 4112
+      modifiers: 4096
       notch: b
 PlayerNBTManager:
   methods:
@@ -11967,7 +11967,7 @@ ThreadCommandReader:
       descript: Reference to the MinecraftServer object.
       notch_class: cl
       csv: mcServer
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 Slot:
   methods:
@@ -12031,7 +12031,7 @@ Slot:
       descript: '*'
       notch_class: gp
       csv: field_20097
-      modifiers: 18
+      modifiers: 2
       notch: a
     field_20096:
       notch_sig: lg
@@ -12039,7 +12039,7 @@ Slot:
       descript: '*'
       notch_class: gp
       csv: field_20096
-      modifiers: 18
+      modifiers: 2
       notch: b
     field_20099:
       notch_sig: int
@@ -12167,7 +12167,7 @@ SlotArmor:
       descript: '*'
       notch_class: cb
       csv: field_20101
-      modifiers: 4112
+      modifiers: 4096
       notch: b
     field_20102:
       notch_sig: int
@@ -12175,7 +12175,7 @@ SlotArmor:
       descript: '*'
       notch_class: cb
       csv: field_20102
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 EntityMobs:
   methods:
@@ -12518,7 +12518,7 @@ EnumMobType:
   superclass: java.lang.Enum
   searge: EnumMobType
   class: EnumMobType
-  modifiers: 17425
+  modifiers: 17409
   notch: ds
   fields:
     field_990:
@@ -12527,7 +12527,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: field_990
-      modifiers: 4122
+      modifiers: 4106
       notch: d
     ds_mobs:
       notch_sig: ds
@@ -12535,7 +12535,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: ds_mobs
-      modifiers: 16409
+      modifiers: 16393
       notch: b
     ds_players:
       notch_sig: ds
@@ -12543,7 +12543,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: ds_players
-      modifiers: 16409
+      modifiers: 16393
       notch: c
     ds_everything:
       notch_sig: ds
@@ -12551,7 +12551,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: ds_everything
-      modifiers: 16409
+      modifiers: 16393
       notch: a
 RecipesIngots:
   methods:
@@ -12703,7 +12703,7 @@ PlayerInstance:
       descript: '*'
       notch_class: ap
       csv: field_1073
-      modifiers: 4112
+      modifiers: 4096
       notch: a
     field_1064:
       notch_sig: int
@@ -14145,7 +14145,7 @@ ServerWindowAdapter:
   superclass: java.awt.event.WindowAdapter
   searge: ServerWindowAdapter
   class: ServerWindowAdapter
-  modifiers: 1040
+  modifiers: 1024
   notch: ac
   fields:
     mcServer:
@@ -14154,7 +14154,7 @@ ServerWindowAdapter:
       descript: Reference to the MinecraftServer object.
       notch_class: ac
       csv: mcServer
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 Packet7:
   methods:
@@ -14249,7 +14249,7 @@ EnumCreatureType:
   superclass: java.lang.Enum
   searge: EnumCreatureType
   class: EnumCreatureType
-  modifiers: 17425
+  modifiers: 17409
   notch: ku
   fields:
     field_6155:
@@ -14258,7 +14258,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: field_6155
-      modifiers: 4122
+      modifiers: 4106
       notch: e
     ku_monster:
       notch_sig: ku
@@ -14266,7 +14266,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: ku_monster
-      modifiers: 16409
+      modifiers: 16393
       notch: a
     field_4221:
       notch_sig: java.lang.Class
@@ -14274,7 +14274,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: field_4221
-      modifiers: 17
+      modifiers: 1
       notch: c
     ku_creature:
       notch_sig: ku
@@ -14282,7 +14282,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: ku_creature
-      modifiers: 16409
+      modifiers: 16393
       notch: b
     maxNumberOfEntityType:
       notch_sig: int
@@ -14290,7 +14290,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: maxNumberOfEntityType
-      modifiers: 17
+      modifiers: 1
       notch: d
 Packet38:
   methods:
@@ -14994,7 +14994,7 @@ RecipeSorter:
       descript: '*'
       notch_class: kd
       csv: field_20108
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 EntityZombieSimple:
   methods:
@@ -15234,7 +15234,7 @@ ServerCommand:
       descript: The command string.
       notch_class: at
       csv: command
-      modifiers: 17
+      modifiers: 1
       notch: a
     commandListener:
       notch_sig: fn
@@ -15242,7 +15242,7 @@ ServerCommand:
       descript: The CommandListener object associated with this command.
       notch_class: at
       csv: commandListener
-      modifiers: 17
+      modifiers: 1
       notch: b
 BlockMushroom:
   methods:
@@ -15410,7 +15410,7 @@ CraftingManager:
       descript: '*'
       notch_class: he
       csv: field_20155
-      modifiers: 26
+      modifiers: 10
       notch: a
 BlockButton:
   methods:
@@ -15547,7 +15547,7 @@ PathPoint:
       descript: The x coordinate of this point
       notch_class: b
       csv: xCoord
-      modifiers: 17
+      modifiers: 1
       notch: a
     previous:
       notch_sig: b
@@ -15563,7 +15563,7 @@ PathPoint:
       descript: A hash of the coordinates used to identify this point
       notch_class: b
       csv: hash
-      modifiers: 17
+      modifiers: 1
       notch: d
     distanceToTarget:
       notch_sig: float
@@ -15579,7 +15579,7 @@ PathPoint:
       descript: The z coordinate of this point
       notch_class: b
       csv: zCoord
-      modifiers: 17
+      modifiers: 1
       notch: c
     totalPathDistance:
       notch_sig: float
@@ -15595,7 +15595,7 @@ PathPoint:
       descript: The y coordinate of this point
       notch_class: b
       csv: yCoord
-      modifiers: 17
+      modifiers: 1
       notch: b
     isFirst:
       notch_sig: boolean
@@ -15651,7 +15651,7 @@ PathEntity:
       descript: The total length of the path
       notch_class: dc
       csv: pathLength
-      modifiers: 17
+      modifiers: 1
       notch: a
     points:
       notch_sig: b[]
@@ -15659,7 +15659,7 @@ PathEntity:
       descript: The actual points in the path
       notch_class: dc
       csv: points
-      modifiers: 18
+      modifiers: 2
       notch: b
 ItemFood:
   methods:
@@ -15819,7 +15819,7 @@ StepSound:
       descript: '*'
       notch_class: cp
       csv: field_1030
-      modifiers: 17
+      modifiers: 1
       notch: c
     field_1029:
       notch_sig: java.lang.String
@@ -15827,7 +15827,7 @@ StepSound:
       descript: '*'
       notch_class: cp
       csv: field_1029
-      modifiers: 17
+      modifiers: 1
       notch: a
     field_1028:
       notch_sig: float
@@ -15835,7 +15835,7 @@ StepSound:
       descript: '*'
       notch_class: cp
       csv: field_1028
-      modifiers: 17
+      modifiers: 1
       notch: b
 BlockCactus:
   methods:
@@ -15931,7 +15931,7 @@ NetworkMasterThread:
       descript: Reference to the NetworkManager object.
       notch_class: jr
       csv: netManager
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 Packet11PlayerPosition:
   methods:
@@ -16043,7 +16043,7 @@ MCHashTable2:
       descript: '*'
       notch_class: fv
       csv: field_951
-      modifiers: 18
+      modifiers: 2
       notch: d
 BlockBloodStone:
   methods: {}
@@ -16291,7 +16291,7 @@ EntitySkeleton:
       descript: '*'
       notch_class: ft
       csv: field_4108
-      modifiers: 26
+      modifiers: 10
       notch: a
 ServerGUI:
   methods:
@@ -16395,7 +16395,7 @@ EntityPigZombie:
       descript: '*'
       notch_class: kc
       csv: field_4107
-      modifiers: 26
+      modifiers: 10
       notch: c
 Packet2Handshake:
   methods:
@@ -16499,7 +16499,7 @@ EntityMinecart:
       descript: '*'
       notch_class: kq
       csv: field_468
-      modifiers: 26
+      modifiers: 10
       notch: am
     field_9160:
       notch_sig: double
@@ -17166,14 +17166,14 @@ ThreadMonitorConnection:
       descript: This was actually an inner class of NetworkManager, so this field is the reference to 'this' NetworkManager.
       notch_class: js
       csv: netManager
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 StepSoundSand:
   methods: {}
   superclass: cp
   searge: StepSoundSand
   class: StepSoundSand
-  modifiers: 1040
+  modifiers: 1024
   notch: am
   fields: {}
 WorldGenLightStone2:
@@ -17245,7 +17245,7 @@ ItemStack:
   superclass: java.lang.Object
   searge: ItemStack
   class: ItemStack
-  modifiers: 1041
+  modifiers: 1025
   notch: il
   fields:
     itemID:
@@ -17526,7 +17526,7 @@ NetworkWriterThread:
       descript: Reference to the NetworkManager object.
       notch_class: ju
       csv: netManager
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 WorldGenerator:
   methods:
@@ -17582,7 +17582,7 @@ FontAllowedCharacters:
       descript: '*'
       notch_class: fq
       csv: field_20162
-      modifiers: 25
+      modifiers: 9
       notch: a
 NBTTagByteArray:
   methods:
@@ -17775,7 +17775,7 @@ MetadataChunkBlock:
       descript: '*'
       notch_class: ev
       csv: field_957
-      modifiers: 17
+      modifiers: 1
       notch: a
     field_956:
       notch_sig: int
@@ -17999,7 +17999,7 @@ NetworkAcceptThread:
       descript: Reference to the MinecraftServer object.
       notch_class: dx
       csv: mcServer
-      modifiers: 4112
+      modifiers: 4096
       notch: a
     field_985:
       notch_sig: eh
@@ -18007,7 +18007,7 @@ NetworkAcceptThread:
       descript: '*'
       notch_class: dx
       csv: field_985
-      modifiers: 4112
+      modifiers: 4096
       notch: b
 BlockSapling:
   methods:
@@ -18191,7 +18191,7 @@ WorldGenBigTree:
       descript: '*'
       notch_class: ib
       csv: field_760
-      modifiers: 24
+      modifiers: 8
       notch: a
     field_751:
       notch_sig: double
@@ -18303,7 +18303,7 @@ NetworkManager:
       descript: Synchronization object used for read and write threads.
       notch_class: bs
       csv: threadSyncObject
-      modifiers: 25
+      modifiers: 9
       notch: a
     netHandler:
       notch_sig: fs
@@ -18359,7 +18359,7 @@ NetworkManager:
       descript: '*'
       notch_class: bs
       csv: field_12032
-      modifiers: 18
+      modifiers: 2
       notch: g
     terminationReason:
       notch_sig: java.lang.String
@@ -18639,7 +18639,7 @@ NoiseGenerator2:
       descript: '*'
       notch_class: by
       csv: field_4314
-      modifiers: 26
+      modifiers: 10
       notch: g
     field_4315:
       notch_sig: double
@@ -18647,7 +18647,7 @@ NoiseGenerator2:
       descript: '*'
       notch_class: by
       csv: field_4315
-      modifiers: 26
+      modifiers: 10
       notch: f
     field_4316:
       notch_sig: int[]
@@ -19134,7 +19134,7 @@ SpawnerAnimals:
   superclass: java.lang.Object
   searge: SpawnerAnimals
   class: SpawnerAnimals
-  modifiers: 1041
+  modifiers: 1025
   notch: ci
   fields:
     eligibleChunksForSpawning:
@@ -19295,7 +19295,7 @@ BlockFurnace:
       descript: '*'
       notch_class: fb
       csv: field_655
-      modifiers: 18
+      modifiers: 2
       notch: a
 Packet103:
   methods:
@@ -19486,7 +19486,7 @@ ThreadServerApplication:
   superclass: java.lang.Thread
   searge: ThreadServerApplication
   class: ThreadServerApplication
-  modifiers: 1041
+  modifiers: 1025
   notch: cj
   fields:
     mcServer:
@@ -19495,7 +19495,7 @@ ThreadServerApplication:
       descript: Reference to the MinecraftServer object.
       notch_class: cj
       csv: mcServer
-      modifiers: 4112
+      modifiers: 4096
       notch: a
 Packet14BlockDig:
   methods:

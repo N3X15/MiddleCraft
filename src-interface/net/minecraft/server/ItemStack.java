@@ -2,7 +2,7 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class ItemStack {
+public abstract class ItemStack {
 	// FIELDS
 	public int stackSize;
 	public int animationsToGo;
@@ -55,16 +55,6 @@ public abstract final class ItemStack {
 	 * 
 	 */
 	public abstract float a(Block a);
-	
-	/**
-	 * 
-	 */
-	public abstract static ItemStack a(ItemStack a);
-	
-	/**
-	 * 
-	 */
-	public abstract static boolean a(ItemStack a, ItemStack b);
 	
 	/**
 	 * 

@@ -5,7 +5,7 @@ package net.minecraft.server;
 public abstract class ItemTool extends Item {
 	// FIELDS
 	protected int field_262;
-	private gv[] blocksEffectiveAgainst;
+	private Block[] blocksEffectiveAgainst;
 	private float field_264;
 	private int field_263;
 	

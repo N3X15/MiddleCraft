@@ -4,13 +4,8 @@ package net.minecraft.server;
 
 public abstract class FontAllowedCharacters {
 	// FIELDS
-	public static final java.lang.String field_20162;
+	public static java.lang.String field_20162;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	private abstract static java.lang.String a();
 
 }

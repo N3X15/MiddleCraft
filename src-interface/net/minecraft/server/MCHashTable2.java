@@ -4,23 +4,13 @@ package net.minecraft.server;
 
 public abstract class MCHashTable2 {
 	// FIELDS
-	private transient cr[] field_949;
+	private transient HashEntry2[] field_949;
 	private transient int field_948;
 	private int field_952;
-	private final float field_951;
+	private float field_951;
 	private transient volatile int field_950;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	private abstract static int a(int a);
-	
-	/**
-	 * 
-	 */
-	private abstract static int a(int a, int b);
 	
 	/**
 	 * 
@@ -36,15 +26,5 @@ public abstract class MCHashTable2 {
 	 * 
 	 */
 	public abstract java.lang.Object b(long a);
-	
-	/**
-	 * 
-	 */
-	abstract static int d(long a);
-	
-	/**
-	 * 
-	 */
-	private abstract static int e(long a);
 
 }

@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class InventoryCrafting {
 	// FIELDS
-	private il[] field_20076;
+	private ItemStack[] field_20076;
 	private int field_20075;
 	private CraftingInventoryCB field_20077;
 	

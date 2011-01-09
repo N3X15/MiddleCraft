@@ -9,7 +9,7 @@ public abstract class ChunkProviderLoadOrGenerate {
 	private Chunk field_723;
 	private IChunkProvider field_722;
 	private IChunkLoader field_721;
-	private kx[] chunks;
+	private Chunk[] chunks;
 	private World worldObj;
 	private Chunk field_718;
 	

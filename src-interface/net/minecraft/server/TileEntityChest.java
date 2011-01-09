@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class TileEntityChest extends TileEntity {
 	// FIELDS
-	private il[] chestContents;
+	private ItemStack[] chestContents;
 	
 	// METHODS
 	

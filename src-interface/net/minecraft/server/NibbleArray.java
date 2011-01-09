@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class NibbleArray {
 	// FIELDS
-	public final byte[] data;
+	public byte[] data;
 	
 	// METHODS
 	

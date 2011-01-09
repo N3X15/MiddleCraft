@@ -49,50 +49,51 @@ import org.yaml.snakeyaml.Yaml;
 
 /**
  * @author Rob
- *
+ * 
  */
 public class Mappings {
 
-	static Timer saveTimer=new Timer();
+	static Timer saveTimer = new Timer();
 
 	static Logger l = Logger.getLogger("Middlecraft");
 
-	public static String serverVersion="1.1_02"; // Loads the appropriate object mappings 
+	public static String serverVersion = "1.1_02"; // Loads the appropriate
+													// object mappings
 
-	public static HashMap<String,MCClassInfo> classes = new HashMap<String,MCClassInfo>();
+	public static HashMap<String, MCClassInfo> classes = new HashMap<String, MCClassInfo>();
 	public static ClassMap deobfuscationMap = new ClassMap();
-	public static Map<String,Class<?>> loadedClasses = new HashMap<String,Class<?>>();
-
+	public static Map<String, Class<?>> loadedClasses = new HashMap<String, Class<?>>();
 
 	public static void initialize() throws IOException {
 		// Read data from our simplified MCP deobfuscation mappings
 		File data = new File(String.format("data/server/%s/", serverVersion));
-		if(!data.exists()) {
-			l.log(Level.WARNING,"No mappings folder exists, creating...");
+		if (!data.exists()) {
+			l.log(Level.WARNING, "No mappings folder exists, creating...");
 			data.mkdirs();
 			save();
 		}
 		ReadClasses();
 	}
 
-
 	@SuppressWarnings("unchecked")
 	private static boolean ReadClasses() throws IOException {
 		l.info("Loading class mappings...");
 		// CLASS_NAME,OBF_CLASS_NAME,DESCRIPTION
-		File f  = new File(String.format("data/server/%s/mappings.yml", serverVersion));
-		if(!f.exists()) {
+		File f = new File(String.format("data/server/%s/mappings.yml",
+				serverVersion));
+		if (!f.exists()) {
 			l.severe("No class mapping table!");
 			return false;
 		}
 		Yaml yml = new Yaml();
-		Map<String,Object> _classes = (Map<String,Object>)yml.load(new FileReader(f));
+		Map<String, Object> _classes = (Map<String, Object>) yml
+				.load(new FileReader(f));
 		Collection<Object> vals = new ArrayList<Object>(_classes.values());
-		for(Object o : vals) {
-			if(o instanceof Map<?,?>) {
-				MCClassInfo ci = new MCClassInfo((Map<String,Object>)o);
-				classes.put(ci.realName,ci);
-				//l.info("Loaded "+ci.realName+".");
+		for (Object o : vals) {
+			if (o instanceof Map<?, ?>) {
+				MCClassInfo ci = new MCClassInfo((Map<String, Object>) o);
+				classes.put(ci.realName, ci);
+				// l.info("Loaded "+ci.realName+".");
 			}
 		}
 		return true;
@@ -100,67 +101,76 @@ public class Mappings {
 
 	/**
 	 * Add a class to the list.
+	 * 
 	 * @param name
-	 * @param superClass 
+	 * @param superClass
 	 */
-	public static void addObfuscatedClassDefinition(String name, String superClass) {
+	public static void addObfuscatedClassDefinition(String name,
+			String superClass) {
 		unkClasses++;
-		if(superClass=="") {
+		if (superClass == "") {
 			try {
-				superClass = ClassPool.getDefault().get(name).getSuperclass().getName();
-			} catch (NotFoundException e) {	} 
+				superClass = ClassPool.getDefault().get(name).getSuperclass()
+						.getName();
+			} catch (NotFoundException e) {
+			}
 		}
 		MCClassInfo ci = new MCClassInfo();
-		ci.name="*";
-		ci.realName=name;
-		ci.description="*";
-		ci.realSuperClass=superClass;
-		classes.put(ci.realName, ci);
-		setDirty();
-	}
-	static int unkClasses=0;
-	public static void addReadableClassDefinition(String name) {
-		unkClasses++;
-		MCClassInfo ci = new MCClassInfo();
-		ci.name=name;
-		ci.realName="UNKNOWN_"+Integer.toString(unkClasses);
-		ci.description="";
+		ci.name = "*";
+		ci.realName = name;
+		ci.description = "*";
+		ci.realSuperClass = superClass;
 		classes.put(ci.realName, ci);
 		setDirty();
 	}
 
-	static int unkFields=0; 
-	public static void addObfuscatedFieldDefinition(String className, String fieldName, String type) {
+	static int unkClasses = 0;
+
+	public static void addReadableClassDefinition(String name) {
+		unkClasses++;
+		MCClassInfo ci = new MCClassInfo();
+		ci.name = name;
+		ci.realName = "UNKNOWN_" + Integer.toString(unkClasses);
+		ci.description = "";
+		classes.put(ci.realName, ci);
+		setDirty();
+	}
+
+	static int unkFields = 0;
+
+	public static void addObfuscatedFieldDefinition(String className,
+			String fieldName, String type) {
 		unkFields++;
 		MCClassInfo ci = classes.get(className);
 		MCFieldInfo field = new MCFieldInfo();
-		field.className=className;
-		field.realName=fieldName;
-		field.type=type;
-		ci.fields.put(fieldName,field);
+		field.className = className;
+		field.realName = fieldName;
+		field.type = type;
+		ci.fields.put(fieldName, field);
 		classes.put(className, ci);
 		setDirty();
 	}
 
-	static int unkMethods=0;
+	static int unkMethods = 0;
 
 	private static boolean dirty;
 
-	public static Map<String, String> obfuscationMap = new HashMap<String,String>();
+	public static Map<String, String> obfuscationMap = new HashMap<String, String>();
 
-	public static void addObfuscatedMethodDefinition(String className, String methodName, String signature, String extraData) {
-		//unkMethods++;
-		//l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
+	public static void addObfuscatedMethodDefinition(String className,
+			String methodName, String signature, String extraData) {
+		// unkMethods++;
+		// l.log(Level.WARNING,String.format(" + [M] %s.%s %s",className,methodName,signature));
 		MCClassInfo ci = classes.get(className);
 
 		MCMethodInfo mi = new MCMethodInfo();
-		mi.name="";
-		mi.parentClass=className;
-		mi.realName=methodName;
-		mi.signature=signature;
+		mi.name = "";
+		mi.parentClass = className;
+		mi.realName = methodName;
+		mi.signature = signature;
 		mi.description = extraData;
 		ci.methods.put(mi.toIndex(), mi);
-		//ci.methodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
+		// ci.methodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
 		classes.put(className, ci);
 		setDirty();
 	}
@@ -169,15 +179,16 @@ public class Mappings {
 	 * 
 	 */
 	private static void setDirty() {
-		dirty=true;
+		dirty = true;
 		SaveTask st = new SaveTask();
 		saveTimer.schedule(st, 5000);
 	}
 
 	public static void save() {
-		if(!dirty) return;
+		if (!dirty)
+			return;
 		File data = new File(String.format("data/server/%s/", serverVersion));
-		if(!data.exists())
+		if (!data.exists())
 			data.mkdirs();
 		try {
 			writeClasses();
@@ -187,80 +198,95 @@ public class Mappings {
 		}
 	}
 
-
 	/**
-	 * @throws IOException 
+	 * @throws IOException
 	 * 
 	 */
 	private static void writeClasses() throws IOException {
 		l.info("Writing class mappings to disk...");
-	    DumperOptions options = new DumperOptions();
-	    options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
+		DumperOptions options = new DumperOptions();
+		options.setDefaultFlowStyle(DumperOptions.FlowStyle.BLOCK);
 		Yaml yml = new Yaml(options);
-		Map<String,Object> classMap = new HashMap<String,Object>();
-		for(MCClassInfo ci : classes.values()) {
+		Map<String, Object> classMap = new HashMap<String, Object>();
+		for (MCClassInfo ci : classes.values()) {
 			classMap.put(ci.name, ci.toMap());
 		}
-		yml.dump(classMap, new FileWriter(String.format("data/server/%s/mappings.yml", serverVersion))); 			
+		yml.dump(
+				classMap,
+				new FileWriter(String.format("data/server/%s/mappings.yml",
+						serverVersion)));
 	}
-
 
 	/**
 	 * @param className
 	 * @return
 	 */
 	public static String getNewClassName(String className) {
+		if (className.endsWith("[]")) {
+			String realClassName = className.substring(0,
+					className.lastIndexOf("["));
+			// l.info(String.format("%s -> %s",className,realClassName));
+			return getNewClassName(realClassName) + "[]";
+		}
 		MCClassInfo ci = classes.get(className);
-		if(ci==null) return className;
+		if (ci == null)
+			return className;
 		return ci.name;
 	}
 
 	/**
 	 * 
-	 * @param className OBFUSCATED class name.
+	 * @param className
+	 *            OBFUSCATED class name.
 	 * @param name
 	 * @param signature
 	 * @return
 	 */
-	public static MCMethodInfo getMethod(String className, String name, String signature) {
+	public static MCMethodInfo getMethod(String className, String name,
+			String signature) {
 		String ocn = getOldClassName(className);
 		MCClassInfo ci = classes.get(className);
-		//l.info(String.format("getMethod(%s,%s,%s)",className,name,signature));
-		if(ci==null) {
+		// l.info(String.format("getMethod(%s,%s,%s)",className,name,signature));
+		if (ci == null) {
 			ci = classes.get(ocn);
-			//l.info("Found old name "+ocn);
+			// l.info("Found old name "+ocn);
 		}
-		if(ci==null) {
-			l.log(Level.WARNING, "Can't find parent class "+className+" ("+ocn+") for method "+name);
+		if (ci == null) {
+			l.log(Level.WARNING, "Can't find parent class " + className + " ("
+					+ ocn + ") for method " + name);
 			return null;
 		}
-		for(MCMethodInfo mi : ci.methods.values()) {
-			if((mi.name.equals(name) || mi.realName.equals(name)) && mi.signature.equals(signature)) {
+		for (MCMethodInfo mi : ci.methods.values()) {
+			if ((mi.name.equals(name) || mi.realName.equals(name))
+					&& mi.signature.equals(signature)) {
 				return mi;
 			}
 		}
 		MCMethodInfo mi = new MCMethodInfo();
-		mi.realName=name;
-		mi.signature=signature;
-		addObfuscatedMethodDefinition(className,name,signature, "");
+		mi.realName = name;
+		mi.signature = signature;
+		addObfuscatedMethodDefinition(className, name, signature, "");
 		return null;
 	}
 
 	/**
 	 * 
-	 * @param className OBFUSCATED class name.
+	 * @param className
+	 *            OBFUSCATED class name.
 	 * @param name
 	 * @param signature
 	 * @return
 	 */
-	public static MCFieldInfo getField(String className, String name, String type) {
+	public static MCFieldInfo getField(String className, String name,
+			String type) {
 		MCClassInfo ci = classes.get(className);
-		if(ci==null) {
-			l.log(Level.WARNING, "Can't find parent class "+className+" for field "+name);
+		if (ci == null) {
+			l.log(Level.WARNING, "Can't find parent class " + className
+					+ " for field " + name);
 			return null;
 		}
-		if(!ci.fields.containsKey(name)) {
-			addObfuscatedFieldDefinition(className,name,type);
+		if (!ci.fields.containsKey(name)) {
+			addObfuscatedFieldDefinition(className, name, type);
 			return null;
 		}
 		return ci.fields.get(name);
@@ -271,9 +297,15 @@ public class Mappings {
 	 * @return
 	 */
 	public static String getOldClassName(String className) {
-		for(MCClassInfo ci : classes.values()) {
-			if(ci.name.equals(className)) {
-				//l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
+		if (className.endsWith("[]")) {
+			String realClassName = className.substring(0,
+					className.lastIndexOf("["));
+			// l.info(String.format("%s -> %s",className,realClassName));
+			return getOldClassName(realClassName) + "[]";
+		}
+		for (MCClassInfo ci : classes.values()) {
+			if (ci.name.equals(className)) {
+				// l.info(String.format("getOldClassName: %s->%s",className,ci.realName));
 				return ci.realName;
 			}
 		}
@@ -282,17 +314,20 @@ public class Mappings {
 
 	/**
 	 * Update classdef superclass information. For reference, mostly.
+	 * 
 	 * @param cc
 	 */
 	public static void updateSuperclassInfo(CtClass cc) {
 
 		try {
 			MCClassInfo ci = classes.get(cc.getName());
-			if(ci==null) return;
+			if (ci == null)
+				return;
 			CtClass sc = cc.getSuperclass();
-			if(sc==null) return;
-			if(!ci.realSuperClass.equals(sc.getName())) {
-				ci.realSuperClass=sc.getName();
+			if (sc == null)
+				return;
+			if (!ci.realSuperClass.equals(sc.getName())) {
+				ci.realSuperClass = sc.getName();
 				classes.put(cc.getName(), ci);
 				setDirty();
 			}

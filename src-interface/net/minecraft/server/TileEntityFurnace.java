@@ -7,7 +7,7 @@ public abstract class TileEntityFurnace extends TileEntity {
 	public int furnaceBurnTime;
 	public int currentItemBurnTime;
 	public int furnaceCookTime;
-	private il[] furnaceItemStacks;
+	private ItemStack[] furnaceItemStacks;
 	
 	// METHODS
 	

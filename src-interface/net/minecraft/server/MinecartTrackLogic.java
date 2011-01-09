@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class MinecartTrackLogic {
 	// FIELDS
-	final BlockMinecartTrack field_888;
+	 BlockMinecartTrack field_888;
 	private World worldObj;
 	private int field_893;
 	private int field_892;
@@ -13,11 +13,6 @@ abstract class MinecartTrackLogic {
 	private java.util.List field_889;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	abstract static int a(MinecartTrackLogic a);
 	
 	/**
 	 * 

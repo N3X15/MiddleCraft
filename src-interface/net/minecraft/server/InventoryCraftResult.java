@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class InventoryCraftResult {
 	// FIELDS
-	private il[] field_20071;
+	private ItemStack[] field_20071;
 	
 	// METHODS
 	

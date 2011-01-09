@@ -29,16 +29,6 @@ public abstract class NetLoginHandler extends NetHandler {
 	/**
 	 * 
 	 */
-	abstract static java.lang.String a(NetLoginHandler a);
-	
-	/**
-	 * 
-	 */
-	abstract static Packet1Login a(NetLoginHandler a, Packet1Login b);
-	
-	/**
-	 * 
-	 */
 	public abstract void a(Packet2Handshake a);
 	
 	/**

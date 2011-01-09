@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class GuiStatsListener {
 	// FIELDS
-	final GuiStatsComponent statsComponent;
+	 GuiStatsComponent statsComponent;
 	
 	// METHODS
 	

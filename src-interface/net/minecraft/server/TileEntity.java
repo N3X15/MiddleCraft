@@ -21,17 +21,7 @@ public abstract class TileEntity {
 	/**
 	 * 
 	 */
-	private abstract static void a(java.lang.Class a, java.lang.String b);
-	
-	/**
-	 * 
-	 */
 	public abstract void b(NBTTagCompound a);
-	
-	/**
-	 * 
-	 */
-	public abstract static TileEntity c(NBTTagCompound a);
 	
 	/**
 	 * 

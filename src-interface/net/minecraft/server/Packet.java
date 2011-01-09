@@ -6,7 +6,7 @@ public abstract class Packet {
 	// FIELDS
 	private static java.util.Map packetIdToClassMap;
 	private static java.util.Map packetClassToIdMap;
-	public final long field_20009;
+	public long field_20009;
 	public boolean isChunkDataPacket;
 	
 	// METHODS
@@ -15,16 +15,6 @@ public abstract class Packet {
 	 * 
 	 */
 	public abstract int a();
-	
-	/**
-	 * 
-	 */
-	public abstract static Packet a(int a);
-	
-	/**
-	 * 
-	 */
-	abstract static void a(int a, java.lang.Class b);
 	
 	/**
 	 * 
@@ -44,16 +34,6 @@ public abstract class Packet {
 	/**
 	 * 
 	 */
-	public abstract static void a(Packet a, java.io.DataOutputStream b);
-	
-	/**
-	 * 
-	 */
 	public abstract int b();
-	
-	/**
-	 * 
-	 */
-	public abstract static Packet b(java.io.DataInputStream a);
 
 }

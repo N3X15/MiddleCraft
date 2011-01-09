@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class SlotCrafting extends Slot {
 	// FIELDS
-	private final IInventory field_20103;
+	private IInventory field_20103;
 	
 	// METHODS
 	

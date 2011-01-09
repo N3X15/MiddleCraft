@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 public abstract class Slot {
 	// FIELDS
-	private final int field_20097;
-	private final IInventory field_20096;
+	private int field_20097;
+	private IInventory field_20096;
 	public int field_20100;
 	public int field_20099;
 	public int field_20098;

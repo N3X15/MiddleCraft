@@ -16,26 +16,6 @@ public abstract class NBTBase {
 	/**
 	 * 
 	 */
-	public abstract static NBTBase a(byte a);
-	
-	/**
-	 * 
-	 */
-	public abstract static void a(NBTBase a, java.io.DataOutput b);
-	
-	/**
-	 * 
-	 */
-	public abstract static java.lang.String b(byte a);
-	
-	/**
-	 * 
-	 */
-	public abstract static NBTBase b(java.io.DataInput a);
-	
-	/**
-	 * 
-	 */
 	public abstract java.lang.String c();
 	
 	/**

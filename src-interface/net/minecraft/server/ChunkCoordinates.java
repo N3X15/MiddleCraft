@@ -2,10 +2,10 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-abstract final class ChunkCoordinates {
+abstract class ChunkCoordinates {
 	// FIELDS
-	public final int field_529;
-	public final int field_528;
+	public int field_529;
+	public int field_528;
 	
 	// METHODS
 	

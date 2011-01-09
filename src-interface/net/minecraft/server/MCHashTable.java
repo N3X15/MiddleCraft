@@ -4,10 +4,10 @@ package net.minecraft.server;
 
 public abstract class MCHashTable {
 	// FIELDS
-	private transient iv[] slots;
+	private transient HashEntry[] slots;
 	private transient int count;
 	private int threshold;
-	private final float growFactor;
+	private float growFactor;
 	private transient volatile int versionStamp;
 	
 	// METHODS
@@ -25,11 +25,6 @@ public abstract class MCHashTable {
 	/**
 	 * 
 	 */
-	private abstract static int a(int a, int b);
-	
-	/**
-	 * 
-	 */
 	public abstract void a(int a, java.lang.Object b);
 	
 	/**
@@ -41,15 +36,5 @@ public abstract class MCHashTable {
 	 * 
 	 */
 	public abstract java.lang.Object d(int a);
-	
-	/**
-	 * 
-	 */
-	abstract static int f(int a);
-	
-	/**
-	 * 
-	 */
-	private abstract static int g(int a);
 
 }

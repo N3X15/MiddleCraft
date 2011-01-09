@@ -33,13 +33,13 @@ public abstract class World {
 	public int spawnY;
 	public int spawnZ;
 	public boolean field_9212;
-	public final WorldProvider worldProvider;
+	public WorldProvider worldProvider;
 	protected java.util.List worldAccesses;
 	public java.io.File field_9211;
 	public java.io.File field_797;
 	public long randomSeed;
 	public long sizeOnDisk;
-	public final java.lang.String field_9210;
+	public java.lang.String field_9210;
 	public boolean field_9209;
 	static int field_4268;
 	public boolean multiplayerWorld;

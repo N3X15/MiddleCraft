@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 abstract class ThreadLoginVerifier extends java.lang.Thread {
 	// FIELDS
-	final Packet1Login loginPacket;
-	final NetLoginHandler loginHandler;
+	 Packet1Login loginPacket;
+	 NetLoginHandler loginHandler;
 	
 	// METHODS
 	

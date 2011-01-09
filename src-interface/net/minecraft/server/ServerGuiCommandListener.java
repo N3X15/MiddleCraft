@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 abstract class ServerGuiCommandListener {
 	// FIELDS
-	final javax.swing.JTextField textField;
-	final ServerGUI mcServerGui;
+	 javax.swing.JTextField textField;
+	 ServerGUI mcServerGui;
 	
 	// METHODS
 	

@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class MetadataChunkBlock {
 	// FIELDS
-	public final EnumSkyBlock field_957;
+	public EnumSkyBlock field_957;
 	public int field_956;
 	public int field_962;
 	public int field_961;

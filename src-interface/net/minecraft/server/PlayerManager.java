@@ -29,11 +29,6 @@ public abstract class PlayerManager {
 	/**
 	 * 
 	 */
-	abstract static net.minecraft.server.MinecraftServer a(PlayerManager a);
-	
-	/**
-	 * 
-	 */
 	public abstract int b();
 	
 	/**
@@ -44,16 +39,6 @@ public abstract class PlayerManager {
 	/**
 	 * 
 	 */
-	abstract static MCHashTable2 b(PlayerManager a);
-	
-	/**
-	 * 
-	 */
 	public abstract void c(EntityPlayerMP a);
-	
-	/**
-	 * 
-	 */
-	abstract static java.util.List c(PlayerManager a);
 
 }

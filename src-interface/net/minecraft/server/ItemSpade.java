@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class ItemSpade extends ItemTool {
 	// FIELDS
-	private static gv[] blocksGoodAgainst;
+	private static Block[] blocksGoodAgainst;
 	
 	// METHODS
 	

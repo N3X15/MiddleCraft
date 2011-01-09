@@ -27,10 +27,5 @@ public abstract class BlockSand extends Block {
 	 * 
 	 */
 	public abstract void e(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract static boolean g(World a, int b, int c, int d);
 
 }

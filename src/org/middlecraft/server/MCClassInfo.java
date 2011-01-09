@@ -170,6 +170,8 @@ public class MCClassInfo {
 			classorinterface="interface"; // I think?
 		if(!Modifier.isAbstract(modifiers) && !Modifier.isInterface(modifiers))
 			modifiers |= Modifier.ABSTRACT;
+		if (Modifier.isFinal(modifiers))
+			modifiers &= ~Modifier.FINAL;
 		sb.append(String.format("\n\n%s %s %s", Modifier.toString(modifiers),classorinterface,name));
 		if(!superClass.equals("java.lang.Object")&&!superClass.equals("*")) {
 			sb.append(String.format(" extends %s", Mappings.getNewClassName(superClass)));
@@ -179,6 +181,8 @@ public class MCClassInfo {
 		Collections.sort(fieldKeys);
 		for(String fi : fieldKeys) {
 			MCFieldInfo f = fields.get(fi);
+			if (Modifier.isFinal(f.modifiers))
+				f.modifiers &= ~Modifier.FINAL;
 			sb.append(String.format("\n\t%s %s %s;", Modifier.toString(f.modifiers),Mappings.getNewClassName(f.type),(f.name.isEmpty()) ? f.realName : f.name));
 		}
 		sb.append("\n\t\n\t// METHODS");

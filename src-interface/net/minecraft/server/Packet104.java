@@ -5,7 +5,7 @@ package net.minecraft.server;
 public abstract class Packet104 extends Packet {
 	// FIELDS
 	public int field_20011;
-	public il[] field_20010;
+	public ItemStack[] field_20010;
 	
 	// METHODS
 	

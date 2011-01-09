@@ -7,45 +7,5 @@ public abstract class MathHelper {
 	private static float[] field_886;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public abstract static float a(double a);
-	
-	/**
-	 * 
-	 */
-	public abstract static double a(double a, double b);
-	
-	/**
-	 * 
-	 */
-	public abstract static float a(float a);
-	
-	/**
-	 * 
-	 */
-	public abstract static int b(double a);
-	
-	/**
-	 * 
-	 */
-	public abstract static float b(float a);
-	
-	/**
-	 * 
-	 */
-	public abstract static float c(float a);
-	
-	/**
-	 * 
-	 */
-	public abstract static int d(float a);
-	
-	/**
-	 * 
-	 */
-	public abstract static float e(float a);
 
 }

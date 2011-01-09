@@ -12,16 +12,6 @@ public abstract class ServerGUI extends javax.swing.JComponent {
 	/**
 	 * 
 	 */
-	abstract static net.minecraft.server.MinecraftServer a(ServerGUI a);
-	
-	/**
-	 * 
-	 */
-	public abstract static void a(net.minecraft.server.MinecraftServer a);
-	
-	/**
-	 * 
-	 */
 	public abstract void b(java.lang.String a);
 	
 	/**

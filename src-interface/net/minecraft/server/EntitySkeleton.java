@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class EntitySkeleton extends EntityMobs {
 	// FIELDS
-	private static final ItemStack field_4108;
+	private static ItemStack field_4108;
 	
 	// METHODS
 	

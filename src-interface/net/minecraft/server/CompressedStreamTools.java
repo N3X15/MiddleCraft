@@ -6,25 +6,5 @@ public abstract class CompressedStreamTools {
 	// FIELDS
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public abstract static void a(NBTTagCompound a, java.io.DataOutput b);
-	
-	/**
-	 * 
-	 */
-	public abstract static void a(NBTTagCompound a, java.io.OutputStream b);
-	
-	/**
-	 * 
-	 */
-	public abstract static NBTTagCompound a(java.io.DataInput a);
-	
-	/**
-	 * 
-	 */
-	public abstract static NBTTagCompound a(java.io.InputStream a);
 
 }

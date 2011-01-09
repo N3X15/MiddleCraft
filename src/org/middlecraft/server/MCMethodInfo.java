@@ -120,7 +120,7 @@ public class MCMethodInfo {
 			seargeIndex = Integer.parseInt(searge.split("_")[1]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			seargeIndex = currentSeargeIndex++;
-			//l.severe(searge);
+			// l.severe(searge);
 		}
 	}
 
@@ -168,8 +168,9 @@ public class MCMethodInfo {
 				i++;
 			}
 			int mod = modifiers;
-			if (!Modifier.isPublic(mod) && !Modifier.isProtected(mod)
-					&& !Modifier.isStatic(mod))
+			if (!Modifier.isPublic(mod) && !Modifier.isProtected(mod))
+				return "";
+			if (Modifier.isStatic(mod) || Modifier.isTransient(mod)|| Modifier.isVolatile(mod))
 				return "";
 
 			// Remove final flag, if required.

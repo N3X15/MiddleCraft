@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class BlockFurnace extends BlockContainer {
 	// FIELDS
-	private final boolean field_655;
+	private boolean field_655;
 	
 	// METHODS
 	
@@ -27,11 +27,6 @@ public abstract class BlockFurnace extends BlockContainer {
 	 * 
 	 */
 	public abstract void a(World a, int b, int c, int d, EntityLiving e);
-	
-	/**
-	 * 
-	 */
-	public abstract static void a(boolean a, World b, int c, int d, int e);
 	
 	/**
 	 * 

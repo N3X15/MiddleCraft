@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 public abstract class InventoryPlayer {
 	// FIELDS
-	public il[] mainInventory;
-	public il[] armorInventory;
+	public ItemStack[] mainInventory;
+	public ItemStack[] armorInventory;
 	public int currentItem;
 	public boolean inventoryChanged;
 	private EntityPlayer player;

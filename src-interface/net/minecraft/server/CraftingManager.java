@@ -4,15 +4,10 @@ package net.minecraft.server;
 
 public abstract class CraftingManager {
 	// FIELDS
-	private static final CraftingManager field_20155;
+	private static CraftingManager field_20155;
 	private java.util.List field_20154;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public abstract static CraftingManager a();
 	
 	/**
 	 * 

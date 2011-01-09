@@ -4,9 +4,9 @@ package net.minecraft.server;
 
 public abstract class ChunkPosition {
 	// FIELDS
-	public final int x;
-	public final int y;
-	public final int z;
+	public int x;
+	public int y;
+	public int z;
 	
 	// METHODS
 	

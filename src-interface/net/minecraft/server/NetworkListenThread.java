@@ -23,21 +23,6 @@ public abstract class NetworkListenThread {
 	/**
 	 * 
 	 */
-	abstract static java.net.ServerSocket a(NetworkListenThread a);
-	
-	/**
-	 * 
-	 */
-	abstract static void a(NetworkListenThread a, NetLoginHandler b);
-	
-	/**
-	 * 
-	 */
 	public abstract void a(NetServerHandler a);
-	
-	/**
-	 * 
-	 */
-	abstract static int b(NetworkListenThread a);
 
 }

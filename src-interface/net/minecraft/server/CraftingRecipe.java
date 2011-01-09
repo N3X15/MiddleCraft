@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class CraftingRecipe {
 	// FIELDS
-	public final int field_20168;
+	public int field_20168;
 	private int field_20167;
 	private int field_20171;
 	private int[] field_20170;

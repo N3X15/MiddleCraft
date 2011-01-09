@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 abstract class GuiLogFormatter extends java.util.logging.Formatter {
 	// FIELDS
-	final GuiLogOutputHandler outputHandler;
+	 GuiLogOutputHandler outputHandler;
 	
 	// METHODS
 	

@@ -6,7 +6,7 @@ public abstract class EntityPigZombie extends EntityZombie {
 	// FIELDS
 	private int field_4106;
 	private int field_4105;
-	private static final ItemStack field_4107;
+	private static ItemStack field_4107;
 	
 	// METHODS
 	

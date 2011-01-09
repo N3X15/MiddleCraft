@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 public abstract class PathEntity {
 	// FIELDS
-	public final int pathLength;
-	private final b[] points;
+	public int pathLength;
+	private PathPoint[] points;
 	private int pathIndex;
 	
 	// METHODS

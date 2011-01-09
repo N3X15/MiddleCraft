@@ -4,12 +4,12 @@ package net.minecraft.server;
 
 public abstract class ItemArmor extends Item {
 	// FIELDS
-	public final int field_254;
-	public final int field_257;
-	public final int field_256;
-	public final int field_255;
-	private static final int[] field_259;
-	private static final int[] field_258;
+	public int field_254;
+	public int field_257;
+	public int field_256;
+	public int field_255;
+	private static int[] field_259;
+	private static int[] field_258;
 	
 	// METHODS
 

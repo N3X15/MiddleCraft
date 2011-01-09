@@ -10,30 +10,5 @@ public abstract class EntityList {
 	private static java.util.Map field_850;
 	
 	// METHODS
-	
-	/**
-	 * 
-	 */
-	public abstract static Entity a(NBTTagCompound a, World b);
-	
-	/**
-	 * 
-	 */
-	public abstract static int a(Entity a);
-	
-	/**
-	 * 
-	 */
-	private abstract static void a(java.lang.Class a, java.lang.String b, int c);
-	
-	/**
-	 * 
-	 */
-	public abstract static Entity a(java.lang.String a, World b);
-	
-	/**
-	 * 
-	 */
-	public abstract static java.lang.String b(Entity a);
 
 }

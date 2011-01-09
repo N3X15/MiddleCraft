@@ -4,10 +4,10 @@ package net.minecraft.server;
 
 abstract class HashEntry {
 	// FIELDS
-	final int hashEntry;
+	 int hashEntry;
 	 java.lang.Object valueEntry;
 	 HashEntry nextEntry;
-	final int slotHash;
+	 int slotHash;
 	
 	// METHODS
 	

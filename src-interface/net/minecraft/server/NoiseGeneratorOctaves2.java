@@ -4,7 +4,7 @@ package net.minecraft.server;
 
 public abstract class NoiseGeneratorOctaves2 extends NoiseGenerator {
 	// FIELDS
-	private by[] field_4308;
+	private NoiseGenerator2[] field_4308;
 	private int field_4307;
 	
 	// METHODS

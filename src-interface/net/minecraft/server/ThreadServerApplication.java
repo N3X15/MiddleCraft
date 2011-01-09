@@ -2,9 +2,9 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract final class ThreadServerApplication extends java.lang.Thread {
+public abstract class ThreadServerApplication extends java.lang.Thread {
 	// FIELDS
-	final net.minecraft.server.MinecraftServer mcServer;
+	 net.minecraft.server.MinecraftServer mcServer;
 	
 	// METHODS
 	

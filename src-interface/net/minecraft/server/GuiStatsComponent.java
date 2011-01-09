@@ -13,11 +13,6 @@ public abstract class GuiStatsComponent extends javax.swing.JComponent {
 	/**
 	 * 
 	 */
-	abstract static void a(GuiStatsComponent a);
-	
-	/**
-	 * 
-	 */
 	public abstract void paint(java.awt.Graphics a);
 
 }

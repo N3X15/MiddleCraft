@@ -25,7 +25,7 @@ public abstract class ChunkProviderGenerate {
 	private double[] field_697;
 	private double[] field_696;
 	private MapGenBase field_695;
-	private jq[] biomesForGeneration;
+	private MobSpawnerBase[] biomesForGeneration;
 	private double[] field_4222;
 	
 	// METHODS
@@ -43,12 +43,12 @@ public abstract class ChunkProviderGenerate {
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, byte[] c, jq[] d);
+	public abstract void a(int a, int b, byte[] c, MobSpawnerBase[] d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, byte[] c, jq[] d, double[] e);
+	public abstract void a(int a, int b, byte[] c, MobSpawnerBase[] d, double[] e);
 	
 	/**
 	 * 

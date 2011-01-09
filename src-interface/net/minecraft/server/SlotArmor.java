@@ -4,8 +4,8 @@ package net.minecraft.server;
 
 abstract class SlotArmor extends Slot {
 	// FIELDS
-	final int field_20102;
-	final CraftingInventoryPlayerCB field_20101;
+	 int field_20102;
+	 CraftingInventoryPlayerCB field_20101;
 	
 	// METHODS
 	

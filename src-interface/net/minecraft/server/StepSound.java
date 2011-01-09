@@ -4,9 +4,9 @@ package net.minecraft.server;
 
 public abstract class StepSound {
 	// FIELDS
-	public final java.lang.String field_1029;
-	public final float field_1028;
-	public final float field_1030;
+	public java.lang.String field_1029;
+	public float field_1028;
+	public float field_1030;
 	
 	// METHODS
 	

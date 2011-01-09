@@ -15,16 +15,6 @@ public abstract class Vec3D {
 	/**
 	 * 
 	 */
-	public abstract static void a();
-	
-	/**
-	 * 
-	 */
-	public abstract static Vec3D a(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
 	public abstract double a(Vec3D a);
 	
 	/**
@@ -36,11 +26,6 @@ public abstract class Vec3D {
 	 * 
 	 */
 	public abstract Vec3D b();
-	
-	/**
-	 * 
-	 */
-	public abstract static Vec3D b(double a, double b, double c);
 	
 	/**
 	 * 
