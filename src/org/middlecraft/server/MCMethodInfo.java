@@ -93,14 +93,6 @@ public class MCMethodInfo {
 	}
 
 	public MCMethodInfo(Map<String, Object> y) {
-		/*
-		 * harvestBlock: annotation: '' class: Block csv: harvestBlock descript:
-		 * '*' forced: false full: harvestBlock full_final: harvestBlock index:
-		 * '12007' known: true modified: false new_mod: false nick_mod: null
-		 * notch: g notch_class: gv notch_pkg: '' notch_sig: (Lff;IIII)V
-		 * old_mod: false package: net/minecraft/server s_root: func_12007
-		 * searge: func_12007_g time_mod: null
-		 */
 		description = (String) y.get("descript");
 		name = (String) y.get("csv");
 		searge = (String) y.get("searge");

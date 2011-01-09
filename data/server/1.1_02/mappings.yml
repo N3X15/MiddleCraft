@@ -5491,7 +5491,7 @@ EnumArt:
   superclass: java.lang.Enum
   searge: EnumArt
   class: EnumArt
-  modifiers: 17409
+  modifiers: 16401
   notch: ie
   fields:
     field_856:
@@ -5516,7 +5516,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Kebab
-      modifiers: 16393
+      modifiers: 16409
       notch: a
     ie_Graham:
       notch_sig: ie
@@ -5524,7 +5524,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Graham
-      modifiers: 16393
+      modifiers: 16409
       notch: n
     ie_Wanderer:
       notch_sig: ie
@@ -5532,7 +5532,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Wanderer
-      modifiers: 16393
+      modifiers: 16409
       notch: m
     ie_Bust:
       notch_sig: ie
@@ -5540,7 +5540,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Bust
-      modifiers: 16393
+      modifiers: 16409
       notch: p
     ie_Creebet:
       notch_sig: ie
@@ -5548,7 +5548,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Creebet
-      modifiers: 16393
+      modifiers: 16409
       notch: l
     ie_Sunset:
       notch_sig: ie
@@ -5556,7 +5556,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Sunset
-      modifiers: 16393
+      modifiers: 16409
       notch: k
     ie_Alban:
       notch_sig: ie
@@ -5564,7 +5564,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Alban
-      modifiers: 16393
+      modifiers: 16409
       notch: c
     ie_Skeleton:
       notch_sig: ie
@@ -5572,7 +5572,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Skeleton
-      modifiers: 16393
+      modifiers: 16409
       notch: w
     ie_Stage:
       notch_sig: ie
@@ -5580,7 +5580,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Stage
-      modifiers: 16393
+      modifiers: 16409
       notch: q
     ie_DonkeyKong:
       notch_sig: ie
@@ -5588,7 +5588,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_DonkeyKong
-      modifiers: 16393
+      modifiers: 16409
       notch: x
     ie_Wasteland:
       notch_sig: ie
@@ -5596,7 +5596,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Wasteland
-      modifiers: 16393
+      modifiers: 16409
       notch: g
     ie_Aztec2:
       notch_sig: ie
@@ -5604,7 +5604,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Aztec2
-      modifiers: 16393
+      modifiers: 16409
       notch: d
     ie_Aztec:
       notch_sig: ie
@@ -5612,7 +5612,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Aztec
-      modifiers: 16393
+      modifiers: 16409
       notch: b
     ie_Sea:
       notch_sig: ie
@@ -5620,7 +5620,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Sea
-      modifiers: 16393
+      modifiers: 16409
       notch: j
     ie_Courbet:
       notch_sig: ie
@@ -5628,7 +5628,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Courbet
-      modifiers: 16393
+      modifiers: 16409
       notch: i
     field_869:
       notch_sig: int
@@ -5660,7 +5660,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Match
-      modifiers: 16393
+      modifiers: 16409
       notch: o
     field_863:
       notch_sig: ie[]
@@ -5668,7 +5668,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: field_863
-      modifiers: 4106
+      modifiers: 4122
       notch: D
     ie_Pigscene:
       notch_sig: ie
@@ -5676,7 +5676,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Pigscene
-      modifiers: 16393
+      modifiers: 16409
       notch: v
     ie_Void:
       notch_sig: ie
@@ -5684,7 +5684,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Void
-      modifiers: 16393
+      modifiers: 16409
       notch: r
     ie_Bomb:
       notch_sig: ie
@@ -5692,7 +5692,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Bomb
-      modifiers: 16393
+      modifiers: 16409
       notch: e
     ie_Plant:
       notch_sig: ie
@@ -5700,7 +5700,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Plant
-      modifiers: 16393
+      modifiers: 16409
       notch: f
     ie_Pool:
       notch_sig: ie
@@ -5708,7 +5708,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Pool
-      modifiers: 16393
+      modifiers: 16409
       notch: h
     ie_SkullAndRoses:
       notch_sig: ie
@@ -5716,7 +5716,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_SkullAndRoses
-      modifiers: 16393
+      modifiers: 16409
       notch: s
     ie_Fighters:
       notch_sig: ie
@@ -5724,7 +5724,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Fighters
-      modifiers: 16393
+      modifiers: 16409
       notch: t
     ie_Pointer:
       notch_sig: ie
@@ -5732,7 +5732,7 @@ EnumArt:
       descript: '*'
       notch_class: ie
       csv: ie_Pointer
-      modifiers: 16393
+      modifiers: 16409
       notch: u
 TileEntitySign:
   methods:
@@ -7276,7 +7276,7 @@ EnumSkyBlock:
   superclass: java.lang.Enum
   searge: EnumSkyBlock
   class: EnumSkyBlock
-  modifiers: 17409
+  modifiers: 16401
   notch: eb
   fields:
     field_983:
@@ -7285,7 +7285,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: field_983
-      modifiers: 4106
+      modifiers: 4122
       notch: d
     eb_Block:
       notch_sig: eb
@@ -7293,7 +7293,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: eb_Block
-      modifiers: 16393
+      modifiers: 16409
       notch: b
     field_984:
       notch_sig: int
@@ -7309,7 +7309,7 @@ EnumSkyBlock:
       descript: '*'
       notch_class: eb
       csv: eb_Sky
-      modifiers: 16393
+      modifiers: 16409
       notch: a
 IInventory:
   methods:
@@ -12518,7 +12518,7 @@ EnumMobType:
   superclass: java.lang.Enum
   searge: EnumMobType
   class: EnumMobType
-  modifiers: 17409
+  modifiers: 16401
   notch: ds
   fields:
     field_990:
@@ -12527,7 +12527,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: field_990
-      modifiers: 4106
+      modifiers: 4122
       notch: d
     ds_mobs:
       notch_sig: ds
@@ -12535,7 +12535,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: ds_mobs
-      modifiers: 16393
+      modifiers: 16409
       notch: b
     ds_players:
       notch_sig: ds
@@ -12543,7 +12543,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: ds_players
-      modifiers: 16393
+      modifiers: 16409
       notch: c
     ds_everything:
       notch_sig: ds
@@ -12551,7 +12551,7 @@ EnumMobType:
       descript: '*'
       notch_class: ds
       csv: ds_everything
-      modifiers: 16393
+      modifiers: 16409
       notch: a
 RecipesIngots:
   methods:
@@ -14249,7 +14249,7 @@ EnumCreatureType:
   superclass: java.lang.Enum
   searge: EnumCreatureType
   class: EnumCreatureType
-  modifiers: 17409
+  modifiers: 16401
   notch: ku
   fields:
     field_6155:
@@ -14258,7 +14258,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: field_6155
-      modifiers: 4106
+      modifiers: 4122
       notch: e
     ku_monster:
       notch_sig: ku
@@ -14266,7 +14266,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: ku_monster
-      modifiers: 16393
+      modifiers: 16409
       notch: a
     field_4221:
       notch_sig: java.lang.Class
@@ -14282,7 +14282,7 @@ EnumCreatureType:
       descript: '*'
       notch_class: ku
       csv: ku_creature
-      modifiers: 16393
+      modifiers: 16409
       notch: b
     maxNumberOfEntityType:
       notch_sig: int

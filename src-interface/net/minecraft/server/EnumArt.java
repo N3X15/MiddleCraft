@@ -2,38 +2,33 @@
 /* Allows plugins to access server functions without needing to link the actual server Jar. */
 package net.minecraft.server;
 
-public abstract class EnumArt extends java.lang.Enum {
-	// FIELDS
-	public int field_869;
-	public int field_867;
-	public int field_865;
-	private static EnumArt[] field_863;
-	public static EnumArt ie_Kebab;
-	public static EnumArt ie_Aztec;
-	public static EnumArt ie_Alban;
-	public static EnumArt ie_Aztec2;
-	public static EnumArt ie_Bomb;
-	public static EnumArt ie_Plant;
-	public static EnumArt ie_Wasteland;
-	public static EnumArt ie_Pool;
-	public static EnumArt ie_Courbet;
-	public static EnumArt ie_Sea;
-	public static EnumArt ie_Sunset;
-	public static EnumArt ie_Creebet;
-	public static EnumArt ie_Wanderer;
-	public static EnumArt ie_Graham;
-	public static EnumArt ie_Match;
-	public static EnumArt ie_Bust;
-	public static EnumArt ie_Stage;
-	public static EnumArt ie_Void;
-	public static EnumArt ie_SkullAndRoses;
-	public static EnumArt ie_Fighters;
-	public static EnumArt ie_Pointer;
-	public static EnumArt ie_Pigscene;
-	public static EnumArt ie_Skeleton;
-	public static EnumArt ie_DonkeyKong;
-	public java.lang.String field_857;
-	public int field_856;
+public enum EnumArt {
+	
+	// VALUES
+	ie_Kebab,
+	ie_Aztec,
+	ie_Alban,
+	ie_Aztec2,
+	ie_Bomb,
+	ie_Plant,
+	ie_Wasteland,
+	ie_Pool,
+	ie_Courbet,
+	ie_Sea,
+	ie_Sunset,
+	ie_Creebet,
+	ie_Wanderer,
+	ie_Graham,
+	ie_Match,
+	ie_Bust,
+	ie_Stage,
+	ie_Void,
+	ie_SkullAndRoses,
+	ie_Fighters,
+	ie_Pointer,
+	ie_Pigscene,
+	ie_Skeleton,
+	ie_DonkeyKong
 	
 	// METHODS
 
