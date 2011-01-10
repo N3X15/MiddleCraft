@@ -11,31 +11,31 @@ public abstract class EntitySheep extends EntityAnimals {
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_479_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_478_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_480_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String d();
+	protected abstract java.lang.String MIDDLECRAFT_func_481_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_482_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_483_f();
 
 }

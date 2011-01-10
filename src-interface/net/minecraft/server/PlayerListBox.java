@@ -12,6 +12,6 @@ public abstract class PlayerListBox extends javax.swing.JList {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1858_a();
 
 }

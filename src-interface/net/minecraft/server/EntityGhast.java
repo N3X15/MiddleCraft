@@ -18,41 +18,41 @@ public abstract class EntityGhast extends EntityFlying {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_236_a();
 	
 	/**
 	 * 
 	 */
-	protected abstract void c();
+	protected abstract void MIDDLECRAFT_func_229_c();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String d();
+	protected abstract java.lang.String MIDDLECRAFT_func_231_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_232_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_233_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int g();
+	protected abstract int MIDDLECRAFT_func_234_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract float h();
+	protected abstract float MIDDLECRAFT_func_235_h();
 	
 	/**
 	 * 
 	 */
-	public abstract int i();
+	public abstract int MIDDLECRAFT_func_237_i();
 
 }

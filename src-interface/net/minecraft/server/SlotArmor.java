@@ -12,11 +12,11 @@ abstract class SlotArmor extends Slot {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_351_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(ItemStack a);
+	public abstract boolean MIDDLECRAFT_func_352_a(ItemStack a);
 
 }

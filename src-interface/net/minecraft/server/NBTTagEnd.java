@@ -10,11 +10,11 @@ public abstract class NBTTagEnd extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte a();
+	public abstract byte MIDDLECRAFT_func_1778_a();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_1779_toString();
 
 }

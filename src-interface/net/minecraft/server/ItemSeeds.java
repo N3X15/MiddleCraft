@@ -11,6 +11,6 @@ public abstract class ItemSeeds extends Item {
 	/**
 	 * 
 	 */
-	public abstract boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_484_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

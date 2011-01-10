@@ -13,26 +13,26 @@ public abstract class PropertyManager {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_530_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.lang.String a, int b);
+	public abstract int MIDDLECRAFT_func_533_a(java.lang.String a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String a(java.lang.String a, java.lang.String b);
+	public abstract java.lang.String MIDDLECRAFT_func_532_a(java.lang.String a, java.lang.String b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(java.lang.String a, boolean b);
+	public abstract boolean MIDDLECRAFT_func_534_a(java.lang.String a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b();
+	public abstract void MIDDLECRAFT_func_531_b();
 
 }

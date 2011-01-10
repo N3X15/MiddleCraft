@@ -11,6 +11,6 @@ abstract class ServerGuiFocusAdapter extends java.awt.event.FocusAdapter {
 	/**
 	 * 
 	 */
-	public abstract void focusGained(java.awt.event.FocusEvent a);
+	public abstract void MIDDLECRAFT_func_102_focusGained(java.awt.event.FocusEvent a);
 
 }

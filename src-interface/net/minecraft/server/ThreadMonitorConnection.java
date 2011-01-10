@@ -11,6 +11,6 @@ abstract class ThreadMonitorConnection extends java.lang.Thread {
 	/**
 	 * 
 	 */
-	public abstract void run();
+	public abstract void MIDDLECRAFT_func_1630_run();
 
 }

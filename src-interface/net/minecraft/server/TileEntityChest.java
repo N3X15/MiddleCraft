@@ -11,46 +11,46 @@ public abstract class TileEntityChest extends TileEntity {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1544_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_1545_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_1546_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_1547_a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1549_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a_(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_1552_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b();
+	public abstract java.lang.String MIDDLECRAFT_func_1548_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1550_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_1551_c();
 
 }

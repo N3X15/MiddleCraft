@@ -10,16 +10,16 @@ public abstract class MapGenCavesHell extends MapGenBase {
 	/**
 	 * 
 	 */
-	protected abstract void a(int a, int b, byte[] c, double d, double e, double f);
+	protected abstract void MIDDLECRAFT_func_320_a(int a, int b, byte[] c, double d, double e, double f);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(int a, int b, byte[] c, double d, double e, double f, float g, float h, float i, int j, int k, double l);
+	protected abstract void MIDDLECRAFT_func_321_a(int a, int b, byte[] c, double d, double e, double f, float g, float h, float i, int j, int k, double l);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(World a, int b, int c, int d, int e, byte[] f);
+	protected abstract void MIDDLECRAFT_func_322_a(World a, int b, int c, int d, int e, byte[] f);
 
 }

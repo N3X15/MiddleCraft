@@ -10,11 +10,11 @@ public abstract class BlockSlowSand extends Block {
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, Entity e);
+	public abstract void MIDDLECRAFT_func_109_a(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_108_d(World a, int b, int c, int d);
 
 }

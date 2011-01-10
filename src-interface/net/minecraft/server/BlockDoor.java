@@ -10,61 +10,61 @@ public abstract class BlockDoor extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1733_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_1741_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_1744_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_1742_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_1738_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, boolean e);
+	public abstract void MIDDLECRAFT_func_1739_a(World a, int b, int c, int d, boolean e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1735_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a);
+	public abstract void MIDDLECRAFT_func_1736_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1740_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void MIDDLECRAFT_func_1737_b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract int d(int a);
+	public abstract int MIDDLECRAFT_func_1743_d(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1734_d(World a, int b, int c, int d);
 
 }

@@ -13,26 +13,26 @@ public abstract class EntityCreature extends EntityLiving {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1371_a();
 	
 	/**
 	 * 
 	 */
-	protected abstract float a(int a, int b, int c);
+	protected abstract float MIDDLECRAFT_func_1369_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(Entity a, float b);
+	protected abstract void MIDDLECRAFT_func_1368_a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void c();
+	protected abstract void MIDDLECRAFT_func_1367_c();
 	
 	/**
 	 * 
 	 */
-	protected abstract Entity k();
+	protected abstract Entity MIDDLECRAFT_func_1370_k();
 
 }

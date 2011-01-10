@@ -11,41 +11,41 @@ public abstract class EntityCow extends EntityAnimals {
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_284_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_291_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_285_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String d();
+	protected abstract java.lang.String MIDDLECRAFT_func_286_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_287_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_288_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int g();
+	protected abstract int MIDDLECRAFT_func_290_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract float h();
+	protected abstract float MIDDLECRAFT_func_289_h();
 
 }

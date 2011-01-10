@@ -10,6 +10,6 @@ public abstract class BlockLightStone extends Block {
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_1928_a(int a, java.util.Random b);
 
 }

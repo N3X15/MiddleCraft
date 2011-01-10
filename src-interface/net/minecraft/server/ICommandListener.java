@@ -10,11 +10,11 @@ public abstract interface ICommandListener {
 	/**
 	 * 
 	 */
-	public abstract void b(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_930_b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String c();
+	public abstract java.lang.String MIDDLECRAFT_func_931_c();
 
 }

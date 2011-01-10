@@ -10,41 +10,41 @@ public abstract class BlockReed extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_476_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_475_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_470_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_469_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_471_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_474_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean f(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_473_f(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected abstract void g(World a, int b, int c, int d);
+	protected abstract void MIDDLECRAFT_func_472_g(World a, int b, int c, int d);
 
 }

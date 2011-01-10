@@ -10,6 +10,6 @@ public abstract class ItemSnowball extends Item {
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_485_a(ItemStack a, World b, EntityPlayer c);
 
 }

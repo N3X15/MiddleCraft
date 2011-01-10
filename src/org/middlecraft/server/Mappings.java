@@ -116,7 +116,7 @@ public class Mappings {
 			}
 		}
 		MCClassInfo ci = new MCClassInfo();
-		ci.name = "*";
+		ci.name = name;
 		ci.realName = name;
 		ci.description = "*";
 		ci.realSuperClass = superClass;
@@ -169,6 +169,7 @@ public class Mappings {
 		mi.realName = methodName;
 		mi.signature = signature;
 		mi.description = extraData;
+		mi.parseSearge();
 		ci.methods.put(mi.toIndex(), mi);
 		// ci.methodNames.put("UNKNOWN_"+Integer.toString(unkMethods),methodName+" "+signature);
 		classes.put(className, ci);
@@ -246,7 +247,7 @@ public class Mappings {
 			String signature) {
 		String ocn = getOldClassName(className);
 		MCClassInfo ci = classes.get(className);
-		// l.info(String.format("getMethod(%s,%s,%s)",className,name,signature));
+		//l.info(String.format("getMethod(%s,%s,%s)",className,name,signature));
 		if (ci == null) {
 			ci = classes.get(ocn);
 			// l.info("Found old name "+ocn);
@@ -262,9 +263,6 @@ public class Mappings {
 				return mi;
 			}
 		}
-		MCMethodInfo mi = new MCMethodInfo();
-		mi.realName = name;
-		mi.signature = signature;
 		addObfuscatedMethodDefinition(className, name, signature, "");
 		return null;
 	}

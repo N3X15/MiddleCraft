@@ -157,15 +157,18 @@ public class Main {
 		for(JarEntry e : Collections.list(inJar.entries())) {
 			if(e.getName().endsWith(".class")) {
 				// Strip off the .class
-				String className = e.getName().substring(0, e.getName().indexOf('.'));
+				String className = e.getName().substring(0, e.getName().indexOf('.')).replace('/','.');
 				//l.info(className);
 				// Get new classname
 				String newClassName=Mappings.getNewClassName(className.replace('/','.'));
-
-				MCClassInfo ci = Mappings.classes.get(className);
+				if(newClassName.contains("."))
+					newClassName=newClassName.substring(newClassName.lastIndexOf('.')+1);
+				
+				MCClassInfo ci = Mappings.classes.get(className.replace('/', '.'));
 				if(ci==null) {
-					//l.warning("Can't find mappings for "+className);
-					continue;
+					l.warning("Generating mappings for "+className+"...");
+					Mappings.addObfuscatedClassDefinition(className, "java.lang.Object");
+					ci = Mappings.classes.get(className.replace('/', '.'));
 				}
 				CtClass mcClass = mcClassPool.get(className);
 				ci.setClassModifiers(mcClass.getModifiers());

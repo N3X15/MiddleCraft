@@ -20,26 +20,26 @@ public abstract class PathPoint {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_186_a();
 	
 	/**
 	 * 
 	 */
-	public abstract float a(PathPoint a);
+	public abstract float MIDDLECRAFT_func_183_a(PathPoint a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean equals(java.lang.Object a);
+	public abstract boolean MIDDLECRAFT_func_184_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract int hashCode();
+	public abstract int MIDDLECRAFT_func_185_hashCode();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_187_toString();
 
 }

@@ -10,6 +10,6 @@ public abstract class RecipesCrafting {
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingManager a);
+	public abstract void MIDDLECRAFT_func_1577_a(CraftingManager a);
 
 }

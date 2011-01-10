@@ -12,6 +12,6 @@ abstract class ServerGuiCommandListener {
 	/**
 	 * 
 	 */
-	public abstract void actionPerformed(java.awt.event.ActionEvent a);
+	public abstract void MIDDLECRAFT_func_97_actionPerformed(java.awt.event.ActionEvent a);
 
 }

@@ -14,26 +14,26 @@ public abstract class Packet {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1641_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_1640_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_1638_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_1639_a(java.io.DataOutputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_1635_b();
 
 }

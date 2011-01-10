@@ -15,21 +15,21 @@ public abstract class Packet102 extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_413_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_410_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_411_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_412_a(java.io.DataOutputStream a);
 
 }

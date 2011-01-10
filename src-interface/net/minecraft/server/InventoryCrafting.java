@@ -13,41 +13,41 @@ public abstract class InventoryCrafting {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1372_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_1373_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_1375_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_1376_a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a_(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_1379_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b();
+	public abstract java.lang.String MIDDLECRAFT_func_1374_b();
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_1377_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_1378_d();
 
 }

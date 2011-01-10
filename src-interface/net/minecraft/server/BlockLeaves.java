@@ -12,31 +12,31 @@ public abstract class BlockLeaves extends BlockLeavesBase {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_224_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_223_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_220_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_222_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_219_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, Entity e);
+	public abstract void MIDDLECRAFT_func_225_b(World a, int b, int c, int d, Entity e);
 
 }

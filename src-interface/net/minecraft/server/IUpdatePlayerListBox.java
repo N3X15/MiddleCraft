@@ -10,6 +10,6 @@ public abstract interface IUpdatePlayerListBox {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_776_a();
 
 }

@@ -10,46 +10,46 @@ public abstract interface IWorldAccess {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_329_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_323_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, int d, int e, int f);
+	public abstract void MIDDLECRAFT_func_324_a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, TileEntity d);
+	public abstract void MIDDLECRAFT_func_331_a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a);
+	public abstract void MIDDLECRAFT_func_327_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	public abstract void MIDDLECRAFT_func_326_a(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, double b, double c, double d, float e, float f);
+	public abstract void MIDDLECRAFT_func_325_a(java.lang.String a, double b, double c, double d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_330_a(java.lang.String a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a);
+	public abstract void MIDDLECRAFT_func_328_b(Entity a);
 
 }

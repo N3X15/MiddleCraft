@@ -11,11 +11,11 @@ public abstract class ItemBlock extends Item {
 	/**
 	 * 
 	 */
-	public abstract java.lang.String a();
+	public abstract java.lang.String MIDDLECRAFT_func_362_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_361_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

@@ -11,46 +11,46 @@ public abstract class WorldManager {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_912_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_913_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, int d, int e, int f);
+	public abstract void MIDDLECRAFT_func_911_a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, TileEntity d);
+	public abstract void MIDDLECRAFT_func_915_a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a);
+	public abstract void MIDDLECRAFT_func_908_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	public abstract void MIDDLECRAFT_func_907_a(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, double b, double c, double d, float e, float f);
+	public abstract void MIDDLECRAFT_func_910_a(java.lang.String a, double b, double c, double d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_914_a(java.lang.String a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a);
+	public abstract void MIDDLECRAFT_func_909_b(Entity a);
 
 }

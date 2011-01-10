@@ -10,16 +10,16 @@ public abstract class Packet11PlayerPosition extends Packet10Flying {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_116_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_114_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_115_a(java.io.DataOutputStream a);
 
 }

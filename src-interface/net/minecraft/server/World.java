@@ -49,461 +49,461 @@ public abstract class World {
 	/**
 	 * 
 	 */
-	public abstract WorldChunkManager a();
+	public abstract WorldChunkManager MIDDLECRAFT_func_783_a();
 	
 	/**
 	 * 
 	 */
-	public abstract EntityPlayer a(double a, double b, double c, double d);
+	public abstract EntityPlayer MIDDLECRAFT_func_873_a(double a, double b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(double a, double b, double c, java.lang.String d, float e, float f);
+	public abstract void MIDDLECRAFT_func_822_a(double a, double b, double c, java.lang.String d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(float a);
+	public abstract int MIDDLECRAFT_func_832_a(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b);
+	public abstract int MIDDLECRAFT_func_785_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_788_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_796_a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_795_a(int a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d, int e, int f);
+	public abstract boolean MIDDLECRAFT_func_791_a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d, boolean e);
+	public abstract boolean MIDDLECRAFT_func_865_a(int a, int b, int c, int d, boolean e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, TileEntity d);
+	public abstract void MIDDLECRAFT_func_849_a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c, boolean d);
+	public abstract int MIDDLECRAFT_func_811_a(int a, int b, int c, boolean d);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition a(Vec3D a, Vec3D b);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_819_a(Vec3D a, Vec3D b);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition a(Vec3D a, Vec3D b, boolean c);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_820_a(Vec3D a, Vec3D b, boolean c);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(Vec3D a, AxisAlignedBB b);
+	public abstract float MIDDLECRAFT_func_847_a(Vec3D a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IWorldAccess a);
+	public abstract void MIDDLECRAFT_func_830_a(IWorldAccess a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(EnumSkyBlock a, int b, int c, int d);
+	public abstract int MIDDLECRAFT_func_815_a(EnumSkyBlock a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_814_a(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
+	public abstract void MIDDLECRAFT_func_853_a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
+	public abstract void MIDDLECRAFT_func_854_a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(AxisAlignedBB a);
+	public abstract boolean MIDDLECRAFT_func_839_a(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(AxisAlignedBB a, Material b);
+	public abstract boolean MIDDLECRAFT_func_843_a(AxisAlignedBB a, Material b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(AxisAlignedBB a, Material b, Entity c);
+	public abstract boolean MIDDLECRAFT_func_842_a(AxisAlignedBB a, Material b, Entity c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a);
+	public abstract boolean MIDDLECRAFT_func_825_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a, byte b);
+	public abstract void MIDDLECRAFT_func_877_a(Entity a, byte b);
 	
 	/**
 	 * 
 	 */
-	public abstract EntityPlayer a(Entity a, double b);
+	public abstract EntityPlayer MIDDLECRAFT_func_872_a(Entity a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract Explosion a(Entity a, double b, double c, double d, float e);
+	public abstract Explosion MIDDLECRAFT_func_845_a(Entity a, double b, double c, double d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract Explosion a(Entity a, double b, double c, double d, float e, boolean f);
+	public abstract Explosion MIDDLECRAFT_func_846_a(Entity a, double b, double c, double d, float e, boolean f);
 	
 	/**
 	 * 
 	 */
-	public abstract PathEntity a(Entity a, int b, int c, int d, float e);
+	public abstract PathEntity MIDDLECRAFT_func_867_a(Entity a, int b, int c, int d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract java.util.List a(Entity a, AxisAlignedBB b);
+	public abstract java.util.List MIDDLECRAFT_func_831_a(Entity a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public abstract PathEntity a(Entity a, Entity b, float c);
+	public abstract PathEntity MIDDLECRAFT_func_866_a(Entity a, Entity b, float c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a, java.lang.String b, float c, float d);
+	public abstract void MIDDLECRAFT_func_821_a(Entity a, java.lang.String b, float c, float d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a, boolean b);
+	public abstract void MIDDLECRAFT_func_838_a(Entity a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_876_a(EntityPlayer a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected abstract IChunkProvider a(java.io.File a);
+	protected abstract IChunkProvider MIDDLECRAFT_func_784_a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.lang.Class a);
+	public abstract int MIDDLECRAFT_func_862_a(java.lang.Class a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.util.List a(java.lang.Class a, AxisAlignedBB b);
+	public abstract java.util.List MIDDLECRAFT_func_860_a(java.lang.Class a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	public abstract void MIDDLECRAFT_func_824_a(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_823_a(java.lang.String a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.util.List a);
+	public abstract void MIDDLECRAFT_func_863_a(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(boolean a);
+	public abstract boolean MIDDLECRAFT_func_858_a(boolean a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(boolean a, IProgressUpdate b);
+	public abstract void MIDDLECRAFT_func_786_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_818_b();
 	
 	/**
 	 * 
 	 */
-	public abstract float b(float a);
+	public abstract float MIDDLECRAFT_func_833_b(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_793_b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_798_b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_799_b(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(int a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_802_b(int a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a, int b, int c, int d, int e, int f);
+	public abstract void MIDDLECRAFT_func_806_b(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a, int b, int c, TileEntity d);
+	public abstract void MIDDLECRAFT_func_861_b(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_816_b(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(AxisAlignedBB a);
+	public abstract boolean MIDDLECRAFT_func_840_b(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(AxisAlignedBB a, Material b);
+	public abstract boolean MIDDLECRAFT_func_844_b(AxisAlignedBB a, Material b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void b(Entity a);
+	protected abstract void MIDDLECRAFT_func_826_b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.util.List b(Entity a, AxisAlignedBB b);
+	public abstract java.util.List MIDDLECRAFT_func_859_b(Entity a, AxisAlignedBB b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(java.util.List a);
+	public abstract void MIDDLECRAFT_func_864_b(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c();
+	public abstract void MIDDLECRAFT_func_836_c();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk c(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_794_c(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract Material c(int a, int b, int c);
+	public abstract Material MIDDLECRAFT_func_797_c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c(int a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_800_c(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract byte[] c(int a, int b, int c, int d, int e, int f);
+	public abstract byte[] MIDDLECRAFT_func_874_c(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c(AxisAlignedBB a);
+	public abstract boolean MIDDLECRAFT_func_841_c(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void c(Entity a);
+	protected abstract void MIDDLECRAFT_func_827_c(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d();
+	public abstract boolean MIDDLECRAFT_func_852_d();
 	
 	/**
 	 * 
 	 */
-	public abstract int d(int a, int b);
+	public abstract int MIDDLECRAFT_func_813_d(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_851_d(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d(int a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_801_d(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void d(Entity a);
+	public abstract void MIDDLECRAFT_func_828_d(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void e();
+	public abstract void MIDDLECRAFT_func_855_e();
 	
 	/**
 	 * 
 	 */
-	public abstract int e(int a, int b);
+	public abstract int MIDDLECRAFT_func_834_e(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean e(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_789_e(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	protected abstract void e(int a, int b, int c, int d);
+	protected abstract void MIDDLECRAFT_func_804_e(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(Entity a);
+	public abstract void MIDDLECRAFT_func_829_e(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void f();
+	public abstract void MIDDLECRAFT_func_856_f();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean f(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_790_f(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void f(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_805_f(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void f(Entity a);
+	public abstract void MIDDLECRAFT_func_837_f(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void g();
+	protected abstract void MIDDLECRAFT_func_857_g();
 	
 	/**
 	 * 
 	 */
-	public abstract void g(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_803_g(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void g(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_807_g(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void h();
+	public abstract void MIDDLECRAFT_func_875_h();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean h(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_809_h(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void h(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_835_h(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract int i(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_810_i(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean i(int a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_868_i(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean j(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_812_j(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean j(int a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_870_j(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract float k(int a, int b, int c);
+	public abstract float MIDDLECRAFT_func_817_k(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract TileEntity l(int a, int b, int c);
+	public abstract TileEntity MIDDLECRAFT_func_848_l(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void m(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_850_m(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean n(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_869_n(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean o(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_871_o(int a, int b, int c);
 
 }

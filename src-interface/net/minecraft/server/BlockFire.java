@@ -12,56 +12,56 @@ public abstract class BlockFire extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1796_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_1806_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_1799_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_1797_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_1798_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1807_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(IBlockAccess a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_1804_b(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d();
+	public abstract boolean MIDDLECRAFT_func_1803_d();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1795_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1808_e(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract int f(World a, int b, int c, int d, int e);
+	public abstract int MIDDLECRAFT_func_1805_f(World a, int b, int c, int d, int e);
 
 }

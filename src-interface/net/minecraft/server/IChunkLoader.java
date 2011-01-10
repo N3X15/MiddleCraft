@@ -10,26 +10,26 @@ public abstract interface IChunkLoader {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_200_a();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk a(World a, int b, int c);
+	public abstract Chunk MIDDLECRAFT_func_197_a(World a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, Chunk b);
+	public abstract void MIDDLECRAFT_func_198_a(World a, Chunk b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b();
+	public abstract void MIDDLECRAFT_func_201_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, Chunk b);
+	public abstract void MIDDLECRAFT_func_199_b(World a, Chunk b);
 
 }

@@ -15,26 +15,26 @@ public abstract class MCHashTable {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1574_a();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.Object a(int a);
+	public abstract java.lang.Object MIDDLECRAFT_func_1566_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, java.lang.Object b);
+	public abstract void MIDDLECRAFT_func_1569_a(int a, java.lang.Object b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(int a);
+	public abstract boolean MIDDLECRAFT_func_1567_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.Object d(int a);
+	public abstract java.lang.Object MIDDLECRAFT_func_1572_d(int a);
 
 }

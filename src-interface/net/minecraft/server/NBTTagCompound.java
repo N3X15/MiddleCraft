@@ -11,126 +11,126 @@ public abstract class NBTTagCompound extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte a();
+	public abstract byte MIDDLECRAFT_func_72_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(java.lang.String a);
+	public abstract boolean MIDDLECRAFT_func_84_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, byte b);
+	public abstract void MIDDLECRAFT_func_74_a(java.lang.String a, byte b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, double b);
+	public abstract void MIDDLECRAFT_func_79_a(java.lang.String a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, float b);
+	public abstract void MIDDLECRAFT_func_78_a(java.lang.String a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, int b);
+	public abstract void MIDDLECRAFT_func_76_a(java.lang.String a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, long b);
+	public abstract void MIDDLECRAFT_func_77_a(java.lang.String a, long b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, NBTTagCompound b);
+	public abstract void MIDDLECRAFT_func_82_a(java.lang.String a, NBTTagCompound b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, NBTBase b);
+	public abstract void MIDDLECRAFT_func_73_a(java.lang.String a, NBTBase b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, java.lang.String b);
+	public abstract void MIDDLECRAFT_func_80_a(java.lang.String a, java.lang.String b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, short b);
+	public abstract void MIDDLECRAFT_func_75_a(java.lang.String a, short b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, boolean b);
+	public abstract void MIDDLECRAFT_func_83_a(java.lang.String a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, byte[] b);
+	public abstract void MIDDLECRAFT_func_81_a(java.lang.String a, byte[] b);
 	
 	/**
 	 * 
 	 */
-	public abstract byte b(java.lang.String a);
+	public abstract byte MIDDLECRAFT_func_85_b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract short c(java.lang.String a);
+	public abstract short MIDDLECRAFT_func_86_c(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract int d(java.lang.String a);
+	public abstract int MIDDLECRAFT_func_87_d(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract long e(java.lang.String a);
+	public abstract long MIDDLECRAFT_func_88_e(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract float f(java.lang.String a);
+	public abstract float MIDDLECRAFT_func_89_f(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract double g(java.lang.String a);
+	public abstract double MIDDLECRAFT_func_90_g(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String h(java.lang.String a);
+	public abstract java.lang.String MIDDLECRAFT_func_91_h(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract byte[] i(java.lang.String a);
+	public abstract byte[] MIDDLECRAFT_func_92_i(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract NBTTagCompound j(java.lang.String a);
+	public abstract NBTTagCompound MIDDLECRAFT_func_93_j(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract NBTTagList k(java.lang.String a);
+	public abstract NBTTagList MIDDLECRAFT_func_94_k(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean l(java.lang.String a);
+	public abstract boolean MIDDLECRAFT_func_95_l(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_96_toString();
 
 }

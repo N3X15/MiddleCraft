@@ -17,21 +17,21 @@ public abstract class NextTickListEntry {
 	/**
 	 * 
 	 */
-	public abstract NextTickListEntry a(long a);
+	public abstract NextTickListEntry MIDDLECRAFT_func_435_a(long a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(NextTickListEntry a);
+	public abstract int MIDDLECRAFT_func_436_a(NextTickListEntry a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean equals(java.lang.Object a);
+	public abstract boolean MIDDLECRAFT_func_433_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract int hashCode();
+	public abstract int MIDDLECRAFT_func_434_hashCode();
 
 }

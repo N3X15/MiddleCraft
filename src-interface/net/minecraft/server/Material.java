@@ -35,26 +35,26 @@ public abstract class Material {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1860_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_1861_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c();
+	public abstract boolean MIDDLECRAFT_func_1862_c();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d();
+	public abstract boolean MIDDLECRAFT_func_1859_d();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean e();
+	public abstract boolean MIDDLECRAFT_func_1864_e();
 
 }

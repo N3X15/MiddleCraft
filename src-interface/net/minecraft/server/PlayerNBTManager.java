@@ -12,11 +12,11 @@ public abstract class PlayerNBTManager {
 	/**
 	 * 
 	 */
-	public abstract void a(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_491_a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_492_b(EntityPlayerMP a);
 
 }

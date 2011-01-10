@@ -13,41 +13,41 @@ public abstract class InventoryLargeChest {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_145_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_147_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_148_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_149_a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a_(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_152_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b();
+	public abstract java.lang.String MIDDLECRAFT_func_146_b();
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_150_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_151_d();
 
 }

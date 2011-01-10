@@ -11,6 +11,6 @@ public abstract class RecipesIngots {
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingManager a);
+	public abstract void MIDDLECRAFT_func_1021_a(CraftingManager a);
 
 }

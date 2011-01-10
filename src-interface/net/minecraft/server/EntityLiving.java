@@ -64,181 +64,181 @@ public abstract class EntityLiving extends Entity {
 	/**
 	 * 
 	 */
-	public abstract Vec3D C();
+	public abstract Vec3D MIDDLECRAFT_func_1901_C();
 	
 	/**
 	 * 
 	 */
-	public abstract void G();
+	public abstract void MIDDLECRAFT_func_1893_G();
 	
 	/**
 	 * 
 	 */
-	public abstract void O();
+	public abstract void MIDDLECRAFT_func_1873_O();
 	
 	/**
 	 * 
 	 */
-	protected abstract void P();
+	protected abstract void MIDDLECRAFT_func_1894_P();
 	
 	/**
 	 * 
 	 */
-	public abstract void Q();
+	public abstract void MIDDLECRAFT_func_1898_Q();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1899_a();
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(float a);
+	protected abstract void MIDDLECRAFT_func_1887_a(float a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(float a, float b);
+	protected abstract void MIDDLECRAFT_func_1876_a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1890_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_1878_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a, int b, double c, double d);
+	public abstract void MIDDLECRAFT_func_1884_a(Entity a, int b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_1871_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1891_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a, float b);
+	public abstract void MIDDLECRAFT_func_1896_b(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_1875_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract void c();
+	protected abstract void MIDDLECRAFT_func_1895_c();
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D c(float a);
+	public abstract Vec3D MIDDLECRAFT_func_1902_c(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(float a, float b);
+	public abstract void MIDDLECRAFT_func_1888_c(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(int a);
+	public abstract void MIDDLECRAFT_func_1877_c(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c_();
+	public abstract boolean MIDDLECRAFT_func_1868_c_();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String d();
+	protected abstract java.lang.String MIDDLECRAFT_func_1881_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract void d(int a);
+	protected abstract void MIDDLECRAFT_func_1879_d(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d_();
+	public abstract boolean MIDDLECRAFT_func_1889_d_();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_1882_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_1883_f();
 	
 	/**
 	 * 
 	 */
-	public abstract void f(Entity a);
+	public abstract void MIDDLECRAFT_func_1885_f(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected abstract int g();
+	protected abstract int MIDDLECRAFT_func_1886_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract float h();
+	protected abstract float MIDDLECRAFT_func_1880_h();
 	
 	/**
 	 * 
 	 */
-	public abstract int i();
+	public abstract int MIDDLECRAFT_func_1903_i();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean i(Entity a);
+	public abstract boolean MIDDLECRAFT_func_1867_i(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void m();
+	public abstract void MIDDLECRAFT_func_1872_m();
 	
 	/**
 	 * 
 	 */
-	protected abstract void o();
+	protected abstract void MIDDLECRAFT_func_1900_o();
 	
 	/**
 	 * 
 	 */
-	public abstract float s();
+	public abstract float MIDDLECRAFT_func_1870_s();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean v();
+	public abstract boolean MIDDLECRAFT_func_1869_v();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean x();
+	public abstract boolean MIDDLECRAFT_func_1892_x();
 	
 	/**
 	 * 
 	 */
-	public abstract void z();
+	public abstract void MIDDLECRAFT_func_1874_z();
 
 }

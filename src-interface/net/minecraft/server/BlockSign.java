@@ -12,31 +12,31 @@ public abstract class BlockSign extends BlockContainer {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1098_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_1100_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1097_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected abstract TileEntity a_();
+	protected abstract TileEntity MIDDLECRAFT_func_1099_a_();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1101_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1096_d(World a, int b, int c, int d);
 
 }

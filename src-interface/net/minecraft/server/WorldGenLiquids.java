@@ -11,6 +11,6 @@ public abstract class WorldGenLiquids extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1642_a(World a, java.util.Random b, int c, int d, int e);
 
 }

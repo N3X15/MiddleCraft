@@ -10,16 +10,16 @@ public abstract class EntityFlying extends EntityLiving {
 	/**
 	 * 
 	 */
-	protected abstract void a(float a);
+	protected abstract void MIDDLECRAFT_func_1530_a(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(float a, float b);
+	public abstract void MIDDLECRAFT_func_1531_c(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d_();
+	public abstract boolean MIDDLECRAFT_func_1532_d_();
 
 }

@@ -19,11 +19,11 @@ public abstract class Explosion {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_438_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void b();
+	public abstract void MIDDLECRAFT_func_439_b();
 
 }

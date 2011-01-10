@@ -12,26 +12,26 @@ public abstract class Path {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1746_a();
 	
 	/**
 	 * 
 	 */
-	public abstract PathPoint a(PathPoint a);
+	public abstract PathPoint MIDDLECRAFT_func_1745_a(PathPoint a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(PathPoint a, float b);
+	public abstract void MIDDLECRAFT_func_1748_a(PathPoint a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract PathPoint b();
+	public abstract PathPoint MIDDLECRAFT_func_1747_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c();
+	public abstract boolean MIDDLECRAFT_func_1751_c();
 
 }

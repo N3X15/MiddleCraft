@@ -19,41 +19,41 @@ public abstract class NetLoginHandler extends NetHandler {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1053_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet1Login a);
+	public abstract void MIDDLECRAFT_func_1056_a(Packet1Login a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet2Handshake a);
+	public abstract void MIDDLECRAFT_func_1055_a(Packet2Handshake a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1054_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, java.lang.Object[] b);
+	public abstract void MIDDLECRAFT_func_1058_a(java.lang.String a, java.lang.Object[] b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet a);
+	public abstract void MIDDLECRAFT_func_1059_a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b();
+	public abstract java.lang.String MIDDLECRAFT_func_1060_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Packet1Login a);
+	public abstract void MIDDLECRAFT_func_1057_b(Packet1Login a);
 
 }

@@ -10,6 +10,6 @@ public abstract class ItemSoup extends ItemFood {
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_319_a(ItemStack a, World b, EntityPlayer c);
 
 }

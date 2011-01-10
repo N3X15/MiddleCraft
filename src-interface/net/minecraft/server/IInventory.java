@@ -10,41 +10,41 @@ public abstract interface IInventory {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1909_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_1910_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_1911_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_1912_a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a_(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_1916_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b();
+	public abstract java.lang.String MIDDLECRAFT_func_1913_b();
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_1914_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_1915_d();
 
 }

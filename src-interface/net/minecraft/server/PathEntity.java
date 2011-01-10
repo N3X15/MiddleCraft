@@ -13,16 +13,16 @@ public abstract class PathEntity {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_458_a();
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D a(Entity a);
+	public abstract Vec3D MIDDLECRAFT_func_460_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_459_b();
 
 }

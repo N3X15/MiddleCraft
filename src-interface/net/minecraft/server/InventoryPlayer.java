@@ -16,111 +16,111 @@ public abstract class InventoryPlayer {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1439_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_1440_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_1434_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_1435_a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(Entity a);
+	public abstract int MIDDLECRAFT_func_1443_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract NBTTagList a(NBTTagList a);
+	public abstract NBTTagList MIDDLECRAFT_func_1437_a(NBTTagList a);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(Block a);
+	public abstract float MIDDLECRAFT_func_1436_a(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(ItemStack a);
+	public abstract boolean MIDDLECRAFT_func_1433_a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a_(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_1451_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String b();
+	public abstract java.lang.String MIDDLECRAFT_func_1441_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(int a);
+	public abstract boolean MIDDLECRAFT_func_1432_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagList a);
+	public abstract void MIDDLECRAFT_func_1438_b(NBTTagList a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(Block a);
+	public abstract boolean MIDDLECRAFT_func_1444_b(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(ItemStack a);
+	public abstract void MIDDLECRAFT_func_1449_b(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_1442_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(int a);
+	public abstract void MIDDLECRAFT_func_1446_c(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_1448_d();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack e();
+	public abstract ItemStack MIDDLECRAFT_func_1426_e();
 	
 	/**
 	 * 
 	 */
-	public abstract void f();
+	public abstract void MIDDLECRAFT_func_1431_f();
 	
 	/**
 	 * 
 	 */
-	public abstract int g();
+	public abstract int MIDDLECRAFT_func_1445_g();
 	
 	/**
 	 * 
 	 */
-	public abstract void h();
+	public abstract void MIDDLECRAFT_func_1447_h();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack i();
+	public abstract ItemStack MIDDLECRAFT_func_1450_i();
 
 }

@@ -10,46 +10,46 @@ public abstract class EntitySpider extends EntityMobs {
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_375_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(Entity a, float b);
+	protected abstract void MIDDLECRAFT_func_374_a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_376_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String d();
+	protected abstract java.lang.String MIDDLECRAFT_func_371_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_372_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_373_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int g();
+	protected abstract int MIDDLECRAFT_func_377_g();
 	
 	/**
 	 * 
 	 */
-	public abstract double j();
+	public abstract double MIDDLECRAFT_func_369_j();
 	
 	/**
 	 * 
 	 */
-	protected abstract Entity k();
+	protected abstract Entity MIDDLECRAFT_func_370_k();
 
 }

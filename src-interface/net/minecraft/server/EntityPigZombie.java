@@ -13,56 +13,56 @@ public abstract class EntityPigZombie extends EntityZombie {
 	/**
 	 * 
 	 */
-	public abstract void G();
+	public abstract void MIDDLECRAFT_func_1674_G();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1670_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1671_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_1675_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1672_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_1669_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String d();
+	protected abstract java.lang.String MIDDLECRAFT_func_1677_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_1678_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_1679_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int g();
+	protected abstract int MIDDLECRAFT_func_1680_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract Entity k();
+	protected abstract Entity MIDDLECRAFT_func_1673_k();
 
 }

@@ -33,41 +33,41 @@ public abstract class ChunkProviderGenerate {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1706_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_1703_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, byte[] c, MobSpawnerBase[] d);
+	public abstract void MIDDLECRAFT_func_1700_a(int a, int b, byte[] c, MobSpawnerBase[] d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, byte[] c, MobSpawnerBase[] d, double[] e);
+	public abstract void MIDDLECRAFT_func_1699_a(int a, int b, byte[] c, MobSpawnerBase[] d, double[] e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IChunkProvider a, int b, int c);
+	public abstract void MIDDLECRAFT_func_1704_a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(boolean a, IProgressUpdate b);
+	public abstract boolean MIDDLECRAFT_func_1705_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_1707_b();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_1701_b(int a, int b);
 
 }

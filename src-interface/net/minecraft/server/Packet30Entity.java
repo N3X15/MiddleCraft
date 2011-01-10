@@ -17,21 +17,21 @@ public abstract class Packet30Entity extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1066_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_1065_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_1063_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_1064_a(java.io.DataOutputStream a);
 
 }

@@ -1,4 +1,4 @@
-import org.middlecraft.server.World;
+import org.middlecraft.server.adapter.World;
 
 /**
  * Copyright (c) 2010, MiddleCraft Contributors

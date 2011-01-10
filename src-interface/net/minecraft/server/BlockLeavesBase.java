@@ -11,11 +11,11 @@ public abstract class BlockLeavesBase extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1965_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1966_a(IBlockAccess a, int b, int c, int d, int e);
 
 }

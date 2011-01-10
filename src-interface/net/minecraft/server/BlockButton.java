@@ -10,76 +10,76 @@ public abstract class BlockButton extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_155_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_156_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_163_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_168_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_161_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_154_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_164_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_159_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void MIDDLECRAFT_func_162_b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_165_b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c();
+	public abstract boolean MIDDLECRAFT_func_167_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_157_c(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_153_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d(World a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_166_d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_158_e(World a, int b, int c, int d);
 
 }

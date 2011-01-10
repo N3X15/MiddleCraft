@@ -1,4 +1,12 @@
 package org.middlecraft.server;
+
+import java.util.List;
+import java.util.Random;
+
+import net.minecraft.server.AxisAlignedBB;
+import net.minecraft.server.Entity;
+import net.minecraft.server.EnumSkyBlock;
+import net.minecraft.server.TileEntity;
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
  * All rights reserved.
@@ -32,8 +40,180 @@ package org.middlecraft.server;
  * @author Rob
  *
  */
-public class Chunk {
-	public int xPosition=0;
-	public int zPosition=0;
-	
+public class Chunk extends net.minecraft.server.Chunk {
+
+	@Override
+	public void a() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean a(int a, int b) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int a(int a, int b, int c) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean a(int a, int b, int c, int d) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean a(int a, int b, int c, int d, int e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void a(int a, int b, int c, TileEntity d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Random a(long a) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void a(TileEntity a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int a(EnumSkyBlock a, int b, int c, int d) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void a(EnumSkyBlock a, int b, int c, int d, int e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void a(Entity a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void a(Entity a, int b) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void a(Entity a, AxisAlignedBB b, List c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void a(Class a, AxisAlignedBB b, List c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean a(boolean a) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int a(byte[] a, int b, int c, int d, int e, int f, int g, int h) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void b() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int b(int a, int b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int b(int a, int b, int c) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void b(int a, int b, int c, int d) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void b(Entity a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void c() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean c(int a, int b, int c) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int c(int a, int b, int c, int d) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void d() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public TileEntity d(int a, int b, int c) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void e() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void e(int a, int b, int c) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void f() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

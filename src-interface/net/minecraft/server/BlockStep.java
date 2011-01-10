@@ -11,31 +11,31 @@ public abstract class BlockStep extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1853_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a);
+	public abstract int MIDDLECRAFT_func_1852_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_1856_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1857_a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1854_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1855_e(World a, int b, int c, int d);
 
 }

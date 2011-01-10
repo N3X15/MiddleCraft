@@ -10,6 +10,6 @@ public abstract class ItemHoe extends Item {
 	/**
 	 * 
 	 */
-	public abstract boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_1708_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

@@ -15,16 +15,16 @@ public abstract class CraftingRecipe {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_527_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int[] a);
+	public abstract boolean MIDDLECRAFT_func_524_a(int[] a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack b(int[] a);
+	public abstract ItemStack MIDDLECRAFT_func_526_b(int[] a);
 
 }

@@ -10,26 +10,26 @@ public abstract class BlockTNT extends Block {
 	/**
 	 * 
 	 */
-	public abstract int a(int a);
+	public abstract int MIDDLECRAFT_func_103_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_107_a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_105_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_104_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_106_c(World a, int b, int c, int d);
 
 }

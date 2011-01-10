@@ -14,11 +14,11 @@ public abstract class Pathfinder {
 	/**
 	 * 
 	 */
-	public abstract PathEntity a(Entity a, int b, int c, int d, float e);
+	public abstract PathEntity MIDDLECRAFT_func_1003_a(Entity a, int b, int c, int d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract PathEntity a(Entity a, Entity b, float c);
+	public abstract PathEntity MIDDLECRAFT_func_1002_a(Entity a, Entity b, float c);
 
 }

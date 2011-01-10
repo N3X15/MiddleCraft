@@ -10,11 +10,11 @@ public abstract class BlockOre extends Block {
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_1662_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_1663_a(java.util.Random a);
 
 }

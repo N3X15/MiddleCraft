@@ -10,31 +10,31 @@ public abstract interface IChunkProvider {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_367_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_363_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IChunkProvider a, int b, int c);
+	public abstract void MIDDLECRAFT_func_365_a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(boolean a, IProgressUpdate b);
+	public abstract boolean MIDDLECRAFT_func_366_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_368_b();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_364_b(int a, int b);
 
 }

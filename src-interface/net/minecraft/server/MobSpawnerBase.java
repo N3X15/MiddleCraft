@@ -30,26 +30,26 @@ public abstract class MobSpawnerBase {
 	/**
 	 * 
 	 */
-	protected abstract MobSpawnerBase a(int a);
+	protected abstract MobSpawnerBase MIDDLECRAFT_func_1624_a(int a);
 	
 	/**
 	 * 
 	 */
-	protected abstract MobSpawnerBase a(java.lang.String a);
+	protected abstract MobSpawnerBase MIDDLECRAFT_func_1623_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.Class[] a(EnumCreatureType a);
+	public abstract java.lang.Class[] MIDDLECRAFT_func_1628_a(EnumCreatureType a);
 	
 	/**
 	 * 
 	 */
-	protected abstract MobSpawnerBase b();
+	protected abstract MobSpawnerBase MIDDLECRAFT_func_1622_b();
 	
 	/**
 	 * 
 	 */
-	protected abstract MobSpawnerBase b(int a);
+	protected abstract MobSpawnerBase MIDDLECRAFT_func_1625_b(int a);
 
 }

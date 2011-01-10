@@ -11,6 +11,6 @@ public abstract class ItemBucket extends Item {
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_196_a(ItemStack a, World b, EntityPlayer c);
 
 }

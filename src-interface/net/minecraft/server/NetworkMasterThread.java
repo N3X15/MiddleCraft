@@ -11,6 +11,6 @@ abstract class NetworkMasterThread extends java.lang.Thread {
 	/**
 	 * 
 	 */
-	public abstract void run();
+	public abstract void MIDDLECRAFT_func_1629_run();
 
 }

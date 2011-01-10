@@ -14,21 +14,21 @@ public abstract class ChunkCache {
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_753_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_754_b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract Material c(int a, int b, int c);
+	public abstract Material MIDDLECRAFT_func_755_c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_756_d(int a, int b, int c);
 
 }

@@ -29,156 +29,156 @@ public abstract class EntityPlayer extends EntityLiving {
 	/**
 	 * 
 	 */
-	public abstract double B();
+	public abstract double MIDDLECRAFT_func_1137_B();
 	
 	/**
 	 * 
 	 */
-	public abstract void G();
+	public abstract void MIDDLECRAFT_func_1114_G();
 	
 	/**
 	 * 
 	 */
-	public abstract void H();
+	public abstract void MIDDLECRAFT_func_1138_H();
 	
 	/**
 	 * 
 	 */
-	protected abstract void I();
+	protected abstract void MIDDLECRAFT_func_1111_I();
 	
 	/**
 	 * 
 	 */
-	public abstract void L();
+	public abstract void MIDDLECRAFT_func_1118_L();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack M();
+	public abstract ItemStack MIDDLECRAFT_func_1135_M();
 	
 	/**
 	 * 
 	 */
-	public abstract void N();
+	public abstract void MIDDLECRAFT_func_1136_N();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_1127_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1125_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(TileEntityFurnace a);
+	public abstract void MIDDLECRAFT_func_1132_a(TileEntityFurnace a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_1130_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(Block a);
+	public abstract float MIDDLECRAFT_func_1122_a(Block a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(EntityItem a);
+	protected abstract void MIDDLECRAFT_func_1121_a(EntityItem a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a);
+	public abstract void MIDDLECRAFT_func_1140_a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a, boolean b);
+	public abstract void MIDDLECRAFT_func_1120_a(ItemStack a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(TileEntitySign a);
+	public abstract void MIDDLECRAFT_func_1133_a(TileEntitySign a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IInventory a);
+	public abstract void MIDDLECRAFT_func_1126_a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1124_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_1117_b(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(Block a);
+	public abstract boolean MIDDLECRAFT_func_1123_b(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(ItemStack a);
+	public abstract void MIDDLECRAFT_func_1119_b(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_1110_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract void c();
+	protected abstract void MIDDLECRAFT_func_1113_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_1128_c(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void d(int a);
+	protected abstract void MIDDLECRAFT_func_1131_d(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void f(Entity a);
+	public abstract void MIDDLECRAFT_func_1116_f(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void g(Entity a);
+	public abstract void MIDDLECRAFT_func_1134_g(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void h(Entity a);
+	public abstract void MIDDLECRAFT_func_1139_h(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void l();
+	public abstract void MIDDLECRAFT_func_1141_l();
 	
 	/**
 	 * 
 	 */
-	public abstract float s();
+	public abstract float MIDDLECRAFT_func_1129_s();
 	
 	/**
 	 * 
 	 */
-	public abstract void z();
+	public abstract void MIDDLECRAFT_func_1112_z();
 
 }

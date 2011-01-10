@@ -33,31 +33,31 @@ public abstract class NetworkManager {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_307_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_301_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet a);
+	public abstract void MIDDLECRAFT_func_302_a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.net.SocketAddress b();
+	public abstract java.net.SocketAddress MIDDLECRAFT_func_308_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void c();
+	public abstract void MIDDLECRAFT_func_309_c();
 	
 	/**
 	 * 
 	 */
-	public abstract int d();
+	public abstract int MIDDLECRAFT_func_310_d();
 
 }

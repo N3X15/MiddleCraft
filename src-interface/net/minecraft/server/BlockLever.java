@@ -10,66 +10,66 @@ public abstract class BlockLever extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1648_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_1649_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_1656_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1654_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1657_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1652_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void MIDDLECRAFT_func_1655_b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1658_b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c();
+	public abstract boolean MIDDLECRAFT_func_1660_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1650_c(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1647_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d(World a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1659_d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1651_e(World a, int b, int c, int d);
 
 }

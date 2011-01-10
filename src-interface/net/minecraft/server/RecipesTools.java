@@ -12,6 +12,6 @@ public abstract class RecipesTools {
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingManager a);
+	public abstract void MIDDLECRAFT_func_1207_a(CraftingManager a);
 
 }

@@ -10,16 +10,16 @@ public abstract class MaterialLiquid extends Material {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_576_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c();
+	public abstract boolean MIDDLECRAFT_func_575_c();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d();
+	public abstract boolean MIDDLECRAFT_func_574_d();
 
 }

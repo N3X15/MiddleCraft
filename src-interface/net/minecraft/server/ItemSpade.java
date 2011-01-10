@@ -11,6 +11,6 @@ public abstract class ItemSpade extends ItemTool {
 	/**
 	 * 
 	 */
-	public abstract boolean a(Block a);
+	public abstract boolean MIDDLECRAFT_func_1480_a(Block a);
 
 }

@@ -14,31 +14,31 @@ public abstract class NoiseGeneratorPerlin extends NoiseGenerator {
 	/**
 	 * 
 	 */
-	public abstract double a(double a, double b);
+	public abstract double MIDDLECRAFT_func_136_a(double a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract double a(double a, double b, double c);
+	public abstract double MIDDLECRAFT_func_132_a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract double a(int a, double b, double c);
+	public abstract double MIDDLECRAFT_func_134_a(int a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract double a(int a, double b, double c, double d);
+	public abstract double MIDDLECRAFT_func_135_a(int a, double b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j, double k);
+	public abstract void MIDDLECRAFT_func_137_a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j, double k);
 	
 	/**
 	 * 
 	 */
-	public abstract double b(double a, double b, double c);
+	public abstract double MIDDLECRAFT_func_133_b(double a, double b, double c);
 
 }

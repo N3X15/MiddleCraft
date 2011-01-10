@@ -12,26 +12,26 @@ public abstract class NBTTagList extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte a();
+	public abstract byte MIDDLECRAFT_func_714_a();
 	
 	/**
 	 * 
 	 */
-	public abstract NBTBase a(int a);
+	public abstract NBTBase MIDDLECRAFT_func_717_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTBase a);
+	public abstract void MIDDLECRAFT_func_716_a(NBTBase a);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_718_b();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_715_toString();
 
 }

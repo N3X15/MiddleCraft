@@ -29,146 +29,146 @@ public abstract class Chunk {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1818_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_1816_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_1824_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_1826_a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1825_a(int a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, TileEntity d);
+	public abstract void MIDDLECRAFT_func_1838_a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public abstract java.util.Random a(long a);
+	public abstract java.util.Random MIDDLECRAFT_func_1847_a(long a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(TileEntity a);
+	public abstract void MIDDLECRAFT_func_1837_a(TileEntity a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(EnumSkyBlock a, int b, int c, int d);
+	public abstract int MIDDLECRAFT_func_1829_a(EnumSkyBlock a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1830_a(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a);
+	public abstract void MIDDLECRAFT_func_1832_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_1834_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Entity a, AxisAlignedBB b, java.util.List c);
+	public abstract void MIDDLECRAFT_func_1843_a(Entity a, AxisAlignedBB b, java.util.List c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.Class a, AxisAlignedBB b, java.util.List c);
+	public abstract void MIDDLECRAFT_func_1844_a(java.lang.Class a, AxisAlignedBB b, java.util.List c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(boolean a);
+	public abstract boolean MIDDLECRAFT_func_1845_a(boolean a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(byte[] a, int b, int c, int d, int e, int f, int g, int h);
+	public abstract int MIDDLECRAFT_func_1846_a(byte[] a, int b, int c, int d, int e, int f, int g, int h);
 	
 	/**
 	 * 
 	 */
-	public abstract void b();
+	public abstract void MIDDLECRAFT_func_1819_b();
 	
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b);
+	public abstract int MIDDLECRAFT_func_1817_b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_1827_b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1828_b(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a);
+	public abstract void MIDDLECRAFT_func_1833_b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c();
+	public abstract void MIDDLECRAFT_func_1820_c();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_1835_c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract int c(int a, int b, int c, int d);
+	public abstract int MIDDLECRAFT_func_1831_c(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_1840_d();
 	
 	/**
 	 * 
 	 */
-	public abstract TileEntity d(int a, int b, int c);
+	public abstract TileEntity MIDDLECRAFT_func_1836_d(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void e();
+	public abstract void MIDDLECRAFT_func_1841_e();
 	
 	/**
 	 * 
 	 */
-	public abstract void e(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_1839_e(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void f();
+	public abstract void MIDDLECRAFT_func_1842_f();
 
 }

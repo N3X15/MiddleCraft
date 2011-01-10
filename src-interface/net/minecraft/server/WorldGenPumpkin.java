@@ -10,6 +10,6 @@ public abstract class WorldGenPumpkin extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_1601_a(World a, java.util.Random b, int c, int d, int e);
 
 }

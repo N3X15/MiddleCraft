@@ -70,286 +70,286 @@ public abstract class Entity {
 	/**
 	 * 
 	 */
-	public abstract void A();
+	public abstract void MIDDLECRAFT_func_698_A();
 	
 	/**
 	 * 
 	 */
-	public abstract double B();
+	public abstract double MIDDLECRAFT_func_699_B();
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D C();
+	public abstract Vec3D MIDDLECRAFT_func_702_C();
 	
 	/**
 	 * 
 	 */
-	public abstract void D();
+	public abstract void MIDDLECRAFT_func_703_D();
 	
 	/**
 	 * 
 	 */
-	public abstract int[] E();
+	public abstract int[] MIDDLECRAFT_func_704_E();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(double a, double b, double c);
+	public abstract void MIDDLECRAFT_func_651_a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(double a, boolean b);
+	protected abstract void MIDDLECRAFT_func_658_a(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(float a);
+	protected abstract void MIDDLECRAFT_func_662_a(float a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(float a, float b);
+	protected abstract void MIDDLECRAFT_func_649_a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(float a, float b, float c);
+	public abstract void MIDDLECRAFT_func_667_a(float a, float b, float c);
 	
 	/**
 	 * 
 	 */
-	public abstract EntityItem a(int a, int b, float c);
+	public abstract EntityItem MIDDLECRAFT_func_692_a(int a, int b, float c);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_688_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(Entity a);
+	public abstract float MIDDLECRAFT_func_671_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_679_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_695_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Material a);
+	public abstract boolean MIDDLECRAFT_func_664_a(Material a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(double a, double b, double c);
+	public abstract boolean MIDDLECRAFT_func_656_b(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(double a, double b, double c, float d, float e);
+	public abstract void MIDDLECRAFT_func_669_b(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract float b(float a);
+	public abstract float MIDDLECRAFT_func_668_b(float a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void b(float a, float b);
+	protected abstract void MIDDLECRAFT_func_650_b(float a, float b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void b(int a);
+	protected abstract void MIDDLECRAFT_func_661_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract EntityItem b(int a, int b);
+	public abstract EntityItem MIDDLECRAFT_func_691_b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void b(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_687_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract double b(Entity a);
+	public abstract double MIDDLECRAFT_func_674_b(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_682_b(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_675_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_652_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(double a, double b, double c);
+	public abstract void MIDDLECRAFT_func_657_c(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(double a, double b, double c, float d, float e);
+	public abstract void MIDDLECRAFT_func_670_c(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c(NBTTagCompound a);
+	public abstract boolean MIDDLECRAFT_func_683_c(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(Entity a);
+	public abstract void MIDDLECRAFT_func_676_c(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c_();
+	public abstract boolean MIDDLECRAFT_func_680_c_();
 	
 	/**
 	 * 
 	 */
-	public abstract double d(double a, double b, double c);
+	public abstract double MIDDLECRAFT_func_672_d(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract void d(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_684_d(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(Entity a);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_696_d(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract double e(double a, double b, double c);
+	public abstract double MIDDLECRAFT_func_673_e(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_685_e(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(Entity a);
+	public abstract void MIDDLECRAFT_func_701_e(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean equals(java.lang.Object a);
+	public abstract boolean MIDDLECRAFT_func_646_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract void f(double a, double b, double c);
+	public abstract void MIDDLECRAFT_func_677_f(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract int hashCode();
+	public abstract int MIDDLECRAFT_func_647_hashCode();
 	
 	/**
 	 * 
 	 */
-	public abstract double j();
+	public abstract double MIDDLECRAFT_func_700_j();
 	
 	/**
 	 * 
 	 */
-	public abstract void l();
+	public abstract void MIDDLECRAFT_func_648_l();
 	
 	/**
 	 * 
 	 */
-	public abstract void m();
+	public abstract void MIDDLECRAFT_func_653_m();
 	
 	/**
 	 * 
 	 */
-	protected abstract void n();
+	protected abstract void MIDDLECRAFT_func_654_n();
 	
 	/**
 	 * 
 	 */
-	protected abstract void o();
+	protected abstract void MIDDLECRAFT_func_655_o();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean p();
+	public abstract boolean MIDDLECRAFT_func_659_p();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB q();
+	public abstract AxisAlignedBB MIDDLECRAFT_func_660_q();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean r();
+	public abstract boolean MIDDLECRAFT_func_663_r();
 	
 	/**
 	 * 
 	 */
-	public abstract float s();
+	public abstract float MIDDLECRAFT_func_665_s();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean t();
+	public abstract boolean MIDDLECRAFT_func_666_t();
 	
 	/**
 	 * 
 	 */
-	protected abstract void u();
+	protected abstract void MIDDLECRAFT_func_678_u();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean v();
+	public abstract boolean MIDDLECRAFT_func_681_v();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String w();
+	protected abstract java.lang.String MIDDLECRAFT_func_686_w();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean x();
+	public abstract boolean MIDDLECRAFT_func_693_x();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean y();
+	public abstract boolean MIDDLECRAFT_func_694_y();
 	
 	/**
 	 * 
 	 */
-	public abstract void z();
+	public abstract void MIDDLECRAFT_func_697_z();
 
 }

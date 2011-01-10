@@ -18,31 +18,31 @@ public abstract class ChunkProviderLoadOrGenerate {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1690_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_1683_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IChunkProvider a, int b, int c);
+	public abstract void MIDDLECRAFT_func_1688_a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(boolean a, IProgressUpdate b);
+	public abstract boolean MIDDLECRAFT_func_1689_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_1691_b();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_1684_b(int a, int b);
 
 }

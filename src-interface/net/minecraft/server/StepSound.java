@@ -13,16 +13,16 @@ public abstract class StepSound {
 	/**
 	 * 
 	 */
-	public abstract float a();
+	public abstract float MIDDLECRAFT_func_397_a();
 	
 	/**
 	 * 
 	 */
-	public abstract float b();
+	public abstract float MIDDLECRAFT_func_398_b();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String c();
+	public abstract java.lang.String MIDDLECRAFT_func_399_c();
 
 }

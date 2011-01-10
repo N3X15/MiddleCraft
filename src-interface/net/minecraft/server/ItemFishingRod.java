@@ -10,6 +10,6 @@ public abstract class ItemFishingRod extends Item {
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_396_a(ItemStack a, World b, EntityPlayer c);
 
 }

@@ -12,31 +12,31 @@ public abstract class ChunkLoader {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1016_a();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk a(World a, int b, int c);
+	public abstract Chunk MIDDLECRAFT_func_1012_a(World a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, Chunk b);
+	public abstract void MIDDLECRAFT_func_1013_a(World a, Chunk b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Chunk a, World b, NBTTagCompound c);
+	public abstract void MIDDLECRAFT_func_1014_a(Chunk a, World b, NBTTagCompound c);
 	
 	/**
 	 * 
 	 */
-	public abstract void b();
+	public abstract void MIDDLECRAFT_func_1017_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, Chunk b);
+	public abstract void MIDDLECRAFT_func_1018_b(World a, Chunk b);
 
 }

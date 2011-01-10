@@ -19,26 +19,26 @@ public abstract class EntityEgg extends Entity {
 	/**
 	 * 
 	 */
-	public abstract void a(double a, double b, double c, float d, float e);
+	public abstract void MIDDLECRAFT_func_1411_a(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1413_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1414_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_1415_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_1412_b_();
 
 }

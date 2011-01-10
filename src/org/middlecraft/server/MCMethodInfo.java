@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javassist.ClassPool;
@@ -60,24 +61,6 @@ public class MCMethodInfo {
 	public MCMethodInfo() {
 	}
 
-	public MCMethodInfo(List<String> line) {
-		realName = line.get(0);
-		signature = line.get(1);
-		parentClass = line.get(2);
-		name = line.get(3);
-
-		if (name.equals("*"))
-			name = "";
-
-		try {
-			description = line.get(4);
-		} catch (IndexOutOfBoundsException e) {
-			l.warning(String.format(
-					"Could not retrieve description for %s.%s%s.", parentClass,
-					name, signature));
-		}
-	}
-
 	public List<String> toList() {
 		List<String> list = new ArrayList<String>();
 		list.add(realName);
@@ -104,12 +87,18 @@ public class MCMethodInfo {
 			modifiers = (Integer) y.get("modifiers");
 	}
 
-	private void parseSearge() {
-		if (searge.equals(""))
+	void parseSearge() {
+		if (searge.equals("")) {
+			searge=String.format("MIDDLECRAFT_func_%d_%s", currentSeargeIndex++,realName);
+		}
+		if (searge.startsWith("MIDDLECRAFT_"))
 			return;
 		// func_0_a
 		try {
 			seargeIndex = Integer.parseInt(searge.split("_")[1]);
+		} catch(NumberFormatException e) {
+			l.log(Level.SEVERE,searge,e);
+			return;
 		} catch (ArrayIndexOutOfBoundsException e) {
 			seargeIndex = currentSeargeIndex++;
 			// l.severe(searge);
@@ -176,7 +165,7 @@ public class MCMethodInfo {
 					"\n\t\n\t/**\n\t * %s\n\t */\n\t%s %s %s(%s);",
 					description, Modifier.toString(mod), Mappings
 							.getNewClassName(returnName),
-					(name.isEmpty()) ? realName : name, Utils.join(paramDefs,
+					(name.isEmpty()) ? searge : name, Utils.join(paramDefs,
 							", "));
 		} catch (NotFoundException e) {
 			return "";

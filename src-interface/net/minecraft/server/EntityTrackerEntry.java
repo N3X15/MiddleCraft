@@ -32,51 +32,51 @@ public abstract class EntityTrackerEntry {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1325_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_1326_a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.util.List a);
+	public abstract void MIDDLECRAFT_func_1322_a(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet a);
+	public abstract void MIDDLECRAFT_func_1323_a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_1327_b(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(java.util.List a);
+	public abstract void MIDDLECRAFT_func_1328_b(java.util.List a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(Packet a);
+	public abstract void MIDDLECRAFT_func_1324_b(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_1330_c(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean equals(java.lang.Object a);
+	public abstract boolean MIDDLECRAFT_func_1320_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract int hashCode();
+	public abstract int MIDDLECRAFT_func_1321_hashCode();
 
 }

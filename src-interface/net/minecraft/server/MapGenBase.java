@@ -12,11 +12,11 @@ public abstract class MapGenBase {
 	/**
 	 * 
 	 */
-	public abstract void a(IChunkProvider a, World b, int c, int d, byte[] e);
+	public abstract void MIDDLECRAFT_func_1000_a(IChunkProvider a, World b, int c, int d, byte[] e);
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(World a, int b, int c, int d, int e, byte[] f);
+	protected abstract void MIDDLECRAFT_func_1001_a(World a, int b, int c, int d, int e, byte[] f);
 
 }

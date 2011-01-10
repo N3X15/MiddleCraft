@@ -11,21 +11,21 @@ public abstract class ItemSword extends Item {
 	/**
 	 * 
 	 */
-	public abstract int a(Entity a);
+	public abstract int MIDDLECRAFT_func_360_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_359_a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(ItemStack a, Block b);
+	public abstract float MIDDLECRAFT_func_357_a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a, EntityLiving b);
+	public abstract void MIDDLECRAFT_func_358_a(ItemStack a, EntityLiving b);
 
 }

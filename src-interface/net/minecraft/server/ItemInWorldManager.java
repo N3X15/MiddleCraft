@@ -19,36 +19,36 @@ public abstract class ItemInWorldManager {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1810_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_1809_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1811_a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a, World b, ItemStack c);
+	public abstract boolean MIDDLECRAFT_func_1814_a(EntityPlayer a, World b, ItemStack c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a, World b, ItemStack c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_1815_a(EntityPlayer a, World b, ItemStack c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_1812_b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_1813_c(int a, int b, int c);
 
 }

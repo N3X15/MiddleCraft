@@ -14,26 +14,26 @@ abstract class HashEntry2 {
 	/**
 	 * 
 	 */
-	public abstract long a();
+	public abstract long MIDDLECRAFT_func_405_a();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.Object b();
+	public abstract java.lang.Object MIDDLECRAFT_func_406_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean equals(java.lang.Object a);
+	public abstract boolean MIDDLECRAFT_func_407_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract int hashCode();
+	public abstract int MIDDLECRAFT_func_408_hashCode();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_409_toString();
 
 }

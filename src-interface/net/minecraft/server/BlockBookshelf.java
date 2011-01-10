@@ -10,11 +10,11 @@ public abstract class BlockBookshelf extends Block {
 	/**
 	 * 
 	 */
-	public abstract int a(int a);
+	public abstract int MIDDLECRAFT_func_1220_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_1221_a(java.util.Random a);
 
 }

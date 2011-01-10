@@ -10,41 +10,41 @@ public abstract class BlockMinecartTrack extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_239_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_243_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_240_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_242_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_241_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_245_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_238_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_244_e(World a, int b, int c, int d);
 
 }

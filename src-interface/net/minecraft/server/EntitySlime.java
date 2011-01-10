@@ -14,61 +14,61 @@ public abstract class EntitySlime extends EntityLiving {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1218_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a);
+	public abstract void MIDDLECRAFT_func_1208_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1209_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1210_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_1214_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_1211_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract void c();
+	protected abstract void MIDDLECRAFT_func_1212_c();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String e();
+	protected abstract java.lang.String MIDDLECRAFT_func_1215_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String f();
+	protected abstract java.lang.String MIDDLECRAFT_func_1216_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int g();
+	protected abstract int MIDDLECRAFT_func_1217_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract float h();
+	protected abstract float MIDDLECRAFT_func_1219_h();
 	
 	/**
 	 * 
 	 */
-	public abstract void l();
+	public abstract void MIDDLECRAFT_func_1213_l();
 
 }

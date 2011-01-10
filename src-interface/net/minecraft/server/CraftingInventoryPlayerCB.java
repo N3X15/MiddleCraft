@@ -13,16 +13,16 @@ public abstract class CraftingInventoryPlayerCB extends CraftingInventoryCB {
 	/**
 	 * 
 	 */
-	public abstract void a(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_64_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IInventory a);
+	public abstract void MIDDLECRAFT_func_63_a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_65_b(EntityPlayer a);
 
 }

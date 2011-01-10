@@ -11,6 +11,6 @@ abstract class RecipeSorter {
 	/**
 	 * 
 	 */
-	public abstract int a(CraftingRecipe a, CraftingRecipe b);
+	public abstract int MIDDLECRAFT_func_1681_a(CraftingRecipe a, CraftingRecipe b);
 
 }

@@ -12,6 +12,6 @@ public abstract class ItemPickaxe extends ItemTool {
 	/**
 	 * 
 	 */
-	public abstract boolean a(Block a);
+	public abstract boolean MIDDLECRAFT_func_169_a(Block a);
 
 }

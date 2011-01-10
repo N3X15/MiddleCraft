@@ -22,26 +22,26 @@ public abstract class EntityFireball extends Entity {
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_347_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_350_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_348_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_346_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c_();
+	public abstract boolean MIDDLECRAFT_func_349_c_();
 
 }

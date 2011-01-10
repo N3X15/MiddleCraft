@@ -18,66 +18,66 @@ public abstract class AxisAlignedBB {
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB a(double a, double b, double c);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_609_a(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition a(Vec3D a, Vec3D b);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_619_a(Vec3D a, Vec3D b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(AxisAlignedBB a);
+	public abstract boolean MIDDLECRAFT_func_615_a(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public abstract double a(AxisAlignedBB a, double b);
+	public abstract double MIDDLECRAFT_func_612_a(AxisAlignedBB a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB b();
+	public abstract AxisAlignedBB MIDDLECRAFT_func_618_b();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB b(double a, double b, double c);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_610_b(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(AxisAlignedBB a);
+	public abstract void MIDDLECRAFT_func_623_b(AxisAlignedBB a);
 	
 	/**
 	 * 
 	 */
-	public abstract double b(AxisAlignedBB a, double b);
+	public abstract double MIDDLECRAFT_func_613_b(AxisAlignedBB a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB c(double a, double b, double c);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_611_c(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB c(double a, double b, double c, double d, double e, double f);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_608_c(double a, double b, double c, double d, double e, double f);
 	
 	/**
 	 * 
 	 */
-	public abstract double c(AxisAlignedBB a, double b);
+	public abstract double MIDDLECRAFT_func_614_c(AxisAlignedBB a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(double a, double b, double c);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_616_d(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB e(double a, double b, double c);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_617_e(double a, double b, double c);
 
 }

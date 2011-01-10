@@ -10,11 +10,11 @@ public abstract class BlockSponge extends Block {
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1620_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1619_e(World a, int b, int c, int d);
 
 }

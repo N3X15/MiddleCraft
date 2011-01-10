@@ -16,26 +16,26 @@ public abstract class TileEntity {
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_209_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_210_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_213_d();
 	
 	/**
 	 * 
 	 */
-	public abstract void e();
+	public abstract void MIDDLECRAFT_func_211_e();
 	
 	/**
 	 * 
 	 */
-	public abstract Packet f();
+	public abstract Packet MIDDLECRAFT_func_214_f();
 
 }

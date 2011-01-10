@@ -10,26 +10,26 @@ public abstract class EntityAnimals extends EntityCreature {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_206_a();
 	
 	/**
 	 * 
 	 */
-	protected abstract float a(int a, int b, int c);
+	protected abstract float MIDDLECRAFT_func_203_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_204_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_207_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_205_b(NBTTagCompound a);
 
 }

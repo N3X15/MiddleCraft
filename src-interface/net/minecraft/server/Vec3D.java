@@ -15,51 +15,51 @@ public abstract class Vec3D {
 	/**
 	 * 
 	 */
-	public abstract double a(Vec3D a);
+	public abstract double MIDDLECRAFT_func_262_a(Vec3D a);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D a(Vec3D a, double b);
+	public abstract Vec3D MIDDLECRAFT_func_266_a(Vec3D a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D b();
+	public abstract Vec3D MIDDLECRAFT_func_260_b();
 	
 	/**
 	 * 
 	 */
-	public abstract double b(Vec3D a);
+	public abstract double MIDDLECRAFT_func_263_b(Vec3D a);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D b(Vec3D a, double b);
+	public abstract Vec3D MIDDLECRAFT_func_267_b(Vec3D a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract double c();
+	public abstract double MIDDLECRAFT_func_265_c();
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D c(double a, double b, double c);
+	public abstract Vec3D MIDDLECRAFT_func_261_c(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D c(Vec3D a, double b);
+	public abstract Vec3D MIDDLECRAFT_func_268_c(Vec3D a, double b);
 	
 	/**
 	 * 
 	 */
-	public abstract double d(double a, double b, double c);
+	public abstract double MIDDLECRAFT_func_264_d(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_269_toString();
 
 }

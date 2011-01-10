@@ -10,21 +10,21 @@ public abstract interface IBlockAccess {
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_1643_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract int b(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_1644_b(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract Material c(int a, int b, int c);
+	public abstract Material MIDDLECRAFT_func_1645_c(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_1646_d(int a, int b, int c);
 
 }

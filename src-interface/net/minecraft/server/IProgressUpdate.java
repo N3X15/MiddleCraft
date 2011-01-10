@@ -10,16 +10,16 @@ public abstract interface IProgressUpdate {
 	/**
 	 * 
 	 */
-	public abstract void a(int a);
+	public abstract void MIDDLECRAFT_func_1694_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1692_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1693_b(java.lang.String a);
 
 }

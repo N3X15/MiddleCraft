@@ -10,26 +10,26 @@ public abstract class BlockCrops extends BlockFlower {
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_1955_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1954_a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_1952_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_1956_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	protected abstract boolean b(int a);
+	protected abstract boolean MIDDLECRAFT_func_1951_b(int a);
 
 }

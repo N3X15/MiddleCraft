@@ -14,86 +14,86 @@ public abstract class ItemStack {
 	/**
 	 * 
 	 */
-	public abstract Item a();
+	public abstract Item MIDDLECRAFT_func_1461_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_1460_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1471_a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract NBTTagCompound a(NBTTagCompound a);
+	public abstract NBTTagCompound MIDDLECRAFT_func_1465_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(Entity a);
+	public abstract int MIDDLECRAFT_func_1472_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(World a, EntityPlayer b);
+	public abstract ItemStack MIDDLECRAFT_func_1464_a(World a, EntityPlayer b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_1474_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a, World b, int c, int d, int e, int f);
+	public abstract boolean MIDDLECRAFT_func_1462_a(EntityPlayer a, World b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(Block a);
+	public abstract float MIDDLECRAFT_func_1463_a(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EntityLiving a);
+	public abstract void MIDDLECRAFT_func_1470_a(EntityLiving a);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_1467_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a);
+	public abstract void MIDDLECRAFT_func_1469_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_1466_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(Block a);
+	public abstract boolean MIDDLECRAFT_func_1473_b(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_1468_c();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack d();
+	public abstract ItemStack MIDDLECRAFT_func_1475_d();
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String toString();
+	public abstract java.lang.String MIDDLECRAFT_func_1479_toString();
 
 }

@@ -18,11 +18,11 @@ public abstract class NetworkListenThread {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_584_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(NetServerHandler a);
+	public abstract void MIDDLECRAFT_func_582_a(NetServerHandler a);
 
 }

@@ -11,6 +11,6 @@ abstract class ServerWindowAdapter extends java.awt.event.WindowAdapter {
 	/**
 	 * 
 	 */
-	public abstract void windowClosing(java.awt.event.WindowEvent a);
+	public abstract void MIDDLECRAFT_func_69_windowClosing(java.awt.event.WindowEvent a);
 
 }

@@ -115,76 +115,76 @@ public abstract class Item {
 	/**
 	 * 
 	 */
-	public abstract java.lang.String a();
+	public abstract java.lang.String MIDDLECRAFT_func_1091_a();
 	
 	/**
 	 * 
 	 */
-	public abstract Item a(int a);
+	public abstract Item MIDDLECRAFT_func_1077_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract Item a(int a, int b);
+	public abstract Item MIDDLECRAFT_func_1078_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(Entity a);
+	public abstract int MIDDLECRAFT_func_1086_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Block a);
+	public abstract boolean MIDDLECRAFT_func_1087_a(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1085_a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_1081_a(ItemStack a, World b, EntityPlayer c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_1079_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(ItemStack a, Block b);
+	public abstract float MIDDLECRAFT_func_1080_a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a, EntityLiving b);
+	public abstract void MIDDLECRAFT_func_1084_a(ItemStack a, EntityLiving b);
 	
 	/**
 	 * 
 	 */
-	public abstract Item a(java.lang.String a);
+	public abstract Item MIDDLECRAFT_func_1090_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_1082_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(ItemStack a, EntityLiving b);
+	public abstract void MIDDLECRAFT_func_1088_b(ItemStack a, EntityLiving b);
 	
 	/**
 	 * 
 	 */
-	public abstract int c();
+	public abstract int MIDDLECRAFT_func_1083_c();
 	
 	/**
 	 * 
 	 */
-	public abstract Item d();
+	public abstract Item MIDDLECRAFT_func_1089_d();
 
 }

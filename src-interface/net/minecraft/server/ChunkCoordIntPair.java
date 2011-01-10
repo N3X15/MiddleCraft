@@ -12,16 +12,16 @@ public abstract class ChunkCoordIntPair {
 	/**
 	 * 
 	 */
-	public abstract double a(Entity a);
+	public abstract double MIDDLECRAFT_func_1927_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean equals(java.lang.Object a);
+	public abstract boolean MIDDLECRAFT_func_1926_equals(java.lang.Object a);
 	
 	/**
 	 * 
 	 */
-	public abstract int hashCode();
+	public abstract int MIDDLECRAFT_func_1925_hashCode();
 
 }

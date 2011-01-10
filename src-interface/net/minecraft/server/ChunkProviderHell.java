@@ -29,41 +29,41 @@ public abstract class ChunkProviderHell {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_388_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_385_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, byte[] c);
+	public abstract void MIDDLECRAFT_func_381_a(int a, int b, byte[] c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IChunkProvider a, int b, int c);
+	public abstract void MIDDLECRAFT_func_386_a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(boolean a, IProgressUpdate b);
+	public abstract boolean MIDDLECRAFT_func_387_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b();
+	public abstract boolean MIDDLECRAFT_func_389_b();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_383_b(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(int a, int b, byte[] c);
+	public abstract void MIDDLECRAFT_func_382_b(int a, int b, byte[] c);
 
 }

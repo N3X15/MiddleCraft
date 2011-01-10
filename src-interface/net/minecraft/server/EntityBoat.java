@@ -19,56 +19,56 @@ public abstract class EntityBoat extends Entity {
 	/**
 	 * 
 	 */
-	public abstract void A();
+	public abstract void MIDDLECRAFT_func_1030_A();
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_1031_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_1027_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_1033_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void b(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_1032_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_1029_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean c_();
+	public abstract boolean MIDDLECRAFT_func_1028_c_();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(Entity a);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1023_d(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract double j();
+	public abstract double MIDDLECRAFT_func_1026_j();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB q();
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1024_q();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean v();
+	public abstract boolean MIDDLECRAFT_func_1025_v();
 
 }

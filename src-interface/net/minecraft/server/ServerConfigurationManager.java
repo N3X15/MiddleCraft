@@ -22,126 +22,126 @@ public abstract class ServerConfigurationManager {
 	/**
 	 * 
 	 */
-	public abstract int a();
+	public abstract int MIDDLECRAFT_func_1267_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(double a, double b, double c, double d, Packet e);
+	public abstract void MIDDLECRAFT_func_1292_a(double a, double b, double c, double d, Packet e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_1274_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, TileEntity d);
+	public abstract void MIDDLECRAFT_func_1296_a(int a, int b, int c, TileEntity d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_1268_a(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(WorldServer a);
+	public abstract void MIDDLECRAFT_func_1266_a(WorldServer a);
 	
 	/**
 	 * 
 	 */
-	public abstract EntityPlayerMP a(NetLoginHandler a, java.lang.String b, java.lang.String c);
+	public abstract EntityPlayerMP MIDDLECRAFT_func_1271_a(NetLoginHandler a, java.lang.String b, java.lang.String c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1277_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(java.lang.String a, java.lang.String b);
+	public abstract void MIDDLECRAFT_func_1291_a(java.lang.String a, java.lang.String b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(java.lang.String a, Packet b);
+	public abstract boolean MIDDLECRAFT_func_1294_a(java.lang.String a, Packet b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(Packet a);
+	public abstract void MIDDLECRAFT_func_1275_a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b();
+	public abstract void MIDDLECRAFT_func_1273_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_1269_b(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1278_b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String c();
+	public abstract java.lang.String MIDDLECRAFT_func_1276_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(EntityPlayerMP a);
+	public abstract void MIDDLECRAFT_func_1270_c(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1281_c(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void d();
+	public abstract void MIDDLECRAFT_func_1295_d();
 	
 	/**
 	 * 
 	 */
-	public abstract EntityPlayerMP d(EntityPlayerMP a);
+	public abstract EntityPlayerMP MIDDLECRAFT_func_1272_d(EntityPlayerMP a);
 	
 	/**
 	 * 
 	 */
-	public abstract void d(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1282_d(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1285_e(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void f(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1286_f(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean g(java.lang.String a);
+	public abstract boolean MIDDLECRAFT_func_1289_g(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract EntityPlayerMP h(java.lang.String a);
+	public abstract EntityPlayerMP MIDDLECRAFT_func_1290_h(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void i(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1293_i(java.lang.String a);
 
 }

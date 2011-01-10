@@ -11,16 +11,16 @@ public abstract class NibbleArray {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1507_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_1505_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1506_a(int a, int b, int c, int d);
 
 }

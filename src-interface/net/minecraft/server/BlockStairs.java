@@ -11,126 +11,126 @@ public abstract class BlockStairs extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_721_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a);
+	public abstract int MIDDLECRAFT_func_729_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_727_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, boolean b);
+	public abstract boolean MIDDLECRAFT_func_733_a(int a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(Entity a);
+	public abstract float MIDDLECRAFT_func_726_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_734_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_725_a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, int e, float f);
+	public abstract void MIDDLECRAFT_func_737_a(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
+	public abstract void MIDDLECRAFT_func_723_a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, Entity e, Vec3D f);
+	public abstract void MIDDLECRAFT_func_731_a(World a, int b, int c, int d, Entity e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_741_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_740_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, EntityLiving e);
+	public abstract void MIDDLECRAFT_func_743_a(World a, int b, int c, int d, EntityLiving e);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_728_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_719_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_722_a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a_(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_738_a_(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract int b();
+	public abstract int MIDDLECRAFT_func_730_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_736_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, Entity e);
+	public abstract void MIDDLECRAFT_func_739_b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void MIDDLECRAFT_func_724_b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_742_c(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean d();
+	public abstract boolean MIDDLECRAFT_func_732_d();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_720_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_735_e(World a, int b, int c, int d);
 
 }

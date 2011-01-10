@@ -14,16 +14,16 @@ public abstract class CraftingInventoryFurnaceCB extends CraftingInventoryCB {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_227_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ICrafting a);
+	public abstract void MIDDLECRAFT_func_226_a(ICrafting a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean b(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_228_b(EntityPlayer a);
 
 }

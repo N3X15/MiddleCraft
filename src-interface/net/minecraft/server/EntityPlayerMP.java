@@ -24,131 +24,131 @@ public abstract class EntityPlayerMP extends EntityPlayer {
 	/**
 	 * 
 	 */
-	public abstract int[] E();
+	public abstract int[] MIDDLECRAFT_func_879_E();
 	
 	/**
 	 * 
 	 */
-	public abstract void F();
+	public abstract void MIDDLECRAFT_func_886_F();
 	
 	/**
 	 * 
 	 */
-	public abstract void G();
+	public abstract void MIDDLECRAFT_func_888_G();
 	
 	/**
 	 * 
 	 */
-	public abstract void H();
+	public abstract void MIDDLECRAFT_func_890_H();
 	
 	/**
 	 * 
 	 */
-	public abstract void I();
+	public abstract void MIDDLECRAFT_func_904_I();
 	
 	/**
 	 * 
 	 */
-	public abstract void J();
+	public abstract void MIDDLECRAFT_func_905_J();
 	
 	/**
 	 * 
 	 */
-	public abstract void K();
+	public abstract void MIDDLECRAFT_func_906_K();
 	
 	/**
 	 * 
 	 */
-	protected abstract void a(double a, boolean b);
+	protected abstract void MIDDLECRAFT_func_893_a(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a);
+	public abstract int MIDDLECRAFT_func_881_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(int a, int b, int c);
+	public abstract void MIDDLECRAFT_func_897_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingInventoryCB a, int b, int c);
+	public abstract void MIDDLECRAFT_func_902_a(CraftingInventoryCB a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingInventoryCB a, int b, ItemStack c);
+	public abstract void MIDDLECRAFT_func_900_a(CraftingInventoryCB a, int b, ItemStack c);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(CraftingInventoryCB a, java.util.List b);
+	public abstract void MIDDLECRAFT_func_901_a(CraftingInventoryCB a, java.util.List b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(TileEntityFurnace a);
+	public abstract void MIDDLECRAFT_func_899_a(TileEntityFurnace a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_884_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(ItemStack a);
+	public abstract void MIDDLECRAFT_func_903_a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(IInventory a);
+	public abstract void MIDDLECRAFT_func_898_a(IInventory a);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(double a, boolean b);
+	public abstract void MIDDLECRAFT_func_894_b(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void b_();
+	public abstract void MIDDLECRAFT_func_880_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract void c(int a);
+	public abstract void MIDDLECRAFT_func_885_c(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_889_c(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(Entity a);
+	public abstract void MIDDLECRAFT_func_892_e(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void f(Entity a);
+	public abstract void MIDDLECRAFT_func_883_f(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void k();
+	public abstract void MIDDLECRAFT_func_878_k();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean p();
+	public abstract boolean MIDDLECRAFT_func_895_p();
 	
 	/**
 	 * 
 	 */
-	public abstract float s();
+	public abstract float MIDDLECRAFT_func_891_s();
 
 }

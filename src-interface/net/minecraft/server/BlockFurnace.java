@@ -11,31 +11,31 @@ public abstract class BlockFurnace extends BlockContainer {
 	/**
 	 * 
 	 */
-	public abstract int a(int a);
+	public abstract int MIDDLECRAFT_func_771_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract int a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_768_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_772_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, EntityLiving e);
+	public abstract void MIDDLECRAFT_func_775_a(World a, int b, int c, int d, EntityLiving e);
 	
 	/**
 	 * 
 	 */
-	protected abstract TileEntity a_();
+	protected abstract TileEntity MIDDLECRAFT_func_774_a_();
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_769_e(World a, int b, int c, int d);
 
 }

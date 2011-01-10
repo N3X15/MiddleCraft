@@ -10,31 +10,31 @@ public abstract class WorldProviderHell extends WorldProvider {
 	/**
 	 * 
 	 */
-	public abstract void a();
+	public abstract void MIDDLECRAFT_func_1490_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_1494_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract float a(long a, float b);
+	public abstract float MIDDLECRAFT_func_1495_a(long a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract IChunkLoader a(java.io.File a);
+	public abstract IChunkLoader MIDDLECRAFT_func_1493_a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void b();
+	protected abstract void MIDDLECRAFT_func_1491_b();
 	
 	/**
 	 * 
 	 */
-	public abstract IChunkProvider c();
+	public abstract IChunkProvider MIDDLECRAFT_func_1492_c();
 
 }

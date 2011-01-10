@@ -10,41 +10,41 @@ public abstract class BlockTorch extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean a();
+	public abstract boolean MIDDLECRAFT_func_1342_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_1343_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_1349_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_1345_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1347_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void c(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_1344_c(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_1341_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1346_e(World a, int b, int c, int d);
 
 }

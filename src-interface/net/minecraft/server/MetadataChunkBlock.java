@@ -17,11 +17,11 @@ public abstract class MetadataChunkBlock {
 	/**
 	 * 
 	 */
-	public abstract boolean a(int a, int b, int c, int d, int e, int f);
+	public abstract boolean MIDDLECRAFT_func_749_a(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	public abstract void a(World a);
+	public abstract void MIDDLECRAFT_func_748_a(World a);
 
 }

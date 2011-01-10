@@ -10,16 +10,16 @@ public abstract class BlockContainer extends Block {
 	/**
 	 * 
 	 */
-	protected abstract TileEntity a_();
+	protected abstract TileEntity MIDDLECRAFT_func_537_a_();
 	
 	/**
 	 * 
 	 */
-	public abstract void b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_536_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_535_e(World a, int b, int c, int d);
 
 }
