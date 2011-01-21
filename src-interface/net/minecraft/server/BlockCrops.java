@@ -10,26 +10,26 @@ public abstract class BlockCrops extends BlockFlower {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1955_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_997_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1954_a(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_996_a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1952_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_995_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1956_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_998_a(java.util.Random a);
 	
 	/**
-	 * 
+	 * Gets passed in the blockID of the block below and supposed to return true if its allowed to grow on the type of blockID passed in. Args: blockID
 	 */
-	protected abstract boolean MIDDLECRAFT_func_1951_b(int a);
+	protected abstract boolean canThisPlantGrowOnThisBlockID(int a);
 
 }

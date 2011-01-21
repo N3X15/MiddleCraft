@@ -8,48 +8,48 @@ public abstract interface IWorldAccess {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_329_a();
+	public abstract void updateAllRenderers();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_323_a(int a, int b, int c);
+	public abstract void func_683(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_324_a(int a, int b, int c, int d, int e, int f);
+	public abstract void markBlockRangeNeedsUpdate(int a, int b, int c, int d, int e, int f);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_331_a(int a, int b, int c, TileEntity d);
+	public abstract void func_686(int a, int b, int c, TileEntity d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_327_a(Entity a);
+	public abstract void obtainEntitySkin(Entity a);
 	
 	/**
-	 * 
+	 * Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
 	 */
-	public abstract void MIDDLECRAFT_func_326_a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	public abstract void spawnParticle(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
-	 * 
+	 * Plays the specified sound. Arg: x, y, z, soundName, unknown1, unknown2
 	 */
-	public abstract void MIDDLECRAFT_func_325_a(java.lang.String a, double b, double c, double d, float e, float f);
+	public abstract void playSound(java.lang.String a, double b, double c, double d, float e, float f);
 	
 	/**
-	 * 
+	 * Plays the specified record. Arg: recordName, x, y, z
 	 */
-	public abstract void MIDDLECRAFT_func_330_a(java.lang.String a, int b, int c, int d);
+	public abstract void playRecord(java.lang.String a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_328_b(Entity a);
+	public abstract void func_688(Entity a);
 
 }

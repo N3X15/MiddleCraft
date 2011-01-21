@@ -12,13 +12,13 @@ public abstract class Pathfinder {
 	// METHODS
 	
 	/**
-	 * 
+	 * Creates a path from an entity to a specified location within a minimum distance
 	 */
-	public abstract PathEntity MIDDLECRAFT_func_1003_a(Entity a, int b, int c, int d, float e);
+	public abstract PathEntity createEntityPathTo(Entity a, int b, int c, int d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract PathEntity MIDDLECRAFT_func_1002_a(Entity a, Entity b, float c);
+	public abstract PathEntity MIDDLECRAFT_func_438_a(Entity a, Entity b, float c);
 
 }

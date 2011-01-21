@@ -9,13 +9,13 @@ public abstract class ItemBlock extends Item {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_362_a();
+	public abstract java.lang.String func_20106();
 	
 	/**
-	 * 
+	 * Callback for item usage. If the item does something special on right clicking, he will have one of those. Return True if something happen and false if it don't. This is for ITEMS, not BLOCKS !
 	 */
-	public abstract boolean MIDDLECRAFT_func_361_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean onItemUse(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

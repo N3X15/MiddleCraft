@@ -10,21 +10,21 @@ public abstract class BlockJukeBox extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_933_a(int a);
+	public abstract int MIDDLECRAFT_func_424_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_936_a(World a, int b, int c, int d, int e, float f);
+	public abstract void MIDDLECRAFT_func_426_a(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_934_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_425_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
-	 * 
+	 * Ejects the current record inside of the jukebox
 	 */
-	public abstract void MIDDLECRAFT_func_935_f(World a, int b, int c, int d, int e);
+	public abstract void ejectRecord(World a, int b, int c, int d, int e);
 
 }

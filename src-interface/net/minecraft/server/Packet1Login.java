@@ -13,23 +13,23 @@ public abstract class Packet1Login extends Packet {
 	// METHODS
 	
 	/**
-	 * 
+	 * Abstract. Return the size of the packet (not counting the header).
 	 */
-	public abstract int MIDDLECRAFT_func_113_a();
+	public abstract int getPacketSize();
 	
 	/**
-	 * 
+	 * Passes this Packet on to the NetHandler for processing.
 	 */
-	public abstract void MIDDLECRAFT_func_112_a(NetHandler a);
+	public abstract void processPacket(NetHandler a);
 	
 	/**
-	 * 
+	 * Abstract. Reads the raw packet data from the data stream.
 	 */
-	public abstract void MIDDLECRAFT_func_110_a(java.io.DataInputStream a);
+	public abstract void readPacketData(java.io.DataInputStream a);
 	
 	/**
-	 * 
+	 * Abstract. Writes the raw packet data to the data stream.
 	 */
-	public abstract void MIDDLECRAFT_func_111_a(java.io.DataOutputStream a);
+	public abstract void writePacketData(java.io.DataOutputStream a);
 
 }

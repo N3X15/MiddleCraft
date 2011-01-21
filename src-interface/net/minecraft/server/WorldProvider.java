@@ -18,36 +18,36 @@ public abstract class WorldProvider {
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1608_a();
+	protected abstract void MIDDLECRAFT_func_777_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1611_a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_780_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract float MIDDLECRAFT_func_1612_a(long a, float b);
+	public abstract float MIDDLECRAFT_func_781_a(long a, float b);
+	
+	/**
+	 * *
+	 */
+	public abstract void registerWorld(World a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1606_a(World a);
+	public abstract IChunkLoader MIDDLECRAFT_func_779_a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	public abstract IChunkLoader MIDDLECRAFT_func_1610_a(java.io.File a);
+	protected abstract void MIDDLECRAFT_func_776_b();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1607_b();
-	
-	/**
-	 * 
-	 */
-	public abstract IChunkProvider MIDDLECRAFT_func_1609_c();
+	public abstract IChunkProvider MIDDLECRAFT_func_778_c();
 
 }

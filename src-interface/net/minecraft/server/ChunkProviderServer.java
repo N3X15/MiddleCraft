@@ -17,41 +17,41 @@ public abstract class ChunkProviderServer {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1789_a();
+	public abstract boolean MIDDLECRAFT_func_899_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1780_a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_895_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1787_a(IChunkProvider a, int b, int c);
+	public abstract void MIDDLECRAFT_func_897_a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1788_a(boolean a, IProgressUpdate b);
+	public abstract boolean MIDDLECRAFT_func_898_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1790_b();
+	public abstract boolean MIDDLECRAFT_func_900_b();
 	
 	/**
 	 * 
 	 */
-	public abstract Chunk MIDDLECRAFT_func_1783_b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_896_b(int a, int b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1781_c(int a, int b);
+	public abstract void func_374(int a, int b);
 	
 	/**
-	 * 
+	 * loads or generates the chunk at the chunk location specified
 	 */
-	public abstract Chunk MIDDLECRAFT_func_1782_d(int a, int b);
+	public abstract Chunk loadChunk(int a, int b);
 
 }

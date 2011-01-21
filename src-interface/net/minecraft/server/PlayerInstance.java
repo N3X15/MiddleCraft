@@ -21,28 +21,28 @@ abstract class PlayerInstance {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_129_a();
+	public abstract void func_777();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_127_a(int a, int b, int c);
+	public abstract void func_775(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_125_a(EntityPlayerMP a);
+	public abstract void func_779(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_128_a(Packet a);
+	public abstract void func_776(Packet a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_126_b(EntityPlayerMP a);
+	public abstract void func_778(EntityPlayerMP a);
 
 }

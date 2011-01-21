@@ -10,11 +10,11 @@ public abstract class BlockMushroom extends BlockFlower {
 	/**
 	 * 
 	 */
-	protected abstract boolean MIDDLECRAFT_func_938_b(int a);
+	protected abstract boolean MIDDLECRAFT_func_427_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_939_f(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_428_f(World a, int b, int c, int d);
 
 }

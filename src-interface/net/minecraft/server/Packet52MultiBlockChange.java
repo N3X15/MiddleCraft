@@ -16,21 +16,21 @@ public abstract class Packet52MultiBlockChange extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1600_a();
+	public abstract int MIDDLECRAFT_func_770_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1599_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_769_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1597_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_767_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1598_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_768_a(java.io.DataOutputStream a);
 
 }

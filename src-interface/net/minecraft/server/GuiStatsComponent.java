@@ -11,8 +11,8 @@ public abstract class GuiStatsComponent extends javax.swing.JComponent {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1696_paint(java.awt.Graphics a);
+	public abstract void kg_paint(java.awt.Graphics a);
 
 }

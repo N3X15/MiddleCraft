@@ -12,11 +12,11 @@ public abstract class ServerGUI extends javax.swing.JComponent {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1257_b(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_612_b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1258_c();
+	public abstract java.lang.String MIDDLECRAFT_func_613_c();
 
 }

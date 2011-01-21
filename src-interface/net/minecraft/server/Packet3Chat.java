@@ -11,21 +11,21 @@ public abstract class Packet3Chat extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_300_a();
+	public abstract int MIDDLECRAFT_func_142_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_299_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_141_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_297_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_139_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_298_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_140_a(java.io.DataOutputStream a);
 
 }

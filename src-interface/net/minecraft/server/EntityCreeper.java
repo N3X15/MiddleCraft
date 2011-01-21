@@ -15,46 +15,46 @@ public abstract class EntityCreeper extends EntityMobs {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1038_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_463_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1045_a(Entity a, float b);
+	protected abstract void MIDDLECRAFT_func_470_a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1039_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_464_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1040_b_();
+	public abstract void MIDDLECRAFT_func_465_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1041_c();
+	protected abstract void MIDDLECRAFT_func_466_c();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1042_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_467_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1043_f();
+	protected abstract java.lang.String MIDDLECRAFT_func_468_f();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1044_f(Entity a);
+	public abstract void MIDDLECRAFT_func_469_f(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1046_g();
+	protected abstract int MIDDLECRAFT_func_471_g();
 
 }

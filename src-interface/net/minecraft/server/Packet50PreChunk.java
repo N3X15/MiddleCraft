@@ -13,21 +13,21 @@ public abstract class Packet50PreChunk extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_581_a();
+	public abstract int MIDDLECRAFT_func_296_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_580_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_295_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_578_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_293_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_579_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_294_a(java.io.DataOutputStream a);
 
 }

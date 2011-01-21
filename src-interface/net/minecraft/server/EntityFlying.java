@@ -10,16 +10,16 @@ public abstract class EntityFlying extends EntityLiving {
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1530_a(float a);
+	protected abstract void MIDDLECRAFT_func_728_a(float a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1531_c(float a, float b);
+	public abstract void func_148(float a, float b);
 	
 	/**
-	 * 
+	 * returns true if this entity is by a ladder, false otherwise
 	 */
-	public abstract boolean MIDDLECRAFT_func_1532_d_();
+	public abstract boolean isByLadder();
 
 }

@@ -17,13 +17,13 @@ public abstract class Explosion {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_438_a();
+	public abstract void func_12023();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_439_b();
+	public abstract void func_732();
 
 }

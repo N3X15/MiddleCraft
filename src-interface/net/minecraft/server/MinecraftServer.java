@@ -27,41 +27,41 @@ public abstract class MinecraftServer {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1979_a();
+	public abstract void MIDDLECRAFT_func_1020_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1986_a(IUpdatePlayerListBox a);
+	public abstract void MIDDLECRAFT_func_1027_a(IUpdatePlayerListBox a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.io.File MIDDLECRAFT_func_1988_a(java.lang.String a);
+	public abstract java.io.File MIDDLECRAFT_func_1029_a(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1982_a(java.lang.String a, ICommandListener b);
+	public abstract void MIDDLECRAFT_func_1023_a(java.lang.String a, ICommandListener b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1983_b();
+	public abstract void MIDDLECRAFT_func_1024_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1989_b(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_1030_b(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1990_c();
+	public abstract java.lang.String MIDDLECRAFT_func_1031_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1980_run();
+	public abstract void MIDDLECRAFT_func_1021_run();
 
 }

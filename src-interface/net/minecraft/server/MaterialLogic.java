@@ -8,18 +8,18 @@ public abstract class MaterialLogic extends Material {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_138_a();
+	public abstract boolean func_216();
 	
 	/**
-	 * 
+	 * Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
 	 */
-	public abstract boolean MIDDLECRAFT_func_139_b();
+	public abstract boolean getCanBlockGrass();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_140_c();
+	public abstract boolean func_218();
 
 }

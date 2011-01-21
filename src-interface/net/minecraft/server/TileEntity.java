@@ -14,28 +14,28 @@ public abstract class TileEntity {
 	// METHODS
 	
 	/**
-	 * 
+	 * Reads a tile entity from NBT.
 	 */
-	public abstract void MIDDLECRAFT_func_209_a(NBTTagCompound a);
+	public abstract void readFromNBT(NBTTagCompound a);
+	
+	/**
+	 * Writes a tile entity to NBT.
+	 */
+	public abstract void writeToNBT(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_210_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_91_d();
 	
 	/**
-	 * 
+	 * Allows the entity to update its state. Overridden in most subclasses, e.g. the mob spawner uses this to count ticks and creates a new spawn inside its implementation.
 	 */
-	public abstract void MIDDLECRAFT_func_213_d();
+	public abstract void updateEntity();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_211_e();
-	
-	/**
-	 * 
-	 */
-	public abstract Packet MIDDLECRAFT_func_214_f();
+	public abstract Packet func_20070();
 
 }

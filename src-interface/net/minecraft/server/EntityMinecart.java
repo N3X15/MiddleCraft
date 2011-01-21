@@ -26,106 +26,106 @@ public abstract class EntityMinecart extends Entity {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1767_a();
+	public abstract int MIDDLECRAFT_func_883_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1768_a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_884_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1769_a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_885_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1770_a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_886_a(int a, ItemStack b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1764_a(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_880_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1759_a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_876_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1774_a(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_890_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1775_a_(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_891_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1771_b();
+	public abstract java.lang.String MIDDLECRAFT_func_887_b();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1765_b(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_881_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1762_b_();
+	public abstract void MIDDLECRAFT_func_879_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1772_c();
+	public abstract int MIDDLECRAFT_func_888_c();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1766_c(Entity a);
+	public abstract void MIDDLECRAFT_func_882_c(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1760_c_();
+	public abstract boolean MIDDLECRAFT_func_877_c_();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1773_d();
+	public abstract void MIDDLECRAFT_func_889_d();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1755_d(Entity a);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_872_d(Entity a);
+	
+	/**
+	 * *
+	 */
+	public abstract Vec3D func_182(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_1763_g(double a, double b, double c);
+	public abstract double MIDDLECRAFT_func_875_j();
 	
 	/**
 	 * 
 	 */
-	public abstract double MIDDLECRAFT_func_1758_j();
+	public abstract void MIDDLECRAFT_func_878_l();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1761_l();
+	public abstract AxisAlignedBB MIDDLECRAFT_func_873_q();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1756_q();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1757_v();
+	public abstract boolean MIDDLECRAFT_func_874_v();
 
 }

@@ -13,28 +13,28 @@ public abstract class MCHashTable {
 	// METHODS
 	
 	/**
-	 * 
+	 * Removes all entries from the map
 	 */
-	public abstract void MIDDLECRAFT_func_1574_a();
+	public abstract void clearMap();
 	
 	/**
-	 * 
+	 * Returns the object associated to a key
 	 */
-	public abstract java.lang.Object MIDDLECRAFT_func_1566_a(int a);
+	public abstract java.lang.Object lookup(int a);
 	
 	/**
-	 * 
+	 * Adds a key and associated value to this map
 	 */
-	public abstract void MIDDLECRAFT_func_1569_a(int a, java.lang.Object b);
+	public abstract void addKey(int a, java.lang.Object b);
 	
 	/**
-	 * 
+	 * Returns true if this hash table contains the specified item.
 	 */
-	public abstract boolean MIDDLECRAFT_func_1567_b(int a);
+	public abstract boolean containsItem(int a);
 	
 	/**
-	 * 
+	 * Removes the specified object from the map and returns it
 	 */
-	public abstract java.lang.Object MIDDLECRAFT_func_1572_d(int a);
+	public abstract java.lang.Object removeObject(int a);
 
 }

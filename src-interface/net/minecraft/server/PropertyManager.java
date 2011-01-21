@@ -11,28 +11,28 @@ public abstract class PropertyManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * Generates a new properties file.
 	 */
-	public abstract void MIDDLECRAFT_func_530_a();
+	public abstract void generateNewProperties();
 	
 	/**
-	 * 
+	 * Returns an integer property. If the property doesn't exist the default is returned.
 	 */
-	public abstract int MIDDLECRAFT_func_533_a(java.lang.String a, int b);
+	public abstract int getIntProperty(java.lang.String a, int b);
 	
 	/**
-	 * 
+	 * Returns a string property. If the property doesn't exist the default is returned.
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_532_a(java.lang.String a, java.lang.String b);
+	public abstract java.lang.String getStringProperty(java.lang.String a, java.lang.String b);
 	
 	/**
-	 * 
+	 * Returns a boolean property. If the property doesn't exist the default is returned.
 	 */
-	public abstract boolean MIDDLECRAFT_func_534_a(java.lang.String a, boolean b);
+	public abstract boolean getBooleanProperty(java.lang.String a, boolean b);
 	
 	/**
-	 * 
+	 * Writes the properties to the properties file.
 	 */
-	public abstract void MIDDLECRAFT_func_531_b();
+	public abstract void saveProperties();
 
 }

@@ -9,8 +9,8 @@ public abstract class ThreadCommandReader extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_390_run();
+	public abstract void cl_run();
 
 }

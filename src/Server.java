@@ -1,4 +1,4 @@
-import org.middlecraft.server.adapter.World;
+import net.minecraft.server.World;
 
 /**
  * Copyright (c) 2010, MiddleCraft Contributors
@@ -45,7 +45,7 @@ public class Server {
 	public PluginLoader getLoader() { return loader; }
 	
 	/**
-	 * Alias for IWorld.findTopSolidBlock
+	 * Alias for World.findTopSolidBlock
 	 * @param x
 	 * @param z
 	 * @return
@@ -71,7 +71,7 @@ public class Server {
 	 * @param type
 	 */
 	public void setBlockAt(int x, int y, int z, int type) {
-		world.setBlockAt(x,y,z,type);
+		world.setBlock(x,y,z,type);
 	}
 
 	/**
@@ -81,7 +81,7 @@ public class Server {
 	 */
 	@SuppressWarnings("static-access")
 	public double getTemperatureValue(int x, int z) {
-		world.getBiomeGenerator().genTemperatures(x,z,1,1);
-		return world.getBiomeGenerator().temperature[0];
+		world.func_4077().genTemperatures(x,z,1,1);
+		return world.func_4077().temperature[0];
 	}
 }

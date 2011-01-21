@@ -52,12 +52,12 @@ public class Main {
 
 		String classPath="";
 		try { classPath = System.getProperty( "java.class.path" ) ; }
-        catch ( Exception e ) 
-          {
-            System.out.println( "Exception: " + e ) ;
-            e.printStackTrace() ;
-          }
-        System.out.println( "CLASSPATH = " + classPath) ;
+		catch ( Exception e ) 
+		{
+			System.out.println( "Exception: " + e ) ;
+			e.printStackTrace() ;
+		}
+		System.out.println( "CLASSPATH = " + classPath) ;
 
 		// Get net.minecraft.server interfaces and regenerate clean classmappings. Only use on new server updates.
 		if(arguments.length==1 && arguments[0].equals("GetServerInterfaces"))
@@ -163,7 +163,7 @@ public class Main {
 				String newClassName=Mappings.getNewClassName(className.replace('/','.'));
 				if(newClassName.contains("."))
 					newClassName=newClassName.substring(newClassName.lastIndexOf('.')+1);
-				
+
 				MCClassInfo ci = Mappings.classes.get(className.replace('/', '.'));
 				if(ci==null) {
 					l.warning("Generating mappings for "+className+"...");
@@ -174,7 +174,7 @@ public class Main {
 				ci.setClassModifiers(mcClass.getModifiers());
 				if(!Patches.isMinecraftPackage(mcClass.getPackageName()))
 					continue;
-				
+
 				//ci.clearAllDefs(); // Remapping.
 				for(CtField fld : mcClass.getDeclaredFields()) {
 					MCFieldInfo f = ci.getField(fld.getName());
@@ -185,12 +185,12 @@ public class Main {
 					}
 					if(f.type==null)
 						f.type=fld.getType().getName();
-					
+
 					if(!f.type.equals(fld.getType().getName())) {
 						f.type=fld.getType().getName();
 						l.info(f.name+" corrected to use the type "+f.type+".");
 					}
-					
+
 					f.setModifiers(fld.getModifiers());
 					try {
 						ci.setField(f);
@@ -204,9 +204,13 @@ public class Main {
 					if(m==null) {
 						Mappings.addObfuscatedMethodDefinition(className, method.getName(), method.getSignature(), "");
 						m=ci.getMethod(method.getName(),method.getSignature());
+						//l.warning("Can't find mappings for "+method.getLongName());
+						//continue;
 					}
-					
+
 					m.setModifiers(method.getModifiers());
+					if(!m.name.isEmpty())
+						l.info(m.parentClass+" "+m.name);
 					try {
 						ci.setMethod(m);
 					} catch (Exception e1) {
@@ -215,7 +219,7 @@ public class Main {
 					}
 				}
 				ci.superClass=mcClass.getSuperclass().getName();
-				
+
 				File dir = new File("src-interface/net/minecraft/server/");
 				dir.mkdirs();
 				File f = new File(dir, newClassName+".java");

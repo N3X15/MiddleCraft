@@ -12,6 +12,6 @@ public abstract class WorldGenClay extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1533_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_729_a(World a, java.util.Random b, int c, int d, int e);
 
 }

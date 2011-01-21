@@ -10,8 +10,8 @@ public abstract class PlayerListBox extends javax.swing.JList {
 	// METHODS
 	
 	/**
-	 * 
+	 * Updates the Jlist with a new model.
 	 */
-	public abstract void MIDDLECRAFT_func_1858_a();
+	public abstract void update();
 
 }

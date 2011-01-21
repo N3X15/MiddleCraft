@@ -10,11 +10,11 @@ public abstract class BlockObsidian extends BlockStone {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_782_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_387_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_781_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_386_a(java.util.Random a);
 
 }

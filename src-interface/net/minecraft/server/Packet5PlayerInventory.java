@@ -13,21 +13,21 @@ public abstract class Packet5PlayerInventory extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1950_a();
+	public abstract int MIDDLECRAFT_func_994_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1949_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_993_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1947_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_991_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1948_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_992_a(java.io.DataOutputStream a);
 
 }

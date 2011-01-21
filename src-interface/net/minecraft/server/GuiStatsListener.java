@@ -9,8 +9,8 @@ abstract class GuiStatsListener {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1904_actionPerformed(java.awt.event.ActionEvent a);
+	public abstract void ld_actionPerformed(java.awt.event.ActionEvent a);
 
 }

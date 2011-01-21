@@ -10,8 +10,8 @@ public abstract class CraftingManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1244_a(int[] a);
+	public abstract ItemStack func_20152(int[] a);
 
 }

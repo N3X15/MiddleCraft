@@ -14,21 +14,21 @@ public abstract class Packet130 extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1095_a();
+	public abstract int MIDDLECRAFT_func_501_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1094_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_500_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1092_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_498_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1093_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_499_a(java.io.DataOutputStream a);
 
 }

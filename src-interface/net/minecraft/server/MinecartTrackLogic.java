@@ -15,8 +15,8 @@ abstract class MinecartTrackLogic {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1360_a(boolean a);
+	public abstract void func_596(boolean a);
 
 }

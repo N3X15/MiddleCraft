@@ -12,26 +12,26 @@ public abstract class NBTTagList extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte MIDDLECRAFT_func_714_a();
+	public abstract byte MIDDLECRAFT_func_338_a();
 	
 	/**
-	 * 
+	 * Retrieves the tag at the specified index from the list.
 	 */
-	public abstract NBTBase MIDDLECRAFT_func_717_a(int a);
+	public abstract NBTBase tagAt(int a);
 	
 	/**
-	 * 
+	 * Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any previous tag.
 	 */
-	public abstract void MIDDLECRAFT_func_716_a(NBTBase a);
+	public abstract void setTag(NBTBase a);
 	
 	/**
-	 * 
+	 * Returns the number of tags in the list.
 	 */
-	public abstract int MIDDLECRAFT_func_718_b();
+	public abstract int tagCount();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_715_toString();
+	public abstract java.lang.String es_toString();
 
 }

@@ -8,13 +8,13 @@ public abstract class WorldGenerator {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_318_a(double a, double b, double c);
+	public abstract void func_420(double a, double b, double c);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_317_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_143_a(World a, java.util.Random b, int c, int d, int e);
 
 }

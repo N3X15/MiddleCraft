@@ -11,51 +11,51 @@ public abstract class BlockRedstoneWire extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_625_a();
+	public abstract boolean MIDDLECRAFT_func_309_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_633_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_314_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_626_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_310_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_630_b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_312_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_632_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_313_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_635_b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_316_b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_636_c();
+	public abstract boolean MIDDLECRAFT_func_317_c();
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_624_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_308_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_634_d(World a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_315_d(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_629_e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_311_e(World a, int b, int c, int d);
 
 }

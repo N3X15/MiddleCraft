@@ -11,21 +11,21 @@ public abstract class Packet255KickDisconnect extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1851_a();
+	public abstract int MIDDLECRAFT_func_915_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1850_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_914_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1848_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_912_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1849_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_913_a(java.io.DataOutputStream a);
 
 }

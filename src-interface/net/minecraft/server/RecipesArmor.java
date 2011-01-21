@@ -10,8 +10,8 @@ public abstract class RecipesArmor {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1971_a(CraftingManager a);
+	public abstract void func_20172(CraftingManager a);
 
 }

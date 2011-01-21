@@ -9,8 +9,8 @@ abstract class NetworkWriterThread extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1632_run();
+	public abstract void ju_run();
 
 }

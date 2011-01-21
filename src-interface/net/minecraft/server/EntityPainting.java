@@ -14,38 +14,38 @@ public abstract class EntityPainting extends Entity {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_414_a(int a);
+	public abstract void func_179(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_420_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_186_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_419_a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_185_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_421_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_187_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_416_b_();
+	public abstract void MIDDLECRAFT_func_183_b_();
+	
+	/**
+	 * *
+	 */
+	public abstract boolean func_181();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_417_c();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_418_c_();
+	public abstract boolean MIDDLECRAFT_func_184_c_();
 
 }

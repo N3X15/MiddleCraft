@@ -12,21 +12,21 @@ public abstract class Packet18ArmAnimation extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1964_a();
+	public abstract int MIDDLECRAFT_func_1006_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1963_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_1005_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1961_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_1003_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1962_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_1004_a(java.io.DataOutputStream a);
 
 }

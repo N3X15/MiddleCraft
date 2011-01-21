@@ -11,11 +11,11 @@ public abstract class NBTTagByteArray extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte MIDDLECRAFT_func_1263_a();
+	public abstract byte MIDDLECRAFT_func_617_a();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1264_toString();
+	public abstract java.lang.String hi_toString();
 
 }

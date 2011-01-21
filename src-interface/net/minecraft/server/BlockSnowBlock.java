@@ -8,18 +8,18 @@ public abstract class BlockSnowBlock extends Block {
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the ID of the items to drop on destruction.
 	 */
-	public abstract int MIDDLECRAFT_func_66_a(int a, java.util.Random b);
+	public abstract int idDropped(int a, java.util.Random b);
 	
 	/**
-	 * 
+	 * Ticks the block if it's been scheduled
 	 */
-	public abstract void MIDDLECRAFT_func_68_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void updateTick(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
-	 * 
+	 * Returns the quantity of items to drop on block destruction.
 	 */
-	public abstract int MIDDLECRAFT_func_67_a(java.util.Random a);
+	public abstract int quantityDropped(java.util.Random a);
 
 }

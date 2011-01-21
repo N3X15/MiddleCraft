@@ -10,26 +10,26 @@ public abstract class EntityZombie extends EntityMobs {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1237_G();
+	public abstract void MIDDLECRAFT_func_600_G();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1238_d();
+	protected abstract java.lang.String MIDDLECRAFT_func_601_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1239_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_602_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1240_f();
+	protected abstract java.lang.String MIDDLECRAFT_func_603_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1241_g();
+	protected abstract int MIDDLECRAFT_func_604_g();
 
 }

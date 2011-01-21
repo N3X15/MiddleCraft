@@ -24,131 +24,131 @@ public abstract class EntityPlayerMP extends EntityPlayer {
 	/**
 	 * 
 	 */
-	public abstract int[] MIDDLECRAFT_func_879_E();
+	public abstract int[] MIDDLECRAFT_func_393_E();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_175();
+	
+	/**
+	 * Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	 */
+	public abstract void onLivingUpdate();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_168();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20043();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20058();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20059();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_886_F();
+	protected abstract void MIDDLECRAFT_func_398_a(double a, boolean b);
+	
+	/**
+	 * *
+	 */
+	public abstract int func_20062(int a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_174(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_888_G();
+	public abstract void MIDDLECRAFT_func_402_a(CraftingInventoryCB a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_890_H();
+	public abstract void MIDDLECRAFT_func_400_a(CraftingInventoryCB a, int b, ItemStack c);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_904_I();
+	public abstract void MIDDLECRAFT_func_401_a(CraftingInventoryCB a, java.util.List b);
+	
+	/**
+	 * Displays the furnace GUI for the passed in furnace entity. Args: tileEntityFurnace
+	 */
+	public abstract void displayGUIFurnace(TileEntityFurnace a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_905_J();
+	public abstract boolean MIDDLECRAFT_func_395_a(Entity a, int b);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20045(ItemStack a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_166(IInventory a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_9153(double a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_906_K();
+	public abstract void MIDDLECRAFT_func_394_b_();
+	
+	/**
+	 * Heal living entity (param: amount of half-hearts)
+	 */
+	public abstract void heal(int a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_163(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_893_a(double a, boolean b);
+	public abstract void MIDDLECRAFT_func_397_e(Entity a);
+	
+	/**
+	 * Called when the mob's health reaches 0.
+	 */
+	public abstract void onDeath(Entity a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20057();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_881_a(int a);
+	public abstract boolean MIDDLECRAFT_func_399_p();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_897_a(int a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_902_a(CraftingInventoryCB a, int b, int c);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_900_a(CraftingInventoryCB a, int b, ItemStack c);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_901_a(CraftingInventoryCB a, java.util.List b);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_899_a(TileEntityFurnace a);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_884_a(Entity a, int b);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_903_a(ItemStack a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_898_a(IInventory a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_894_b(double a, boolean b);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_880_b_();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_885_c(int a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_889_c(Entity a, int b);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_892_e(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_883_f(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_878_k();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_895_p();
-	
-	/**
-	 * 
-	 */
-	public abstract float MIDDLECRAFT_func_891_s();
+	public abstract float MIDDLECRAFT_func_396_s();
 
 }

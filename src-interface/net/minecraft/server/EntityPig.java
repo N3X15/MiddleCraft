@@ -11,36 +11,36 @@ public abstract class EntityPig extends EntityAnimals {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1498_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_705_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1503_a(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_710_a(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1499_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_706_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1500_d();
+	protected abstract java.lang.String MIDDLECRAFT_func_707_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1501_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_708_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1502_f();
+	protected abstract java.lang.String MIDDLECRAFT_func_709_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1504_g();
+	protected abstract int MIDDLECRAFT_func_711_g();
 
 }

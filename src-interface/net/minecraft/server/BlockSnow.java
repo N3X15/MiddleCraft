@@ -10,46 +10,46 @@ public abstract class BlockSnow extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1535_a();
+	public abstract boolean MIDDLECRAFT_func_731_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1540_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_735_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1536_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_732_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1542_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_737_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1541_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_736_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1543_a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_738_a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1537_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_733_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1534_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_730_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1539_g(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_734_g(World a, int b, int c, int d, int e);
 
 }

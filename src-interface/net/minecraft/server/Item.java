@@ -115,76 +115,76 @@ public abstract class Item {
 	/**
 	 * 
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1091_a();
+	public abstract java.lang.String MIDDLECRAFT_func_497_a();
+	
+	/**
+	 * Sets the icon index for this item. Returns the item.
+	 */
+	public abstract Item setIconIndex(int a);
+	
+	/**
+	 * *
+	 */
+	public abstract Item func_20104(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract Item MIDDLECRAFT_func_1077_a(int a);
+	public abstract int MIDDLECRAFT_func_494_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract Item MIDDLECRAFT_func_1078_a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_495_a(Block a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1086_a(Entity a);
+	public abstract void MIDDLECRAFT_func_493_a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1087_a(Block a);
+	public abstract ItemStack MIDDLECRAFT_func_491_a(ItemStack a, World b, EntityPlayer c);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1085_a(ItemStack a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_489_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1081_a(ItemStack a, World b, EntityPlayer c);
+	public abstract float MIDDLECRAFT_func_490_a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1079_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract void MIDDLECRAFT_func_492_a(ItemStack a, EntityLiving b);
+	
+	/**
+	 * *
+	 */
+	public abstract Item func_20105(java.lang.String a);
+	
+	/**
+	 * Returns the maximum size of the stack for a specific item. *Isn't this more a Set than a Get?*
+	 */
+	public abstract int getItemStackLimit();
 	
 	/**
 	 * 
 	 */
-	public abstract float MIDDLECRAFT_func_1080_a(ItemStack a, Block b);
+	public abstract void MIDDLECRAFT_func_496_b(ItemStack a, EntityLiving b);
 	
 	/**
-	 * 
+	 * Returns the maximum damage an item can take.
 	 */
-	public abstract void MIDDLECRAFT_func_1084_a(ItemStack a, EntityLiving b);
+	public abstract int getMaxDamage();
 	
 	/**
-	 * 
+	 * Sets bFull3D to True and return the object.
 	 */
-	public abstract Item MIDDLECRAFT_func_1090_a(java.lang.String a);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1082_b();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1088_b(ItemStack a, EntityLiving b);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1083_c();
-	
-	/**
-	 * 
-	 */
-	public abstract Item MIDDLECRAFT_func_1089_d();
+	public abstract Item setFull3D();
 
 }

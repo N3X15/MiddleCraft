@@ -35,26 +35,26 @@ public abstract class Material {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1860_a();
+	public abstract boolean MIDDLECRAFT_func_923_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1861_b();
+	public abstract boolean MIDDLECRAFT_func_924_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1862_c();
+	public abstract boolean MIDDLECRAFT_func_925_c();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1859_d();
+	public abstract boolean MIDDLECRAFT_func_922_d();
 	
 	/**
-	 * 
+	 * Returns if the block can burn or not.
 	 */
-	public abstract boolean MIDDLECRAFT_func_1864_e();
+	public abstract boolean getBurning();
 
 }

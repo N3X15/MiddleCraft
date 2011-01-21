@@ -9,8 +9,8 @@ public abstract class ThreadServerApplication extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_380_run();
+	public abstract void cj_run();
 
 }

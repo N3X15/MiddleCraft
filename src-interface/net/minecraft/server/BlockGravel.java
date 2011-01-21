@@ -10,6 +10,6 @@ public abstract class BlockGravel extends BlockSand {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1942_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_987_a(int a, java.util.Random b);
 
 }

@@ -15,41 +15,41 @@ public abstract class Slot {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1107_a();
+	public abstract int MIDDLECRAFT_func_509_a();
+	
+	/**
+	 * *
+	 */
+	public abstract ItemStack func_20088(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1108_a(int a);
+	public abstract boolean MIDDLECRAFT_func_508_a(ItemStack a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1103_a(ItemStack a);
+	public abstract boolean func_20090(IInventory a, int b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1109_a(IInventory a, int b);
+	public abstract void func_20091();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1102_b();
+	public abstract void func_20089(ItemStack a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1105_b(ItemStack a);
+	public abstract ItemStack func_20092();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1104_c();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1106_d();
+	public abstract void func_20094();
 
 }

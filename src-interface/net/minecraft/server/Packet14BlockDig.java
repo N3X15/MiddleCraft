@@ -15,21 +15,21 @@ public abstract class Packet14BlockDig extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1560_a();
+	public abstract int MIDDLECRAFT_func_755_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1559_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_754_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1557_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_752_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1558_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_753_a(java.io.DataOutputStream a);
 
 }

@@ -10,76 +10,76 @@ public abstract class BlockFluids extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_497_a();
+	public abstract boolean MIDDLECRAFT_func_244_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_494_a(int a);
+	public abstract int MIDDLECRAFT_func_243_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_501_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_247_a(int a, java.util.Random b);
+	
+	/**
+	 * Returns whether this block is collideable based on the arguments passed in Args: blockMetaData, unknownFlag
+	 */
+	public abstract boolean canCollideCheck(int a, boolean b);
+	
+	/**
+	 * Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d
+	 */
+	public abstract void velocityToAddToEntity(World a, int b, int c, int d, Entity e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_498_a(int a, boolean b);
+	public abstract void MIDDLECRAFT_func_250_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_504_a(World a, int b, int c, int d, Entity e, Vec3D f);
+	public abstract int MIDDLECRAFT_func_248_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_506_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract boolean MIDDLECRAFT_func_245_a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_502_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_249_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_499_a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_252_b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * *
+	 */
+	protected abstract int func_303(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_505_b();
+	public abstract AxisAlignedBB MIDDLECRAFT_func_246_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_508_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_251_e(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract int MIDDLECRAFT_func_496_b(IBlockAccess a, int b, int c, int d);
+	protected abstract int func_301(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_500_d(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_507_e(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	protected abstract int MIDDLECRAFT_func_495_g(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	protected abstract void MIDDLECRAFT_func_510_h(World a, int b, int c, int d);
+	protected abstract void func_300(World a, int b, int c, int d);
 
 }

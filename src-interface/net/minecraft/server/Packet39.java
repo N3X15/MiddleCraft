@@ -12,21 +12,21 @@ public abstract class Packet39 extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1967_a();
+	public abstract int MIDDLECRAFT_func_1009_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1970_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_1012_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1968_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_1010_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1969_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_1011_a(java.io.DataOutputStream a);
 
 }

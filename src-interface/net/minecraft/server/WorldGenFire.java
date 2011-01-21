@@ -10,6 +10,6 @@ public abstract class WorldGenFire extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1661_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_809_a(World a, java.util.Random b, int c, int d, int e);
 
 }

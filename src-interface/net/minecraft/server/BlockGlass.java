@@ -10,6 +10,6 @@ public abstract class BlockGlass extends BlockBreakable {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_918_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_414_a(java.util.Random a);
 
 }

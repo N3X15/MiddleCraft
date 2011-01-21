@@ -11,21 +11,21 @@ public abstract class EntityTNTPrimed extends Entity {
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_443_a(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_199_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_444_b(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_200_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_441_b_();
+	public abstract void MIDDLECRAFT_func_198_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_440_c_();
+	public abstract boolean MIDDLECRAFT_func_197_c_();
 
 }

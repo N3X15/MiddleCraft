@@ -11,21 +11,21 @@ public abstract class Packet16BlockItemSwitch extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1304_a();
+	public abstract int MIDDLECRAFT_func_626_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1303_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_625_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1301_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_623_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1302_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_624_a(java.io.DataOutputStream a);
 
 }

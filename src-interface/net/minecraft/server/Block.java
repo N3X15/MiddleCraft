@@ -132,221 +132,221 @@ public abstract class Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1171_a();
+	public abstract boolean MIDDLECRAFT_func_549_a();
+	
+	/**
+	 * Sets the amount of light emitted by a block from 0.0f to 1.0f (converts internally to 0-15). Returns the object for convenience in constructing.
+	 */
+	protected abstract Block setLightValue(float a);
+	
+	/**
+	 * Sets the bounds of the block.  minX, minY, minZ, maxX, maxY, maxZ
+	 */
+	public abstract void setBlockBounds(float a, float b, float c, float d, float e, float f);
 	
 	/**
 	 * 
 	 */
-	protected abstract Block MIDDLECRAFT_func_1161_a(float a);
+	public abstract int MIDDLECRAFT_func_546_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1166_a(float a, float b, float c, float d, float e, float f);
+	public abstract int MIDDLECRAFT_func_559_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1168_a(int a);
+	public abstract boolean MIDDLECRAFT_func_550_a(int a, boolean b);
+	
+	/**
+	 * Sets the footstep sound for the block. Returns the object for convenience in constructing.
+	 */
+	protected abstract Block setStepSound(StepSound a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1181_a(int a, java.util.Random b);
+	public abstract float MIDDLECRAFT_func_562_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1172_a(int a, boolean b);
+	public abstract boolean MIDDLECRAFT_func_565_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected abstract Block MIDDLECRAFT_func_1159_a(StepSound a);
+	public abstract void MIDDLECRAFT_func_553_a(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract float MIDDLECRAFT_func_1185_a(Entity a);
+	public abstract void MIDDLECRAFT_func_561_a(World a, int b, int c, int d, int e, float f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1191_a(World a, int b, int c, int d);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_563_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1175_a(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_547_a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1184_a(World a, int b, int c, int d, int e, float f);
+	public abstract void MIDDLECRAFT_func_574_a(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition MIDDLECRAFT_func_1186_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract void MIDDLECRAFT_func_570_a(World a, int b, int c, int d, Entity e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1169_a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
+	public abstract boolean MIDDLECRAFT_func_566_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1200_a(World a, int b, int c, int d, Entity e);
+	public abstract void MIDDLECRAFT_func_552_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1196_a(World a, int b, int c, int d, Entity e, Vec3D f);
+	public abstract void MIDDLECRAFT_func_577_a(World a, int b, int c, int d, EntityLiving e);
+	
+	/**
+	 * *
+	 */
+	public abstract float func_254(EntityPlayer a);
+	
+	/**
+	 * *
+	 */
+	public abstract Block func_20037(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1192_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract int MIDDLECRAFT_func_558_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1174_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_571_a(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1204_a(World a, int b, int c, int d, EntityLiving e);
+	public abstract boolean MIDDLECRAFT_func_545_a(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * Sets whether this block type will tick on loading the block or not
+	 */
+	protected abstract void setTickOnLoad(boolean a);
 	
 	/**
 	 * 
 	 */
-	public abstract float MIDDLECRAFT_func_1182_a(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_560_a_(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract Block MIDDLECRAFT_func_1205_a(java.lang.String a);
+	public abstract int MIDDLECRAFT_func_555_b();
+	
+	/**
+	 * Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
+	 */
+	protected abstract Block setResistance(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1180_a(java.util.Random a);
+	public abstract void MIDDLECRAFT_func_557_b(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1197_a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_554_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1167_a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_567_b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1165_a(boolean a);
+	public abstract void MIDDLECRAFT_func_569_b(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1183_a_(World a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_572_b(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1177_b();
+	public abstract boolean MIDDLECRAFT_func_573_c();
+	
+	/**
+	 * Sets how many hits it takes to break a block.
+	 */
+	protected abstract Block setHardness(float a);
+	
+	/**
+	 * Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
+	 */
+	protected abstract Block setLightOpacity(int a);
 	
 	/**
 	 * 
 	 */
-	protected abstract Block MIDDLECRAFT_func_1162_b(float a);
+	public abstract void MIDDLECRAFT_func_564_c(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1179_b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_568_c(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1176_b(World a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_551_d();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1193_b(World a, int b, int c, int d, Entity e);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_548_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1195_b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_575_d(World a, int b, int c, int d, int e);
+	
+	/**
+	 * *
+	 */
+	public abstract java.lang.String func_20036();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1198_b(IBlockAccess a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_556_e(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1199_c();
+	public abstract boolean MIDDLECRAFT_func_576_f(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract Block MIDDLECRAFT_func_1164_c(float a);
-	
-	/**
-	 * 
-	 */
-	protected abstract Block MIDDLECRAFT_func_1160_c(int a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1190_c(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1194_c(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1173_d();
-	
-	/**
-	 * 
-	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1170_d(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1201_d(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1206_e();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1178_e(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1203_f(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1202_g(World a, int b, int c, int d, int e);
+	public abstract void harvestBlock(World a, int b, int c, int d, int e);
 
 }

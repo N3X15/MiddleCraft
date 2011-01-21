@@ -10,21 +10,21 @@ public abstract class BlockMobSpawner extends BlockContainer {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_448_a();
+	public abstract boolean MIDDLECRAFT_func_204_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_446_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_202_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_447_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_203_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	protected abstract TileEntity MIDDLECRAFT_func_445_a_();
+	protected abstract TileEntity MIDDLECRAFT_func_201_a_();
 
 }

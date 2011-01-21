@@ -16,36 +16,36 @@ public abstract class EntityItem extends Entity {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1250_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_609_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1249_a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_608_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1248_b(int a);
+	protected abstract void MIDDLECRAFT_func_607_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1251_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_610_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1252_b(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_611_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1245_b_();
+	public abstract void MIDDLECRAFT_func_605_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1246_r();
+	public abstract boolean MIDDLECRAFT_func_606_r();
 
 }

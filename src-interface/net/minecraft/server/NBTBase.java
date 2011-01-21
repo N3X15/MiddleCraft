@@ -11,16 +11,16 @@ public abstract class NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte MIDDLECRAFT_func_1382_a();
+	public abstract byte MIDDLECRAFT_func_669_a();
 	
 	/**
-	 * 
+	 * Gets the key corresponding to the tag, or an empty string if none set.
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1383_c();
+	public abstract java.lang.String getKey();
 	
 	/**
-	 * 
+	 * Sets the key for this tag and returns this for convenience.
 	 */
-	public abstract NBTBase MIDDLECRAFT_func_1384_m(java.lang.String a);
+	public abstract NBTBase setKey(java.lang.String a);
 
 }

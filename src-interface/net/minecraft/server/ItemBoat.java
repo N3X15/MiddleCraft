@@ -10,6 +10,6 @@ public abstract class ItemBoat extends Item {
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1265_a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_618_a(ItemStack a, World b, EntityPlayer c);
 
 }

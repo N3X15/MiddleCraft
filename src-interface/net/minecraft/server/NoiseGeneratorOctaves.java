@@ -10,18 +10,18 @@ public abstract class NoiseGeneratorOctaves extends NoiseGenerator {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double MIDDLECRAFT_func_1050_a(double a, double b);
+	public abstract double func_647(double a, double b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double[] MIDDLECRAFT_func_1051_a(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j);
+	public abstract double[] func_648(double[] a, double b, double c, double d, int e, int f, int g, double h, double i, double j);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double[] MIDDLECRAFT_func_1052_a(double[] a, int b, int c, int d, int e, double f, double g, double h);
+	public abstract double[] func_4103(double[] a, int b, int c, int d, int e, double f, double g, double h);
 
 }

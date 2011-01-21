@@ -17,41 +17,41 @@ public abstract class EntityChicken extends EntityAnimals {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1589_G();
+	public abstract void MIDDLECRAFT_func_759_G();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1590_a(float a);
+	protected abstract void MIDDLECRAFT_func_760_a(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1591_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_761_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1592_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_762_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1593_d();
+	protected abstract java.lang.String MIDDLECRAFT_func_763_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1594_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_764_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1595_f();
+	protected abstract java.lang.String MIDDLECRAFT_func_765_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1596_g();
+	protected abstract int MIDDLECRAFT_func_766_g();
 
 }

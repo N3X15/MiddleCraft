@@ -10,11 +10,11 @@ public abstract class BlockWorkbench extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_916_a(int a);
+	public abstract int MIDDLECRAFT_func_412_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_917_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_413_a(World a, int b, int c, int d, EntityPlayer e);
 
 }

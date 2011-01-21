@@ -10,8 +10,8 @@ abstract class ThreadLoginVerifier extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_588_run();
+	public abstract void ei_run();
 
 }

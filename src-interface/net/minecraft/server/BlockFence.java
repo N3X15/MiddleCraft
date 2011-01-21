@@ -10,16 +10,16 @@ public abstract class BlockFence extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1563_a();
+	public abstract boolean MIDDLECRAFT_func_758_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1562_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_757_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1561_a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
+	public abstract void MIDDLECRAFT_func_756_a(World a, int b, int c, int d, AxisAlignedBB e, java.util.ArrayList f);
 
 }

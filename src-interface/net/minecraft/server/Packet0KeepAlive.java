@@ -10,21 +10,21 @@ public abstract class Packet0KeepAlive extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1932_a();
+	public abstract int MIDDLECRAFT_func_977_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1929_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_974_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1930_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_975_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1931_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_976_a(java.io.DataOutputStream a);
 
 }

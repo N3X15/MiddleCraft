@@ -19,21 +19,21 @@ public abstract class Packet21PickupSpawn extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1941_a();
+	public abstract int MIDDLECRAFT_func_986_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1940_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_985_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1938_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_983_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1939_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_984_a(java.io.DataOutputStream a);
 
 }

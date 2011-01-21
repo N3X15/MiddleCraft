@@ -11,26 +11,26 @@ public abstract class BlockChest extends BlockContainer {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_340_a(int a);
+	public abstract int MIDDLECRAFT_func_149_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_341_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_150_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_344_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_152_a(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * *
+	 */
+	protected abstract TileEntity SetBlockEntity();
 	
 	/**
 	 * 
 	 */
-	protected abstract TileEntity MIDDLECRAFT_func_345_a_();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_343_b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_151_b(World a, int b, int c, int d);
 
 }

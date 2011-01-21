@@ -16,56 +16,56 @@ public abstract class CraftingInventoryCB {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_544_a();
+	public abstract void MIDDLECRAFT_func_272_a();
+	
+	/**
+	 * *
+	 */
+	public abstract Slot func_20120(int a);
+	
+	/**
+	 * *
+	 */
+	public abstract ItemStack func_20123(int a, int b, EntityPlayer c);
 	
 	/**
 	 * 
 	 */
-	public abstract Slot MIDDLECRAFT_func_546_a(int a);
+	public abstract void MIDDLECRAFT_func_271_a(ICrafting a);
+	
+	/**
+	 * *
+	 */
+	protected abstract void func_20122(Slot a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_547_a(int a, int b, EntityPlayer c);
+	public abstract void MIDDLECRAFT_func_273_a(EntityPlayer a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20129(EntityPlayer a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_543_a(ICrafting a);
+	public abstract void MIDDLECRAFT_func_274_a(IInventory a);
+	
+	/**
+	 * *
+	 */
+	public abstract Slot func_20127(IInventory a, int b);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_542_a(Slot a);
+	public abstract boolean MIDDLECRAFT_func_275_b(EntityPlayer a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_548_a(EntityPlayer a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_551_a(EntityPlayer a, boolean b);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_549_a(IInventory a);
-	
-	/**
-	 * 
-	 */
-	public abstract Slot MIDDLECRAFT_func_545_a(IInventory a, int b);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_552_b(EntityPlayer a);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_550_c(EntityPlayer a);
+	public abstract boolean func_20124(EntityPlayer a);
 
 }

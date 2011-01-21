@@ -8,13 +8,13 @@ public abstract class BlockSlowSand extends Block {
 	// METHODS
 	
 	/**
-	 * 
+	 * Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
 	 */
-	public abstract void MIDDLECRAFT_func_109_a(World a, int b, int c, int d, Entity e);
+	public abstract void onEntityCollidedWithBlock(World a, int b, int c, int d, Entity e);
 	
 	/**
-	 * 
+	 * Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_108_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB getCollisionBoundingBoxFromPool(World a, int b, int c, int d);
 
 }

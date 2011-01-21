@@ -136,6 +136,9 @@ public class MCMethodInfo {
 	public String toIndex() {
 		return String.format("%s %s", realName, signature);
 	}
+	public static String toIndex(String realname,String sig) {
+		return String.format("%s %s", realname, sig);
+	}
 
 	public String toAbstractJava(ClassPool cp) {
 		try {

@@ -10,61 +10,61 @@ public abstract class BlockDoor extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1733_a();
+	public abstract boolean MIDDLECRAFT_func_860_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1741_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_866_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1744_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_868_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract MovingObjectPosition MIDDLECRAFT_func_1742_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
+	public abstract MovingObjectPosition MIDDLECRAFT_func_867_a(World a, int b, int c, int d, Vec3D e, Vec3D f);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1738_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_864_a(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_272(World a, int b, int c, int d, boolean e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1739_a(World a, int b, int c, int d, boolean e);
+	public abstract void MIDDLECRAFT_func_862_a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_273(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1735_a(IBlockAccess a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_865_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1736_b(int a);
+	public abstract void MIDDLECRAFT_func_863_b(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * *
+	 */
+	public abstract int func_271(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1740_b(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1737_b(World a, int b, int c, int d, EntityPlayer e);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1743_d(int a);
-	
-	/**
-	 * 
-	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1734_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_861_d(World a, int b, int c, int d);
 
 }

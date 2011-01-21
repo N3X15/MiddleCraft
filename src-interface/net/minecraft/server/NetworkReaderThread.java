@@ -9,8 +9,8 @@ abstract class NetworkReaderThread extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1631_run();
+	public abstract void jt_run();
 
 }

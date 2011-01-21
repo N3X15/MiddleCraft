@@ -20,128 +20,128 @@ public abstract class ServerConfigurationManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1267_a();
+	public abstract int func_640();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1292_a(double a, double b, double c, double d, Packet e);
+	public abstract void func_12022(double a, double b, double c, double d, Packet e);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1274_a(int a, int b, int c);
+	public abstract void func_622(int a, int b, int c);
 	
 	/**
-	 * 
+	 * sends a tilentity to the player name specified
 	 */
-	public abstract void MIDDLECRAFT_func_1296_a(int a, int b, int c, TileEntity d);
+	public abstract void sentTileEntityToPlayer(int a, int b, int c, TileEntity d);
 	
 	/**
-	 * 
+	 * Called when a player successfully logs in. Reads player data from disk and inserts the player into the world.
 	 */
-	public abstract void MIDDLECRAFT_func_1268_a(EntityPlayerMP a);
+	public abstract void playerLoggedIn(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * Sets the NBT manager to the one for the worldserver given
 	 */
-	public abstract void MIDDLECRAFT_func_1266_a(WorldServer a);
+	public abstract void setPlayerManager(WorldServer a);
 	
 	/**
-	 * 
+	 * Called when a player tries to login. Checks whether they are banned/server is full etc.
 	 */
-	public abstract EntityPlayerMP MIDDLECRAFT_func_1271_a(NetLoginHandler a, java.lang.String b, java.lang.String c);
+	public abstract EntityPlayerMP login(NetLoginHandler a, java.lang.String b, java.lang.String c);
 	
 	/**
-	 * 
+	 * adds a player to the ban list
 	 */
-	public abstract void MIDDLECRAFT_func_1277_a(java.lang.String a);
+	public abstract void banPlayer(java.lang.String a);
 	
 	/**
-	 * 
+	 * sends a chat message to the player with the name specified (not necessarily a whisper)
 	 */
-	public abstract void MIDDLECRAFT_func_1291_a(java.lang.String a, java.lang.String b);
+	public abstract void sendChatMessageToPlayer(java.lang.String a, java.lang.String b);
 	
 	/**
-	 * 
+	 * sends a packet to the player with the name specified
 	 */
-	public abstract boolean MIDDLECRAFT_func_1294_a(java.lang.String a, Packet b);
+	public abstract boolean sendPacketToPlayer(java.lang.String a, Packet b);
 	
 	/**
-	 * 
+	 * sends a packet to all players
 	 */
-	public abstract void MIDDLECRAFT_func_1275_a(Packet a);
+	public abstract void sendPacketToAllPlayers(Packet a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1273_b();
+	public abstract void func_637();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1269_b(EntityPlayerMP a);
+	public abstract void func_613(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * removes a player from the ban list
 	 */
-	public abstract void MIDDLECRAFT_func_1278_b(java.lang.String a);
+	public abstract void unbanPlayer(java.lang.String a);
 	
 	/**
-	 * 
+	 * returns a string containing a comma-seperated list of player names
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1276_c();
+	public abstract java.lang.String getPlayerList();
 	
 	/**
-	 * 
+	 * Called when a player disconnects from the game. Writes player data to disk and removes them from the world.
 	 */
-	public abstract void MIDDLECRAFT_func_1270_c(EntityPlayerMP a);
+	public abstract void playerLoggedOut(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * bans the given IP string
 	 */
-	public abstract void MIDDLECRAFT_func_1281_c(java.lang.String a);
+	public abstract void banIP(java.lang.String a);
 	
 	/**
-	 * 
+	 * Saves all of the player's states
 	 */
-	public abstract void MIDDLECRAFT_func_1295_d();
+	public abstract void savePlayerStates();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract EntityPlayerMP MIDDLECRAFT_func_1272_d(EntityPlayerMP a);
+	public abstract EntityPlayerMP func_9242(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * unbans the given IP string
 	 */
-	public abstract void MIDDLECRAFT_func_1282_d(java.lang.String a);
+	public abstract void unbanIP(java.lang.String a);
 	
 	/**
-	 * 
+	 * ops the player given
 	 */
-	public abstract void MIDDLECRAFT_func_1285_e(java.lang.String a);
+	public abstract void opPlayer(java.lang.String a);
 	
 	/**
-	 * 
+	 * deops the player given
 	 */
-	public abstract void MIDDLECRAFT_func_1286_f(java.lang.String a);
+	public abstract void deopPlayer(java.lang.String a);
 	
 	/**
-	 * 
+	 * Returns true if the player is an OP, false otherwise.
 	 */
-	public abstract boolean MIDDLECRAFT_func_1289_g(java.lang.String a);
+	public abstract boolean isOp(java.lang.String a);
 	
 	/**
-	 * 
+	 * gets the player entity for the player with the name specified
 	 */
-	public abstract EntityPlayerMP MIDDLECRAFT_func_1290_h(java.lang.String a);
+	public abstract EntityPlayerMP getPlayerEntity(java.lang.String a);
 	
 	/**
-	 * 
+	 * sends a chat message to all players currently connected
 	 */
-	public abstract void MIDDLECRAFT_func_1293_i(java.lang.String a);
+	public abstract void sendChatMessageToAllPlayers(java.lang.String a);
 
 }

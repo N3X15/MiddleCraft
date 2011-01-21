@@ -68,288 +68,288 @@ public abstract class Entity {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_698_A();
+	public abstract void func_127();
+	
+	/**
+	 * *
+	 */
+	public abstract double func_117();
+	
+	/**
+	 * *
+	 */
+	public abstract Vec3D func_4039();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_4042();
+	
+	/**
+	 * *
+	 */
+	public abstract int[] func_20042();
+	
+	/**
+	 * Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box.
+	 */
+	public abstract void setPosition(double a, double b, double c);
+	
+	/**
+	 * Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+	 */
+	protected abstract void updateFallState(double a, boolean b);
+	
+	/**
+	 * Called when the mob is falling. Calculates and applies fall damage.
+	 */
+	protected abstract void fall(float a);
+	
+	/**
+	 * Sets the width and height of the entity. Args: width, height
+	 */
+	protected abstract void setSize(float a, float b);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_90(float a, float b, float c);
+	
+	/**
+	 * Drops an item stack with a specified y offset. Args: itemID, count, yOffset
+	 */
+	public abstract EntityItem dropItemWithOffset(int a, int b, float c);
 	
 	/**
 	 * 
 	 */
-	public abstract double MIDDLECRAFT_func_699_B();
+	protected abstract void MIDDLECRAFT_func_328_a(NBTTagCompound a);
+	
+	/**
+	 * Returns the distance to the entity. Args: entity
+	 */
+	public abstract float getDistanceToEntity(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_702_C();
+	public abstract boolean MIDDLECRAFT_func_325_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_703_D();
+	public abstract boolean MIDDLECRAFT_func_329_a(EntityPlayer a);
+	
+	/**
+	 * Checks if the current block the entity is within of the specified material type
+	 */
+	public abstract boolean isInsideOfMaterial(Material a);
+	
+	/**
+	 * *
+	 */
+	public abstract boolean isOffsetPositionInLiquid(double a, double b, double c);
+	
+	/**
+	 * Sets the entity's position and rotation. Args: posX, posY, posZ, yaw, pitch
+	 */
+	public abstract void setPositionAndRotation(double a, double b, double c, float d, float e);
+	
+	/**
+	 * Gets how bright this entity is.
+	 */
+	public abstract float getEntityBrightness(float a);
+	
+	/**
+	 * Sets the rotation of the entity
+	 */
+	protected abstract void setRotation(float a, float b);
+	
+	/**
+	 * Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
+	 */
+	protected abstract void dealFireDamage(int a);
+	
+	/**
+	 * Drops an item stack at the entity's position. Args: itemID, count
+	 */
+	public abstract EntityItem dropItem(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int[] MIDDLECRAFT_func_704_E();
+	protected abstract void MIDDLECRAFT_func_327_b(NBTTagCompound a);
+	
+	/**
+	 * Returns the squared distance to the entity. Args: entity
+	 */
+	public abstract double getDistanceSqToEntity(Entity a);
+	
+	/**
+	 * *
+	 */
+	public abstract void addToPlayerScore(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_651_a(double a, double b, double c);
+	public abstract void MIDDLECRAFT_func_324_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_658_a(double a, boolean b);
+	public abstract void MIDDLECRAFT_func_323_b_();
+	
+	/**
+	 * Tries to moves the entity by the passed in displacement. Args: x, y, z
+	 */
+	public abstract void moveEntity(double a, double b, double c);
+	
+	/**
+	 * *
+	 */
+	public abstract void setLocationAndAngles(double a, double b, double c, float d, float e);
+	
+	/**
+	 * *
+	 */
+	public abstract boolean func_95(NBTTagCompound a);
+	
+	/**
+	 * Applies a velocity to each of the entities pushing them away from each other. Args: entity
+	 */
+	public abstract void applyEntityCollision(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_662_a(float a);
+	public abstract boolean MIDDLECRAFT_func_326_c_();
+	
+	/**
+	 * Gets the squared distance to the position. Args: x, y, z
+	 */
+	public abstract double getDistanceSq(double a, double b, double c);
+	
+	/**
+	 * Save the entity to NBT (calls an abstract helper method to write extra data)
+	 */
+	public abstract void writeToNBT(NBTTagCompound a);
+	
+	/**
+	 * *
+	 */
+	public abstract AxisAlignedBB func_89(Entity a);
+	
+	/**
+	 * Gets the distance to the position. Args: x, y, z
+	 */
+	public abstract double getDistance(double a, double b, double c);
+	
+	/**
+	 * Reads the entity from NBT (calls an abstract helper method to read specialized data)
+	 */
+	public abstract void readFromNBT(NBTTagCompound a);
+	
+	/**
+	 * set entity to null to unmount
+	 */
+	public abstract void mountEntity(Entity a);
+	
+	/**
+	 * *
+	 */
+	public abstract boolean ep_equals(java.lang.Object a);
+	
+	/**
+	 * Adds to the current velocity of the entity. Args: x, y, z
+	 */
+	public abstract void addVelocity(double a, double b, double c);
+	
+	/**
+	 * *
+	 */
+	public abstract int ep_hashCode();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_649_a(float a, float b);
+	public abstract double MIDDLECRAFT_func_330_j();
 	
 	/**
-	 * 
+	 * Will get destroyed next tick
 	 */
-	public abstract void MIDDLECRAFT_func_667_a(float a, float b, float c);
+	public abstract void setEntityDead();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract EntityItem MIDDLECRAFT_func_692_a(int a, int b, float c);
+	public abstract void func_84();
 	
 	/**
-	 * 
+	 * Called whenever the entity is walking inside of lava.
 	 */
-	protected abstract void MIDDLECRAFT_func_688_a(NBTTagCompound a);
+	protected abstract void setOnFireFromLava();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract float MIDDLECRAFT_func_671_a(Entity a);
+	protected abstract void func_4043();
 	
 	/**
-	 * 
+	 * Returns if this entity is sneaking.
 	 */
-	public abstract boolean MIDDLECRAFT_func_679_a(Entity a, int b);
+	public abstract boolean isSneaking();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_695_a(EntityPlayer a);
+	public abstract AxisAlignedBB func_93();
 	
 	/**
-	 * 
+	 * Returns if this entity is in water and will end up adding the waters velocity to the entity
 	 */
-	public abstract boolean MIDDLECRAFT_func_664_a(Material a);
+	public abstract boolean handleWaterMovement();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_656_b(double a, double b, double c);
+	public abstract float func_104();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_669_b(double a, double b, double c, float d, float e);
+	public abstract boolean handleLavaMovement();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract float MIDDLECRAFT_func_668_b(float a);
+	protected abstract void func_9060();
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_650_b(float a, float b);
+	public abstract boolean canBePushed();
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_661_b(int a);
+	protected abstract java.lang.String getEntityString();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract EntityItem MIDDLECRAFT_func_691_b(int a, int b);
+	public abstract boolean isEntityAlive();
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_687_b(NBTTagCompound a);
+	public abstract boolean func_91();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double MIDDLECRAFT_func_674_b(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_682_b(Entity a, int b);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_675_b(EntityPlayer a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_652_b_();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_657_c(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_670_c(double a, double b, double c, float d, float e);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_683_c(NBTTagCompound a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_676_c(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_680_c_();
-	
-	/**
-	 * 
-	 */
-	public abstract double MIDDLECRAFT_func_672_d(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_684_d(NBTTagCompound a);
-	
-	/**
-	 * 
-	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_696_d(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract double MIDDLECRAFT_func_673_e(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_685_e(NBTTagCompound a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_701_e(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_646_equals(java.lang.Object a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_677_f(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_647_hashCode();
-	
-	/**
-	 * 
-	 */
-	public abstract double MIDDLECRAFT_func_700_j();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_648_l();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_653_m();
-	
-	/**
-	 * 
-	 */
-	protected abstract void MIDDLECRAFT_func_654_n();
-	
-	/**
-	 * 
-	 */
-	protected abstract void MIDDLECRAFT_func_655_o();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_659_p();
-	
-	/**
-	 * 
-	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_660_q();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_663_r();
-	
-	/**
-	 * 
-	 */
-	public abstract float MIDDLECRAFT_func_665_s();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_666_t();
-	
-	/**
-	 * 
-	 */
-	protected abstract void MIDDLECRAFT_func_678_u();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_681_v();
-	
-	/**
-	 * 
-	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_686_w();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_693_x();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_694_y();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_697_z();
+	public abstract void func_115();
 
 }

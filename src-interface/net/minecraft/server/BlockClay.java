@@ -10,11 +10,11 @@ public abstract class BlockClay extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_554_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_276_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_555_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_277_a(java.util.Random a);
 
 }

@@ -10,8 +10,8 @@ abstract class NetworkAcceptThread extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_553_run();
+	public abstract void dx_run();
 
 }

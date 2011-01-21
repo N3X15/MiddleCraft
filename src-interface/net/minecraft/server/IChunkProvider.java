@@ -8,33 +8,33 @@ public abstract interface IChunkProvider {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_367_a();
+	public abstract boolean func_361();
 	
 	/**
-	 * 
+	 * Checks to see if a chunk exists at x, y
 	 */
-	public abstract boolean MIDDLECRAFT_func_363_a(int a, int b);
+	public abstract boolean chunkExists(int a, int b);
 	
 	/**
-	 * 
+	 * Populates chunk with ores etc etc
 	 */
-	public abstract void MIDDLECRAFT_func_365_a(IChunkProvider a, int b, int c);
+	public abstract void populate(IChunkProvider a, int b, int c);
 	
 	/**
-	 * 
+	 * Called to save the world
 	 */
-	public abstract boolean MIDDLECRAFT_func_366_a(boolean a, IProgressUpdate b);
+	public abstract boolean saveWorld(boolean a, IProgressUpdate b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_368_b();
+	public abstract boolean func_364();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract Chunk MIDDLECRAFT_func_364_b(int a, int b);
+	public abstract Chunk provideChunk(int a, int b);
 
 }

@@ -16,68 +16,68 @@ public abstract class AxisAlignedBB {
 	// METHODS
 	
 	/**
-	 * 
+	 * Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_609_a(double a, double b, double c);
+	public abstract AxisAlignedBB addCoord(double a, double b, double c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract MovingObjectPosition MIDDLECRAFT_func_619_a(Vec3D a, Vec3D b);
+	public abstract MovingObjectPosition func_706(Vec3D a, Vec3D b);
 	
 	/**
-	 * 
+	 * Returns whether the given bounding box intersects with this one. Args: axisAlignedBB
 	 */
-	public abstract boolean MIDDLECRAFT_func_615_a(AxisAlignedBB a);
+	public abstract boolean intersectsWith(AxisAlignedBB a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double MIDDLECRAFT_func_612_a(AxisAlignedBB a, double b);
+	public abstract double func_710(AxisAlignedBB a, double b);
 	
 	/**
-	 * 
+	 * Returns a copy of the bounding box.
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_618_b();
+	public abstract AxisAlignedBB copy();
 	
 	/**
-	 * 
+	 * Returns a bounding box expanded by the specified vector (if negative numbers are given it will shrink). Args: x, y, z
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_610_b(double a, double b, double c);
+	public abstract AxisAlignedBB expands(double a, double b, double c);
 	
 	/**
-	 * 
+	 * Sets the bounding box to the same bounds as the bounding box passed in. Args: axisAlignedBB
 	 */
-	public abstract void MIDDLECRAFT_func_623_b(AxisAlignedBB a);
+	public abstract void setBB(AxisAlignedBB a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double MIDDLECRAFT_func_613_b(AxisAlignedBB a, double b);
+	public abstract double func_701(AxisAlignedBB a, double b);
 	
 	/**
-	 * 
+	 * Returns a bounding box offseted by the specified vector (if negative numbers are given it will shrink). Args: x, y, z
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_611_c(double a, double b, double c);
+	public abstract AxisAlignedBB getOffsetBoundingBox(double a, double b, double c);
 	
 	/**
-	 * 
+	 * Sets the bounds of the bounding box. Args: minX, minY, minZ, maxX, maxY, maxZ
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_608_c(double a, double b, double c, double d, double e, double f);
+	public abstract AxisAlignedBB setBounds(double a, double b, double c, double d, double e, double f);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract double MIDDLECRAFT_func_614_c(AxisAlignedBB a, double b);
+	public abstract double func_709(AxisAlignedBB a, double b);
 	
 	/**
-	 * 
+	 * Offsets the current bounding box by the specified coordinates. Args: x, y, z
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_616_d(double a, double b, double c);
+	public abstract AxisAlignedBB offset(double a, double b, double c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_617_e(double a, double b, double c);
+	public abstract AxisAlignedBB func_694(double a, double b, double c);
 
 }

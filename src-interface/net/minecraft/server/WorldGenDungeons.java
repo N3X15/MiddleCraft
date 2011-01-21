@@ -10,6 +10,6 @@ public abstract class WorldGenDungeons extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_643_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_322_a(World a, java.util.Random b, int c, int d, int e);
 
 }

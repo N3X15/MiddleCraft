@@ -10,16 +10,16 @@ public abstract class Packet31RelEntityMove extends Packet30Entity {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_759_a();
+	public abstract int MIDDLECRAFT_func_367_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_757_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_365_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_758_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_366_a(java.io.DataOutputStream a);
 
 }

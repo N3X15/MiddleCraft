@@ -11,21 +11,21 @@ public abstract class BlockPumpkin extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_777_a(int a);
+	public abstract int MIDDLECRAFT_func_382_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_779_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_384_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_780_a(World a, int b, int c, int d, EntityLiving e);
+	public abstract void MIDDLECRAFT_func_385_a(World a, int b, int c, int d, EntityLiving e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_778_e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_383_e(World a, int b, int c, int d);
 
 }

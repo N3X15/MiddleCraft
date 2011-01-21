@@ -11,13 +11,13 @@ public abstract class ChunkPosition {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1496_equals(java.lang.Object a);
+	public abstract boolean iq_equals(java.lang.Object a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1497_hashCode();
+	public abstract int iq_hashCode();
 
 }

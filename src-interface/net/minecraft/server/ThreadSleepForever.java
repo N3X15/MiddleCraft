@@ -9,8 +9,8 @@ public abstract class ThreadSleepForever extends java.lang.Thread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_395_run();
+	public abstract void cn_run();
 
 }

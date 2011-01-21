@@ -11,21 +11,21 @@ public abstract class Packet29DestroyEntity extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_541_a();
+	public abstract int MIDDLECRAFT_func_270_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_540_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_269_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_538_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_267_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_539_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_268_a(java.io.DataOutputStream a);
 
 }

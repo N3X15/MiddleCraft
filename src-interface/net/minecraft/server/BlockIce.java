@@ -10,21 +10,21 @@ public abstract class BlockIce extends BlockBreakable {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1960_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_1002_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1959_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_1001_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1957_a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_999_a(IBlockAccess a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1958_b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_1000_b(World a, int b, int c, int d);
 
 }

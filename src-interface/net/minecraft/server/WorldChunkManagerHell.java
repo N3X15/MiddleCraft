@@ -11,28 +11,28 @@ public abstract class WorldChunkManagerHell extends WorldChunkManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract MobSpawnerBase MIDDLECRAFT_func_1223_a(int a, int b);
+	public abstract MobSpawnerBase func_4067(int a, int b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract MobSpawnerBase[] MIDDLECRAFT_func_1224_a(int a, int b, int c, int d);
+	public abstract MobSpawnerBase[] func_4065(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract MobSpawnerBase MIDDLECRAFT_func_1222_a(ChunkCoordIntPair a);
+	public abstract MobSpawnerBase func_4066(ChunkCoordIntPair a);
 	
 	/**
-	 * 
+	 * Returns a list of temperatures to use for the specified blocks.  Args: listToReuse, x, y, width, length
 	 */
-	public abstract double[] MIDDLECRAFT_func_1225_a(double[] a, int b, int c, int d, int e);
+	public abstract double[] getTemperatures(double[] a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
 	 */
-	public abstract MobSpawnerBase[] MIDDLECRAFT_func_1226_a(MobSpawnerBase[] a, int b, int c, int d, int e);
+	public abstract MobSpawnerBase[] loadBlockGeneratorData(MobSpawnerBase[] a, int b, int c, int d, int e);
 
 }

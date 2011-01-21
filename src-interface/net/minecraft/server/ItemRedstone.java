@@ -10,6 +10,6 @@ public abstract class ItemRedstone extends Item {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1362_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_649_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

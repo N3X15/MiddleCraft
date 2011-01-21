@@ -10,11 +10,11 @@ public abstract class ItemSaddle extends Item {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_557_a(ItemStack a, EntityLiving b);
+	public abstract void MIDDLECRAFT_func_278_a(ItemStack a, EntityLiving b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_556_b(ItemStack a, EntityLiving b);
+	public abstract void func_9202(ItemStack a, EntityLiving b);
 
 }

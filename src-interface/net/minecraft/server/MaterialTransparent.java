@@ -10,16 +10,16 @@ public abstract class MaterialTransparent extends Material {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1906_a();
+	public abstract boolean MIDDLECRAFT_func_956_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1907_b();
+	public abstract boolean MIDDLECRAFT_func_957_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1908_c();
+	public abstract boolean MIDDLECRAFT_func_958_c();
 
 }

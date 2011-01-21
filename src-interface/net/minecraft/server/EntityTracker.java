@@ -12,43 +12,43 @@ public abstract class EntityTracker {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1312_a();
+	public abstract void func_607();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1308_a(Entity a);
+	public abstract void func_611(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1309_a(Entity a, int b, int c);
+	public abstract void func_6187(Entity a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1310_a(Entity a, int b, int c, boolean d);
+	public abstract void func_6186(Entity a, int b, int c, boolean d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1313_a(Entity a, Packet b);
+	public abstract void func_12021(Entity a, Packet b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1315_a(EntityPlayerMP a);
+	public abstract void func_9238(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1311_b(Entity a);
+	public abstract void func_610(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1314_b(Entity a, Packet b);
+	public abstract void func_609(Entity a, Packet b);
 
 }

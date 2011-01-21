@@ -9,8 +9,8 @@ public abstract class ItemBucket extends Item {
 	// METHODS
 	
 	/**
-	 * 
+	 * Called whenever this item is equipped and the right mouse button is pressed. Args: itemStack, world, entityPlayer
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_196_a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack onItemRightClick(ItemStack a, World b, EntityPlayer c);
 
 }

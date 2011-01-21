@@ -12,18 +12,18 @@ public abstract class GuiLogOutputHandler extends java.util.logging.Handler {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_517_close();
+	public abstract void dp_close();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_518_flush();
+	public abstract void dp_flush();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_519_publish(java.util.logging.LogRecord a);
+	public abstract void dp_publish(java.util.logging.LogRecord a);
 
 }

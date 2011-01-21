@@ -11,41 +11,41 @@ public abstract class EntitySkeleton extends EntityMobs {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_984_G();
+	public abstract void MIDDLECRAFT_func_432_G();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_986_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_434_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_985_a(Entity a, float b);
+	protected abstract void MIDDLECRAFT_func_433_a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_987_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_435_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_981_d();
+	protected abstract java.lang.String MIDDLECRAFT_func_429_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_982_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_430_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_983_f();
+	protected abstract java.lang.String MIDDLECRAFT_func_431_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_988_g();
+	protected abstract int MIDDLECRAFT_func_436_g();
 
 }

@@ -15,21 +15,21 @@ public abstract class Packet53BlockChange extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1037_a();
+	public abstract int MIDDLECRAFT_func_462_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1036_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_461_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1034_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_459_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1035_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_460_a(java.io.DataOutputStream a);
 
 }

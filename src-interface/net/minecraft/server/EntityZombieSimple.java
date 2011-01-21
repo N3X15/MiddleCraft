@@ -10,6 +10,6 @@ public abstract class EntityZombieSimple extends EntityMobs {
 	/**
 	 * 
 	 */
-	protected abstract float MIDDLECRAFT_func_1972_a(int a, int b, int c);
+	protected abstract float MIDDLECRAFT_func_1013_a(int a, int b, int c);
 
 }

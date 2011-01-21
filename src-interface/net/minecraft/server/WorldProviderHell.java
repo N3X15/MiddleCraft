@@ -8,33 +8,33 @@ public abstract class WorldProviderHell extends WorldProvider {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1490_a();
+	public abstract void registerWorldChunkManager();
 	
 	/**
-	 * 
+	 * Will check if the x, z position specified is alright to be set as the map spawn point
 	 */
-	public abstract boolean MIDDLECRAFT_func_1494_a(int a, int b);
+	public abstract boolean canCoordinateBeSpawn(int a, int b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract float MIDDLECRAFT_func_1495_a(long a, float b);
+	public abstract float calculateCelestialAngle(long a, float b);
 	
 	/**
-	 * 
+	 * Returns the chunk loader back for the world provider. Args: fileName
 	 */
-	public abstract IChunkLoader MIDDLECRAFT_func_1493_a(java.io.File a);
+	public abstract IChunkLoader getChunkLoader(java.io.File a);
 	
 	/**
-	 * 
+	 * Creates the light to brightness table
 	 */
-	protected abstract void MIDDLECRAFT_func_1491_b();
+	protected abstract void generateLightBrightnessTable();
 	
 	/**
-	 * 
+	 * Returns the chunk provider back for the world provider
 	 */
-	public abstract IChunkProvider MIDDLECRAFT_func_1492_c();
+	public abstract IChunkProvider getChunkProvider();
 
 }

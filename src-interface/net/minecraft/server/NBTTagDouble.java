@@ -11,11 +11,11 @@ public abstract class NBTTagDouble extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte MIDDLECRAFT_func_762_a();
+	public abstract byte MIDDLECRAFT_func_370_a();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_763_toString();
+	public abstract java.lang.String ez_toString();
 
 }

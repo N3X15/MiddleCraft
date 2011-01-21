@@ -10,6 +10,6 @@ public abstract class ItemSign extends Item {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1260_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_614_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

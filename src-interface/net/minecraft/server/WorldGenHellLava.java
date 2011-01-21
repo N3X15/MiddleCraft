@@ -11,6 +11,6 @@ public abstract class WorldGenHellLava extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_356_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_159_a(World a, java.util.Random b, int c, int d, int e);
 
 }

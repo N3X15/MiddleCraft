@@ -11,6 +11,6 @@ public abstract class ItemRecord extends Item {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1022_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
+	public abstract boolean MIDDLECRAFT_func_447_a(ItemStack a, EntityPlayer b, World c, int d, int e, int f, int g);
 
 }

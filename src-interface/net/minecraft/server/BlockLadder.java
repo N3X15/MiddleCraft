@@ -10,31 +10,31 @@ public abstract class BlockLadder extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_512_a();
+	public abstract boolean MIDDLECRAFT_func_254_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_513_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_255_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_516_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_258_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_515_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_257_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_514_c(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_256_c(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_511_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_253_d(World a, int b, int c, int d);
 
 }

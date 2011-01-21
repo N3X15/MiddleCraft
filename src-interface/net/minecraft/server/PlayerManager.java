@@ -12,33 +12,33 @@ public abstract class PlayerManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1578_a();
+	public abstract void func_538();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1580_a(int a, int b, int c);
+	public abstract void func_535(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1581_a(EntityPlayerMP a);
+	public abstract void func_9214(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1585_b();
+	public abstract int func_542();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1582_b(EntityPlayerMP a);
+	public abstract void func_9213(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1584_c(EntityPlayerMP a);
+	public abstract void func_543(EntityPlayerMP a);
 
 }

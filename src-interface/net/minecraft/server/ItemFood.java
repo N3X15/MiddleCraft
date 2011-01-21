@@ -11,6 +11,6 @@ public abstract class ItemFood extends Item {
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1917_a(ItemStack a, World b, EntityPlayer c);
+	public abstract ItemStack MIDDLECRAFT_func_967_a(ItemStack a, World b, EntityPlayer c);
 
 }

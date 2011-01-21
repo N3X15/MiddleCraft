@@ -12,16 +12,16 @@ public abstract class TileEntitySign extends TileEntity {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1753_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_870_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1752_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_869_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract Packet MIDDLECRAFT_func_1754_f();
+	public abstract Packet MIDDLECRAFT_func_871_f();
 
 }

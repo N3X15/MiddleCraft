@@ -12,23 +12,23 @@ public abstract class ChunkCache {
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the block ID at coords x,y,z
 	 */
-	public abstract int MIDDLECRAFT_func_753_a(int a, int b, int c);
+	public abstract int getBlockId(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Returns the block metadata at coords x,y,z
 	 */
-	public abstract int MIDDLECRAFT_func_754_b(int a, int b, int c);
+	public abstract int getBlockMetadata(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Returns the block's material.
 	 */
-	public abstract Material MIDDLECRAFT_func_755_c(int a, int b, int c);
+	public abstract Material getBlockMaterial(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Returns if the block at the specified coordinates allow attachment Args: x, y, z
 	 */
-	public abstract boolean MIDDLECRAFT_func_756_d(int a, int b, int c);
+	public abstract boolean doesBlockAllowAttachment(int a, int b, int c);
 
 }

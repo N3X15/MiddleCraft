@@ -8,208 +8,208 @@ public abstract class NetHandler {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_967_a(Packet7 a);
+	public abstract void func_6006(Packet7 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_944_a(Packet1Login a);
+	public abstract void handleLogin(Packet1Login a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_980_a(Packet106 a);
+	public abstract void func_20008(Packet106 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_970_a(Packet9 a);
+	public abstract void func_9002(Packet9 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_958_a(Packet3Chat a);
+	public abstract void handleChat(Packet3Chat a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_974_a(Packet102 a);
+	public abstract void func_20007(Packet102 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_950_a(Packet20NamedEntitySpawn a);
+	public abstract void handleNamedEntitySpawn(Packet20NamedEntitySpawn a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_964_a(Packet6SpawnPosition a);
+	public abstract void handleSpawnPosition(Packet6SpawnPosition a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_952_a(Packet34EntityTeleport a);
+	public abstract void handleEntityTeleport(Packet34EntityTeleport a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_957_a(Packet22Collect a);
+	public abstract void handleCollect(Packet22Collect a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_971_a(Packet60 a);
+	public abstract void func_12001(Packet60 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_955_a(Packet29DestroyEntity a);
+	public abstract void handleDestroyEntity(Packet29DestroyEntity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_940_a(Packet51MapChunk a);
+	public abstract void handleMapChunk(Packet51MapChunk a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_949_a(Packet50PreChunk a);
+	public abstract void handlePreChunk(Packet50PreChunk a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_959_a(Packet23VehicleSpawn a);
+	public abstract void handleVehicleSpawn(Packet23VehicleSpawn a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_969_a(Packet8 a);
+	public abstract void handleHealth(Packet8 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_973_a(Packet101 a);
+	public abstract void func_20006(Packet101 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_948_a(Packet53BlockChange a);
+	public abstract void handleBlockChange(Packet53BlockChange a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_951_a(Packet30Entity a);
+	public abstract void handleEntity(Packet30Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_965_a(Packet28 a);
+	public abstract void func_6002(Packet28 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_977_a(Packet130 a);
+	public abstract void func_20005(Packet130 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_953_a(Packet15Place a);
+	public abstract void handlePlace(Packet15Place a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_961_a(Packet2Handshake a);
+	public abstract void handleHandshake(Packet2Handshake a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_963_a(Packet4UpdateTime a);
+	public abstract void handleUpdateTime(Packet4UpdateTime a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_954_a(Packet16BlockItemSwitch a);
+	public abstract void handleBlockItemSwitch(Packet16BlockItemSwitch a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_975_a(Packet103 a);
+	public abstract void func_20003(Packet103 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_945_a(Packet10Flying a);
+	public abstract void handleFlying(Packet10Flying a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_972_a(Packet100 a);
+	public abstract void func_20004(Packet100 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_968_a(Packet38 a);
+	public abstract void func_9001(Packet38 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_962_a(Packet24MobSpawn a);
+	public abstract void handleMobSpawn(Packet24MobSpawn a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_942_a(java.lang.String a, java.lang.Object[] b);
+	public abstract void handleErrorMessage(java.lang.String a, java.lang.Object[] b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_947_a(Packet14BlockDig a);
+	public abstract void handleBlockDig(Packet14BlockDig a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_946_a(Packet52MultiBlockChange a);
+	public abstract void handleMultiBlockChange(Packet52MultiBlockChange a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_976_a(Packet104 a);
+	public abstract void func_20001(Packet104 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_941_a(Packet a);
+	public abstract void func_6001(Packet a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_943_a(Packet255KickDisconnect a);
+	public abstract void handleKickDisconnect(Packet255KickDisconnect a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_978_a(Packet105 a);
+	public abstract void func_20002(Packet105 a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_956_a(Packet21PickupSpawn a);
+	public abstract void handlePickupSpawn(Packet21PickupSpawn a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_979_a(Packet5PlayerInventory a);
+	public abstract void handlePlayerInventory(Packet5PlayerInventory a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_960_a(Packet18ArmAnimation a);
+	public abstract void handleArmAnimation(Packet18ArmAnimation a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_966_a(Packet39 a);
+	public abstract void func_6003(Packet39 a);
 
 }

@@ -14,61 +14,61 @@ public abstract class EntitySlime extends EntityLiving {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1218_a();
+	public abstract boolean MIDDLECRAFT_func_587_a();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_160(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1208_a(int a);
+	public abstract void MIDDLECRAFT_func_578_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1209_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_579_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1210_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_583_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1214_b(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_580_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1211_b_();
+	protected abstract void MIDDLECRAFT_func_581_c();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1212_c();
+	protected abstract java.lang.String MIDDLECRAFT_func_584_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1215_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_585_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1216_f();
+	protected abstract int MIDDLECRAFT_func_586_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1217_g();
+	protected abstract float MIDDLECRAFT_func_588_h();
 	
 	/**
 	 * 
 	 */
-	protected abstract float MIDDLECRAFT_func_1219_h();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1213_l();
+	public abstract void MIDDLECRAFT_func_582_l();
 
 }

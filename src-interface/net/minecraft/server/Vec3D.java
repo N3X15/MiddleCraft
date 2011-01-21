@@ -13,53 +13,53 @@ public abstract class Vec3D {
 	// METHODS
 	
 	/**
-	 * 
+	 * Euclidean distance between this and the specified vector, returned as double.
 	 */
-	public abstract double MIDDLECRAFT_func_262_a(Vec3D a);
+	public abstract double distanceTo(Vec3D a);
+	
+	/**
+	 * Returns a new vector with x value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+	 */
+	public abstract Vec3D getIntermediateWithXValue(Vec3D a, double b);
+	
+	/**
+	 * Normalizes the vector to a length of 1 (except if it is the zero vector)
+	 */
+	public abstract Vec3D normalize();
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_266_a(Vec3D a, double b);
+	public abstract double MIDDLECRAFT_func_116_b(Vec3D a);
 	
 	/**
-	 * 
+	 * Returns a new vector with y value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_260_b();
+	public abstract Vec3D getIntermediateWithYValue(Vec3D a, double b);
 	
 	/**
-	 * 
+	 * Returns the length of the vector.
 	 */
-	public abstract double MIDDLECRAFT_func_263_b(Vec3D a);
+	public abstract double lengthVector();
 	
 	/**
-	 * 
+	 * Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector.
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_267_b(Vec3D a, double b);
+	public abstract Vec3D addVector(double a, double b, double c);
 	
 	/**
-	 * 
+	 * Returns a new vector with z value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
 	 */
-	public abstract double MIDDLECRAFT_func_265_c();
+	public abstract Vec3D getIntermediateWithZValue(Vec3D a, double b);
 	
 	/**
-	 * 
+	 * The square of the Euclidean distance between this and the vector of x,y,z components passed in.
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_261_c(double a, double b, double c);
+	public abstract double squareDistanceTo(double a, double b, double c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_268_c(Vec3D a, double b);
-	
-	/**
-	 * 
-	 */
-	public abstract double MIDDLECRAFT_func_264_d(double a, double b, double c);
-	
-	/**
-	 * 
-	 */
-	public abstract java.lang.String MIDDLECRAFT_func_269_toString();
+	public abstract java.lang.String bn_toString();
 
 }

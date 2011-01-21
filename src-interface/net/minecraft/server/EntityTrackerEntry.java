@@ -30,53 +30,53 @@ public abstract class EntityTrackerEntry {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1325_a();
+	public abstract void func_604();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1326_a(EntityPlayerMP a);
+	public abstract void func_12019(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1322_a(java.util.List a);
+	public abstract void func_605(java.util.List a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1323_a(Packet a);
+	public abstract void func_603(Packet a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1327_b(EntityPlayerMP a);
+	public abstract void func_606(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1328_b(java.util.List a);
+	public abstract void func_601(java.util.List a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1324_b(Packet a);
+	public abstract void func_12018(Packet a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1330_c(EntityPlayerMP a);
+	public abstract void func_9219(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1320_equals(java.lang.Object a);
+	public abstract boolean hr_equals(java.lang.Object a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1321_hashCode();
+	public abstract int hr_hashCode();
 
 }

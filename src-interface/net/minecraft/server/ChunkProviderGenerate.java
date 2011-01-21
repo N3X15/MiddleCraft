@@ -33,41 +33,41 @@ public abstract class ChunkProviderGenerate {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1706_a();
+	public abstract boolean MIDDLECRAFT_func_839_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1703_a(int a, int b);
+	public abstract boolean MIDDLECRAFT_func_836_a(int a, int b);
+	
+	/**
+	 * Replaces the stone that was placed in with blocks that match the biome
+	 */
+	public abstract void replaceBlocksForBiome(int a, int b, byte[] c, MobSpawnerBase[] d);
+	
+	/**
+	 * Generates the shape of the terrain for the chunk though its all stone though the water is frozen if the temperature is low enough
+	 */
+	public abstract void generateTerrain(int a, int b, byte[] c, MobSpawnerBase[] d, double[] e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1700_a(int a, int b, byte[] c, MobSpawnerBase[] d);
+	public abstract void MIDDLECRAFT_func_837_a(IChunkProvider a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1699_a(int a, int b, byte[] c, MobSpawnerBase[] d, double[] e);
+	public abstract boolean MIDDLECRAFT_func_838_a(boolean a, IProgressUpdate b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1704_a(IChunkProvider a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_840_b();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1705_a(boolean a, IProgressUpdate b);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1707_b();
-	
-	/**
-	 * 
-	 */
-	public abstract Chunk MIDDLECRAFT_func_1701_b(int a, int b);
+	public abstract Chunk MIDDLECRAFT_func_835_b(int a, int b);
 
 }

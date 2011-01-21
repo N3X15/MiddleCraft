@@ -10,41 +10,41 @@ public abstract class BlockFlower extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1459_a();
+	public abstract boolean MIDDLECRAFT_func_699_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1452_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_693_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1455_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_696_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	protected abstract boolean MIDDLECRAFT_func_1453_b(int a);
+	protected abstract boolean MIDDLECRAFT_func_694_b(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1454_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_695_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1458_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_698_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1457_f(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_697_f(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_1456_g(World a, int b, int c, int d);
+	protected abstract void func_276(World a, int b, int c, int d);
 
 }

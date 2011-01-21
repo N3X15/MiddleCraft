@@ -9,18 +9,18 @@ public abstract class NibbleArray {
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns if the byte array is null or not.
 	 */
-	public abstract boolean MIDDLECRAFT_func_1507_a();
+	public abstract boolean isValid();
 	
 	/**
-	 * 
+	 * Returns the nibble of data corresponding to the passed in i,j,k. j is at most 6 bits, k is at most 4.
 	 */
-	public abstract int MIDDLECRAFT_func_1505_a(int a, int b, int c);
+	public abstract int getNibble(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Sets the nibble of data at i << 11 | k << 7 | j to l.
 	 */
-	public abstract void MIDDLECRAFT_func_1506_a(int a, int b, int c, int d);
+	public abstract void setNibble(int a, int b, int c, int d);
 
 }

@@ -11,18 +11,18 @@ public abstract class PathEntity {
 	// METHODS
 	
 	/**
-	 * 
+	 * Directs this path to the next point in its array
 	 */
-	public abstract void MIDDLECRAFT_func_458_a();
+	public abstract void incrementPathIndex();
 	
 	/**
-	 * 
+	 * Gets the position that an entity should be at in the current point in the path
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_460_a(Entity a);
+	public abstract Vec3D getPosition(Entity a);
 	
 	/**
-	 * 
+	 * Returns true if this path has reached the end
 	 */
-	public abstract boolean MIDDLECRAFT_func_459_b();
+	public abstract boolean isFinished();
 
 }

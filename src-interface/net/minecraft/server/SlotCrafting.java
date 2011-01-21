@@ -11,11 +11,11 @@ public abstract class SlotCrafting extends Slot {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1918_a(ItemStack a);
+	public abstract boolean MIDDLECRAFT_func_968_a(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1919_b();
+	public abstract void MIDDLECRAFT_func_969_b();
 
 }

@@ -16,13 +16,13 @@ public abstract class NetworkListenThread {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_584_a();
+	public abstract void func_715();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_582_a(NetServerHandler a);
+	public abstract void func_4108(NetServerHandler a);
 
 }

@@ -18,21 +18,21 @@ public abstract class Packet51MapChunk extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_573_a();
+	public abstract int MIDDLECRAFT_func_289_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_572_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_288_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_570_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_286_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_571_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_287_a(java.io.DataOutputStream a);
 
 }

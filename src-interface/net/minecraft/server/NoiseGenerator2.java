@@ -15,8 +15,8 @@ public abstract class NoiseGenerator2 {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_335_a(double[] a, double b, double c, int d, int e, double f, double g, double h);
+	public abstract void func_4115(double[] a, double b, double c, int d, int e, double f, double g, double h);
 
 }

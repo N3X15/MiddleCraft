@@ -14,26 +14,26 @@ public abstract class Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1641_a();
+	public abstract int MIDDLECRAFT_func_790_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1640_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_789_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1638_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_787_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1639_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_788_a(java.io.DataOutputStream a);
 	
 	/**
-	 * 
+	 * Returns the ID of this packet.
 	 */
-	public abstract int MIDDLECRAFT_func_1635_b();
+	public abstract int getPacketId();
 
 }

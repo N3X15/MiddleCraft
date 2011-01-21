@@ -8,18 +8,18 @@ public abstract interface IProgressUpdate {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1694_a(int a);
+	public abstract void setLoadingProgress(int a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1692_a(java.lang.String a);
+	public abstract void func_438(java.lang.String a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1693_b(java.lang.String a);
+	public abstract void displayLoadingString(java.lang.String a);
 
 }

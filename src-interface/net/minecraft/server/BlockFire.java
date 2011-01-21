@@ -12,56 +12,56 @@ public abstract class BlockFire extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1796_a();
+	public abstract boolean MIDDLECRAFT_func_904_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1806_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_909_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1799_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_907_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1797_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_905_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1798_b();
+	public abstract int MIDDLECRAFT_func_906_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1807_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_910_b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * Checks the specified block coordinate to see if it can catch fire.  Args: blockAccess, x, y, z
+	 */
+	public abstract boolean canBlockCatchFire(IBlockAccess a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1804_b(IBlockAccess a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_908_d();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1803_d();
+	public abstract AxisAlignedBB MIDDLECRAFT_func_903_d(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_1795_d(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_911_e(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Retrieves a specified block's chance to encourage their neighbors to burn and if the number is greater than the current number passed in it will return its number instead of the passed in one.  Args: world, x, y, z, curChanceToEncourageFire
 	 */
-	public abstract void MIDDLECRAFT_func_1808_e(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1805_f(World a, int b, int c, int d, int e);
+	public abstract int getChanceToEncourageFire(World a, int b, int c, int d, int e);
 
 }

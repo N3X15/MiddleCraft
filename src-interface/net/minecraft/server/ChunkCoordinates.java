@@ -10,13 +10,13 @@ abstract class ChunkCoordinates {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1865_equals(java.lang.Object a);
+	public abstract boolean lb_equals(java.lang.Object a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1866_hashCode();
+	public abstract int lb_hashCode();
 
 }

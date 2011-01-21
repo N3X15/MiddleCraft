@@ -8,18 +8,18 @@ public abstract interface ICrafting {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_569_a(CraftingInventoryCB a, int b, int c);
+	public abstract void func_20056(CraftingInventoryCB a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_568_a(CraftingInventoryCB a, int b, ItemStack c);
+	public abstract void func_20055(CraftingInventoryCB a, int b, ItemStack c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_567_a(CraftingInventoryCB a, java.util.List b);
+	public abstract void func_20054(CraftingInventoryCB a, java.util.List b);
 
 }

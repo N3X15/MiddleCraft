@@ -11,46 +11,46 @@ public abstract class EntityMobs extends EntityCreature {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1150_G();
+	public abstract void MIDDLECRAFT_func_536_G();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1158_a();
+	public abstract boolean MIDDLECRAFT_func_544_a();
 	
 	/**
 	 * 
 	 */
-	protected abstract float MIDDLECRAFT_func_1155_a(int a, int b, int c);
+	protected abstract float MIDDLECRAFT_func_541_a(int a, int b, int c);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1156_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_542_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1154_a(Entity a, float b);
+	protected abstract void MIDDLECRAFT_func_540_a(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1153_a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_539_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1157_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_543_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1151_b_();
+	public abstract void MIDDLECRAFT_func_537_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract Entity MIDDLECRAFT_func_1152_k();
+	protected abstract Entity MIDDLECRAFT_func_538_k();
 
 }

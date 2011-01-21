@@ -12,23 +12,23 @@ public abstract class TileEntityMobSpawner extends TileEntity {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_400_a();
+	public abstract boolean func_195();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_403_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_177_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_404_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_178_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_401_e();
+	public abstract void MIDDLECRAFT_func_176_e();
 
 }

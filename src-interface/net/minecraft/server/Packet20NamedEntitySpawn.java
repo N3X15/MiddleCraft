@@ -18,21 +18,21 @@ public abstract class Packet20NamedEntitySpawn extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_453_a();
+	public abstract int MIDDLECRAFT_func_209_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_452_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_208_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_450_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_206_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_451_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_207_a(java.io.DataOutputStream a);
 
 }

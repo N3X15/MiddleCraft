@@ -12,28 +12,28 @@ abstract class HashEntry {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1520_a();
+	public abstract int getHash();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.Object MIDDLECRAFT_func_1521_b();
+	public abstract java.lang.Object getValue();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1522_equals(java.lang.Object a);
+	public abstract boolean iv_equals(java.lang.Object a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1523_hashCode();
+	public abstract int iv_hashCode();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1524_toString();
+	public abstract java.lang.String iv_toString();
 
 }

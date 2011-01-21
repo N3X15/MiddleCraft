@@ -9,8 +9,8 @@ abstract class ConsoleLogFormatter extends java.util.logging.Formatter {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1525_format(java.util.logging.LogRecord a);
+	public abstract java.lang.String iw_format(java.util.logging.LogRecord a);
 
 }

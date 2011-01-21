@@ -64,181 +64,181 @@ public abstract class EntityLiving extends Entity {
 	/**
 	 * 
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_1901_C();
+	public abstract Vec3D MIDDLECRAFT_func_953_C();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1893_G();
+	public abstract void MIDDLECRAFT_func_949_G();
+	
+	/**
+	 * *
+	 */
+	public abstract void spawnExplosionParticle();
+	
+	/**
+	 * causes this entity to jump (or at least move upwards)
+	 */
+	protected abstract void jump();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_6101();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1873_O();
+	public abstract boolean MIDDLECRAFT_func_951_a();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1894_P();
+	protected abstract void MIDDLECRAFT_func_943_a(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1898_Q();
+	protected abstract void MIDDLECRAFT_func_933_a(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1899_a();
+	public abstract void MIDDLECRAFT_func_946_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1887_a(float a);
+	public abstract boolean MIDDLECRAFT_func_935_a(Entity a, int b);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_143(Entity a, int b, double c, double d);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1876_a(float a, float b);
+	public abstract int MIDDLECRAFT_func_929_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1890_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_947_b(NBTTagCompound a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_147(Entity a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1878_a(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_932_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1884_a(Entity a, int b, double c, double d);
+	protected abstract void MIDDLECRAFT_func_950_c();
+	
+	/**
+	 * *
+	 */
+	public abstract Vec3D func_141(float a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1871_b();
+	public abstract void MIDDLECRAFT_func_944_c(float a, float b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1891_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_934_c(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1896_b(Entity a, float b);
+	public abstract boolean MIDDLECRAFT_func_926_c_();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1875_b_();
+	protected abstract java.lang.String MIDDLECRAFT_func_938_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1895_c();
+	protected abstract void MIDDLECRAFT_func_936_d(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract Vec3D MIDDLECRAFT_func_1902_c(float a);
+	public abstract boolean MIDDLECRAFT_func_945_d_();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1888_c(float a, float b);
+	protected abstract java.lang.String MIDDLECRAFT_func_939_e();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1877_c(int a);
+	protected abstract java.lang.String MIDDLECRAFT_func_940_f();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1868_c_();
+	public abstract void MIDDLECRAFT_func_941_f(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1881_d();
+	protected abstract int MIDDLECRAFT_func_942_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1879_d(int a);
+	protected abstract float MIDDLECRAFT_func_937_h();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1889_d_();
+	public abstract int MIDDLECRAFT_func_954_i();
+	
+	/**
+	 * *
+	 */
+	public abstract boolean canEntityBeSeen(Entity a);
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1882_e();
+	public abstract void MIDDLECRAFT_func_930_m();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1883_f();
+	protected abstract void MIDDLECRAFT_func_952_o();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1885_f(Entity a);
+	public abstract float MIDDLECRAFT_func_928_s();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1886_g();
+	public abstract boolean MIDDLECRAFT_func_927_v();
 	
 	/**
 	 * 
 	 */
-	protected abstract float MIDDLECRAFT_func_1880_h();
+	public abstract boolean MIDDLECRAFT_func_948_x();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1903_i();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1867_i(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1872_m();
-	
-	/**
-	 * 
-	 */
-	protected abstract void MIDDLECRAFT_func_1900_o();
-	
-	/**
-	 * 
-	 */
-	public abstract float MIDDLECRAFT_func_1870_s();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1869_v();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_1892_x();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1874_z();
+	public abstract void MIDDLECRAFT_func_931_z();
 
 }

@@ -8,28 +8,28 @@ public abstract class EntityAnimals extends EntityCreature {
 	// METHODS
 	
 	/**
-	 * 
+	 * Checks if the entity's current position is a valid location to spawn this entity.
 	 */
-	public abstract boolean MIDDLECRAFT_func_206_a();
+	public abstract boolean getCanSpawnHere();
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract float MIDDLECRAFT_func_203_a(int a, int b, int c);
+	protected abstract float func_159(int a, int b, int c);
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to write subclass entity data to NBT.
 	 */
-	public abstract void MIDDLECRAFT_func_204_a(NBTTagCompound a);
+	public abstract void writeEntityToNBT(NBTTagCompound a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_207_b();
+	public abstract int func_146();
 	
 	/**
-	 * 
+	 * (abstract) Protected helper method to read subclass entity data from NBT.
 	 */
-	public abstract void MIDDLECRAFT_func_205_b(NBTTagCompound a);
+	public abstract void readEntityFromNBT(NBTTagCompound a);
 
 }

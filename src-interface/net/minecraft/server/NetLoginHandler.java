@@ -17,43 +17,43 @@ public abstract class NetLoginHandler extends NetHandler {
 	// METHODS
 	
 	/**
-	 * 
+	 * Logs the user in if a login packet is found, otherwise keeps processing network packets unless the timeout has occurred.
 	 */
-	public abstract void MIDDLECRAFT_func_1053_a();
+	public abstract void tryLogin();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1056_a(Packet1Login a);
+	public abstract void MIDDLECRAFT_func_474_a(Packet1Login a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1055_a(Packet2Handshake a);
+	public abstract void MIDDLECRAFT_func_473_a(Packet2Handshake a);
+	
+	/**
+	 * Disconnects the user with the given reason.
+	 */
+	public abstract void kickUser(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1054_a(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_475_a(java.lang.String a, java.lang.Object[] b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1058_a(java.lang.String a, java.lang.Object[] b);
+	public abstract void MIDDLECRAFT_func_476_a(Packet a);
 	
 	/**
-	 * 
+	 * Returns the user name (if any) and the remote address as a string.
 	 */
-	public abstract void MIDDLECRAFT_func_1059_a(Packet a);
+	public abstract java.lang.String getUserAndIPString();
 	
 	/**
-	 * 
+	 * Processes the login packet and sends response packets to the user.
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1060_b();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1057_b(Packet1Login a);
+	public abstract void doLogin(Packet1Login a);
 
 }

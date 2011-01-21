@@ -10,6 +10,6 @@ public abstract class WorldGenTrees extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1732_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_859_a(World a, java.util.Random b, int c, int d, int e);
 
 }

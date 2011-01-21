@@ -12,6 +12,6 @@ public abstract class WorldGenMinable extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_932_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_423_a(World a, java.util.Random b, int c, int d, int e);
 
 }

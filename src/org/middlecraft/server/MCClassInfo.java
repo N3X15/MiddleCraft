@@ -90,11 +90,16 @@ public class MCClassInfo {
 		if (o.containsKey("modifiers"))
 			modifiers = (Integer) o.get("modifiers");
 
+		int nm = 0;
 		for (Object _m : ((Map<String, Object>) o.get("methods")).values()) {
-			if (_m instanceof Map<?, ?>)
+			if (_m instanceof Map<?, ?>) {
 				addMethod(new MCMethodInfo((Map<String, Object>) _m));
+				nm++;
+			}
 		}
 
+		//l.info(String.format("%s - %d methods.",name, nm));
+		
 		for (Object _f : ((Map<String, Object>) o.get("fields")).values()) {
 			if (_f instanceof Map<?, ?>) {
 				MCFieldInfo f = new MCFieldInfo((Map<String, Object>) _f);
@@ -111,7 +116,7 @@ public class MCClassInfo {
 
 	private void addMethod(MCMethodInfo m) {
 		if (!methods.containsKey(m.realName))
-			methods.put(m.realName, m);
+			methods.put(m.toIndex(),m);
 	}
 
 	public void setField(MCFieldInfo f) throws Exception {
@@ -135,7 +140,7 @@ public class MCClassInfo {
 	 * @return
 	 */
 	public MCMethodInfo getMethod(String methName, String methSig) {
-		return methods.get(methName + " " + methSig);
+		return methods.get(MCMethodInfo.toIndex(methName, methSig));
 	}
 
 	public void setMethod(MCMethodInfo m) throws Exception {

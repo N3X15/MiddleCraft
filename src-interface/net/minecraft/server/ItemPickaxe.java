@@ -10,8 +10,8 @@ public abstract class ItemPickaxe extends ItemTool {
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns if the item (tool) can harvest results from the block type.
 	 */
-	public abstract boolean MIDDLECRAFT_func_169_a(Block a);
+	public abstract boolean canHarvestBlock(Block a);
 
 }

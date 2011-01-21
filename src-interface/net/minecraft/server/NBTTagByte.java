@@ -11,11 +11,11 @@ public abstract class NBTTagByte extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte MIDDLECRAFT_func_393_a();
+	public abstract byte MIDDLECRAFT_func_174_a();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_394_toString();
+	public abstract java.lang.String cm_toString();
 
 }

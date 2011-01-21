@@ -14,21 +14,21 @@ public abstract class ItemTool extends Item {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_523_a(Entity a);
+	public abstract int MIDDLECRAFT_func_262_a(Entity a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_522_a(ItemStack a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_261_a(ItemStack a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract float MIDDLECRAFT_func_520_a(ItemStack a, Block b);
+	public abstract float MIDDLECRAFT_func_259_a(ItemStack a, Block b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_521_a(ItemStack a, EntityLiving b);
+	public abstract void MIDDLECRAFT_func_260_a(ItemStack a, EntityLiving b);
 
 }

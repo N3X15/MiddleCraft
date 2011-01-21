@@ -31,33 +31,33 @@ public abstract class NetworkManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * Checks timeouts and processes all pending read packets.
 	 */
-	public abstract void MIDDLECRAFT_func_307_a();
+	public abstract void processReadPackets();
 	
 	/**
-	 * 
+	 * Sets the NetHandler for this NetworkManager. Server-only.
 	 */
-	public abstract void MIDDLECRAFT_func_301_a(NetHandler a);
+	public abstract void setNetHandler(NetHandler a);
 	
 	/**
-	 * 
+	 * Adds the packet to the correct send queue (chunk data packets go to a separate queue).
 	 */
-	public abstract void MIDDLECRAFT_func_302_a(Packet a);
+	public abstract void addToSendQueue(Packet a);
 	
 	/**
-	 * 
+	 * Returns the socket address of the remote side. Server-only.
 	 */
-	public abstract java.net.SocketAddress MIDDLECRAFT_func_308_b();
+	public abstract java.net.SocketAddress getRemoteAddress();
 	
 	/**
-	 * 
+	 * Server-only method to shut down the network.
 	 */
-	public abstract void MIDDLECRAFT_func_309_c();
+	public abstract void serverShutdown();
 	
 	/**
-	 * 
+	 * Returns the number of chunk data packets waiting to be sent.
 	 */
-	public abstract int MIDDLECRAFT_func_310_d();
+	public abstract int getNumChunkDataPackets();
 
 }

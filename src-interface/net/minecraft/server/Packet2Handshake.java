@@ -11,21 +11,21 @@ public abstract class Packet2Handshake extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1230_a();
+	public abstract int MIDDLECRAFT_func_594_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1229_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_593_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1227_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_591_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1228_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_592_a(java.io.DataOutputStream a);
 
 }

@@ -11,11 +11,11 @@ public abstract class NBTTagFloat extends NBTBase {
 	/**
 	 * 
 	 */
-	public abstract byte MIDDLECRAFT_func_1945_a();
+	public abstract byte MIDDLECRAFT_func_990_a();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1946_toString();
+	public abstract java.lang.String q_toString();
 
 }

@@ -10,76 +10,76 @@ public abstract class BlockButton extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_155_a();
+	public abstract boolean MIDDLECRAFT_func_74_a();
+	
+	/**
+	 * Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+	 */
+	public abstract boolean canPlaceBlockAt(World a, int b, int c, int d);
+	
+	/**
+	 * Called upon block activation (left or right click on the block.). The three integers represent x,y,z of the block.
+	 */
+	public abstract boolean blockActivated(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_156_a(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_77_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_163_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void MIDDLECRAFT_func_76_a(IBlockAccess a, int b, int c, int d);
+	
+	/**
+	 * How many world ticks before ticking
+	 */
+	public abstract int tickRate();
+	
+	/**
+	 * Called whenever the block is removed.
+	 */
+	public abstract void onBlockRemoval(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_168_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_75_b(World a, int b, int c, int d, int e);
+	
+	/**
+	 * Called when the block is clicked by a player. Args: x, y, z, entityPlayer
+	 */
+	public abstract void onBlockClicked(World a, int b, int c, int d, EntityPlayer e);
+	
+	/**
+	 * Is this block powering the block on the specified side
+	 */
+	public abstract boolean isPoweringTo(IBlockAccess a, int b, int c, int d, int e);
+	
+	/**
+	 * Can this block provide power. Only wire currently seems to have this change based on its state.
+	 */
+	public abstract boolean canProvidePower();
+	
+	/**
+	 * Called when a block is placed using an item. Used often for taking the facing and figuring out how to position the item. Args: x, y, z, facing
+	 */
+	public abstract void onBlockPlaced(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_161_a(IBlockAccess a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_73_d(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Is this block indirectly powering the block on the specified side
 	 */
-	public abstract int MIDDLECRAFT_func_154_b();
+	public abstract boolean isIndirectlyPoweringTo(World a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Called whenever the block is added into the world. Args: world, x, y, z
 	 */
-	public abstract void MIDDLECRAFT_func_164_b(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_159_b(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_162_b(World a, int b, int c, int d, EntityPlayer e);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_165_b(IBlockAccess a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_167_c();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_157_c(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_153_d(World a, int b, int c, int d);
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_166_d(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_158_e(World a, int b, int c, int d);
+	public abstract void onBlockAdded(World a, int b, int c, int d);
 
 }

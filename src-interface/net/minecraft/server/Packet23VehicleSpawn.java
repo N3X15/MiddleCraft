@@ -15,21 +15,21 @@ public abstract class Packet23VehicleSpawn extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_711_a();
+	public abstract int MIDDLECRAFT_func_335_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_710_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_334_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_708_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_332_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_709_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_333_a(java.io.DataOutputStream a);
 
 }

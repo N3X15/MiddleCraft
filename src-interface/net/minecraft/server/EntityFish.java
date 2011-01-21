@@ -25,28 +25,28 @@ public abstract class EntityFish extends Entity {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1920_a(double a, double b, double c, float d, float e);
+	public abstract void func_6142(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1922_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_971_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1923_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_972_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1921_b_();
+	public abstract void MIDDLECRAFT_func_970_b_();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1924_c();
+	public abstract int func_6143();
 
 }

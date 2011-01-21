@@ -13,21 +13,21 @@ public abstract class Packet6SpawnPosition extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_457_a();
+	public abstract int MIDDLECRAFT_func_213_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_456_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_212_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_454_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_210_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_455_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_211_a(java.io.DataOutputStream a);
 
 }

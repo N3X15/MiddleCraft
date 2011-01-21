@@ -18,28 +18,28 @@ public abstract class PathPoint {
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns true if this point has already been assigned to a path
 	 */
-	public abstract boolean MIDDLECRAFT_func_186_a();
+	public abstract boolean isAssigned();
 	
 	/**
-	 * 
+	 * Returns the linear distance to another path point
 	 */
-	public abstract float MIDDLECRAFT_func_183_a(PathPoint a);
+	public abstract float distanceTo(PathPoint a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_184_equals(java.lang.Object a);
+	public abstract boolean b_equals(java.lang.Object a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_185_hashCode();
+	public abstract int b_hashCode();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_187_toString();
+	public abstract java.lang.String b_toString();
 
 }

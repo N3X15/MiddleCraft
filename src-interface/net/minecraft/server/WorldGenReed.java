@@ -10,6 +10,6 @@ public abstract class WorldGenReed extends WorldGenerator {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1418_a(World a, java.util.Random b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_677_a(World a, java.util.Random b, int c, int d, int e);
 
 }

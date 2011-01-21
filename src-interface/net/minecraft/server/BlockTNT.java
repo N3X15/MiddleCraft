@@ -8,28 +8,28 @@ public abstract class BlockTNT extends Block {
 	// METHODS
 	
 	/**
-	 * 
+	 * Returns the block texture based on the side being looked at.  Args: side
 	 */
-	public abstract int MIDDLECRAFT_func_103_a(int a);
+	public abstract int getBlockTextureFromSide(int a);
+	
+	/**
+	 * Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
+	 */
+	public abstract void onBlockDestroyedByPlayer(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_107_a(World a, int b, int c, int d, int e);
+	public abstract int MIDDLECRAFT_func_65_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_105_a(java.util.Random a);
+	public abstract void MIDDLECRAFT_func_64_b(World a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Called upon the block being destroyed by an explosion
 	 */
-	public abstract void MIDDLECRAFT_func_104_b(World a, int b, int c, int d, int e);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_106_c(World a, int b, int c, int d);
+	public abstract void onBlockDestroyedByExplosion(World a, int b, int c, int d);
 
 }

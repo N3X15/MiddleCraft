@@ -12,21 +12,21 @@ public abstract class EntityFallingSand extends Entity {
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1555_a(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_750_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_1556_b(NBTTagCompound a);
+	protected abstract void MIDDLECRAFT_func_751_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1554_b_();
+	public abstract void MIDDLECRAFT_func_749_b_();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1553_c_();
+	public abstract boolean MIDDLECRAFT_func_748_c_();
 
 }

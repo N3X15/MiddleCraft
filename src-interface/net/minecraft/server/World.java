@@ -47,463 +47,463 @@ public abstract class World {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract WorldChunkManager MIDDLECRAFT_func_783_a();
+	public abstract WorldChunkManager func_4077();
 	
 	/**
-	 * 
+	 * Gets the closest player to the point within the specified distance (distance can be set to less than 0 to not limit the distance). Args: x, y, z, dist
 	 */
-	public abstract EntityPlayer MIDDLECRAFT_func_873_a(double a, double b, double c, double d);
+	public abstract EntityPlayer getClosestPlayer(double a, double b, double c, double d);
 	
 	/**
-	 * 
+	 * Play a sound effect. Many many parameters for this function. Not sure what they do, but a classic call is : (double)i + 0.5D, (double)j + 0.5D, (double)k + 0.5D, 'random.door_open', 1.0F, world.rand.nextFloat() * 0.1F + 0.9F with i,j,k position of the block.
 	 */
-	public abstract void MIDDLECRAFT_func_822_a(double a, double b, double c, java.lang.String d, float e, float f);
+	public abstract void playSoundEffect(double a, double b, double c, java.lang.String d, float e, float f);
 	
 	/**
-	 * 
+	 * Returns the amount of skylight subtracted for the current time
 	 */
-	public abstract int MIDDLECRAFT_func_832_a(float a);
+	public abstract int calculateSkylightSubtracted(float a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_785_a(int a, int b);
+	public abstract int func_528(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_788_a(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_388_a(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Sets the block to the specified blockID at the block coordinates Args x, y, z, blockID
 	 */
-	public abstract boolean MIDDLECRAFT_func_796_a(int a, int b, int c, int d);
+	public abstract boolean setBlock(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_795_a(int a, int b, int c, int d, int e);
+	public abstract boolean setBlockAndMetadata(int a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Checks between a min and max all the chunks inbetween actually exist. Args: minX, minY, minZ, maxX, maxY, maxZ
 	 */
-	public abstract boolean MIDDLECRAFT_func_791_a(int a, int b, int c, int d, int e, int f);
+	public abstract boolean checkChunksExist(int a, int b, int c, int d, int e, int f);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_865_a(int a, int b, int c, int d, boolean e);
+	public abstract boolean canBlockBePlacedAt(int a, int b, int c, int d, boolean e);
 	
 	/**
-	 * 
+	 * Sets the TileEntity for a given block in X, Y, Z coordinates
 	 */
-	public abstract void MIDDLECRAFT_func_849_a(int a, int b, int c, TileEntity d);
+	public abstract void setBlockTileEntity(int a, int b, int c, TileEntity d);
 	
 	/**
-	 * 
+	 * Gets the light value of a block location. This is the actual function that gets the value and has a bool flag that  indicates if its a half step block to get the maximum light value of a direct neighboring block (left, right, forward, back, and up)
 	 */
-	public abstract int MIDDLECRAFT_func_811_a(int a, int b, int c, boolean d);
+	public abstract int getBlockLightValue(int a, int b, int c, boolean d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract MovingObjectPosition MIDDLECRAFT_func_819_a(Vec3D a, Vec3D b);
+	public abstract MovingObjectPosition func_486(Vec3D a, Vec3D b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract MovingObjectPosition MIDDLECRAFT_func_820_a(Vec3D a, Vec3D b, boolean c);
+	public abstract MovingObjectPosition rayTraceBlocks(Vec3D a, Vec3D b, boolean c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract float MIDDLECRAFT_func_847_a(Vec3D a, AxisAlignedBB b);
+	public abstract float func_494(Vec3D a, AxisAlignedBB b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_830_a(IWorldAccess a);
+	public abstract void func_4072(IWorldAccess a);
 	
 	/**
-	 * 
+	 * Returns saved light value without taking into account the time of day.  Either looks in the sky light map or block light map based on the enumSkyBlock arg.
 	 */
-	public abstract int MIDDLECRAFT_func_815_a(EnumSkyBlock a, int b, int c, int d);
+	public abstract int getSavedLightValue(EnumSkyBlock a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Called when a neighboring block's light value has changed and its propagated light might change this blocks value.  Args: enumSkyBlock, x, y, z, propagatedLight
 	 */
-	public abstract void MIDDLECRAFT_func_814_a(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void neighborLightPropagationChanged(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_853_a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
+	public abstract void func_483(EnumSkyBlock a, int b, int c, int d, int e, int f, int g);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_854_a(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
+	public abstract void func_484(EnumSkyBlock a, int b, int c, int d, int e, int f, int g, boolean h);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_839_a(AxisAlignedBB a);
+	public abstract boolean checkIfAABBIsClear(AxisAlignedBB a);
 	
 	/**
-	 * 
+	 * Returns true if the given bounding box contains the given material
 	 */
-	public abstract boolean MIDDLECRAFT_func_843_a(AxisAlignedBB a, Material b);
+	public abstract boolean isMaterialInBB(AxisAlignedBB a, Material b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_842_a(AxisAlignedBB a, Material b, Entity c);
+	public abstract boolean func_490(AxisAlignedBB a, Material b, Entity c);
 	
 	/**
-	 * 
+	 * Called when an entity is spawned in the world. This includes players.
 	 */
-	public abstract boolean MIDDLECRAFT_func_825_a(Entity a);
+	public abstract boolean entityJoinedWorld(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_877_a(Entity a, byte b);
+	public abstract void func_9206(Entity a, byte b);
 	
 	/**
-	 * 
+	 * Gets the closest player to the entity within the specified distance (if distance is less than 0 then ignored). Args: entity, dist
 	 */
-	public abstract EntityPlayer MIDDLECRAFT_func_872_a(Entity a, double b);
+	public abstract EntityPlayer getClosestPlayerToEntity(Entity a, double b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract Explosion MIDDLECRAFT_func_845_a(Entity a, double b, double c, double d, float e);
+	public abstract Explosion createExplosion(Entity a, double b, double c, double d, float e);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract Explosion MIDDLECRAFT_func_846_a(Entity a, double b, double c, double d, float e, boolean f);
+	public abstract Explosion func_12015(Entity a, double b, double c, double d, float e, boolean f);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract PathEntity MIDDLECRAFT_func_867_a(Entity a, int b, int c, int d, float e);
+	public abstract PathEntity getEntityPathToXYZ(Entity a, int b, int c, int d, float e);
 	
 	/**
-	 * 
+	 * Returns a list of bounding boxes that collide with aabb excluding the passed in entity's collision. Args: entity, aabb
 	 */
-	public abstract java.util.List MIDDLECRAFT_func_831_a(Entity a, AxisAlignedBB b);
+	public abstract java.util.List getCollidingBoundingBoxes(Entity a, AxisAlignedBB b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract PathEntity MIDDLECRAFT_func_866_a(Entity a, Entity b, float c);
+	public abstract PathEntity getPathToEntity(Entity a, Entity b, float c);
 	
 	/**
-	 * 
+	 * Plays a sound at the entity's position. Args: entity, sound, unknown1, unknown2
 	 */
-	public abstract void MIDDLECRAFT_func_821_a(Entity a, java.lang.String b, float c, float d);
+	public abstract void playSoundAtEntity(Entity a, java.lang.String b, float c, float d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_838_a(Entity a, boolean b);
+	public abstract void updateEntityWithOptionalForce(Entity a, boolean b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_876_a(EntityPlayer a, int b, int c, int d);
+	public abstract boolean func_6157(EntityPlayer a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract IChunkProvider MIDDLECRAFT_func_784_a(java.io.File a);
+	protected abstract IChunkProvider func_4076(java.io.File a);
 	
 	/**
-	 * 
+	 * Counts how many entities of an entity class exist in the world. Args: entityClass
 	 */
-	public abstract int MIDDLECRAFT_func_862_a(java.lang.Class a);
+	public abstract int countEntities(java.lang.Class a);
 	
 	/**
-	 * 
+	 * Returns all entities of the specified class type which intersect with the AABB. Args: entityClass, aabb
 	 */
-	public abstract java.util.List MIDDLECRAFT_func_860_a(java.lang.Class a, AxisAlignedBB b);
+	public abstract java.util.List getEntitiesWithinAABB(java.lang.Class a, AxisAlignedBB b);
 	
 	/**
-	 * 
+	 * Spawns a particle.  Args particleName, x, y, z, velX, velY, velZ
 	 */
-	public abstract void MIDDLECRAFT_func_824_a(java.lang.String a, double b, double c, double d, double e, double f, double g);
+	public abstract void spawnParticle(java.lang.String a, double b, double c, double d, double e, double f, double g);
 	
 	/**
-	 * 
+	 * Plays a record at the specified coordinates of the specified name. Args: recordName, x, y, z
 	 */
-	public abstract void MIDDLECRAFT_func_823_a(java.lang.String a, int b, int c, int d);
+	public abstract void playRecord(java.lang.String a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_863_a(java.util.List a);
+	public abstract void func_464(java.util.List a);
 	
 	/**
-	 * 
+	 * Runs through the list of updates to run and ticks them
 	 */
-	public abstract boolean MIDDLECRAFT_func_858_a(boolean a);
+	public abstract boolean TickUpdates(boolean a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_786_a(boolean a, IProgressUpdate b);
+	public abstract void saveWorld(boolean a, IProgressUpdate b);
 	
 	/**
-	 * 
+	 * Checks whether its daytime by seeing if the light subtracted from the skylight is less than 4
 	 */
-	public abstract boolean MIDDLECRAFT_func_818_b();
+	public abstract boolean isDaytime();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract float MIDDLECRAFT_func_833_b(float a);
+	public abstract float getCelestialAngle(float a);
 	
 	/**
-	 * 
+	 * Returns a chunk looked up by block coordinates. Args: x, y
 	 */
-	public abstract Chunk MIDDLECRAFT_func_793_b(int a, int b);
+	public abstract Chunk getChunkFromBlockCoords(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_798_b(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_390_b(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Sets the blocks metadata and if set will then notify blocks that this block changed. Args: x, y, z, metadata
 	 */
-	public abstract void MIDDLECRAFT_func_799_b(int a, int b, int c, int d);
+	public abstract void setBlockMetadataWithNotify(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_802_b(int a, int b, int c, int d, int e);
+	public abstract boolean setBlockAndMetadataWithNotify(int a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_806_b(int a, int b, int c, int d, int e, int f);
+	public abstract void func_519(int a, int b, int c, int d, int e, int f);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_861_b(int a, int b, int c, TileEntity d);
+	public abstract void func_515(int a, int b, int c, TileEntity d);
 	
 	/**
-	 * 
+	 * Sets the light value either into the sky map or block map depending on if enumSkyBlock is set to sky or block. Args: enumSkyBlock, x, y, z, lightValue
 	 */
-	public abstract void MIDDLECRAFT_func_816_b(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void setLightValue(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Returns if any of the blocks within the aabb are liquids. Args: aabb
 	 */
-	public abstract boolean MIDDLECRAFT_func_840_b(AxisAlignedBB a);
+	public abstract boolean getIsAnyLiquid(AxisAlignedBB a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_844_b(AxisAlignedBB a, Material b);
+	public abstract boolean func_524(AxisAlignedBB a, Material b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_826_b(Entity a);
+	protected abstract void obtainEntitySkin(Entity a);
 	
 	/**
-	 * 
+	 * Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb
 	 */
-	public abstract java.util.List MIDDLECRAFT_func_859_b(Entity a, AxisAlignedBB b);
+	public abstract java.util.List getEntitiesWithinAABBExcludingEntity(Entity a, AxisAlignedBB b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_864_b(java.util.List a);
+	public abstract void func_461(java.util.List a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_836_c();
+	public abstract void func_459();
 	
 	/**
-	 * 
+	 * Returns back a chunk looked up by chunk coordinates Args: x, y
 	 */
-	public abstract Chunk MIDDLECRAFT_func_794_c(int a, int b);
+	public abstract Chunk getChunkFromChunkCoords(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract Material MIDDLECRAFT_func_797_c(int a, int b, int c);
+	public abstract Material MIDDLECRAFT_func_389_c(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Set the metadata of a block in global coordinates
 	 */
-	public abstract boolean MIDDLECRAFT_func_800_c(int a, int b, int c, int d);
+	public abstract boolean setBlockMetadata(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract byte[] MIDDLECRAFT_func_874_c(int a, int b, int c, int d, int e, int f);
+	public abstract byte[] func_504(int a, int b, int c, int d, int e, int f);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_841_c(AxisAlignedBB a);
+	public abstract boolean isBoundingBoxBurning(AxisAlignedBB a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_827_c(Entity a);
+	protected abstract void releaseEntitySkin(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_852_d();
+	public abstract boolean func_6156();
 	
 	/**
-	 * 
+	 * Returns the y coordinate with a block in it at this x, z coordinate
 	 */
-	public abstract int MIDDLECRAFT_func_813_d(int a, int b);
+	public abstract int getHeightValue(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_851_d(int a, int b, int c);
+	public abstract boolean MIDDLECRAFT_func_392_d(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Sets a block and notifies relevant systems with the block change  Args: x, y, z, blockID
 	 */
-	public abstract boolean MIDDLECRAFT_func_801_d(int a, int b, int c, int d);
+	public abstract boolean setBlockWithNotify(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_828_d(Entity a);
+	public abstract void func_20109(Entity a);
 	
 	/**
-	 * 
+	 * Called on construction of the World class to setup the initial skylight values
 	 */
-	public abstract void MIDDLECRAFT_func_855_e();
+	public abstract void calculateInitialSkylight();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_834_e(int a, int b);
+	public abstract int func_4075(int a, int b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_789_e(int a, int b, int c);
+	public abstract boolean func_20111(int a, int b, int c);
 	
 	/**
-	 * 
+	 * The block type change and need to notify other systems  Args: x, y, z, blockID
 	 */
-	protected abstract void MIDDLECRAFT_func_804_e(int a, int b, int c, int d);
+	protected abstract void notifyBlockChange(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_829_e(Entity a);
+	public abstract void func_20110(Entity a);
 	
 	/**
-	 * 
+	 * Runs a single tick for the world
 	 */
-	public abstract void MIDDLECRAFT_func_856_f();
+	public abstract void tick();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_790_f(int a, int b, int c);
+	public abstract boolean blockExists(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_805_f(int a, int b, int c, int d);
+	public abstract void func_498(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_837_f(Entity a);
+	public abstract void updateEntity(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_857_g();
+	protected abstract void func_4073();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_803_g(int a, int b, int c);
+	public abstract void markBlockNeedsUpdate(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Notifies neighboring blocks that this specified block changed  Args: x, y, z, blockID
 	 */
-	public abstract void MIDDLECRAFT_func_807_g(int a, int b, int c, int d);
+	public abstract void notifyBlocksOfNeighborChange(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_875_h();
+	public abstract void func_476();
 	
 	/**
-	 * 
+	 * Checks if the specified block is able to see the sky
 	 */
-	public abstract boolean MIDDLECRAFT_func_809_h(int a, int b, int c);
+	public abstract boolean canBlockSeeTheSky(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Schedules a specific block to be to ticked by its specified delay. Args: x, y, z, blockID
 	 */
-	public abstract void MIDDLECRAFT_func_835_h(int a, int b, int c, int d);
+	public abstract void scheduleBlockUpdate(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_810_i(int a, int b, int c);
+	public abstract int MIDDLECRAFT_func_391_i(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Is this block powering in the specified direction Args: x, y, z, direction
 	 */
-	public abstract boolean MIDDLECRAFT_func_868_i(int a, int b, int c, int d);
+	public abstract boolean isBlockProvidingPowerTo(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Determines if a block can see the sky or not, but if the proper chunk does not already exist, it does not create a new one.
 	 */
-	public abstract boolean MIDDLECRAFT_func_812_j(int a, int b, int c);
+	public abstract boolean canExistingBlockSeeTheSky(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Is a block next to you getting powered (if its an attachable block) or is it providing power directly to you.  Args: x, y, z, direction
 	 */
-	public abstract boolean MIDDLECRAFT_func_870_j(int a, int b, int c, int d);
+	public abstract boolean isBlockIndirectlyProvidingPowerTo(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brihgtness). Args: x, y, z
 	 */
-	public abstract float MIDDLECRAFT_func_817_k(int a, int b, int c);
+	public abstract float getLightBrightness(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Returns the TileEntity associated with a given block in X,Y,Z coordinates, or null if no TileEntity exists
 	 */
-	public abstract TileEntity MIDDLECRAFT_func_848_l(int a, int b, int c);
+	public abstract TileEntity getBlockTileEntity(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_850_m(int a, int b, int c);
+	public abstract void func_513(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Whether one of the neighboring blocks is putting power into this block. Args: x, y, z
 	 */
-	public abstract boolean MIDDLECRAFT_func_869_n(int a, int b, int c);
+	public abstract boolean isBlockGettingPowered(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z
 	 */
-	public abstract boolean MIDDLECRAFT_func_871_o(int a, int b, int c);
+	public abstract boolean isBlockIndirectlyGettingPowered(int a, int b, int c);
 
 }

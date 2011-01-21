@@ -8,8 +8,8 @@ public abstract class RecipesFood {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_131_a(CraftingManager a);
+	public abstract void func_20177(CraftingManager a);
 
 }

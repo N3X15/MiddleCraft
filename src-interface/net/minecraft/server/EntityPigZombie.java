@@ -13,56 +13,56 @@ public abstract class EntityPigZombie extends EntityZombie {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1674_G();
+	public abstract void MIDDLECRAFT_func_822_G();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1670_a();
+	public abstract boolean MIDDLECRAFT_func_818_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1671_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_819_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1675_a(Entity a, int b);
+	public abstract boolean MIDDLECRAFT_func_823_a(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1672_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_820_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1669_b_();
+	public abstract void MIDDLECRAFT_func_817_b_();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1677_d();
+	protected abstract java.lang.String MIDDLECRAFT_func_824_d();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1678_e();
+	protected abstract java.lang.String MIDDLECRAFT_func_825_e();
 	
 	/**
 	 * 
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_1679_f();
+	protected abstract java.lang.String MIDDLECRAFT_func_826_f();
 	
 	/**
 	 * 
 	 */
-	protected abstract int MIDDLECRAFT_func_1680_g();
+	protected abstract int MIDDLECRAFT_func_827_g();
 	
 	/**
 	 * 
 	 */
-	protected abstract Entity MIDDLECRAFT_func_1673_k();
+	protected abstract Entity MIDDLECRAFT_func_821_k();
 
 }

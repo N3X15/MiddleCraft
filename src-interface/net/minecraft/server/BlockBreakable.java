@@ -11,11 +11,11 @@ public abstract class BlockBreakable extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1526_a();
+	public abstract boolean MIDDLECRAFT_func_724_a();
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1527_a(IBlockAccess a, int b, int c, int d, int e);
+	public abstract boolean MIDDLECRAFT_func_725_a(IBlockAccess a, int b, int c, int d, int e);
 
 }

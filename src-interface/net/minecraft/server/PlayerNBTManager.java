@@ -10,13 +10,13 @@ public abstract class PlayerNBTManager {
 	// METHODS
 	
 	/**
-	 * 
+	 * Writes the player data to disk from the specified PlayerEntityMP.
 	 */
-	public abstract void MIDDLECRAFT_func_491_a(EntityPlayerMP a);
+	public abstract void writePlayerData(EntityPlayerMP a);
 	
 	/**
-	 * 
+	 * Reads the player data from disk into the specified PlayerEntityMP.
 	 */
-	public abstract void MIDDLECRAFT_func_492_b(EntityPlayerMP a);
+	public abstract void readPlayerData(EntityPlayerMP a);
 
 }

@@ -10,21 +10,21 @@ public abstract class BlockLog extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1300_a(int a);
+	public abstract int MIDDLECRAFT_func_622_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1298_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_620_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1297_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_619_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1299_b(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_621_b(World a, int b, int c, int d);
 
 }

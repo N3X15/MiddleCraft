@@ -11,43 +11,43 @@ public abstract class InventoryLargeChest {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_145_a();
+	public abstract int getSizeInventory();
 	
 	/**
-	 * 
+	 * Returns the stack in slot i
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_147_a(int a);
+	public abstract ItemStack getStackInSlot(int a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_148_a(int a, int b);
+	public abstract ItemStack func_20069(int a, int b);
 	
 	/**
-	 * 
+	 * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
 	 */
-	public abstract void MIDDLECRAFT_func_149_a(int a, ItemStack b);
+	public abstract void setInventorySlotContents(int a, ItemStack b);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_152_a_(EntityPlayer a);
+	public abstract boolean func_20067(EntityPlayer a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_146_b();
+	public abstract java.lang.String func_20068();
 	
 	/**
-	 * 
+	 * Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended. *Isn't this more of a set than a get?*
 	 */
-	public abstract int MIDDLECRAFT_func_150_c();
+	public abstract int getInventoryStackLimit();
 	
 	/**
-	 * 
+	 * Called when an the contents of an Inventory change, usually
 	 */
-	public abstract void MIDDLECRAFT_func_151_d();
+	public abstract void onInventoryChanged();
 
 }

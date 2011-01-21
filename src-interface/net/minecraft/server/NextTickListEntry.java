@@ -15,23 +15,23 @@ public abstract class NextTickListEntry {
 	// METHODS
 	
 	/**
-	 * 
+	 * Sets the scheduled time for this tick entry
 	 */
-	public abstract NextTickListEntry MIDDLECRAFT_func_435_a(long a);
+	public abstract NextTickListEntry setScheduledTime(long a);
 	
 	/**
-	 * 
+	 * Compares this tick entry to another tick entry for sorting purposes. Compared first based on the scheduled time and second based on tickEntryID.
 	 */
-	public abstract int MIDDLECRAFT_func_436_a(NextTickListEntry a);
+	public abstract int comparer(NextTickListEntry a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_433_equals(java.lang.Object a);
+	public abstract boolean cv_equals(java.lang.Object a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_434_hashCode();
+	public abstract int cv_hashCode();
 
 }

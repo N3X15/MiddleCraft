@@ -9,8 +9,8 @@ public abstract class RecipesIngots {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1021_a(CraftingManager a);
+	public abstract void func_20159(CraftingManager a);
 
 }

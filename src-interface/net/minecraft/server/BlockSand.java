@@ -11,21 +11,21 @@ public abstract class BlockSand extends Block {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1073_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_487_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1075_b();
+	public abstract int MIDDLECRAFT_func_488_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1072_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_486_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1071_e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_485_e(World a, int b, int c, int d);
 
 }

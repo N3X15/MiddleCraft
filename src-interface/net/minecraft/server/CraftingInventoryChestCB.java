@@ -11,6 +11,6 @@ public abstract class CraftingInventoryChestCB extends CraftingInventoryCB {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_332_b(EntityPlayer a);
+	public abstract boolean MIDDLECRAFT_func_145_b(EntityPlayer a);
 
 }

@@ -17,28 +17,28 @@ public abstract class EntityArrow extends Entity {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_638_a(double a, double b, double c, float d, float e);
+	public abstract void func_177(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_640_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_319_a(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_641_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_320_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_642_b(EntityPlayer a);
+	public abstract void MIDDLECRAFT_func_321_b(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_639_b_();
+	public abstract void MIDDLECRAFT_func_318_b_();
 
 }

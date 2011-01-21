@@ -17,26 +17,26 @@ public abstract class WorldChunkManager {
 	/**
 	 * 
 	 */
-	public abstract MobSpawnerBase MIDDLECRAFT_func_1665_a(int a, int b);
+	public abstract MobSpawnerBase MIDDLECRAFT_func_813_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract MobSpawnerBase[] MIDDLECRAFT_func_1666_a(int a, int b, int c, int d);
+	public abstract MobSpawnerBase[] MIDDLECRAFT_func_814_a(int a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract MobSpawnerBase MIDDLECRAFT_func_1664_a(ChunkCoordIntPair a);
+	public abstract MobSpawnerBase MIDDLECRAFT_func_812_a(ChunkCoordIntPair a);
 	
 	/**
 	 * 
 	 */
-	public abstract double[] MIDDLECRAFT_func_1667_a(double[] a, int b, int c, int d, int e);
+	public abstract double[] MIDDLECRAFT_func_815_a(double[] a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract MobSpawnerBase[] MIDDLECRAFT_func_1668_a(MobSpawnerBase[] a, int b, int c, int d, int e);
+	public abstract MobSpawnerBase[] MIDDLECRAFT_func_816_a(MobSpawnerBase[] a, int b, int c, int d, int e);
 
 }

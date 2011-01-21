@@ -10,41 +10,41 @@ public abstract class BlockCactus extends Block {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_191_a();
+	public abstract boolean MIDDLECRAFT_func_87_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_190_a(int a);
+	public abstract int MIDDLECRAFT_func_86_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_192_a(World a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_88_a(World a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_195_a(World a, int b, int c, int d, Entity e);
+	public abstract void MIDDLECRAFT_func_90_a(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_188_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_84_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_193_b(World a, int b, int c, int d, int e);
+	public abstract void MIDDLECRAFT_func_89_b(World a, int b, int c, int d, int e);
 	
 	/**
 	 * 
 	 */
-	public abstract AxisAlignedBB MIDDLECRAFT_func_189_d(World a, int b, int c, int d);
+	public abstract AxisAlignedBB MIDDLECRAFT_func_85_d(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
 	 */
-	public abstract boolean MIDDLECRAFT_func_194_f(World a, int b, int c, int d);
+	public abstract boolean canBlockStay(World a, int b, int c, int d);
 
 }

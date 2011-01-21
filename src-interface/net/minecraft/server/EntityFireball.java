@@ -22,26 +22,26 @@ public abstract class EntityFireball extends Entity {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_347_a(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_154_a(NBTTagCompound a);
+	
+	/**
+	 * Called when the entity is attacked.
+	 */
+	public abstract boolean attackEntity(Entity a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_350_a(Entity a, int b);
+	public abstract void MIDDLECRAFT_func_155_b(NBTTagCompound a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_348_b(NBTTagCompound a);
+	public abstract void MIDDLECRAFT_func_153_b_();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_346_b_();
-	
-	/**
-	 * 
-	 */
-	public abstract boolean MIDDLECRAFT_func_349_c_();
+	public abstract boolean canBeCollidedWith();
 
 }

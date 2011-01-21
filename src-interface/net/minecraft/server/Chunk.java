@@ -27,148 +27,148 @@ public abstract class Chunk {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1818_a();
+	public abstract void func_348();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1816_a(int a, int b);
+	public abstract boolean isAtLocation(int a, int b);
 	
 	/**
-	 * 
+	 * Return the ID of a block in the chunk.
 	 */
-	public abstract int MIDDLECRAFT_func_1824_a(int a, int b, int c);
+	public abstract int getBlockID(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Sets a blockID for a position in the chunk. Args: x, y, z, blockID
 	 */
-	public abstract boolean MIDDLECRAFT_func_1826_a(int a, int b, int c, int d);
+	public abstract boolean setBlockID(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Sets a blockID of a position within a chunk with metadata. Args: x, y, z, blockID, metadata
 	 */
-	public abstract boolean MIDDLECRAFT_func_1825_a(int a, int b, int c, int d, int e);
+	public abstract boolean setBlockIDWithMetadata(int a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Sets the TileEntity for a given block in this chunk
 	 */
-	public abstract void MIDDLECRAFT_func_1838_a(int a, int b, int c, TileEntity d);
+	public abstract void setChunkBlockTileEntity(int a, int b, int c, TileEntity d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract java.util.Random MIDDLECRAFT_func_1847_a(long a);
+	public abstract java.util.Random func_334(long a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1837_a(TileEntity a);
+	public abstract void func_349(TileEntity a);
 	
 	/**
-	 * 
+	 * Gets the amount of light saved in this block (doesn't adjust for daylight)
 	 */
-	public abstract int MIDDLECRAFT_func_1829_a(EnumSkyBlock a, int b, int c, int d);
+	public abstract int getSavedLightValue(EnumSkyBlock a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Sets the light value at the coordinate. If enumskyblock is set to sky it sets it in the skylightmap and if its a block then into the blocklightmap. Args enumSkyBlock, x, y, z, lightValue
 	 */
-	public abstract void MIDDLECRAFT_func_1830_a(EnumSkyBlock a, int b, int c, int d, int e);
+	public abstract void setLightValue(EnumSkyBlock a, int b, int c, int d, int e);
 	
 	/**
-	 * 
+	 * Adds an entity to the chunk. Args: entity
 	 */
-	public abstract void MIDDLECRAFT_func_1832_a(Entity a);
+	public abstract void addEntity(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1834_a(Entity a, int b);
+	public abstract void func_332(Entity a, int b);
 	
 	/**
-	 * 
+	 * Fills the given list of all entities that intersect within the given bounding box that aren't the passed entity Args: entity, aabb, listToFill
 	 */
-	public abstract void MIDDLECRAFT_func_1843_a(Entity a, AxisAlignedBB b, java.util.List c);
+	public abstract void getEntitiesWithinAABBForEntity(Entity a, AxisAlignedBB b, java.util.List c);
 	
 	/**
-	 * 
+	 * Gets all entities that can be assigned to the specified class. Args: entityClass, aabb, listToFill
 	 */
-	public abstract void MIDDLECRAFT_func_1844_a(java.lang.Class a, AxisAlignedBB b, java.util.List c);
+	public abstract void getEntitiesOfTypeWithinAAAB(java.lang.Class a, AxisAlignedBB b, java.util.List c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1845_a(boolean a);
+	public abstract boolean func_347(boolean a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1846_a(byte[] a, int b, int c, int d, int e, int f, int g, int h);
+	public abstract int func_340(byte[] a, int b, int c, int d, int e, int f, int g, int h);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1819_b();
+	public abstract void func_353();
 	
 	/**
-	 * 
+	 * Returns the value in the height map at this x, z coordinate in the chunk
 	 */
-	public abstract int MIDDLECRAFT_func_1817_b(int a, int b);
+	public abstract int getHeightValue(int a, int b);
 	
 	/**
-	 * 
+	 * Return the metadata corresponding to the given coordinates inside a chunk.
 	 */
-	public abstract int MIDDLECRAFT_func_1827_b(int a, int b, int c);
+	public abstract int getBlockMetadata(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Set the metadata of a block in the chunk
 	 */
-	public abstract void MIDDLECRAFT_func_1828_b(int a, int b, int c, int d);
+	public abstract void setBlockMetadata(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1833_b(Entity a);
+	public abstract void func_350(Entity a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1820_c();
+	public abstract void func_4053();
 	
 	/**
-	 * 
+	 * Returns whether is not a block above this one blocking sight to the sky (done via checking against the heightmap)
 	 */
-	public abstract boolean MIDDLECRAFT_func_1835_c(int a, int b, int c);
+	public abstract boolean canBlockSeeTheSky(int a, int b, int c);
 	
 	/**
-	 * 
+	 * Gets the amount of light on a block taking into account sunlight
 	 */
-	public abstract int MIDDLECRAFT_func_1831_c(int a, int b, int c, int d);
+	public abstract int getBlockLightValue(int a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1840_d();
+	public abstract void onChunkLoad();
 	
 	/**
-	 * 
+	 * Gets the TileEntity for a given block in this chunk
 	 */
-	public abstract TileEntity MIDDLECRAFT_func_1836_d(int a, int b, int c);
+	public abstract TileEntity getChunkBlockTileEntity(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1841_e();
+	public abstract void onChunkUnload();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1839_e(int a, int b, int c);
+	public abstract void removeChunkBlockTileEntity(int a, int b, int c);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1842_f();
+	public abstract void setChunkModified();
 
 }

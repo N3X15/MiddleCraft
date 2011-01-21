@@ -9,8 +9,8 @@ abstract class RecipeSorter {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_1681_a(CraftingRecipe a, CraftingRecipe b);
+	public abstract int func_20107(CraftingRecipe a, CraftingRecipe b);
 
 }

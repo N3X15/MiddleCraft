@@ -10,6 +10,6 @@ public abstract class BlockOreBlock extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1937_a(int a);
+	public abstract int MIDDLECRAFT_func_982_a(int a);
 
 }

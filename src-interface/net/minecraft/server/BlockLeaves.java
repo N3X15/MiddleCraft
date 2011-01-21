@@ -12,31 +12,31 @@ public abstract class BlockLeaves extends BlockLeavesBase {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_224_a();
+	public abstract boolean MIDDLECRAFT_func_99_a();
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_223_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_98_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_220_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_96_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_222_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_97_a(java.util.Random a);
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_219_b(World a, int b, int c, int d);
+	public abstract void func_316(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
 	 */
-	public abstract void MIDDLECRAFT_func_225_b(World a, int b, int c, int d, Entity e);
+	public abstract void onEntityWalking(World a, int b, int c, int d, Entity e);
 
 }

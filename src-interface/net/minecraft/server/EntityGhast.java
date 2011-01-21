@@ -18,41 +18,41 @@ public abstract class EntityGhast extends EntityFlying {
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_236_a();
+	public abstract boolean MIDDLECRAFT_func_101_a();
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract void MIDDLECRAFT_func_229_c();
+	protected abstract void func_152();
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes while it's alive.
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_231_d();
+	protected abstract java.lang.String getLivingSound();
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes when it is hurt.
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_232_e();
+	protected abstract java.lang.String getHurtSound();
 	
 	/**
-	 * 
+	 * Returns the sound this mob makes on death.
 	 */
-	protected abstract java.lang.String MIDDLECRAFT_func_233_f();
+	protected abstract java.lang.String getDeathSound();
 	
 	/**
-	 * 
+	 * Returns the item ID for the item the mob drops on death.
 	 */
-	protected abstract int MIDDLECRAFT_func_234_g();
+	protected abstract int getDropItemId();
 	
 	/**
-	 * 
+	 * Returns the volume for the sounds this mob makes.
 	 */
-	protected abstract float MIDDLECRAFT_func_235_h();
+	protected abstract float getSoundVolume();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract int MIDDLECRAFT_func_237_i();
+	public abstract int func_4045();
 
 }

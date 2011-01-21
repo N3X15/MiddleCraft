@@ -11,36 +11,36 @@ public abstract class BlockRedstoneOre extends Block {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_253_a(int a, java.util.Random b);
+	public abstract int MIDDLECRAFT_func_114_a(int a, java.util.Random b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_250_a(World a, int b, int c, int d, EntityPlayer e);
+	public abstract boolean MIDDLECRAFT_func_112_a(World a, int b, int c, int d, EntityPlayer e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_252_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_113_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_254_a(java.util.Random a);
+	public abstract int MIDDLECRAFT_func_115_a(java.util.Random a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_247_b();
+	public abstract int MIDDLECRAFT_func_109_b();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_249_b(World a, int b, int c, int d, Entity e);
+	public abstract void MIDDLECRAFT_func_111_b(World a, int b, int c, int d, Entity e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_248_b(World a, int b, int c, int d, EntityPlayer e);
+	public abstract void MIDDLECRAFT_func_110_b(World a, int b, int c, int d, EntityPlayer e);
 
 }

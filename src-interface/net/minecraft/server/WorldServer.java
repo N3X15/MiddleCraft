@@ -13,58 +13,58 @@ public abstract class WorldServer extends World {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract Entity MIDDLECRAFT_func_927_a(int a);
+	public abstract Entity func_6158(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_928_a(Entity a, byte b);
+	public abstract void MIDDLECRAFT_func_421_a(Entity a, byte b);
 	
 	/**
 	 * 
 	 */
-	public abstract Explosion MIDDLECRAFT_func_929_a(Entity a, double b, double c, double d, float e, boolean f);
+	public abstract Explosion MIDDLECRAFT_func_422_a(Entity a, double b, double c, double d, float e, boolean f);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_920_a(Entity a, boolean b);
+	public abstract void MIDDLECRAFT_func_416_a(Entity a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_924_a(EntityPlayer a, int b, int c, int d);
+	public abstract boolean MIDDLECRAFT_func_418_a(EntityPlayer a, int b, int c, int d);
 	
 	/**
 	 * 
 	 */
-	protected abstract IChunkProvider MIDDLECRAFT_func_922_a(java.io.File a);
+	protected abstract IChunkProvider MIDDLECRAFT_func_417_a(java.io.File a);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_925_b(Entity a);
+	protected abstract void MIDDLECRAFT_func_419_b(Entity a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_12017(Entity a, boolean b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_921_b(Entity a, boolean b);
+	protected abstract void MIDDLECRAFT_func_420_c(Entity a);
+	
+	/**
+	 * *
+	 */
+	public abstract java.util.List func_532(int a, int b, int c, int d, int e, int f);
 	
 	/**
 	 * 
 	 */
-	protected abstract void MIDDLECRAFT_func_926_c(Entity a);
-	
-	/**
-	 * 
-	 */
-	public abstract java.util.List MIDDLECRAFT_func_923_d(int a, int b, int c, int d, int e, int f);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_919_f();
+	public abstract void MIDDLECRAFT_func_415_f();
 
 }

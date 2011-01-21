@@ -10,6 +10,6 @@ public abstract class BlockSapling extends BlockFlower {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1231_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_595_a(World a, int b, int c, int d, java.util.Random e);
 
 }

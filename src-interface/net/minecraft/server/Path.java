@@ -10,28 +10,28 @@ public abstract class Path {
 	// METHODS
 	
 	/**
-	 * 
+	 * Clears the path
 	 */
-	public abstract void MIDDLECRAFT_func_1746_a();
+	public abstract void clearPath();
 	
 	/**
-	 * 
+	 * Adds a point to the path
 	 */
-	public abstract PathPoint MIDDLECRAFT_func_1745_a(PathPoint a);
+	public abstract PathPoint addPoint(PathPoint a);
 	
 	/**
-	 * 
+	 * Changes the provided point's distance to target
 	 */
-	public abstract void MIDDLECRAFT_func_1748_a(PathPoint a, float b);
+	public abstract void changeDistance(PathPoint a, float b);
 	
 	/**
-	 * 
+	 * Returns and removes the first point in the path
 	 */
-	public abstract PathPoint MIDDLECRAFT_func_1747_b();
+	public abstract PathPoint dequeue();
 	
 	/**
-	 * 
+	 * Returns true if this path contains no points
 	 */
-	public abstract boolean MIDDLECRAFT_func_1751_c();
+	public abstract boolean isPathEmpty();
 
 }

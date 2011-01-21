@@ -19,113 +19,113 @@ public abstract class NetServerHandler extends NetHandler {
 	// METHODS
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract void MIDDLECRAFT_func_1709_a();
+	public abstract void func_42();
+	
+	/**
+	 * *
+	 */
+	public abstract void func_41(double a, double b, double c, float d, float e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1712_a(double a, double b, double c, float d, float e);
+	public abstract void MIDDLECRAFT_func_853_a(Packet7 a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1726_a(Packet7 a);
+	public abstract void MIDDLECRAFT_func_857_a(Packet106 a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1730_a(Packet106 a);
+	public abstract void MIDDLECRAFT_func_854_a(Packet9 a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1727_a(Packet9 a);
+	public abstract void MIDDLECRAFT_func_848_a(Packet3Chat a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1719_a(Packet3Chat a);
+	public abstract void MIDDLECRAFT_func_856_a(Packet102 a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1729_a(Packet102 a);
+	public abstract void MIDDLECRAFT_func_855_a(Packet101 a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1728_a(Packet101 a);
+	public abstract void MIDDLECRAFT_func_858_a(Packet130 a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1731_a(Packet130 a);
+	public abstract void MIDDLECRAFT_func_844_a(Packet15Place a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1714_a(Packet15Place a);
+	public abstract void MIDDLECRAFT_func_847_a(Packet16BlockItemSwitch a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1718_a(Packet16BlockItemSwitch a);
+	public abstract void MIDDLECRAFT_func_842_a(Packet10Flying a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_43(java.lang.String a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1711_a(Packet10Flying a);
+	public abstract void MIDDLECRAFT_func_845_a(java.lang.String a, java.lang.Object[] b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1710_a(java.lang.String a);
+	public abstract void MIDDLECRAFT_func_843_a(Packet14BlockDig a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1715_a(java.lang.String a, java.lang.Object[] b);
+	public abstract void MIDDLECRAFT_func_846_a(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1713_a(Packet14BlockDig a);
+	public abstract void MIDDLECRAFT_func_850_a(Packet255KickDisconnect a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1716_a(Packet a);
+	public abstract void MIDDLECRAFT_func_849_a(Packet18ArmAnimation a);
+	
+	/**
+	 * *
+	 */
+	public abstract int func_38();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1722_a(Packet255KickDisconnect a);
+	public abstract void MIDDLECRAFT_func_851_b(java.lang.String a);
+	
+	/**
+	 * Adds the packet to the underlying network manager's send queue.
+	 */
+	public abstract void sendPacket(Packet a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1721_a(Packet18ArmAnimation a);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1723_b();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1724_b(java.lang.String a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1717_b(Packet a);
-	
-	/**
-	 * 
-	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1725_c();
+	public abstract java.lang.String MIDDLECRAFT_func_852_c();
 
 }

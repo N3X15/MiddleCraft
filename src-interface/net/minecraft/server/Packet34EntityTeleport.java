@@ -16,21 +16,21 @@ public abstract class Packet34EntityTeleport extends Packet {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_464_a();
+	public abstract int MIDDLECRAFT_func_217_a();
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_463_a(NetHandler a);
+	public abstract void MIDDLECRAFT_func_216_a(NetHandler a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_461_a(java.io.DataInputStream a);
+	public abstract void MIDDLECRAFT_func_214_a(java.io.DataInputStream a);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_462_a(java.io.DataOutputStream a);
+	public abstract void MIDDLECRAFT_func_215_a(java.io.DataOutputStream a);
 
 }

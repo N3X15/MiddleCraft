@@ -8,13 +8,13 @@ public abstract interface ICommandListener {
 	// METHODS
 	
 	/**
-	 * 
+	 * Logs the message with a level of INFO.
 	 */
-	public abstract void MIDDLECRAFT_func_930_b(java.lang.String a);
+	public abstract void log(java.lang.String a);
 	
 	/**
-	 * 
+	 * Gets the players username.
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_931_c();
+	public abstract java.lang.String getUsername();
 
 }

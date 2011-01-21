@@ -16,111 +16,111 @@ public abstract class InventoryPlayer {
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1439_a();
+	public abstract int MIDDLECRAFT_func_687_a();
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1440_a(int a);
+	public abstract ItemStack MIDDLECRAFT_func_688_a(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract ItemStack MIDDLECRAFT_func_1434_a(int a, int b);
+	public abstract ItemStack MIDDLECRAFT_func_685_a(int a, int b);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_1435_a(int a, ItemStack b);
+	public abstract void MIDDLECRAFT_func_686_a(int a, ItemStack b);
+	
+	/**
+	 * *
+	 */
+	public abstract int func_9157(Entity a);
+	
+	/**
+	 * Writes the inventory out as a list of compound tags. This is where the slot indices are used (+100 for armor, +80 for crafting).
+	 */
+	public abstract NBTTagList writeToNBT(NBTTagList a);
+	
+	/**
+	 * Gets the strength of the current item (tool) against the specified block, 1.0f if not holding anything.
+	 */
+	public abstract float getStrVsBlock(Block a);
+	
+	/**
+	 * Adds the item stack to the inventory, returns false if it is impossible.
+	 */
+	public abstract boolean addItemStackToInventory(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract int MIDDLECRAFT_func_1443_a(Entity a);
+	public abstract boolean MIDDLECRAFT_func_692_a_(EntityPlayer a);
 	
 	/**
 	 * 
 	 */
-	public abstract NBTTagList MIDDLECRAFT_func_1437_a(NBTTagList a);
+	public abstract java.lang.String MIDDLECRAFT_func_689_b();
+	
+	/**
+	 * *
+	 */
+	public abstract boolean consumeInventoryItem(int a);
+	
+	/**
+	 * Reads from the given tag list and fills the slots in the inventory with the correct items.
+	 */
+	public abstract void readFromNBT(NBTTagList a);
+	
+	/**
+	 * Returns whether the current item (tool) can harvest from the specified block (actually get a result).
+	 */
+	public abstract boolean canHarvestBlock(Block a);
+	
+	/**
+	 * *
+	 */
+	public abstract void func_20073(ItemStack a);
 	
 	/**
 	 * 
 	 */
-	public abstract float MIDDLECRAFT_func_1436_a(Block a);
+	public abstract int MIDDLECRAFT_func_690_c();
+	
+	/**
+	 * Damages armor in each slot by the specified amount.
+	 */
+	public abstract void damageArmor(int a);
 	
 	/**
 	 * 
 	 */
-	public abstract boolean MIDDLECRAFT_func_1433_a(ItemStack a);
+	public abstract void MIDDLECRAFT_func_691_d();
 	
 	/**
-	 * 
+	 * Returns the item stack currently held by the player.
 	 */
-	public abstract boolean MIDDLECRAFT_func_1451_a_(EntityPlayer a);
+	public abstract ItemStack getCurrentItem();
 	
 	/**
-	 * 
+	 * Decrement the number of animations remaining. Only called on client side. This is used to handle the animation of receiving a block.
 	 */
-	public abstract java.lang.String MIDDLECRAFT_func_1441_b();
+	public abstract void decrementAnimations();
 	
 	/**
-	 * 
+	 * Based on the damage values and maximum damage values of each armor item, returns the current armor value.
 	 */
-	public abstract boolean MIDDLECRAFT_func_1432_b(int a);
+	public abstract int getTotalArmorValue();
 	
 	/**
-	 * 
+	 * Drop all armor and main inventory items.
 	 */
-	public abstract void MIDDLECRAFT_func_1438_b(NBTTagList a);
+	public abstract void dropAllItems();
 	
 	/**
-	 * 
+	 * *
 	 */
-	public abstract boolean MIDDLECRAFT_func_1444_b(Block a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1449_b(ItemStack a);
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1442_c();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1446_c(int a);
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1448_d();
-	
-	/**
-	 * 
-	 */
-	public abstract ItemStack MIDDLECRAFT_func_1426_e();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1431_f();
-	
-	/**
-	 * 
-	 */
-	public abstract int MIDDLECRAFT_func_1445_g();
-	
-	/**
-	 * 
-	 */
-	public abstract void MIDDLECRAFT_func_1447_h();
-	
-	/**
-	 * 
-	 */
-	public abstract ItemStack MIDDLECRAFT_func_1450_i();
+	public abstract ItemStack func_20072();
 
 }

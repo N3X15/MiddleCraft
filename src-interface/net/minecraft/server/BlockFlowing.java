@@ -13,16 +13,16 @@ public abstract class BlockFlowing extends BlockFluids {
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_175_a(World a, int b, int c, int d, java.util.Random e);
+	public abstract void MIDDLECRAFT_func_82_a(World a, int b, int c, int d, java.util.Random e);
 	
 	/**
 	 * 
 	 */
-	public abstract void MIDDLECRAFT_func_182_e(World a, int b, int c, int d);
+	public abstract void MIDDLECRAFT_func_83_e(World a, int b, int c, int d);
 	
 	/**
-	 * 
+	 * *
 	 */
-	protected abstract int MIDDLECRAFT_func_180_e(World a, int b, int c, int d, int e);
+	protected abstract int func_307(World a, int b, int c, int d, int e);
 
 }
